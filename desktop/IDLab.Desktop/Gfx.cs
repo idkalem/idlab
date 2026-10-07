@@ -15,13 +15,16 @@ namespace IDLab.Desktop
     {
         private const string VertexShader = @"#version 330
 in vec3 vertexPosition;
+in vec2 vertexTexCoord;
 in vec3 vertexNormal;
 uniform mat4 mvp;
 uniform mat4 matModel;
 uniform mat4 matNormal;
 out vec3 fragPosition;
+out vec2 fragTexCoord;
 out vec3 fragNormal;
 void main() {
+    fragTexCoord = vertexTexCoord;
     fragPosition = vec3(matModel * vec4(vertexPosition, 1.0));
     fragNormal = normalize(vec3(matNormal * vec4(vertexNormal, 0.0)));
     gl_Position = mvp * vec4(vertexPosition, 1.0);
@@ -29,11 +32,16 @@ void main() {
 
         private const string FragmentShader = @"#version 330
 in vec3 fragPosition;
+in vec2 fragTexCoord;
 in vec3 fragNormal;
+uniform sampler2D texture0;
 uniform vec4 colDiffuse;
 uniform vec3 viewPos;
 uniform vec3 ambient;
 uniform vec3 emission;
+uniform float specular;
+uniform vec3 fogColor;
+uniform vec2 fogRange;
 out vec4 finalColor;
 void main() {
     vec3 n = normalize(fragNormal);
@@ -45,23 +53,29 @@ void main() {
     vec3 h = normalize(l + v);
     float spec = pow(max(dot(n, h), 0.0), 56.0) * 0.55;
     float rim = pow(1.0 - max(dot(n, v), 0.0), 3.0);
-    vec3 base = colDiffuse.rgb;
-    vec3 c = base * (ambient + diff * 0.8 + fill) + vec3(spec) + rim * vec3(0.25, 0.6, 0.9) * 0.25 + emission;
-    float a = colDiffuse.a;
+    vec4 tex = texture(texture0, fragTexCoord);
+    vec3 base = colDiffuse.rgb * tex.rgb;
+    vec3 c = base * (ambient + diff * 0.8 + fill) + vec3(spec) * specular + rim * vec3(0.25, 0.6, 0.9) * 0.25 + emission;
+    float a = colDiffuse.a * tex.a;
     if (a < 0.99) a = clamp(a + rim * 0.55 + spec * 0.6, 0.0, 1.0);
     float dist = length(viewPos - fragPosition);
-    float fog = clamp((dist - 2.5) / 6.0, 0.0, 1.0);
-    c = mix(c, vec3(0.043, 0.059, 0.09), fog);
+    float fog = clamp((dist - fogRange.x) / fogRange.y, 0.0, 1.0);
+    c = mix(c, fogColor, fog);
     finalColor = vec4(c, a);
 }";
 
         private static Shader _shader;
         private static Material _material;
-        private static int _locViewPos, _locAmbient, _locEmission;
+        private static int _locViewPos, _locAmbient, _locEmission, _locSpecular, _locFog, _locFogRange;
+        private static Texture2D _white;
         private static readonly Dictionary<string, Mesh> Cache = new Dictionary<string, Mesh>();
 
         public static Mesh Cube, Sphere, Cylinder, Cone, Disc;
         public static Vector3 Ambient = new Vector3(0.32f, 0.35f, 0.42f);
+        public static Vector3 FogColor = new Vector3(0.62f, 0.66f, 0.70f);
+
+        /// <summary>Fog start distance and length in metres (the lab room uses 4 + 8 m; other views push it away).</summary>
+        public static Vector2 FogRange = new Vector2(4f, 8f);
 
         public static void Init()
         {
@@ -69,8 +83,12 @@ void main() {
             _locViewPos = GetShaderLocation(_shader, "viewPos");
             _locAmbient = GetShaderLocation(_shader, "ambient");
             _locEmission = GetShaderLocation(_shader, "emission");
+            _locSpecular = GetShaderLocation(_shader, "specular");
+            _locFog = GetShaderLocation(_shader, "fogColor");
+            _locFogRange = GetShaderLocation(_shader, "fogRange");
             _material = LoadMaterialDefault();
             _material.Shader = _shader;
+            unsafe { _white = _material.Maps[(int)MaterialMapIndex.Albedo].Texture; }
 
             Cube = GenMeshCube(1, 1, 1);
             Sphere = GenMeshSphere(1, 12, 18);
@@ -83,13 +101,67 @@ void main() {
         {
             SetShaderValue(_shader, _locViewPos, cameraPosition, ShaderUniformDataType.Vec3);
             SetShaderValue(_shader, _locAmbient, Ambient, ShaderUniformDataType.Vec3);
+            SetShaderValue(_shader, _locFog, FogColor, ShaderUniformDataType.Vec3);
+            SetShaderValue(_shader, _locFogRange, FogRange, ShaderUniformDataType.Vec2);
         }
 
-        public static unsafe void Draw(Mesh mesh, Matrix4x4 transform, Color color, Vector3 emission = default)
+        public static void Draw(Mesh mesh, Matrix4x4 transform, Color color, Vector3 emission = default) =>
+            Draw(mesh, transform, color, emission, _white, 1f);
+
+        public static void DrawTextured(Mesh mesh, Matrix4x4 transform, Texture2D texture, Color tint, Vector3 emission = default, float specular = 0.4f) =>
+            Draw(mesh, transform, tint, emission, texture, specular);
+
+        public static unsafe void Draw(Mesh mesh, Matrix4x4 transform, Color color, Vector3 emission, Texture2D texture, float specular)
         {
             _material.Maps[(int)MaterialMapIndex.Albedo].Color = color;
+            _material.Maps[(int)MaterialMapIndex.Albedo].Texture = texture;
             SetShaderValue(_shader, _locEmission, emission, ShaderUniformDataType.Vec3);
+            SetShaderValue(_shader, _locSpecular, specular, ShaderUniformDataType.Float);
             DrawMesh(mesh, _material, transform);
+            _material.Maps[(int)MaterialMapIndex.Albedo].Texture = _white;
+        }
+
+        /// <summary>Flat quad in the XZ plane (normal +Y), centred, with repeated UVs for tiled textures.</summary>
+        public static Mesh Quad(float width, float depth, float uRepeat, float vRepeat, bool flipV = false)
+        {
+            var mesh = new Mesh(4, 2);
+            mesh.AllocVertices();
+            mesh.AllocNormals();
+            mesh.AllocTexCoords();
+            mesh.AllocIndices();
+            var v = mesh.VerticesAs<Vector3>();
+            var n = mesh.NormalsAs<Vector3>();
+            var uv = mesh.TexCoordsAs<Vector2>();
+            var idx = mesh.IndicesAs<ushort>();
+            float hw = width / 2, hd = depth / 2;
+            float vNear = flipV ? 0 : vRepeat, vFar = flipV ? vRepeat : 0;
+            v[0] = new Vector3(-hw, 0, -hd); uv[0] = new Vector2(0, vNear);
+            v[1] = new Vector3(hw, 0, -hd); uv[1] = new Vector2(uRepeat, vNear);
+            v[2] = new Vector3(hw, 0, hd); uv[2] = new Vector2(uRepeat, vFar);
+            v[3] = new Vector3(-hw, 0, hd); uv[3] = new Vector2(0, vFar);
+            for (int i = 0; i < 4; i++) n[i] = Vector3.UnitY;
+            idx[0] = 0; idx[1] = 2; idx[2] = 1; idx[3] = 0; idx[4] = 3; idx[5] = 2;
+            UploadMesh(ref mesh, false);
+            return mesh;
+        }
+
+        /// <summary>A mesh with a fixed topology whose vertices/normals are rewritten every frame (liquids).</summary>
+        public static Mesh DynamicMesh(int vertexCount, ReadOnlySpan<ushort> indices)
+        {
+            var mesh = new Mesh(vertexCount, indices.Length / 3);
+            mesh.AllocVertices();
+            mesh.AllocNormals();
+            mesh.AllocTexCoords();
+            mesh.AllocIndices();
+            indices.CopyTo(mesh.IndicesAs<ushort>());
+            UploadMesh(ref mesh, true);
+            return mesh;
+        }
+
+        public static unsafe void UpdateDynamic(Mesh mesh, Vector3[] vertices, Vector3[] normals)
+        {
+            fixed (Vector3* p = vertices) UpdateMeshBuffer(mesh, 0, p, vertices.Length * sizeof(Vector3), 0);
+            fixed (Vector3* p = normals) UpdateMeshBuffer(mesh, 2, p, normals.Length * sizeof(Vector3), 0);
         }
 
         // ------------------------------------------------------------------ transforms

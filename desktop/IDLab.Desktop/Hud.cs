@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Numerics;
 using System.Text;
+using IDLab.Core.Chemistry;
 using IDLab.Core.Components;
 using IDLab.Core.Data;
 using IDLab.Core.Events;
@@ -14,25 +15,47 @@ using static Raylib_cs.Raylib;
 
 namespace IDLab.Desktop
 {
+    internal enum HudTab { Lab, Periodic, Info }
+
     /// <summary>
-    /// Heads-up display for the smart board: top bar, equipment inventory (left), live graphs (right),
-    /// micro view (bottom-left), inspector / experiment card (bottom-right), camera buttons and toasts.
-    /// Every control is a large touch target; no keyboard is required.
+    /// Heads-up display for the smart board: top bar with tabs (Laboratuvar / Periyodik Tablo / Bilgi), and on the
+    /// lab tab the equipment inventory (left), live graphs (right), micro view (bottom-left), inspector / experiment
+    /// card (bottom-right), camera buttons and toasts. Side panels collapse to thin strips. Every control is a large
+    /// touch target; no keyboard is required.
     /// </summary>
     internal sealed class Hud
     {
         private readonly Lab _lab;
         private readonly MicroView _micro;
         private readonly List<(string text, Color color, float age)> _toasts = new List<(string, Color, float)>();
+        private readonly DragScroll _inventoryScroll = new DragScroll(), _dataScroll = new DragScroll();
+        private readonly Dictionary<string, string> _shortDescriptions = new Dictionary<string, string>();
         private Rectangle _top, _inventory, _data, _microRect, _inspector;
         private bool _showInventory = true, _showData = true, _showMicro = true;
-        private float _inventoryScroll, _dataScroll;
+        private float _inventoryContent, _dataContent;
+        private int _chip;
         private double _window = 120;
         private float _quitArmed;
         private int _speedIndex = 1;
         private static readonly (string label, float scale)[] Speeds = { ("Durdur", 0), ("1×", 1), ("5×", 5), ("20×", 20) };
+        private static readonly (HudTab tab, string label)[] Tabs = { (HudTab.Lab, "Laboratuvar"), (HudTab.Periodic, "Periyodik Tablo"), (HudTab.Info, "Bilgi") };
+
+        private static readonly (string label, EquipmentCategory[] categories)[] Chips =
+        {
+            ("Tümü", null),
+            ("Cam", new[] { EquipmentCategory.Glassware }),
+            ("Isıtıcı", new[] { EquipmentCategory.HeatSource }),
+            ("Ölçüm", new[] { EquipmentCategory.Sensor, EquipmentCategory.Measuring }),
+            ("Sıvılar", new[] { EquipmentCategory.Reagent }),
+            ("İndikatör", new[] { EquipmentCategory.Indicator }),
+            ("Katılar", new[] { EquipmentCategory.SolidReagent }),
+        };
 
         public bool QuitRequested { get; private set; }
+        public HudTab Tab { get; set; } = HudTab.Lab;
+
+        /// <summary>Screen area below the top bar (used by the periodic-table and info tabs).</summary>
+        public Rectangle ContentArea { get; private set; }
 
         public Hud(Lab lab, MicroView micro)
         {
@@ -41,7 +64,7 @@ namespace IDLab.Desktop
             lab.Notified += (e, text) =>
             {
                 if (e.Type == LabEventType.Info) return;
-                Color c = e.Type == LabEventType.Explosion || e.Type == LabEventType.FuseBlown ? Theme.Danger
+                Color c = e.Type == LabEventType.Explosion || e.Type == LabEventType.FuseBlown || e.Type == LabEventType.Fire ? Theme.Danger
                     : e.IsHazard || e.Type == LabEventType.Spill ? Theme.Warning : Theme.Accent;
                 Toast(text, c);
             };
@@ -73,31 +96,42 @@ namespace IDLab.Desktop
         public void Layout()
         {
             float s = Ui.S, w = GetScreenWidth(), h = GetScreenHeight();
-            float pad = 10 * s, topH = 66 * s;
+            float pad = 10 * s, topH = 66 * s, strip = 48 * s;
             _top = new Rectangle(0, 0, w, topH);
-            _inventory = _showInventory ? new Rectangle(pad, topH + pad, 310 * s, h - topH - 2 * pad) : default;
-            _data = _showData ? new Rectangle(w - 460 * s - pad, topH + pad, 460 * s, h - topH - 2 * pad) : default;
-            float freeLeft = _showInventory ? _inventory.X + _inventory.Width : 0;
-            float freeRight = _showData ? _data.X : w;
-            _microRect = _showMicro ? new Rectangle(freeLeft + 12 * s, h - 392 * s - 12 * s, 380 * s, 392 * s) : default;
-            float inspW = Math.Min(560 * s, freeRight - freeLeft - 24 * s - (_showMicro ? _microRect.Width + 12 * s : 0));
-            inspW = Math.Max(inspW, 360 * s);
-            _inspector = new Rectangle(freeRight - inspW - 12 * s, h - 262 * s - 12 * s, inspW, 262 * s);
-            _lab.Viewport = new Rectangle(freeLeft, topH, freeRight - freeLeft, h - topH - 210 * s);
+            ContentArea = new Rectangle(0, topH, w, h - topH);
+            _inventory = _showInventory
+                ? new Rectangle(pad, topH + pad, 344 * s, h - topH - 2 * pad)
+                : new Rectangle(pad, topH + pad, strip, 230 * s);
+            _data = _showData
+                ? new Rectangle(w - 460 * s - pad, topH + pad, 460 * s, h - topH - 2 * pad)
+                : new Rectangle(w - strip - pad, topH + pad, strip, 200 * s);
+            float freeLeft = _inventory.Right(), freeRight = _data.X;
+            _microRect = _showMicro
+                ? new Rectangle(freeLeft + 12 * s, h - 392 * s - 12 * s, 380 * s, 392 * s)
+                : new Rectangle(freeLeft + 12 * s, h - 54 * s - 12 * s, 270 * s, 54 * s);
+            float inspW = Math.Min(600 * s, freeRight - freeLeft - 36 * s - (_showMicro ? _microRect.Width : 0));
+            inspW = Math.Max(inspW, 380 * s);
+            float inspH = 290 * s;
+            _inspector = new Rectangle(freeRight - inspW - 12 * s, h - inspH - 12 * s, inspW, inspH);
+            _lab.Viewport = new Rectangle(freeLeft, topH, freeRight - freeLeft, h - topH - 220 * s);
         }
 
-        public bool IsOverInventory(Vector2 p) => _showInventory && CheckCollisionPointRec(p, _inventory);
+        public bool IsOverInventory(Vector2 p) => Tab == HudTab.Lab && _showInventory && CheckCollisionPointRec(p, _inventory);
 
         // ------------------------------------------------------------------ draw
 
         public void Draw(float dt)
         {
+            if (Tab == HudTab.Lab)
+            {
+                DrawInventory(dt);
+                DrawData(dt);
+                DrawMicro();
+                DrawInspector();
+                DrawCameraButtons();
+            }
+
             DrawTopBar();
-            if (_showInventory) DrawInventory();
-            if (_showData) DrawData();
-            if (_showMicro) DrawMicro();
-            DrawInspector();
-            DrawCameraButtons();
             DrawToasts(dt);
             _quitArmed = Math.Max(0, _quitArmed - dt);
         }
@@ -111,7 +145,20 @@ namespace IDLab.Desktop
             float y = 11 * s, bh = 44 * s, x = 18 * s;
             Ui.Text("ID", x, 16 * s, 28, Theme.Accent, true);
             Ui.Text("LAB", x + Ui.Measure("ID ", 28, true).X, 16 * s, 28, Theme.Text, true);
-            x += 130 * s;
+            x += 118 * s;
+
+            // Tabs.
+            foreach (var (tab, label) in Tabs)
+            {
+                float tw = Ui.Measure(label, 17, true).X + 40 * s;
+                var r = new Rectangle(x, y, tw, bh);
+                bool on = Tab == tab;
+                if (Ui.Button("tab-" + tab, r, label, on ? Gfx.Lerp(Theme.Accent, Theme.Button, 0.55f) : Theme.Button, 17)) Tab = tab;
+                if (on) DrawRectangleRounded(new Rectangle(r.X + 14 * s, r.Y + r.Height + 4 * s, r.Width - 28 * s, 4 * s), 1f, 4, Theme.Accent);
+                x += tw + 8 * s;
+            }
+
+            x += 16 * s;
 
             // Right side, laid out from the right edge.
             float rx = _top.Width - 14 * s;
@@ -123,63 +170,140 @@ namespace IDLab.Desktop
                 else _quitArmed = 3f;
             }
 
-            if (Ui.Button("full", Next(122 * s), IsWindowState(ConfigFlags.BorderlessWindowMode) ? "Pencere" : "Tam ekran"))
+            if (Ui.Button("full", Next(118 * s), IsWindowState(ConfigFlags.BorderlessWindowMode) ? "Pencere" : "Tam ekran", null, 16))
             {
                 ToggleBorderlessWindowed();
             }
 
-            if (Ui.Button("tmicro", Next(78 * s), "Mikro", selected: _showMicro)) _showMicro = !_showMicro;
-            if (Ui.Button("tdata", Next(78 * s), "Veri", selected: _showData)) _showData = !_showData;
-            if (Ui.Button("tinv", Next(130 * s), "Malzemeler", selected: _showInventory)) _showInventory = !_showInventory;
-            rx -= 10 * s;
+            if (Tab != HudTab.Lab)
+            {
+                string hint = Tab == HudTab.Periodic
+                    ? "Bir elemente dokunun · Döndürmek için sürükleyin"
+                    : "Konu seçin · Kaydırmak için sürükleyin";
+                var hm = Ui.Measure(hint, 15);
+                if (rx - x > hm.X + 20 * s) Ui.Text(hint, rx - hm.X - 12 * s, y + (bh - hm.Y) / 2, 15, Theme.Muted);
+                return;
+            }
+
+            rx -= 8 * s;
             if (Ui.Button("reset", Next(96 * s), "Sıfırla", Theme.AccentDim)) _lab.LoadExperiment(_lab.Experiment.Id);
-            var clockRect = Next(150 * s);
+            var clockRect = Next(118 * s);
             string clock = string.Format(CultureInfo.CurrentCulture, "t = {0:0.0} s", _lab.World.Time);
-            Ui.TextCentered(_lab.World.Clock.Paused ? clock + " ‖" : clock, clockRect, 18, Theme.Muted);
+            Ui.TextCentered(_lab.World.Clock.Paused ? clock + " ‖" : clock, clockRect, 17, Theme.Muted);
             for (int i = Speeds.Length - 1; i >= 0; i--)
             {
-                if (Ui.Button("speed" + i, Next(i == 0 ? 92 * s : 62 * s), Speeds[i].label, null, 17, _speedIndex == i)) SetSpeed(i);
+                if (Ui.Button("speed" + i, Next(i == 0 ? 92 * s : 60 * s), Speeds[i].label, null, 16, _speedIndex == i)) SetSpeed(i);
             }
 
             // Experiment selector fills the middle.
             var playable = _lab.Experiments.All.Where(e => e.Status == ExperimentStatus.Playable).ToList();
             int index = playable.IndexOf(_lab.Experiment);
+            float titleW = rx - x - 2 * bh - 24 * s;
+            if (titleW < 120 * s) return;
             if (Ui.Button("expPrev", new Rectangle(x, y, bh, bh), "◀")) _lab.LoadExperiment(playable[(index - 1 + playable.Count) % playable.Count].Id);
-            float titleW = Math.Max(160 * s, rx - x - 2 * bh - 30 * s);
             var titleRect = new Rectangle(x + bh + 8 * s, y, titleW, bh);
             DrawRectangleRounded(titleRect, 0.35f, 8, Theme.Raised);
-            Ui.TextCentered(Tr.Title(_lab.Experiment), titleRect, 19, Theme.Text, true);
-            if (Ui.Button("expNext", new Rectangle(titleRect.X + titleW + 8 * s, y, bh, bh), "▶")) _lab.LoadExperiment(playable[(index + 1) % playable.Count].Id);
+            string title = Tr.Title(_lab.Experiment);
+            float size = Ui.Measure(title, 18, true).X < titleW - 20 * s ? 18 : 14;
+            Ui.TextCentered(title, titleRect, size, Theme.Text, true);
+            if (Ui.Button("expNext", new Rectangle(titleRect.Right() + 8 * s, y, bh, bh), "▶")) _lab.LoadExperiment(playable[(index + 1) % playable.Count].Id);
         }
 
-        private void DrawInventory()
+        /// <summary>A collapsed side panel: a tall button with vertical text.</summary>
+        private static bool Strip(string id, Rectangle r, string label, string arrow)
+        {
+            float s = Ui.S;
+            bool clicked = Ui.Button(id, r, "", Theme.Panel);
+            Ui.TextCentered(arrow, new Rectangle(r.X, r.Y + 8 * s, r.Width, 30 * s), 18, Theme.Accent, true);
+            Ui.VerticalText(label, new Rectangle(r.X, r.Y + 40 * s, r.Width, r.Height - 48 * s), 15, Theme.Text);
+            return clicked;
+        }
+
+        // ------------------------------------------------------------------ inventory
+
+        private void DrawInventory(float dt)
         {
             float s = Ui.S;
             var r = _inventory;
-            Ui.Panel(r, Theme.Panel);
-            Ui.Text("MALZEMELER", r.X + 16 * s, r.Y + 14 * s, 20, Theme.Text, true);
-            Ui.Wrapped("Tezgâha sürükleyin, dokunarak ekleyin. Kaldırmak için buraya geri sürükleyin.", r.X + 16 * s, r.Y + 44 * s, r.Width - 32 * s, 13, Theme.Muted);
-
-            var list = new Rectangle(r.X + 8 * s, r.Y + 92 * s, r.Width - 16 * s, r.Height - 100 * s);
-            if (Ui.IsOver(list)) _inventoryScroll -= GetMouseWheelMove() * 60 * s;
-            float contentH = 0;
-            BeginScissorMode((int)list.X, (int)list.Y, (int)list.Width, (int)list.Height);
-            float y = list.Y - _inventoryScroll;
-            foreach (var group in _lab.Inventory().GroupBy(d => d.Category).OrderBy(g => g.Key))
+            if (!_showInventory)
             {
-                Ui.Text(Tr.Category(group.Key), list.X + 8 * s, y + 8 * s, 12, Theme.Accent, true);
-                y += 30 * s;
-                foreach (var def in group)
-                {
-                    var row = new Rectangle(list.X, y, list.Width, 60 * s);
-                    DrawInventoryRow(def, row, list);
-                    y += 66 * s;
-                }
+                if (Strip("inv-open", r, "MALZEMELER", "▶")) _showInventory = true;
+                return;
             }
 
-            contentH = y + _inventoryScroll - list.Y;
+            Ui.Panel(r, Theme.Panel);
+            Ui.Text("MALZEMELER", r.X + 16 * s, r.Y + 16 * s, 20, Theme.Text, true);
+            if (Ui.Button("inv-close", new Rectangle(r.Right() - 52 * s, r.Y + 10 * s, 42 * s, 38 * s), "◀", null, 16)) _showInventory = false;
+            Ui.Text("Sürükleyin ya da dokunun · geri sürükleyerek kaldırın", r.X + 16 * s, r.Y + 46 * s, 12, Theme.Muted);
+
+            // Category chips (only those with something to show).
+            var all = _lab.Inventory().ToList();
+            float cx = r.X + 12 * s, cy = r.Y + 70 * s, chipH = 38 * s;
+            for (int i = 0; i < Chips.Length; i++)
+            {
+                var cats = Chips[i].categories;
+                if (cats != null && !all.Any(d => cats.Contains(d.Category))) continue;
+                float cw = Ui.Measure(Chips[i].label, 14, true).X + 24 * s;
+                if (cx + cw > r.Right() - 12 * s)
+                {
+                    cx = r.X + 12 * s;
+                    cy += chipH + 6 * s;
+                }
+
+                if (Ui.Button("chip" + i, new Rectangle(cx, cy, cw, chipH), Chips[i].label, null, 14, _chip == i))
+                {
+                    _chip = i;
+                    _inventoryScroll.Reset();
+                }
+
+                cx += cw + 6 * s;
+            }
+
+            var chipCats = Chips[_chip].categories;
+            var defs = chipCats == null ? all : all.Where(d => chipCats.Contains(d.Category)).ToList();
+            if (defs.Count == 0)
+            {
+                _chip = 0;
+                defs = all;
+            }
+
+            var list = new Rectangle(r.X + 8 * s, cy + chipH + 10 * s, r.Width - 16 * s, r.Bottom() - (cy + chipH + 18 * s));
+            _inventoryScroll.Update(list, _inventoryContent, dt);
+            BeginScissorMode((int)list.X, (int)list.Y, (int)list.Width, (int)list.Height);
+            float y = list.Y - _inventoryScroll.Offset;
+            EquipmentCategory? last = null;
+            foreach (var def in defs.OrderBy(d => d.Category))
+            {
+                if (chipCats == null && last != def.Category)
+                {
+                    Ui.Text(Tr.Category(def.Category), list.X + 8 * s, y + 8 * s, 12, Theme.Accent, true);
+                    y += 30 * s;
+                    last = def.Category;
+                }
+
+                var row = new Rectangle(list.X, y, list.Width, 76 * s);
+                if (row.Bottom() > list.Y && row.Y < list.Bottom()) DrawInventoryRow(def, row, list);
+                y += 82 * s;
+            }
+
+            _inventoryContent = y + _inventoryScroll.Offset - list.Y;
             EndScissorMode();
-            _inventoryScroll = Math.Clamp(_inventoryScroll, 0, Math.Max(0, contentH - list.Height));
+        }
+
+        private string ShortDescription(EquipmentDefinition def, float width)
+        {
+            string key = def.Id + "@" + (int)width;
+            if (_shortDescriptions.TryGetValue(key, out var text)) return text;
+            text = Tr.Description(def);
+            float limit = 13 * Ui.S * 1.25f * 2 + 1;
+            while (text.Length > 4 && Ui.Wrapped(text, 0, 0, width, 13, Theme.Muted, false, 1.25f, draw: false) > limit)
+            {
+                int cut = text.LastIndexOf(' ', Math.Max(0, text.Length - 3));
+                text = (cut > 0 ? text.Substring(0, cut) : text.Substring(0, text.Length - 4)).TrimEnd(',', '.', ';', ' ') + "…";
+            }
+
+            _shortDescriptions[key] = text;
+            return text;
         }
 
         private void DrawInventoryRow(EquipmentDefinition def, Rectangle row, Rectangle clip)
@@ -188,18 +312,22 @@ namespace IDLab.Desktop
             string id = "inv:" + def.Id;
             bool hot = Ui.IsOver(row) && Ui.IsOver(clip);
             if (Ui.Pressed && hot) Ui.SetActive(id);
+            if (Ui.Active == id && _inventoryScroll.Dragging) Ui.SetActive("inv-scroll"); // vertical drag = scroll, not spawn
             bool active = Ui.Active == id;
-            DrawRectangleRounded(row, 0.25f, 8, active ? Gfx.Lerp(Theme.Raised, Theme.Accent, 0.25f) : hot ? Gfx.Lerp(Theme.Raised, Color.White, 0.05f) : Theme.Raised);
-            DrawRectangleRounded(new Rectangle(row.X + 10 * s, row.Y + 12 * s, 6 * s, row.Height - 24 * s), 1f, 4, Gfx.FromCore(def.AccentColor));
-            Ui.Text(Tr.Name(def), row.X + 26 * s, row.Y + 9 * s, 17, Theme.Text, true);
-            Ui.Text(Tr.Description(def), row.X + 26 * s, row.Y + 34 * s, 13, Theme.Muted);
+            DrawRectangleRounded(row, 0.2f, 8, active ? Gfx.Lerp(Theme.Raised, Theme.Accent, 0.25f) : hot ? Gfx.Lerp(Theme.Raised, Color.White, 0.05f) : Theme.Raised);
+            var thumb = new Rectangle(row.X + 6 * s, row.Y + 6 * s, row.Height - 12 * s, row.Height - 12 * s);
+            Thumbnails.Draw(def.Id, thumb);
+            DrawRectangleRounded(new Rectangle(thumb.Right() + 8 * s, row.Y + 14 * s, 4 * s, row.Height - 28 * s), 1f, 4, Gfx.FromCore(def.AccentColor));
+            float tx = thumb.Right() + 20 * s, tw = row.Right() - tx - 10 * s;
+            Ui.Text(Tr.Name(def), tx, row.Y + 9 * s, 16, Theme.Text, true);
+            Ui.Wrapped(ShortDescription(def, tw), tx, row.Y + 35 * s, tw, 13, Theme.Muted, false, 1.25f);
 
-            if (active && Ui.Down && Ui.Mouse.X > _inventory.X + _inventory.Width)
+            if (active && Ui.Down && Ui.Mouse.X > _inventory.Right())
             {
                 Ui.SetActive("spawn-drag");
                 _lab.BeginSpawnDrag(def.Id);
             }
-            else if (active && Ui.Released && hot)
+            else if (active && Ui.Released && hot && !_inventoryScroll.Dragging)
             {
                 var rng = new Random();
                 var item = _lab.Spawn(def.Id, new Vector3((float)(rng.NextDouble() * 0.3 - 0.15), 0.15f, (float)(rng.NextDouble() * 0.2 - 0.15)));
@@ -209,43 +337,62 @@ namespace IDLab.Desktop
 
         // ------------------------------------------------------------------ live data
 
-        private void DrawData()
+        private void DrawData(float dt)
         {
             float s = Ui.S;
             var r = _data;
+            if (!_showData)
+            {
+                if (Strip("data-open", r, "CANLI VERİ", "◀")) _showData = true;
+                return;
+            }
+
             Ui.Panel(r, Theme.Panel);
-            Ui.Text("CANLI VERİ", r.X + 16 * s, r.Y + 18 * s, 20, Theme.Text, true);
-            float bx = r.X + r.Width - 12 * s;
+            if (Ui.Button("data-close", new Rectangle(r.X + 10 * s, r.Y + 12 * s, 42 * s, 38 * s), "▶", null, 16)) _showData = false;
+            Ui.Text("CANLI VERİ", r.X + 62 * s, r.Y + 20 * s, 19, Theme.Text, true);
+            float bx = r.Right() - 12 * s;
             Rectangle Btn(float width) { bx -= width; var b = new Rectangle(bx, r.Y + 12 * s, width, 38 * s); bx -= 6 * s; return b; }
-            if (Ui.Button("csv", Btn(96 * s), "Kaydet", null, 14)) ExportCsv();
-            if (Ui.Button("clear", Btn(90 * s), "Temizle", null, 14)) _lab.World.Logger.Clear();
-            if (Ui.Button("window", Btn(76 * s), _window > 0 ? "2 dk" : "Tümü", null, 14)) _window = _window > 0 ? 0 : 120;
+            if (Ui.Button("csv", Btn(86 * s), "Kaydet", null, 14)) ExportCsv();
+            if (Ui.Button("clear", Btn(84 * s), "Temizle", null, 14)) _lab.World.Logger.Clear();
+            if (Ui.Button("window", Btn(66 * s), _window > 0 ? "2 dk" : "Tümü", null, 14)) _window = _window > 0 ? 0 : 120;
 
             var channels = _lab.World.Logger.Channels;
             var area = new Rectangle(r.X + 10 * s, r.Y + 62 * s, r.Width - 20 * s, r.Height - 72 * s);
             if (channels.Count == 0)
             {
-                Ui.Wrapped("Tezgâhta sensör yok.\nBir termometreyi veya pH probunu bir kabın içine bırakın; ölçümler burada canlı çizilir.",
+                Ui.Wrapped("Tezgâhta sensör yok.\nBir termometreyi ya da pH probunu bir kabın içine bırakın, kabı teraziye koyun veya büreti kullanın; ölçümler burada canlı çizilir.",
                     area.X + 8 * s, area.Y + 8 * s, area.Width - 16 * s, 15, Theme.Muted);
                 return;
             }
 
-            if (Ui.IsOver(area)) _dataScroll -= GetMouseWheelMove() * 80 * s;
-            float cardH = 270 * s;
-            _dataScroll = Math.Clamp(_dataScroll, 0, Math.Max(0, channels.Count * (cardH + 10 * s) - area.Height));
+            float cardH = 250 * s;
+            _dataContent = channels.Count * (cardH + 10 * s);
+            _dataScroll.Update(area, _dataContent, dt);
             BeginScissorMode((int)area.X, (int)area.Y, (int)area.Width, (int)area.Height);
             for (int i = 0; i < channels.Count; i++)
             {
-                DrawCard(channels[i], new Rectangle(area.X, area.Y + i * (cardH + 10 * s) - _dataScroll, area.Width, cardH), Theme.Series[i % Theme.Series.Length]);
+                DrawCard(channels[i], new Rectangle(area.X, area.Y + i * (cardH + 10 * s) - _dataScroll.Offset, area.Width, cardH), Theme.Series[i % Theme.Series.Length]);
             }
 
             EndScissorMode();
         }
 
+        private static string Quantity(DataChannel ch)
+        {
+            switch (ch.Unit)
+            {
+                case "pH": return "pH";
+                case "°C": return "Sıcaklık";
+                case "g": return "Kütle";
+                case "mL": return "Verilen hacim";
+                default: return ch.Label;
+            }
+        }
+
         private string ChannelTitle(DataChannel ch)
         {
             var owner = _lab.World.Find(ch.OwnerInstanceId);
-            string quantity = ch.Unit == "pH" ? "pH" : "Sıcaklık";
+            string quantity = Quantity(ch);
             return owner != null ? $"{quantity} · {Tr.Name(owner)}" : quantity;
         }
 
@@ -256,9 +403,10 @@ namespace IDLab.Desktop
             DrawRectangleRounded(r, 0.06f, 8, Theme.Raised);
             Ui.Text(ChannelTitle(ch), r.X + 14 * s, r.Y + 12 * s, 14, Theme.Muted);
             var series = ch.Series;
-            string value = series.Count > 0 ? string.Format(ci, "{0:0.0} {1}", series.LastValue, ch.Unit) : "--";
-            var vm = Ui.Measure(value, 30, true);
-            Ui.Text(value, r.X + r.Width - vm.X - 14 * s, r.Y + 30 * s, 30, color, true);
+            string format = ch.Unit == "g" || ch.Unit == "pH" ? "{0:0.00} {1}" : "{0:0.0} {1}";
+            string value = series.Count > 0 ? string.Format(ci, format, series.LastValue, ch.Unit) : "--";
+            var vm = Ui.Measure(value, 28, true);
+            Ui.Text(value, r.X + r.Width - vm.X - 14 * s, r.Y + 30 * s, 28, color, true);
 
             double now = _lab.World.Time;
             double xMax = _window > 0 ? Math.Max(_window, now) : Math.Max(10, now);
@@ -273,15 +421,15 @@ namespace IDLab.Desktop
             double tick = NiceStep((yMax - yMin) / 4);
             yMin = Math.Floor(yMin / tick) * tick;
             yMax = Math.Ceiling(yMax / tick) * tick;
-            int ticks = (int)Math.Round((yMax - yMin) / tick);
+            int ticks = Math.Max(1, (int)Math.Round((yMax - yMin) / tick));
 
-            var plot = new Rectangle(r.X + 52 * s, r.Y + 74 * s, r.Width - 66 * s, r.Height - 106 * s);
+            var plot = new Rectangle(r.X + 52 * s, r.Y + 70 * s, r.Width - 66 * s, r.Height - 100 * s);
             for (int i = 0; i <= ticks; i++)
             {
                 float gy = plot.Y + plot.Height * i / ticks;
                 DrawLineEx(new Vector2(plot.X, gy), new Vector2(plot.X + plot.Width, gy), 1, Theme.Grid);
                 double v = yMax - tick * i;
-                var label = string.Format(ci, "{0:0}", v);
+                var label = string.Format(ci, tick < 1 ? "{0:0.#}" : "{0:0}", v);
                 Ui.Text(label, plot.X - Ui.Measure(label, 12).X - 8 * s, gy - 8 * s, 12, Theme.Muted);
             }
 
@@ -360,15 +508,26 @@ namespace IDLab.Desktop
             var r = _microRect;
             Ui.Panel(r, Theme.Panel);
             string title = _micro.Container != null ? "MİKRO GÖRÜNÜM · " + Tr.Name(_micro.Container.Owner) : "MİKRO GÖRÜNÜM";
-            Ui.Text(title, r.X + 14 * s, r.Y + 10 * s, 14, Theme.Text, true);
+            if (Ui.Button("micro-toggle", new Rectangle(r.Right() - 48 * s, r.Y + 8 * s, 38 * s, 38 * s), _showMicro ? "▼" : "▲", null, 15))
+            {
+                _showMicro = !_showMicro;
+            }
+
+            if (!_showMicro)
+            {
+                Ui.Text("MİKRO GÖRÜNÜM", r.X + 16 * s, r.Y + 17 * s, 15, Theme.Text, true);
+                return;
+            }
+
+            Ui.Text(title, r.X + 14 * s, r.Y + 14 * s, 14, Theme.Text, true);
             var tex = _micro.Texture;
-            var dest = new Rectangle(r.X + 10 * s, r.Y + 36 * s, r.Width - 20 * s, (r.Width - 20 * s) * 460f / 640f);
+            var dest = new Rectangle(r.X + 10 * s, r.Y + 52 * s, r.Width - 20 * s, (r.Width - 20 * s) * 460f / 640f);
             DrawTexturePro(tex, new Rectangle(0, 0, tex.Width, -tex.Height), dest, Vector2.Zero, 0, Color.White);
 
             float ly = dest.Y + dest.Height + 8 * s, lx = r.X + 14 * s;
             foreach (var sp in _micro.State.Species)
             {
-                string label = $"{sp.Id} ×{sp.Count}";
+                string label = $"{Elements.PrettySpecies(sp.Id)} ×{sp.Count}";
                 var m = Ui.Measure(label, 13, true);
                 if (lx + m.X + 22 * s > r.X + r.Width) { lx = r.X + 14 * s; ly += 20 * s; }
                 DrawCircleV(new Vector2(lx + 6 * s, ly + 8 * s), 6 * s, Gfx.FromCore(sp.Color));
@@ -395,85 +554,187 @@ namespace IDLab.Desktop
                 float y = r.Y + 46 * s;
                 y += Ui.Wrapped(Tr.Summary(e), r.X + 18 * s, y, r.Width - 36 * s, 14, Theme.Muted);
                 var objectives = Tr.Objectives(e);
-                for (int i = 0; i < objectives.Length; i++)
+                for (int i = 0; i < objectives.Length && y < r.Bottom() - 70 * s; i++)
                 {
                     y += 4 * s + Ui.Wrapped($"{i + 1}. {objectives[i]}", r.X + 18 * s, y + 4 * s, r.Width - 36 * s, 15, Theme.Text);
                 }
 
-                Ui.Wrapped("İpucu: Seçmek için bir malzemeye dokunun. Açıyı çevirmek için boş alanı sürükleyin.",
-                    r.X + 18 * s, r.Y + r.Height - 46 * s, r.Width - 36 * s, 13, Theme.Accent);
+                Ui.Wrapped("İpucu: Seçmek için bir malzemeye dokunun. Açıyı çevirmek için boş alanı sürükleyin. Kimyasal bilgileri için \"Bilgi\" sekmesine bakın.",
+                    r.X + 18 * s, r.Y + r.Height - 52 * s, r.Width - 36 * s, 13, Theme.Accent);
                 return;
             }
 
             Ui.Text(Tr.Name(item.Inst), r.X + 18 * s, r.Y + 14 * s, 20, Theme.Text, true);
-            var lines = new List<string>();
-            if (item.Container != null)
+            var lines = new List<(string text, Color color)>();
+            var balance = item.Inst.Get<Balance>();
+            var c = item.Container;
+            var hazards = Hazard.None;
+            if (item.Tap != null && c != null)
             {
-                var c = item.Container;
-                lines.Add(string.Format(ci, "Hacim: {0:0.0} mL  (kapasite {1:0} mL)", c.VolumeMilliliters, c.CapacityLiters * 1000));
-                lines.Add(string.Format(ci, "Sıcaklık: {0:0.0} °C{1}", c.TemperatureC, c.IsBoiling ? "  · kaynıyor" : ""));
-                lines.Add(double.IsNaN(c.PH) ? "pH: --" : string.Format(ci, "pH: {0:0.00}", c.PH));
-                var solutes = c.Contents.Components.Where(kv => kv.Key != "water").OrderByDescending(kv => kv.Value).Take(3)
-                    .Select(kv => string.Format(ci, "{0} {1:0.#} mmol", c.Contents.Database.Get(kv.Key).Formula, kv.Value * 1000)).ToList();
-                if (solutes.Count > 0) lines.Add("Çözünenler: " + string.Join(", ", solutes));
+                var tap = item.Tap;
+                lines.Add((string.Format(ci, "Verilen: {0:0.0} mL   ·   Kalan: {1:0.0} mL", tap.DeliveredMilliliters, c.VolumeMilliliters), Theme.Text));
+                lines.Add((tap.IsFlowing ? string.Format(ci, "Akış: {0:0.00} mL/s", tap.FlowLitersPerSecond * 1000) : "Musluk kapalı", Theme.Text));
+                if (c.VolumeMilliliters < 0.05) lines.Add(("Büret boşaldı. \"Doldur\" ile yeniden 25 mL doldurun.", Theme.Warning));
+                else if (tap.Target != null) lines.Add(("Altındaki kap: " + Tr.Name(tap.Target), Theme.Text));
+                else lines.Add(("Ucunun altına bir erlenmayer ya da beher koyun.", Theme.Warning));
+                if (c.VolumeMilliliters >= 0.05) AddContents(c, lines, ref hazards);
+            }
+            else if (c != null)
+            {
+                lines.Add((c.SolidVolumeMilliliters > 0.05
+                    ? string.Format(ci, "Sıvı: {0:0.0} mL  ·  Katı: {1:0.0} mL  (kapasite {2:0} mL)", c.LiquidVolumeMilliliters, c.SolidVolumeMilliliters, c.CapacityLiters * 1000)
+                    : string.Format(ci, "Hacim: {0:0.0} mL  (kapasite {1:0} mL)", c.VolumeMilliliters, c.CapacityLiters * 1000), Theme.Text));
+                string ph = double.IsNaN(c.PH) ? "pH: --" : string.Format(ci, "pH: {0:0.00}", c.PH);
+                lines.Add((string.Format(ci, "Sıcaklık: {0:0.0} °C{1}   ·   {2}", c.TemperatureC, c.IsBoiling ? " (kaynıyor)" : "", ph), Theme.Text));
+                AddContents(c, lines, ref hazards);
+                if (c.GasRateMolPerS > 1e-7 && !string.IsNullOrEmpty(c.GasFormula))
+                {
+                    lines.Add((string.Format(ci, "Gaz çıkışı: {0} · {1:0.00} mmol/s", Tr.Gas(c.GasFormula), c.GasRateMolPerS * 1000), Theme.Accent));
+                }
+
+                if (c.OnFire) lines.Add(("YANIYOR! Söndür düğmesiyle kabın ağzını kapatın.", Theme.Danger));
                 if (c.IsPouring)
                 {
-                    lines.Add(string.Format(ci, "Döküyor: {0:0} mL/s → {1}", c.PourRateLitersPerSecond * 1000,
-                        c.PourTarget != null ? Tr.Name(c.PourTarget) : "tezgâha (dökülüyor!)"));
+                    lines.Add((string.Format(ci, "{0}: {1:0.0} mL/s → {2}", c.IsPouringSolid ? "Katı dökülüyor" : "Döküyor", c.PourRateLitersPerSecond * 1000,
+                        c.PourTarget != null ? Tr.Name(c.PourTarget) : "tezgâha (dökülüyor!)"), c.PourTarget != null ? Theme.Text : Theme.Warning));
                 }
             }
             else if (item.Heat != null)
             {
                 var hs = item.Heat;
-                lines.Add(string.Format(ci, "Gaz vanası: %{0:0}", hs.GasValve * 100));
-                lines.Add(hs.IsLit ? string.Format(ci, "Alev gücü: {0:0} W", hs.FlamePowerW) : "Alev: kapalı");
-                lines.Add(hs.HeatedContainer != null
+                string knob = hs.OpenFlame ? "Gaz vanası" : "Güç";
+                lines.Add((string.Format(ci, "{0}: %{1:0}", knob, hs.GasValve * 100), Theme.Text));
+                lines.Add((hs.IsLit ? string.Format(ci, hs.OpenFlame ? "Alev gücü: {0:0} W" : "Isıtıcı gücü: {0:0} W", hs.FlamePowerW) : hs.OpenFlame ? "Alev: kapalı" : "Isıtıcı: kapalı", Theme.Text));
+                lines.Add((hs.HeatedContainer != null
                     ? string.Format(ci, "Isıtılan: {0} (+{1:0} W)", Tr.Name(hs.HeatedContainer.Owner), hs.DeliveredPowerW)
-                    : "Isıtılan: yok · tel kafese bir kap koyun");
+                    : hs.OpenFlame ? "Isıtılan: yok · tel kafese bir kap koyun" : "Isıtılan: yok · tablanın üstüne bir kap koyun", Theme.Muted));
+                if (hs.OpenFlame) lines.Add(("Etanol gibi yanıcı sıvıları alevle değil ısıtıcı tablayla ısıtın.", Theme.Warning));
             }
             else if (item.Probe != null)
             {
                 var p = item.Probe;
-                lines.Add(double.IsNaN(p.Reading) ? "Ölçüm: --"
-                    : p.Quantity == ProbeQuantity.Temperature ? string.Format(ci, "Ölçüm: {0:0.0} °C", p.Reading) : string.Format(ci, "Ölçüm: pH {0:0.00}", p.Reading));
-                lines.Add(p.ImmersedIn != null ? "Daldırıldığı kap: " + Tr.Name(p.ImmersedIn.Owner) : "Ucunu bir kabın içine bırakın.");
-                lines.Add(string.Format(ci, "Tepki süresi: τ = {0:0.0} s", p.TimeConstantS));
+                lines.Add((double.IsNaN(p.Reading) ? "Ölçüm: --"
+                    : p.Quantity == ProbeQuantity.Temperature ? string.Format(ci, "Ölçüm: {0:0.0} °C", p.Reading) : string.Format(ci, "Ölçüm: pH {0:0.00}", p.Reading), Theme.Text));
+                lines.Add((p.ImmersedIn != null ? "Daldırıldığı kap: " + Tr.Name(p.ImmersedIn.Owner) : "Ucunu bir kabın içine bırakın.", Theme.Text));
+                lines.Add((string.Format(ci, "Tepki süresi: τ = {0:0.0} s", p.TimeConstantS), Theme.Muted));
             }
-
-            float ly = r.Y + 48 * s;
-            foreach (var line in lines)
+            else if (balance != null)
             {
-                ly += Ui.Wrapped(line, r.X + 18 * s, ly, r.Width - 36 * s, 15, Theme.Text, false, 1.3f);
+                lines.Add((balance.HasLoad ? string.Format(ci, "Okunan: {0:0.00} g", balance.ReadingGrams) : "Kefe boş: üstüne bir kap koyun.", Theme.Text));
+                lines.Add((string.Format(ci, "Dara: {0:0.00} g", balance.TareGrams), Theme.Muted));
+                lines.Add(("Önce boş kabı koyup \"Dara\"ya basın; sonra eklediğiniz maddenin kütlesini doğrudan okuyun.", Theme.Muted));
+            }
+            else
+            {
+                lines.Add((Tr.Description(item.Def), Theme.Muted));
             }
 
-            // Controls row
-            float cy = r.Y + r.Height - 62 * s, ch = 48 * s;
-            float right = r.X + r.Width - 16 * s;
-            if (Ui.Button("remove", new Rectangle(right - 104 * s, cy, 104 * s, ch), "Kaldır", Gfx.Lerp(Theme.Danger, Theme.Button, 0.45f), 16))
+            // Hazard pictograms (top-right).
+            float px = r.Right() - 16 * s;
+            foreach (var h in Textures.AllHazards)
+            {
+                if ((hazards & h) == 0) continue;
+                px -= 44 * s;
+                var pic = Textures.Pictogram(h);
+                DrawTexturePro(pic, new Rectangle(0, 0, pic.Width, pic.Height), new Rectangle(px, r.Y + 8 * s, 42 * s, 42 * s), Vector2.Zero, 0, Color.White);
+                if (CheckCollisionPointRec(Ui.Mouse, new Rectangle(px, r.Y + 8 * s, 42 * s, 42 * s)))
+                {
+                    var m = Ui.Measure(Tr.Hazard(h), 14, true);
+                    var tip = new Rectangle(px + 21 * s - m.X / 2 - 8 * s, r.Y - 34 * s, m.X + 16 * s, 28 * s);
+                    DrawRectangleRounded(tip, 0.4f, 6, Theme.Raised);
+                    Ui.TextCentered(Tr.Hazard(h), tip, 14, Theme.Text, true);
+                }
+            }
+
+            float ly = r.Y + 50 * s, controlsY = r.Bottom() - 62 * s;
+            foreach (var (text, color) in lines)
+            {
+                if (ly > controlsY - 18 * s) break;
+                ly += Ui.Wrapped(text, r.X + 18 * s, ly, r.Width - 36 * s, 14, color, false, 1.3f);
+            }
+
+            DrawControls(item, c, balance, new Rectangle(r.X + 16 * s, controlsY, r.Width - 32 * s, 48 * s));
+        }
+
+        private static void AddContents(LiquidContainer c, List<(string, Color)> lines, ref Hazard hazards)
+        {
+            var ci = CultureInfo.CurrentCulture;
+            var db = c.Contents.Database;
+            var parts = new List<string>();
+            foreach (var kv in c.Contents.Components.OrderByDescending(kv => kv.Value))
+            {
+                var sub = db.Get(kv.Key);
+                if (kv.Value > 1e-7) hazards |= sub.Hazards;
+                if (kv.Key == SubstanceIds.Water || parts.Count >= 3) continue;
+                bool dissolved = sub.IsDissolved(c.Contents.HasWater);
+                string amount = !dissolved && sub.Phase == SubstancePhase.Solid
+                    ? string.Format(ci, "{0:0.##} g", kv.Value * sub.MolarMass)
+                    : string.Format(ci, "{0:0.#} mmol", kv.Value * 1000);
+                parts.Add($"{Tr.Substance(sub)} ({sub.Formula}) {amount}");
+            }
+
+            if (parts.Count > 0) lines.Add(("İçerik: " + string.Join(", ", parts), Theme.Text));
+            else if (c.Contents.HasWater) lines.Add(("İçerik: saf su", Theme.Text));
+            else if (c.Contents.IsEmpty) lines.Add(("Boş", Theme.Muted));
+        }
+
+        private void DrawControls(Item item, LiquidContainer c, Balance balance, Rectangle row)
+        {
+            float s = Ui.S, gap = 10 * s;
+            var ci = CultureInfo.CurrentCulture;
+            float right = row.Right();
+            Rectangle Btn(float width) { right -= width; var b = new Rectangle(right, row.Y, width, row.Height); right -= gap; return b; }
+            Rectangle SliderArea(float labelW) => new Rectangle(row.X + labelW + 14 * s, row.Y, right - row.X - labelW - 30 * s, row.Height);
+
+            if (Ui.Button("remove", Btn(100 * s), "Kaldır", Gfx.Lerp(Theme.Danger, Theme.Button, 0.45f), 16))
             {
                 _lab.Remove(item);
                 _lab.Selected = null;
                 return;
             }
 
-            right -= 116 * s;
-            if (item.Heat != null)
+            if (c != null && c.OnFire && Ui.Button("extinguish", Btn(110 * s), "Söndür", Theme.Danger, 16)) c.Extinguish();
+
+            if (item.Tap != null)
             {
-                Ui.Text(string.Format(ci, "Gaz %{0:0}", item.Heat.GasValve * 100), r.X + 18 * s, cy + 14 * s, 15, Theme.Muted, true);
-                item.Heat.GasValve = Ui.Slider("gas", new Rectangle(r.X + 112 * s, cy, right - r.X - 130 * s, ch), (float)item.Heat.GasValve, 0, 1, Theme.Accent);
+                if (Ui.Button("tap-refill", Btn(110 * s), "Doldur", Theme.AccentDim, 16))
+                {
+                    // Refill to the 0 mark with fresh titrant and restart the delivered-volume counter.
+                    c.Contents.Clear();
+                    var fresh = new Mixture(c.Contents.Database);
+                    ReagentPreset.Solution("", 25, SubstanceIds.SodiumHydroxide, 0.1).FillInto(fresh);
+                    c.ReceiveLiquid(fresh);
+                    item.Tap.ResetCounter();
+                }
+                Ui.Text(string.Format(ci, "Musluk %{0:0}", item.Tap.Valve * 100), row.X, row.Y + 14 * s, 14, Theme.Muted, true);
+                item.Tap.Valve = Ui.Slider("tap", SliderArea(100 * s), (float)item.Tap.Valve, 0, 1, Theme.Accent);
             }
-            else if (item.Container != null)
+            else if (item.Heat != null)
             {
-                if (Ui.Button("empty", new Rectangle(right - 104 * s, cy, 104 * s, ch), "Boşalt", null, 16)) item.Container.Contents.Clear();
-                right -= 116 * s;
+                string label = string.Format(ci, item.Heat.OpenFlame ? "Gaz %{0:0}" : "Güç %{0:0}", item.Heat.GasValve * 100);
+                Ui.Text(label, row.X, row.Y + 14 * s, 15, Theme.Muted, true);
+                item.Heat.GasValve = Ui.Slider("gas", SliderArea(84 * s), (float)item.Heat.GasValve, 0, 1, item.Heat.OpenFlame ? Theme.Accent : Theme.Warning);
+            }
+            else if (balance != null)
+            {
+                if (Ui.Button("tare", Btn(110 * s), "Dara", Theme.AccentDim, 16)) balance.Tare();
+            }
+            else if (c != null)
+            {
+                if (Ui.Button("empty", Btn(100 * s), "Boşalt", null, 16))
+                {
+                    c.Contents.Clear();
+                    if (c.OnFire) c.Extinguish();
+                }
+
                 if (item.Host == null)
                 {
-                    Ui.Text(string.Format(ci, "Dök {0:0}°", item.Tilt), r.X + 18 * s, cy + 14 * s, 15, Theme.Muted, true);
-                    item.Tilt = Ui.Slider("tilt", new Rectangle(r.X + 112 * s, cy, right - r.X - 130 * s, ch), item.Tilt, 0, 130, Theme.Warning);
+                    Ui.Text(string.Format(ci, "Dök {0:0}°", item.Tilt), row.X, row.Y + 14 * s, 15, Theme.Muted, true);
+                    item.Tilt = Ui.Slider("tilt", SliderArea(84 * s), item.Tilt, 0, 130, Theme.Warning);
                 }
                 else
                 {
-                    Ui.Wrapped("Dökmek için kabı bekten/kaptan alın.", r.X + 18 * s, cy + 6 * s, right - r.X - 30 * s, 13, Theme.Muted);
+                    Ui.Wrapped("Dökmek için kabı bulunduğu yerden alın.", row.X, row.Y + 6 * s, right - row.X - 10 * s, 13, Theme.Muted);
                 }
             }
         }
@@ -482,7 +743,7 @@ namespace IDLab.Desktop
 
         private void DrawCameraButtons()
         {
-            float s = Ui.S, size = 54 * s, gap = 8 * s;
+            float s = Ui.S, size = 52 * s, gap = 8 * s;
             float x = _lab.Viewport.X + _lab.Viewport.Width - size - 14 * s;
             float y = _lab.Viewport.Y + 16 * s;
             float dt = GetFrameTime();
@@ -492,8 +753,8 @@ namespace IDLab.Desktop
                 ("camR", "▶", () => _lab.Yaw -= 60 * dt),
                 ("camU", "▲", () => _lab.Pitch += 40 * dt),
                 ("camD", "▼", () => _lab.Pitch -= 40 * dt),
-                ("camIn", "+", () => _lab.Distance = Math.Clamp(_lab.Distance * (1 - dt * 0.8f), 0.3f, 2.2f)),
-                ("camOut", "−", () => _lab.Distance = Math.Clamp(_lab.Distance * (1 + dt * 0.8f), 0.3f, 2.2f)),
+                ("camIn", "+", () => _lab.Distance = Math.Clamp(_lab.Distance * (1 - dt * 0.8f), 0.3f, 3.5f)),
+                ("camOut", "−", () => _lab.Distance = Math.Clamp(_lab.Distance * (1 + dt * 0.8f), 0.3f, 3.5f)),
             };
             foreach (var b in buttons)
             {
@@ -507,8 +768,9 @@ namespace IDLab.Desktop
         private void DrawToasts(float dt)
         {
             float s = Ui.S;
-            float width = Math.Min(760 * s, _lab.Viewport.Width - 160 * s);
-            float x = _lab.Viewport.X + (_lab.Viewport.Width - width) / 2, y = _top.Height + 14 * s;
+            var area = Tab == HudTab.Lab ? _lab.Viewport : ContentArea;
+            float width = Math.Min(760 * s, area.Width - 160 * s);
+            float x = area.X + (area.Width - width) / 2, y = _top.Height + 14 * s;
             for (int i = _toasts.Count - 1; i >= 0; i--)
             {
                 var t = _toasts[i];
@@ -520,10 +782,11 @@ namespace IDLab.Desktop
             foreach (var t in _toasts)
             {
                 float a = Math.Clamp((5f - t.age) / 0.6f, 0, 1);
-                var r = new Rectangle(x, y, width, 54 * s);
-                DrawRectangleRounded(r, 0.3f, 8, Gfx.WithAlpha(Theme.Raised, 0.95f * a));
+                float h = Math.Max(54 * s, Ui.Wrapped(t.text, 0, 0, width - 40 * s, 17, Theme.Text, true, 1.25f, draw: false) + 30 * s);
+                var r = new Rectangle(x, y, width, h);
+                DrawRectangleRounded(r, Math.Min(0.3f, 16 * s / h), 8, Gfx.WithAlpha(Theme.Raised, 0.95f * a));
                 DrawRectangleRounded(new Rectangle(r.X + 8 * s, r.Y + 10 * s, 6 * s, r.Height - 20 * s), 1f, 4, Gfx.WithAlpha(t.color, a));
-                Ui.Text(t.text, r.X + 26 * s, r.Y + 16 * s, 17, Gfx.WithAlpha(Theme.Text, a), true);
+                Ui.Wrapped(t.text, r.X + 26 * s, r.Y + 15 * s, width - 40 * s, 17, Gfx.WithAlpha(Theme.Text, a), true, 1.25f);
                 y += r.Height + 8 * s;
             }
         }

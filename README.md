@@ -23,20 +23,41 @@ gömülüdür. **Kurulum gerekmez.**
   **Ek bilgi → Yine de çalıştır** ile açın.
 * **Gereksinim:** Windows 10/11 (64 bit) ve OpenGL 3.3 destekleyen ekran kartı. Akıllı tahtalardaki
   Intel/AMD tümleşik grafik kartları yeterlidir.
+* **Sekmeler:** üst çubukta üç sekme vardır.
+  * **Laboratuvar:** gerçekçi bir laboratuvar odasında 3D deney tezgâhı.
+  * **Periyodik Tablo:** 118 elementin 3D tablosu. Bir elemente dokunun: dönen Bohr atom modeli (proton, nötron,
+    elektron katmanları) ve bilgi kartı açılır. Kartta atom numarası, kütle, grup/periyot/blok, elektron dizilimi,
+    elektronegatiflik, erime/kaynama noktası, yoğunluk, keşif yılı ve kısa bir not bulunur. Sütun yüksekliği atom
+    kütlesi, elektronegatiflik, yoğunluk ya da erime noktasını gösterebilir. Kategori düğmeleri tabloyu süzer.
+  * **Bilgi ("Bilmemiz Gerekenler"):** laboratuvar güvenliği, GHS tehlike işaretleri, malzemeler, pH ölçeği ve
+    indikatörler, tepkime türleri, metallerin aktiflik sırası, mol ve formüller, ısı ve hâl değişimi, ayırma
+    yöntemleri, periyodik özellikler, fizik formülleri ve mikroskop/hücre konuları.
+* **Malzemeler:** 50'den fazla malzeme ve kimyasal resimli bir listede, kategori düğmeleriyle (Cam, Isıtıcı, Ölçüm,
+  Sıvılar, İndikatör, Katılar) bulunur.
+  * Cam malzemeler: beherler, erlenmayer, balon joje, dereceli silindir, deney tüpü ve tüplük, petri kabı.
+  * Isıtıcılar ve ölçüm aletleri: Bunsen beki, ısıtıcı tabla, hassas terazi (dara), büret (musluk, verilen hacim
+    sayacı, "Doldur"), termometre ve pH probu.
+  * Kimyasallar: 17 sıvı (asitler, bazlar, tuz çözeltileri, H₂O₂, etanol, çamaşır suyu...), indikatörler ve 11 katı
+    (tuz, karbonat, mermer, CuSO₄/KMnO₄ kristalleri, Mg, Zn, Fe, Cu, Na).
+* **Gerçekçi dökme:** dökülen sıvı kaptan kaba akan bir akış olarak görünür. Yavaş dökünce damlar ve hedef sıvıda
+  halkalar oluşur. Eğilen kaptaki sıvı yüzeyi yatay kalır. Metaller ve kristaller katı parçalar hâlinde dökülür ve
+  kabın dibinde birikir.
 * **Kullanım (yalnızca dokunma):**
-  * Malzemeyi soldaki panelden tezgâha sürükleyin.
+  * Malzemeyi soldaki panelden tezgâha sürükleyin. Listeyi yukarı-aşağı sürükleyerek kaydırın.
   * Beheri bekin tel kafesine, termometreyi behere bırakın; yeşil halka yerine oturacağını gösterir.
   * Gaz için kırmızı vanayı sürükleyin ya da alttaki kaydırıcıyı kullanın.
   * **Dökmek** için şişeyi beherin yanına koyup "Dök" kaydırıcısını çekin. Şişe kendiliğinden beherin
     üstüne kalkıp döker, kaydırıcı sıfıra dönünce yerine geri gelir.
-  * Sağdaki panelde canlı grafikler görünür. "Kaydet" düğmesi verileri
+  * Paneller kenardaki ◀ ▶ ▼ düğmeleriyle daraltılabilir.
+  * Sağdaki panelde canlı grafikler görünür (sıcaklık, pH, terazi kütlesi, büretten verilen hacim). "Kaydet" düğmesi verileri
     `Belgeler\IDLab\*.csv` dosyasına kaydeder.
   * Kamera için sağdaki ◀ ▶ ▲ ▼ + − düğmelerini kullanın.
   * Kapatmak için **Kapat** düğmesine iki kez dokunun. Esc uygulamayı kapatmaz.
 * **Derleme:** `dotnet publish desktop/IDLab.Desktop -c Release -r win-x64 -o dist` komutu `dist/IDLab.exe`
   dosyasını üretir. Linux'tan da derlenebilir, CI her push'ta derler.
-* **Test seçenekleri:** `--windowed 1920x1080`, `--demo heating|acid|safety`, `--frames N`,
-  `--screenshot dosya.png`, `--trace`.
+* **Test seçenekleri:** `--windowed 1920x1080`,
+  `--demo heating|acid|safety|titration|precip|metals|periodic|info`, `--topic N`, `--frames N`,
+  `--screenshot dosya.png`, `--trace`, `--camera yaw,pitch,mesafe`.
 
 ## What the prototype does
 
@@ -91,7 +112,7 @@ before every build). This keeps the shader variants for runtime-created material
 ### Test the simulation core (no Unity needed)
 
 ```bash
-dotnet test core/tests/IDLab.Core.Tests          # 36 unit tests
+dotnet test core/tests/IDLab.Core.Tests          # 54 unit tests
 dotnet build tools/unity-typecheck                # type-checks all Unity scripts against Unity reference assemblies
 ```
 

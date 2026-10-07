@@ -107,9 +107,9 @@ namespace IDLab.Core.Model
             c.Register(Vessel(EquipmentIds.Beaker250Water, "Beaker + 150 mL water", "beaker", 0.068, 0.092, 0.1, ReagentPreset.Water(150),
                 "Beaker filled with 150 mL of tap water at room temperature."));
             c.Register(Vessel(EquipmentIds.Beaker600, "Beaker 600 mL", "beaker", 0.090, 0.125, 0.18, null, "Large beaker for water baths."));
-            c.Register(Vessel(EquipmentIds.Erlenmeyer, "Erlenmeyer flask 250 mL", "erlenmeyer", 0.056, 0.13, 0.12, null,
+            c.Register(Vessel(EquipmentIds.Erlenmeyer, "Erlenmeyer flask 250 mL", "erlenmeyer", 0.051, 0.13, 0.12, null,
                 "Conical flask: swirl without spilling; used for titrations.", mouth: 0.030, probeY: 0.01f));
-            c.Register(Vessel(EquipmentIds.RoundFlask, "Round-bottom flask 250 mL", "round_flask", 0.062, 0.12, 0.11, null,
+            c.Register(Vessel(EquipmentIds.RoundFlask, "Round-bottom flask 250 mL", "round_flask", 0.0535, 0.12, 0.11, null,
                 "Heats evenly; stands on a cork ring.", mouth: 0.026, probeY: 0.01f));
             c.Register(Vessel(EquipmentIds.GraduatedCylinder, "Graduated cylinder 100 mL", "cylinder", 0.026, 0.19, 0.15, null,
                 "Measures liquid volumes accurately.", offsetY: 0.012f, probeY: 0.02f));

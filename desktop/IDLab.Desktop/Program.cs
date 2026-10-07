@@ -13,10 +13,14 @@ namespace IDLab.Desktop
 {
     /// <summary>
     /// ID Lab — smart-board / desktop edition. Starts full-screen; everything works with touch alone.
-    /// Command line (for testing): --windowed [WxH]  --demo heating|acid|safety  --frames N  --screenshot file.png
+    /// Command line (for testing): --windowed [WxH]  --demo heating|acid|safety|titration|precip|metals|pour|periodic|info
+    /// --frames N  --screenshot file.png  --trace  --camera yaw,pitch,dist
     /// </summary>
     internal static class Program
     {
+        /// <summary>The running lab (for helpers that need to map core objects back to items).</summary>
+        public static Lab LabInstance { get; private set; }
+
         [STAThread]
         private static int Main(string[] args)
         {
@@ -76,13 +80,28 @@ namespace IDLab.Desktop
 
             Gfx.Init();
             Ui.Init();
+            Textures.Init();
+            Room.Build();
+            Thumbnails.Build();
             var lab = new Lab();
+            LabInstance = lab;
             var micro = new MicroView();
             micro.Init();
+            var periodic = new PeriodicView();
+            periodic.Init();
+            var info = new InfoView(lab);
+            info.Select(o.Topic);
             var hud = new Hud(lab, micro);
             if (o.Demo != null)
             {
                 Demo.Setup(o.Demo, lab, hud);
+            }
+
+            if (o.Camera != null)
+            {
+                lab.Yaw = o.Camera[0];
+                lab.Pitch = o.Camera[1];
+                lab.Distance = o.Camera[2];
             }
 
             int frame = 0;
@@ -93,23 +112,44 @@ namespace IDLab.Desktop
 
                 Ui.BeginFrame();
                 hud.Layout();
-                lab.Update(dt, pointerFree: !Ui.Captured, overInventory: hud.IsOverInventory(Ui.Mouse));
-                if (o.Demo != null) Demo.Step(o.Demo, lab, frame);
-                foreach (var item in lab.Items.Where(i => i.Container != null && i.Container.TemperatureC > 70))
-                {
-                    var c = item.Container;
-                    lab.Effects.Steam(c.MouthPosition, (float)c.RadiusM * 0.8f, c.IsBoiling ? 30f : 5f, dt);
-                }
+                bool labTab = hud.Tab == HudTab.Lab;
 
-                micro.Update(lab, dt);
-                micro.Render();
+                // The experiment keeps running while another tab is open; only pointer input is withheld.
+                lab.Update(dt, pointerFree: labTab && !Ui.Captured, overInventory: hud.IsOverInventory(Ui.Mouse));
+                if (o.Demo != null) Demo.Step(o.Demo, lab, hud, frame);
+                Scene.Update(lab, dt);
+                if (labTab)
+                {
+                    micro.Update(lab, dt);
+                    micro.Render();
+                }
+                else if (hud.Tab == HudTab.Periodic)
+                {
+                    periodic.Update(dt, hud.ContentArea, pointerFree: !Ui.Captured);
+                }
+                else
+                {
+                    info.Update(dt, hud.ContentArea);
+                }
 
                 BeginDrawing();
                 ClearBackground(Theme.Scene);
-                BeginMode3D(lab.Camera);
-                Scene.Draw(lab, dt);
-                EndMode3D();
-                Scene.DrawLabels(lab);
+                switch (hud.Tab)
+                {
+                    case HudTab.Lab:
+                        BeginMode3D(lab.Camera);
+                        Scene.Draw(lab, dt);
+                        EndMode3D();
+                        Scene.DrawLabels(lab);
+                        break;
+                    case HudTab.Periodic:
+                        periodic.Draw();
+                        break;
+                    default:
+                        info.Draw();
+                        break;
+                }
+
                 hud.Draw(dt);
                 EndDrawing();
                 Ui.EndFrame();
@@ -138,6 +178,8 @@ namespace IDLab.Desktop
             public int Frames;
             public string Screenshot;
             public bool Trace;
+            public float[] Camera;
+            public int Topic;
 
             public static Options Parse(string[] args)
             {
@@ -160,6 +202,8 @@ namespace IDLab.Desktop
                         case "--frames": o.Frames = int.Parse(args[++i], CultureInfo.InvariantCulture); break;
                         case "--screenshot": o.Screenshot = args[++i]; break;
                         case "--trace": o.Trace = true; break;
+                        case "--topic": o.Topic = int.Parse(args[++i], CultureInfo.InvariantCulture); break;
+                        case "--camera": o.Camera = Array.ConvertAll(args[++i].Split(','), v => float.Parse(v, CultureInfo.InvariantCulture)); break;
                     }
                 }
 
@@ -207,6 +251,62 @@ namespace IDLab.Desktop
                     break;
                 }
 
+                case "titration":
+                {
+                    lab.LoadExperiment("chem.titration");
+                    var burette = lab.Items.First(i => i.Tap != null);
+                    var flask = lab.Items.First(i => i.Def.Id == EquipmentIds.Erlenmeyer);
+                    var m = new Mixture(lab.World.Substances);
+                    ReagentPreset.Solution("", 20, SubstanceIds.HydrochloricAcid, 0.1).FillInto(m);
+                    ReagentPreset.Solution("", 2, SubstanceIds.Phenolphthalein, 0.003).FillInto(m);
+                    flask.Container.ReceiveLiquid(m);
+                    flask.Position = burette.Position + new Vector3(0, 0.02f, -0.005f);
+                    var probe = lab.Items.First(i => i.Probe != null);
+                    SnapOnto(lab, probe, flask.Position + new Vector3(0.012f, 0.16f, -0.01f));
+                    burette.Tap.Valve = 0.8;
+                    hud.SetSpeed(2);
+                    lab.Selected = burette;
+                    break;
+                }
+
+                case "precip":
+                {
+                    lab.LoadExperiment("chem.precipitation");
+                    var beaker = lab.Items.First(i => i.Def.Id == EquipmentIds.Beaker100);
+                    var m = new Mixture(lab.World.Substances);
+                    ReagentPreset.Solution("", 40, SubstanceIds.CopperSulfate, 0.5).FillInto(m);
+                    beaker.Container.ReceiveLiquid(m);
+                    var naoh = lab.Items.First(i => i.Def.Id == EquipmentIds.NaohBottle);
+                    naoh.Position = beaker.Position + new Vector3(0.14f, 0, 0);
+                    naoh.Tilt = 105;
+                    lab.Selected = naoh;
+                    hud.SetSpeed(1);
+                    break;
+                }
+
+                case "metals":
+                {
+                    lab.LoadExperiment("chem.gases");
+                    var beaker = lab.Items.First(i => i.Def.Id == EquipmentIds.Beaker250);
+                    var m = new Mixture(lab.World.Substances);
+                    ReagentPreset.Solution("", 90, SubstanceIds.HydrochloricAcid, 1.0).FillInto(m);
+                    beaker.Container.ReceiveLiquid(m);
+                    var jar = lab.Items.First(i => i.Def.Id == EquipmentIds.ZnJar);
+                    beaker.Position = jar.Position + new Vector3(-0.13f, 0, 0.02f);
+                    jar.Tilt = 115;
+                    lab.Selected = jar;
+                    hud.SetSpeed(1);
+                    break;
+                }
+
+                case "periodic":
+                    hud.Tab = HudTab.Periodic;
+                    break;
+
+                case "info":
+                    hud.Tab = HudTab.Info;
+                    break;
+
                 case "safety":
                 {
                     lab.LoadExperiment("chem.safety");
@@ -219,8 +319,16 @@ namespace IDLab.Desktop
             }
         }
 
-        public static void Step(string name, Lab lab, int frame)
+        public static void Step(string name, Lab lab, Hud hud, int frame)
         {
+            if (name == "metals" && frame == 200)
+            {
+                var jar = lab.Items.First(i => i.Def.Id == EquipmentIds.ZnJar);
+                jar.Tilt = 0;
+                lab.Selected = lab.Items.First(i => i.Def.Id == EquipmentIds.Beaker250);
+            }
+
+
             if (name == "safety" && frame == 30)
             {
                 var beaker = lab.Items.First(i => i.Def.Id == EquipmentIds.Beaker250Water);
@@ -238,10 +346,10 @@ namespace IDLab.Desktop
                 var top = GetWorldToScreen(item.Inst.Pose.TransformPoint(new Vector3(0, item.Size.Y, 0)), lab.Camera);
                 var host = lab.World.GetHost(item.Inst);
                 sb.Append(CultureInfo.InvariantCulture, $"item {item.Inst.Id} {item.Def.Id} center={center.X:0},{center.Y:0} top={top.X:0},{top.Y:0} pos={item.Position.X:0.000},{item.Position.Y:0.000},{item.Position.Z:0.000} host={host?.Id.ToString() ?? "-"}");
-                if (item.Heat != null)
+                if (item.KnobPosition is Vector3 kp)
                 {
-                    var k = GetWorldToScreen(item.KnobPosition, lab.Camera);
-                    sb.Append(CultureInfo.InvariantCulture, $" knob={k.X:0},{k.Y:0} valve={item.Heat.GasValve:0.00}");
+                    var k = GetWorldToScreen(kp, lab.Camera);
+                    sb.Append(CultureInfo.InvariantCulture, $" knob={k.X:0},{k.Y:0} valve={item.KnobValue:0.00}");
                 }
 
                 if (item.Container != null)

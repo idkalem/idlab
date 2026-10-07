@@ -145,6 +145,7 @@ namespace IDLab.Desktop
             ClearBackground(new Color(8, 13, 23, 255));
             BeginMode3D(cam);
             Gfx.Ambient = new Vector3(0.35f, 0.38f, 0.45f);
+            Gfx.FogRange = new Vector2(1000f, 1f);
             Gfx.BeginFrame(cam.Position);
             DrawCubeWiresV(Vector3.Zero, Half * 2, new Color(40, 130, 180, 255));
             if (_state.Mode != MicroViewMode.Idle)

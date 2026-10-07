@@ -38,6 +38,9 @@ namespace IDLab.Desktop
         private static string _active;
         private static readonly List<Rectangle> Blockers = new List<Rectangle>();
 
+        public static Font RegularFont => _regular;
+        public static Font BoldFont => _bold;
+
         public static float S { get; private set; } = 1f;
         public static Vector2 Mouse { get; private set; }
         public static bool Pressed { get; private set; }
@@ -66,6 +69,7 @@ namespace IDLab.Desktop
             Range(0x2010, 0x2027);  // dashes, bullets, ellipsis
             Range(0x2070, 0x209F);  // superscripts / subscripts (H₂O, H₃O⁺)
             Range(0x2190, 0x2199);  // arrows
+            Range(0x0391, 0x03C9);  // Greek (Δ, ρ, λ, μ ...)
             codepoints.AddRange(new[] { 0x2212, 0x2248, 0x2264, 0x2265, 0x25B2, 0x25B6, 0x25BC, 0x25C0, 0x25CF, 0x26A0, 0x2715, 0x21BA });
             var font = LoadFontFromMemory(".ttf", ms.ToArray(), 64, codepoints.ToArray(), codepoints.Count);
             GenTextureMipmaps(ref font.Texture);
@@ -126,7 +130,7 @@ namespace IDLab.Desktop
         }
 
         /// <summary>Word-wrapped text; returns the height used.</summary>
-        public static float Wrapped(string text, float x, float y, float width, float size, Color color, bool bold = false, float lineGap = 1.25f)
+        public static float Wrapped(string text, float x, float y, float width, float size, Color color, bool bold = false, float lineGap = 1.25f, bool draw = true)
         {
             float lineHeight = size * S * lineGap;
             float cy = y;
@@ -138,7 +142,7 @@ namespace IDLab.Desktop
                     string candidate = line.Length == 0 ? word : line + " " + word;
                     if (Measure(candidate, size, bold).X > width && line.Length > 0)
                     {
-                        Text(line, x, cy, size, color, bold);
+                        if (draw) Text(line, x, cy, size, color, bold);
                         cy += lineHeight;
                         line = word;
                     }
@@ -148,7 +152,7 @@ namespace IDLab.Desktop
                     }
                 }
 
-                Text(line, x, cy, size, color, bold);
+                if (draw) Text(line, x, cy, size, color, bold);
                 cy += lineHeight;
             }
 
@@ -232,6 +236,86 @@ namespace IDLab.Desktop
             return value;
         }
 
+        /// <summary>Text rotated 90° counter-clockwise (reads bottom-to-top), centred in <paramref name="r"/>.</summary>
+        public static void VerticalText(string text, Rectangle r, float size, Color color)
+        {
+            var m = Measure(text, size, true);
+            DrawTextPro(_bold, text, new Vector2(r.X + (r.Width - m.Y) / 2, r.Y + (r.Height + m.X) / 2), Vector2.Zero, -90, size * S, 0, color);
+        }
+
         public static string Hex(Color c) => $"{c.R:X2}{c.G:X2}{c.B:X2}";
+    }
+
+    /// <summary>
+    /// Touch scrolling for a list: drag with one finger (with inertia) or use the mouse wheel. A press only becomes
+    /// a scroll after it moves a little, so taps on rows still work; <see cref="Dragging"/> stays true on the
+    /// release frame of a scroll so callers can ignore that release.
+    /// </summary>
+    internal sealed class DragScroll
+    {
+        public float Offset;
+        private float _velocity, _pressX, _pressY, _pressOffset;
+        private bool _tracking, _horizontal;
+
+        public bool Dragging { get; private set; }
+
+        public void Reset()
+        {
+            Offset = 0;
+            _velocity = 0;
+        }
+
+        public void Update(Rectangle area, float contentHeight, float dt)
+        {
+            float max = Math.Max(0, contentHeight - area.Height);
+            if (Ui.IsOver(area))
+            {
+                float wheel = GetMouseWheelMove();
+                if (Math.Abs(wheel) > 0.01f)
+                {
+                    Offset -= wheel * 80 * Ui.S;
+                    _velocity = 0;
+                }
+            }
+
+            if (Ui.Pressed && Ui.IsOver(area))
+            {
+                _tracking = true;
+                _horizontal = false;
+                _pressX = Ui.Mouse.X;
+                _pressY = Ui.Mouse.Y;
+                _pressOffset = Offset;
+                _velocity = 0;
+                Dragging = false;
+            }
+
+            if (_tracking && Ui.Down)
+            {
+                float dx = Math.Abs(Ui.Mouse.X - _pressX), dy = Math.Abs(Ui.Mouse.Y - _pressY);
+                // A press that first moves sideways is not a scroll (e.g. dragging an item out of a list).
+                if (!Dragging && !_horizontal && dx > 14 * Ui.S && dx > dy) _horizontal = true;
+                if (!Dragging && !_horizontal && dy > 14 * Ui.S && max > 0) Dragging = true;
+                if (Dragging)
+                {
+                    float previous = Offset;
+                    Offset = _pressOffset - (Ui.Mouse.Y - _pressY);
+                    if (dt > 0) _velocity = _velocity * 0.5f + (Offset - previous) / dt * 0.5f;
+                }
+            }
+            else if (_tracking)
+            {
+                _tracking = false; // release frame: keep Dragging so the release is not taken as a tap
+            }
+            else
+            {
+                Dragging = false;
+                Offset += _velocity * dt;
+                _velocity *= MathF.Exp(-dt * 4f);
+                if (Math.Abs(_velocity) < 5) _velocity = 0;
+            }
+
+            if (Offset < 0 || Offset > max) _velocity = 0;
+            Offset = Math.Clamp(Offset, 0, max);
+        }
     }
 }

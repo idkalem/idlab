@@ -29,14 +29,37 @@ namespace IDLab.Desktop
         public LiquidContainer Container => Inst.Get<LiquidContainer>();
         public HeatSource Heat => Inst.Get<HeatSource>();
         public Probe Probe => Inst.Get<Probe>();
-        public bool CanTilt => Container != null;
+        public Stopcock Tap => Inst.Get<Stopcock>();
+        public bool CanTilt => Container != null && Tap == null;
         public bool IsHeld => Dragging || (Tilt > 0.5f && Host == null);
         public Vector3 Size => Def.BoundsSize == Vector3.Zero ? new Vector3(0.05f) : Def.BoundsSize;
         public Vector3 Position { get => Inst.Pose.Position; set => Inst.Pose = new Pose3(value, Inst.Pose.Rotation); }
         public Quaternion Rotation { get => Inst.Pose.Rotation; set => Inst.Pose = new Pose3(Inst.Pose.Position, value); }
 
-        /// <summary>World position of the burner's red gas knob.</summary>
-        public Vector3 KnobPosition => Inst.Pose.TransformPoint(new Vector3(0, 0.009f, -0.05f));
+        /// <summary>World position of this item's turnable control (gas valve, hot-plate dial, burette tap), if any.</summary>
+        public Vector3? KnobPosition
+        {
+            get
+            {
+                switch (Def.VisualKey)
+                {
+                    case "burner": return Inst.Pose.TransformPoint(new Vector3(0, 0.009f, -0.05f));
+                    case "hotplate": return Inst.Pose.TransformPoint(new Vector3(-0.04f, 0.03f, -0.1f));
+                    case "burette": return Inst.Pose.TransformPoint(new Vector3(0.02f, 0.245f, 0));
+                    default: return null;
+                }
+            }
+        }
+
+        public double KnobValue
+        {
+            get => Tap?.Valve ?? Heat?.GasValve ?? 0;
+            set
+            {
+                if (Tap != null) Tap.Valve = value;
+                else if (Heat != null) Heat.GasValve = value;
+            }
+        }
     }
 
     /// <summary>
@@ -70,11 +93,14 @@ namespace IDLab.Desktop
         public ExperimentDefinition Experiment { get; private set; }
         public Effects Effects { get; } = new Effects();
         public Item Selected { get; set; }
+
+        /// <summary>The item under the pointer (for name labels).</summary>
+        public Item Hovered { get; private set; }
         public IEnumerable<Item> Items => _items.Values;
         public SnapCandidate? SnapPreview { get; private set; }
 
         // Orbit camera
-        public float Yaw, Pitch = 34f, Distance = 1.15f;
+        public float Yaw, Pitch = 24f, Distance = 1.3f;
         public Vector3 Target = new Vector3(0, 0.12f, 0.03f);
         public Camera3D Camera;
         public Rectangle Viewport; // free screen area between panels (camera centres the bench in it)
@@ -88,7 +114,9 @@ namespace IDLab.Desktop
             World.InstanceRemoved += i =>
             {
                 _items.Remove(i.Id);
+                Bubbles.Forget(i);
                 if (Selected?.Inst == i) Selected = null;
+                if (Hovered?.Inst == i) Hovered = null;
                 if (_dragged?.Inst == i) { _dragged = null; _mode = Mode.Idle; }
             };
             World.Disconnected += c =>
@@ -153,6 +181,7 @@ namespace IDLab.Desktop
         public void Update(float dt, bool pointerFree, bool overInventory)
         {
             UpdateCamera(dt);
+            Hovered = pointerFree && _mode == Mode.Idle ? ItemUnderPointer() : null;
             HandlePointer(pointerFree, overInventory);
             HandleKeys(dt);
 
@@ -245,7 +274,7 @@ namespace IDLab.Desktop
             var up = Vector3.Normalize(Vector3.Transform(Vector3.UnitY, item.Rotation));
             var low = -Vector3.UnitY - Vector3.Dot(-Vector3.UnitY, up) * up;
             low = low.LengthSquared() > 1e-8f ? Vector3.Normalize(low) : Vector3.UnitX;
-            return Vector3.Transform(new Vector3(0, (float)c.InnerHeightM, 0), item.Rotation) + low * (float)c.MouthRadiusM;
+            return Vector3.Transform(c.LocalOffset + new Vector3(0, (float)c.InnerHeightM, 0), item.Rotation) + low * (float)c.MouthRadiusM;
         }
 
         /// <summary>Where to hold <paramref name="item"/> so its lip is just above the mouth of <paramref name="target"/>.</summary>
@@ -310,6 +339,28 @@ namespace IDLab.Desktop
             return new BoundingBox(min, max);
         }
 
+        /// <summary>Collision boxes: most items are one box, a burette stand is a base plate, a rod and the tube.</summary>
+        public IEnumerable<BoundingBox> Boxes(Item item)
+        {
+            if (item.Def.VisualKey != "burette")
+            {
+                yield return WorldBox(item);
+                yield break;
+            }
+
+            BoundingBox Local(Vector3 centre, Vector3 size)
+            {
+                var a = item.Inst.Pose.TransformPoint(centre - size / 2);
+                var b = item.Inst.Pose.TransformPoint(centre + size / 2);
+                return new BoundingBox(Vector3.Min(a, b), Vector3.Max(a, b));
+            }
+
+            yield return Local(new Vector3(0, 0.006f, 0.02f), new Vector3(0.12f, 0.012f, 0.15f));
+            yield return Local(new Vector3(0, 0.33f, 0.07f), new Vector3(0.016f, 0.66f, 0.016f));
+            yield return Local(new Vector3(0, 0.39f, 0), new Vector3(0.022f, 0.36f, 0.022f));
+            yield return Local(new Vector3(0, 0.5f, 0.035f), new Vector3(0.02f, 0.02f, 0.08f));
+        }
+
         /// <summary>Top of the highest other item under the box's footprint (the bench is y = 0).</summary>
         private float SurfaceBelow(Item item, BoundingBox box)
         {
@@ -321,11 +372,13 @@ namespace IDLab.Desktop
                     continue;
                 }
 
-                var b = WorldBox(other);
-                bool overlap = box.Min.X < b.Max.X && box.Max.X > b.Min.X && box.Min.Z < b.Max.Z && box.Max.Z > b.Min.Z;
-                if (overlap && b.Max.Y <= box.Min.Y + 0.03f && b.Max.Y > best)
+                foreach (var b in Boxes(other))
                 {
-                    best = b.Max.Y;
+                    bool overlap = box.Min.X < b.Max.X && box.Max.X > b.Min.X && box.Min.Z < b.Max.Z && box.Max.Z > b.Min.Z;
+                    if (overlap && b.Max.Y <= box.Min.Y + 0.03f && b.Max.Y > best)
+                    {
+                        best = b.Max.Y;
+                    }
                 }
             }
 
@@ -349,7 +402,7 @@ namespace IDLab.Desktop
             float wheel = GetMouseWheelMove();
             if (Math.Abs(wheel) > 0.01f && CheckCollisionPointRec(Ui.Mouse, Viewport))
             {
-                Distance = Math.Clamp(Distance * (1f - wheel * 0.1f), 0.3f, 2.2f);
+                Distance = Math.Clamp(Distance * (1f - wheel * 0.1f), 0.3f, 3.5f);
             }
 
             if (IsMouseButtonDown(MouseButton.Right))
@@ -357,7 +410,7 @@ namespace IDLab.Desktop
                 Orbit(GetMouseDelta());
             }
 
-            Pitch = Math.Clamp(Pitch, 8f, 80f);
+            Pitch = Math.Clamp(Pitch, 2f, 80f);
             float yaw = Yaw * MathF.PI / 180f, pitch = Pitch * MathF.PI / 180f;
             var forward = new Vector3(MathF.Sin(yaw) * MathF.Cos(pitch), -MathF.Sin(pitch), MathF.Cos(yaw) * MathF.Cos(pitch));
             var position = Target - forward * Distance;
@@ -389,8 +442,8 @@ namespace IDLab.Desktop
         public void ResetView()
         {
             Yaw = 0;
-            Pitch = 34;
-            Distance = 1.15f;
+            Pitch = 24;
+            Distance = 1.3f;
         }
 
         private static readonly Random Rng = new Random();
@@ -432,9 +485,9 @@ namespace IDLab.Desktop
 
                 case Mode.Knob:
                     var d = GetMouseDelta();
-                    if (_pending?.Heat != null)
+                    if (_pending != null)
                     {
-                        _pending.Heat.GasValve += (d.X - d.Y) / (300f * Ui.S);
+                        _pending.KnobValue = Math.Clamp(_pending.KnobValue + (d.X - d.Y) / (300f * Ui.S), 0, 1);
                     }
 
                     if (!Ui.Down) _mode = Mode.Idle;
@@ -458,9 +511,8 @@ namespace IDLab.Desktop
             float best = float.MaxValue;
             foreach (var item in _items.Values)
             {
-                if (item.Heat != null)
+                if (item.KnobPosition is Vector3 k)
                 {
-                    var k = item.KnobPosition;
                     var knobBox = new BoundingBox(k - new Vector3(0.022f), k + new Vector3(0.022f));
                     var kh = GetRayCollisionBox(ray, knobBox);
                     // The knob sits inside the burner's bounds: give it priority so it can be turned.
@@ -472,16 +524,41 @@ namespace IDLab.Desktop
                     }
                 }
 
-                var hit = GetRayCollisionBox(ray, WorldBox(item));
-                // Thin probes get priority over the beaker they stand in.
-                float distance = hit.Distance - (item.Probe != null ? 0.05f : 0f);
-                if (hit.Hit && distance < best)
+                foreach (var box in Boxes(item))
                 {
-                    best = distance;
-                    _pending = item;
-                    _pendingKnob = false;
+                    var hit = GetRayCollisionBox(ray, box);
+                    // Thin probes and tubes get priority over the vessel or rack they stand in.
+                    float distance = hit.Distance - (item.Probe != null || item.Host != null ? 0.05f : 0f);
+                    if (hit.Hit && distance < best)
+                    {
+                        best = distance;
+                        _pending = item;
+                        _pendingKnob = false;
+                    }
                 }
             }
+        }
+
+        private Item ItemUnderPointer()
+        {
+            var ray = GetScreenToWorldRay(Ui.Mouse, Camera);
+            Item found = null;
+            float best = float.MaxValue;
+            foreach (var item in _items.Values)
+            {
+                foreach (var box in Boxes(item))
+                {
+                    var hit = GetRayCollisionBox(ray, box);
+                    float d = hit.Distance - (item.Probe != null || item.Host != null ? 0.05f : 0f);
+                    if (hit.Hit && d < best)
+                    {
+                        best = d;
+                        found = item;
+                    }
+                }
+            }
+
+            return found;
         }
 
         /// <summary>Starts dragging a brand-new item from the inventory.</summary>
@@ -533,11 +610,14 @@ namespace IDLab.Desktop
             foreach (var other in _items.Values)
             {
                 if (other == item || IsDescendantOf(other, item)) continue;
-                var hit = GetRayCollisionBox(ray, WorldBox(other));
-                if (hit.Hit && hit.Distance < nearest)
+                foreach (var b in Boxes(other))
                 {
-                    nearest = hit.Distance;
-                    aim = hit.Point;
+                    var hit = GetRayCollisionBox(ray, b);
+                    if (hit.Hit && hit.Distance < nearest)
+                    {
+                        nearest = hit.Distance;
+                        aim = hit.Point;
+                    }
                 }
             }
 
@@ -589,10 +669,14 @@ namespace IDLab.Desktop
             foreach (var other in _items.Values)
             {
                 if (other == item || IsDescendantOf(other, item)) continue;
-                var b = WorldBox(other);
-                if (box.Min.X < b.Max.X && box.Max.X > b.Min.X && box.Min.Z < b.Max.Z && box.Max.Z > b.Min.Z)
+                foreach (var b in Boxes(other))
                 {
-                    best = Math.Max(best, b.Max.Y);
+                    // Only things the item could sit on (not a burette tube hanging above it).
+                    if (b.Min.Y > box.Min.Y + 0.02f) continue;
+                    if (box.Min.X < b.Max.X && box.Max.X > b.Min.X && box.Min.Z < b.Max.Z && box.Max.Z > b.Min.Z)
+                    {
+                        best = Math.Max(best, b.Max.Y);
+                    }
                 }
             }
 
