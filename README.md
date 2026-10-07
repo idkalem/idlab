@@ -15,7 +15,7 @@ module roadmap.
 ## Akıllı tahta sürümü (Windows .exe) — Unity gerekmez
 
 `desktop/IDLab.Desktop`, aynı simülasyon çekirdeğini kullanan, Unity'siz, yerel bir Windows uygulamasıdır.
-Tek bir `IDLab.exe` dosyasıdır: .NET çalışma ortamı, grafik kütüphanesi (raylib) ve Türkçe font içine
+Tek bir `IDLab.exe` dosyasıdır (yaklaşık 12 MB): .NET çalışma ortamı, grafik kütüphanesi (raylib) ve Türkçe font içine
 gömülüdür. **Kurulum gerekmez.**
 
 * **Çalıştırma:** `IDLab.exe` dosyasını tahtanın bilgisayarına kopyalayın ve çift tıklayın. Uygulama tam
