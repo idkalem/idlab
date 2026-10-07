@@ -1,0 +1,19 @@
+{
+    "name": "IDLab.Editor",
+    "rootNamespace": "IDLab.EditorTools",
+    "references": [
+        "IDLab.App",
+        "IDLab.Core"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

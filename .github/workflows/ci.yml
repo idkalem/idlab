@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  core:
+    name: Core tests + Unity type-check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Build core (netstandard2.1, C# 9 — same constraints as Unity)
+        run: dotnet build core/IDLab.Core.csproj -c Release
+      - name: Unit tests
+        run: dotnet test core/tests/IDLab.Core.Tests -c Release
+      - name: Type-check Unity scripts against Unity reference assemblies
+        run: dotnet build tools/unity-typecheck -c Release
