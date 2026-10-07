@@ -66,12 +66,35 @@ namespace IDLab.Core.Micro
                 { SpeciesIds.Hydronium, (1, 1.05f, ColorRGBA.FromHex(0xFF4F4F)) },
                 { SpeciesIds.Hydroxide, (-1, 0.95f, ColorRGBA.FromHex(0x7B61FF)) },
                 { SpeciesIds.SodiumIon, (1, 0.8f, ColorRGBA.FromHex(0xB06BFF)) },
+                { SpeciesIds.PotassiumIon, (1, 1.0f, ColorRGBA.FromHex(0xD08CFF)) },
                 { SpeciesIds.ChlorideIon, (-1, 1.3f, ColorRGBA.FromHex(0x4FE07A)) },
+                { SpeciesIds.NitrateIon, (-1, 1.35f, ColorRGBA.FromHex(0x5FA8FF)) },
+                { SpeciesIds.SulfateIon, (-2, 1.5f, ColorRGBA.FromHex(0xFFE14F)) },
+                { SpeciesIds.AmmoniumIon, (1, 1.1f, ColorRGBA.FromHex(0x5FD3C8)) },
+                { SpeciesIds.Ammonia, (0, 1.05f, ColorRGBA.FromHex(0x9EE8E0)) },
+                { SpeciesIds.MagnesiumIon, (2, 0.75f, ColorRGBA.FromHex(0xC9CCD2)) },
+                { SpeciesIds.ZincIon, (2, 0.8f, ColorRGBA.FromHex(0xA7B0BF)) },
+                { SpeciesIds.IronIIIon, (2, 0.85f, ColorRGBA.FromHex(0x8FCB86)) },
+                { SpeciesIds.IronIIIIon, (3, 0.8f, ColorRGBA.FromHex(0xE8901A)) },
+                { SpeciesIds.CopperIon, (2, 0.82f, ColorRGBA.FromHex(0x1F6FE5)) },
+                { SpeciesIds.SilverIon, (1, 1.0f, ColorRGBA.FromHex(0xD8DADF)) },
+                { SpeciesIds.CalciumIon, (2, 0.95f, ColorRGBA.FromHex(0xF0E6D2)) },
+                { SpeciesIds.BicarbonateIon, (-1, 1.35f, ColorRGBA.FromHex(0xF3F3F3)) },
+                { SpeciesIds.PermanganateIon, (-1, 1.4f, ColorRGBA.FromHex(0x9B1FB0)) },
+                { SpeciesIds.IodideIon, (-1, 1.6f, ColorRGBA.FromHex(0xC28B3A)) },
                 { SpeciesIds.AcetateIon, (-1, 1.5f, ColorRGBA.FromHex(0xFFB347)) },
                 { SpeciesIds.AceticAcid, (0, 1.6f, ColorRGBA.FromHex(0xE8D9A8)) },
                 { SpeciesIds.HypochloriteIon, (-1, 1.2f, ColorRGBA.FromHex(0xE6E14A)) },
+                { SpeciesIds.Ethanol, (0, 1.4f, ColorRGBA.FromHex(0xFFB37A)) },
+                { SpeciesIds.Sucrose, (0, 2.2f, ColorRGBA.FromHex(0xFFF2CC)) },
+                { SpeciesIds.HydrogenPeroxide, (0, 1.05f, ColorRGBA.FromHex(0xBFE6FF)) },
                 { SpeciesIds.SodiumAtom, (0, 1.4f, ColorRGBA.FromHex(0xBFBFB8)) },
                 { SpeciesIds.Indicator, (0, 2.0f, ColorRGBA.FromHex(0x3CB43C)) },
+                { "Mg", (0, 1.3f, ColorRGBA.FromHex(0xC9CCD2)) },
+                { "Zn", (0, 1.25f, ColorRGBA.FromHex(0xAEB4BE)) },
+                { "Fe", (0, 1.2f, ColorRGBA.FromHex(0x6A6D73)) },
+                { "Cu", (0, 1.2f, ColorRGBA.FromHex(0xC8703A)) },
+                { "Ag", (0, 1.3f, ColorRGBA.FromHex(0xE0E2E6)) },
             };
 
         public static double SpeedFactor(double temperatureC) =>
@@ -112,9 +135,11 @@ namespace IDLab.Core.Micro
                     continue;
                 }
 
-                double dissociated = !aqueous || s.Ions.Count == 0
+                double dissociated = !s.IsDissolved(aqueous) || s.Ions.Count == 0
                     ? 0.0
-                    : (s.Kind == SubstanceKind.WeakAcid ? AcidBase.WeakAcidDissociation(s, mixture) : 1.0);
+                    : s.Kind == SubstanceKind.WeakAcid ? AcidBase.WeakAcidDissociation(s, mixture)
+                    : s.Kind == SubstanceKind.WeakBase ? AcidBase.WeakBaseProtonation(s, mixture)
+                    : 1.0;
 
                 if (dissociated > 0)
                 {

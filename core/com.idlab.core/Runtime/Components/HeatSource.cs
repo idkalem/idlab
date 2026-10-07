@@ -27,8 +27,12 @@ namespace IDLab.Core.Components
         /// <summary>Power actually delivered into a container last step (W).</summary>
         public double DeliveredPowerW { get; private set; }
 
-        public HeatSource(double maxPowerW, double efficiency, string heatingSnapId)
+        /// <summary>An open flame (Bunsen) ignites flammable vapour; a hot plate does not.</summary>
+        public bool OpenFlame { get; }
+
+        public HeatSource(double maxPowerW, double efficiency, string heatingSnapId, bool openFlame = true)
         {
+            OpenFlame = openFlame;
             MaxPowerW = maxPowerW;
             Efficiency = efficiency;
             HeatingSnapId = heatingSnapId;
@@ -49,6 +53,10 @@ namespace IDLab.Core.Components
 
             DeliveredPowerW = FlamePowerW * Efficiency;
             target.AddHeat(DeliveredPowerW * dt);
+            if (OpenFlame && target.TemperatureC > 35)
+            {
+                target.Ignite(); // flammable vapour meets the flame
+            }
         }
     }
 }

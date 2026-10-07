@@ -89,16 +89,88 @@ namespace IDLab.Core.Model
             acidBase.InitialLayout.Add((EquipmentIds.PhProbe, 0.24f, 0.08f));
             c.Register(acidBase);
 
+            var titration = new ExperimentDefinition
+            {
+                Id = "chem.titration", Title = "Acid–Base Titration", Discipline = Discipline.Chemistry, Status = ExperimentStatus.Playable,
+                Summary = "Find the concentration of HCl by adding 0.1 M NaOH from a burette until phenolphthalein turns pink.",
+            };
+            titration.Equipment.AddRange(new[]
+            {
+                EquipmentIds.Burette, EquipmentIds.Erlenmeyer, EquipmentIds.Beaker100, EquipmentIds.HclBottle, EquipmentIds.PhenolphthaleinBottle,
+                EquipmentIds.IndicatorBottle, EquipmentIds.PhProbe, EquipmentIds.GraduatedCylinder, EquipmentIds.WaterBottle,
+            });
+            titration.InitialLayout.Add((EquipmentIds.Burette, 0.0f, 0.06f));
+            titration.InitialLayout.Add((EquipmentIds.Erlenmeyer, -0.17f, 0.0f));
+            titration.InitialLayout.Add((EquipmentIds.PhenolphthaleinBottle, 0.16f, -0.04f));
+            titration.InitialLayout.Add((EquipmentIds.HclBottle, -0.3f, 0.05f));
+            titration.InitialLayout.Add((EquipmentIds.PhProbe, 0.24f, 0.06f));
+            c.Register(titration);
+
+            var gases = new ExperimentDefinition
+            {
+                Id = "chem.gases", Title = "Gas-Producing Reactions", Discipline = Discipline.Chemistry, Status = ExperimentStatus.Playable,
+                Summary = "Metals + acid (H₂), carbonates + acid (CO₂), hydrogen peroxide + KI (O₂). Compare how fast each one bubbles.",
+            };
+            gases.Equipment.AddRange(new[]
+            {
+                EquipmentIds.Beaker250, EquipmentIds.TestTube, EquipmentIds.TubeRack, EquipmentIds.Erlenmeyer, EquipmentIds.HclBottle,
+                EquipmentIds.VinegarBottle, EquipmentIds.H2o2Bottle, EquipmentIds.KiSolution, EquipmentIds.MgJar, EquipmentIds.ZnJar,
+                EquipmentIds.FeJar, EquipmentIds.CuJar, EquipmentIds.Nahco3Jar, EquipmentIds.Caco3Jar, EquipmentIds.Thermometer,
+            });
+            gases.InitialLayout.Add((EquipmentIds.TubeRack, 0.0f, 0.12f));
+            gases.InitialLayout.Add((EquipmentIds.HclBottle, -0.22f, 0.02f));
+            gases.InitialLayout.Add((EquipmentIds.MgJar, 0.12f, -0.06f));
+            gases.InitialLayout.Add((EquipmentIds.ZnJar, 0.2f, -0.06f));
+            gases.InitialLayout.Add((EquipmentIds.CuJar, 0.28f, -0.06f));
+            gases.InitialLayout.Add((EquipmentIds.Beaker250, -0.06f, -0.05f));
+            c.Register(gases);
+
+            var precip = new ExperimentDefinition
+            {
+                Id = "chem.precipitation", Title = "Precipitation & Displacement", Discipline = Discipline.Chemistry, Status = ExperimentStatus.Playable,
+                Summary = "Mix ionic solutions to form coloured precipitates; drop metals into CuSO₄ and AgNO₃ to see the activity series.",
+            };
+            precip.Equipment.AddRange(new[]
+            {
+                EquipmentIds.Beaker100, EquipmentIds.TestTube, EquipmentIds.TubeRack, EquipmentIds.Agno3Solution, EquipmentIds.NaclSolution,
+                EquipmentIds.Cuso4Solution, EquipmentIds.Fecl3Solution, EquipmentIds.NaohBottle, EquipmentIds.FeJar, EquipmentIds.ZnJar,
+                EquipmentIds.CuJar, EquipmentIds.Kmno4Jar, EquipmentIds.WaterBottle,
+            });
+            precip.InitialLayout.Add((EquipmentIds.TubeRack, 0.0f, 0.12f));
+            precip.InitialLayout.Add((EquipmentIds.Cuso4Solution, -0.2f, 0.0f));
+            precip.InitialLayout.Add((EquipmentIds.NaohBottle, 0.18f, 0.0f));
+            precip.InitialLayout.Add((EquipmentIds.Beaker100, -0.04f, -0.06f));
+            c.Register(precip);
+
+            var mass = new ExperimentDefinition
+            {
+                Id = "chem.mass", Title = "Conservation of Mass", Discipline = Discipline.Chemistry, Status = ExperimentStatus.Playable,
+                Summary = "Weigh marble chips reacting with acid in an open flask: the mass drops as CO₂ escapes.",
+            };
+            mass.Equipment.AddRange(new[]
+            {
+                EquipmentIds.Balance, EquipmentIds.Erlenmeyer, EquipmentIds.Beaker250, EquipmentIds.HclBottle, EquipmentIds.Caco3Jar,
+                EquipmentIds.NaclSolution, EquipmentIds.Agno3Solution,
+            });
+            mass.InitialLayout.Add((EquipmentIds.Balance, 0.0f, 0.06f));
+            mass.InitialLayout.Add((EquipmentIds.Erlenmeyer, -0.2f, 0.04f));
+            mass.InitialLayout.Add((EquipmentIds.HclBottle, -0.3f, -0.04f));
+            mass.InitialLayout.Add((EquipmentIds.Caco3Jar, 0.18f, -0.06f));
+            c.Register(mass);
+
             var safety = new ExperimentDefinition
             {
                 Id = "chem.safety", Title = "Lab Safety: Improper Mixing", Discipline = Discipline.Chemistry, Status = ExperimentStatus.Playable,
-                Summary = "Supervised demonstration of why bleach + acid and sodium + water are dangerous.",
+                Summary = "Supervised demonstration of why bleach + acid, bleach + ammonia, sodium + water and alcohol near flames are dangerous.",
             };
-            safety.Equipment.AddRange(new[] { EquipmentIds.Beaker250Water, EquipmentIds.BleachBottle, EquipmentIds.HclBottle, EquipmentIds.SodiumJar });
+            safety.Equipment.AddRange(new[]
+            {
+                EquipmentIds.Beaker250Water, EquipmentIds.Beaker250, EquipmentIds.BleachBottle, EquipmentIds.HclBottle, EquipmentIds.Nh3Bottle,
+                EquipmentIds.SodiumJar, EquipmentIds.EthanolBottle, EquipmentIds.BunsenBurner, EquipmentIds.HotPlate,
+            });
             c.Register(safety);
 
             // Roadmap modules — defined so menus, progress tracking and content pipelines can be built now.
-            c.Register(Planned("chem.titration", "Acid–Base Titration", Discipline.Chemistry, "Burette + stopcock, titration curve plotted as pH vs. volume."));
             c.Register(Planned("phys.dc-circuits", "DC Circuits & Short Circuits", Discipline.Physics, "Batteries, bulbs, resistors, fuses; V–I graphs; sparks and blown fuses on shorts."));
             c.Register(Planned("phys.ac-circuits", "AC Circuits", Discipline.Physics, "Signal generator, oscilloscope trace, RC/RL phase shift."));
             c.Register(Planned("phys.optics", "Optics Bench", Discipline.Physics, "Laser, lenses, prisms, refraction and focal length."));

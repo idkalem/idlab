@@ -10,7 +10,8 @@ namespace IDLab.Core.Interaction
         {
             switch (moving)
             {
-                case SnapKind.ContainerBase: return target == SnapKind.HeatSurface;
+                case SnapKind.ContainerBase: return target == SnapKind.HeatSurface || target == SnapKind.ScalePan;
+                case SnapKind.TubeBase: return target == SnapKind.TubeSlot || target == SnapKind.ScalePan;
                 case SnapKind.ProbeTip: return target == SnapKind.ProbePort;
                 case SnapKind.WireEnd: return target == SnapKind.Terminal;
                 case SnapKind.RailMount: return target == SnapKind.RailMount;

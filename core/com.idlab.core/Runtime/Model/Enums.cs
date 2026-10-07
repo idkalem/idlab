@@ -22,6 +22,9 @@ namespace IDLab.Core.Model
         Optics,
         Mechanics,
         Biology,
+        Indicator,
+        SolidReagent,
+        Measuring,
     }
 
     /// <summary>
@@ -37,6 +40,9 @@ namespace IDLab.Core.Model
         WireEnd,         // end of a wire                            (circuits module)
         RailMount,       // optics bench rail slot                   (optics module)
         StageSlot,       // microscope stage slide clip              (biology module)
+        ScalePan,        // pan of an electronic balance
+        TubeBase,        // rounded bottom of a test tube
+        TubeSlot,        // hole in a test-tube rack
     }
 
     public enum ExperimentStatus

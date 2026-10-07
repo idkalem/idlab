@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace IDLab.Core.Chemistry
@@ -8,10 +9,52 @@ namespace IDLab.Core.Chemistry
         StrongAcid,
         WeakAcid,
         StrongBase,
+        WeakBase,
         Salt,
         Indicator,
         ReactiveMetal,
+        Metal,
         Oxidizer,
+        Molecular,
+    }
+
+    /// <summary>How a pure substance exists in the lab.</summary>
+    public enum SubstancePhase
+    {
+        /// <summary>A liquid in its own right (water, ethanol) — a solvent.</summary>
+        Liquid,
+
+        /// <summary>Only ever handled dissolved (HCl, NaOH solutions): part of the liquid phase.</summary>
+        Aqueous,
+
+        /// <summary>A solid; dissolves in water if <see cref="Substance.Soluble"/>, otherwise stays as grains/precipitate.</summary>
+        Solid,
+    }
+
+    /// <summary>What solid pieces look like when poured or lying in a container.</summary>
+    public enum SolidForm
+    {
+        Powder,
+        Crystals,
+        Granules,
+        Chunks,
+        Ribbon,
+        Turnings,
+        Precipitate,
+    }
+
+    /// <summary>GHS hazard pictograms (used for labels, safety cards and warnings).</summary>
+    [Flags]
+    public enum Hazard
+    {
+        None = 0,
+        Corrosive = 1 << 0,
+        Toxic = 1 << 1,
+        Flammable = 1 << 2,
+        Oxidizer = 1 << 3,
+        Irritant = 1 << 4,
+        Environment = 1 << 5,
+        WaterReactive = 1 << 6,
     }
 
     /// <summary>A particle species shown in the micro view when a substance dissolves (e.g. Na⁺, Cl⁻).</summary>
@@ -34,6 +77,13 @@ namespace IDLab.Core.Chemistry
         public string Name { get; set; }
         public string Formula { get; set; }
         public SubstanceKind Kind { get; set; }
+        public SubstancePhase Phase { get; set; } = SubstancePhase.Aqueous;
+
+        /// <summary>For solids: dissolves in water (ions/molecules join the liquid phase).</summary>
+        public bool Soluble { get; set; }
+
+        public SolidForm Form { get; set; } = SolidForm.Powder;
+        public Hazard Hazards { get; set; }
 
         public double MolarMass { get; set; }           // g/mol
         public double Density { get; set; } = 1.0;       // g/mL (as it contributes to solution volume)
@@ -43,26 +93,42 @@ namespace IDLab.Core.Chemistry
         public double BoilingPointC { get; set; } = double.NaN;
         public double LatentHeatVaporization { get; set; }   // J/kg
 
-        /// <summary>H⁺ released per formula unit (acids) / OH⁻ released (bases).</summary>
+        /// <summary>H⁺ released per formula unit (acids) / OH⁻ accepted (bases).</summary>
         public int Protons { get; set; }
         public int Hydroxides { get; set; }
 
-        /// <summary>Acid dissociation constant for weak acids.</summary>
+        /// <summary>Acid dissociation constant (weak acids) / base constant Kb (weak bases).</summary>
         public double Ka { get; set; }
+        public double Kb { get; set; }
 
-        /// <summary>For weak acids: the salt formed on neutralisation (its conjugate base).</summary>
-        public string ConjugateBaseId { get; set; }
+        /// <summary>For salts: the weak acid or weak base whose conjugate ion this salt carries (CH₃COONa → acetic acid).</summary>
+        public string ConjugateId { get; set; }
+
+        /// <summary>Conjugate ions per formula unit ((NH₄)₂SO₄ → 2).</summary>
+        public int ConjugateCount { get; set; } = 1;
 
         /// <summary>Particle species this substance shows as when dissolved (empty = molecular).</summary>
         public List<IonPart> Ions { get; } = new List<IonPart>();
 
-        /// <summary>Micro-view species for the undissociated molecule.</summary>
+        /// <summary>Micro-view species for the undissociated molecule / solid.</summary>
         public string MolecularSpeciesId { get; set; }
 
         public ColorRGBA Color { get; set; } = new ColorRGBA(1, 1, 1, 0.2f);
 
+        /// <summary>How strongly a dissolved substance tints a solution, per mol/L (0 = colourless).</summary>
+        public double TintStrength { get; set; }
+
         public bool IsVolatile => !double.IsNaN(BoilingPointC) && LatentHeatVaporization > 0;
         public bool IsAcid => Kind == SubstanceKind.StrongAcid || Kind == SubstanceKind.WeakAcid;
+        public bool IsBase => Kind == SubstanceKind.StrongBase || Kind == SubstanceKind.WeakBase;
+        public bool IsFlammable => (Hazards & Hazard.Flammable) != 0;
+
+        /// <summary>Ions in water, given whether a solvent is present.</summary>
+        public bool IsDissolved(bool waterPresent) =>
+            Phase == SubstancePhase.Aqueous || (Phase == SubstancePhase.Solid && Soluble && waterPresent);
+
+        /// <summary>Counts as part of the liquid phase (pours, sets the liquid level and colour).</summary>
+        public bool IsLiquidPhase(bool waterPresent) => Phase == SubstancePhase.Liquid || IsDissolved(waterPresent);
 
         public override string ToString() => $"{Name} ({Formula})";
     }

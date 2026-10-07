@@ -21,8 +21,11 @@ namespace IDLab.Core.Model
         /// <summary>Inner diameter of the opening (bottle neck). 0 = open-topped, same as the body.</summary>
         public double MouthDiameterM { get; set; }
 
+        /// <summary>Base centre of the vessel in the equipment's frame (default: the equipment origin).</summary>
+        public System.Numerics.Vector3 LocalOffset { get; set; }
+
         public override LabComponent CreateComponent() =>
-            new LiquidContainer(InnerDiameterM, InnerHeightM, GlassMassKg, InitialContents, MouthDiameterM);
+            new LiquidContainer(InnerDiameterM, InnerHeightM, GlassMassKg, InitialContents, MouthDiameterM, LocalOffset);
     }
 
     public sealed class HeatSourceSpec : ComponentSpec
@@ -30,8 +33,9 @@ namespace IDLab.Core.Model
         public double MaxPowerW { get; set; } = 1500;
         public double Efficiency { get; set; } = 0.35;
         public string HeatingSnapId { get; set; } = "heat_surface";
+        public bool OpenFlame { get; set; } = true;
 
-        public override LabComponent CreateComponent() => new HeatSource(MaxPowerW, Efficiency, HeatingSnapId);
+        public override LabComponent CreateComponent() => new HeatSource(MaxPowerW, Efficiency, HeatingSnapId, OpenFlame);
     }
 
     public sealed class ProbeSpec : ComponentSpec
@@ -41,5 +45,24 @@ namespace IDLab.Core.Model
         public string TipSnapId { get; set; } = "tip";
 
         public override LabComponent CreateComponent() => new Probe(Quantity, TimeConstantS, TipSnapId);
+    }
+}
+
+namespace IDLab.Core.Model
+{
+    public sealed class StopcockSpec : ComponentSpec
+    {
+        public double MaxFlowLitersPerSecond { get; set; } = 0.002;
+        public System.Numerics.Vector3 OutletLocal { get; set; }
+
+        public override IDLab.Core.Components.LabComponent CreateComponent() =>
+            new IDLab.Core.Components.Stopcock(MaxFlowLitersPerSecond, OutletLocal);
+    }
+
+    public sealed class BalanceSpec : ComponentSpec
+    {
+        public string PanSnapId { get; set; } = "pan";
+
+        public override IDLab.Core.Components.LabComponent CreateComponent() => new IDLab.Core.Components.Balance(PanSnapId);
     }
 }

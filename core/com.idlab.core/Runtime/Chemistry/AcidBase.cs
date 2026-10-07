@@ -1,28 +1,37 @@
 using System;
+using System.Collections.Generic;
 
 namespace IDLab.Core.Chemistry
 {
     /// <summary>
-    /// pH of an aqueous mixture. Handles excess strong acid/base (with water autoionisation),
-    /// weak acids (exact quadratic), weak-acid buffers (Henderson–Hasselbalch) and conjugate-base
-    /// hydrolysis (e.g. sodium acetate at the equivalence point). Assumes neutralisation has already
-    /// been applied by the <see cref="ReactionEngine"/>.
+    /// pH of an aqueous mixture. Handles excess strong acid/base (with water autoionisation), weak acids and
+    /// weak bases (exact quadratic), buffers (Henderson–Hasselbalch) and hydrolysis of conjugate ions
+    /// (acetate is basic, ammonium is acidic). Assumes neutralisation has already been applied by the
+    /// <see cref="ReactionEngine"/>.
     /// </summary>
     public static class AcidBase
     {
         private const double Kw = PhysicalConstants.WaterIonProduct;
         private const double Tiny = 1e-12;
 
+        private sealed class Pair
+        {
+            public double K;      // Ka (acid pairs) or Kb (base pairs)
+            public double Weak;   // mol of the weak acid / weak base
+            public double Conj;   // mol of its conjugate ion
+        }
+
         public static double ComputePH(Mixture mixture)
         {
-            double v = mixture.VolumeLiters;
+            double v = mixture.LiquidVolumeLiters;
             if (v < 1e-7 || !mixture.Contains(SubstanceIds.Water))
             {
                 return double.NaN; // no aqueous phase — pH undefined
             }
 
             double strongH = 0, strongOH = 0;
-            double weakAcidMoles = 0, conjugateMoles = 0, weakKa = 0;
+            var acids = new Dictionary<string, Pair>();
+            var bases = new Dictionary<string, Pair>();
 
             foreach (var kv in mixture.Components)
             {
@@ -36,39 +45,38 @@ namespace IDLab.Core.Chemistry
                         strongOH += kv.Value * s.Hydroxides;
                         break;
                     case SubstanceKind.WeakAcid:
-                        weakAcidMoles += kv.Value * s.Protons;
-                        weakKa = s.Ka;
-                        if (s.ConjugateBaseId != null)
-                        {
-                            conjugateMoles += mixture.Moles(s.ConjugateBaseId);
-                        }
-
+                        PairFor(acids, s.Id, s.Ka).Weak += kv.Value * s.Protons;
+                        break;
+                    case SubstanceKind.WeakBase:
+                        PairFor(bases, s.Id, s.Kb).Weak += kv.Value * s.Hydroxides;
                         break;
                 }
-            }
 
-            // A conjugate base can exist with no acid left (e.g. after full neutralisation).
-            if (weakKa == 0)
-            {
-                foreach (var s in mixture.Database.All)
+                if (s.ConjugateId != null && mixture.Database.TryGet(s.ConjugateId, out var parent) && s.IsDissolved(true))
                 {
-                    if (s.Kind == SubstanceKind.WeakAcid && s.ConjugateBaseId != null && mixture.Contains(s.ConjugateBaseId))
+                    if (parent.Kind == SubstanceKind.WeakAcid)
                     {
-                        conjugateMoles += mixture.Moles(s.ConjugateBaseId);
-                        weakKa = s.Ka;
+                        PairFor(acids, parent.Id, parent.Ka).Conj += kv.Value * s.ConjugateCount;
+                    }
+                    else if (parent.Kind == SubstanceKind.WeakBase)
+                    {
+                        PairFor(bases, parent.Id, parent.Kb).Conj += kv.Value * s.ConjugateCount;
                     }
                 }
             }
 
             double net = (strongH - strongOH) / v;
-            double ca = weakAcidMoles / v;
-            double cb = conjugateMoles / v;
-
             if (net > Tiny)
             {
-                // Strong acid in excess, weak acid dissociation suppressed (common-ion effect).
-                double x = ca > 0 ? Quadratic(1, net + weakKa, -weakKa * ca) : 0;
-                return -Math.Log10(WithWater(net + x));
+                // Strong acid in excess; weak acids barely dissociate (common-ion effect).
+                double h = net;
+                foreach (var a in acids.Values)
+                {
+                    double ca = a.Weak / v;
+                    if (ca > Tiny) h += Quadratic(1, net + a.K, -a.K * ca);
+                }
+
+                return -Math.Log10(WithWater(h));
             }
 
             if (net < -Tiny)
@@ -76,25 +84,50 @@ namespace IDLab.Core.Chemistry
                 return 14.0 + Math.Log10(WithWater(-net));
             }
 
-            if (ca > Tiny && cb > Tiny)
+            var phs = new List<double>();
+            foreach (var a in acids.Values)
             {
-                return -Math.Log10(weakKa) + Math.Log10(cb / ca); // buffer
+                double ca = a.Weak / v, cb = a.Conj / v;
+                if (ca > Tiny && cb > Tiny) phs.Add(-Math.Log10(a.K) + Math.Log10(cb / ca));
+                else if (ca > Tiny) phs.Add(-Math.Log10(WithWater(Quadratic(1, a.K, -a.K * ca))));
+                else if (cb > Tiny)
+                {
+                    double kb = Kw / a.K;
+                    phs.Add(14.0 + Math.Log10(WithWater(Quadratic(1, kb, -kb * cb))));
+                }
             }
 
-            if (ca > Tiny)
+            foreach (var b in bases.Values)
             {
-                double x = Quadratic(1, weakKa, -weakKa * ca);
-                return -Math.Log10(WithWater(x));
+                double cb = b.Weak / v, ca = b.Conj / v;
+                if (cb > Tiny && ca > Tiny) phs.Add(14.0 - (-Math.Log10(b.K) + Math.Log10(ca / cb)));
+                else if (cb > Tiny) phs.Add(14.0 + Math.Log10(WithWater(Quadratic(1, b.K, -b.K * cb))));
+                else if (ca > Tiny)
+                {
+                    double ka = Kw / b.K;
+                    phs.Add(-Math.Log10(WithWater(Quadratic(1, ka, -ka * ca))));
+                }
             }
 
-            if (cb > Tiny)
+            if (phs.Count == 0)
             {
-                double kb = Kw / weakKa;
-                double oh = Quadratic(1, kb, -kb * cb);
-                return 14.0 + Math.Log10(WithWater(oh));
+                return 7.0;
             }
 
-            return 7.0;
+            double sum = 0;
+            foreach (var p in phs) sum += p;
+            return sum / phs.Count;
+        }
+
+        private static Pair PairFor(Dictionary<string, Pair> map, string id, double k)
+        {
+            if (!map.TryGetValue(id, out var p))
+            {
+                p = new Pair { K = k };
+                map[id] = p;
+            }
+
+            return p;
         }
 
         /// <summary>Adds water autoionisation to a strong-ion concentration c: [X] = (c + √(c² + 4Kw)) / 2.</summary>
@@ -103,24 +136,22 @@ namespace IDLab.Core.Chemistry
         /// <summary>Positive root of a·x² + b·x + c = 0.</summary>
         private static double Quadratic(double a, double b, double c) => (-b + Math.Sqrt(b * b - 4 * a * c)) / (2 * a);
 
-        /// <summary>Fraction of a weak acid dissociated in the given mixture (for the micro view).</summary>
+        /// <summary>Fraction of a weak acid dissociated (α = Ka / (Ka + [H⁺])) — for the micro view.</summary>
         public static double WeakAcidDissociation(Substance acid, Mixture mixture)
         {
-            double v = mixture.VolumeLiters;
-            double c = v > 0 ? mixture.Moles(acid.Id) / v : 0;
-            if (c <= Tiny || acid.Ka <= 0)
-            {
-                return 0;
-            }
-
             double ph = ComputePH(mixture);
-            if (double.IsNaN(ph))
-            {
-                return 0;
-            }
-
+            if (double.IsNaN(ph) || acid.Ka <= 0) return 0;
             double h = Math.Pow(10, -ph);
-            return acid.Ka / (acid.Ka + h); // α = Ka / (Ka + [H⁺])
+            return acid.Ka / (acid.Ka + h);
+        }
+
+        /// <summary>Fraction of a weak base protonated (α = Kb / (Kb + [OH⁻])) — for the micro view.</summary>
+        public static double WeakBaseProtonation(Substance @base, Mixture mixture)
+        {
+            double ph = ComputePH(mixture);
+            if (double.IsNaN(ph) || @base.Kb <= 0) return 0;
+            double oh = Math.Pow(10, ph - 14);
+            return @base.Kb / (@base.Kb + oh);
         }
     }
 }

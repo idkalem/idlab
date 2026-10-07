@@ -1,3 +1,5 @@
+using System;
+
 namespace IDLab.Core.Chemistry
 {
     /// <summary>Colour lookup tables for acid–base indicators.</summary>
@@ -16,6 +18,11 @@ namespace IDLab.Core.Chemistry
             (12.0, ColorRGBA.FromHex(0x3C2896)),
             (14.0, ColorRGBA.FromHex(0x501E78)),
         };
+
+        public static readonly ColorRGBA PhenolphthaleinPink = new ColorRGBA(0.93f, 0.12f, 0.55f, 0.8f);
+
+        /// <summary>Phenolphthalein: colourless below pH 8.2, increasingly pink up to pH 10.</summary>
+        public static float PhenolphthaleinIntensity(double pH) => (float)Math.Max(0, Math.Min(1, (pH - 8.2) / 1.8));
 
         public static ColorRGBA UniversalIndicator(double pH)
         {

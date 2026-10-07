@@ -15,6 +15,10 @@ namespace IDLab.Core.Events
         Explosion,
         Spark,      // circuits: short circuit
         FuseBlown,  // circuits: overcurrent
+        Precipitate,
+        Foam,
+        Fire,
+        Reaction,   // a visible but harmless change (colour change, metal deposit, gas start)
     }
 
     /// <summary>Something noteworthy happened at a place on the bench. Drives VFX, sound and toasts.</summary>
@@ -27,8 +31,12 @@ namespace IDLab.Core.Events
         public Vector3 Position { get; }
         public double Time { get; }
 
-        public LabEvent(LabEventType type, double severity, string message, int instanceId, Vector3 position, double time)
+        /// <summary>Stable id of what happened (e.g. "precip.agcl") so front-ends can show localised text.</summary>
+        public string Code { get; }
+
+        public LabEvent(LabEventType type, double severity, string message, int instanceId, Vector3 position, double time, string code = null)
         {
+            Code = code;
             Type = type;
             Severity = severity;
             Message = message;
@@ -39,7 +47,7 @@ namespace IDLab.Core.Events
 
         public bool IsHazard => Type == LabEventType.Smoke || Type == LabEventType.ToxicGas ||
                                 Type == LabEventType.Explosion || Type == LabEventType.Spark ||
-                                Type == LabEventType.FuseBlown;
+                                Type == LabEventType.FuseBlown || Type == LabEventType.Fire;
 
         public override string ToString() => $"[{Time:0.00}s] {Type} ({Severity:0.00}) {Message}";
     }
