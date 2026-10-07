@@ -52,9 +52,9 @@ namespace IDLab.Core.Model
                 Id = SandboxId, Title = "Free Lab (Sandbox)", Discipline = Discipline.All, Status = ExperimentStatus.Playable,
                 Summary = "Every available instrument. Build your own experiment.",
             };
-            sandbox.InitialLayout.Add((EquipmentIds.BunsenBurner, 0.0f, 0.05f));
-            sandbox.InitialLayout.Add((EquipmentIds.Beaker250Water, -0.25f, 0.1f));
-            sandbox.InitialLayout.Add((EquipmentIds.Thermometer, -0.38f, 0.0f));
+            sandbox.InitialLayout.Add((EquipmentIds.BunsenBurner, 0.08f, 0.05f));
+            sandbox.InitialLayout.Add((EquipmentIds.Beaker250Water, -0.14f, 0.06f));
+            sandbox.InitialLayout.Add((EquipmentIds.Thermometer, -0.26f, -0.04f));
             c.Register(sandbox);
 
             var heating = new ExperimentDefinition
@@ -64,9 +64,9 @@ namespace IDLab.Core.Model
                 Summary = "Heat water with a Bunsen burner and record temperature vs. time. Observe the boiling plateau.",
             };
             heating.Equipment.AddRange(new[] { EquipmentIds.BunsenBurner, EquipmentIds.Beaker250Water, EquipmentIds.Thermometer, EquipmentIds.WaterBottle });
-            heating.InitialLayout.Add((EquipmentIds.BunsenBurner, 0.0f, 0.05f));
-            heating.InitialLayout.Add((EquipmentIds.Beaker250Water, -0.25f, 0.1f));
-            heating.InitialLayout.Add((EquipmentIds.Thermometer, -0.38f, 0.0f));
+            heating.InitialLayout.Add((EquipmentIds.BunsenBurner, 0.08f, 0.05f));
+            heating.InitialLayout.Add((EquipmentIds.Beaker250Water, -0.14f, 0.06f));
+            heating.InitialLayout.Add((EquipmentIds.Thermometer, -0.26f, -0.04f));
             heating.Objectives.Add("Place the beaker on the gauze above the burner.");
             heating.Objectives.Add("Insert the thermometer and open the gas valve.");
             heating.Objectives.Add("Explain why the temperature stops rising at 100 °C.");
@@ -83,10 +83,10 @@ namespace IDLab.Core.Model
                 EquipmentIds.IndicatorBottle, EquipmentIds.PhProbe, EquipmentIds.Thermometer, EquipmentIds.WaterBottle,
             });
             acidBase.InitialLayout.Add((EquipmentIds.Beaker250, 0.0f, 0.1f));
-            acidBase.InitialLayout.Add((EquipmentIds.HclBottle, -0.2f, -0.05f));
-            acidBase.InitialLayout.Add((EquipmentIds.NaohBottle, 0.2f, -0.05f));
+            acidBase.InitialLayout.Add((EquipmentIds.HclBottle, -0.18f, -0.05f));
+            acidBase.InitialLayout.Add((EquipmentIds.NaohBottle, 0.15f, -0.05f));
             acidBase.InitialLayout.Add((EquipmentIds.IndicatorBottle, 0.0f, -0.12f));
-            acidBase.InitialLayout.Add((EquipmentIds.PhProbe, 0.32f, 0.1f));
+            acidBase.InitialLayout.Add((EquipmentIds.PhProbe, 0.24f, 0.08f));
             c.Register(acidBase);
 
             var safety = new ExperimentDefinition

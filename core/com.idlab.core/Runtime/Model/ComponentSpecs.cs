@@ -18,8 +18,11 @@ namespace IDLab.Core.Model
         public double GlassMassKg { get; set; }
         public ReagentPreset InitialContents { get; set; }
 
+        /// <summary>Inner diameter of the opening (bottle neck). 0 = open-topped, same as the body.</summary>
+        public double MouthDiameterM { get; set; }
+
         public override LabComponent CreateComponent() =>
-            new LiquidContainer(InnerDiameterM, InnerHeightM, GlassMassKg, InitialContents);
+            new LiquidContainer(InnerDiameterM, InnerHeightM, GlassMassKg, InitialContents, MouthDiameterM);
     }
 
     public sealed class HeatSourceSpec : ComponentSpec

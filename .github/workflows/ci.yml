@@ -19,3 +19,18 @@ jobs:
         run: dotnet test core/tests/IDLab.Core.Tests -c Release
       - name: Type-check Unity scripts against Unity reference assemblies
         run: dotnet build tools/unity-typecheck -c Release
+
+  smartboard-exe:
+    name: Smart-board edition (Windows .exe)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Publish self-contained single-file IDLab.exe
+        run: dotnet publish desktop/IDLab.Desktop -c Release -r win-x64 -o dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: IDLab-windows
+          path: dist/IDLab.exe

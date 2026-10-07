@@ -24,9 +24,24 @@ how each experiment module plugs in, and the roadmap from this prototype to the 
 **The key architectural decision:** the scientific simulation does **not** live in Unity. It is a pure C#
 library (`com.idlab.core`, `netstandard2.1`, C# 9, `noEngineReferences: true`). That gives us:
 
-* **Correctness you can test** — 35 xUnit tests run with plain `dotnet test`, in CI, in about a second, with no Unity licence.
+* **Correctness you can test** — 36 xUnit tests run with plain `dotnet test`, in CI, in about a second, with no Unity licence.
 * **Determinism** — a fixed 50 Hz timestep that does not depend on the device's frame rate, so a phone and a desktop produce the same graph.
-* **Portability** — the same core could drive a server-side grader, a headless content validator (`tools/sim-cli`), or another engine front-end later.
+* **Portability** — the same core drives a second front-end today: the **smart-board edition**
+  (`desktop/IDLab.Desktop`). It is a native Windows `.exe` built on raylib with a Turkish touch UI, and needs
+  no Unity install or licence. It also drives a headless content validator (`tools/sim-cli`).
+
+### Two front-ends, one core
+
+| | Unity app (`app/`) | Smart-board edition (`desktop/`) |
+| --- | --- | --- |
+| Engine | Unity 6, PhysX, particle systems, uGUI | raylib (OpenGL 3.3) via Raylib-cs, own lit shader |
+| Targets | Windows, macOS, Linux, iOS, Android | Windows 10/11 x64, one self-contained `IDLab.exe` (Linux build for tests) |
+| Physics | Rigid bodies | Kinematic "rest on what's below", hosts carry children |
+| UI | English, dark uGUI HUD | Turkish, immediate-mode touch UI, full-screen, no keyboard needed |
+| Extras | | Assisted pouring (tip a container near another to pour into it), CSV export, `--demo/--trace` test hooks |
+
+Both front-ends mirror poses into the same `LabWorld`, use the same `SnapSystem`, and render the same events,
+data channels and `MicroViewState`.
 
 ---
 
@@ -115,6 +130,8 @@ idlab/
 ├── tools/
 │   ├── unity-typecheck/               Compiles all Unity scripts against Unity reference assemblies (CI, no Unity install)
 │   └── sim-cli/                       Headless scenario runner (heating curve, neutralisation)
+├── desktop/
+│   └── IDLab.Desktop/                 Smart-board edition: Program, Lab (interaction), Scene, Hud, MicroView, Effects, Tr (Turkish)
 └── docs/ARCHITECTURE.md
 ```
 

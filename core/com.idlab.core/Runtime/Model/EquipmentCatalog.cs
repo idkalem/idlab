@@ -152,7 +152,7 @@ namespace IDLab.Core.Model
             d.SnapPoints.Add(new SnapPointDefinition("base", SnapKind.ContainerBase, Vector3.Zero));
             d.Components.Add(new LiquidContainerSpec
             {
-                InnerDiameterM = 0.07, InnerHeightM = 0.14, GlassMassKg = 0.25, InitialContents = contents,
+                InnerDiameterM = 0.07, InnerHeightM = 0.14, GlassMassKg = 0.25, InitialContents = contents, MouthDiameterM = 0.027,
             });
             return d;
         }

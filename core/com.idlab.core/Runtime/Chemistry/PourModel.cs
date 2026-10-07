@@ -20,8 +20,11 @@ namespace IDLab.Core.Chemistry
         }
 
         /// <summary>Outflow in litres per second (0 when the liquid has not reached the lip).</summary>
-        public static double FlowRateLitersPerSecond(double fillFraction, double innerHeightM, double innerDiameterM, double tiltDegrees)
+        /// <param name="mouthDiameterM">Opening the liquid leaves through (a bottle neck); 0 = same as the body.</param>
+        public static double FlowRateLitersPerSecond(double fillFraction, double innerHeightM, double innerDiameterM, double tiltDegrees,
+            double mouthDiameterM = 0)
         {
+            double mouth = mouthDiameterM > 0 ? Math.Min(mouthDiameterM, innerDiameterM) : innerDiameterM;
             if (fillFraction <= 0 || tiltDegrees <= 0)
             {
                 return 0;
@@ -37,8 +40,9 @@ namespace IDLab.Core.Chemistry
                 return 0;
             }
 
-            head = Math.Min(head, innerDiameterM);           // the lip can't be flooded deeper than the mouth
-            double lipWidth = innerDiameterM * 0.5;
+            // Only part of the opening carries the stream: cap the head and use half the mouth as the lip width.
+            head = Math.Min(head, mouth * 0.3);
+            double lipWidth = mouth * 0.5;
             double q = DischargeCoefficient * (2.0 / 3.0) * lipWidth * Math.Sqrt(2 * PhysicalConstants.Gravity) * Math.Pow(head, 1.5);
             return q * 1000.0; // m³/s → L/s
         }

@@ -4,11 +4,39 @@
 Chemistry and Biology experiments into one app, as a 3D next-generation take on PhET-style simulations.
 
 * **Engine:** Unity 6 (C#). Targets Windows, macOS, Linux, iOS and Android.
+* **Smart-board edition:** a single, Unity-free Windows `IDLab.exe` (raylib front-end, Turkish touch UI) over
+  the same core. See the Turkish section below.
 * **Simulation core:** a pure C# library with no Unity dependency. It is unit tested with `dotnet test` and
   shared with Unity as a local UPM package.
 
 See **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** for the full architecture, data model, frame loop and
 module roadmap.
+
+## Akıllı tahta sürümü (Windows .exe) — Unity gerekmez
+
+`desktop/IDLab.Desktop`, aynı simülasyon çekirdeğini kullanan, Unity'siz, yerel bir Windows uygulamasıdır.
+Tek bir `IDLab.exe` dosyasıdır: .NET çalışma ortamı, grafik kütüphanesi (raylib) ve Türkçe font içine
+gömülüdür. **Kurulum gerekmez.**
+
+* **Çalıştırma:** `IDLab.exe` dosyasını tahtanın bilgisayarına kopyalayın ve çift tıklayın. Uygulama tam
+  ekran açılır. İlk açılışta Windows "Bilgisayarınız korundu" uyarısı gösterebilir, çünkü dosya imzasızdır.
+  **Ek bilgi → Yine de çalıştır** ile açın.
+* **Gereksinim:** Windows 10/11 (64 bit) ve OpenGL 3.3 destekleyen ekran kartı. Akıllı tahtalardaki
+  Intel/AMD tümleşik grafik kartları yeterlidir.
+* **Kullanım (yalnızca dokunma):**
+  * Malzemeyi soldaki panelden tezgâha sürükleyin.
+  * Beheri bekin tel kafesine, termometreyi behere bırakın; yeşil halka yerine oturacağını gösterir.
+  * Gaz için kırmızı vanayı sürükleyin ya da alttaki kaydırıcıyı kullanın.
+  * **Dökmek** için şişeyi beherin yanına koyup "Dök" kaydırıcısını çekin. Şişe kendiliğinden beherin
+    üstüne kalkıp döker, kaydırıcı sıfıra dönünce yerine geri gelir.
+  * Sağdaki panelde canlı grafikler görünür. "Kaydet" düğmesi verileri
+    `Belgeler\IDLab\*.csv` dosyasına kaydeder.
+  * Kamera için sağdaki ◀ ▶ ▲ ▼ + − düğmelerini kullanın.
+  * Kapatmak için **Kapat** düğmesine iki kez dokunun. Esc uygulamayı kapatmaz.
+* **Derleme:** `dotnet publish desktop/IDLab.Desktop -c Release -r win-x64 -o dist` komutu `dist/IDLab.exe`
+  dosyasını üretir. Linux'tan da derlenebilir, CI her push'ta derler.
+* **Test seçenekleri:** `--windowed 1920x1080`, `--demo heating|acid|safety`, `--frames N`,
+  `--screenshot dosya.png`, `--trace`.
 
 ## What the prototype does
 
@@ -63,7 +91,7 @@ before every build). This keeps the shader variants for runtime-created material
 ### Test the simulation core (no Unity needed)
 
 ```bash
-dotnet test core/tests/IDLab.Core.Tests          # 35 unit tests
+dotnet test core/tests/IDLab.Core.Tests          # 36 unit tests
 dotnet build tools/unity-typecheck                # type-checks all Unity scripts against Unity reference assemblies
 ```
 
@@ -79,6 +107,7 @@ dotnet run --project tools/sim-cli -- neutralize  # pH and temperature while add
 ```
 core/   com.idlab.core (simulation, data model, chemistry, sensors, micro-view model) + tests
 app/    Unity 6 project: views, interaction, HUD, micro view, VFX
+desktop/ smart-board edition: native Windows .exe (raylib), Turkish touch UI
 tools/  unity-typecheck (CI), sim-cli (headless scenarios)
 docs/   ARCHITECTURE.md
 ```

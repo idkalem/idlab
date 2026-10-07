@@ -152,6 +152,15 @@ namespace IDLab.Core.Tests
         }
 
         [Fact]
+        public void NarrowNecksPourSlowerAndRatesAreRealistic()
+        {
+            double beaker = PourModel.FlowRateLitersPerSecond(0.8, 0.092, 0.068, 100);
+            double bottle = PourModel.FlowRateLitersPerSecond(0.8, 0.14, 0.07, 100, 0.027);
+            Assert.InRange(beaker * 1000, 80, 300);   // mL/s, a beaker tipped right over
+            Assert.InRange(bottle * 1000, 5, 40);     // mL/s through a reagent-bottle neck
+        }
+
+        [Fact]
         public void FullerVesselsPourEarlier()
         {
             Assert.True(PourModel.ThresholdTiltDegrees(0.9, 0.092, 0.068) < PourModel.ThresholdTiltDegrees(0.4, 0.092, 0.068));

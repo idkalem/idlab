@@ -28,6 +28,9 @@ namespace IDLab.Core.Components
         public double InnerHeightM { get; }
         public double GlassMassKg { get; }
 
+        /// <summary>Inner diameter of the opening liquid pours through and into (a bottle neck is narrower than its body).</summary>
+        public double MouthDiameterM { get; }
+
         public Mixture Contents { get; private set; }
 
         /// <summary>Bulk temperature of glass + contents (°C).</summary>
@@ -41,8 +44,10 @@ namespace IDLab.Core.Components
         public Vector3 PourLipPosition { get; private set; }
         public EquipmentInstance PourTarget { get; private set; }
 
-        public LiquidContainer(double innerDiameterM, double innerHeightM, double glassMassKg, ReagentPreset initialContents)
+        public LiquidContainer(double innerDiameterM, double innerHeightM, double glassMassKg, ReagentPreset initialContents,
+            double mouthDiameterM = 0)
         {
+            MouthDiameterM = mouthDiameterM > 0 ? Math.Min(mouthDiameterM, innerDiameterM) : innerDiameterM;
             InnerDiameterM = innerDiameterM;
             InnerHeightM = innerHeightM;
             GlassMassKg = glassMassKg;
@@ -52,6 +57,7 @@ namespace IDLab.Core.Components
         public override int StepOrder => OrderContainers;
 
         public double RadiusM => InnerDiameterM * 0.5;
+        public double MouthRadiusM => MouthDiameterM * 0.5;
         public double CapacityLiters => Math.PI * RadiusM * RadiusM * InnerHeightM * 1000.0;
         public double VolumeLiters => Contents.VolumeLiters;
         public double VolumeMilliliters => VolumeLiters * 1000.0;
@@ -177,7 +183,7 @@ namespace IDLab.Core.Components
             }
 
             var pose = Owner.Pose;
-            double rate = PourModel.FlowRateLitersPerSecond(FillFraction, InnerHeightM, InnerDiameterM, pose.TiltDegrees);
+            double rate = PourModel.FlowRateLitersPerSecond(FillFraction, InnerHeightM, InnerDiameterM, pose.TiltDegrees, MouthDiameterM);
             if (rate <= 0)
             {
                 return;
@@ -224,7 +230,7 @@ namespace IDLab.Core.Components
             Vector3 down = -Vector3.UnitY;
             Vector3 lowSide = down - Vector3.Dot(down, up) * up;
             lowSide = lowSide.LengthSquared() > 1e-8 ? Vector3.Normalize(lowSide) : Vector3.UnitX;
-            return pose.TransformPoint(new Vector3(0, (float)InnerHeightM, 0)) + lowSide * (float)RadiusM;
+            return pose.TransformPoint(new Vector3(0, (float)InnerHeightM, 0)) + lowSide * (float)MouthRadiusM;
         }
 
         /// <summary>The first open container the falling stream would hit, or null (spill).</summary>
@@ -248,7 +254,7 @@ namespace IDLab.Core.Components
                 Vector3 rim = container.MouthPosition;
                 float dx = rim.X - lip.X;
                 float dz = rim.Z - lip.Z;
-                float catchRadius = (float)container.RadiusM * 1.1f;
+                float catchRadius = (float)container.MouthRadiusM * 1.15f;
                 if (rim.Y < lip.Y && dx * dx + dz * dz <= catchRadius * catchRadius && rim.Y > bestRimY)
                 {
                     best = other;
