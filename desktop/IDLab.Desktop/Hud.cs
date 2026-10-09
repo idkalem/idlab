@@ -204,6 +204,7 @@ namespace IDLab.Desktop
             if (Ui.Button("full", Next(118 * s), IsWindowState(ConfigFlags.BorderlessWindowMode) ? "Pencere" : "Tam ekran", null, 16))
             {
                 ToggleBorderlessWindowed();
+                PointerCursor.Ensure();
             }
 
             if (Ui.Button("quality", Next(122 * s), Quality.ShortLabel, null, 15))

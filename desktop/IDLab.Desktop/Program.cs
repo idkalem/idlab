@@ -81,6 +81,7 @@ namespace IDLab.Desktop
                 ToggleBorderlessWindowed();
             }
 
+            PointerCursor.Ensure();
             var startup = System.Diagnostics.Stopwatch.StartNew();
             TouchInput.Install();
             Quality.Load();
@@ -143,7 +144,13 @@ namespace IDLab.Desktop
             while (!WindowShouldClose() && !hud.QuitRequested)
             {
                 float dt = o.Demo != null ? 1f / 60f : Math.Min(GetFrameTime(), 0.1f);
-                if (IsKeyPressed(KeyboardKey.F11)) ToggleBorderlessWindowed();
+                if (IsKeyPressed(KeyboardKey.F11))
+                {
+                    ToggleBorderlessWindowed();
+                    PointerCursor.Ensure();
+                }
+
+                PointerCursor.Update(dt);
 
                 var sw = System.Diagnostics.Stopwatch.StartNew();
                 Ui.BeginFrame();
@@ -228,6 +235,7 @@ namespace IDLab.Desktop
 
                 double tScene = sw.Elapsed.TotalMilliseconds;
                 hud.Draw(dt);
+                PointerCursor.Draw();
                 double tHud = sw.Elapsed.TotalMilliseconds;
                 EndDrawing();
                 Ui.EndFrame();

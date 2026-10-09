@@ -13,7 +13,7 @@ namespace IDLab.Desktop
     /// </summary>
     internal static class TouchInput
     {
-        private const int WhMouse = 7, HcAction = 0, WmLButtonDown = 0x0201, WmLButtonUp = 0x0202;
+        private const int WhMouse = 7, HcAction = 0, WmMouseMove = 0x0200, WmLButtonDown = 0x0201, WmLButtonUp = 0x0202;
 
         private delegate IntPtr HookProc(int code, IntPtr wParam, IntPtr lParam);
 
@@ -34,6 +34,14 @@ namespace IDLab.Desktop
         private static readonly List<bool> Events = new List<bool>(); // true = down, false = up (since last frame)
 
         public static bool Installed => _hook != IntPtr.Zero;
+
+        private static long _lastMouseMove = long.MinValue / 2;
+
+        /// <summary>Seconds since a real mouse (not a finger or pen) last moved over the window.</summary>
+        public static float SecondsSinceMouseMove => (Environment.TickCount64 - _lastMouseMove) / 1000f;
+
+        // Mouse messages Windows synthesises from touch or pen carry this signature in their extra info.
+        private const long TouchSignatureMask = 0xFFFFFF00, TouchSignature = 0xFF515700;
 
         public static void Install()
         {
@@ -62,6 +70,12 @@ namespace IDLab.Desktop
                 int msg = wParam.ToInt32();
                 if (msg == WmLButtonDown) Events.Add(true);
                 else if (msg == WmLButtonUp) Events.Add(false);
+                else if (msg == WmMouseMove)
+                {
+                    // MOUSEHOOKSTRUCT { POINT pt; HWND hwnd; UINT hitTest; ULONG_PTR extraInfo; }
+                    long extra = Marshal.ReadIntPtr(lParam, IntPtr.Size == 8 ? 24 : 16).ToInt64();
+                    if ((extra & TouchSignatureMask) != TouchSignature) _lastMouseMove = Environment.TickCount64;
+                }
             }
 
             return CallNextHookEx(_hook, code, wParam, lParam);
