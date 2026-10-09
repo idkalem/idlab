@@ -57,7 +57,7 @@ namespace IDLab.Desktop
                 Gfx.WithAlpha(Pink, alpha), Gfx.WithAlpha(Gfx.Rgba(0x8E44E6), alpha));
         }
 
-        /// <summary>One frame of the start-up screen (fonts must be loaded).</summary>
+        /// <summary>One frame of the start-up screen: logo, name and a progress bar only (fonts must be loaded).</summary>
         public static void Splash(float progress, string step)
         {
             BeginDrawing();
@@ -73,14 +73,9 @@ namespace IDLab.Desktop
             string title = "ID Lab";
             var tm = Ui.Measure(title, 64, true);
             Ui.Text(title, (w - tm.X) / 2, logo.Y + size + 30 * s, 64, Color.White, true);
-            string sub = "3B Fen Laboratuvarı · Akıllı tahta sürümü " + Version;
-            var sm = Ui.Measure(sub, 22);
-            Ui.Text(sub, (w - sm.X) / 2, logo.Y + size + 112 * s, 22, Gfx.WithAlpha(Color.White, 0.85f));
             float bw = Math.Min(520 * s, w * 0.6f), by = h * 0.86f;
             DrawRectangleRounded(new Rectangle((w - bw) / 2, by, bw, 10 * s), 1f, 8, Gfx.WithAlpha(Color.White, 0.25f));
             DrawRectangleRounded(new Rectangle((w - bw) / 2, by, Math.Max(10 * s, bw * Math.Clamp(progress, 0, 1)), 10 * s), 1f, 8, Orange);
-            var stm = Ui.Measure(step, 17);
-            Ui.Text(step, (w - stm.X) / 2, by + 22 * s, 17, Gfx.WithAlpha(Color.White, 0.8f));
             EndDrawing();
         }
 
