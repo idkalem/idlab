@@ -321,6 +321,16 @@ namespace IDLab.Desktop
                     hud.Tab = HudTab.Chemicals;
                     break;
 
+                case "pour":
+                {
+                    lab.LoadExperiment("chem.acid-base");
+                    var hcl = lab.Items.First(i => i.Def.Id == EquipmentIds.HclBottle);
+                    lab.StartAutoPour(hcl, 50);
+                    lab.Selected = hcl;
+                    hud.SetSpeed(1);
+                    break;
+                }
+
                 case "safety":
                 {
                     lab.LoadExperiment("chem.safety");

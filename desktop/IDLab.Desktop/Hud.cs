@@ -654,11 +654,15 @@ namespace IDLab.Desktop
             }
 
             float ly = r.Y + 50 * s, controlsY = r.Bottom() - 62 * s;
+            bool quickPour = c != null && item.CanTilt && item.Host == null && item.Tap == null;
+            float linesEnd = quickPour ? controlsY - 58 * s : controlsY;
             foreach (var (text, color) in lines)
             {
-                if (ly > controlsY - 18 * s) break;
+                if (ly > linesEnd - 18 * s) break;
                 ly += Ui.Wrapped(text, r.X + 18 * s, ly, r.Width - 36 * s, 14, color, false, 1.3f);
             }
+
+            if (quickPour) DrawQuickPour(item, c, new Rectangle(r.X + 16 * s, controlsY - 56 * s, r.Width - 32 * s, 46 * s));
 
             DrawControls(item, c, balance, new Rectangle(r.X + 16 * s, controlsY, r.Width - 32 * s, 48 * s));
         }
@@ -737,12 +741,62 @@ namespace IDLab.Desktop
                 if (item.Host == null)
                 {
                     Ui.Text(string.Format(ci, "Dök {0:0}°", item.Tilt), row.X, row.Y + 14 * s, 15, Theme.Muted, true);
-                    item.Tilt = Ui.Slider("tilt", SliderArea(84 * s), item.Tilt, 0, 130, Theme.Warning);
+                    float tilt = Ui.Slider("tilt", SliderArea(84 * s), item.Tilt, 0, 130, Theme.Warning);
+                    if (Ui.Active == "tilt")
+                    {
+                        item.AutoPourMl = -1; // the hand on the slider takes over from an automatic pour
+                        item.Tilt = tilt;
+                    }
                 }
                 else
                 {
                     Ui.Wrapped("Dökmek için kabı bulunduğu yerden alın.", row.X, row.Y + 6 * s, right - row.X - 10 * s, 13, Theme.Muted);
                 }
+            }
+        }
+
+        /// <summary>One-tap pours: the container is lifted over the nearest beaker, tipped until the amount has left, then put back.</summary>
+        private void DrawQuickPour(Item item, LiquidContainer c, Rectangle row)
+        {
+            float s = Ui.S;
+            var ci = CultureInfo.CurrentCulture;
+            var target = item.PourInto ?? _lab.NearestPourTarget(item, item.Home ?? item.Position, 0.35f);
+            if (item.AutoPourMl >= 0)
+            {
+                double poured = item.AutoPourStart - (c.LiquidVolumeMilliliters + c.SolidVolumeMilliliters);
+                string status = double.IsPositiveInfinity(item.AutoPourMl)
+                    ? string.Format(ci, "Dökülüyor… {0:0.#} mL", Math.Max(0, poured))
+                    : string.Format(ci, "Dökülüyor… {0:0.#} / {1:0} mL", Math.Max(0, poured), item.AutoPourMl);
+                Ui.Text(status, row.X, row.Y + 13 * s, 15, Theme.Accent, true);
+                if (Ui.Button("pour-stop", new Rectangle(row.Right() - 120 * s, row.Y, 120 * s, row.Height), "Durdur", Theme.Danger, 15)) _lab.StopAutoPour(item);
+                return;
+            }
+
+            if (target == null)
+            {
+                Ui.Wrapped("Hızlı dökmek için kabı bir beherin ya da erlenmayerin yanına koyun.", row.X, row.Y + 4 * s, row.Width, 13, Theme.Muted);
+                return;
+            }
+
+            bool solid = !c.Contents.HasLiquid && c.Contents.HasSolids;
+            double total = c.LiquidVolumeMilliliters + c.SolidVolumeMilliliters;
+            var options = solid
+                ? new (string label, double ml)[] { ("Biraz", Math.Max(0.3, total * 0.15)), ("Yarısı", total / 2), ("Tümü", double.PositiveInfinity) }
+                : new (string label, double ml)[] { ("10 mL", 10), ("25 mL", 25), ("50 mL", 50), ("Tümü", double.PositiveInfinity) };
+            string head = "Dök →";
+            Ui.Text(head, row.X, row.Y + 13 * s, 15, Theme.Muted, true);
+            float x = row.X + Ui.Measure(head, 15, true).X + 12 * s;
+            float bw = (row.Right() - x - (options.Length - 1) * 8 * s) / options.Length;
+            foreach (var (label, ml) in options)
+            {
+                bool possible = total > 0.1;
+                if (Ui.Button("pour-" + label, new Rectangle(x, row.Y, bw, row.Height), label, Gfx.Lerp(Theme.Warning, Theme.Button, 0.62f), 15) && possible)
+                {
+                    item.PourInto = target;
+                    _lab.StartAutoPour(item, ml);
+                }
+
+                x += bw + 8 * s;
             }
         }
 

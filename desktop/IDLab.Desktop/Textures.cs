@@ -15,7 +15,7 @@ namespace IDLab.Desktop
     /// </summary>
     internal static class Textures
     {
-        public static Texture2D Floor, WallTiles, Epoxy, Poster, Whiteboard, Rules, EyeWash, Extinguisher, Exit, Window, Steel;
+        public static Texture2D Floor, WallTiles, Epoxy, Poster, Whiteboard, Rules, EyeWash, Extinguisher, Exit, Window, Steel, Gauze;
         private static readonly Dictionary<Hazard, Texture2D> PictogramTextures = new Dictionary<Hazard, Texture2D>();
         private static readonly Dictionary<string, Texture2D> Labels = new Dictionary<string, Texture2D>();
         private static readonly Random Rng = new Random(11);
@@ -49,6 +49,7 @@ namespace IDLab.Desktop
             Extinguisher = Upload(Sign(new Color(200, 30, 30, 255), "YANGIN TÜPÜ", "Yangın anında kullanın"), false);
             Exit = Upload(Sign(new Color(0, 140, 70, 255), "ACİL ÇIKIŞ", "→"), false);
             Window = Upload(WindowImage(), false);
+            Gauze = Upload(GauzeImage(), false);
             foreach (var h in AllHazards) PictogramTextures[h] = Upload(Pictogram(h, 256), false);
         }
 
@@ -221,6 +222,31 @@ namespace IDLab.Desktop
             var img = GenImageGradientLinear(512, 512, 0, new Color(150, 200, 245, 255), new Color(230, 242, 252, 255));
             for (int y = 20; y < 512; y += 34) ImageDrawRectangle(ref img, 0, y, 512, 6, new Color(240, 244, 248, 255)); // blinds
             ImageDrawRectangle(ref img, 250, 0, 12, 512, new Color(235, 238, 242, 255));
+            return img;
+        }
+
+        /// <summary>Wire gauze: a woven steel mesh (transparent between the wires) with a speckled ceramic centre.</summary>
+        private static Image GauzeImage()
+        {
+            const int n = 256;
+            var img = GenImageColor(n, n, new Color(0, 0, 0, 0));
+            var wire = new Color(88, 92, 100, 255);
+            for (int i = 4; i < n; i += 9)
+            {
+                ImageDrawRectangle(ref img, 0, i, n, 2, wire);
+                ImageDrawRectangle(ref img, i, 0, 2, n, wire);
+            }
+
+            ImageDrawRectangleLines(ref img, new Rectangle(0, 0, n, n), 5, new Color(70, 74, 82, 255));
+            ImageDrawCircle(ref img, n / 2, n / 2, 74, new Color(214, 210, 200, 255));
+            for (int k = 0; k < 900; k++)
+            {
+                double a = Rng.NextDouble() * Math.PI * 2, r = Math.Sqrt(Rng.NextDouble()) * 72;
+                int x = n / 2 + (int)(Math.Cos(a) * r), y = n / 2 + (int)(Math.Sin(a) * r);
+                int g = 170 + Rng.Next(60);
+                ImageDrawPixel(ref img, x, y, new Color(g, g - 4, g - 12, 255));
+            }
+
             return img;
         }
 

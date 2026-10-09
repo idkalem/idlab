@@ -45,7 +45,7 @@ namespace IDLab.Desktop
             }
 
             for (int i = inner.Length - 1; i >= 0; i--) p.Add(inner[i]);
-            Glass = Gfx.Lathe(p.ToArray(), 40);
+            Glass = Gfx.Lathe(p.ToArray(), 64);
 
             // Volume table: V(y) = ∫ π r(y)² dy from the inner floor up.
             float y0 = Floor, y1 = RimY;

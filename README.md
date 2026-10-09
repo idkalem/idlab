@@ -15,7 +15,7 @@ module roadmap.
 ## Akıllı tahta sürümü (Windows .exe) — Unity gerekmez
 
 `desktop/IDLab.Desktop`, aynı simülasyon çekirdeğini kullanan, Unity'siz, yerel bir Windows uygulamasıdır.
-Tek bir `IDLab.exe` dosyasıdır (yaklaşık 12 MB): .NET çalışma ortamı, grafik kütüphanesi (raylib) ve Türkçe font içine
+Tek bir `IDLab.exe` dosyasıdır (yaklaşık 13 MB): .NET çalışma ortamı, grafik kütüphanesi (raylib) ve Türkçe font içine
 gömülüdür. **Kurulum gerekmez.**
 
 * **Çalıştırma:** `IDLab.exe` dosyasını tahtanın bilgisayarına kopyalayın ve çift tıklayın. Uygulama tam
@@ -23,8 +23,15 @@ gömülüdür. **Kurulum gerekmez.**
   **Ek bilgi → Yine de çalıştır** ile açın.
 * **Gereksinim:** Windows 10/11 (64 bit) ve OpenGL 3.3 destekleyen ekran kartı. Akıllı tahtalardaki
   Intel/AMD tümleşik grafik kartları yeterlidir.
-* **Sekmeler:** üst çubukta üç sekme vardır.
+* **Sekmeler:** üst çubukta dört sekme vardır.
   * **Laboratuvar:** gerçekçi bir laboratuvar odasında 3D deney tezgâhı.
+  * **Kimyasallar (kimyasal dolabı):** 1000'den fazla kimyasal: iyonik bileşikler, hidratlar ve mineraller, asitler,
+    bazlar, 81 element, organik ve biyokimyasal bileşikler, indikatörler. Türkçe ya da İngilizce adı, yaygın adı
+    ("göztaşı", "kezzap") veya formülü (CCl4) yazarak arayın; tahtada ekran klavyesi açılır. "Elementlerden seç" ile
+    periyodik tablodan elementlere dokunarak o elementleri içeren bileşikleri, "İyonlardan bileşik yap" ile bir katyon
+    ve bir anyon seçerek yük dengesiyle oluşan formülü görün. Seçilen kimyasal çözelti şişesi, saf sıvı şişesi ya da
+    katı kavanozu olarak tezgâha eklenir. Tepkimeler (çökelme, nötrleşme, gaz çıkışı, metal + asit, yer değiştirme,
+    aktif metal + su) iyon kurallarıyla tüm katalogda çalışır.
   * **Periyodik Tablo:** 118 elementin 3D tablosu. Bir elemente dokunun: dönen Bohr atom modeli (proton, nötron,
     elektron katmanları) ve bilgi kartı açılır. Kartta atom numarası, kütle, grup/periyot/blok, elektron dizilimi,
     elektronegatiflik, erime/kaynama noktası, yoğunluk, keşif yılı ve kısa bir not bulunur. Sütun yüksekliği atom
@@ -39,7 +46,10 @@ gömülüdür. **Kurulum gerekmez.**
     sayacı, "Doldur"), termometre ve pH probu.
   * Kimyasallar: 17 sıvı (asitler, bazlar, tuz çözeltileri, H₂O₂, etanol, çamaşır suyu...), indikatörler ve 11 katı
     (tuz, karbonat, mermer, CuSO₄/KMnO₄ kristalleri, Mg, Zn, Fe, Cu, Na).
-* **Gerçekçi dökme:** dökülen sıvı kaptan kaba akan bir akış olarak görünür. Yavaş dökünce damlar ve hedef sıvıda
+* **Tehlike işaretleri:** etiketlerde ve bilgi sayfalarında resmî GHS01–GHS09 sembolleri kullanılır.
+* **Gerçekçi dökme:** "Dök → 10 mL / 25 mL / 50 mL / Tümü" düğmeleriyle kap kalkar, beherin üstüne gelir, yavaşça
+  eğilip istenen miktarı döker ve yerine geri konur. Akışın ucu ağızdan aşağı düşer, dökme bitince kuyruğu kopar.
+  Dökülen sıvı kaptan kaba akan bir akış olarak görünür. Yavaş dökünce damlar ve hedef sıvıda
   halkalar oluşur. Eğilen kaptaki sıvı yüzeyi yatay kalır. Metaller ve kristaller katı parçalar hâlinde dökülür ve
   kabın dibinde birikir.
 * **Kullanım (yalnızca dokunma):**
@@ -56,7 +66,7 @@ gömülüdür. **Kurulum gerekmez.**
 * **Derleme:** `dotnet publish desktop/IDLab.Desktop -c Release -r win-x64 -o dist` komutu `dist/IDLab.exe`
   dosyasını üretir. Linux'tan da derlenebilir, CI her push'ta derler.
 * **Test seçenekleri:** `--windowed 1920x1080`,
-  `--demo heating|acid|safety|titration|precip|metals|periodic|info`, `--topic N`, `--frames N`,
+  `--demo heating|acid|safety|titration|precip|metals|pour|chemicals|periodic|info`, `--topic N`, `--frames N`,
   `--screenshot dosya.png`, `--trace`, `--camera yaw,pitch,mesafe`.
 
 ## What the prototype does
@@ -112,7 +122,7 @@ before every build). This keeps the shader variants for runtime-created material
 ### Test the simulation core (no Unity needed)
 
 ```bash
-dotnet test core/tests/IDLab.Core.Tests          # 54 unit tests
+dotnet test core/tests/IDLab.Core.Tests          # 71 unit tests
 dotnet build tools/unity-typecheck                # type-checks all Unity scripts against Unity reference assemblies
 ```
 

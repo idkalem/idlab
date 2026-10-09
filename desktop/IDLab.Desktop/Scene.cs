@@ -20,6 +20,7 @@ namespace IDLab.Desktop
         {
             _time += dt;
             _splashTimer -= dt;
+            Streams.Update(dt);
             foreach (var item in lab.Items)
             {
                 var c = item.Container;
@@ -58,11 +59,19 @@ namespace IDLab.Desktop
                             lab.Effects.Drop(c.PourLipPosition, outward * 0.15f, col, landY);
                         }
                     }
-                    else if (_splashTimer <= 0)
+                    else if (_splashTimer <= 0 && Streams.HasLanded(item.Inst.Id))
                     {
-                        var end = StreamEnd(c.PourLipPosition, outward * 0.35f, landY);
+                        var end = StreamEnd(c.PourLipPosition, outward * StreamSpeed(c), landY);
                         lab.Effects.Splash(end, col, 4);
                     }
+                }
+
+                {
+                    bool flowing = c.IsPouring && !c.IsPouringSolid && c.PourRateLitersPerSecond >= 0.0012;
+                    float landY = flowing ? LandingHeight(c.PourTarget?.Get<LiquidContainer>()) : 0;
+                    var v0 = flowing ? PourOutward(item, c.PourLipPosition) * StreamSpeed(c) : Vector3.Zero;
+                    Streams.Feed(item.Inst.Id, flowing, flowing ? c.PourLipPosition : Vector3.Zero, v0, landY, c.PourRateLitersPerSecond,
+                        Gfx.FromCore(c.LiquidColor), dt);
                 }
 
                 var tap = item.Tap;
@@ -79,11 +88,19 @@ namespace IDLab.Desktop
                             lab.Effects.Drop(tap.OutletPosition, Vector3.Zero, col, landY);
                         }
                     }
-                    else if (_splashTimer <= 0)
+                    else if (_splashTimer <= 0 && Streams.HasLanded(-item.Inst.Id))
                     {
                         var o = tap.OutletPosition;
                         lab.Effects.Splash(new Vector3(o.X, landY, o.Z), col, 3);
                     }
+                }
+
+                if (tap != null)
+                {
+                    bool flowing = tap.IsFlowing && tap.FlowLitersPerSecond >= 0.0009;
+                    float landY = flowing ? LandingHeight(tap.Target?.Get<LiquidContainer>()) : 0;
+                    Streams.Feed(-item.Inst.Id, flowing, tap.OutletPosition, new Vector3(0, -0.12f, 0), landY, tap.FlowLitersPerSecond,
+                        Gfx.FromCore(c.LiquidColor), dt);
                 }
             }
 
@@ -109,6 +126,18 @@ namespace IDLab.Desktop
             var outward = lip - (item.Container.BasePosition + Vector3.Transform(new Vector3(0, (float)item.Container.InnerHeightM, 0), item.Rotation));
             outward.Y = 0;
             return outward.LengthSquared() > 1e-8f ? Vector3.Normalize(outward) : Vector3.Zero;
+        }
+
+        /// <summary>Horizontal outflow speed at the lip (m/s): a stronger flow shoots further out.</summary>
+        private static float StreamSpeed(LiquidContainer c)
+        {
+            float speed = Math.Clamp(0.16f + (float)c.PourRateLitersPerSecond * 25f, 0.16f, 0.55f);
+            var target = c.PourTarget?.Get<LiquidContainer>();
+            if (target == null) return speed;
+            // Keep the landing point inside the receiving vessel's mouth.
+            float drop = Math.Max(0.005f, c.PourLipPosition.Y - LandingHeight(target));
+            float fall = MathF.Sqrt(2 * drop / 9.81f);
+            return Math.Min(speed, Math.Max(0.02f, 0.45f * (float)target.MouthRadiusM / fall));
         }
 
         private static Vector3 StreamEnd(Vector3 lip, Vector3 velocity, float landY)
@@ -143,7 +172,7 @@ namespace IDLab.Desktop
                 Props.DrawTransparent(item);
             }
 
-            DrawStreams(lab);
+            Streams.Draw();
             Rlgl.DrawRenderBatchActive();
             Rlgl.EnableDepthMask();
             lab.Effects.Draw();
@@ -180,49 +209,6 @@ namespace IDLab.Desktop
             EndBlendMode();
             Rlgl.DrawRenderBatchActive();
             Rlgl.EnableDepthMask();
-        }
-
-        /// <summary>Liquid streams follow a ballistic arc from the lip and narrow as they speed up.</summary>
-        private static void DrawStreams(Lab lab)
-        {
-            foreach (var item in lab.Items)
-            {
-                var c = item.Container;
-                if (c == null) continue;
-                if (c.IsPouring && !c.IsPouringSolid && c.PourRateLitersPerSecond >= 0.0012)
-                {
-                    float landY = LandingHeight(c.PourTarget?.Get<LiquidContainer>());
-                    var v0 = PourOutward(item, c.PourLipPosition) * 0.35f;
-                    float width = Math.Clamp(MathF.Sqrt((float)c.PourRateLitersPerSecond) * 0.035f, 0.0018f, 0.011f);
-                    Arc(c.PourLipPosition, v0, landY, width, Gfx.FromCore(c.LiquidColor));
-                }
-
-                var tap = item.Tap;
-                if (tap != null && tap.IsFlowing && tap.FlowLitersPerSecond >= 0.0009)
-                {
-                    float landY = LandingHeight(tap.Target?.Get<LiquidContainer>());
-                    var o = tap.OutletPosition;
-                    Arc(o, Vector3.Zero, landY, 0.0014f, Gfx.FromCore(c.LiquidColor));
-                }
-            }
-        }
-
-        private static void Arc(Vector3 from, Vector3 v0, float landY, float width, Color color)
-        {
-            color.A = (byte)Math.Max(150, (int)color.A);
-            float wobble = 1f + 0.08f * MathF.Sin(_time * 40);
-            var prev = from;
-            float drop = Math.Max(0.001f, from.Y - landY);
-            float total = MathF.Sqrt(2 * drop / 9.81f);
-            const int steps = 10;
-            for (int i = 1; i <= steps; i++)
-            {
-                float t = total * i / steps;
-                var p = from + v0 * t + new Vector3(0, -0.5f * 9.81f * t * t, 0);
-                float k = (float)i / steps;
-                DrawCylinderEx(prev, p, width * (1 - 0.35f * (k - 1f / steps)) * wobble, width * (1 - 0.35f * k) * wobble, 10, color);
-                prev = p;
-            }
         }
 
         private static void DrawMarkers(Lab lab)

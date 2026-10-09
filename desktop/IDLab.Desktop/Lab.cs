@@ -24,6 +24,9 @@ namespace IDLab.Desktop
         public bool Dragging;
         public Vector3? Home;        // bench spot to return to after an assisted pour
         public Item PourInto;        // container this item is being held over while tilted
+        public float VisualTilt;     // the tilt actually shown; eases toward Tilt so pouring is animated
+        public double AutoPourMl = -1;   // > 0: pour this much automatically, then put the container back
+        public double AutoPourStart;     // contents (mL) when the automatic pour began
 
         public EquipmentDefinition Def => Inst.Definition;
         public LiquidContainer Container => Inst.Get<LiquidContainer>();
@@ -187,6 +190,7 @@ namespace IDLab.Desktop
 
             foreach (var item in _items.Values.Where(i => i.Host == null).ToList())
             {
+                DriveAutoPour(item, dt);
                 UpdateKinematics(item, dt);
             }
 
@@ -194,51 +198,91 @@ namespace IDLab.Desktop
             Effects.Update(dt, this);
         }
 
+        private static float Approach(float value, float target, float maxPerSecond, float dt)
+        {
+            float eased = value + (target - value) * (1f - MathF.Exp(-dt * 7f));
+            float step = Math.Clamp(eased - value, -maxPerSecond * dt, maxPerSecond * dt);
+            return value + step;
+        }
+
+        private static Vector3 MoveTowards(Vector3 from, Vector3 to, float dt)
+        {
+            var d = to - from;
+            float dist = d.Length();
+            if (dist < 1e-5f) return to;
+            float speed = Math.Clamp(dist * 7f, 0.05f, 0.55f); // m/s: fast across the bench, gentle at the end
+            return dist <= speed * dt ? to : from + d / dist * speed * dt;
+        }
+
         private void UpdateKinematics(Item item, float dt)
         {
             if (!item.Dragging && item.Host == null)
             {
-                if (item.Tilt > 0.5f)
+                if (item.Tilt > 0.5f || item.Home != null)
                 {
-                    item.Rotation = Orientation(item.Tilt);
-                    if (item.Home == null)
+                    float targetTilt = item.Tilt;
+                    if (item.Tilt > 0.5f)
                     {
-                        // Assisted pour: tipping a container near another one lifts it over that container.
-                        item.Home = item.Position;
-                        item.PourInto ??= NearestPourTarget(item, item.Position, 0.35f);
-                    }
-
-                    if (item.PourInto != null && _items.ContainsKey(item.PourInto.Inst.Id))
-                    {
-                        var desired = PourPosition(item, item.PourInto);
-                        item.Position = Vector3.Lerp(item.Position, desired, 1f - MathF.Exp(-dt * 5f));
-                        // Keep it only slightly tipped until it is over the target, so nothing spills on the way.
-                        if (Vector3.Distance(item.Position, desired) > 0.012f)
+                        if (item.Home == null)
                         {
-                            item.Rotation = Orientation(Math.Min(item.Tilt, 30f));
+                            // Assisted pour: tipping a container near another one lifts it over that container.
+                            item.Home = item.Position;
+                            item.PourInto ??= NearestPourTarget(item, item.Position, 0.35f);
+                        }
+
+                        if (item.PourInto != null && _items.ContainsKey(item.PourInto.Inst.Id))
+                        {
+                            // Lift straight up first, then carry it over the target, and only tip it fully once it is there.
+                            var desired = PourPosition(item, item.PourInto);
+                            var p = item.Position;
+                            float horizontal = new Vector2(desired.X - p.X, desired.Z - p.Z).Length();
+                            // Travel a little above the pouring height so nothing passes through the target's glass.
+                            float travelY = desired.Y + 0.05f;
+                            var waypoint = horizontal <= 0.015f ? desired
+                                : p.Y < travelY - 0.004f ? new Vector3(p.X, travelY, p.Z)
+                                : new Vector3(desired.X, travelY, desired.Z);
+                            item.Position = MoveTowards(p, waypoint, dt);
+                            if (Vector3.Distance(item.Position, desired) > 0.012f) targetTilt = Math.Min(targetTilt, 12f);
+                        }
+                        else
+                        {
+                            var box = WorldBox(item);
+                            float surface = SurfaceBelow(item, box);
+                            if (box.Min.Y < surface + 0.002f)
+                            {
+                                item.Position += new Vector3(0, surface + 0.002f - box.Min.Y, 0);
+                            }
                         }
                     }
-                    else
+
+                    item.VisualTilt = Approach(item.VisualTilt, targetTilt, 110f, dt);
+                    item.Rotation = Orientation(item.VisualTilt);
+
+                    if (item.Tilt <= 0.5f && item.Home != null && item.VisualTilt < 4f)
                     {
-                        var box = WorldBox(item);
-                        float surface = SurfaceBelow(item, box);
-                        if (box.Min.Y < surface + 0.002f)
+                        // Upright again: carry it back over its bench spot, then set it down.
+                        item.Tilt = 0;
+                        var home = item.Home.Value;
+                        var p = item.Position;
+                        float horizontal = new Vector2(home.X - p.X, home.Z - p.Z).Length();
+                        var waypoint = horizontal > 0.004f ? new Vector3(home.X, Math.Max(p.Y, home.Y + 0.03f), home.Z) : home;
+                        item.Position = MoveTowards(p, waypoint, dt);
+                        if (Vector3.Distance(item.Position, home) < 0.0015f)
                         {
-                            item.Position += new Vector3(0, surface + 0.002f - box.Min.Y, 0);
+                            item.Position = home;
+                            item.Home = null;
+                            item.PourInto = null;
+                            item.VisualTilt = 0;
+                            item.Rotation = Quaternion.Identity;
                         }
                     }
                 }
                 else
                 {
                     item.Tilt = 0;
-                    if (item.Home != null)
-                    {
-                        item.Position = item.Home.Value + new Vector3(0, 0.01f, 0); // put it back where it was
-                        item.Home = null;
-                    }
-
                     item.PourInto = null;
-                    item.Rotation = Quaternion.Identity;
+                    item.VisualTilt = Approach(item.VisualTilt, 0, 110f, dt);
+                    item.Rotation = item.VisualTilt > 0.2f ? Orientation(item.VisualTilt) : Quaternion.Identity;
                     float surface = SurfaceBelow(item, WorldBox(item));
                     var p = item.Position;
                     if (p.Y > surface + 1e-4f)
@@ -265,6 +309,57 @@ namespace IDLab.Desktop
                 child.Rotation = item.Rotation * child.LocalRotation;
                 UpdateKinematics(child, dt);
             }
+        }
+
+        /// <summary>Starts an animated pour of <paramref name="milliliters"/> (∞ = everything) into the nearest container.</summary>
+        public bool StartAutoPour(Item item, double milliliters)
+        {
+            var c = item.Container;
+            if (c == null || !item.CanTilt || item.Host != null) return false;
+            item.PourInto ??= NearestPourTarget(item, item.Home ?? item.Position, 0.35f);
+            item.AutoPourMl = milliliters;
+            item.AutoPourStart = c.LiquidVolumeMilliliters + c.SolidVolumeMilliliters;
+            item.Tilt = Math.Max(item.Tilt, 25f);
+            return true;
+        }
+
+        public void StopAutoPour(Item item)
+        {
+            if (item.AutoPourMl < 0) return;
+            item.AutoPourMl = -1;
+            item.Tilt = 0;
+        }
+
+        /// <summary>
+        /// Automatic pour: tips the container a little further whenever nothing flows (the level drops as it empties)
+        /// and eases back when the stream gets too strong, until the requested amount has left; then it is set back.
+        /// </summary>
+        private void DriveAutoPour(Item item, float dt)
+        {
+            if (item.AutoPourMl < 0) return;
+            var c = item.Container;
+            if (c == null || item.Dragging || item.Host != null)
+            {
+                item.AutoPourMl = -1;
+                return;
+            }
+
+            double now = c.LiquidVolumeMilliliters + c.SolidVolumeMilliliters;
+            double poured = item.AutoPourStart - now;
+            double left = item.AutoPourMl - poured;
+            if (left <= 0.05 || now < 0.15 || item.Tilt >= 134f && !c.IsPouring && item.VisualTilt > 130f)
+            {
+                StopAutoPour(item);
+                return;
+            }
+
+            bool overTarget = item.PourInto == null || Vector3.Distance(item.Position, PourPosition(item, item.PourInto)) < 0.012f;
+            if (!overTarget) return;
+            double rate = c.PourRateLitersPerSecond * 1000;
+            double wanted = c.Contents.HasLiquid ? Math.Clamp(left * 0.7, 1.5, c.MouthRadiusM > 0.03 ? 25 : 14) : Math.Clamp(left * 0.8, 0.4, 3);
+            if (!c.IsPouring) item.Tilt = Math.Min(135f, item.Tilt + 32f * dt);
+            else if (rate < wanted * 0.7) item.Tilt = Math.Min(135f, item.Tilt + 10f * dt);
+            else if (rate > wanted * 1.5) item.Tilt = Math.Max(5f, item.Tilt - 14f * dt);
         }
 
         /// <summary>Lip (lowest rim point) relative to the item's origin for its current orientation.</summary>

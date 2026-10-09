@@ -42,7 +42,21 @@ uniform vec3 emission;
 uniform float specular;
 uniform vec3 fogColor;
 uniform vec2 fogRange;
+uniform float envStrength;
 out vec4 finalColor;
+
+// Reflection of the lab around a shiny surface: dark floor, pale walls, bright ceiling panels and the window (+x).
+vec3 envColor(vec3 r) {
+    float up = r.y;
+    vec3 c = mix(vec3(0.20, 0.21, 0.23), vec3(0.68, 0.70, 0.74), smoothstep(-0.35, 0.05, up));
+    c = mix(c, vec3(0.90, 0.92, 0.96), smoothstep(0.25, 0.75, up));
+    float panel = smoothstep(0.5, 0.62, up) * step(0.55, fract(r.x * 2.2 / (up + 0.25) + 0.3));
+    c += vec3(1.5) * panel * 0.55;
+    float win = smoothstep(0.5, 0.8, r.x) * smoothstep(-0.15, 0.1, up) * (1.0 - smoothstep(0.55, 0.8, up));
+    c = mix(c, vec3(1.3, 1.35, 1.45), win * 0.8);
+    return c;
+}
+
 void main() {
     vec3 n = normalize(fragNormal);
     if (!gl_FrontFacing) n = -n;
@@ -57,7 +71,18 @@ void main() {
     vec3 base = colDiffuse.rgb * tex.rgb;
     vec3 c = base * (ambient + diff * 0.8 + fill) + vec3(spec) * specular + rim * vec3(0.25, 0.6, 0.9) * 0.25 + emission;
     float a = colDiffuse.a * tex.a;
-    if (a < 0.99) a = clamp(a + rim * 0.55 + spec * 0.6, 0.0, 1.0);
+    bool glass = a < 0.99;
+    if (glass) a = clamp(a + rim * 0.55 + spec * 0.6, 0.0, 1.0);
+    if (envStrength > 0.0) {
+        float fres = 0.04 + 0.96 * pow(1.0 - max(dot(n, v), 0.0), 5.0);
+        vec3 e = envColor(reflect(-v, n));
+        if (glass) {
+            c += e * envStrength * (0.10 + 0.90 * fres);
+            a = clamp(a + envStrength * fres * 0.55, 0.0, 1.0);
+        } else {
+            c = mix(c, e * mix(vec3(1.0), base, 0.65), envStrength * (0.28 + 0.72 * fres));
+        }
+    }
     float dist = length(viewPos - fragPosition);
     float fog = clamp((dist - fogRange.x) / fogRange.y, 0.0, 1.0);
     c = mix(c, fogColor, fog);
@@ -66,8 +91,10 @@ void main() {
 
         private static Shader _shader;
         private static Material _material;
-        private static int _locViewPos, _locAmbient, _locEmission, _locSpecular, _locFog, _locFogRange;
+        private static int _locViewPos, _locAmbient, _locEmission, _locSpecular, _locFog, _locFogRange, _locEnv;
         private static Texture2D _white;
+
+        public static Texture2D White => _white;
         private static readonly Dictionary<string, Mesh> Cache = new Dictionary<string, Mesh>();
 
         public static Mesh Cube, Sphere, Cylinder, Cone, Disc;
@@ -86,6 +113,7 @@ void main() {
             _locSpecular = GetShaderLocation(_shader, "specular");
             _locFog = GetShaderLocation(_shader, "fogColor");
             _locFogRange = GetShaderLocation(_shader, "fogRange");
+            _locEnv = GetShaderLocation(_shader, "envStrength");
             _material = LoadMaterialDefault();
             _material.Shader = _shader;
             unsafe { _white = _material.Maps[(int)MaterialMapIndex.Albedo].Texture; }
@@ -111,8 +139,20 @@ void main() {
         public static void DrawTextured(Mesh mesh, Matrix4x4 transform, Texture2D texture, Color tint, Vector3 emission = default, float specular = 0.4f) =>
             Draw(mesh, transform, tint, emission, texture, specular);
 
+        /// <summary>Environment reflection for the next draws (≥ 0), or −1 to use the per-colour material table.</summary>
+        public static float Env = -1f;
+
+        private static readonly Dictionary<uint, float> MaterialEnv = new Dictionary<uint, float>();
+
+        /// <summary>Registers how reflective a material colour is (glass ≈ 0.8, polished steel ≈ 0.6, plastic ≈ 0.15).</summary>
+        public static void SetMaterialEnv(Color color, float env) => MaterialEnv[Pack(color)] = env;
+
+        private static uint Pack(Color c) => ((uint)c.R << 24) | ((uint)c.G << 16) | ((uint)c.B << 8) | c.A;
+
         public static unsafe void Draw(Mesh mesh, Matrix4x4 transform, Color color, Vector3 emission, Texture2D texture, float specular)
         {
+            float env = Env >= 0 ? Env : MaterialEnv.TryGetValue(Pack(color), out float e) ? e : 0f;
+            SetShaderValue(_shader, _locEnv, env, ShaderUniformDataType.Float);
             _material.Maps[(int)MaterialMapIndex.Albedo].Color = color;
             _material.Maps[(int)MaterialMapIndex.Albedo].Texture = texture;
             SetShaderValue(_shader, _locEmission, emission, ShaderUniformDataType.Vec3);
@@ -276,6 +316,52 @@ void main() {
                     indices[t++] = (ushort)(i0 + 1);
                     indices[t++] = (ushort)(i0 + 3);
                 }
+            }
+
+            UploadMesh(ref mesh, false);
+            return mesh;
+        }
+
+        /// <summary>A knurled / ribbed cylinder side (bottle caps, knobs) of radius 1 and height 1 with <paramref name="ribs"/> ridges.</summary>
+        public static Mesh Ribbed(int ribs, float depth, int segments = 96)
+        {
+            int vertexCount = (segments + 1) * 2;
+            var mesh = new Mesh(vertexCount, segments * 2);
+            mesh.AllocVertices();
+            mesh.AllocNormals();
+            mesh.AllocTexCoords();
+            mesh.AllocIndices();
+            var verts = mesh.VerticesAs<Vector3>();
+            var normals = mesh.NormalsAs<Vector3>();
+            var uvs = mesh.TexCoordsAs<Vector2>();
+            var indices = mesh.IndicesAs<ushort>();
+            for (int i = 0; i <= segments; i++)
+            {
+                float a = i / (float)segments * MathF.PI * 2f;
+                float wave = 0.5f + 0.5f * MathF.Cos(a * ribs);
+                float r = 1f - depth + depth * MathF.Pow(wave, 0.6f);
+                float dr = -depth * ribs * MathF.Sin(a * ribs) * 0.5f;
+                var radial = new Vector3(MathF.Cos(a), 0, MathF.Sin(a));
+                var tangent = new Vector3(-MathF.Sin(a), 0, MathF.Cos(a));
+                var n = Vector3.Normalize(radial * r - tangent * dr * 0.5f);
+                verts[i * 2] = radial * r;
+                verts[i * 2 + 1] = radial * r + Vector3.UnitY;
+                normals[i * 2] = n;
+                normals[i * 2 + 1] = n;
+                uvs[i * 2] = new Vector2(i / (float)segments, 0);
+                uvs[i * 2 + 1] = new Vector2(i / (float)segments, 1);
+            }
+
+            int t = 0;
+            for (int i = 0; i < segments; i++)
+            {
+                int i0 = i * 2;
+                indices[t++] = (ushort)i0;
+                indices[t++] = (ushort)(i0 + 1);
+                indices[t++] = (ushort)(i0 + 2);
+                indices[t++] = (ushort)(i0 + 2);
+                indices[t++] = (ushort)(i0 + 1);
+                indices[t++] = (ushort)(i0 + 3);
             }
 
             UploadMesh(ref mesh, false);

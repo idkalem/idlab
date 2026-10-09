@@ -20,6 +20,24 @@ namespace IDLab.Desktop
         private static readonly Color DarkPlastic = Gfx.Rgba(0x1C1F25);
         private static readonly Color Mark = Gfx.Rgba(0xF2F5FA);
         private static readonly Color Wood = Gfx.Rgba(0xB0814F);
+        private static readonly Color CapWhite = new Color(236, 236, 236, 255);
+        private static Mesh _gauzeQuad, _ribbedCap;
+        private static bool _materials;
+
+        /// <summary>How shiny each material is (environment reflection strength in the lit shader).</summary>
+        private static void RegisterMaterials()
+        {
+            if (_materials) return;
+            _materials = true;
+            Gfx.SetMaterialEnv(GlassColor, 0.85f);
+            Gfx.SetMaterialEnv(AmberGlass, 0.7f);
+            Gfx.SetMaterialEnv(Steel, 0.62f);
+            Gfx.SetMaterialEnv(Brass, 0.5f);
+            Gfx.SetMaterialEnv(DarkPlastic, 0.12f);
+            Gfx.SetMaterialEnv(CapWhite, 0.18f);
+            _gauzeQuad = Gfx.Quad(0.14f, 0.14f, 1, 1);
+            _ribbedCap = Gfx.Ribbed(40, 0.07f);
+        }
 
         public static Matrix4x4 PoseOf(Item item) => Gfx.Pose(item.Position, item.Rotation);
 
@@ -34,6 +52,7 @@ namespace IDLab.Desktop
 
         public static void DrawOpaque(Item item, float time)
         {
+            RegisterMaterials();
             var pose = PoseOf(item);
             switch (item.Def.VisualKey)
             {
@@ -48,10 +67,21 @@ namespace IDLab.Desktop
                 case "amber":
                 {
                     Gfx.DrawTextured(LabelBand(0.0368f, 0.05f), Gfx.Part(Gfx.Translate(0, 0.03f, 0), pose), Textures.LabelFor(item), Color.White);
-                    var cap = Gfx.CachedLathe("cap", new[] { new Vector2(0, 0), new Vector2(0.0175f, 0), new Vector2(0.0175f, 0.018f), new Vector2(0.015f, 0.022f), new Vector2(0, 0.022f) }, 24);
-                    // The cap sits on the bench beside the bottle (opened).
-                    if (!item.IsHeld && item.Tilt < 1) Gfx.Draw(cap, Gfx.Part(Gfx.Translate(0.052f, 0, -0.02f), pose), Gfx.FromCore(item.Def.AccentColor));
-                    Gfx.Draw(Gfx.Cylinder, Gfx.Part(Gfx.Mul(Gfx.Scale(0.0168f, 0.006f, 0.0168f), Gfx.Translate(0, 0.137f, 0)), pose), new Color(235, 235, 235, 255));
+                    // The opened, knurled screw cap lies on the bench beside the bottle (upside down).
+                    if (!item.IsHeld && item.Tilt < 1 && item.VisualTilt < 1)
+                    {
+                        var capColor = Gfx.FromCore(item.Def.AccentColor);
+                        var capPose = Gfx.Part(Gfx.Translate(0.052f, 0, -0.02f), pose);
+                        Gfx.Draw(_ribbedCap, Gfx.Mul(Gfx.Scale(0.0175f, 0.02f, 0.0175f), capPose), capColor);
+                        Gfx.Draw(Gfx.Disc, Gfx.Mul(Gfx.Scale(0.0168f, 1, 0.0168f), capPose), Gfx.Lerp(capColor, Color.Black, 0.25f));
+                        Gfx.Draw(Gfx.Disc, Gfx.Mul(Gfx.Scale(0.0150f, 1, 0.0150f), Gfx.Mul(Gfx.Translate(0, 0.0195f, 0), capPose)), Gfx.Lerp(capColor, Color.Black, 0.45f));
+                    }
+
+                    // Neck lip and screw threads.
+                    Gfx.Draw(Gfx.Cylinder, Gfx.Part(Gfx.Mul(Gfx.Scale(0.0168f, 0.006f, 0.0168f), Gfx.Translate(0, 0.137f, 0)), pose), CapWhite);
+                    var thread = Gfx.CachedLathe("thread", new[] { new Vector2(0.0158f, 0), new Vector2(0.0174f, 0.0012f), new Vector2(0.0158f, 0.0024f) }, 40);
+                    Gfx.Draw(thread, Gfx.Part(Gfx.Translate(0, 0.1445f, 0), pose), CapWhite);
+                    Gfx.Draw(thread, Gfx.Part(Gfx.Translate(0, 0.1485f, 0), pose), CapWhite);
                     break;
                 }
 
@@ -208,8 +238,27 @@ namespace IDLab.Desktop
             var baseMesh = Gfx.CachedLathe("burnerBase", new[] { new Vector2(0, 0), new Vector2(0.042f, 0), new Vector2(0.042f, 0.006f), new Vector2(0.03f, 0.014f), new Vector2(0, 0.014f) });
             Gfx.Draw(baseMesh, pose, DarkPlastic);
             Gfx.Draw(Gfx.Cylinder, Gfx.Part(Gfx.Mul(Gfx.Scale(0.0085f, barrelTop - 0.014f, 0.0085f), Gfx.Translate(0, 0.014f, 0)), pose), Brass);
-            Gfx.Draw(Gfx.Cylinder, Gfx.Part(Gfx.Mul(Gfx.Scale(0.011f, 0.014f, 0.011f), Gfx.Translate(0, 0.03f, 0)), pose), Brass);
-            Gfx.Draw(Gfx.Cylinder, Gfx.Part(Gfx.Mul(Gfx.Mul(Gfx.Scale(0.005f, 0.12f, 0.005f), Gfx.Rotate(Quaternion.CreateFromAxisAngle(Vector3.UnitX, MathF.PI / 2))), Gfx.Translate(0, 0.008f, 0.02f)), pose), Gfx.Rgba(0xE07020));
+            // Air-regulating collar with its two air holes.
+            Gfx.Draw(_ribbedCap, Gfx.Part(Gfx.Mul(Gfx.Scale(0.0112f, 0.016f, 0.0112f), Gfx.Translate(0, 0.028f, 0)), pose), Brass);
+            foreach (float side in new[] { -1f, 1f })
+            {
+                var hole = Gfx.Mul(Gfx.Mul(Gfx.Scale(0.0032f, 0.0016f, 0.0032f), Gfx.Rotate(Quaternion.CreateFromAxisAngle(Vector3.UnitZ, MathF.PI / 2))), Gfx.Translate(side * 0.0105f, 0.036f, 0));
+                Gfx.Draw(Gfx.Cylinder, Gfx.Part(hole, pose), new Color(20, 18, 16, 255));
+            }
+
+            // Barrel rim and gas inlet nozzle, with the orange rubber hose curving away over the bench.
+            var rim = Gfx.CachedLathe("burnerRim", new[] { new Vector2(0.0072f, 0), new Vector2(0.0092f, 0), new Vector2(0.0092f, 0.004f), new Vector2(0.0072f, 0.004f) }, 32);
+            Gfx.Draw(rim, Gfx.Part(Gfx.Translate(0, barrelTop - 0.004f, 0), pose), Brass);
+            Gfx.Draw(Gfx.Cylinder, Gfx.Part(Gfx.Mul(Gfx.Mul(Gfx.Scale(0.0032f, 0.03f, 0.0032f), Gfx.Rotate(Quaternion.CreateFromAxisAngle(Vector3.UnitX, MathF.PI / 2))), Gfx.Translate(0, 0.009f, 0.012f)), pose), Brass);
+            var hose = Gfx.Rgba(0xE07020);
+            Vector3 prev = new Vector3(0, 0.009f, 0.04f);
+            for (int i = 1; i <= 8; i++)
+            {
+                float k = i / 8f;
+                var p = new Vector3(0.05f * k * k, 0.009f - 0.006f * k, 0.04f + 0.11f * k);
+                Rod(pose, prev, p, 0.0052f, hose);
+                prev = p;
+            }
             Knob(pose, new Vector3(0, 0.009f, -0.042f), valve, Gfx.Rgba(0xD92626));
             var ring = Gfx.CachedLathe("tripodRing", new[] { new Vector2(0.06f, 0), new Vector2(0.066f, 0), new Vector2(0.066f, 0.004f), new Vector2(0.06f, 0.004f), new Vector2(0.06f, 0) }, 40);
             Gfx.Draw(ring, Gfx.Part(Gfx.Translate(0, gauze - 0.004f, 0), pose), Steel);
@@ -221,7 +270,8 @@ namespace IDLab.Desktop
                 Rod(pose, foot, top, 0.0025f, Steel);
             }
 
-            Gfx.Draw(Gfx.Cube, Gfx.Part(Gfx.Mul(Gfx.Scale(0.14f, 0.002f, 0.14f), Gfx.Translate(0, gauze + 0.001f, 0)), pose), Gfx.Rgba(0x5A5E66));
+            // Wire gauze with its ceramic centre.
+            Gfx.DrawTextured(_gauzeQuad, Gfx.Part(Gfx.Translate(0, gauze + 0.0012f, 0), pose), Textures.Gauze, Color.White, default, 0.3f);
             float glow = item.Heat.IsLit ? valve * valve : 0f;
             Gfx.Draw(Gfx.Cylinder, Gfx.Part(Gfx.Mul(Gfx.Scale(0.035f, 0.0026f, 0.035f), Gfx.Translate(0, gauze + 0.0002f, 0)), pose),
                 Gfx.Rgba(0xD8D8D0), new Vector3(1f, 0.25f, 0.05f) * glow * 0.9f);
@@ -359,7 +409,9 @@ namespace IDLab.Desktop
                 target.A = (byte)Math.Max((int)target.A, 110);
                 state.LiquidColor = state.HasColor ? Gfx.Lerp(state.LiquidColor, target, 0.08f) : target;
                 state.HasColor = true;
+                Gfx.Env = 0.3f;
                 Gfx.Draw(state.Liquid.Mesh, vesselPose, state.LiquidColor);
+                Gfx.Env = -1f;
                 Bubbles.Draw(item, shape, level);
             }
 
