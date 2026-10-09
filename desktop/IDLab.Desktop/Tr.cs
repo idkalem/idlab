@@ -135,7 +135,7 @@ namespace IDLab.Desktop
         public static string Name(EquipmentDefinition d) => Equipment.TryGetValue(d.Id, out var t) ? t.name : d.DisplayName;
         public static string Description(EquipmentDefinition d) => Equipment.TryGetValue(d.Id, out var t) ? t.description : d.Description;
         public static string Name(EquipmentInstance i) => $"{Name(i.Definition)} #{i.Id}";
-        public static string Substance(Substance s) => Substances.TryGetValue(s.Id, out var n) ? n : s.Name;
+        public static string Substance(Substance s) => Substances.TryGetValue(s.Id, out var n) ? n : s.NameTr ?? s.Name;
 
         public static string Title(ExperimentDefinition e) => Experiments.TryGetValue(e.Id, out var t) ? t.title : e.Title;
         public static string Summary(ExperimentDefinition e) => Experiments.TryGetValue(e.Id, out var t) ? t.summary : e.Summary;

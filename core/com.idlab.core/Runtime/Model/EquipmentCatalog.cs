@@ -244,6 +244,14 @@ namespace IDLab.Core.Model
             return d;
         }
 
+        /// <summary>A reagent bottle for any catalogue chemical (created at run time from the chemical search).</summary>
+        public static EquipmentDefinition CreateBottle(string id, string name, ReagentPreset contents, uint accentHex, bool amber = false) =>
+            Bottle(id, name, contents, accentHex, amber ? "amber" : "bottle");
+
+        /// <summary>A solid-reagent jar for any catalogue chemical (created at run time from the chemical search).</summary>
+        public static EquipmentDefinition CreateJar(string id, string name, string substanceId, double grams, uint accentHex, string description = null) =>
+            Jar(id, name, substanceId, grams, accentHex, description);
+
         private static EquipmentDefinition Bottle(string id, string name, ReagentPreset contents, uint accentHex, string visual = "bottle")
         {
             var d = Def(id, name, visual, EquipmentCategory.Reagent, Discipline.Chemistry, new Vector3(0.076f, 0.16f, 0.076f), accentHex,

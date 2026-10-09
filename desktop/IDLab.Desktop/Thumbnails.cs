@@ -17,37 +17,55 @@ namespace IDLab.Desktop
         public static readonly Color Background = Gfx.Rgba(0xC6D0DC);
         private static readonly Dictionary<string, RenderTexture2D> Images = new Dictionary<string, RenderTexture2D>();
 
+        private static LabWorld _world;
+
         public static void Build()
         {
-            var world = new LabWorld();
-            foreach (var def in world.Catalog.All)
-            {
-                var inst = world.Spawn(def.Id, Pose3.Identity);
-                var item = new Item { Inst = inst };
-                var s = item.Size;
-                float extent = Math.Max(s.Y, Math.Max(s.X, s.Z));
-                var target = new Vector3(0, s.Y * 0.45f, 0);
-                float dist = extent * 2.1f + 0.04f;
-                var dir = Vector3.Normalize(new Vector3(-0.45f, 0.42f, -1f));
-                var cam = new Camera3D(target + dir * dist, target, Vector3.UnitY, 32f, CameraProjection.Perspective);
-                var rt = LoadRenderTexture(Size, Size);
-                SetTextureFilter(rt.Texture, TextureFilter.Bilinear);
-                BeginTextureMode(rt);
-                ClearBackground(Background);
-                BeginMode3D(cam);
-                Gfx.Ambient = new Vector3(0.55f, 0.57f, 0.62f);
-                Gfx.BeginFrame(cam.Position);
-                Props.DrawOpaque(item, 0);
-                Rlgl.DrawRenderBatchActive();
-                Rlgl.DisableDepthMask();
-                Props.DrawTransparent(item);
-                Rlgl.DrawRenderBatchActive();
-                Rlgl.EnableDepthMask();
-                EndMode3D();
-                EndTextureMode();
-                Images[def.Id] = rt;
-                Bubbles.Forget(inst);
-            }
+            _world = new LabWorld();
+            foreach (var def in _world.Catalog.All) Render(def);
+        }
+
+        /// <summary>Renders a picture for an equipment definition created at run time (custom reagent bottles).</summary>
+        public static void Ensure(EquipmentDefinition def)
+        {
+            if (Images.ContainsKey(def.Id) || _world == null) return;
+            if (!_world.Catalog.Contains(def.Id)) _world.Catalog.Register(def);
+            Render(def);
+        }
+
+        private static void Render(EquipmentDefinition def)
+        {
+            var inst = _world.Spawn(def.Id, Pose3.Identity);
+            var item = new Item { Inst = inst };
+            var s = item.Size;
+            float extent = Math.Max(s.Y, Math.Max(s.X, s.Z));
+            var target = new Vector3(0, s.Y * 0.45f, 0);
+            float dist = extent * 2.1f + 0.04f;
+            var dir = Vector3.Normalize(new Vector3(-0.45f, 0.42f, -1f));
+            var cam = new Camera3D(target + dir * dist, target, Vector3.UnitY, 32f, CameraProjection.Perspective);
+            var rt = LoadRenderTexture(Size, Size);
+            SetTextureFilter(rt.Texture, TextureFilter.Bilinear);
+            var ambient = Gfx.Ambient;
+            var fog = Gfx.FogRange;
+            BeginTextureMode(rt);
+            ClearBackground(Background);
+            BeginMode3D(cam);
+            Gfx.Ambient = new Vector3(0.55f, 0.57f, 0.62f);
+            Gfx.FogRange = new Vector2(1000f, 1f);
+            Gfx.BeginFrame(cam.Position);
+            Props.DrawOpaque(item, 0);
+            Rlgl.DrawRenderBatchActive();
+            Rlgl.DisableDepthMask();
+            Props.DrawTransparent(item);
+            Rlgl.DrawRenderBatchActive();
+            Rlgl.EnableDepthMask();
+            EndMode3D();
+            EndTextureMode();
+            Gfx.Ambient = ambient;
+            Gfx.FogRange = fog;
+            Images[def.Id] = rt;
+            Bubbles.Forget(inst);
+            _world.Remove(inst);
         }
 
         /// <summary>Draws the thumbnail of <paramref name="definitionId"/> into a screen rectangle.</summary>

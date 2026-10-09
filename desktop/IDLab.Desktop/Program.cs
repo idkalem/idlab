@@ -92,6 +92,8 @@ namespace IDLab.Desktop
             var info = new InfoView(lab);
             info.Select(o.Topic);
             var hud = new Hud(lab, micro);
+            var chemicals = new ChemicalsView(lab, hud);
+            hud.ChemicalCount = chemicals.Count;
             if (o.Demo != null)
             {
                 Demo.Setup(o.Demo, lab, hud);
@@ -113,6 +115,7 @@ namespace IDLab.Desktop
                 Ui.BeginFrame();
                 hud.Layout();
                 bool labTab = hud.Tab == HudTab.Lab;
+                lab.KeysEnabled = labTab;
 
                 // The experiment keeps running while another tab is open; only pointer input is withheld.
                 lab.Update(dt, pointerFree: labTab && !Ui.Captured, overInventory: hud.IsOverInventory(Ui.Mouse));
@@ -126,6 +129,10 @@ namespace IDLab.Desktop
                 else if (hud.Tab == HudTab.Periodic)
                 {
                     periodic.Update(dt, hud.ContentArea, pointerFree: !Ui.Captured);
+                }
+                else if (hud.Tab == HudTab.Chemicals)
+                {
+                    chemicals.Update(dt, hud.ContentArea);
                 }
                 else
                 {
@@ -144,6 +151,9 @@ namespace IDLab.Desktop
                         break;
                     case HudTab.Periodic:
                         periodic.Draw();
+                        break;
+                    case HudTab.Chemicals:
+                        chemicals.Draw();
                         break;
                     default:
                         info.Draw();
@@ -305,6 +315,10 @@ namespace IDLab.Desktop
 
                 case "info":
                     hud.Tab = HudTab.Info;
+                    break;
+
+                case "chemicals":
+                    hud.Tab = HudTab.Chemicals;
                     break;
 
                 case "safety":

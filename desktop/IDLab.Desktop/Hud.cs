@@ -15,7 +15,7 @@ using static Raylib_cs.Raylib;
 
 namespace IDLab.Desktop
 {
-    internal enum HudTab { Lab, Periodic, Info }
+    internal enum HudTab { Lab, Chemicals, Periodic, Info }
 
     /// <summary>
     /// Heads-up display for the smart board: top bar with tabs (Laboratuvar / Periyodik Tablo / Bilgi), and on the
@@ -38,7 +38,7 @@ namespace IDLab.Desktop
         private float _quitArmed;
         private int _speedIndex = 1;
         private static readonly (string label, float scale)[] Speeds = { ("Durdur", 0), ("1×", 1), ("5×", 5), ("20×", 20) };
-        private static readonly (HudTab tab, string label)[] Tabs = { (HudTab.Lab, "Laboratuvar"), (HudTab.Periodic, "Periyodik Tablo"), (HudTab.Info, "Bilgi") };
+        private static readonly (HudTab tab, string label)[] Tabs = { (HudTab.Lab, "Laboratuvar"), (HudTab.Chemicals, "Kimyasallar"), (HudTab.Periodic, "Periyodik Tablo"), (HudTab.Info, "Bilgi") };
 
         private static readonly (string label, EquipmentCategory[] categories)[] Chips =
         {
@@ -53,6 +53,9 @@ namespace IDLab.Desktop
 
         public bool QuitRequested { get; private set; }
         public HudTab Tab { get; set; } = HudTab.Lab;
+
+        /// <summary>Number of chemicals in the catalogue (shown on the inventory button).</summary>
+        public int ChemicalCount { get; set; }
 
         /// <summary>Screen area below the top bar (used by the periodic-table and info tabs).</summary>
         public Rectangle ContentArea { get; private set; }
@@ -177,8 +180,8 @@ namespace IDLab.Desktop
 
             if (Tab != HudTab.Lab)
             {
-                string hint = Tab == HudTab.Periodic
-                    ? "Bir elemente dokunun · Döndürmek için sürükleyin"
+                string hint = Tab == HudTab.Periodic ? "Bir elemente dokunun · Döndürmek için sürükleyin"
+                    : Tab == HudTab.Chemicals ? "Arayın, seçin, tezgâha ekleyin"
                     : "Konu seçin · Kaydırmak için sürükleyin";
                 var hm = Ui.Measure(hint, 15);
                 if (rx - x > hm.X + 20 * s) Ui.Text(hint, rx - hm.X - 12 * s, y + (bh - hm.Y) / 2, 15, Theme.Muted);
@@ -235,10 +238,15 @@ namespace IDLab.Desktop
             Ui.Text("MALZEMELER", r.X + 16 * s, r.Y + 16 * s, 20, Theme.Text, true);
             if (Ui.Button("inv-close", new Rectangle(r.Right() - 52 * s, r.Y + 10 * s, 42 * s, 38 * s), "◀", null, 16)) _showInventory = false;
             Ui.Text("Sürükleyin ya da dokunun · geri sürükleyerek kaldırın", r.X + 16 * s, r.Y + 46 * s, 12, Theme.Muted);
+            if (Ui.Button("inv-chem", new Rectangle(r.X + 12 * s, r.Y + 68 * s, r.Width - 24 * s, 44 * s), $"Kimyasal dolabı ({ChemicalCount} kimyasal) →",
+                Gfx.Lerp(Theme.Success, Theme.Button, 0.55f), 15))
+            {
+                Tab = HudTab.Chemicals;
+            }
 
             // Category chips (only those with something to show).
             var all = _lab.Inventory().ToList();
-            float cx = r.X + 12 * s, cy = r.Y + 70 * s, chipH = 38 * s;
+            float cx = r.X + 12 * s, cy = r.Y + 122 * s, chipH = 38 * s;
             for (int i = 0; i < Chips.Length; i++)
             {
                 var cats = Chips[i].categories;

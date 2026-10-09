@@ -708,8 +708,12 @@ namespace IDLab.Desktop
             }
         }
 
+        /// <summary>False while another tab owns the keyboard (e.g. typing in the chemical search).</summary>
+        public bool KeysEnabled { get; set; } = true;
+
         private void HandleKeys(float dt)
         {
+            if (!KeysEnabled) return;
             var target = _dragged ?? Selected;
             float axis = (IsKeyDown(KeyboardKey.E) ? 1 : 0) - (IsKeyDown(KeyboardKey.Q) ? 1 : 0);
             if (target != null && target.CanTilt && target.Host == null && axis != 0)
