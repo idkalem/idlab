@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
 using IDLab.Core;
+using IDLab.Core.Chemistry;
 using IDLab.Core.Components;
 using IDLab.Core.Events;
 using IDLab.Core.Interaction;
@@ -28,6 +29,7 @@ namespace IDLab.Desktop
         public float VisualTilt;     // the tilt actually shown; eases toward Tilt so pouring is animated
         public double AutoPourMl = -1;   // > 0: pour this much automatically, then put the container back
         public double AutoPourStart;     // contents (mL) when the automatic pour began
+        public bool AutoPourArrived;     // the automatic pour has reached the receiver (stays true: no flicker)
 
         public EquipmentDefinition Def => Inst.Definition;
         public LiquidContainer Container => Inst.Get<LiquidContainer>();
@@ -460,6 +462,7 @@ namespace IDLab.Desktop
             if (c == null || !item.CanTilt || item.Host != null) return false;
             item.PourInto ??= NearestPourTarget(item, item.Home ?? item.Position, 0.35f);
             item.AutoPourMl = milliliters;
+            item.AutoPourArrived = false;
             item.AutoPourStart = c.LiquidVolumeMilliliters + c.SolidVolumeMilliliters;
             item.Tilt = Math.Max(item.Tilt, 25f);
             return true;
@@ -495,13 +498,56 @@ namespace IDLab.Desktop
                 return;
             }
 
-            bool overTarget = item.PourInto == null || Vector3.Distance(item.Position, HoldPosition(item, item.PourInto)) < 0.012f;
-            if (!overTarget) return;
-            double rate = c.PourRateLitersPerSecond * 1000;
-            double wanted = c.Contents.HasLiquid ? Math.Clamp(left * 0.7, 1.5, c.MouthRadiusM > 0.03 ? 25 : 14) : Math.Clamp(left * 0.8, 0.4, 3);
-            if (!c.IsPouring) item.Tilt = Math.Min(135f, item.Tilt + 32f * dt);
-            else if (rate < wanted * 0.7) item.Tilt = Math.Min(135f, item.Tilt + 10f * dt);
-            else if (rate > wanted * 1.5) item.Tilt = Math.Max(5f, item.Tilt - 14f * dt);
+            // Arrival latches: once over the receiver the pour does not stop and restart as the hold point moves a little.
+            if (!item.AutoPourArrived)
+            {
+                if (item.PourInto == null) item.AutoPourArrived = true;
+                else
+                {
+                    var hold = HoldPosition(item, item.PourInto);
+                    item.AutoPourArrived = new Vector2(hold.X - item.Position.X, hold.Z - item.Position.Z).Length() < 0.02f && Math.Abs(hold.Y - item.Position.Y) < 0.03f;
+                }
+
+                if (!item.AutoPourArrived) return;
+            }
+
+            // A steady hand: the tilt that gives an even flow is worked out from the pouring model (no trial and
+            // error, so no stop-start dribbling). As the vessel empties that tilt slowly rises; over the last few
+            // millilitres the flow eases off.
+            bool liquid = c.Contents.HasLiquid;
+            double full = liquid ? (c.MouthRadiusM > 0.03 ? 16 : 10) : 2.5;
+            double wanted = Math.Min(full, Math.Max(liquid ? 2.5 : 0.5, left * 2.2));
+            float goal = TiltForFlow(c, wanted / 1000.0);
+            float speed = c.IsPouring ? 30f : 70f; // swing up briskly until it starts to flow, then move gently
+            item.Tilt = Math.Clamp(item.Tilt + Math.Clamp(goal - item.Tilt, -speed * dt, speed * dt), 5f, 135f);
+        }
+
+        /// <summary>Tilt (degrees) at which the container delivers <paramref name="litersPerSecond"/> (inverse of the pour model).</summary>
+        private static float TiltForFlow(LiquidContainer c, double litersPerSecond)
+        {
+            if (!c.Contents.HasLiquid)
+            {
+                double threshold = Math.Max(45.0, PourModel.ThresholdTiltDegrees(c.FillFraction, c.InnerHeightM, c.InnerDiameterM) - 10.0);
+                double scale = Math.Min(2.0, c.MouthDiameterM / 0.04);
+                double fraction = litersPerSecond / (0.004 * scale * scale);
+                return (float)Math.Clamp(threshold + 25.0 * (fraction - 0.2), threshold + 0.5, threshold + 25.0);
+            }
+
+            double Rate(double tilt) => PourModel.FlowRateLitersPerSecond(c.FillFraction, c.InnerHeightM, c.InnerDiameterM, tilt, c.MouthDiameterM);
+            if (Rate(85) < litersPerSecond)
+            {
+                // Even upright-to-horizontal is not enough (nearly empty): turn it further to drain the rest.
+                return (float)Math.Min(135.0, 88.0 + (1.0 - c.FillFraction) * 47.0);
+            }
+
+            double lo = 0, hi = 85;
+            for (int i = 0; i < 24; i++)
+            {
+                double mid = (lo + hi) / 2;
+                if (Rate(mid) < litersPerSecond) lo = mid; else hi = mid;
+            }
+
+            return (float)hi;
         }
 
         /// <summary>Lip (lowest rim point) relative to the item's origin for its current orientation.</summary>
@@ -557,8 +603,11 @@ namespace IDLab.Desktop
                 {
                     float a = k * MathF.PI / 6;
                     var p = position + Vector3.Transform(new Vector3(r * MathF.Cos(a), y, r * MathF.Sin(a)), rotation);
+                    // Weight fades out smoothly across the rim so the hold height never jumps (no bobbing).
                     float d = new Vector2(p.X - mouth.X, p.Z - mouth.Z).Length();
-                    if (d < reach) need = Math.Max(need, rim - p.Y);
+                    float w = Math.Clamp((reach + 0.015f - d) / 0.03f, 0f, 1f);
+                    w = w * w * (3 - 2 * w);
+                    if (w > 0) need = Math.Max(need, (rim - p.Y) * w);
                 }
             }
 
@@ -1185,7 +1234,13 @@ namespace IDLab.Desktop
             Effects.OnEvent(e, this);
             if (e.Type == LabEventType.Explosion)
             {
-                Shake(0.006f + 0.012f * (float)e.Severity);
+                Shake(0.008f + 0.02f * (float)e.Severity);
+                // The blast makes the vessel jump on the bench.
+                if (owner != null && _items.TryGetValue(owner.Id, out var hit) && hit.Host == null && !hit.Dragging && hit.Tilt < 0.5f)
+                {
+                    hit.Position += new Vector3(0, 0.002f, 0);
+                    hit.VelocityY = 0.35f + 0.65f * (float)e.Severity;
+                }
             }
 
             Notified?.Invoke(e, Tr.Event(e, name));

@@ -50,6 +50,9 @@ namespace IDLab.Core.Chemistry
         public const string Sucrose = "sucrose";
         public const string HydrogenPeroxide = "h2o2";
         public const string PotassiumIodide = "ki";
+        public const string Detergent = "detergent";
+        public const string DryYeast = "dry_yeast";
+        public const string FoodDyeRed = "food_dye_red";
         public const string SodiumHypochlorite = "naocl";
         public const string UniversalIndicator = "universal_indicator";
         public const string Phenolphthalein = "phenolphthalein";
@@ -333,6 +336,36 @@ namespace IDLab.Core.Chemistry
                 MolarMass = 34.01, Density = 1.45, SpecificHeat = 2620, MolecularSpeciesId = SpeciesIds.HydrogenPeroxide,
                 Color = new ColorRGBA(0.95f, 0.97f, 1.0f, 0.2f), Hazards = Hazard.Oxidizer | Hazard.Irritant,
             });
+            // --- household materials for the elephant-toothpaste demo
+            db.Add(new Substance
+            {
+                Id = SubstanceIds.Detergent, Name = "Dish detergent (sodium laureth sulfate)", NameTr = "Bulaşık deterjanı", Formula = "C₁₆H₃₃NaO₆S",
+                Kind = SubstanceKind.Solvent, Phase = SubstancePhase.Liquid, Soluble = true, MolarMass = 376.5, Density = 1.03, SpecificHeat = 3500,
+                BoilingPointC = 105, LatentHeatVaporization = 2.2e6, MolecularSpeciesId = "C16H33NaO6S", Category = "organic",
+                Color = new ColorRGBA(0.42f, 0.82f, 0.32f, 0.55f), Hazards = Hazard.Irritant,
+            });
+            db.Add(new Substance
+            {
+                Id = SubstanceIds.DryYeast, Name = "Dry yeast (contains the enzyme catalase)", NameTr = "Kuru maya", Formula = "maya (katalaz)",
+                Kind = SubstanceKind.Molecular, Phase = SubstancePhase.Solid, Soluble = false, Form = SolidForm.Powder,
+                MolarMass = 100, Density = 0.8, SpecificHeat = 1500, Category = "biochem", Color = C(0xC9A36B, 1f),
+            });
+            db.Add(new Substance
+            {
+                Id = SubstanceIds.FoodDyeRed, Name = "Red food colouring (Allura red AC)", NameTr = "Gıda boyası (kırmızı)", Formula = "C₁₈H₁₄N₂Na₂O₈S₂",
+                Kind = SubstanceKind.Molecular, Phase = SubstancePhase.Aqueous, MolarMass = 496.4, Density = 1.6, SpecificHeat = 1500,
+                MolecularSpeciesId = "C18H14N2Na2O8S2", Category = "organic", Color = C(0xD81B2C, 0.9f), TintStrength = 4000,
+            });
+            foreach (var (id, aliases) in new[]
+            {
+                (SubstanceIds.Detergent, new[] { "Deterjan", "Sıvı sabun", "Bulaşık sabunu", "SLES" }),
+                (SubstanceIds.DryYeast, new[] { "Maya", "Ekmek mayası", "Katalaz", "Yeast" }),
+                (SubstanceIds.FoodDyeRed, new[] { "Gıda boyası", "Boya", "Allura kırmızısı", "E129" }),
+            })
+            {
+                db.Get(id).Aliases.AddRange(aliases);
+            }
+
             db.Add(new Substance
             {
                 Id = SubstanceIds.SodiumHypochlorite, Name = "Sodium hypochlorite (bleach)", Formula = "NaOCl", Kind = SubstanceKind.Oxidizer,

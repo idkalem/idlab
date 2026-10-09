@@ -403,7 +403,7 @@ namespace IDLab.Core.Chemistry
                 if (max - xi > 1e-9) outcome.Ongoing = true;
                 bool violent = e.Rate >= 3 && max >= 0.004;
                 outcome.Effects.Add(violent
-                    ? new ReactionEffect(LabEventType.Explosion, Math.Min(1.0, max / 0.05), $"{s.Name} reacts explosively with water!", "metal.water.boom:" + e.Symbol, Id)
+                    ? new ReactionEffect(LabEventType.Explosion, Math.Min(1.0, 0.45 + max / 0.05), $"{s.Name} reacts explosively with water!", "metal.water.boom:" + e.Symbol, Id + ":boom:" + e.Symbol)
                     : new ReactionEffect(LabEventType.Fizz, Math.Min(1.0, max / 0.02), $"{s.Name} fizzes in water, releasing hydrogen.", "metal.water:" + e.Symbol, Id));
                 changed = true;
             }
@@ -496,6 +496,82 @@ namespace IDLab.Core.Chemistry
             }
 
             return changed;
+        }
+    }
+
+    /// <summary>
+    /// Thermite: aluminium powder and rust heated strongly react with a blinding flash and molten iron
+    /// (2Al + Fe₂O₃ → Al₂O₃ + 2Fe, ΔH ≈ −850 kJ).
+    /// </summary>
+    public sealed class ThermiteRule : IReactionRule, IOncePerTickRule
+    {
+        public const double IgnitionC = 450;
+
+        public string Id => "generic.thermite";
+
+        public bool TryApply(Mixture m, ReactionOutcome outcome, double dt)
+        {
+            if (m.TemperatureC < IgnitionC) return false;
+            var db = m.Database;
+            var al = db.FindElement("Al");
+            var fe2o3 = db.FindIonic("Fe3", "O");
+            var fe = db.FindElement("Fe");
+            var al2o3 = db.FindIonic("Al", "O");
+            if (al == null || fe2o3 == null || fe == null || al2o3 == null) return false;
+            double max = Math.Min(m.Moles(al.Id) / 2, m.Moles(fe2o3.Id));
+            if (max <= 1e-8) return false;
+            double xi = max * (1 - Math.Exp(-3.0 * Math.Max(dt, 1e-4)));
+            if (max - xi < 1e-8) xi = max;
+            m.Remove(al.Id, 2 * xi);
+            m.Remove(fe2o3.Id, xi);
+            m.Add(al2o3.Id, xi);
+            m.Add(fe.Id, 2 * xi);
+            outcome.HeatReleasedJ += 850_000 * xi * 0.1; // most of the heat leaves as light and sparks
+            if (max - xi > 1e-8) outcome.Ongoing = true;
+            outcome.Effects.Add(new ReactionEffect(LabEventType.Explosion, Math.Min(1.0, 0.55 + max / 0.02),
+                "Thermite ignites: molten iron and a blinding flash!", "boom.thermite", Id));
+            return true;
+        }
+    }
+
+    /// <summary>
+    /// Yeast contains catalase, an enzyme that splits hydrogen peroxide: 2H₂O₂ → 2H₂O + O₂↑. Like every enzyme it is
+    /// fastest near body temperature, slow in the cold, and stops working above ~60–75 °C (the protein is denatured).
+    /// With dish detergent in the mixture the oxygen is trapped as a column of foam: "elephant toothpaste".
+    /// </summary>
+    public sealed class YeastCatalaseRule : IReactionRule, IOncePerTickRule
+    {
+        public const double DenatureC = 62;
+
+        public string Id => "enzyme.catalase";
+
+        /// <summary>Relative enzyme activity at a temperature (1 at 37 °C, 0 once denatured).</summary>
+        public static double Activity(double temperatureC)
+        {
+            if (temperatureC >= DenatureC) return Math.Max(0, 0.4 - (temperatureC - DenatureC) * 0.035); // falls to 0 by ~74 °C
+            double x = (temperatureC - 37) / 20.0;
+            return Math.Max(0.12, Math.Exp(-x * x));
+        }
+
+        public bool TryApply(Mixture m, ReactionOutcome outcome, double dt)
+        {
+            double yeast = m.Moles(SubstanceIds.DryYeast), peroxide = m.Moles(SubstanceIds.HydrogenPeroxide);
+            if (yeast <= 1e-6 || peroxide <= 1e-7 || !m.HasWater) return false;
+            double grams = yeast * m.Database.Get(SubstanceIds.DryYeast).MolarMass;
+            double k = 2.2 * Math.Min(1.0, grams / 1.5) * Activity(m.TemperatureC);
+            if (k <= 0) return false;
+            double xi = peroxide * (1 - Math.Exp(-k * Math.Max(dt, 1e-4)));
+            if (peroxide - xi < 1e-7) xi = peroxide;
+            m.Remove(SubstanceIds.HydrogenPeroxide, xi);
+            m.Add(SubstanceIds.Water, xi);
+            outcome.AddGas("O₂", xi / 2);
+            outcome.HeatReleasedJ += 98_000 * xi * 0.55; // the rest leaves with the hot foam and steam
+            if (peroxide - xi > 1e-7) outcome.Ongoing = true;
+            bool soap = m.Moles(SubstanceIds.Detergent) > 1e-5;
+            outcome.Effects.Add(new ReactionEffect(LabEventType.Foam, Math.Min(1.0, peroxide / 0.05),
+                soap ? "Elephant toothpaste: a column of foam erupts!" : "Yeast splits the hydrogen peroxide; oxygen bubbles out.",
+                soap ? "foam.elephant" : "foam.o2.yeast", Id));
+            return true;
         }
     }
 }

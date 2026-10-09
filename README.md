@@ -62,6 +62,14 @@ gömülüdür. **Kurulum gerekmez.**
   patlar; ısıtıcı tablanın kızgın yüzeyi düşük tutuşma sıcaklıklı sıvıları (eter, CS₂, hekzan) tutuşturur. Mg, S, P,
   Na, Fe tozu gibi katılar alevde kendi renkleriyle yanıp oksitlerine dönüşür (Mg → MgO beyaz duman, S → SO₂);
   bakır yalnızca kararır (CuO). Patlayıcılar (TNT, azitler) ısınınca infilak eder; alevdeki hidrojen "pat" diye patlar.
+* **Patlamalar:** sodyum suda tepkimeye girerken (kırıntı köpürüp koşturur, ≈0,25 g ve üstü patlar), K/Rb/Cs + su, termit
+  (Al + Fe₂O₃ ısıtılınca), amonyum nitratın güçlü ısıtılması, uçucu buharlar ve patlayıcılar patlar. Patlama animasyonu:
+  ateş topu, tezgâhta şok halkası, kıvılcımlar, sıçrayan sıvı damlaları, duman sütunu, ekran parlaması ve zıplayan kap.
+* **Fil diş macunu:** "Fil Diş Macunu" deneyinde %12 H₂O₂, bulaşık deterjanı, kuru maya (katalaz enzimi), kırmızı gıda boyası
+  ve KI vardır. Maya H₂O₂'yi parçalar (ılıkta hızlı, soğukta yavaş, 60–75 °C'de enzim bozulur); deterjan varsa çıkan oksijen
+  kaptan fışkıran renkli bir köpük kulesi olur ve tezgâha yayılır. Tepkime ısı verir (termometreyle izlenebilir).
+* **Dökme:** otomatik dökmede eğim dökme modelinden hesaplanır; kap hedefin yanında sabit durur, akış eşit hızda sürer ve
+  sonunda yavaşça kesilir (titreme yok).
 * **Dokunmatik:** Windows'un dokunmatik "bas-bırak" mesajları doğrudan yakalanır; her şey tek dokunuşla çalışır.
   Sürüklenen nesnenin tabanı parmağın ucunu izler; yalnızca üst yüzeylere (bek tel kafesi, terazi, beher ağzı) oturur,
   uygun bir yer yoksa tezgâhta boş bir yere bırakılır. İnce nesneler (termometre, prob) için dokunma alanı geniştir.
@@ -92,7 +100,7 @@ gömülüdür. **Kurulum gerekmez.**
 * **Derleme:** `dotnet publish desktop/IDLab.Desktop -c Release -r win-x64 -o dist` komutu `dist/IDLab.exe`
   dosyasını üretir. Linux'tan da derlenebilir, CI her push'ta derler.
 * **Test seçenekleri:** `--windowed 1920x1080`,
-  `--demo heating|acid|safety|titration|precip|metals|pour|cabinet|hotplate|burn|chemicals|chem:<arama>|periodic|info`, `--quality otomatik|yuksek|dengeli|hizli`, `--light`, `--profile`, `--topic N`, `--frames N`,
+  `--demo heating|acid|safety|titration|precip|metals|pour|cabinet|hotplate|burn|toothpaste|chemicals|chem:<arama>|periodic|info`, `--quality otomatik|yuksek|dengeli|hizli`, `--light`, `--profile`, `--topic N`, `--frames N`,
   `--screenshot dosya.png`, `--trace`, `--camera yaw,pitch,mesafe`.
 
 ## What the prototype does
@@ -148,7 +156,7 @@ before every build). This keeps the shader variants for runtime-created material
 ### Test the simulation core (no Unity needed)
 
 ```bash
-dotnet test core/tests/IDLab.Core.Tests          # 90 unit tests
+dotnet test core/tests/IDLab.Core.Tests          # 96 unit tests
 dotnet build tools/unity-typecheck                # type-checks all Unity scripts against Unity reference assemblies
 ```
 

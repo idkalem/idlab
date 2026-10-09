@@ -16,6 +16,10 @@ namespace IDLab.Desktop
             [EquipmentIds.Beaker600] = ("Beher 600 mL", "Büyük beher; su banyosu için."),
             [EquipmentIds.Erlenmeyer] = ("Erlenmayer 250 mL", "Konik şişe; çalkalarken taşırmaz, titrasyonda kullanılır."),
             [EquipmentIds.TitrationFlask] = ("Erlenmayer: HCl (bilinmeyen)", "20 mL derişimi bilinmeyen HCl + fenolftalein. Büretin tabanına oturur."),
+            [EquipmentIds.H2o2StrongBottle] = ("H₂O₂ %12", "Derişik hidrojen peroksit (fil diş macunu için). Oksitleyici: eldiven ve gözlük takın."),
+            [EquipmentIds.DetergentBottle] = ("Bulaşık deterjanı", "Sıvı deterjan: gaz kabarcıklarını köpük olarak hapseder."),
+            [EquipmentIds.YeastJar] = ("Kuru maya 10 g", "Ekmek mayası; içindeki katalaz enzimi H₂O₂'yi parçalar."),
+            [EquipmentIds.FoodDyeBottle] = ("Gıda boyası (kırmızı)", "Birkaç damla köpüğü renklendirir."),
             [EquipmentIds.RoundFlask] = ("Balon joje 250 mL", "Yuvarlak dipli; düzgün ısınır, mantar halka üstünde durur."),
             [EquipmentIds.GraduatedCylinder] = ("Dereceli silindir 100 mL", "Sıvı hacmini hassas ölçer."),
             [EquipmentIds.TestTube] = ("Deney tüpü", "Küçük ölçekli tepkimeler için; tüplüğe yerleştirin."),
@@ -106,6 +110,12 @@ namespace IDLab.Desktop
                     "Büreti seç; \"1 mL\" ile hızlı, dönüm noktasına yaklaşınca \"1 damla\" ile ekle.",
                     "Pembe renk kalıcı olunca dur; sağdaki titrasyon eğrisinde dönüm noktasını bul.",
                     "M₁·V₁ = M₂·V₂ ile asidin derişimini hesapla (eğri de hesaplar).",
+                }),
+                ["chem.elephant-toothpaste"] = ("Fil Diş Macunu", "H₂O₂ + bulaşık deterjanı + maya (katalaz enzimi) ya da KI: oksijen o kadar hızlı çıkar ki deterjan onu dev bir köpük kulesi olarak hapseder.", new[]
+                {
+                    "Erlenmayere %12 H₂O₂ (yaklaşık 50 mL) dökün, üstüne biraz bulaşık deterjanı ve birkaç damla gıda boyası ekleyin.",
+                    "Kuru mayayı (ya da KI çözeltisini) erlenmayere dökün ve geri çekilin!",
+                    "Termometreyle ısınmayı gözleyin: 2H₂O₂ → 2H₂O + O₂ ısı veren bir tepkimedir. Mayayı önceden 70 °C'ye ısıtırsanız enzim bozulur ve tepkime olmaz.",
                 }),
                 ["chem.gases"] = ("Gaz Çıkışı Tepkimeleri", "Metal + asit (H₂), karbonat + asit (CO₂), H₂O₂ + KI (O₂). Hangisi daha hızlı köpürüyor?", new[]
                 {
@@ -271,6 +281,9 @@ namespace IDLab.Desktop
             if (withArgument != null) return withArgument;
             switch (e.Code)
             {
+                case "foam.elephant": return $"{ownerName}: FİL DİŞİ MACUNU! Maya H₂O₂'yi parçalıyor (2H₂O₂ → 2H₂O + O₂); deterjan oksijeni köpük kulesi olarak hapsediyor.";
+                case "foam.o2.yeast": return $"{ownerName}: mayadaki katalaz enzimi H₂O₂'yi parçalıyor, oksijen kabarcıkları çıkıyor. Deterjan eklerseniz köpük kulesi oluşur!";
+                case "boom.thermite": return "TERMİT! Alüminyum, demir oksidi indirgedi: 2Al + Fe₂O₃ → Al₂O₃ + 2Fe. Göz kamaştırıcı ışık ve erimiş demir!";
                 case "boom.h2": return "Pat! Çıkan hidrojen gazı alevde patladı: 2H₂ + O₂ → 2H₂O.";
                 case "hazard.h2s": return "ZEHİRLİ H₂S GAZI (çürük yumurta kokusu)! Çeker ocakta çalışın.";
                 case "hazard.so2": return "ZEHİRLİ SO₂ GAZI çıkıyor! Çeker ocakta çalışın.";

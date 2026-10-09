@@ -19,7 +19,7 @@ namespace IDLab.Desktop
             public Vector3 Position, Velocity, Spin;
             public float Age, Life, Size, Growth, Gravity, LandY;
             public Color Color;
-            public bool Additive, Solid, Splashes;
+            public bool Additive, Solid, Splashes, Foam;
         }
 
         private struct Ripple
@@ -43,6 +43,9 @@ namespace IDLab.Desktop
 
         public void Clear()
         {
+            _fireballs.Clear();
+            _shockwaves.Clear();
+            ScreenFlash = 0;
             _particles.Clear();
             _emitters.Clear();
             _ripples.Clear();
@@ -56,10 +59,7 @@ namespace IDLab.Desktop
             switch (e.Type)
             {
                 case LabEventType.Explosion:
-                    Burst(p, Gfx.Rgba(0xFF8C26), 90, 1.4f, 0.03f, 0.55f, 0.3f, true, 0.4f);
-                    Burst(p, Gfx.Rgba(0xFFD966), 60, 2.4f, 0.006f, 0.9f, 1.2f, true, 0.2f);
-                    Emit(p, Gfx.Rgba(0x3A3A40, 170), 40, 2.0f, 0.06f, 0.25f, 4f, -0.03f, false);
-                    FlashLight(new Vector3(1.4f, 0.7f, 0.25f) * (0.8f + s));
+                    Explode(p, s, e, lab);
                     break;
                 case LabEventType.ToxicGas:
                     Emit(p, e.Code == "hazard.chloramine" ? Gfx.Rgba(0xD8E6C0, 120) : Gfx.Rgba(0xB8E03A, 120), 30, 3f + 3f * s, 0.06f, 0.12f, 6f, -0.015f, false);
@@ -148,6 +148,23 @@ namespace IDLab.Desktop
             Add(new Particle { Position = from, Velocity = velocity, Color = color, Size = 0.0018f, Growth = 1, Life = 3, Gravity = 1, LandY = landY, Splashes = true });
         }
 
+        private int _foamCount;
+
+        /// <summary>
+        /// A blob of soap foam pushed out of a vessel (elephant toothpaste): it rises, arcs over, lands on the bench and
+        /// lies there for a while before slowly collapsing.
+        /// </summary>
+        public void FoamBlob(Vector3 from, Vector3 velocity, Color color, float size)
+        {
+            if (_foamCount > 650) return;
+            color.A = 255;
+            Add(new Particle
+            {
+                Position = from, Velocity = velocity, Color = color, Size = size, Growth = 1.35f, Life = 14f, Gravity = 0.32f, LandY = 0.004f,
+                Foam = true, Solid = true,
+            });
+        }
+
         /// <summary>A falling solid piece (metal granule, marble chip...).</summary>
         public void Chunk(Vector3 from, Vector3 velocity, Color color, float size, float landY)
         {
@@ -169,6 +186,71 @@ namespace IDLab.Desktop
             }
 
             if (_ripples.Count < 40) _ripples.Add(new Ripple { Centre = at, Color = color, Age = 0 });
+        }
+
+        private struct Blast
+        {
+            public Vector3 Centre;
+            public float Age, Life, Radius, Strength;
+        }
+
+        private readonly List<Blast> _fireballs = new List<Blast>();
+        private readonly List<Blast> _shockwaves = new List<Blast>();
+
+        /// <summary>Full-screen flash left by a blast (0–1), drawn over the scene by the front-end.</summary>
+        public float ScreenFlash { get; private set; }
+
+        /// <summary>
+        /// A bang: a white-hot core and an orange fireball that swell and fade, a shock ring racing out over the bench,
+        /// sparks and burning bits arcing away, the vessel's liquid splashed out as droplets, a smoke column, a light
+        /// flash over the whole scene.
+        /// </summary>
+        private void Explode(Vector3 p, float s, LabEvent e, Lab lab)
+        {
+            float k = 0.5f + s;
+            _fireballs.Add(new Blast { Centre = p + new Vector3(0, 0.02f, 0), Life = 0.45f + 0.3f * s, Radius = 0.035f + 0.07f * s, Strength = k });
+            _shockwaves.Add(new Blast { Centre = new Vector3(p.X, Math.Max(0.002f, p.Y - 0.05f), p.Z), Life = 0.45f, Radius = 0.18f + 0.3f * s, Strength = k });
+
+            // Sparks and glowing fragments that fall back under gravity.
+            for (int i = 0; i < (int)(50 + 90 * s); i++)
+            {
+                var dir = Vector3.Normalize(new Vector3(Rand(), (float)_rng.NextDouble() * 1.3f + 0.2f, Rand()));
+                bool ember = _rng.NextDouble() < 0.3;
+                Add(new Particle
+                {
+                    Position = p, Velocity = dir * (0.8f + 1.8f * s) * (0.35f + (float)_rng.NextDouble() * 0.65f),
+                    Color = ember ? Gfx.Rgba(0xFF6A1E) : Gfx.Rgba(0xFFE9A0), Size = ember ? 0.004f : 0.0022f, Growth = 0.6f,
+                    Life = 0.5f + (float)_rng.NextDouble() * 0.9f, Gravity = 0.8f, Additive = true, LandY = 0f, Splashes = false,
+                });
+            }
+
+            // Tongues of flame licking out of the fireball.
+            Burst(p, Gfx.Rgba(0xFF8C26), (int)(16 + 24 * s), 0.7f + 0.6f * s, 0.012f + 0.01f * s, 0.4f, -0.1f, true, 1.6f);
+
+            // The liquid in the vessel is thrown out and splashes down on the bench.
+            var owner = lab.World.Find(e.InstanceId);
+            var c = owner?.Get<IDLab.Core.Components.LiquidContainer>();
+            if (c != null)
+            {
+                var col = Gfx.FromCore(c.LiquidColor);
+                col.A = (byte)Math.Max(190, (int)col.A);
+                for (int i = 0; i < (int)(20 + 60 * s); i++)
+                {
+                    float a = (float)(_rng.NextDouble() * Math.PI * 2);
+                    float out_ = 0.3f + (float)_rng.NextDouble() * (0.6f + 0.8f * s);
+                    Add(new Particle
+                    {
+                        Position = p, Velocity = new Vector3(MathF.Cos(a) * out_, 0.8f + (float)_rng.NextDouble() * (1.2f + 1.5f * s), MathF.Sin(a) * out_),
+                        Color = col, Size = 0.0025f + (float)_rng.NextDouble() * 0.002f, Growth = 1, Life = 3, Gravity = 1, LandY = 0.001f, Splashes = true,
+                    });
+                }
+            }
+
+            // Thick smoke billowing up into a mushroom, and a dark haze around the vessel.
+            Emit(p + new Vector3(0, 0.03f, 0), Gfx.Rgba(0x3A3A40, 150), 18 + 20 * s, 1.2f + 1.5f * s, 0.022f + 0.015f * s, 0.25f, 3.5f, -0.03f, false);
+            Emit(p, Gfx.Rgba(0x6A6A70, 90), 12, 0.5f, 0.03f, 0.4f, 2f, -0.005f, false);
+            FlashLight(new Vector3(1.4f, 0.75f, 0.3f) * (0.7f + 0.6f * s));
+            ScreenFlash = Math.Max(ScreenFlash, 0.2f + 0.3f * s);
         }
 
         private void Burst(Vector3 p, Color c, int count, float speed, float size, float life, float gravity, bool additive, float growth)
@@ -237,6 +319,7 @@ namespace IDLab.Desktop
 
                 p.Velocity.Y -= 9.81f * p.Gravity * dt;
                 if (!p.Solid && !p.Splashes) p.Velocity *= 1f - Math.Min(1f, dt * 0.8f);
+                if (p.Foam) p.Velocity *= 1f - Math.Min(1f, dt * 1.2f); // thick foam: slow, heavy, sticky
                 p.Position += p.Velocity * dt;
                 p.Spin += Vector3.Zero;
                 if (!float.IsNaN(p.LandY) && p.Position.Y <= p.LandY)
@@ -251,7 +334,8 @@ namespace IDLab.Desktop
                     p.Position.Y = p.LandY;
                     p.Velocity = Vector3.Zero;
                     p.Gravity = 0;
-                    if (p.Solid) p.Life = Math.Min(p.Life, p.Age + (p.LandY > 0.001f ? 0.15f : 2.5f)); // sinks into liquid / lies on the bench
+                    if (p.Foam) p.Life = Math.Min(p.Life, p.Age + 9f); // a heap of foam on the bench
+                    else if (p.Solid) p.Life = Math.Min(p.Life, p.Age + (p.LandY > 0.001f ? 0.15f : 2.5f)); // sinks into liquid / lies on the bench
                 }
 
                 _particles[i] = p;
@@ -265,6 +349,23 @@ namespace IDLab.Desktop
                 else _ripples[i] = r;
             }
 
+            for (int i = _fireballs.Count - 1; i >= 0; i--)
+            {
+                var b = _fireballs[i];
+                b.Age += dt;
+                if (b.Age >= b.Life) _fireballs.RemoveAt(i);
+                else _fireballs[i] = b;
+            }
+
+            for (int i = _shockwaves.Count - 1; i >= 0; i--)
+            {
+                var b = _shockwaves[i];
+                b.Age += dt;
+                if (b.Age >= b.Life) _shockwaves.RemoveAt(i);
+                else _shockwaves[i] = b;
+            }
+
+            ScreenFlash = Math.Max(0, ScreenFlash - dt * 3.5f);
             _flashLevel = Math.Max(0, _flashLevel - dt * 2.5f);
             Flash = _flashColor * _flashLevel;
         }
@@ -272,8 +373,20 @@ namespace IDLab.Desktop
         /// <summary>Solid pieces are lit like any other object (opaque pass).</summary>
         public void DrawSolids()
         {
+            _foamCount = 0;
             foreach (var p in _particles)
             {
+                if (p.Foam)
+                {
+                    // Swells as it leaves the flask, and slumps / shrinks in its last seconds on the bench.
+                    _foamCount++;
+                    float left = p.Life - p.Age;
+                    float size = p.Size * Math.Min(p.Growth, 1f + p.Age * 1.5f) * Math.Clamp(left / 2.5f, 0.15f, 1f);
+                    var squash = p.Gravity == 0 ? new Vector3(size * 1.15f, size * 0.7f, size * 1.15f) : new Vector3(size);
+                    Gfx.Draw(Gfx.Sphere, Gfx.Mul(Gfx.Scale(squash.X, squash.Y, squash.Z), Gfx.Translate(p.Position)), p.Color, new Vector3(0.08f));
+                    continue;
+                }
+
                 if (!p.Solid) continue;
                 var rot = Quaternion.CreateFromYawPitchRoll(p.Spin.X * p.Age, p.Spin.Y * p.Age, p.Spin.Z * p.Age);
                 Gfx.Draw(Gfx.Cube, Gfx.Mul(Gfx.Mul(Gfx.Scale(p.Size), Gfx.Rotate(rot)), Gfx.Translate(p.Position)), p.Color);
@@ -290,6 +403,33 @@ namespace IDLab.Desktop
                 DrawCircle3D(r.Centre, 0.003f + t * 0.02f, Vector3.UnitX, 90f, Gfx.WithAlpha(Gfx.Lerp(r.Color, Color.White, 0.5f), (1 - t) * 0.9f));
             }
 
+            // Shock ring on the bench and a faint expanding shell of compressed air.
+            foreach (var b in _shockwaves)
+            {
+                float t = b.Age / b.Life;
+                float r = b.Radius * (1 - (1 - t) * (1 - t));
+                for (int ring = 0; ring < 3; ring++)
+                {
+                    DrawCircle3D(b.Centre, r * (1 - ring * 0.06f), Vector3.UnitX, 90f, Gfx.WithAlpha(new Color(255, 236, 200, 255), (1 - t) * (0.9f - ring * 0.25f)));
+                }
+
+                DrawSphereEx(b.Centre, r * 0.8f, 10, 14, Gfx.WithAlpha(new Color(255, 240, 220, 255), (1 - t) * 0.12f));
+            }
+
+            BeginBlendMode(BlendMode.Additive);
+            foreach (var b in _fireballs)
+            {
+                float t = b.Age / b.Life;
+                float grow = 1 - (1 - Math.Min(1, t * 2.2f)) * (1 - Math.Min(1, t * 2.2f));
+                float fade = 1 - t;
+                var rise = new Vector3(0, b.Radius * 0.8f * t, 0);
+                DrawSphereEx(b.Centre + rise, b.Radius * grow, 12, 16, Gfx.WithAlpha(new Color(255, 120, 30, 255), fade * 0.55f));
+                DrawSphereEx(b.Centre + rise * 0.7f, b.Radius * 0.72f * grow, 12, 16, Gfx.WithAlpha(new Color(255, 200, 70, 255), fade * 0.7f));
+                DrawSphereEx(b.Centre + rise * 0.4f, b.Radius * 0.42f * grow, 10, 14, Gfx.WithAlpha(new Color(255, 250, 225, 255), fade * fade * 0.95f));
+            }
+
+            EndBlendMode();
+
             foreach (bool additive in new[] { false, true })
             {
                 BeginBlendMode(additive ? BlendMode.Additive : BlendMode.Alpha);
@@ -299,7 +439,8 @@ namespace IDLab.Desktop
                     float t = p.Age / p.Life;
                     float alpha = p.Splashes ? 1f : t < 0.1f ? t / 0.1f : 1f - (t - 0.1f) / 0.9f;
                     float size = p.Size * (1f + (p.Growth - 1f) * t);
-                    DrawSphereEx(p.Position, Math.Max(0.0008f, size), 4, 6, Gfx.WithAlpha(p.Color, p.Color.A / 255f * alpha));
+                    int rings = size > 0.012f ? 7 : 4, slices = size > 0.012f ? 10 : 6; // big puffs need a rounder outline
+                    DrawSphereEx(p.Position, Math.Max(0.0008f, size), rings, slices, Gfx.WithAlpha(p.Color, p.Color.A / 255f * alpha));
                 }
 
                 EndBlendMode();

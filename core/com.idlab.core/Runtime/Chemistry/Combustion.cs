@@ -68,8 +68,9 @@ namespace IDLab.Core.Chemistry
         /// <summary>Temperature (°C) at which an explosive substance detonates / decomposes violently.</summary>
         public static double ExplosionC(Substance s)
         {
-            if ((s.Hazards & Hazard.Explosive) == 0) return double.NaN;
             string f = s.Formula ?? "";
+            if (f == "NH₄NO₃" || f == "NH₄ClO₄") return 260; // ammonium nitrate / perchlorate decompose violently
+            if ((s.Hazards & Hazard.Explosive) == 0) return double.NaN;
             if (f.Contains("CNO")) return 170;   // fulminates
             if (f.Contains("N₃")) return 300;    // azides
             return 240;                           // TNT and other organic explosives

@@ -95,11 +95,40 @@ namespace IDLab.Core.Tests
             var engine = ReactionEngine.CreateDefault(_db);
             var m = Solution(100, SubstanceIds.Sodium, 0.06);
 
-            var outcome = engine.Process(m);
+            bool boom = false;
+            for (int i = 0; i < 100; i++) boom |= engine.Process(m, 0.1).Effects.Exists(e => e.Type == Events.LabEventType.Explosion);
 
-            Assert.Contains(outcome.Effects, e => e.Type == Events.LabEventType.Explosion);
-            Assert.Equal(0.06, m.Moles(SubstanceIds.SodiumHydroxide), 9);
+            Assert.True(boom);
+            Assert.Equal(0.06, m.Moles(SubstanceIds.SodiumHydroxide), 6);
             Assert.True(AcidBase.ComputePH(m) > 13);
+        }
+
+        [Fact]
+        public void SodiumPouredInPiecesStillExplodesButACrumbOnlyFizzes()
+        {
+            var engine = ReactionEngine.CreateDefault(_db);
+            var m = Solution(100, SubstanceIds.Water, 0);
+            bool boom = false;
+            for (int i = 0; i < 40; i++)
+            {
+                if (i < 12) m.Add(SubstanceIds.Sodium, 0.005); // a jar tipped out over ~1 s
+                boom |= engine.Process(m, 1.0 / 12).Effects.Exists(e => e.Type == Events.LabEventType.Explosion);
+            }
+
+            Assert.True(boom);
+
+            var crumb = Solution(100, SubstanceIds.Water, 0);
+            crumb.Add(SubstanceIds.Sodium, 0.004);
+            bool crumbBoom = false, fizz = false;
+            for (int i = 0; i < 60; i++)
+            {
+                var o = engine.Process(crumb, 0.1);
+                crumbBoom |= o.Effects.Exists(e => e.Type == Events.LabEventType.Explosion);
+                fizz |= o.Effects.Exists(e => e.Type == Events.LabEventType.Fizz);
+            }
+
+            Assert.False(crumbBoom);
+            Assert.True(fizz);
         }
 
         [Fact]

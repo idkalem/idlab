@@ -239,12 +239,14 @@ namespace IDLab.Core.Components
             {
                 if (effect.RuleId == null || !_activeRules.Contains(effect.RuleId))
                 {
+                    if (effect.Type == LabEventType.Explosion && effect.Severity >= 0.5) BlowOut(effect.Severity);
                     Publish(effect.Type, effect.Severity, effect.Message, MouthPosition, effect.Code);
                     if (effect.RuleId != null) _activeRules.Add(effect.RuleId);
                 }
             }
 
-            _activeRules.IntersectWith(nowActive);
+            // An effect stays "announced" while its rule (the part of the id before ':') keeps running.
+            _activeRules.RemoveWhere(r => !nowActive.Contains(r.IndexOf(':') < 0 ? r : r.Substring(0, r.IndexOf(':'))));
         }
 
         private Substance FlammableFuel()
@@ -340,6 +342,13 @@ namespace IDLab.Core.Components
                 _popCooldown = 3;
                 Publish(LabEventType.Explosion, Math.Min(0.5, 0.15 + GasRateMolPerS * 200), "Hydrogen pops in the flame!", MouthPosition, "boom.h2");
             }
+        }
+
+        /// <summary>A blast in the vessel throws part of the liquid out over the bench.</summary>
+        private void BlowOut(double severity)
+        {
+            double fraction = Math.Min(0.6, 0.15 + 0.45 * severity);
+            if (Contents.HasLiquid) Contents.TakeLiquid(Contents.LiquidVolumeLiters * fraction);
         }
 
         private void Detonate(Substance s, double moles)

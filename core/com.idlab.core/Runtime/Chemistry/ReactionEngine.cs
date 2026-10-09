@@ -161,29 +161,40 @@ namespace IDLab.Core.Chemistry
         }
     }
 
-    /// <summary>2 Na + 2 H₂O → 2 NaOH + H₂↑ — violently exothermic; large amounts ignite the hydrogen.</summary>
-    public sealed class SodiumWaterRule : IReactionRule
+    /// <summary>
+    /// 2 Na + 2 H₂O → 2 NaOH + H₂↑. Sodium reacts within a few seconds, not instantly, so what is in the water at once
+    /// decides the outcome: a crumb fizzes and skates about, a pea-sized lump (≈ 0.25 g) heats up, melts, and the
+    /// hydrogen it releases ignites with a bang.
+    /// </summary>
+    public sealed class SodiumWaterRule : IReactionRule, IOncePerTickRule
     {
         private const double EnthalpyPerMolNa = -184_000.0;
-        private const double ExplosionThresholdMol = 0.02; // ≈ 0.5 g of sodium
+        public const double ExplosionThresholdMol = 0.011; // ≈ 0.25 g of sodium in the water at the same time
+        private const double RatePerSecond = 1.6;
 
         public string Id => "hazard.sodium.water";
 
         public bool TryApply(Mixture mixture, ReactionOutcome outcome, double dt)
         {
-            double extent = Math.Min(mixture.Moles(SubstanceIds.Sodium), mixture.Moles(SubstanceIds.Water));
-            if (extent <= 1e-9) return false;
+            double sodium = mixture.Moles(SubstanceIds.Sodium);
+            double water = mixture.Moles(SubstanceIds.Water);
+            double max = Math.Min(sodium, water);
+            if (max <= 1e-9) return false;
 
+            double extent = max * (1 - Math.Exp(-RatePerSecond * Math.Max(dt, 1e-4)));
+            if (max - extent < 1e-7) extent = max;
             mixture.Remove(SubstanceIds.Sodium, extent);
             mixture.Remove(SubstanceIds.Water, extent);
             mixture.Add(SubstanceIds.SodiumHydroxide, extent);
             outcome.HeatReleasedJ += -EnthalpyPerMolNa * extent;
             outcome.AddGas("H₂", extent / 2);
+            if (max - extent > 1e-7) outcome.Ongoing = true;
 
-            outcome.Effects.Add(extent >= ExplosionThresholdMol
-                ? new ReactionEffect(LabEventType.Explosion, Math.Min(1.0, extent / 0.1),
-                    "Sodium reacted violently with water — hydrogen gas ignited!", "hazard.sodium.explosion", Id)
-                : new ReactionEffect(LabEventType.Fizz, Math.Min(1.0, extent / ExplosionThresholdMol),
+            // The bang has its own rule id, so it is announced even after the first crumbs were reported as fizzing.
+            outcome.Effects.Add(sodium >= ExplosionThresholdMol
+                ? new ReactionEffect(LabEventType.Explosion, Math.Min(1.0, 0.45 + sodium / 0.06),
+                    "Sodium reacted violently with water — hydrogen gas ignited!", "hazard.sodium.explosion", Id + ":boom")
+                : new ReactionEffect(LabEventType.Fizz, Math.Min(1.0, sodium / ExplosionThresholdMol),
                     "Sodium fizzes and skates across the water, releasing hydrogen.", "hazard.sodium.fizz", Id));
             return true;
         }
@@ -332,6 +343,8 @@ namespace IDLab.Core.Chemistry
             e.AddRule(new GenericMetalWaterRule());
             e.AddRule(new GenericOxideWaterRule());
             e.AddRule(new GenericCombinationRule());
+            e.AddRule(new ThermiteRule());
+            e.AddRule(new YeastCatalaseRule());
             e.AddRule(new GenericAcidBaseRule(handled));
             e.AddRule(new GenericPrecipitationRule(handled));
             e.AddRule(new GenericMetalAcidRule(handled));

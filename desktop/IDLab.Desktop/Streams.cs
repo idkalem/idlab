@@ -124,7 +124,7 @@ namespace IDLab.Desktop
             float v0 = Math.Max(0.15f, s.V0.Length());
             var v = s.V0 + new Vector3(0, -G * t, 0);
             float thin = MathF.Sqrt(v0 / Math.Max(v0, v.Length()));          // faster → thinner (continuity)
-            float ripple = 1f + 0.13f * MathF.Sin(t * 90f - _time * 26f + s.Seed) + 0.06f * MathF.Sin(t * 210f - _time * 47f);
+            float ripple = 1f + 0.05f * MathF.Sin(t * 90f - _time * 26f + s.Seed) + 0.025f * MathF.Sin(t * 210f - _time * 47f);
             return s.Radius * Math.Max(0.45f, thin) * ripple;
         }
 
@@ -162,7 +162,7 @@ namespace IDLab.Desktop
                 side = Vector3.Normalize(side);
                 var up = Vector3.Cross(side, tangent);
                 // The stream sways a little as it falls (surface tension wobble).
-                float sway = 0.0006f * MathF.Sin(t * 35f - _time * 9f + s.Seed) * Math.Min(1f, t * 20f);
+                float sway = 0.00025f * MathF.Sin(t * 35f - _time * 9f + s.Seed) * Math.Min(1f, t * 20f);
                 p += side * sway;
                 float r = RadiusAt(s, t);
                 for (int j = 0; j < Sides; j++)

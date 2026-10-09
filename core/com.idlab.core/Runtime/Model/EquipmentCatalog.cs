@@ -46,6 +46,10 @@ namespace IDLab.Core.Model
         public const string Kmno4Solution = "bottle.kmno4";
         public const string H2o2Bottle = "bottle.h2o2";
         public const string KiSolution = "bottle.ki";
+        public const string H2o2StrongBottle = "bottle.h2o2.12";
+        public const string DetergentBottle = "bottle.detergent";
+        public const string YeastJar = "jar.yeast";
+        public const string FoodDyeBottle = "dropper.fooddye";
         public const string EthanolBottle = "bottle.ethanol";
         public const string BleachBottle = "bottle.bleach";
 
@@ -187,6 +191,8 @@ namespace IDLab.Core.Model
             c.Register(Bottle(EquipmentIds.Agno3Solution, "AgNO₃ 0.1 M", ReagentPreset.Solution("0.1 M silver nitrate", 250, SubstanceIds.SilverNitrate, 0.1), 0x8C6A3F, "amber"));
             c.Register(Bottle(EquipmentIds.Kmno4Solution, "KMnO₄ 0.01 M", ReagentPreset.Solution("0.01 M potassium permanganate", 250, SubstanceIds.PotassiumPermanganate, 0.01), 0x8E2A9E, "amber"));
             c.Register(Bottle(EquipmentIds.H2o2Bottle, "H₂O₂ 3%", ReagentPreset.Solution("3% hydrogen peroxide", 250, SubstanceIds.HydrogenPeroxide, 0.88), 0x9AD0FF, "amber"));
+            c.Register(Bottle(EquipmentIds.H2o2StrongBottle, "H₂O₂ 12%", ReagentPreset.Solution("12% hydrogen peroxide", 250, SubstanceIds.HydrogenPeroxide, 3.5), 0x6FB8FF, "amber"));
+            c.Register(Bottle(EquipmentIds.DetergentBottle, "Dish detergent", ReagentPreset.Liquid("Dish detergent", SubstanceIds.Detergent, 150, 1.03, 376.5), 0x3CC24A));
             c.Register(Bottle(EquipmentIds.KiSolution, "KI 0.5 M", ReagentPreset.Solution("0.5 M potassium iodide", 250, SubstanceIds.PotassiumIodide, 0.5), 0xD8C8A0));
             c.Register(Bottle(EquipmentIds.EthanolBottle, "Ethanol 96%",
                 ReagentPreset.Liquid("Ethanol", SubstanceIds.Ethanol, 250, 0.789, 46.07), 0xFF8C1A));
@@ -196,10 +202,13 @@ namespace IDLab.Core.Model
             // ------------------------------------------------------------------ indicators (dropper bottles: pour drop by drop)
             c.Register(Dropper(EquipmentIds.IndicatorBottle, "Universal indicator",
                 ReagentPreset.Solution("Universal indicator solution", 30, SubstanceIds.UniversalIndicator, 0.02), 0x3CB43C));
+            c.Register(Dropper(EquipmentIds.FoodDyeBottle, "Red food colouring",
+                ReagentPreset.Solution("Red food colouring", 30, SubstanceIds.FoodDyeRed, 0.02), 0xD81B2C));
             c.Register(Dropper(EquipmentIds.PhenolphthaleinBottle, "Phenolphthalein",
                 ReagentPreset.Solution("Phenolphthalein solution", 30, SubstanceIds.Phenolphthalein, 0.01), 0xEE1F8C));
 
             // ------------------------------------------------------------------ solid reagents (wide-mouth jars)
+            c.Register(Jar(EquipmentIds.YeastJar, "Dry yeast 10 g", SubstanceIds.DryYeast, 10, 0xC9A36B));
             c.Register(Jar(EquipmentIds.NaclJar, "NaCl (salt) 20 g", SubstanceIds.SodiumChloride, 20, 0xC9D6E3));
             c.Register(Jar(EquipmentIds.Nahco3Jar, "NaHCO₃ (baking soda) 20 g", SubstanceIds.SodiumBicarbonate, 20, 0xF0F0F0));
             c.Register(Jar(EquipmentIds.Caco3Jar, "CaCO₃ (marble chips) 20 g", SubstanceIds.CalciumCarbonate, 20, 0xE8E2D4));

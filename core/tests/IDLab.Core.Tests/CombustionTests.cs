@@ -102,6 +102,29 @@ namespace IDLab.Core.Tests
         }
 
         [Fact]
+        public void ThermiteFlashesWhenHeated()
+        {
+            var db = new LabWorld().Substances;
+            var (world, c, heat, events) = OnHeater(EquipmentIds.BunsenBurner, db.FindElement("Al").Id, 0.04);
+            c.AddSubstance(db.FindIonic("Fe3", "O").Id, 0.02);
+            heat.GasValve = 1;
+            world.Simulate(120);
+            Assert.Contains(events, e => e.Type == LabEventType.Explosion && e.Code == "boom.thermite");
+            Assert.True(c.Contents.Moles(db.FindIonic("Al", "O").Id) > 0.01); // the iron formed may go on burning in the flame
+        }
+
+        [Fact]
+        public void AmmoniumNitrateExplodesOnStrongHeating()
+        {
+            var db = new LabWorld().Substances;
+            var an = db.FindByFormula("NH₄NO₃");
+            var (world, _, heat, events) = OnHeater(EquipmentIds.BunsenBurner, an.Id, 0.05);
+            heat.GasValve = 1;
+            world.Simulate(120);
+            Assert.Contains(events, e => e.Type == LabEventType.Explosion);
+        }
+
+        [Fact]
         public void OxideLookupCountsAtoms()
         {
             var db = new LabWorld().Substances;

@@ -26,6 +26,7 @@ namespace IDLab.Desktop
                 var c = item.Container;
                 if (c == null) continue;
                 Bubbles.Update(item, dt);
+                EmitFoam(lab, item, c, dt);
                 if (c.TemperatureC > 70 && c.Contents.HasLiquid)
                 {
                     lab.Effects.Steam(c.MouthPosition, (float)c.MouthRadiusM * 0.8f, c.IsBoiling ? 30f : 5f, dt);
@@ -47,11 +48,14 @@ namespace IDLab.Desktop
                     }
                 }
 
+                // The lip follows the drawn vessel every frame (the simulation's copy only updates at 50 Hz,
+                // which made the stream judder against the bottle neck).
+                var lip = item.CanTilt ? item.Position + lab.LipOffset(item) : c.PourLipPosition;
                 if (c.IsPouring)
                 {
                     var col = Gfx.FromCore(c.LiquidColor);
                     float landY = LandingHeight(c.PourTarget?.Get<LiquidContainer>());
-                    var outward = PourOutward(item, c.PourLipPosition);
+                    var outward = PourOutward(item, lip);
                     if (c.IsPouringSolid)
                     {
                         var solid = c.Contents.Solids().OrderByDescending(kv => kv.Value).FirstOrDefault().Key;
@@ -66,7 +70,7 @@ namespace IDLab.Desktop
                         {
                             _chunkAccumulator -= 1;
                             var grain = Gfx.Lerp(sc, Rand() > 0 ? Color.White : Color.Black, Math.Abs(Rand()) * 0.18f);
-                            lab.Effects.Chunk(c.PourLipPosition + new Vector3(Rand() * 0.004f, 0, Rand() * 0.004f),
+                            lab.Effects.Chunk(lip + new Vector3(Rand() * 0.004f, 0, Rand() * 0.004f),
                                 outward * 0.3f + new Vector3(Rand() * 0.03f, 0, Rand() * 0.03f), grain, size * (0.8f + Math.Abs(Rand()) * 0.5f), landY);
                         }
                     }
@@ -76,12 +80,12 @@ namespace IDLab.Desktop
                         while (_dripAccumulator >= 1)
                         {
                             _dripAccumulator -= 1;
-                            lab.Effects.Drop(c.PourLipPosition, outward * 0.15f, col, landY);
+                            lab.Effects.Drop(lip, outward * 0.15f, col, landY);
                         }
                     }
                     else if (_splashTimer <= 0 && Streams.HasLanded(item.Inst.Id))
                     {
-                        var end = StreamEnd(c.PourLipPosition, outward * StreamSpeed(c), landY);
+                        var end = StreamEnd(lip, outward * StreamSpeed(c), landY);
                         lab.Effects.Splash(end, col, 4);
                     }
                 }
@@ -89,8 +93,8 @@ namespace IDLab.Desktop
                 {
                     bool flowing = c.IsPouring && !c.IsPouringSolid && c.PourRateLitersPerSecond >= 0.0012;
                     float landY = flowing ? LandingHeight(c.PourTarget?.Get<LiquidContainer>()) : 0;
-                    var v0 = flowing ? PourOutward(item, c.PourLipPosition) * StreamSpeed(c) : Vector3.Zero;
-                    Streams.Feed(item.Inst.Id, flowing, flowing ? c.PourLipPosition : Vector3.Zero, v0, landY, c.PourRateLitersPerSecond,
+                    var v0 = flowing ? PourOutward(item, lip) * StreamSpeed(c) : Vector3.Zero;
+                    Streams.Feed(item.Inst.Id, flowing, flowing ? lip : Vector3.Zero, v0, landY, c.PourRateLitersPerSecond,
                         Gfx.FromCore(c.LiquidColor), dt);
                 }
 
@@ -275,6 +279,35 @@ namespace IDLab.Desktop
         }
 
         public static void DrawLabels(Lab lab) => Props.DrawLabels(lab);
+
+        private static float _foamAccumulator;
+
+        /// <summary>
+        /// Elephant toothpaste: oxygen rushing out of a soapy mixture is trapped as foam that is pushed out of the mouth
+        /// as a thick, rising column (faster gas → taller column), coloured by the liquid (add food colouring!).
+        /// </summary>
+        private static void EmitFoam(Lab lab, Item item, LiquidContainer c, float dt)
+        {
+            if (c.GasFormula != "O₂" || c.GasRateMolPerS < 4e-4 || c.Contents.Moles(SubstanceIds.Detergent) < 1e-5) return;
+            float strength = (float)Math.Clamp(c.GasRateMolPerS / 0.012, 0.0, 1.6);
+            _foamAccumulator += dt * (45f + 170f * strength);
+            var tint = Gfx.FromCore(c.LiquidColor);
+            var foam = Gfx.Lerp(new Color(250, 250, 246, 255), new Color(tint.R, tint.G, tint.B, (byte)255), Math.Clamp((tint.A / 255f - 0.3f) * 1.3f, 0f, 0.7f));
+            var mouth = c.MouthPosition;
+            float r = (float)c.MouthRadiusM;
+            while (_foamAccumulator >= 1)
+            {
+                _foamAccumulator -= 1;
+                float a = (float)(Rng.NextDouble() * Math.PI * 2);
+                float off = (float)Rng.NextDouble() * r * 0.55f;
+                var start = mouth + new Vector3(MathF.Cos(a) * off, 0.004f, MathF.Sin(a) * off);
+                float side = 0.015f + (float)Rng.NextDouble() * (0.04f + 0.09f * strength);
+                var v = new Vector3(MathF.Cos(a) * side, 0.22f + (0.5f + (float)Rng.NextDouble() * 0.2f) * strength, MathF.Sin(a) * side);
+                float size = (float)(r * (0.26f + Rng.NextDouble() * 0.22f));
+                var shade = Gfx.Lerp(foam, Color.White, (float)Rng.NextDouble() * 0.2f);
+                lab.Effects.FoamBlob(start, v, shade, Math.Max(0.006f, size));
+            }
+        }
 
         /// <summary>Flame colour of a burning element (flame-test colours), whether it is blinding, whether it smokes white.</summary>
         private static (Color tint, bool dazzling, bool smoke) FlameStyle(string element)

@@ -106,6 +106,25 @@ namespace IDLab.Core.Model
             titration.InitialLayout.Add((EquipmentIds.PhProbe, 0.24f, 0.06f));
             c.Register(titration);
 
+            var toothpaste = new ExperimentDefinition
+            {
+                Id = "chem.elephant-toothpaste", Title = "Elephant Toothpaste", Discipline = Discipline.Chemistry, Status = ExperimentStatus.Playable,
+                Summary = "Hydrogen peroxide + dish detergent + dry yeast (catalase) or KI: oxygen is released so fast that the soap traps it as a tower of foam.",
+            };
+            toothpaste.Equipment.AddRange(new[]
+            {
+                EquipmentIds.Erlenmeyer, EquipmentIds.Beaker250, EquipmentIds.Beaker100, EquipmentIds.H2o2StrongBottle, EquipmentIds.H2o2Bottle,
+                EquipmentIds.DetergentBottle, EquipmentIds.YeastJar, EquipmentIds.FoodDyeBottle, EquipmentIds.KiSolution, EquipmentIds.WaterBottle,
+                EquipmentIds.Thermometer, EquipmentIds.HotPlate,
+            });
+            toothpaste.InitialLayout.Add((EquipmentIds.Erlenmeyer, 0.0f, 0.04f));
+            toothpaste.InitialLayout.Add((EquipmentIds.H2o2StrongBottle, -0.2f, 0.02f));
+            toothpaste.InitialLayout.Add((EquipmentIds.DetergentBottle, -0.33f, 0.08f));
+            toothpaste.InitialLayout.Add((EquipmentIds.FoodDyeBottle, 0.14f, 0.1f));
+            toothpaste.InitialLayout.Add((EquipmentIds.YeastJar, 0.2f, -0.02f));
+            toothpaste.InitialLayout.Add((EquipmentIds.KiSolution, 0.34f, 0.06f));
+            c.Register(toothpaste);
+
             var gases = new ExperimentDefinition
             {
                 Id = "chem.gases", Title = "Gas-Producing Reactions", Discipline = Discipline.Chemistry, Status = ExperimentStatus.Playable,

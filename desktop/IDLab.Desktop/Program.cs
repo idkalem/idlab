@@ -186,6 +186,11 @@ namespace IDLab.Desktop
                             EndMode3D();
                         }
 
+                        if (lab.Effects.ScreenFlash > 0.01f)
+                        {
+                            DrawRectangle(0, 0, GetScreenWidth(), GetScreenHeight(), Gfx.WithAlpha(new Color(255, 236, 205, 255), lab.Effects.ScreenFlash));
+                        }
+
                         Scene.DrawLabels(lab);
                         break;
                     case HudTab.Periodic:
@@ -420,6 +425,21 @@ namespace IDLab.Desktop
                     break;
                 }
 
+                case "toothpaste":
+                {
+                    lab.LoadExperiment("chem.elephant-toothpaste");
+                    var flask = lab.Items.First(i => i.Def.Id == EquipmentIds.Erlenmeyer);
+                    var m = new Mixture(lab.World.Substances);
+                    ReagentPreset.Solution("", 50, SubstanceIds.HydrogenPeroxide, 3.5).FillInto(m);
+                    ReagentPreset.Liquid("", SubstanceIds.Detergent, 6, 1.03, 376.5).FillInto(m);
+                    ReagentPreset.Solution("", 1, SubstanceIds.FoodDyeRed, 0.02).FillInto(m);
+                    flask.Container.ReceiveLiquid(m);
+                    lab.Selected = flask;
+                    lab.Distance = 0.9f;
+                    hud.SetSpeed(1);
+                    break;
+                }
+
                 case "chemicals":
                     hud.Tab = HudTab.Chemicals;
                     break;
@@ -448,6 +468,17 @@ namespace IDLab.Desktop
 
         public static void Step(string name, Lab lab, Hud hud, int frame)
         {
+            if (Environment.GetEnvironmentVariable("IDLAB_POURLOG") != null)
+            {
+                foreach (var it in lab.Items)
+                {
+                    if (it.AutoPourMl < 0 && it.Tilt < 0.5f) continue;
+                    var c = it.Container;
+                    Console.WriteLine(string.Format(CultureInfo.InvariantCulture, "pour {0} {1} tilt={2:0.0} vis={3:0.0} y={4:0.0000} x={5:0.0000} rate={6:0.00} arrived={7}",
+                        frame, it.Def.Id, it.Tilt, it.VisualTilt, it.Position.Y, it.Position.X, c.PourRateLitersPerSecond * 1000, it.AutoPourArrived));
+                }
+            }
+
             if (name == "metals" && frame == 200)
             {
                 var jar = lab.Items.First(i => i.Def.Id == EquipmentIds.ZnJar);
@@ -455,6 +486,11 @@ namespace IDLab.Desktop
                 lab.Selected = lab.Items.First(i => i.Def.Id == EquipmentIds.Beaker250);
             }
 
+
+            if (name == "toothpaste" && frame == 40)
+            {
+                lab.Items.First(i => i.Def.Id == EquipmentIds.Erlenmeyer).Container.AddSubstance(SubstanceIds.DryYeast, 0.025);
+            }
 
             if (name == "cabinet" && frame == 420)
             {
