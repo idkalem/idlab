@@ -71,6 +71,11 @@ namespace IDLab.Desktop
                     : e.IsHazard || e.Type == LabEventType.Spill ? Theme.Warning : Theme.Accent;
                 Toast(text, c);
             };
+            lab.AutoPourStarted += (from, to, ml) =>
+            {
+                string amount = double.IsPositiveInfinity(ml) ? "tümü" : string.Format(CultureInfo.CurrentCulture, "{0:0.#} mL", ml);
+                Toast($"{Tr.Name(from.Inst)} → {Tr.Name(to.Inst)}: {amount} dökülüyor", Theme.Accent);
+            };
         }
 
         public void Toast(string text, Color color)
@@ -337,8 +342,7 @@ namespace IDLab.Desktop
             }
             else if (active && Ui.Released && hot && !_inventoryScroll.Dragging)
             {
-                var rng = new Random();
-                var item = _lab.Spawn(def.Id, new Vector3((float)(rng.NextDouble() * 0.3 - 0.15), 0.15f, (float)(rng.NextDouble() * 0.2 - 0.15)));
+                var item = _lab.Spawn(def.Id, _lab.FreeSpot() + new Vector3(0, 0.03f, 0));
                 _lab.Selected = item;
             }
         }
@@ -366,20 +370,29 @@ namespace IDLab.Desktop
 
             var channels = _lab.World.Logger.Channels;
             var area = new Rectangle(r.X + 10 * s, r.Y + 62 * s, r.Width - 20 * s, r.Height - 72 * s);
-            if (channels.Count == 0)
+            var curves = _lab.Titrations.Where(kv => kv.Value.Points.Count >= 2 && _lab.World.Find(kv.Key) != null).Select(kv => kv.Value).ToList();
+            if (channels.Count == 0 && curves.Count == 0)
             {
                 Ui.Wrapped("Tezgâhta sensör yok.\nBir termometreyi ya da pH probunu bir kabın içine bırakın, kabı teraziye koyun veya büreti kullanın; ölçümler burada canlı çizilir.",
                     area.X + 8 * s, area.Y + 8 * s, area.Width - 16 * s, 15, Theme.Muted);
                 return;
             }
 
-            float cardH = 250 * s;
-            _dataContent = channels.Count * (cardH + 10 * s);
+            float cardH = 250 * s, curveH = 330 * s;
+            _dataContent = curves.Count * (curveH + 10 * s) + channels.Count * (cardH + 10 * s);
             _dataScroll.Update(area, _dataContent, dt);
             BeginScissorMode((int)area.X, (int)area.Y, (int)area.Width, (int)area.Height);
+            float cy = area.Y - _dataScroll.Offset;
+            foreach (var curve in curves)
+            {
+                DrawTitrationCard(curve, new Rectangle(area.X, cy, area.Width, curveH));
+                cy += curveH + 10 * s;
+            }
+
             for (int i = 0; i < channels.Count; i++)
             {
-                DrawCard(channels[i], new Rectangle(area.X, area.Y + i * (cardH + 10 * s) - _dataScroll.Offset, area.Width, cardH), Theme.Series[i % Theme.Series.Length]);
+                DrawCard(channels[i], new Rectangle(area.X, cy, area.Width, cardH), Theme.Series[i % Theme.Series.Length]);
+                cy += cardH + 10 * s;
             }
 
             EndScissorMode();
@@ -470,6 +483,103 @@ namespace IDLab.Desktop
             var last = Map(series.LastTime, series.LastValue);
             DrawLineEx(prev, last, 3 * s, color);
             DrawCircleV(last, 6 * s, color);
+        }
+
+        /// <summary>
+        /// Equivalence point of a titration curve: the middle of the steepest rise, accepted only when the curve
+        /// really jumps there (≥ 2 pH units/mL and passes neutral). Returns NaN before the jump.
+        /// </summary>
+        internal static double EquivalencePoint(IReadOnlyList<(double ml, double ph)> pts)
+        {
+            double best = 0, at = double.NaN;
+            for (int i = 0; i + 1 < pts.Count; i++)
+            {
+                // Compare over ≥ 0.1 mL so single noisy samples do not win.
+                int j = i + 1;
+                while (j < pts.Count - 1 && pts[j].ml - pts[i].ml < 0.1) j++;
+                double dv = pts[j].ml - pts[i].ml;
+                if (dv < 0.02) continue;
+                double slope = (pts[j].ph - pts[i].ph) / dv;
+                if (slope > best && pts[i].ph < 8.5 && pts[j].ph > 5.5)
+                {
+                    best = slope;
+                    at = (pts[i].ml + pts[j].ml) / 2;
+                }
+            }
+
+            return best >= 2 ? at : double.NaN;
+        }
+
+        private void DrawTitrationCard(Lab.TitrationCurve curve, Rectangle r)
+        {
+            float s = Ui.S;
+            var ci = CultureInfo.CurrentCulture;
+            var pts = curve.Points;
+            DrawRectangleRounded(r, 0.06f, 8, Theme.Raised);
+            Ui.Text("Titrasyon eğrisi · pH – eklenen NaOH", r.X + 14 * s, r.Y + 12 * s, 14, Theme.Muted);
+            var last = pts[pts.Count - 1];
+            string value = string.Format(ci, "pH {0:0.00}  ·  {1:0.00} mL", last.ph, last.ml);
+            var vm = Ui.Measure(value, 22, true);
+            Ui.Text(value, r.Right() - vm.X - 14 * s, r.Y + 32 * s, 22, Theme.Series[0], true);
+
+            double eq = EquivalencePoint(pts);
+            var plot = new Rectangle(r.X + 44 * s, r.Y + 66 * s, r.Width - 58 * s, r.Height - 136 * s);
+            double xMax = Math.Max(5, Math.Ceiling(Math.Max(last.ml, double.IsNaN(eq) ? 0 : eq * 1.3) / 5) * 5);
+            Vector2 Map(double ml, double ph) => new Vector2(
+                plot.X + (float)(ml / xMax) * plot.Width,
+                plot.Y + plot.Height - (float)(Math.Clamp(ph, 0, 14) / 14) * plot.Height);
+
+            // Phenolphthalein's colour-change range (pH 8.2–10).
+            var band = new Rectangle(plot.X, Map(0, 10).Y, plot.Width, Map(0, 8.2).Y - Map(0, 10).Y);
+            DrawRectangleRec(band, new Color(236, 72, 153, 40));
+            Ui.Text("fenolftalein", plot.Right() - Ui.Measure("fenolftalein", 11).X - 4 * s, band.Y + 2 * s, 11, new Color(236, 120, 170, 255));
+            for (int ph = 0; ph <= 14; ph += 2)
+            {
+                float gy = Map(0, ph).Y;
+                DrawLineEx(new Vector2(plot.X, gy), new Vector2(plot.Right(), gy), 1, Theme.Grid);
+                var label = ph.ToString(ci);
+                Ui.Text(label, plot.X - Ui.Measure(label, 12).X - 8 * s, gy - 8 * s, 12, Theme.Muted);
+            }
+
+            int xTicks = (int)(xMax / 5);
+            for (int i = 0; i <= xTicks; i++)
+            {
+                float gx = Map(i * 5, 0).X;
+                DrawLineEx(new Vector2(gx, plot.Y), new Vector2(gx, plot.Bottom()), 1, Theme.Grid);
+                var label = i == xTicks ? (i * 5).ToString(ci) + " mL" : (i * 5).ToString(ci);
+                float lw = Ui.Measure(label, 12).X;
+                Ui.Text(label, i == xTicks ? gx - lw : gx - lw / 2, plot.Bottom() + 4 * s, 12, Theme.Muted);
+            }
+
+            var prev = Map(pts[0].ml, pts[0].ph);
+            for (int i = 1; i < pts.Count; i++)
+            {
+                var p = Map(pts[i].ml, pts[i].ph);
+                DrawLineEx(prev, p, 3 * s, Theme.Series[0]);
+                prev = p;
+            }
+
+            DrawCircleV(prev, 6 * s, Theme.Series[0]);
+
+            float ty = plot.Bottom() + 24 * s;
+            if (!double.IsNaN(eq))
+            {
+                float ex = Map(eq, 0).X;
+                for (float y = plot.Y; y < plot.Bottom(); y += 8 * s) DrawLineEx(new Vector2(ex, y), new Vector2(ex, Math.Min(y + 4 * s, plot.Bottom())), 2 * s, Theme.Warning);
+                string line1 = string.Format(ci, "Dönüm noktası ≈ {0:0.0} mL NaOH", eq);
+                Ui.Text(line1, r.X + 14 * s, ty, 15, Theme.Warning, true);
+                if (curve.AcidMl > 0.5 && curve.TitrantMolarity > 0)
+                {
+                    double ca = curve.TitrantMolarity * eq / curve.AcidMl;
+                    string line2 = string.Format(ci, "Asit derişimi = M·V / V(asit) = {0:0.###} × {1:0.0} / {2:0.0} ≈ {3:0.000} M", curve.TitrantMolarity, eq, curve.AcidMl, ca);
+                    Ui.Text(line2, r.X + 14 * s, ty + 22 * s, 13, Theme.Text);
+                }
+            }
+            else
+            {
+                Ui.Wrapped("Büretten damla damla ekleyin. pH birden yükselip renk pembeye döndüğünde dönüm noktası burada işaretlenir.",
+                    r.X + 14 * s, ty, r.Width - 28 * s, 13, Theme.Muted);
+            }
         }
 
         private static double NiceStep(double raw)
@@ -581,7 +691,8 @@ namespace IDLab.Desktop
             {
                 var tap = item.Tap;
                 lines.Add((string.Format(ci, "Verilen: {0:0.0} mL   ·   Kalan: {1:0.0} mL", tap.DeliveredMilliliters, c.VolumeMilliliters), Theme.Text));
-                lines.Add((tap.IsFlowing ? string.Format(ci, "Akış: {0:0.00} mL/s", tap.FlowLitersPerSecond * 1000) : "Musluk kapalı", Theme.Text));
+                lines.Add((tap.PendingMilliliters > 1e-4 ? string.Format(ci, "Damlatılıyor… {0:0.00} mL kaldı", tap.PendingMilliliters)
+                    : tap.IsFlowing ? string.Format(ci, "Akış: {0:0.00} mL/s", tap.FlowLitersPerSecond * 1000) : "Musluk kapalı", Theme.Text));
                 if (c.VolumeMilliliters < 0.05) lines.Add(("Büret boşaldı. \"Doldur\" ile yeniden 25 mL doldurun.", Theme.Warning));
                 else if (tap.Target != null) lines.Add(("Altındaki kap: " + Tr.Name(tap.Target), Theme.Text));
                 else lines.Add(("Ucunun altına bir erlenmayer ya da beher koyun.", Theme.Warning));
@@ -655,7 +766,8 @@ namespace IDLab.Desktop
 
             float ly = r.Y + 50 * s, controlsY = r.Bottom() - 62 * s;
             bool quickPour = c != null && item.CanTilt && item.Host == null && item.Tap == null;
-            float linesEnd = quickPour ? controlsY - 58 * s : controlsY;
+            bool doses = item.Tap != null && c != null;
+            float linesEnd = quickPour || doses ? controlsY - 58 * s : controlsY;
             foreach (var (text, color) in lines)
             {
                 if (ly > linesEnd - 18 * s) break;
@@ -663,6 +775,7 @@ namespace IDLab.Desktop
             }
 
             if (quickPour) DrawQuickPour(item, c, new Rectangle(r.X + 16 * s, controlsY - 56 * s, r.Width - 32 * s, 46 * s));
+            if (doses) DrawBuretteDoses(item, c, new Rectangle(r.X + 16 * s, controlsY - 56 * s, r.Width - 32 * s, 46 * s));
 
             DrawControls(item, c, balance, new Rectangle(r.X + 16 * s, controlsY, r.Width - 32 * s, 48 * s));
         }
@@ -755,12 +868,43 @@ namespace IDLab.Desktop
             }
         }
 
+        /// <summary>Metered burette doses: one drop (0.05 mL) up to 5 mL, let out drop-wise into the flask below.</summary>
+        private void DrawBuretteDoses(Item item, LiquidContainer c, Rectangle row)
+        {
+            float s = Ui.S;
+            var tap = item.Tap;
+            string head = "Ekle →";
+            Ui.Text(head, row.X, row.Y + 13 * s, 15, Theme.Muted, true);
+            float x = row.X + Ui.Measure(head, 15, true).X + 12 * s;
+            var options = new (string label, double ml)[] { ("1 damla", 0.05), ("0,5 mL", 0.5), ("1 mL", 1), ("5 mL", 5) };
+            bool busy = tap.PendingMilliliters > 1e-4;
+            int n = options.Length + (busy ? 1 : 0);
+            float bw = (row.Right() - x - (n - 1) * 8 * s) / n;
+            foreach (var (label, ml) in options)
+            {
+                if (Ui.Button("dose-" + label, new Rectangle(x, row.Y, bw, row.Height), label, Gfx.Lerp(Theme.Accent, Theme.Button, 0.6f), 15))
+                {
+                    if (c.VolumeMilliliters < 0.05) Toast("Büret boş. \"Doldur\" ile doldurun.", Theme.Warning);
+                    else
+                    {
+                        if (tap.Target == null) Toast("Büretin altında kap yok: sıvı tezgâha damlar. Erlenmayeri sehpanın tabanına koyun.", Theme.Warning);
+                        tap.Dispense(ml);
+                    }
+                }
+
+                x += bw + 8 * s;
+            }
+
+            if (busy && Ui.Button("dose-stop", new Rectangle(x, row.Y, bw, row.Height), "Durdur", Theme.Danger, 15)) tap.CancelDispense();
+        }
+
         /// <summary>One-tap pours: the container is lifted over the nearest beaker, tipped until the amount has left, then put back.</summary>
         private void DrawQuickPour(Item item, LiquidContainer c, Rectangle row)
         {
             float s = Ui.S;
             var ci = CultureInfo.CurrentCulture;
-            var target = item.PourInto ?? _lab.NearestPourTarget(item, item.Home ?? item.Position, 0.35f);
+            if (item.ChosenTarget != null && !_lab.Items.Contains(item.ChosenTarget)) item.ChosenTarget = null;
+            var target = item.PourInto ?? item.ChosenTarget ?? _lab.NearestPourTarget(item, item.Home ?? item.Position, 0.35f);
             if (item.AutoPourMl >= 0)
             {
                 double poured = item.AutoPourStart - (c.LiquidVolumeMilliliters + c.SolidVolumeMilliliters);
@@ -772,9 +916,10 @@ namespace IDLab.Desktop
                 return;
             }
 
-            if (target == null)
+            if (_lab.PourPickSource == item)
             {
-                Ui.Wrapped("Hızlı dökmek için kabı bir beherin ya da erlenmayerin yanına koyun.", row.X, row.Y + 4 * s, row.Width, 13, Theme.Muted);
+                Ui.Text("Tezgâhta dökülecek kaba dokunun…", row.X, row.Y + 13 * s, 15, Theme.Accent, true);
+                if (Ui.Button("pour-pick-cancel", new Rectangle(row.Right() - 120 * s, row.Y, 120 * s, row.Height), "Vazgeç", null, 15)) _lab.PourPickSource = null;
                 return;
             }
 
@@ -783,21 +928,49 @@ namespace IDLab.Desktop
             var options = solid
                 ? new (string label, double ml)[] { ("Biraz", Math.Max(0.3, total * 0.15)), ("Yarısı", total / 2), ("Tümü", double.PositiveInfinity) }
                 : new (string label, double ml)[] { ("10 mL", 10), ("25 mL", 25), ("50 mL", 50), ("Tümü", double.PositiveInfinity) };
+            // "Dök → [Beher ▾]": the target button picks another container by tapping it on the bench.
             string head = "Dök →";
             Ui.Text(head, row.X, row.Y + 13 * s, 15, Theme.Muted, true);
-            float x = row.X + Ui.Measure(head, 15, true).X + 12 * s;
+            float x = row.X + Ui.Measure(head, 15, true).X + 10 * s;
+            string targetLabel = target != null ? ShortName(target) : "Kap seç";
+            float tw = Math.Min(150 * s, Ui.Measure(targetLabel, 14, true).X + 28 * s);
+            if (Ui.Button("pour-target", new Rectangle(x, row.Y, tw, row.Height), targetLabel, Theme.AccentDim, 14))
+            {
+                _lab.PourPickSource = item;
+                _lab.PourPickAmount = double.NaN;
+                Toast("Hangi kaba dökülecek? Tezgâhta o kaba dokunun.", Theme.Accent);
+            }
+
+            x += tw + 10 * s;
             float bw = (row.Right() - x - (options.Length - 1) * 8 * s) / options.Length;
             foreach (var (label, ml) in options)
             {
-                bool possible = total > 0.1;
-                if (Ui.Button("pour-" + label, new Rectangle(x, row.Y, bw, row.Height), label, Gfx.Lerp(Theme.Warning, Theme.Button, 0.62f), 15) && possible)
+                if (Ui.Button("pour-" + label, new Rectangle(x, row.Y, bw, row.Height), label, Gfx.Lerp(Theme.Warning, Theme.Button, 0.62f), 15))
                 {
-                    item.PourInto = target;
-                    _lab.StartAutoPour(item, ml);
+                    if (total <= 0.1) Toast("Kap boş.", Theme.Warning);
+                    else if (target == null)
+                    {
+                        _lab.PourPickSource = item;
+                        _lab.PourPickAmount = ml;
+                        Toast("Dökülecek kaba dokunun.", Theme.Accent);
+                    }
+                    else
+                    {
+                        item.PourInto = target;
+                        _lab.StartAutoPour(item, ml);
+                    }
                 }
 
                 x += bw + 8 * s;
             }
+        }
+
+        private static string ShortName(Item item)
+        {
+            string name = Tr.Name(item.Inst);
+            int colon = name.IndexOf(':');
+            if (colon > 0) name = name.Substring(0, colon);
+            return name.Length > 14 ? name.Substring(0, 13) + "…" : name;
         }
 
         // ------------------------------------------------------------------ camera buttons + toasts

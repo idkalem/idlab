@@ -761,6 +761,37 @@ for sym, e in sorted(ELEMENTS.items(), key=lambda kv: kv[1]["z"]):
 
 exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "gen_crc.py"), encoding="utf-8").read())
 
+# ----------------------------------------------------------------------------------------------- CAS numbers
+
+# Rows written by hand (and the ionic/element tables) get their CAS number from the `chemicals` identifier table,
+# looked up by English name and accepted only when the molar mass agrees.
+if _CHEM is not None:
+    from chemicals.identifiers import CAS_from_any, search_chemical
+    _cas_added = 0
+    for _i, _r in enumerate(ROWS):
+        _f = _r.split("|")
+        if _f[41] or _f[36] == "1" or not _f[2]:
+            continue
+        _m = _f[13]
+        if not _m and not _f[4] and _f[1] == "1":
+            _m = None  # hand-tuned substance (name checked by hand): trust the name lookup
+        elif not _m:
+            try:
+                _m = molar_mass(_f[4].translate(str.maketrans("₀₁₂₃₄₅₆₇₈₉", "0123456789")))
+            except Exception:
+                continue
+        try:
+            _cas = CAS_from_any(_f[2])
+            _meta = search_chemical(_cas)
+        except Exception:
+            continue
+        if _meta is None or (_m is not None and abs(float(_meta.MW) - float(_m)) > 0.6):
+            continue
+        _f[41] = _cas
+        ROWS[_i] = "|".join(_f)
+        _cas_added += 1
+    print(f"CAS numbers added to {_cas_added} rows")
+
 # ----------------------------------------------------------------------------------------------- output
 
 visible = len([r for r in ROWS if r.split("|")[36] == "0"])

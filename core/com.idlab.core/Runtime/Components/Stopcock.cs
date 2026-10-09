@@ -54,6 +54,8 @@ namespace IDLab.Core.Components
             FlowLitersPerSecond = 0;
             Target = null;
             var container = Owner.Get<LiquidContainer>();
+            // The receiver under the tip is known even while the tap is closed (so the UI can say what is below it).
+            Target = PourTargets.Find(World, Owner, OutletPosition);
             bool dispensing = PendingMilliliters > 1e-6;
             if (container == null || (_valve < 0.01 && !dispensing) || !container.Contents.HasLiquid)
             {
@@ -71,7 +73,6 @@ namespace IDLab.Core.Components
 
             if (dispensing) PendingMilliliters = Math.Max(0, PendingMilliliters - volume * 1000.0);
             var portion = container.Contents.TakeLiquid(volume);
-            Target = PourTargets.Find(World, Owner, OutletPosition);
             Target?.Get<LiquidContainer>()?.ReceiveLiquid(portion);
             IsFlowing = true;
             FlowLitersPerSecond = rate;

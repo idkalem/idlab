@@ -25,9 +25,12 @@ gömülüdür. **Kurulum gerekmez.**
   Intel/AMD tümleşik grafik kartları yeterlidir.
 * **Sekmeler:** üst çubukta dört sekme vardır.
   * **Laboratuvar:** gerçekçi bir laboratuvar odasında 3D deney tezgâhı.
-  * **Kimyasallar (kimyasal dolabı):** 1000'den fazla kimyasal: iyonik bileşikler, hidratlar ve mineraller, asitler,
-    bazlar, 81 element, organik ve biyokimyasal bileşikler, indikatörler. Türkçe ya da İngilizce adı, yaygın adı
-    ("göztaşı", "kezzap") veya formülü (CCl4) yazarak arayın; tahtada ekran klavyesi açılır. "Elementlerden seç" ile
+  * **Kimyasallar (kimyasal dolabı):** 8400'den fazla kimyasal: iyonik bileşikler, hidratlar ve mineraller, asitler,
+    bazlar, 81 element, organik ve biyokimyasal bileşikler, indikatörler. Yaklaşık 7300 bileşik CRC Handbook of
+    Chemistry and Physics tablolarından (`chemicals` Python paketi) alınmıştır: inorganik tuzlar, oksitler ve
+    hidratlar ad → katyon + anyon çözümlemesiyle, organik bileşikler PubChem formülüyle, Türkçe IUPAC adlarıyla.
+    Bu kayıtlarda tehlike ve çözünürlük verisi yoksa kart bunu açıkça söyler. Türkçe ya da İngilizce adı, yaygın adı
+    ("göztaşı", "kezzap"), formülü (CCl4) ya da CAS numarasını (58-08-2) yazarak arayın; tahtada ekran klavyesi açılır. "Elementlerden seç" ile
     periyodik tablodan elementlere dokunarak o elementleri içeren bileşikleri, "İyonlardan bileşik yap" ile bir katyon
     ve bir anyon seçerek yük dengesiyle oluşan formülü görün. Seçilen kimyasal çözelti şişesi, saf sıvı şişesi ya da
     katı kavanozu olarak tezgâha eklenir. Tepkimeler (çökelme, nötrleşme, gaz çıkışı, metal + asit, yer değiştirme,
@@ -47,6 +50,11 @@ gömülüdür. **Kurulum gerekmez.**
   * Kimyasallar: 17 sıvı (asitler, bazlar, tuz çözeltileri, H₂O₂, etanol, çamaşır suyu...), indikatörler ve 11 katı
     (tuz, karbonat, mermer, CuSO₄/KMnO₄ kristalleri, Mg, Zn, Fe, Cu, Na).
 * **Tehlike işaretleri:** etiketlerde ve bilgi sayfalarında resmî GHS01–GHS09 sembolleri kullanılır.
+* **Kolay dökme:** bir şişeyi sürükleyip başka bir kabın üstüne bırakın: 25 mL döker ve yerine döner.
+  Ya da şişeyi seçip "Dök → [kap]" düğmesine, sonra tezgâhta dökülecek kaba dokunun ve miktarı seçin.
+* **Titrasyon:** erlenmayer büretin tabanına kendiliğinden oturur (büret ucu her zaman kabın ağzına gelir).
+  "1 damla / 0,5 mL / 1 mL / 5 mL" düğmeleri tam o kadar NaOH damlatır. Canlı veri panelinde pH – mL titrasyon
+  eğrisi çizilir, dönüm noktası işaretlenir ve asit derişimi (M·V/V) hesaplanır.
 * **Gerçekçi dökme:** "Dök → 10 mL / 25 mL / 50 mL / Tümü" düğmeleriyle kap kalkar, beherin üstüne gelir, yavaşça
   eğilip istenen miktarı döker ve yerine geri konur. Akışın ucu ağızdan aşağı düşer, dökme bitince kuyruğu kopar.
   Dökülen sıvı kaptan kaba akan bir akış olarak görünür. Yavaş dökünce damlar ve hedef sıvıda
@@ -122,7 +130,7 @@ before every build). This keeps the shader variants for runtime-created material
 ### Test the simulation core (no Unity needed)
 
 ```bash
-dotnet test core/tests/IDLab.Core.Tests          # 71 unit tests
+dotnet test core/tests/IDLab.Core.Tests          # 74 unit tests
 dotnet build tools/unity-typecheck                # type-checks all Unity scripts against Unity reference assemblies
 ```
 

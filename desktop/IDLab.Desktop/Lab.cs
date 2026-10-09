@@ -24,6 +24,7 @@ namespace IDLab.Desktop
         public bool Dragging;
         public Vector3? Home;        // bench spot to return to after an assisted pour
         public Item PourInto;        // container this item is being held over while tilted
+        public Item ChosenTarget;    // receiver picked with "Dök → [kap]" for the quick-pour buttons
         public float VisualTilt;     // the tilt actually shown; eases toward Tilt so pouring is animated
         public double AutoPourMl = -1;   // > 0: pour this much automatically, then put the container back
         public double AutoPourStart;     // contents (mL) when the automatic pour began
@@ -217,6 +218,48 @@ namespace IDLab.Desktop
             return _items[inst.Id];
         }
 
+        /// <summary>
+        /// A clear spot on the bench near the middle for a newly added item (so it never lands on top of a beaker).
+        /// </summary>
+        public Vector3 FreeSpot(float clearance = 0.08f)
+        {
+            var boxes = _items.Values.Where(i => i.Host == null).Select(WorldBox).ToList();
+            float Clear(float x, float z)
+            {
+                float best = float.MaxValue;
+                foreach (var b in boxes)
+                {
+                    float dx = Math.Max(0, Math.Max(b.Min.X - x, x - b.Max.X));
+                    float dz = Math.Max(0, Math.Max(b.Min.Z - z, z - b.Max.Z));
+                    best = Math.Min(best, MathF.Sqrt(dx * dx + dz * dz));
+                }
+
+                return best;
+            }
+
+            Vector3 bestSpot = new Vector3(0, 0, 0.1f);
+            float bestClear = -1;
+            var candidates = new List<Vector3>();
+            for (float x = -0.42f; x <= 0.42f; x += 0.03f)
+            {
+                for (float z = -0.2f; z <= 0.22f; z += 0.03f) candidates.Add(new Vector3(x, 0, z));
+            }
+
+            // Nearest to the front-middle of the bench first.
+            foreach (var c in candidates.OrderBy(c => new Vector2(c.X, (c.Z + 0.06f) * 1.6f).Length()))
+            {
+                float clear = Clear(c.X, c.Z);
+                if (clear >= clearance) return c;
+                if (clear > bestClear)
+                {
+                    bestClear = clear;
+                    bestSpot = c;
+                }
+            }
+
+            return bestSpot;
+        }
+
         public void Remove(Item item)
         {
             if (item != null)
@@ -372,7 +415,10 @@ namespace IDLab.Desktop
             }
         }
 
-        /// <summary>While set, the next tap on a container pours <see cref="PourPickAmount"/> from this item into it.</summary>
+        /// <summary>
+        /// While set, the next tap on a container pours <see cref="PourPickAmount"/> from this item into it
+        /// (NaN: the tap only chooses the receiver).
+        /// </summary>
         public Item PourPickSource { get; set; }
         public double PourPickAmount { get; set; }
 
@@ -662,6 +708,13 @@ namespace IDLab.Desktop
                             PourPickSource = null;
                             if (_pending != null && _pending != source && _pending.Container != null && !IsDescendantOf(_pending, source))
                             {
+                                source.ChosenTarget = _pending;
+                                if (double.IsNaN(PourPickAmount))
+                                {
+                                    Selected = source; // only the receiver was chosen; the amount buttons pour
+                                    break;
+                                }
+
                                 source.PourInto = _pending;
                                 source.Home = null;
                                 StartAutoPour(source, PourPickAmount);

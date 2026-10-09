@@ -80,8 +80,9 @@ namespace IDLab.Core.Chemistry
                 {
                     s.DataLimited = f[40].Contains("L");
                     s.DensityEstimated = f[40].Contains("d");
-                    s.Cas = S(41);
                 }
+
+                if (S(41) != null) s.Cas = S(41);
                 if (s.SaltAcidKa <= 0 && D(29) > 0)
                 {
                     s.SaltAcidKa = D(29);

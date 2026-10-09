@@ -15,1075 +15,1075 @@ h_hso3|0|Hydrogensulfite ion|Hydrogensulfite ion|HSO₃⁻||hidden|WeakAcid|A|0|
 h_hc2o4|0|Hydrogenoxalate ion|Hydrogenoxalate ion|HC₂O₄⁻||hidden|WeakAcid|A|0|1|Powder|0|60|||1||6.4e-05||||||||||||||||||1|0||||
 h_hs|0|Hydrogensulfide ion|Hydrogensulfide ion|HS⁻||hidden|WeakAcid|A|0|1|Powder|0|60|||1||1.3e-13||||||||||||||||||1|0||||
 h_hsio3|0|Hydrogensilicate ion|Hydrogensilicate ion|HSiO₃⁻||hidden|WeakAcid|A|0|1|Powder|0|60|||1||1.6e-12||||||||||||||||||1|0||||
-water|1|Water|Su|H₂O|Saf su;Damıtık su|inorganic|Molecular|S|0|0|Powder|0||||||||||||||||||||||||0|0||||
-h2o2|1|Hydrogen peroxide|Hidrojen peroksit|H₂O₂|Oksijenli su|inorganic|Molecular|S|0|0|Powder|0||||||||||||||||||||||||0|0||||
-m_n2h4|0|Hydrazine|Hidrazin|N₂H₄||inorganic|WeakBase|L|0|1|Powder|551|32.046|1.02|114||1||1.3e-06||||||||||||E8F2FA|0.18|||N2H4|0|0|2000|1063134.2445234975||
-m_no|0|Nitric oxide|Azot monoksit|NO|Nitrik oksit|inorganic|Molecular|A|1|0|Powder|266|30.006|1|||||||||||||||||E8F2FA|0.18|||NO|0|0|1200|||
-m_no2|0|Nitrogen dioxide|Azot dioksit|NO₂||inorganic|Molecular|A|1|1|Powder|266|46.005|1|||||||||||||||||A5432A|1|||NO2|0|0|1200|||
-m_n2o|0|Nitrous oxide|Diazot monoksit|N₂O|Güldürücü gaz|inorganic|Molecular|A|1|1|Powder|264|44.013|1|||||||||||||||||E8F2FA|0.18|||N2O|0|0|1200|||
-m_n2o4|0|Dinitrogen tetroxide|Diazot tetroksit|N₂O₄||inorganic|Molecular|A|1|1|Powder|266|92.01|1|||||||||||||||||C8783A|1|||N2O4|0|0|1200|||
-m_n2o5|0|Dinitrogen pentoxide|Diazot pentoksit|N₂O₅||inorganic|Molecular|S|0|1|Crystals|9|108.009|1.64|||||||||||||||||F4F4F2|1|||N2O5|0|0|1200|||
-m_co|0|Carbon monoxide|Karbon monoksit|CO|Zehirli gaz|inorganic|Molecular|A|1|0|Powder|774|28.01|1|||||||||||||||||E8F2FA|0.18|||CO|0|0|1200|||
-m_co2|0|Carbon dioxide|Karbon dioksit|CO₂|Karbonik gaz;Kuru buz|inorganic|Molecular|A|1|1|Powder|256|44.009|1|||||||||||||||||E8F2FA|0.18|||CO2|0|0|1200|||
-m_o3|0|Ozone|Ozon|O₃||inorganic|Molecular|A|1|0|Powder|266|47.997|1|||||||||||||||||E8F2FA|0.18|||O3|0|0|1200|||
-m_so2|0|Sulfur dioxide|Kükürt dioksit|SO₂||inorganic|Molecular|A|1|1|Powder|259|64.058|1|||||||||||||||||E8F2FA|0.18|||SO2|0|0|1200|||
-m_so3|0|Sulfur trioxide|Kükürt trioksit|SO₃||inorganic|Molecular|L|0|1|Powder|1|80.057|1.92|45||||||||||||||||E8F2FA|0.18|||SO3|0|0|2000|349716||
-m_pcl3|0|Phosphorus trichloride|Fosfor triklorür|PCl₃||inorganic|Molecular|L|0|0|Powder|67|137.324|1.574|76||||||||||||||||E8F2FA|0.18|||PCl3|0|0|2000|223743||
-m_pcl5|0|Phosphorus pentachloride|Fosfor pentaklorür|PCl₅||inorganic|Molecular|S|0|0|Crystals|67|208.224|2.1|||||||||||||||||F4F4F2|1|||PCl5|0|0|1200|||
-m_pocl3|0|Phosphoryl chloride|Fosforil klorür|POCl₃|Fosfor oksiklorür|inorganic|Molecular|L|0|0|Powder|67|153.323|1.645|106||||||||||||||||E8F2FA|0.18|||POCl3|0|0|2000|217614||
-m_ph3|0|Phosphine|Fosfin|PH₃||inorganic|Molecular|A|1|0|Powder|262|33.9978|1|||||||||||||||||E8F2FA|0.18|||PH3|0|0|1200|||
-m_sicl4|0|Silicon tetrachloride|Silisyum tetraklorür|SiCl₄||inorganic|Molecular|L|0|0|Powder|65|169.885|1.48|57.6||||||||||||||||E8F2FA|0.18|||SiCl4|0|0|2000|171328||
-m_sio2|0|Silicon dioxide|Silisyum dioksit|SiO₂|Kum;Kuvars;Silika|inorganic|Molecular|S|0|0|Crystals|0|60.083|2.65|||||||||||||||||F4F4F2|1|||SiO2|0|0|1200|||
-m_sih4|0|Silane|Silan|SiH₄||inorganic|Molecular|A|1|0|Powder|260|32.117|1|||||||||||||||||E8F2FA|0.18|||SiH4|0|0|1200|||
-m_sic|0|Silicon carbide|Silisyum karbür|SiC|Karborundum|inorganic|Molecular|S|0|0|Crystals|0|40.096|3.21|||||||||||||||||F4F4F2|1|||SiC|0|0|1200|||
-m_bf3|0|Boron trifluoride|Bor triflorür|BF₃||inorganic|Molecular|A|1|0|Powder|259|67.8052|1|||||||||||||||||E8F2FA|0.18|||BF3|0|0|1200|||
-m_bcl3|0|Boron trichloride|Bor triklorür|BCl₃||inorganic|Molecular|A|1|0|Powder|323|117.16|1|||||||||||||||||E8F2FA|0.18|||BCl3|0|0|1200|||
-m_b2o3|0|Boron trioxide|Bor trioksit|B₂O₃|Bor oksit|inorganic|Molecular|S|0|1|Crystals|512|69.617|2.46|||||||||||||||||F4F4F2|1|||B2O3|0|0|1200|||
-m_cs2|0|Carbon disulfide|Karbon disülfür|CS₂||inorganic|Molecular|L|0|0|Powder|518|76.131|1.26|46||||||||||||||||E8F2FA|0.18|||CS2|0|0|2000|368906||
-m_cocl2|0|Phosgene|Fosgen|COCl₂|Karbonil klorür|inorganic|Molecular|A|1|0|Powder|258|98.91|1|||||||||||||||||E8F2FA|0.18|||COCl2|0|0|1200|||
-m_clo2|0|Chlorine dioxide|Klor dioksit|ClO₂||inorganic|Molecular|A|1|1|Powder|267|67.448|1|||||||||||||||||E8D84A|1|||ClO2|0|0|1200|||
-m_sf6|0|Sulfur hexafluoride|Kükürt hekzaflorür|SF₆||inorganic|Molecular|A|1|0|Powder|256|146.05|1|||||||||||||||||E8F2FA|0.18|||SF6|0|0|1200|||
-m_socl2|0|Thionyl chloride|Tiyonil klorür|SOCl₂||inorganic|Molecular|L|0|0|Powder|67|118.959|1.64|75||||||||||||||||E8F2FA|0.18|||SOCl2|0|0|2000|257544||
-m_xef2|0|Xenon difluoride|Ksenon diflorür|XeF₂||inorganic|Molecular|S|0|0|Crystals|11|169.29|4.32|||||||||||||||||F4F4F2|1|||XeF2|0|0|1200|||
-m_p4o10|0|Phosphorus pentoxide|Tetrafosfor dekaoksit|P₄O₁₀|Fosfor pentoksit|inorganic|Molecular|S|0|1|Crystals|1|283.885|2.39|||||||||||||||||F4F4F2|1|||P4O10|0|0|1200|||
-m_as2o3|0|Arsenic trioxide|Arsenik trioksit|As₂O₃|Arsenik|inorganic|Molecular|S|0|1|Crystals|546|197.84|3.74|||||||||||||||||F4F4F2|1|||As2O3|0|0|1200|||
-m_tio2|0|Titanium dioxide|Titanyum dioksit|TiO₂|Titan beyazı;Rutil|inorganic|Molecular|S|0|0|Crystals|0|79.865|4.23|||||||||||||||||F4F4F2|1|||TiO2|0|0|1200|||
-m_ticl4|0|Titanium tetrachloride|Titanyum tetraklorür|TiCl₄||inorganic|Molecular|L|0|0|Powder|65|189.667|1.73|136||||||||||||||||E8F2FA|0.18|||TiCl4|0|0|2000|189834||
-m_icl|0|Iodine monochloride|İyot monoklorür|ICl||inorganic|Molecular|S|0|0|Crystals|1|162.354|3.1|||||||||||||||||8A2A0A|1|||ICl|0|0|1200|||
+water|1|Water|Su|H₂O|Saf su;Damıtık su|inorganic|Molecular|S|0|0|Powder|0||||||||||||||||||||||||0|0||||7732-18-5
+h2o2|1|Hydrogen peroxide|Hidrojen peroksit|H₂O₂|Oksijenli su|inorganic|Molecular|S|0|0|Powder|0||||||||||||||||||||||||0|0||||7722-84-1
+m_n2h4|0|Hydrazine|Hidrazin|N₂H₄||inorganic|WeakBase|L|0|1|Powder|551|32.046|1.02|114||1||1.3e-06||||||||||||E8F2FA|0.18|||N2H4|0|0|2000|1063134.2445234975||302-01-2
+m_no|0|Nitric oxide|Azot monoksit|NO|Nitrik oksit|inorganic|Molecular|A|1|0|Powder|266|30.006|1|||||||||||||||||E8F2FA|0.18|||NO|0|0|1200|||10102-43-9
+m_no2|0|Nitrogen dioxide|Azot dioksit|NO₂||inorganic|Molecular|A|1|1|Powder|266|46.005|1|||||||||||||||||A5432A|1|||NO2|0|0|1200|||10102-44-0
+m_n2o|0|Nitrous oxide|Diazot monoksit|N₂O|Güldürücü gaz|inorganic|Molecular|A|1|1|Powder|264|44.013|1|||||||||||||||||E8F2FA|0.18|||N2O|0|0|1200|||10024-97-2
+m_n2o4|0|Dinitrogen tetroxide|Diazot tetroksit|N₂O₄||inorganic|Molecular|A|1|1|Powder|266|92.01|1|||||||||||||||||C8783A|1|||N2O4|0|0|1200|||10544-72-6
+m_n2o5|0|Dinitrogen pentoxide|Diazot pentoksit|N₂O₅||inorganic|Molecular|S|0|1|Crystals|9|108.009|1.64|||||||||||||||||F4F4F2|1|||N2O5|0|0|1200|||10102-03-1
+m_co|0|Carbon monoxide|Karbon monoksit|CO|Zehirli gaz|inorganic|Molecular|A|1|0|Powder|774|28.01|1|||||||||||||||||E8F2FA|0.18|||CO|0|0|1200|||630-08-0
+m_co2|0|Carbon dioxide|Karbon dioksit|CO₂|Karbonik gaz;Kuru buz|inorganic|Molecular|A|1|1|Powder|256|44.009|1|||||||||||||||||E8F2FA|0.18|||CO2|0|0|1200|||124-38-9
+m_o3|0|Ozone|Ozon|O₃||inorganic|Molecular|A|1|0|Powder|266|47.997|1|||||||||||||||||E8F2FA|0.18|||O3|0|0|1200|||10028-15-6
+m_so2|0|Sulfur dioxide|Kükürt dioksit|SO₂||inorganic|Molecular|A|1|1|Powder|259|64.058|1|||||||||||||||||E8F2FA|0.18|||SO2|0|0|1200|||7446-09-5
+m_so3|0|Sulfur trioxide|Kükürt trioksit|SO₃||inorganic|Molecular|L|0|1|Powder|1|80.057|1.92|45||||||||||||||||E8F2FA|0.18|||SO3|0|0|2000|349716||7446-11-9
+m_pcl3|0|Phosphorus trichloride|Fosfor triklorür|PCl₃||inorganic|Molecular|L|0|0|Powder|67|137.324|1.574|76||||||||||||||||E8F2FA|0.18|||PCl3|0|0|2000|223743||7719-12-2
+m_pcl5|0|Phosphorus pentachloride|Fosfor pentaklorür|PCl₅||inorganic|Molecular|S|0|0|Crystals|67|208.224|2.1|||||||||||||||||F4F4F2|1|||PCl5|0|0|1200|||10026-13-8
+m_pocl3|0|Phosphoryl chloride|Fosforil klorür|POCl₃|Fosfor oksiklorür|inorganic|Molecular|L|0|0|Powder|67|153.323|1.645|106||||||||||||||||E8F2FA|0.18|||POCl3|0|0|2000|217614||10025-87-3
+m_ph3|0|Phosphine|Fosfin|PH₃||inorganic|Molecular|A|1|0|Powder|262|33.9978|1|||||||||||||||||E8F2FA|0.18|||PH3|0|0|1200|||7803-51-2
+m_sicl4|0|Silicon tetrachloride|Silisyum tetraklorür|SiCl₄||inorganic|Molecular|L|0|0|Powder|65|169.885|1.48|57.6||||||||||||||||E8F2FA|0.18|||SiCl4|0|0|2000|171328||10026-04-7
+m_sio2|0|Silicon dioxide|Silisyum dioksit|SiO₂|Kum;Kuvars;Silika|inorganic|Molecular|S|0|0|Crystals|0|60.083|2.65|||||||||||||||||F4F4F2|1|||SiO2|0|0|1200|||7631-86-9
+m_sih4|0|Silane|Silan|SiH₄||inorganic|Molecular|A|1|0|Powder|260|32.117|1|||||||||||||||||E8F2FA|0.18|||SiH4|0|0|1200|||7803-62-5
+m_sic|0|Silicon carbide|Silisyum karbür|SiC|Karborundum|inorganic|Molecular|S|0|0|Crystals|0|40.096|3.21|||||||||||||||||F4F4F2|1|||SiC|0|0|1200|||409-21-2
+m_bf3|0|Boron trifluoride|Bor triflorür|BF₃||inorganic|Molecular|A|1|0|Powder|259|67.8052|1|||||||||||||||||E8F2FA|0.18|||BF3|0|0|1200|||7637-07-2
+m_bcl3|0|Boron trichloride|Bor triklorür|BCl₃||inorganic|Molecular|A|1|0|Powder|323|117.16|1|||||||||||||||||E8F2FA|0.18|||BCl3|0|0|1200|||10294-34-5
+m_b2o3|0|Boron trioxide|Bor trioksit|B₂O₃|Bor oksit|inorganic|Molecular|S|0|1|Crystals|512|69.617|2.46|||||||||||||||||F4F4F2|1|||B2O3|0|0|1200|||1303-86-2
+m_cs2|0|Carbon disulfide|Karbon disülfür|CS₂||inorganic|Molecular|L|0|0|Powder|518|76.131|1.26|46||||||||||||||||E8F2FA|0.18|||CS2|0|0|2000|368906||75-15-0
+m_cocl2|0|Phosgene|Fosgen|COCl₂|Karbonil klorür|inorganic|Molecular|A|1|0|Powder|258|98.91|1|||||||||||||||||E8F2FA|0.18|||COCl2|0|0|1200|||75-44-5
+m_clo2|0|Chlorine dioxide|Klor dioksit|ClO₂||inorganic|Molecular|A|1|1|Powder|267|67.448|1|||||||||||||||||E8D84A|1|||ClO2|0|0|1200|||10049-04-4
+m_sf6|0|Sulfur hexafluoride|Kükürt hekzaflorür|SF₆||inorganic|Molecular|A|1|0|Powder|256|146.05|1|||||||||||||||||E8F2FA|0.18|||SF6|0|0|1200|||2551-62-4
+m_socl2|0|Thionyl chloride|Tiyonil klorür|SOCl₂||inorganic|Molecular|L|0|0|Powder|67|118.959|1.64|75||||||||||||||||E8F2FA|0.18|||SOCl2|0|0|2000|257544||7719-09-7
+m_xef2|0|Xenon difluoride|Ksenon diflorür|XeF₂||inorganic|Molecular|S|0|0|Crystals|11|169.29|4.32|||||||||||||||||F4F4F2|1|||XeF2|0|0|1200|||13709-36-9
+m_p4o10|0|Phosphorus pentoxide|Tetrafosfor dekaoksit|P₄O₁₀|Fosfor pentoksit|inorganic|Molecular|S|0|1|Crystals|1|283.885|2.39|||||||||||||||||F4F4F2|1|||P4O10|0|0|1200|||16752-60-6
+m_as2o3|0|Arsenic trioxide|Arsenik trioksit|As₂O₃|Arsenik|inorganic|Molecular|S|0|1|Crystals|546|197.84|3.74|||||||||||||||||F4F4F2|1|||As2O3|0|0|1200|||1327-53-3
+m_tio2|0|Titanium dioxide|Titanyum dioksit|TiO₂|Titan beyazı;Rutil|inorganic|Molecular|S|0|0|Crystals|0|79.865|4.23|||||||||||||||||F4F4F2|1|||TiO2|0|0|1200|||13463-67-7
+m_ticl4|0|Titanium tetrachloride|Titanyum tetraklorür|TiCl₄||inorganic|Molecular|L|0|0|Powder|65|189.667|1.73|136||||||||||||||||E8F2FA|0.18|||TiCl4|0|0|2000|189834||7550-45-0
+m_icl|0|Iodine monochloride|İyot monoklorür|ICl||inorganic|Molecular|S|0|0|Crystals|1|162.354|3.1|||||||||||||||||8A2A0A|1|||ICl|0|0|1200|||7790-99-0
 m_cac2|0|Calcium carbide|Kalsiyum karbür|CaC₂|Karpit|inorganic|Molecular|S|0|0|Crystals|64|64.1|2.22|||||||||||||||||5A5A5A|1|||CaC2|0|0|1200|||
-m_nh4oh|0|Ammonium hydroxide|Amonyum hidroksit|NH₄OH|Amonyak çözeltisi|inorganic|WeakBase|A|1|1|Powder|305|35.046|1|||1||1.8e-05||||||||||||E8F2FA|0.18|||NH4OH|0|0|1200|||
-m_hf|0|Hydrofluoric acid|Hidroflorik asit|HF|Hidrojen florür|acid|WeakAcid|A|1|1|Powder|259|20.0064|1||1||0.00068||||H|1|1|F|1|1||||E8F2FA|0.18||H3O+ F-|HF|0|0|1200|||
-hcl|1|Hydrochloric acid|Hidroklorik asit|HCl|Tuz ruhu;Hidrojen klorür|acid|Molecular|S|0|0|Powder|0||||||||||H|1|1|Cl|1|1|||||||||0|0||||
-m_hbr|0|Hydrobromic acid|Hidrobromik asit|HBr|Hidrojen bromür|acid|StrongAcid|A|1|1|Powder|273|80.912|1||1||||||H|1|1|Br|1|1||||E8F2FA|0.18||H3O+ Br-||0|0|1200|||
-m_hi|0|Hydroiodic acid|Hidroiyodik asit|HI|Hidrojen iyodür|acid|StrongAcid|A|1|1|Powder|257|127.912|1||1||||||H|1|1|I|1|1||||E8F2FA|0.18||H3O+ I-||0|0|1200|||
-hno3|1|Nitric acid|Nitrik asit|HNO₃|Kezzap|acid|Molecular|S|0|0|Powder|0||||||||||H|1|1|NO3|1|1|||||||||0|0||||
-m_hno2|0|Nitrous acid|Nitröz asit|HNO₂||acid|WeakAcid|A|1|1|Powder|258|47.013|1||1||0.00045||||H|1|1|NO2|1|1||||E8F2FA|0.18||H3O+ NO2-|HNO2|0|0|1200|||
-h2so4|1|Sulfuric acid|Sülfürik asit|H₂SO₄|Zaç yağı|acid|Molecular|S|0|0|Powder|0||||||||||H|1|2|SO4|2|1|||||||||0|0||||
-m_h2so3|0|Sulfurous acid|Sülfüröz asit|H₂SO₃||acid|WeakAcid|A|1|1|Powder|257|82.073|1||2||0.015||||H|1|2|SO3|2|1||||E8F2FA|0.18||H3O+*2 SO3^2-|H2SO3|0|0|1200|||
-m_h3po4|0|Phosphoric acid|Fosforik asit|H₃PO₄|Ortofosforik asit|acid|WeakAcid|S|0|1|Crystals|1|97.9938|1.83||3||0.0075||||H|1|3|PO4|3|1||||F4F4F2|1||H3O+*3 PO4^3-|H3PO4|0|0|1200|||
-m_h3po3|0|Phosphorous acid|Fosforöz asit|H₃PO₃||acid|WeakAcid|S|0|1|Crystals|1|81.9948|1.65||2||0.05|||||||||||||F4F4F2|1|||H3PO3|0|0|1200|||
-m_h2co3|0|Carbonic acid|Karbonik asit|H₂CO₃|Gazoz asidi|acid|WeakAcid|A|1|1|Powder|256|62.024|1||2||4.3e-07||||H|1|2|CO3|2|1||||E8F2FA|0.18||H3O+*2 CO3^2-|H2CO3|0|0|1200|||
-m_hclo|0|Hypochlorous acid|Hipokloröz asit|HClO||acid|WeakAcid|A|1|1|Powder|257|52.457|1||1||3e-08||||H|1|1|ClO|1|1||||E8F2FA|0.18||H3O+ ClO-|HClO|0|0|1200|||
-m_hclo2|0|Chlorous acid|Kloröz asit|HClO₂||acid|WeakAcid|A|1|1|Powder|265|68.456|1||1||0.011|||||||||||||E8F2FA|0.18|||HClO2|0|0|1200|||
-m_hclo3|0|Chloric acid|Klorik asit|HClO₃||acid|StrongAcid|A|1|1|Powder|265|84.455|1||1||||||H|1|1|ClO3|1|1||||E8F2FA|0.18||H3O+ ClO3-||0|0|1200|||
-m_hclo4|0|Perchloric acid|Perklorik asit|HClO₄||acid|StrongAcid|L|0|1|Powder|9|100.454|1.77|203|1||||||H|1|1|ClO4|1|1||||E8F2FA|0.18||H3O+ ClO4-||0|0|2000|417118||
-m_hbro3|0|Bromic acid|Bromik asit|HBrO₃||acid|StrongAcid|A|1|1|Powder|265|128.909|1||1||||||H|1|1|BrO3|1|1||||E8F2FA|0.18||H3O+ BrO3-||0|0|1200|||
-m_hio3|0|Iodic acid|İyodik asit|HIO₃||acid|WeakAcid|S|0|1|Crystals|9|175.909|4.63||1||0.17||||H|1|1|IO3|1|1||||F4F4F2|1||H3O+ IO3-|HIO3|0|0|1200|||
-m_h2s|0|Hydrogen sulfide|Hidrojen sülfür|H₂S|Çürük yumurta gazı;Sülfidrik asit|acid|WeakAcid|A|1|1|Powder|294|34.076|1||2||1e-07||||H|1|2|S|2|1||||E8F2FA|0.18||H3O+*2 S^2-|H2S|0|0|1200|||
-m_hcn|0|Hydrocyanic acid|Hidrosiyanik asit|HCN|Hidrojen siyanür;Prusik asit|acid|WeakAcid|L|0|1|Powder|38|27.026|0.69|26|1||6.2e-10||||H|1|1|CN|1|1||||E8F2FA|0.18||H3O+ CN-|HCN|0|0|2000|974069||
-m_hscn|0|Thiocyanic acid|Tiyosiyanik asit|HSCN||acid|StrongAcid|A|1|1|Powder|258|59.086|1||1||||||H|1|1|SCN|1|1||||E8F2FA|0.18||H3O+ SCN-||0|0|1200|||
-m_h2cro4|0|Chromic acid|Kromik asit|H₂CrO₄||acid|WeakAcid|A|1|1|Powder|779|118.008|1||2||0.18||||H|1|2|CrO4|2|1||||F2C21E|1||H3O+*2 CrO4^2-|H2CrO4|0|0|1200|||
-m_h3bo3|0|Boric acid|Borik asit|H₃BO₃|Bor asidi|acid|WeakAcid|S|0|1|Crystals|512|61.831|1.44||1||5.8e-10|||||||||||||F4F4F2|1|||H3BO3|0|0|1200|||
+m_nh4oh|0|Ammonium hydroxide|Amonyum hidroksit|NH₄OH|Amonyak çözeltisi|inorganic|WeakBase|A|1|1|Powder|305|35.046|1|||1||1.8e-05||||||||||||E8F2FA|0.18|||NH4OH|0|0|1200|||1336-21-6
+m_hf|0|Hydrofluoric acid|Hidroflorik asit|HF|Hidrojen florür|acid|WeakAcid|A|1|1|Powder|259|20.0064|1||1||0.00068||||H|1|1|F|1|1||||E8F2FA|0.18||H3O+ F-|HF|0|0|1200|||7664-39-3
+hcl|1|Hydrochloric acid|Hidroklorik asit|HCl|Tuz ruhu;Hidrojen klorür|acid|Molecular|S|0|0|Powder|0||||||||||H|1|1|Cl|1|1|||||||||0|0||||7647-01-0
+m_hbr|0|Hydrobromic acid|Hidrobromik asit|HBr|Hidrojen bromür|acid|StrongAcid|A|1|1|Powder|273|80.912|1||1||||||H|1|1|Br|1|1||||E8F2FA|0.18||H3O+ Br-||0|0|1200|||10035-10-6
+m_hi|0|Hydroiodic acid|Hidroiyodik asit|HI|Hidrojen iyodür|acid|StrongAcid|A|1|1|Powder|257|127.912|1||1||||||H|1|1|I|1|1||||E8F2FA|0.18||H3O+ I-||0|0|1200|||10034-85-2
+hno3|1|Nitric acid|Nitrik asit|HNO₃|Kezzap|acid|Molecular|S|0|0|Powder|0||||||||||H|1|1|NO3|1|1|||||||||0|0||||7697-37-2
+m_hno2|0|Nitrous acid|Nitröz asit|HNO₂||acid|WeakAcid|A|1|1|Powder|258|47.013|1||1||0.00045||||H|1|1|NO2|1|1||||E8F2FA|0.18||H3O+ NO2-|HNO2|0|0|1200|||7782-77-6
+h2so4|1|Sulfuric acid|Sülfürik asit|H₂SO₄|Zaç yağı|acid|Molecular|S|0|0|Powder|0||||||||||H|1|2|SO4|2|1|||||||||0|0||||7664-93-9
+m_h2so3|0|Sulfurous acid|Sülfüröz asit|H₂SO₃||acid|WeakAcid|A|1|1|Powder|257|82.073|1||2||0.015||||H|1|2|SO3|2|1||||E8F2FA|0.18||H3O+*2 SO3^2-|H2SO3|0|0|1200|||7782-99-2
+m_h3po4|0|Phosphoric acid|Fosforik asit|H₃PO₄|Ortofosforik asit|acid|WeakAcid|S|0|1|Crystals|1|97.9938|1.83||3||0.0075||||H|1|3|PO4|3|1||||F4F4F2|1||H3O+*3 PO4^3-|H3PO4|0|0|1200|||7664-38-2
+m_h3po3|0|Phosphorous acid|Fosforöz asit|H₃PO₃||acid|WeakAcid|S|0|1|Crystals|1|81.9948|1.65||2||0.05|||||||||||||F4F4F2|1|||H3PO3|0|0|1200|||10294-56-1
+m_h2co3|0|Carbonic acid|Karbonik asit|H₂CO₃|Gazoz asidi|acid|WeakAcid|A|1|1|Powder|256|62.024|1||2||4.3e-07||||H|1|2|CO3|2|1||||E8F2FA|0.18||H3O+*2 CO3^2-|H2CO3|0|0|1200|||463-79-6
+m_hclo|0|Hypochlorous acid|Hipokloröz asit|HClO||acid|WeakAcid|A|1|1|Powder|257|52.457|1||1||3e-08||||H|1|1|ClO|1|1||||E8F2FA|0.18||H3O+ ClO-|HClO|0|0|1200|||7790-92-3
+m_hclo2|0|Chlorous acid|Kloröz asit|HClO₂||acid|WeakAcid|A|1|1|Powder|265|68.456|1||1||0.011|||||||||||||E8F2FA|0.18|||HClO2|0|0|1200|||13898-47-0
+m_hclo3|0|Chloric acid|Klorik asit|HClO₃||acid|StrongAcid|A|1|1|Powder|265|84.455|1||1||||||H|1|1|ClO3|1|1||||E8F2FA|0.18||H3O+ ClO3-||0|0|1200|||7790-93-4
+m_hclo4|0|Perchloric acid|Perklorik asit|HClO₄||acid|StrongAcid|L|0|1|Powder|9|100.454|1.77|203|1||||||H|1|1|ClO4|1|1||||E8F2FA|0.18||H3O+ ClO4-||0|0|2000|417118||7601-90-3
+m_hbro3|0|Bromic acid|Bromik asit|HBrO₃||acid|StrongAcid|A|1|1|Powder|265|128.909|1||1||||||H|1|1|BrO3|1|1||||E8F2FA|0.18||H3O+ BrO3-||0|0|1200|||7789-31-3
+m_hio3|0|Iodic acid|İyodik asit|HIO₃||acid|WeakAcid|S|0|1|Crystals|9|175.909|4.63||1||0.17||||H|1|1|IO3|1|1||||F4F4F2|1||H3O+ IO3-|HIO3|0|0|1200|||7782-68-5
+m_h2s|0|Hydrogen sulfide|Hidrojen sülfür|H₂S|Çürük yumurta gazı;Sülfidrik asit|acid|WeakAcid|A|1|1|Powder|294|34.076|1||2||1e-07||||H|1|2|S|2|1||||E8F2FA|0.18||H3O+*2 S^2-|H2S|0|0|1200|||7783-06-4
+m_hcn|0|Hydrocyanic acid|Hidrosiyanik asit|HCN|Hidrojen siyanür;Prusik asit|acid|WeakAcid|L|0|1|Powder|38|27.026|0.69|26|1||6.2e-10||||H|1|1|CN|1|1||||E8F2FA|0.18||H3O+ CN-|HCN|0|0|2000|974069||74-90-8
+m_hscn|0|Thiocyanic acid|Tiyosiyanik asit|HSCN||acid|StrongAcid|A|1|1|Powder|258|59.086|1||1||||||H|1|1|SCN|1|1||||E8F2FA|0.18||H3O+ SCN-||0|0|1200|||463-56-9
+m_h2cro4|0|Chromic acid|Kromik asit|H₂CrO₄||acid|WeakAcid|A|1|1|Powder|779|118.008|1||2||0.18||||H|1|2|CrO4|2|1||||F2C21E|1||H3O+*2 CrO4^2-|H2CrO4|0|0|1200|||7738-94-5
+m_h3bo3|0|Boric acid|Borik asit|H₃BO₃|Bor asidi|acid|WeakAcid|S|0|1|Crystals|512|61.831|1.44||1||5.8e-10|||||||||||||F4F4F2|1|||H3BO3|0|0|1200|||10043-35-3
 m_h2sio3|0|Silicic acid|Silisik asit|H₂SiO₃||acid|WeakAcid|S|0|0|Crystals|0|78.098|1.8||2||1.6e-10||||H|1|2|SiO3|2|1||||F4F4F2|1||H3O+*2 SiO3^2-|H2SiO3|0|0|1200|||
-m_h2c2o4|0|Oxalic acid|Oksalik asit|H₂C₂O₄|Etandioik asit|organic|WeakAcid|S|0|1|Crystals|3|90.034|1.9||2||0.059||||H|1|2|C2O4|2|1||||F4F4F2|1||H3O+*2 C2O4^2-|H2C2O4|0|0|1200|||
-m_hcooh|0|Formic acid|Formik asit|HCOOH|Metanoik asit;Karınca asidi|organic|WeakAcid|L|0|1|Powder|5|46.025|1.22|100.8|1||0.00018||||H|1|1|HCOO|1|1||||E8F2FA|0.18||H3O+ HCOO-|HCOOH|0|0|2000|714994||
-acetic_acid|1|Acetic acid|Asetik asit|CH₃COOH|Etanoik asit;Sirke asidi|organic|Molecular|S|0|0|Powder|0||||||||||H|1|1|CH3COO|1|1|||||||||0|0||||
-m_c2h5cooh|0|Propanoic acid|Propanoik asit|C₂H₅COOH|Propiyonik asit|organic|WeakAcid|L|0|1|Powder|1|74.079|0.99|141|1||1.3e-05|||||||||||||E8F2FA|0.18|||C2H5COOH|0|0|2000|491977||
-m_c3h7cooh|0|Butanoic acid|Bütanoik asit|C₃H₇COOH|Bütirik asit;Tereyağı asidi|organic|WeakAcid|L|0|1|Powder|1|88.106|0.96|164|1||1.5e-05|||||||||||||E8F2FA|0.18|||C3H7COOH|0|0|2000|436624||
-m_c6h8o7|0|Citric acid|Sitrik asit|C₆H₈O₇|Limon asidi;Limon tuzu|organic|WeakAcid|S|0|1|Crystals|16|192.123|1.66||3||0.00074||||H|1|3|C6H5O7|3|1||||F4F4F2|1||H3O+*3 C6H5O7^3-|C6H8O7|0|0|1200|||
-m_c3h6o3|0|Lactic acid|Laktik asit|C₃H₆O₃|Süt asidi|organic|WeakAcid|L|0|1|Powder|1|90.078|1.21||1||0.00014||||H|1|1|C3H5O3|1|1||||E8F2FA|0.18||H3O+ C3H5O3-|C3H6O3|0|0|2000|||
-m_c6h5cooh|0|Benzoic acid|Benzoik asit|C₆H₅COOH|E210|organic|WeakAcid|S|0|0|Crystals|528|122.123|1.27||1||6.3e-05||||H|1|1|C6H5COO|1|1||||F4F4F2|1||H3O+ C6H5COO-|C6H5COOH|0|0|1200|||
-m_c7h6o3|0|Salicylic acid|Salisilik asit|C₇H₆O₃||organic|WeakAcid|S|0|0|Crystals|18|138.122|1.44||1||0.0011|||||||||||||F4F4F2|1|||C7H6O3|0|0|1200|||
-m_c4h6o6|0|Tartaric acid|Tartarik asit|C₄H₆O₆|Şarap asidi|organic|WeakAcid|S|0|1|Crystals|16|150.086|1.79||2||0.00092|||||||||||||F4F4F2|1|||C4H6O6|0|0|1200|||
-m_c4h6o5|0|Malic acid|Malik asit|C₄H₆O₅|Elma asidi|organic|WeakAcid|S|0|1|Crystals|16|134.087|1.61||2||0.0004|||||||||||||F4F4F2|1|||C4H6O5|0|0|1200|||
-m_c6h8o6|0|Ascorbic acid|Askorbik asit|C₆H₈O₆|C vitamini|biochem|WeakAcid|S|0|1|Crystals|0|176.124|1.65||1||8e-05|||||||||||||F4F4F2|1|||C6H8O6|0|0|1200|||
-m_c17h35cooh|0|Stearic acid|Stearik asit|C₁₇H₃₅COOH|Oktadekanoik asit|organic|WeakAcid|S|0|0|Crystals|0|284.484|0.94||1||1.3e-05||||H|1|1|C17H35COO|1|1||||F4F4F2|1||H3O+ C17H35COO-|C17H35COOH|0|0|1200|||
-m_c17h33cooh|0|Oleic acid|Oleik asit|C₁₇H₃₃COOH|Zeytinyağı asidi|organic|WeakAcid|L|0|0|Powder|0|282.468|0.895|360|1||1.3e-05|||||||||||||E8F2FA|0.18|||C17H33COOH|0|0|2000|197251||
-m_c15h31cooh|0|Palmitic acid|Palmitik asit|C₁₅H₃₁COOH|Hekzadekanoik asit|organic|WeakAcid|S|0|0|Crystals|0|256.43|0.85||1||1.3e-05|||||||||||||F4F4F2|1|||C15H31COOH|0|0|1200|||
-m_c2h3cooh|0|Acrylic acid|Akrilik asit|C₂H₃COOH|Propenoik asit|organic|WeakAcid|L|0|1|Powder|37|72.063|1.05|141|1||5.6e-05|||||||||||||E8F2FA|0.18|||C2H3COOH|0|0|2000|505741||
-m_c4h4o4|0|Maleic acid|Maleik asit|C₄H₄O₄|cis-Bütendioik asit|organic|WeakAcid|S|0|1|Crystals|17|116.072|1.59||2||0.012|||||||||||||F4F4F2|1|||C4H4O4|0|0|1200|||
-m_c4h4o4_2|0|Fumaric acid|Fumarik asit|C₄H₄O₄|trans-Bütendioik asit|organic|WeakAcid|S|0|0|Crystals|16|116.072|1.64||2||0.00093|||||||||||||F4F4F2|1|||C4H4O4|0|0|1200|||
-m_c6h10o4|0|Adipic acid|Adipik asit|C₆H₁₀O₄|Hekzandioik asit|organic|WeakAcid|S|0|0|Crystals|16|146.142|1.36||2||3.7e-05|||||||||||||F4F4F2|1|||C6H10O4|0|0|1200|||
-m_c8h6o4|0|Terephthalic acid|Tereftalik asit|C₈H₆O₄||organic|WeakAcid|S|0|0|Crystals|0|166.132|1.52||2||0.00029|||||||||||||F4F4F2|1|||C8H6O4|0|0|1200|||
-m_c2h4o3|0|Glycolic acid|Glikolik asit|C₂H₄O₃|Hidroksiasetik asit|organic|WeakAcid|S|0|1|Crystals|1|76.051|1.49||1||0.00015|||||||||||||F4F4F2|1|||C2H4O3|0|0|1200|||
-m_c3h4o4|0|Malonic acid|Malonik asit|C₃H₄O₄|Propandioik asit|organic|WeakAcid|S|0|1|Crystals|16|104.061|1.62||2||0.0015|||||||||||||F4F4F2|1|||C3H4O4|0|0|1200|||
-m_ccl3cooh|0|Trichloroacetic acid|Trikloroasetik asit|CCl₃COOH||organic|WeakAcid|S|0|1|Crystals|33|163.378|1.63||1||0.3|||||||||||||F4F4F2|1|||CCl3COOH|0|0|1200|||
-m_ch2clcooh|0|Chloroacetic acid|Kloroasetik asit|CH₂ClCOOH||organic|WeakAcid|S|0|1|Crystals|35|94.494|1.58||1||0.0014|||||||||||||F4F4F2|1|||CH2ClCOOH|0|0|1200|||
-m_c9h8o4|0|Aspirin|Aspirin|C₉H₈O₄|Asetilsalisilik asit|drug|WeakAcid|S|0|0|Crystals|16|180.159|1.4||1||0.0003|||||||||||||F4F4F2|1|||C9H8O4|0|0|1200|||
-m_c6h5oh|0|Phenol|Fenol|C₆H₅OH|Hidroksibenzen;Karbolik asit|organic|WeakAcid|S|0|1|Crystals|515|94.113|1.07||1||1e-10|||||||||||||F4F4F2|1|||C6H5OH|0|0|1200|||
-nh3|1|Ammonia|Amonyak|NH₃|Amonyak gazı;Amonyak suyu|inorganic|Molecular|S|0|0|Powder|0||||||||||||||||||||||||0|0||||
-m_ch3nh2|0|Methylamine|Metilamin|CH₃NH₂||organic|WeakBase|A|1|1|Powder|277|31.058|1|||1||0.00044||||||||||||E8F2FA|0.18|||CH3NH2|0|0|1200|||
-m_ch32nh|0|Dimethylamine|Dimetilamin|(CH₃)₂NH||organic|WeakBase|A|1|1|Powder|261|45.085|1|||1||0.00054||||||||||||E8F2FA|0.18|||(CH3)2NH|0|0|1200|||
-m_ch33n|0|Trimethylamine|Trimetilamin|(CH₃)₃N|Balık kokusu|organic|WeakBase|A|1|1|Powder|261|59.112|1|||1||6.3e-05||||||||||||E8F2FA|0.18|||(CH3)3N|0|0|1200|||
-m_c2h5nh2|0|Ethylamine|Etilamin|C₂H₅NH₂||organic|WeakBase|A|1|1|Powder|261|45.085|1|||1||0.00045||||||||||||E8F2FA|0.18|||C2H5NH2|0|0|1200|||
-m_c2h52nh|0|Diethylamine|Dietilamin|(C₂H₅)₂NH||organic|WeakBase|L|0|1|Powder|5|73.139|0.707|55.5||1||0.00069||||||||||||E8F2FA|0.18|||(C2H5)2NH|0|0|2000|395428||
-m_c2h53n|0|Triethylamine|Trietilamin|(C₂H₅)₃N||organic|WeakBase|L|0|1|Powder|7|101.193|0.726|89||1||0.00056||||||||||||E8F2FA|0.18|||(C2H5)3N|0|0|2000|314935||
-m_c6h5nh2|0|Aniline|Anilin|C₆H₅NH₂|Aminobenzen;Fenilamin|organic|WeakBase|L|0|1|Powder|546|93.129|1.02|184||1||4.3e-10||||||||||||E8F2FA|0.18|||C6H5NH2|0|0|2000|431973||
-m_c5h5n|0|Pyridine|Piridin|C₅H₅N||organic|WeakBase|L|0|1|Powder|22|79.102|0.98|115||1||1.7e-09||||||||||||E8F2FA|0.18|||C5H5N|0|0|2000|431812||
-m_c2h8n2|0|Ethylenediamine|Etilendiamin|C₂H₈N₂|1,2-Diaminoetan|organic|WeakBase|L|0|1|Powder|5|60.1|0.9|116||1||8.5e-05||||||||||||E8F2FA|0.18|||C2H8N2|0|0|2000|569804||
-m_ch4|0|Methane|Metan|CH₄|Doğal gaz;Bataklık gazı|organic|Molecular|A|1|0|Powder|260|16.043|1|||||||||||||||||E8F2FA|0.18|||CH4|0|0|1200|||
-m_c2h6|0|Ethane|Etan|C₂H₆||organic|Molecular|A|1|0|Powder|260|30.07|1|||||||||||||||||E8F2FA|0.18|||C2H6|0|0|1200|||
-m_c3h8|0|Propane|Propan|C₃H₈|LPG|organic|Molecular|A|1|0|Powder|260|44.097|1|||||||||||||||||E8F2FA|0.18|||C3H8|0|0|1200|||
-m_c4h10|0|Butane|Bütan|C₄H₁₀|n-Bütan;Çakmak gazı|organic|Molecular|A|1|0|Powder|260|58.124|1|||||||||||||||||E8F2FA|0.18|||C4H10|0|0|1200|||
-m_c4h10_2|0|Isobutane|İzobütan|C₄H₁₀|2-Metilpropan|organic|Molecular|A|1|0|Powder|260|58.124|1|||||||||||||||||E8F2FA|0.18|||C4H10|0|0|1200|||
-m_c5h12|0|Pentane|Pentan|C₅H₁₂|n-Pentan|organic|Molecular|L|0|0|Powder|52|72.151|0.626|36||||||||||||||||E8F2FA|0.18|||C5H12|0|0|2000|377059||
-m_c5h12_2|0|Isopentane|İzopentan|C₅H₁₂|2-Metilbütan|organic|Molecular|L|0|0|Powder|52|72.151|0.616|28||||||||||||||||E8F2FA|0.18|||C5H12|0|0|2000|367302||
-m_c5h12_3|0|Neopentane|Neopentan|C₅H₁₂|2,2-Dimetilpropan|organic|Molecular|A|1|0|Powder|260|72.151|1|||||||||||||||||E8F2FA|0.18|||C5H12|0|0|1200|||
-m_c6h14|0|Hexane|Hekzan|C₆H₁₄|n-Hekzan|organic|Molecular|L|0|0|Powder|564|86.178|0.655|69||||||||||||||||E8F2FA|0.18|||C6H14|0|0|2000|349384||
-m_c7h16|0|Heptane|Heptan|C₇H₁₆|n-Heptan|organic|Molecular|L|0|0|Powder|52|100.205|0.684|98||||||||||||||||E8F2FA|0.18|||C7H16|0|0|2000|325944||
-m_c8h18|0|Octane|Oktan|C₈H₁₈|n-Oktan|organic|Molecular|L|0|0|Powder|52|114.232|0.703|125.6||||||||||||||||E8F2FA|0.18|||C8H18|0|0|2000|307182||
-m_c8h18_2|0|Isooctane|İzooktan|C₈H₁₈|2,2,4-Trimetilpentan;Benzin bileşeni|organic|Molecular|L|0|0|Powder|52|114.232|0.692|99||||||||||||||||E8F2FA|0.18|||C8H18|0|0|2000|286690||
-m_c9h20|0|Nonane|Nonan|C₉H₂₀||organic|Molecular|L|0|0|Powder|20|128.259|0.718|151||||||||||||||||E8F2FA|0.18|||C9H20|0|0|2000|291014||
-m_c10h22|0|Decane|Dekan|C₁₀H₂₂||organic|Molecular|L|0|0|Powder|20|142.286|0.73|174||||||||||||||||E8F2FA|0.18|||C10H22|0|0|2000|276550||
-m_c11h24|0|Undecane|Undekan|C₁₁H₂₄||organic|Molecular|L|0|0|Powder|4|156.313|0.74|196||||||||||||||||E8F2FA|0.18|||C11H24|0|0|2000|264119||
-m_c12h26|0|Dodecane|Dodekan|C₁₂H₂₆|Gazyağı bileşeni|organic|Molecular|L|0|0|Powder|512|170.34|0.75|216||||||||||||||||E8F2FA|0.18|||C12H26|0|0|2000|252702||
-m_c3h6|0|Cyclopropane|Siklopropan|C₃H₆||organic|Molecular|A|1|0|Powder|260|42.081|1|||||||||||||||||E8F2FA|0.18|||C3H6|0|0|1200|||
-m_c4h8|0|Cyclobutane|Siklobütan|C₄H₈||organic|Molecular|A|1|0|Powder|260|56.108|1|||||||||||||||||E8F2FA|0.18|||C4H8|0|0|1200|||
-m_c5h10|0|Cyclopentane|Siklopentan|C₅H₁₀||organic|Molecular|L|0|0|Powder|36|70.135|0.751|49||||||||||||||||E8F2FA|0.18|||C5H10|0|0|2000|404209||
-m_c6h12|0|Cyclohexane|Siklohekzan|C₆H₁₂||organic|Molecular|L|0|0|Powder|52|84.162|0.779|81||||||||||||||||E8F2FA|0.18|||C6H12|0|0|2000|370300||
-m_c2h4|0|Ethene|Eten|C₂H₄|Etilen|organic|Molecular|A|1|0|Powder|260|28.054|1|||||||||||||||||E8F2FA|0.18|||C2H4|0|0|1200|||
-m_c3h6_2|0|Propene|Propen|C₃H₆|Propilen|organic|Molecular|A|1|0|Powder|260|42.081|1|||||||||||||||||E8F2FA|0.18|||C3H6|0|0|1200|||
-m_c4h8_2|0|1-Butene|1-Büten|C₄H₈||organic|Molecular|A|1|0|Powder|260|56.108|1|||||||||||||||||E8F2FA|0.18|||C4H8|0|0|1200|||
-m_c4h8_3|0|2-Butene|2-Büten|C₄H₈||organic|Molecular|A|1|0|Powder|260|56.108|1|||||||||||||||||E8F2FA|0.18|||C4H8|0|0|1200|||
-m_c4h8_4|0|Isobutene|İzobüten|C₄H₈|2-Metilpropen|organic|Molecular|A|1|0|Powder|260|56.108|1|||||||||||||||||E8F2FA|0.18|||C4H8|0|0|1200|||
-m_c4h6|0|1,3-Butadiene|1,3-Bütadien|C₄H₆|Bütadien|organic|Molecular|A|1|0|Powder|772|54.092|1|||||||||||||||||E8F2FA|0.18|||C4H6|0|0|1200|||
-m_c5h8|0|Isoprene|İzopren|C₅H₈|2-Metil-1,3-bütadien|organic|Molecular|L|0|0|Powder|516|68.119|0.681|34||||||||||||||||E8F2FA|0.18|||C5H8|0|0|2000|396794||
-m_c6h10|0|Cyclohexene|Siklohekzen|C₆H₁₀||organic|Molecular|L|0|0|Powder|36|82.146|0.811|83||||||||||||||||E8F2FA|0.18|||C6H10|0|0|2000|381530||
-m_c8h8|0|Styrene|Stiren|C₈H₈|Vinilbenzen;Feniletilen|organic|Molecular|L|0|0|Powder|532|104.152|0.906|145||||||||||||||||E8F2FA|0.18|||C8H8|0|0|2000|353303||
-m_c2h2|0|Ethyne|Etin|C₂H₂|Asetilen|organic|Molecular|A|1|0|Powder|260|26.038|1|||||||||||||||||E8F2FA|0.18|||C2H2|0|0|1200|||
-m_c3h4|0|Propyne|Propin|C₃H₄|Metilasetilen|organic|Molecular|A|1|0|Powder|260|40.065|1|||||||||||||||||E8F2FA|0.18|||C3H4|0|0|1200|||
-m_c4h6_2|0|1-Butyne|1-Bütin|C₄H₆|Etilasetilen|organic|Molecular|A|1|0|Powder|260|54.092|1|||||||||||||||||E8F2FA|0.18|||C4H6|0|0|1200|||
-m_c6h6|0|Benzene|Benzen|C₆H₆||organic|Molecular|L|0|0|Powder|518|78.114|0.876|80||||||||||||||||E8F2FA|0.18|||C6H6|0|0|2000|397844||
-m_c7h8|0|Toluene|Toluen|C₇H₈|Metilbenzen|organic|Molecular|L|0|0|Powder|532|92.141|0.867|111||||||||||||||||E8F2FA|0.18|||C7H8|0|0|2000|366886||
-m_c8h10|0|o-Xylene|o-Ksilen|C₈H₁₀|1,2-Dimetilbenzen|organic|Molecular|L|0|0|Powder|20|106.168|0.88|144||||||||||||||||E8F2FA|0.18|||C8H10|0|0|2000|345765||
-m_c8h10_2|0|m-Xylene|m-Ksilen|C₈H₁₀|1,3-Dimetilbenzen|organic|Molecular|L|0|0|Powder|20|106.168|0.86|139||||||||||||||||E8F2FA|0.18|||C8H10|0|0|2000|341621||
-m_c8h10_3|0|p-Xylene|p-Ksilen|C₈H₁₀|1,4-Dimetilbenzen|organic|Molecular|L|0|0|Powder|20|106.168|0.861|138||||||||||||||||E8F2FA|0.18|||C8H10|0|0|2000|340792||
-m_c8h10_4|0|Ethylbenzene|Etilbenzen|C₈H₁₀||organic|Molecular|L|0|0|Powder|516|106.168|0.867|136||||||||||||||||E8F2FA|0.18|||C8H10|0|0|2000|339134||
-m_c9h12|0|Cumene|Kümen|C₉H₁₂|İzopropilbenzen|organic|Molecular|L|0|0|Powder|52|120.195|0.862|152||||||||||||||||E8F2FA|0.18|||C9H12|0|0|2000|311271||
-m_c10h8|0|Naphthalene|Naftalin|C₁₀H₈|Naftalen;Güve ilacı|organic|Molecular|S|0|0|Crystals|548|128.174|1.14|||||||||||||||||F4F4F2|1|||C10H8|0|0|1200|||
-m_c14h10|0|Anthracene|Antrasen|C₁₄H₁₀||organic|Molecular|S|0|0|Crystals|48|178.234|1.28|||||||||||||||||F4F4F2|1|||C14H10|0|0|1200|||
-m_c6h5no2|0|Nitrobenzene|Nitrobenzen|C₆H₅NO₂||organic|Molecular|L|0|0|Powder|546|123.111|1.2|211||||||||||||||||E8F2FA|0.18|||C6H5NO2|0|0|2000|346071||
-m_c6h5cl|0|Chlorobenzene|Klorobenzen|C₆H₅Cl||organic|Molecular|L|0|0|Powder|52|112.556|1.11|131||||||||||||||||E8F2FA|0.18|||C6H5Cl|0|0|2000|315978||
-m_c6h5cho|0|Benzaldehyde|Benzaldehit|C₆H₅CHO|Badem esansı|organic|Molecular|L|0|0|Powder|16|106.124|1.04|179||||||||||||||||E8F2FA|0.18|||C6H5CHO|0|0|2000|374931||
-m_c6h5ch2oh|0|Benzyl alcohol|Benzil alkol|C₆H₅CH₂OH|Fenilmetanol|organic|Molecular|L|0|1|Powder|16|108.14|1.04|205||||||||||||||||E8F2FA|0.18|||C6H5CH2OH|0|0|2000|389099||
-m_c6h5coch3|0|Acetophenone|Asetofenon|C₆H₅COCH₃||organic|Molecular|L|0|0|Powder|16|120.151|1.03|202||||||||||||||||E8F2FA|0.18|||C6H5COCH3|0|0|2000|348005||
-m_c4h4o|0|Furan|Furan|C₄H₄O||organic|Molecular|L|0|0|Powder|516|68.075|0.936|31||||||||||||||||E8F2FA|0.18|||C4H4O|0|0|2000|393172||
-m_c4h4s|0|Thiophene|Tiyofen|C₄H₄S||organic|Molecular|L|0|0|Powder|20|84.136|1.05|84||||||||||||||||E8F2FA|0.18|||C4H4S|0|0|2000|373552||
-m_c7h5n3o6|0|Trinitrotoluene|Trinitrotoluen|C₇H₅N₃O₆|TNT|organic|Molecular|S|0|0|Crystals|674|227.132|1.65|||||||||||||||||F2E6A0|1|||C7H5N3O6|0|0|1200|||
-m_c6h4oh2|0|Hydroquinone|Hidrokinon|C₆H₄(OH)₂|1,4-Dihidroksibenzen|organic|Molecular|S|0|1|Crystals|546|110.112|1.3|||||||||||||||||F4F4F2|1|||C6H4(OH)2|0|0|1200|||
-m_c6h6o2|0|Catechol|Katekol|C₆H₆O₂|Pirokatekol;1,2-Dihidroksibenzen|organic|Molecular|S|0|1|Crystals|18|110.112|1.34|||||||||||||||||F4F4F2|1|||C6H6O2|0|0|1200|||
-m_c6h6o3|0|Pyrogallol|Pirogallol|C₆H₆O₃|1,2,3-Trihidroksibenzen|organic|Molecular|S|0|1|Crystals|514|126.111|1.45|||||||||||||||||F4F4F2|1|||C6H6O3|0|0|1200|||
-m_ch3oh|0|Methanol|Metanol|CH₃OH|Metil alkol;Odun ispirtosu|organic|Molecular|L|0|1|Powder|518|32.042|0.792|64.7||||||||||||||||E8F2FA|0.18|||CH3OH|0|0|2000|927870||
-ethanol|1|Ethanol|Etanol|C₂H₅OH|Etil alkol;Alkol;İspirto|organic|Molecular|S|0|0|Powder|0||||||||||||||||||||||||0|0||||
-m_c3h7oh|0|1-Propanol|1-Propanol|C₃H₇OH|Propil alkol|organic|Molecular|L|0|1|Powder|20|60.096|0.803|97||||||||||||||||E8F2FA|0.18|||C3H7OH|0|0|2000|542019||
-m_ch32choh|0|2-Propanol|2-Propanol|(CH₃)₂CHOH|İzopropil alkol;İzopropanol|organic|Molecular|L|0|1|Powder|20|60.096|0.786|82.6||||||||||||||||E8F2FA|0.18|||(CH3)2CHOH|0|0|2000|520933||
-m_c4h9oh|0|1-Butanol|1-Bütanol|C₄H₉OH|Bütil alkol|organic|Molecular|L|0|1|Powder|20|74.123|0.81|117.7||||||||||||||||E8F2FA|0.18|||C4H9OH|0|0|2000|464023||
-m_c2h5chohch3|0|2-Butanol|2-Bütanol|C₂H₅CH(OH)CH₃|sek-Bütil alkol|organic|Molecular|L|0|1|Powder|20|74.123|0.808|99.5||||||||||||||||E8F2FA|0.18|||C2H5CH(OH)CH3|0|0|2000|442416||
-m_ch33coh|0|tert-Butanol|tert-Bütanol|(CH₃)₃COH|tert-Bütil alkol|organic|Molecular|L|0|1|Powder|20|74.123|0.775|82||||||||||||||||E8F2FA|0.18|||(CH3)3COH|0|0|2000|421640||
-m_c5h11oh|0|1-Pentanol|1-Pentanol|C₅H₁₁OH|Amil alkol|organic|Molecular|L|0|0|Powder|20|88.15|0.811|138||||||||||||||||E8F2FA|0.18|||C5H11OH|0|0|2000|410450||
-m_c6h11oh|0|Cyclohexanol|Siklohekzanol|C₆H₁₁OH||organic|Molecular|L|0|0|Powder|16|100.161|0.96|161||||||||||||||||E8F2FA|0.18|||C6H11OH|0|0|2000|381438||
-m_c2h4oh2|0|Ethylene glycol|Etilen glikol|C₂H₄(OH)₂|Etandiol;Antifriz|organic|Molecular|L|0|1|Powder|528|62.068|1.11|197||||||||||||||||E8F2FA|0.18|||C2H4(OH)2|0|0|2000|666579||
-m_c3h6oh2|0|Propylene glycol|Propilen glikol|C₃H₆(OH)₂|1,2-Propandiol|organic|Molecular|L|0|1|Powder|0|76.095|1.036|188||||||||||||||||E8F2FA|0.18|||C3H6(OH)2|0|0|2000|533297||
-m_c3h5oh3|0|Glycerol|Gliserol|C₃H₅(OH)₃|Gliserin;Propantriol|organic|Molecular|L|0|1|Powder|0|92.094|1.26|290||||||||||||||||E8F2FA|0.18|||C3H5(OH)3|0|0|2000|538115||
-m_c6h14o6|0|Sorbitol|Sorbitol|C₆H₁₄O₆|Glusitol;E420|biochem|Molecular|S|0|1|Crystals|0|182.172|1.49|||||||||||||||||F4F4F2|1|||C6H14O6|0|0|1200|||
-m_c10h20o|0|Menthol|Mentol|C₁₀H₂₀O|Nane özü|organic|Molecular|S|0|0|Crystals|16|156.269|0.89|||||||||||||||||F4F4F2|1|||C10H20O|0|0|1200|||
-m_c27h46o|0|Cholesterol|Kolesterol|C₂₇H₄₆O||biochem|Molecular|S|0|0|Crystals|0|386.664|1.05|||||||||||||||||F4F4F2|1|||C27H46O|0|0|1200|||
-m_c2h52o|0|Diethyl ether|Dietil eter|(C₂H₅)₂O|Eter;Etoksietan|organic|Molecular|L|0|1|Powder|20|74.123|0.713|34.6||||||||||||||||E8F2FA|0.18|||(C2H5)2O|0|0|2000|365366||
-m_ch32o|0|Dimethyl ether|Dimetil eter|(CH₃)₂O|Metoksimetan|organic|Molecular|A|1|0|Powder|260|46.069|1|||||||||||||||||E8F2FA|0.18|||(CH3)2O|0|0|1200|||
-m_c4h8o|0|Tetrahydrofuran|Tetrahidrofuran|C₄H₈O|THF|organic|Molecular|L|0|1|Powder|532|72.107|0.889|66||||||||||||||||E8F2FA|0.18|||C4H8O|0|0|2000|413902||
-m_c4h8o2|0|1,4-Dioxane|1,4-Dioksan|C₄H₈O₂|Dioksan|organic|Molecular|L|0|1|Powder|532|88.106|1.03|101||||||||||||||||E8F2FA|0.18|||C4H8O2|0|0|2000|373700||
-m_ch3occh33|0|Methyl tert-butyl ether|Metil tert-bütil eter|CH₃OC(CH₃)₃|MTBE|organic|Molecular|L|0|1|Powder|20|88.15|0.74|55||||||||||||||||E8F2FA|0.18|||CH3OC(CH3)3|0|0|2000|327592||
-m_c6h5och3|0|Anisole|Anisol|C₆H₅OCH₃|Metoksibenzen|organic|Molecular|L|0|0|Powder|4|108.14|0.995|154||||||||||||||||E8F2FA|0.18|||C6H5OCH3|0|0|2000|347598||
-m_hcho|0|Formaldehyde|Formaldehit|HCHO|Metanal;Formol;Formalin|organic|Molecular|A|1|1|Powder|771|30.026|1|||||||||||||||||E8F2FA|0.18|||HCHO|0|0|1200|||
-m_ch3cho|0|Acetaldehyde|Asetaldehit|CH₃CHO|Etanal|organic|Molecular|A|1|1|Powder|788|44.053|1|||||||||||||||||E8F2FA|0.18|||CH3CHO|0|0|1200|||
-m_c2h5cho|0|Propanal|Propanal|C₂H₅CHO|Propiyonaldehit|organic|Molecular|L|0|1|Powder|20|58.08|0.81|48||||||||||||||||E8F2FA|0.18|||C2H5CHO|0|0|2000|486591||
-m_c3h7cho|0|Butanal|Bütanal|C₃H₇CHO|Bütiraldehit|organic|Molecular|L|0|1|Powder|20|72.107|0.8|75||||||||||||||||E8F2FA|0.18|||C3H7CHO|0|0|2000|424885||
-m_c2h2o2|0|Glyoxal|Glioksal|C₂H₂O₂|Etandial|organic|Molecular|L|0|1|Powder|528|58.036|1.27|51||||||||||||||||E8F2FA|0.18|||C2H2O2|0|0|2000|491509||
-m_c8h8o3|0|Vanillin|Vanilin|C₈H₈O₃|Vanilya özü|organic|Molecular|S|0|0|Crystals|16|152.149|1.06|||||||||||||||||F4F4F2|1|||C8H8O3|0|0|1200|||
-m_c9h8o|0|Cinnamaldehyde|Sinnamaldehit|C₉H₈O|Tarçın aldehiti;Tarçın esansı|organic|Molecular|L|0|0|Powder|16|132.162|1.05|248||||||||||||||||E8F2FA|0.18|||C9H8O|0|0|2000|347007||
-m_ch32co|0|Acetone|Aseton|(CH₃)₂CO|Propanon;Dimetil keton;Oje çıkarıcı|organic|Molecular|L|0|1|Powder|20|58.08|0.784|56||||||||||||||||E8F2FA|0.18|||(CH3)2CO|0|0|2000|498712||
-m_c2h5coch3|0|Butanone|Bütanon|C₂H₅COCH₃|Metil etil keton;MEK|organic|Molecular|L|0|1|Powder|20|72.107|0.805|79.6||||||||||||||||E8F2FA|0.18|||C2H5COCH3|0|0|2000|430499||
-m_c6h10o|0|Cyclohexanone|Siklohekzanon|C₆H₁₀O||organic|Molecular|L|0|1|Powder|20|98.145|0.948|155.6||||||||||||||||E8F2FA|0.18|||C6H10O|0|0|2000|384431||
-m_c6h52co|0|Benzophenone|Benzofenon|(C₆H₅)₂CO|Difenil keton|organic|Molecular|S|0|0|Crystals|512|182.222|1.11|||||||||||||||||F4F4F2|1|||(C6H5)2CO|0|0|1200|||
-m_ch3cooc2h5|0|Ethyl acetate|Etil asetat|CH₃COOC₂H₅|Etil etanoat;Aseton (oje) çözücü|organic|Molecular|L|0|1|Powder|20|88.106|0.902|77||||||||||||||||E8F2FA|0.18|||CH3COOC2H5|0|0|2000|349729||
-m_ch3cooch3|0|Methyl acetate|Metil asetat|CH₃COOCH₃|Metil etanoat|organic|Molecular|L|0|1|Powder|20|74.079|0.932|57||||||||||||||||E8F2FA|0.18|||CH3COOCH3|0|0|2000|392192||
-m_ch3cooc4h9|0|Butyl acetate|Bütil asetat|CH₃COOC₄H₉|Bütil etanoat|organic|Molecular|L|0|0|Powder|4|116.16|0.88|126||||||||||||||||E8F2FA|0.18|||CH3COOC4H9|0|0|2000|302386||
-m_ch3cooc5h11|0|Isoamyl acetate|İzoamil asetat|CH₃COOC₅H₁₁|Muz esansı;Muz kokusu|organic|Molecular|L|0|0|Powder|4|130.187|0.876|142||||||||||||||||E8F2FA|0.18|||CH3COOC5H11|0|0|2000|280621||
-m_c3h7cooc2h5|0|Ethyl butanoate|Etil bütanoat|C₃H₇COOC₂H₅|Ananas esansı|organic|Molecular|L|0|0|Powder|4|116.16|0.879|121||||||||||||||||E8F2FA|0.18|||C3H7COOC2H5|0|0|2000|298598||
-m_c6h4ohcooch3|0|Methyl salicylate|Metil salisilat|C₆H₄(OH)COOCH₃|Keklik yağı;Kış yeşili yağı|organic|Molecular|L|0|0|Powder|2|152.149|1.17|222||||||||||||||||E8F2FA|0.18|||C6H4(OH)COOCH3|0|0|2000|286385||
-m_hcooc2h5|0|Ethyl formate|Etil format|HCOOC₂H₅|Etil metanoat;Rom esansı|organic|Molecular|L|0|1|Powder|20|74.079|0.917|54||||||||||||||||E8F2FA|0.18|||HCOOC2H5|0|0|2000|388628||
-m_hcooch3|0|Methyl formate|Metil format|HCOOCH₃|Metil metanoat|organic|Molecular|L|0|1|Powder|20|60.052|0.97|32||||||||||||||||E8F2FA|0.18|||HCOOCH3|0|0|2000|447166||
-m_ch3cooc8h17|0|Octyl acetate|Oktil asetat|CH₃COOC₈H₁₇|Portakal esansı|organic|Molecular|L|0|0|Powder|0|172.268|0.87|211||||||||||||||||E8F2FA|0.18|||CH3COOC8H17|0|0|2000|247319||
-m_c57h110o6|0|Tristearin|Tristearin|C₅₇H₁₁₀O₆|Stearin;Katı yağ (trigliserit)|biochem|Molecular|S|0|0|Crystals|0|891.501|0.86|||||||||||||||||F4F4F2|1|||C57H110O6|0|0|1200|||
-m_conh22|0|Urea|Üre|CO(NH₂)₂|Karbamit|organic|Molecular|S|0|1|Crystals|0|60.056|1.32|||||||||||||||||F4F4F2|1|||CO(NH2)2|0|0|1200|||
-m_ch3conh2|0|Acetamide|Asetamit|CH₃CONH₂|Etanamit|organic|Molecular|S|0|1|Crystals|512|59.068|1.16|||||||||||||||||F4F4F2|1|||CH3CONH2|0|0|1200|||
-m_hconh2|0|Formamide|Formamit|HCONH₂|Metanamit|organic|Molecular|L|0|1|Powder|512|45.041|1.13|210||||||||||||||||E8F2FA|0.18|||HCONH2|0|0|2000|943967||
-m_hconch32|0|Dimethylformamide|Dimetilformamit|HCON(CH₃)₂|DMF|organic|Molecular|L|0|1|Powder|532|73.095|0.944|153||||||||||||||||E8F2FA|0.18|||HCON(CH3)2|0|0|2000|513047||
-m_csnh22|0|Thiourea|Tiyoüre|CS(NH₂)₂||organic|Molecular|S|0|1|Crystals|546|76.117|1.4|||||||||||||||||F4F4F2|1|||CS(NH2)2|0|0|1200|||
-m_c6h12n4|0|Hexamethylenetetramine|Heksametilentetramin|C₆H₁₂N₄|Hekzamin;Urotropin;Katı yakıt|organic|Molecular|S|0|1|Crystals|4|140.19|1.33|||||||||||||||||F4F4F2|1|||C6H12N4|0|0|1200|||
-m_c8h10n4o2|0|Caffeine|Kafein|C₈H₁₀N₄O₂|Kahve özü|drug|Molecular|S|0|1|Crystals|16|194.194|1.23|||||||||||||||||F4F4F2|1|||C8H10N4O2|0|0|1200|||
+m_h2c2o4|0|Oxalic acid|Oksalik asit|H₂C₂O₄|Etandioik asit|organic|WeakAcid|S|0|1|Crystals|3|90.034|1.9||2||0.059||||H|1|2|C2O4|2|1||||F4F4F2|1||H3O+*2 C2O4^2-|H2C2O4|0|0|1200|||144-62-7
+m_hcooh|0|Formic acid|Formik asit|HCOOH|Metanoik asit;Karınca asidi|organic|WeakAcid|L|0|1|Powder|5|46.025|1.22|100.8|1||0.00018||||H|1|1|HCOO|1|1||||E8F2FA|0.18||H3O+ HCOO-|HCOOH|0|0|2000|714994||64-18-6
+acetic_acid|1|Acetic acid|Asetik asit|CH₃COOH|Etanoik asit;Sirke asidi|organic|Molecular|S|0|0|Powder|0||||||||||H|1|1|CH3COO|1|1|||||||||0|0||||64-19-7
+m_c2h5cooh|0|Propanoic acid|Propanoik asit|C₂H₅COOH|Propiyonik asit|organic|WeakAcid|L|0|1|Powder|1|74.079|0.99|141|1||1.3e-05|||||||||||||E8F2FA|0.18|||C2H5COOH|0|0|2000|491977||79-09-4
+m_c3h7cooh|0|Butanoic acid|Bütanoik asit|C₃H₇COOH|Bütirik asit;Tereyağı asidi|organic|WeakAcid|L|0|1|Powder|1|88.106|0.96|164|1||1.5e-05|||||||||||||E8F2FA|0.18|||C3H7COOH|0|0|2000|436624||107-92-6
+m_c6h8o7|0|Citric acid|Sitrik asit|C₆H₈O₇|Limon asidi;Limon tuzu|organic|WeakAcid|S|0|1|Crystals|16|192.123|1.66||3||0.00074||||H|1|3|C6H5O7|3|1||||F4F4F2|1||H3O+*3 C6H5O7^3-|C6H8O7|0|0|1200|||77-92-9
+m_c3h6o3|0|Lactic acid|Laktik asit|C₃H₆O₃|Süt asidi|organic|WeakAcid|L|0|1|Powder|1|90.078|1.21||1||0.00014||||H|1|1|C3H5O3|1|1||||E8F2FA|0.18||H3O+ C3H5O3-|C3H6O3|0|0|2000|||50-21-5
+m_c6h5cooh|0|Benzoic acid|Benzoik asit|C₆H₅COOH|E210|organic|WeakAcid|S|0|0|Crystals|528|122.123|1.27||1||6.3e-05||||H|1|1|C6H5COO|1|1||||F4F4F2|1||H3O+ C6H5COO-|C6H5COOH|0|0|1200|||65-85-0
+m_c7h6o3|0|Salicylic acid|Salisilik asit|C₇H₆O₃||organic|WeakAcid|S|0|0|Crystals|18|138.122|1.44||1||0.0011|||||||||||||F4F4F2|1|||C7H6O3|0|0|1200|||69-72-7
+m_c4h6o6|0|Tartaric acid|Tartarik asit|C₄H₆O₆|Şarap asidi|organic|WeakAcid|S|0|1|Crystals|16|150.086|1.79||2||0.00092|||||||||||||F4F4F2|1|||C4H6O6|0|0|1200|||133-37-9
+m_c4h6o5|0|Malic acid|Malik asit|C₄H₆O₅|Elma asidi|organic|WeakAcid|S|0|1|Crystals|16|134.087|1.61||2||0.0004|||||||||||||F4F4F2|1|||C4H6O5|0|0|1200|||6915-15-7
+m_c6h8o6|0|Ascorbic acid|Askorbik asit|C₆H₈O₆|C vitamini|biochem|WeakAcid|S|0|1|Crystals|0|176.124|1.65||1||8e-05|||||||||||||F4F4F2|1|||C6H8O6|0|0|1200|||50-81-7
+m_c17h35cooh|0|Stearic acid|Stearik asit|C₁₇H₃₅COOH|Oktadekanoik asit|organic|WeakAcid|S|0|0|Crystals|0|284.484|0.94||1||1.3e-05||||H|1|1|C17H35COO|1|1||||F4F4F2|1||H3O+ C17H35COO-|C17H35COOH|0|0|1200|||57-11-4
+m_c17h33cooh|0|Oleic acid|Oleik asit|C₁₇H₃₃COOH|Zeytinyağı asidi|organic|WeakAcid|L|0|0|Powder|0|282.468|0.895|360|1||1.3e-05|||||||||||||E8F2FA|0.18|||C17H33COOH|0|0|2000|197251||112-80-1
+m_c15h31cooh|0|Palmitic acid|Palmitik asit|C₁₅H₃₁COOH|Hekzadekanoik asit|organic|WeakAcid|S|0|0|Crystals|0|256.43|0.85||1||1.3e-05|||||||||||||F4F4F2|1|||C15H31COOH|0|0|1200|||57-10-3
+m_c2h3cooh|0|Acrylic acid|Akrilik asit|C₂H₃COOH|Propenoik asit|organic|WeakAcid|L|0|1|Powder|37|72.063|1.05|141|1||5.6e-05|||||||||||||E8F2FA|0.18|||C2H3COOH|0|0|2000|505741||79-10-7
+m_c4h4o4|0|Maleic acid|Maleik asit|C₄H₄O₄|cis-Bütendioik asit|organic|WeakAcid|S|0|1|Crystals|17|116.072|1.59||2||0.012|||||||||||||F4F4F2|1|||C4H4O4|0|0|1200|||110-16-7
+m_c4h4o4_2|0|Fumaric acid|Fumarik asit|C₄H₄O₄|trans-Bütendioik asit|organic|WeakAcid|S|0|0|Crystals|16|116.072|1.64||2||0.00093|||||||||||||F4F4F2|1|||C4H4O4|0|0|1200|||110-17-8
+m_c6h10o4|0|Adipic acid|Adipik asit|C₆H₁₀O₄|Hekzandioik asit|organic|WeakAcid|S|0|0|Crystals|16|146.142|1.36||2||3.7e-05|||||||||||||F4F4F2|1|||C6H10O4|0|0|1200|||124-04-9
+m_c8h6o4|0|Terephthalic acid|Tereftalik asit|C₈H₆O₄||organic|WeakAcid|S|0|0|Crystals|0|166.132|1.52||2||0.00029|||||||||||||F4F4F2|1|||C8H6O4|0|0|1200|||100-21-0
+m_c2h4o3|0|Glycolic acid|Glikolik asit|C₂H₄O₃|Hidroksiasetik asit|organic|WeakAcid|S|0|1|Crystals|1|76.051|1.49||1||0.00015|||||||||||||F4F4F2|1|||C2H4O3|0|0|1200|||79-14-1
+m_c3h4o4|0|Malonic acid|Malonik asit|C₃H₄O₄|Propandioik asit|organic|WeakAcid|S|0|1|Crystals|16|104.061|1.62||2||0.0015|||||||||||||F4F4F2|1|||C3H4O4|0|0|1200|||141-82-2
+m_ccl3cooh|0|Trichloroacetic acid|Trikloroasetik asit|CCl₃COOH||organic|WeakAcid|S|0|1|Crystals|33|163.378|1.63||1||0.3|||||||||||||F4F4F2|1|||CCl3COOH|0|0|1200|||76-03-9
+m_ch2clcooh|0|Chloroacetic acid|Kloroasetik asit|CH₂ClCOOH||organic|WeakAcid|S|0|1|Crystals|35|94.494|1.58||1||0.0014|||||||||||||F4F4F2|1|||CH2ClCOOH|0|0|1200|||79-11-8
+m_c9h8o4|0|Aspirin|Aspirin|C₉H₈O₄|Asetilsalisilik asit|drug|WeakAcid|S|0|0|Crystals|16|180.159|1.4||1||0.0003|||||||||||||F4F4F2|1|||C9H8O4|0|0|1200|||50-78-2
+m_c6h5oh|0|Phenol|Fenol|C₆H₅OH|Hidroksibenzen;Karbolik asit|organic|WeakAcid|S|0|1|Crystals|515|94.113|1.07||1||1e-10|||||||||||||F4F4F2|1|||C6H5OH|0|0|1200|||108-95-2
+nh3|1|Ammonia|Amonyak|NH₃|Amonyak gazı;Amonyak suyu|inorganic|Molecular|S|0|0|Powder|0||||||||||||||||||||||||0|0||||7664-41-7
+m_ch3nh2|0|Methylamine|Metilamin|CH₃NH₂||organic|WeakBase|A|1|1|Powder|277|31.058|1|||1||0.00044||||||||||||E8F2FA|0.18|||CH3NH2|0|0|1200|||74-89-5
+m_ch32nh|0|Dimethylamine|Dimetilamin|(CH₃)₂NH||organic|WeakBase|A|1|1|Powder|261|45.085|1|||1||0.00054||||||||||||E8F2FA|0.18|||(CH3)2NH|0|0|1200|||124-40-3
+m_ch33n|0|Trimethylamine|Trimetilamin|(CH₃)₃N|Balık kokusu|organic|WeakBase|A|1|1|Powder|261|59.112|1|||1||6.3e-05||||||||||||E8F2FA|0.18|||(CH3)3N|0|0|1200|||75-50-3
+m_c2h5nh2|0|Ethylamine|Etilamin|C₂H₅NH₂||organic|WeakBase|A|1|1|Powder|261|45.085|1|||1||0.00045||||||||||||E8F2FA|0.18|||C2H5NH2|0|0|1200|||75-04-7
+m_c2h52nh|0|Diethylamine|Dietilamin|(C₂H₅)₂NH||organic|WeakBase|L|0|1|Powder|5|73.139|0.707|55.5||1||0.00069||||||||||||E8F2FA|0.18|||(C2H5)2NH|0|0|2000|395428||109-89-7
+m_c2h53n|0|Triethylamine|Trietilamin|(C₂H₅)₃N||organic|WeakBase|L|0|1|Powder|7|101.193|0.726|89||1||0.00056||||||||||||E8F2FA|0.18|||(C2H5)3N|0|0|2000|314935||121-44-8
+m_c6h5nh2|0|Aniline|Anilin|C₆H₅NH₂|Aminobenzen;Fenilamin|organic|WeakBase|L|0|1|Powder|546|93.129|1.02|184||1||4.3e-10||||||||||||E8F2FA|0.18|||C6H5NH2|0|0|2000|431973||62-53-3
+m_c5h5n|0|Pyridine|Piridin|C₅H₅N||organic|WeakBase|L|0|1|Powder|22|79.102|0.98|115||1||1.7e-09||||||||||||E8F2FA|0.18|||C5H5N|0|0|2000|431812||110-86-1
+m_c2h8n2|0|Ethylenediamine|Etilendiamin|C₂H₈N₂|1,2-Diaminoetan|organic|WeakBase|L|0|1|Powder|5|60.1|0.9|116||1||8.5e-05||||||||||||E8F2FA|0.18|||C2H8N2|0|0|2000|569804||107-15-3
+m_ch4|0|Methane|Metan|CH₄|Doğal gaz;Bataklık gazı|organic|Molecular|A|1|0|Powder|260|16.043|1|||||||||||||||||E8F2FA|0.18|||CH4|0|0|1200|||74-82-8
+m_c2h6|0|Ethane|Etan|C₂H₆||organic|Molecular|A|1|0|Powder|260|30.07|1|||||||||||||||||E8F2FA|0.18|||C2H6|0|0|1200|||74-84-0
+m_c3h8|0|Propane|Propan|C₃H₈|LPG|organic|Molecular|A|1|0|Powder|260|44.097|1|||||||||||||||||E8F2FA|0.18|||C3H8|0|0|1200|||74-98-6
+m_c4h10|0|Butane|Bütan|C₄H₁₀|n-Bütan;Çakmak gazı|organic|Molecular|A|1|0|Powder|260|58.124|1|||||||||||||||||E8F2FA|0.18|||C4H10|0|0|1200|||106-97-8
+m_c4h10_2|0|Isobutane|İzobütan|C₄H₁₀|2-Metilpropan|organic|Molecular|A|1|0|Powder|260|58.124|1|||||||||||||||||E8F2FA|0.18|||C4H10|0|0|1200|||75-28-5
+m_c5h12|0|Pentane|Pentan|C₅H₁₂|n-Pentan|organic|Molecular|L|0|0|Powder|52|72.151|0.626|36||||||||||||||||E8F2FA|0.18|||C5H12|0|0|2000|377059||109-66-0
+m_c5h12_2|0|Isopentane|İzopentan|C₅H₁₂|2-Metilbütan|organic|Molecular|L|0|0|Powder|52|72.151|0.616|28||||||||||||||||E8F2FA|0.18|||C5H12|0|0|2000|367302||78-78-4
+m_c5h12_3|0|Neopentane|Neopentan|C₅H₁₂|2,2-Dimetilpropan|organic|Molecular|A|1|0|Powder|260|72.151|1|||||||||||||||||E8F2FA|0.18|||C5H12|0|0|1200|||463-82-1
+m_c6h14|0|Hexane|Hekzan|C₆H₁₄|n-Hekzan|organic|Molecular|L|0|0|Powder|564|86.178|0.655|69||||||||||||||||E8F2FA|0.18|||C6H14|0|0|2000|349384||110-54-3
+m_c7h16|0|Heptane|Heptan|C₇H₁₆|n-Heptan|organic|Molecular|L|0|0|Powder|52|100.205|0.684|98||||||||||||||||E8F2FA|0.18|||C7H16|0|0|2000|325944||142-82-5
+m_c8h18|0|Octane|Oktan|C₈H₁₈|n-Oktan|organic|Molecular|L|0|0|Powder|52|114.232|0.703|125.6||||||||||||||||E8F2FA|0.18|||C8H18|0|0|2000|307182||111-65-9
+m_c8h18_2|0|Isooctane|İzooktan|C₈H₁₈|2,2,4-Trimetilpentan;Benzin bileşeni|organic|Molecular|L|0|0|Powder|52|114.232|0.692|99||||||||||||||||E8F2FA|0.18|||C8H18|0|0|2000|286690||540-84-1
+m_c9h20|0|Nonane|Nonan|C₉H₂₀||organic|Molecular|L|0|0|Powder|20|128.259|0.718|151||||||||||||||||E8F2FA|0.18|||C9H20|0|0|2000|291014||111-84-2
+m_c10h22|0|Decane|Dekan|C₁₀H₂₂||organic|Molecular|L|0|0|Powder|20|142.286|0.73|174||||||||||||||||E8F2FA|0.18|||C10H22|0|0|2000|276550||124-18-5
+m_c11h24|0|Undecane|Undekan|C₁₁H₂₄||organic|Molecular|L|0|0|Powder|4|156.313|0.74|196||||||||||||||||E8F2FA|0.18|||C11H24|0|0|2000|264119||1120-21-4
+m_c12h26|0|Dodecane|Dodekan|C₁₂H₂₆|Gazyağı bileşeni|organic|Molecular|L|0|0|Powder|512|170.34|0.75|216||||||||||||||||E8F2FA|0.18|||C12H26|0|0|2000|252702||112-40-3
+m_c3h6|0|Cyclopropane|Siklopropan|C₃H₆||organic|Molecular|A|1|0|Powder|260|42.081|1|||||||||||||||||E8F2FA|0.18|||C3H6|0|0|1200|||75-19-4
+m_c4h8|0|Cyclobutane|Siklobütan|C₄H₈||organic|Molecular|A|1|0|Powder|260|56.108|1|||||||||||||||||E8F2FA|0.18|||C4H8|0|0|1200|||287-23-0
+m_c5h10|0|Cyclopentane|Siklopentan|C₅H₁₀||organic|Molecular|L|0|0|Powder|36|70.135|0.751|49||||||||||||||||E8F2FA|0.18|||C5H10|0|0|2000|404209||287-92-3
+m_c6h12|0|Cyclohexane|Siklohekzan|C₆H₁₂||organic|Molecular|L|0|0|Powder|52|84.162|0.779|81||||||||||||||||E8F2FA|0.18|||C6H12|0|0|2000|370300||110-82-7
+m_c2h4|0|Ethene|Eten|C₂H₄|Etilen|organic|Molecular|A|1|0|Powder|260|28.054|1|||||||||||||||||E8F2FA|0.18|||C2H4|0|0|1200|||74-85-1
+m_c3h6_2|0|Propene|Propen|C₃H₆|Propilen|organic|Molecular|A|1|0|Powder|260|42.081|1|||||||||||||||||E8F2FA|0.18|||C3H6|0|0|1200|||115-07-1
+m_c4h8_2|0|1-Butene|1-Büten|C₄H₈||organic|Molecular|A|1|0|Powder|260|56.108|1|||||||||||||||||E8F2FA|0.18|||C4H8|0|0|1200|||106-98-9
+m_c4h8_3|0|2-Butene|2-Büten|C₄H₈||organic|Molecular|A|1|0|Powder|260|56.108|1|||||||||||||||||E8F2FA|0.18|||C4H8|0|0|1200|||624-64-6
+m_c4h8_4|0|Isobutene|İzobüten|C₄H₈|2-Metilpropen|organic|Molecular|A|1|0|Powder|260|56.108|1|||||||||||||||||E8F2FA|0.18|||C4H8|0|0|1200|||115-11-7
+m_c4h6|0|1,3-Butadiene|1,3-Bütadien|C₄H₆|Bütadien|organic|Molecular|A|1|0|Powder|772|54.092|1|||||||||||||||||E8F2FA|0.18|||C4H6|0|0|1200|||106-99-0
+m_c5h8|0|Isoprene|İzopren|C₅H₈|2-Metil-1,3-bütadien|organic|Molecular|L|0|0|Powder|516|68.119|0.681|34||||||||||||||||E8F2FA|0.18|||C5H8|0|0|2000|396794||78-79-5
+m_c6h10|0|Cyclohexene|Siklohekzen|C₆H₁₀||organic|Molecular|L|0|0|Powder|36|82.146|0.811|83||||||||||||||||E8F2FA|0.18|||C6H10|0|0|2000|381530||110-83-8
+m_c8h8|0|Styrene|Stiren|C₈H₈|Vinilbenzen;Feniletilen|organic|Molecular|L|0|0|Powder|532|104.152|0.906|145||||||||||||||||E8F2FA|0.18|||C8H8|0|0|2000|353303||100-42-5
+m_c2h2|0|Ethyne|Etin|C₂H₂|Asetilen|organic|Molecular|A|1|0|Powder|260|26.038|1|||||||||||||||||E8F2FA|0.18|||C2H2|0|0|1200|||74-86-2
+m_c3h4|0|Propyne|Propin|C₃H₄|Metilasetilen|organic|Molecular|A|1|0|Powder|260|40.065|1|||||||||||||||||E8F2FA|0.18|||C3H4|0|0|1200|||74-99-7
+m_c4h6_2|0|1-Butyne|1-Bütin|C₄H₆|Etilasetilen|organic|Molecular|A|1|0|Powder|260|54.092|1|||||||||||||||||E8F2FA|0.18|||C4H6|0|0|1200|||107-00-6
+m_c6h6|0|Benzene|Benzen|C₆H₆||organic|Molecular|L|0|0|Powder|518|78.114|0.876|80||||||||||||||||E8F2FA|0.18|||C6H6|0|0|2000|397844||71-43-2
+m_c7h8|0|Toluene|Toluen|C₇H₈|Metilbenzen|organic|Molecular|L|0|0|Powder|532|92.141|0.867|111||||||||||||||||E8F2FA|0.18|||C7H8|0|0|2000|366886||108-88-3
+m_c8h10|0|o-Xylene|o-Ksilen|C₈H₁₀|1,2-Dimetilbenzen|organic|Molecular|L|0|0|Powder|20|106.168|0.88|144||||||||||||||||E8F2FA|0.18|||C8H10|0|0|2000|345765||95-47-6
+m_c8h10_2|0|m-Xylene|m-Ksilen|C₈H₁₀|1,3-Dimetilbenzen|organic|Molecular|L|0|0|Powder|20|106.168|0.86|139||||||||||||||||E8F2FA|0.18|||C8H10|0|0|2000|341621||108-38-3
+m_c8h10_3|0|p-Xylene|p-Ksilen|C₈H₁₀|1,4-Dimetilbenzen|organic|Molecular|L|0|0|Powder|20|106.168|0.861|138||||||||||||||||E8F2FA|0.18|||C8H10|0|0|2000|340792||106-42-3
+m_c8h10_4|0|Ethylbenzene|Etilbenzen|C₈H₁₀||organic|Molecular|L|0|0|Powder|516|106.168|0.867|136||||||||||||||||E8F2FA|0.18|||C8H10|0|0|2000|339134||100-41-4
+m_c9h12|0|Cumene|Kümen|C₉H₁₂|İzopropilbenzen|organic|Molecular|L|0|0|Powder|52|120.195|0.862|152||||||||||||||||E8F2FA|0.18|||C9H12|0|0|2000|311271||98-82-8
+m_c10h8|0|Naphthalene|Naftalin|C₁₀H₈|Naftalen;Güve ilacı|organic|Molecular|S|0|0|Crystals|548|128.174|1.14|||||||||||||||||F4F4F2|1|||C10H8|0|0|1200|||91-20-3
+m_c14h10|0|Anthracene|Antrasen|C₁₄H₁₀||organic|Molecular|S|0|0|Crystals|48|178.234|1.28|||||||||||||||||F4F4F2|1|||C14H10|0|0|1200|||120-12-7
+m_c6h5no2|0|Nitrobenzene|Nitrobenzen|C₆H₅NO₂||organic|Molecular|L|0|0|Powder|546|123.111|1.2|211||||||||||||||||E8F2FA|0.18|||C6H5NO2|0|0|2000|346071||98-95-3
+m_c6h5cl|0|Chlorobenzene|Klorobenzen|C₆H₅Cl||organic|Molecular|L|0|0|Powder|52|112.556|1.11|131||||||||||||||||E8F2FA|0.18|||C6H5Cl|0|0|2000|315978||108-90-7
+m_c6h5cho|0|Benzaldehyde|Benzaldehit|C₆H₅CHO|Badem esansı|organic|Molecular|L|0|0|Powder|16|106.124|1.04|179||||||||||||||||E8F2FA|0.18|||C6H5CHO|0|0|2000|374931||100-52-7
+m_c6h5ch2oh|0|Benzyl alcohol|Benzil alkol|C₆H₅CH₂OH|Fenilmetanol|organic|Molecular|L|0|1|Powder|16|108.14|1.04|205||||||||||||||||E8F2FA|0.18|||C6H5CH2OH|0|0|2000|389099||100-51-6
+m_c6h5coch3|0|Acetophenone|Asetofenon|C₆H₅COCH₃||organic|Molecular|L|0|0|Powder|16|120.151|1.03|202||||||||||||||||E8F2FA|0.18|||C6H5COCH3|0|0|2000|348005||98-86-2
+m_c4h4o|0|Furan|Furan|C₄H₄O||organic|Molecular|L|0|0|Powder|516|68.075|0.936|31||||||||||||||||E8F2FA|0.18|||C4H4O|0|0|2000|393172||110-00-9
+m_c4h4s|0|Thiophene|Tiyofen|C₄H₄S||organic|Molecular|L|0|0|Powder|20|84.136|1.05|84||||||||||||||||E8F2FA|0.18|||C4H4S|0|0|2000|373552||110-02-1
+m_c7h5n3o6|0|Trinitrotoluene|Trinitrotoluen|C₇H₅N₃O₆|TNT|organic|Molecular|S|0|0|Crystals|674|227.132|1.65|||||||||||||||||F2E6A0|1|||C7H5N3O6|0|0|1200|||118-96-7
+m_c6h4oh2|0|Hydroquinone|Hidrokinon|C₆H₄(OH)₂|1,4-Dihidroksibenzen|organic|Molecular|S|0|1|Crystals|546|110.112|1.3|||||||||||||||||F4F4F2|1|||C6H4(OH)2|0|0|1200|||123-31-9
+m_c6h6o2|0|Catechol|Katekol|C₆H₆O₂|Pirokatekol;1,2-Dihidroksibenzen|organic|Molecular|S|0|1|Crystals|18|110.112|1.34|||||||||||||||||F4F4F2|1|||C6H6O2|0|0|1200|||120-80-9
+m_c6h6o3|0|Pyrogallol|Pirogallol|C₆H₆O₃|1,2,3-Trihidroksibenzen|organic|Molecular|S|0|1|Crystals|514|126.111|1.45|||||||||||||||||F4F4F2|1|||C6H6O3|0|0|1200|||87-66-1
+m_ch3oh|0|Methanol|Metanol|CH₃OH|Metil alkol;Odun ispirtosu|organic|Molecular|L|0|1|Powder|518|32.042|0.792|64.7||||||||||||||||E8F2FA|0.18|||CH3OH|0|0|2000|927870||67-56-1
+ethanol|1|Ethanol|Etanol|C₂H₅OH|Etil alkol;Alkol;İspirto|organic|Molecular|S|0|0|Powder|0||||||||||||||||||||||||0|0||||64-17-5
+m_c3h7oh|0|1-Propanol|1-Propanol|C₃H₇OH|Propil alkol|organic|Molecular|L|0|1|Powder|20|60.096|0.803|97||||||||||||||||E8F2FA|0.18|||C3H7OH|0|0|2000|542019||71-23-8
+m_ch32choh|0|2-Propanol|2-Propanol|(CH₃)₂CHOH|İzopropil alkol;İzopropanol|organic|Molecular|L|0|1|Powder|20|60.096|0.786|82.6||||||||||||||||E8F2FA|0.18|||(CH3)2CHOH|0|0|2000|520933||67-63-0
+m_c4h9oh|0|1-Butanol|1-Bütanol|C₄H₉OH|Bütil alkol|organic|Molecular|L|0|1|Powder|20|74.123|0.81|117.7||||||||||||||||E8F2FA|0.18|||C4H9OH|0|0|2000|464023||71-36-3
+m_c2h5chohch3|0|2-Butanol|2-Bütanol|C₂H₅CH(OH)CH₃|sek-Bütil alkol|organic|Molecular|L|0|1|Powder|20|74.123|0.808|99.5||||||||||||||||E8F2FA|0.18|||C2H5CH(OH)CH3|0|0|2000|442416||78-92-2
+m_ch33coh|0|tert-Butanol|tert-Bütanol|(CH₃)₃COH|tert-Bütil alkol|organic|Molecular|L|0|1|Powder|20|74.123|0.775|82||||||||||||||||E8F2FA|0.18|||(CH3)3COH|0|0|2000|421640||75-65-0
+m_c5h11oh|0|1-Pentanol|1-Pentanol|C₅H₁₁OH|Amil alkol|organic|Molecular|L|0|0|Powder|20|88.15|0.811|138||||||||||||||||E8F2FA|0.18|||C5H11OH|0|0|2000|410450||71-41-0
+m_c6h11oh|0|Cyclohexanol|Siklohekzanol|C₆H₁₁OH||organic|Molecular|L|0|0|Powder|16|100.161|0.96|161||||||||||||||||E8F2FA|0.18|||C6H11OH|0|0|2000|381438||108-93-0
+m_c2h4oh2|0|Ethylene glycol|Etilen glikol|C₂H₄(OH)₂|Etandiol;Antifriz|organic|Molecular|L|0|1|Powder|528|62.068|1.11|197||||||||||||||||E8F2FA|0.18|||C2H4(OH)2|0|0|2000|666579||107-21-1
+m_c3h6oh2|0|Propylene glycol|Propilen glikol|C₃H₆(OH)₂|1,2-Propandiol|organic|Molecular|L|0|1|Powder|0|76.095|1.036|188||||||||||||||||E8F2FA|0.18|||C3H6(OH)2|0|0|2000|533297||57-55-6
+m_c3h5oh3|0|Glycerol|Gliserol|C₃H₅(OH)₃|Gliserin;Propantriol|organic|Molecular|L|0|1|Powder|0|92.094|1.26|290||||||||||||||||E8F2FA|0.18|||C3H5(OH)3|0|0|2000|538115||56-81-5
+m_c6h14o6|0|Sorbitol|Sorbitol|C₆H₁₄O₆|Glusitol;E420|biochem|Molecular|S|0|1|Crystals|0|182.172|1.49|||||||||||||||||F4F4F2|1|||C6H14O6|0|0|1200|||50-70-4
+m_c10h20o|0|Menthol|Mentol|C₁₀H₂₀O|Nane özü|organic|Molecular|S|0|0|Crystals|16|156.269|0.89|||||||||||||||||F4F4F2|1|||C10H20O|0|0|1200|||1490-04-6
+m_c27h46o|0|Cholesterol|Kolesterol|C₂₇H₄₆O||biochem|Molecular|S|0|0|Crystals|0|386.664|1.05|||||||||||||||||F4F4F2|1|||C27H46O|0|0|1200|||57-88-5
+m_c2h52o|0|Diethyl ether|Dietil eter|(C₂H₅)₂O|Eter;Etoksietan|organic|Molecular|L|0|1|Powder|20|74.123|0.713|34.6||||||||||||||||E8F2FA|0.18|||(C2H5)2O|0|0|2000|365366||60-29-7
+m_ch32o|0|Dimethyl ether|Dimetil eter|(CH₃)₂O|Metoksimetan|organic|Molecular|A|1|0|Powder|260|46.069|1|||||||||||||||||E8F2FA|0.18|||(CH3)2O|0|0|1200|||115-10-6
+m_c4h8o|0|Tetrahydrofuran|Tetrahidrofuran|C₄H₈O|THF|organic|Molecular|L|0|1|Powder|532|72.107|0.889|66||||||||||||||||E8F2FA|0.18|||C4H8O|0|0|2000|413902||109-99-9
+m_c4h8o2|0|1,4-Dioxane|1,4-Dioksan|C₄H₈O₂|Dioksan|organic|Molecular|L|0|1|Powder|532|88.106|1.03|101||||||||||||||||E8F2FA|0.18|||C4H8O2|0|0|2000|373700||123-91-1
+m_ch3occh33|0|Methyl tert-butyl ether|Metil tert-bütil eter|CH₃OC(CH₃)₃|MTBE|organic|Molecular|L|0|1|Powder|20|88.15|0.74|55||||||||||||||||E8F2FA|0.18|||CH3OC(CH3)3|0|0|2000|327592||1634-04-4
+m_c6h5och3|0|Anisole|Anisol|C₆H₅OCH₃|Metoksibenzen|organic|Molecular|L|0|0|Powder|4|108.14|0.995|154||||||||||||||||E8F2FA|0.18|||C6H5OCH3|0|0|2000|347598||100-66-3
+m_hcho|0|Formaldehyde|Formaldehit|HCHO|Metanal;Formol;Formalin|organic|Molecular|A|1|1|Powder|771|30.026|1|||||||||||||||||E8F2FA|0.18|||HCHO|0|0|1200|||50-00-0
+m_ch3cho|0|Acetaldehyde|Asetaldehit|CH₃CHO|Etanal|organic|Molecular|A|1|1|Powder|788|44.053|1|||||||||||||||||E8F2FA|0.18|||CH3CHO|0|0|1200|||75-07-0
+m_c2h5cho|0|Propanal|Propanal|C₂H₅CHO|Propiyonaldehit|organic|Molecular|L|0|1|Powder|20|58.08|0.81|48||||||||||||||||E8F2FA|0.18|||C2H5CHO|0|0|2000|486591||123-38-6
+m_c3h7cho|0|Butanal|Bütanal|C₃H₇CHO|Bütiraldehit|organic|Molecular|L|0|1|Powder|20|72.107|0.8|75||||||||||||||||E8F2FA|0.18|||C3H7CHO|0|0|2000|424885||123-72-8
+m_c2h2o2|0|Glyoxal|Glioksal|C₂H₂O₂|Etandial|organic|Molecular|L|0|1|Powder|528|58.036|1.27|51||||||||||||||||E8F2FA|0.18|||C2H2O2|0|0|2000|491509||107-22-2
+m_c8h8o3|0|Vanillin|Vanilin|C₈H₈O₃|Vanilya özü|organic|Molecular|S|0|0|Crystals|16|152.149|1.06|||||||||||||||||F4F4F2|1|||C8H8O3|0|0|1200|||121-33-5
+m_c9h8o|0|Cinnamaldehyde|Sinnamaldehit|C₉H₈O|Tarçın aldehiti;Tarçın esansı|organic|Molecular|L|0|0|Powder|16|132.162|1.05|248||||||||||||||||E8F2FA|0.18|||C9H8O|0|0|2000|347007||14371-10-9
+m_ch32co|0|Acetone|Aseton|(CH₃)₂CO|Propanon;Dimetil keton;Oje çıkarıcı|organic|Molecular|L|0|1|Powder|20|58.08|0.784|56||||||||||||||||E8F2FA|0.18|||(CH3)2CO|0|0|2000|498712||67-64-1
+m_c2h5coch3|0|Butanone|Bütanon|C₂H₅COCH₃|Metil etil keton;MEK|organic|Molecular|L|0|1|Powder|20|72.107|0.805|79.6||||||||||||||||E8F2FA|0.18|||C2H5COCH3|0|0|2000|430499||78-93-3
+m_c6h10o|0|Cyclohexanone|Siklohekzanon|C₆H₁₀O||organic|Molecular|L|0|1|Powder|20|98.145|0.948|155.6||||||||||||||||E8F2FA|0.18|||C6H10O|0|0|2000|384431||108-94-1
+m_c6h52co|0|Benzophenone|Benzofenon|(C₆H₅)₂CO|Difenil keton|organic|Molecular|S|0|0|Crystals|512|182.222|1.11|||||||||||||||||F4F4F2|1|||(C6H5)2CO|0|0|1200|||119-61-9
+m_ch3cooc2h5|0|Ethyl acetate|Etil asetat|CH₃COOC₂H₅|Etil etanoat;Aseton (oje) çözücü|organic|Molecular|L|0|1|Powder|20|88.106|0.902|77||||||||||||||||E8F2FA|0.18|||CH3COOC2H5|0|0|2000|349729||141-78-6
+m_ch3cooch3|0|Methyl acetate|Metil asetat|CH₃COOCH₃|Metil etanoat|organic|Molecular|L|0|1|Powder|20|74.079|0.932|57||||||||||||||||E8F2FA|0.18|||CH3COOCH3|0|0|2000|392192||79-20-9
+m_ch3cooc4h9|0|Butyl acetate|Bütil asetat|CH₃COOC₄H₉|Bütil etanoat|organic|Molecular|L|0|0|Powder|4|116.16|0.88|126||||||||||||||||E8F2FA|0.18|||CH3COOC4H9|0|0|2000|302386||123-86-4
+m_ch3cooc5h11|0|Isoamyl acetate|İzoamil asetat|CH₃COOC₅H₁₁|Muz esansı;Muz kokusu|organic|Molecular|L|0|0|Powder|4|130.187|0.876|142||||||||||||||||E8F2FA|0.18|||CH3COOC5H11|0|0|2000|280621||123-92-2
+m_c3h7cooc2h5|0|Ethyl butanoate|Etil bütanoat|C₃H₇COOC₂H₅|Ananas esansı|organic|Molecular|L|0|0|Powder|4|116.16|0.879|121||||||||||||||||E8F2FA|0.18|||C3H7COOC2H5|0|0|2000|298598||105-54-4
+m_c6h4ohcooch3|0|Methyl salicylate|Metil salisilat|C₆H₄(OH)COOCH₃|Keklik yağı;Kış yeşili yağı|organic|Molecular|L|0|0|Powder|2|152.149|1.17|222||||||||||||||||E8F2FA|0.18|||C6H4(OH)COOCH3|0|0|2000|286385||119-36-8
+m_hcooc2h5|0|Ethyl formate|Etil format|HCOOC₂H₅|Etil metanoat;Rom esansı|organic|Molecular|L|0|1|Powder|20|74.079|0.917|54||||||||||||||||E8F2FA|0.18|||HCOOC2H5|0|0|2000|388628||109-94-4
+m_hcooch3|0|Methyl formate|Metil format|HCOOCH₃|Metil metanoat|organic|Molecular|L|0|1|Powder|20|60.052|0.97|32||||||||||||||||E8F2FA|0.18|||HCOOCH3|0|0|2000|447166||107-31-3
+m_ch3cooc8h17|0|Octyl acetate|Oktil asetat|CH₃COOC₈H₁₇|Portakal esansı|organic|Molecular|L|0|0|Powder|0|172.268|0.87|211||||||||||||||||E8F2FA|0.18|||CH3COOC8H17|0|0|2000|247319||112-14-1
+m_c57h110o6|0|Tristearin|Tristearin|C₅₇H₁₁₀O₆|Stearin;Katı yağ (trigliserit)|biochem|Molecular|S|0|0|Crystals|0|891.501|0.86|||||||||||||||||F4F4F2|1|||C57H110O6|0|0|1200|||555-43-1
+m_conh22|0|Urea|Üre|CO(NH₂)₂|Karbamit|organic|Molecular|S|0|1|Crystals|0|60.056|1.32|||||||||||||||||F4F4F2|1|||CO(NH2)2|0|0|1200|||57-13-6
+m_ch3conh2|0|Acetamide|Asetamit|CH₃CONH₂|Etanamit|organic|Molecular|S|0|1|Crystals|512|59.068|1.16|||||||||||||||||F4F4F2|1|||CH3CONH2|0|0|1200|||60-35-5
+m_hconh2|0|Formamide|Formamit|HCONH₂|Metanamit|organic|Molecular|L|0|1|Powder|512|45.041|1.13|210||||||||||||||||E8F2FA|0.18|||HCONH2|0|0|2000|943967||75-12-7
+m_hconch32|0|Dimethylformamide|Dimetilformamit|HCON(CH₃)₂|DMF|organic|Molecular|L|0|1|Powder|532|73.095|0.944|153||||||||||||||||E8F2FA|0.18|||HCON(CH3)2|0|0|2000|513047||68-12-2
+m_csnh22|0|Thiourea|Tiyoüre|CS(NH₂)₂||organic|Molecular|S|0|1|Crystals|546|76.117|1.4|||||||||||||||||F4F4F2|1|||CS(NH2)2|0|0|1200|||62-56-6
+m_c6h12n4|0|Hexamethylenetetramine|Heksametilentetramin|C₆H₁₂N₄|Hekzamin;Urotropin;Katı yakıt|organic|Molecular|S|0|1|Crystals|4|140.19|1.33|||||||||||||||||F4F4F2|1|||C6H12N4|0|0|1200|||100-97-0
+m_c8h10n4o2|0|Caffeine|Kafein|C₈H₁₀N₄O₂|Kahve özü|drug|Molecular|S|0|1|Crystals|16|194.194|1.23|||||||||||||||||F4F4F2|1|||C8H10N4O2|0|0|1200|||58-08-2
 m_c10h14n2|0|Nicotine|Nikotin|C₁₀H₁₄N₂|Tütün alkaloidi|drug|Molecular|L|0|1|Powder|34|162.236|1.01|247||||||||||||||||E8F2FA|0.18|||C10H14N2|0|0|2000|282140||
-m_ch3cl|0|Chloromethane|Klorometan|CH₃Cl|Metil klorür|organic|Molecular|A|1|0|Powder|772|50.485|1|||||||||||||||||E8F2FA|0.18|||CH3Cl|0|0|1200|||
-m_ch2cl2|0|Dichloromethane|Diklorometan|CH₂Cl₂|Metilen klorür|organic|Molecular|L|0|0|Powder|512|84.927|1.33|39.6||||||||||||||||E8F2FA|0.18|||CH2Cl2|0|0|2000|324067||
-m_chcl3|0|Chloroform|Kloroform|CHCl₃|Triklorometan|organic|Molecular|L|0|0|Powder|514|119.369|1.49|61.2||||||||||||||||E8F2FA|0.18|||CHCl3|0|0|2000|246486||
-m_ccl4|0|Carbon tetrachloride|Karbon tetraklorür|CCl₄|Tetraklorometan;Tetra|organic|Molecular|L|0|0|Powder|546|153.811|1.59|76.7||||||||||||||||E8F2FA|0.18|||CCl4|0|0|2000|200160||
-m_c2h5cl|0|Chloroethane|Kloroetan|C₂H₅Cl|Etil klorür|organic|Molecular|A|1|0|Powder|260|64.512|1|||||||||||||||||E8F2FA|0.18|||C2H5Cl|0|0|1200|||
-m_c2h4cl2|0|1,2-Dichloroethane|1,2-Dikloroetan|C₂H₄Cl₂|Etilen diklorür|organic|Molecular|L|0|0|Powder|518|98.954|1.25|83.5||||||||||||||||E8F2FA|0.18|||C2H4Cl2|0|0|2000|317170||
-m_c2h3cl|0|Vinyl chloride|Vinil klorür|C₂H₃Cl|Kloroeten|organic|Molecular|A|1|0|Powder|772|62.496|1|||||||||||||||||E8F2FA|0.18|||C2H3Cl|0|0|1200|||
-m_c2h5br|0|Bromoethane|Bromoetan|C₂H₅Br|Etil bromür|organic|Molecular|L|0|0|Powder|516|108.966|1.46|38.4||||||||||||||||E8F2FA|0.18|||C2H5Br|0|0|2000|251605||
-m_ch3i|0|Iodomethane|İyodometan|CH₃I|Metil iyodür|organic|Molecular|L|0|0|Powder|514|141.939|2.28|42.4||||||||||||||||E8F2FA|0.18|||CH3I|0|0|2000|195636||
-m_ccl2f2|0|Dichlorodifluoromethane|Diklorodiflorometan|CCl₂F₂|Freon-12;CFC-12|organic|Molecular|A|1|0|Powder|288|120.908|1|||||||||||||||||E8F2FA|0.18|||CCl2F2|0|0|1200|||
-m_ch2fcf3|0|1,1,1,2-Tetrafluoroethane|1,1,1,2-Tetrafloroetan|CH₂FCF₃|R-134a;Soğutucu gaz|organic|Molecular|A|1|0|Powder|256|102.032|1|||||||||||||||||E8F2FA|0.18|||CH2FCF3|0|0|1200|||
-m_c2hbrclf3|0|Halothane|Halotan|C₂HBrClF₃|Narkoz gazı|drug|Molecular|L|0|0|Powder|512|197.379|1.87|50||||||||||||||||E8F2FA|0.18|||C2HBrClF3|0|0|2000|144074||
-m_c2cl4|0|Tetrachloroethene|Tetrakloroeten|C₂Cl₄|Perkloretilen;Kuru temizleme sıvısı|organic|Molecular|L|0|0|Powder|544|165.822|1.62|121||||||||||||||||E8F2FA|0.18|||C2Cl4|0|0|2000|209171||
-m_c2hcl3|0|Trichloroethene|Trikloroeten|C₂HCl₃|Trikloretilen|organic|Molecular|L|0|0|Powder|528|131.38|1.46|87||||||||||||||||E8F2FA|0.18|||C2HCl3|0|0|2000|241233||
-m_chbr3|0|Bromoform|Bromoform|CHBr₃|Tribromometan|organic|Molecular|L|0|0|Powder|34|252.731|2.89|149||||||||||||||||E8F2FA|0.18|||CHBr3|0|0|2000|146991||
-m_c6h5ch2cl|0|Benzyl chloride|Benzil klorür|C₆H₅CH₂Cl||organic|Molecular|L|0|0|Powder|515|126.583|1.1|179||||||||||||||||E8F2FA|0.18|||C6H5CH2Cl|0|0|2000|314333||
-m_ch3cn|0|Acetonitrile|Asetonitril|CH₃CN|Metil siyanür|organic|Molecular|L|0|1|Powder|20|41.053|0.786|82||||||||||||||||E8F2FA|0.18|||CH3CN|0|0|2000|761289||
-m_ch3no2|0|Nitromethane|Nitrometan|CH₃NO₂||organic|Molecular|L|0|1|Powder|516|61.04|1.14|101||||||||||||||||E8F2FA|0.18|||CH3NO2|0|0|2000|539404||
-m_ch32so|0|Dimethyl sulfoxide|Dimetil sülfoksit|(CH₃)₂SO|DMSO|organic|Molecular|L|0|1|Powder|0|78.129|1.1|189||||||||||||||||E8F2FA|0.18|||(CH3)2SO|0|0|2000|520539||
-m_c2h3cn|0|Acrylonitrile|Akrilonitril|C₂H₃CN|Propennitril|organic|Molecular|L|0|1|Powder|550|53.064|0.81|77||||||||||||||||E8F2FA|0.18|||C2H3CN|0|0|2000|580680||
-m_ch3co2o|0|Acetic anhydride|Asetik anhidrit|(CH₃CO)₂O|Etanoik anhidrit|organic|Molecular|L|0|0|Powder|7|102.089|1.08|140||||||||||||||||E8F2FA|0.18|||(CH3CO)2O|0|0|2000|356132||
-m_ch3cocl|0|Acetyl chloride|Asetil klorür|CH₃COCl|Etanoil klorür|organic|Molecular|L|0|0|Powder|69|78.495|1.1|52||||||||||||||||E8F2FA|0.18|||CH3COCl|0|0|2000|364523||
-m_c8h4o3|0|Phthalic anhydride|Ftalik anhidrit|C₈H₄O₃||organic|Molecular|S|0|0|Crystals|529|148.117|1.53|||||||||||||||||F4F4F2|1|||C8H4O3|0|0|1200|||
-m_ccl3choh2|0|Chloral hydrate|Kloral hidrat|CCl₃CH(OH)₂||drug|Molecular|S|0|1|Crystals|2|165.394|1.9|||||||||||||||||F4F4F2|1|||CCl3CH(OH)2|0|0|1200|||
-m_c10h16o|0|Camphor|Kafur|C₁₀H₁₆O|Kâfur|organic|Molecular|S|0|0|Crystals|20|152.237|0.99|||||||||||||||||F4F4F2|1|||C10H16O|0|0|1200|||
-m_c10h16|0|Limonene|Limonen|C₁₀H₁₆|Portakal yağı;Limon kabuğu yağı|organic|Molecular|L|0|0|Powder|52|136.238|0.841|176||||||||||||||||E8F2FA|0.18|||C10H16|0|0|2000|290119||
+m_ch3cl|0|Chloromethane|Klorometan|CH₃Cl|Metil klorür|organic|Molecular|A|1|0|Powder|772|50.485|1|||||||||||||||||E8F2FA|0.18|||CH3Cl|0|0|1200|||74-87-3
+m_ch2cl2|0|Dichloromethane|Diklorometan|CH₂Cl₂|Metilen klorür|organic|Molecular|L|0|0|Powder|512|84.927|1.33|39.6||||||||||||||||E8F2FA|0.18|||CH2Cl2|0|0|2000|324067||75-09-2
+m_chcl3|0|Chloroform|Kloroform|CHCl₃|Triklorometan|organic|Molecular|L|0|0|Powder|514|119.369|1.49|61.2||||||||||||||||E8F2FA|0.18|||CHCl3|0|0|2000|246486||67-66-3
+m_ccl4|0|Carbon tetrachloride|Karbon tetraklorür|CCl₄|Tetraklorometan;Tetra|organic|Molecular|L|0|0|Powder|546|153.811|1.59|76.7||||||||||||||||E8F2FA|0.18|||CCl4|0|0|2000|200160||56-23-5
+m_c2h5cl|0|Chloroethane|Kloroetan|C₂H₅Cl|Etil klorür|organic|Molecular|A|1|0|Powder|260|64.512|1|||||||||||||||||E8F2FA|0.18|||C2H5Cl|0|0|1200|||75-00-3
+m_c2h4cl2|0|1,2-Dichloroethane|1,2-Dikloroetan|C₂H₄Cl₂|Etilen diklorür|organic|Molecular|L|0|0|Powder|518|98.954|1.25|83.5||||||||||||||||E8F2FA|0.18|||C2H4Cl2|0|0|2000|317170||107-06-2
+m_c2h3cl|0|Vinyl chloride|Vinil klorür|C₂H₃Cl|Kloroeten|organic|Molecular|A|1|0|Powder|772|62.496|1|||||||||||||||||E8F2FA|0.18|||C2H3Cl|0|0|1200|||75-01-4
+m_c2h5br|0|Bromoethane|Bromoetan|C₂H₅Br|Etil bromür|organic|Molecular|L|0|0|Powder|516|108.966|1.46|38.4||||||||||||||||E8F2FA|0.18|||C2H5Br|0|0|2000|251605||74-96-4
+m_ch3i|0|Iodomethane|İyodometan|CH₃I|Metil iyodür|organic|Molecular|L|0|0|Powder|514|141.939|2.28|42.4||||||||||||||||E8F2FA|0.18|||CH3I|0|0|2000|195636||74-88-4
+m_ccl2f2|0|Dichlorodifluoromethane|Diklorodiflorometan|CCl₂F₂|Freon-12;CFC-12|organic|Molecular|A|1|0|Powder|288|120.908|1|||||||||||||||||E8F2FA|0.18|||CCl2F2|0|0|1200|||75-71-8
+m_ch2fcf3|0|1,1,1,2-Tetrafluoroethane|1,1,1,2-Tetrafloroetan|CH₂FCF₃|R-134a;Soğutucu gaz|organic|Molecular|A|1|0|Powder|256|102.032|1|||||||||||||||||E8F2FA|0.18|||CH2FCF3|0|0|1200|||811-97-2
+m_c2hbrclf3|0|Halothane|Halotan|C₂HBrClF₃|Narkoz gazı|drug|Molecular|L|0|0|Powder|512|197.379|1.87|50||||||||||||||||E8F2FA|0.18|||C2HBrClF3|0|0|2000|144074||151-67-7
+m_c2cl4|0|Tetrachloroethene|Tetrakloroeten|C₂Cl₄|Perkloretilen;Kuru temizleme sıvısı|organic|Molecular|L|0|0|Powder|544|165.822|1.62|121||||||||||||||||E8F2FA|0.18|||C2Cl4|0|0|2000|209171||127-18-4
+m_c2hcl3|0|Trichloroethene|Trikloroeten|C₂HCl₃|Trikloretilen|organic|Molecular|L|0|0|Powder|528|131.38|1.46|87||||||||||||||||E8F2FA|0.18|||C2HCl3|0|0|2000|241233||79-01-6
+m_chbr3|0|Bromoform|Bromoform|CHBr₃|Tribromometan|organic|Molecular|L|0|0|Powder|34|252.731|2.89|149||||||||||||||||E8F2FA|0.18|||CHBr3|0|0|2000|146991||75-25-2
+m_c6h5ch2cl|0|Benzyl chloride|Benzil klorür|C₆H₅CH₂Cl||organic|Molecular|L|0|0|Powder|515|126.583|1.1|179||||||||||||||||E8F2FA|0.18|||C6H5CH2Cl|0|0|2000|314333||100-44-7
+m_ch3cn|0|Acetonitrile|Asetonitril|CH₃CN|Metil siyanür|organic|Molecular|L|0|1|Powder|20|41.053|0.786|82||||||||||||||||E8F2FA|0.18|||CH3CN|0|0|2000|761289||75-05-8
+m_ch3no2|0|Nitromethane|Nitrometan|CH₃NO₂||organic|Molecular|L|0|1|Powder|516|61.04|1.14|101||||||||||||||||E8F2FA|0.18|||CH3NO2|0|0|2000|539404||75-52-5
+m_ch32so|0|Dimethyl sulfoxide|Dimetil sülfoksit|(CH₃)₂SO|DMSO|organic|Molecular|L|0|1|Powder|0|78.129|1.1|189||||||||||||||||E8F2FA|0.18|||(CH3)2SO|0|0|2000|520539||67-68-5
+m_c2h3cn|0|Acrylonitrile|Akrilonitril|C₂H₃CN|Propennitril|organic|Molecular|L|0|1|Powder|550|53.064|0.81|77||||||||||||||||E8F2FA|0.18|||C2H3CN|0|0|2000|580680||107-13-1
+m_ch3co2o|0|Acetic anhydride|Asetik anhidrit|(CH₃CO)₂O|Etanoik anhidrit|organic|Molecular|L|0|0|Powder|7|102.089|1.08|140||||||||||||||||E8F2FA|0.18|||(CH3CO)2O|0|0|2000|356132||108-24-7
+m_ch3cocl|0|Acetyl chloride|Asetil klorür|CH₃COCl|Etanoil klorür|organic|Molecular|L|0|0|Powder|69|78.495|1.1|52||||||||||||||||E8F2FA|0.18|||CH3COCl|0|0|2000|364523||75-36-5
+m_c8h4o3|0|Phthalic anhydride|Ftalik anhidrit|C₈H₄O₃||organic|Molecular|S|0|0|Crystals|529|148.117|1.53|||||||||||||||||F4F4F2|1|||C8H4O3|0|0|1200|||85-44-9
+m_ccl3choh2|0|Chloral hydrate|Kloral hidrat|CCl₃CH(OH)₂||drug|Molecular|S|0|1|Crystals|2|165.394|1.9|||||||||||||||||F4F4F2|1|||CCl3CH(OH)2|0|0|1200|||302-17-0
+m_c10h16o|0|Camphor|Kafur|C₁₀H₁₆O|Kâfur|organic|Molecular|S|0|0|Crystals|20|152.237|0.99|||||||||||||||||F4F4F2|1|||C10H16O|0|0|1200|||76-22-2
+m_c10h16|0|Limonene|Limonen|C₁₀H₁₆|Portakal yağı;Limon kabuğu yağı|organic|Molecular|L|0|0|Powder|52|136.238|0.841|176||||||||||||||||E8F2FA|0.18|||C10H16|0|0|2000|290119||138-86-3
 m_c10h16o_2|0|Citral|Sitral|C₁₀H₁₆O|Limon otu yağı|organic|Molecular|L|0|0|Powder|16|152.237|0.89|229||||||||||||||||E8F2FA|0.18|||C10H16O|0|0|2000|290266||
-m_c10h12o2|0|Eugenol|Öjenol|C₁₀H₁₂O₂|Karanfil yağı|organic|Molecular|L|0|0|Powder|16|164.204|1.06|254||||||||||||||||E8F2FA|0.18|||C10H12O2|0|0|2000|282510||
-m_c18h27no3|0|Capsaicin|Kapsaisin|C₁₈H₂₇NO₃|Acı biber özü|organic|Molecular|S|0|0|Crystals|18|305.418|1.1|||||||||||||||||F4F4F2|1|||C18H27NO3|0|0|1200|||
-m_c10h16n2o8|0|Ethylenediaminetetraacetic acid|EDTA|C₁₀H₁₆N₂O₈|Etilendiamintetraasetik asit|organic|Molecular|S|0|0|Crystals|16|292.244|0.86|||||||||||||||||F4F4F2|1|||C10H16N2O8|0|0|1200|||
-m_c2h5sh|0|Ethanethiol|Etantiyol|C₂H₅SH|Etil merkaptan;Doğal gaz koku maddesi|organic|Molecular|L|0|0|Powder|36|62.13|0.839|35||||||||||||||||E8F2FA|0.18|||C2H5SH|0|0|2000|436459||
-m_c6h12o6|0|Glucose|Glikoz|C₆H₁₂O₆|Üzüm şekeri;Dekstroz;Kan şekeri|biochem|Molecular|S|0|1|Crystals|0|180.156|1.54|||||||||||||||||F4F4F2|1|||C6H12O6|0|0|1200|||
-m_c6h12o6_2|0|Fructose|Fruktoz|C₆H₁₂O₆|Meyve şekeri;Früktoz|biochem|Molecular|S|0|1|Crystals|0|180.156|1.69|||||||||||||||||F4F4F2|1|||C6H12O6|0|0|1200|||
-m_c6h12o6_3|0|Galactose|Galaktoz|C₆H₁₂O₆||biochem|Molecular|S|0|1|Crystals|0|180.156|1.5|||||||||||||||||F4F4F2|1|||C6H12O6|0|0|1200|||
-m_c5h10o5|0|Ribose|Riboz|C₅H₁₀O₅||biochem|Molecular|S|0|1|Crystals|0|150.13|1.2|||||||||||||||||F4F4F2|1|||C5H10O5|0|0|1200|||
-m_c5h10o4|0|Deoxyribose|Deoksiriboz|C₅H₁₀O₄|2-Deoksiriboz|biochem|Molecular|S|0|1|Crystals|0|134.131|1.2|||||||||||||||||F4F4F2|1|||C5H10O4|0|0|1200|||
-sucrose|1|Sucrose|Sükroz|C₁₂H₂₂O₁₁|Çay şekeri;Sakaroz;Şeker|biochem|Molecular|S|0|0|Powder|0||||||||||||||||||||||||0|0||||
-m_c12h22o11|0|Lactose|Laktoz|C₁₂H₂₂O₁₁|Süt şekeri|biochem|Molecular|S|0|1|Crystals|0|342.297|1.53|||||||||||||||||F4F4F2|1|||C12H22O11|0|0|1200|||
-m_c12h22o11_2|0|Maltose|Maltoz|C₁₂H₂₂O₁₁|Malt şekeri|biochem|Molecular|S|0|1|Crystals|0|342.297|1.54|||||||||||||||||F4F4F2|1|||C12H22O11|0|0|1200|||
-m_c2h5no2|0|Glycine|Glisin|C₂H₅NO₂|Aminoasetik asit|biochem|Molecular|S|0|1|Crystals|0|75.067|1.61|||||||||||||||||F4F4F2|1|||C2H5NO2|0|0|1200|||
-m_c3h7no2|0|Alanine|Alanin|C₃H₇NO₂||biochem|Molecular|S|0|1|Crystals|0|89.094|1.42|||||||||||||||||F4F4F2|1|||C3H7NO2|0|0|1200|||
-m_c5h11no2|0|Valine|Valin|C₅H₁₁NO₂||biochem|Molecular|S|0|1|Crystals|0|117.148|1.32|||||||||||||||||F4F4F2|1|||C5H11NO2|0|0|1200|||
-m_c6h13no2|0|Leucine|Lösin|C₆H₁₃NO₂||biochem|Molecular|S|0|1|Crystals|0|131.175|1.29|||||||||||||||||F4F4F2|1|||C6H13NO2|0|0|1200|||
-m_c6h13no2_2|0|Isoleucine|İzolösin|C₆H₁₃NO₂||biochem|Molecular|S|0|1|Crystals|0|131.175|1.2|||||||||||||||||F4F4F2|1|||C6H13NO2|0|0|1200|||
-m_c5h9no2|0|Proline|Prolin|C₅H₉NO₂||biochem|Molecular|S|0|1|Crystals|0|115.132|1.35|||||||||||||||||F4F4F2|1|||C5H9NO2|0|0|1200|||
-m_c9h11no2|0|Phenylalanine|Fenilalanin|C₉H₁₁NO₂||biochem|Molecular|S|0|1|Crystals|0|165.192|1.29|||||||||||||||||F4F4F2|1|||C9H11NO2|0|0|1200|||
-m_c11h12n2o2|0|Tryptophan|Triptofan|C₁₁H₁₂N₂O₂||biochem|Molecular|S|0|1|Crystals|0|204.229|1.36|||||||||||||||||F4F4F2|1|||C11H12N2O2|0|0|1200|||
-m_c5h11no2s|0|Methionine|Metiyonin|C₅H₁₁NO₂S||biochem|Molecular|S|0|1|Crystals|0|149.208|1.34|||||||||||||||||F4F4F2|1|||C5H11NO2S|0|0|1200|||
-m_c3h7no3|0|Serine|Serin|C₃H₇NO₃||biochem|Molecular|S|0|1|Crystals|0|105.093|1.6|||||||||||||||||F4F4F2|1|||C3H7NO3|0|0|1200|||
-m_c4h9no3|0|Threonine|Treonin|C₄H₉NO₃||biochem|Molecular|S|0|1|Crystals|0|119.12|1.3|||||||||||||||||F4F4F2|1|||C4H9NO3|0|0|1200|||
-m_c3h7no2s|0|Cysteine|Sistein|C₃H₇NO₂S||biochem|Molecular|S|0|1|Crystals|0|121.154|1.33|||||||||||||||||F4F4F2|1|||C3H7NO2S|0|0|1200|||
-m_c9h11no3|0|Tyrosine|Tirozin|C₉H₁₁NO₃||biochem|Molecular|S|0|0|Crystals|0|181.191|1.46|||||||||||||||||F4F4F2|1|||C9H11NO3|0|0|1200|||
-m_c4h8n2o3|0|Asparagine|Asparagin|C₄H₈N₂O₃||biochem|Molecular|S|0|1|Crystals|0|132.119|1.54|||||||||||||||||F4F4F2|1|||C4H8N2O3|0|0|1200|||
-m_c5h10n2o3|0|Glutamine|Glutamin|C₅H₁₀N₂O₃||biochem|Molecular|S|0|1|Crystals|0|146.146|1.47|||||||||||||||||F4F4F2|1|||C5H10N2O3|0|0|1200|||
-m_c4h7no4|0|Aspartic acid|Aspartik asit|C₄H₇NO₄|Asparajik asit|biochem|Molecular|S|0|0|Crystals|0|133.103|1.66|||||||||||||||||F4F4F2|1|||C4H7NO4|0|0|1200|||
-m_c5h9no4|0|Glutamic acid|Glutamik asit|C₅H₉NO₄||biochem|Molecular|S|0|0|Crystals|0|147.13|1.46|||||||||||||||||F4F4F2|1|||C5H9NO4|0|0|1200|||
-m_c6h14n2o2|0|Lysine|Lizin|C₆H₁₄N₂O₂||biochem|Molecular|S|0|1|Crystals|0|146.19|1.1|||||||||||||||||F4F4F2|1|||C6H14N2O2|0|0|1200|||
-m_c6h14n4o2|0|Arginine|Arjinin|C₆H₁₄N₄O₂||biochem|Molecular|S|0|1|Crystals|0|174.204|1.1|||||||||||||||||F4F4F2|1|||C6H14N4O2|0|0|1200|||
-m_c6h9n3o2|0|Histidine|Histidin|C₆H₉N₃O₂||biochem|Molecular|S|0|1|Crystals|0|155.157|1.3|||||||||||||||||F4F4F2|1|||C6H9N3O2|0|0|1200|||
-m_c5h5n5|0|Adenine|Adenin|C₅H₅N₅||biochem|Molecular|S|0|0|Crystals|0|135.13|1.6|||||||||||||||||F4F4F2|1|||C5H5N5|0|0|1200|||
-m_c5h5n5o|0|Guanine|Guanin|C₅H₅N₅O||biochem|Molecular|S|0|0|Crystals|0|151.129|2.2|||||||||||||||||F4F4F2|1|||C5H5N5O|0|0|1200|||
-m_c4h5n3o|0|Cytosine|Sitozin|C₄H₅N₃O||biochem|Molecular|S|0|0|Crystals|0|111.104|1.55|||||||||||||||||F4F4F2|1|||C4H5N3O|0|0|1200|||
-m_c5h6n2o2|0|Thymine|Timin|C₅H₆N₂O₂||biochem|Molecular|S|0|0|Crystals|0|126.115|1.23|||||||||||||||||F4F4F2|1|||C5H6N2O2|0|0|1200|||
-m_c4h4n2o2|0|Uracil|Urasil|C₄H₄N₂O₂||biochem|Molecular|S|0|0|Crystals|0|112.088|1.32|||||||||||||||||F4F4F2|1|||C4H4N2O2|0|0|1200|||
-m_c8h9no2|0|Paracetamol|Parasetamol|C₈H₉NO₂|Asetaminofen|drug|Molecular|S|0|0|Crystals|16|151.165|1.26|||||||||||||||||F4F4F2|1|||C8H9NO2|0|0|1200|||
-m_c13h18o2|0|Ibuprofen|İbuprofen|C₁₃H₁₈O₂||drug|Molecular|S|0|0|Crystals|16|206.285|1.03|||||||||||||||||F4F4F2|1|||C13H18O2|0|0|1200|||
-m_c6h6n2o|0|Nicotinamide|Nikotinamit|C₆H₆N₂O|B3 vitamini|biochem|Molecular|S|0|1|Crystals|0|122.127|1.4|||||||||||||||||F4F4F2|1|||C6H6N2O|0|0|1200|||
-m_c40h56|0|Beta-carotene|Beta-karoten|C₄₀H₅₆|Havuç pigmenti;Provitamin A|biochem|Molecular|S|0|0|Crystals|0|536.888|1|||||||||||||||||F28A1E|1|||C40H56|0|0|1200|||
-m_c17h20n4o6|0|Riboflavin|Riboflavin|C₁₇H₂₀N₄O₆|B2 vitamini|biochem|Molecular|S|0|0|Crystals|0|376.369|1.65|||||||||||||||||F2C531|1|||C17H20N4O6|0|0|1200|||
-m_c7h5no3s|0|Saccharin|Sakarin|C₇H₅NO₃S|Tatlandırıcı|drug|Molecular|S|0|0|Crystals|0|183.181|0.83|||||||||||||||||F4F4F2|1|||C7H5NO3S|0|0|1200|||
-m_c14h18n2o5|0|Aspartame|Aspartam|C₁₄H₁₈N₂O₅|E951|drug|Molecular|S|0|0|Crystals|0|294.307|1.35|||||||||||||||||F4F4F2|1|||C14H18N2O5|0|0|1200|||
-phenolphthalein|1|Phenolphthalein|Fenolftalein|C₂₀H₁₄O₄|Fenolftalin|indicator|Molecular|S|0|0|Powder|0||||||||||||||||||||||||0|0||||
+m_c10h12o2|0|Eugenol|Öjenol|C₁₀H₁₂O₂|Karanfil yağı|organic|Molecular|L|0|0|Powder|16|164.204|1.06|254||||||||||||||||E8F2FA|0.18|||C10H12O2|0|0|2000|282510||97-53-0
+m_c18h27no3|0|Capsaicin|Kapsaisin|C₁₈H₂₇NO₃|Acı biber özü|organic|Molecular|S|0|0|Crystals|18|305.418|1.1|||||||||||||||||F4F4F2|1|||C18H27NO3|0|0|1200|||404-86-4
+m_c10h16n2o8|0|Ethylenediaminetetraacetic acid|EDTA|C₁₀H₁₆N₂O₈|Etilendiamintetraasetik asit|organic|Molecular|S|0|0|Crystals|16|292.244|0.86|||||||||||||||||F4F4F2|1|||C10H16N2O8|0|0|1200|||60-00-4
+m_c2h5sh|0|Ethanethiol|Etantiyol|C₂H₅SH|Etil merkaptan;Doğal gaz koku maddesi|organic|Molecular|L|0|0|Powder|36|62.13|0.839|35||||||||||||||||E8F2FA|0.18|||C2H5SH|0|0|2000|436459||75-08-1
+m_c6h12o6|0|Glucose|Glikoz|C₆H₁₂O₆|Üzüm şekeri;Dekstroz;Kan şekeri|biochem|Molecular|S|0|1|Crystals|0|180.156|1.54|||||||||||||||||F4F4F2|1|||C6H12O6|0|0|1200|||50-99-7
+m_c6h12o6_2|0|Fructose|Fruktoz|C₆H₁₂O₆|Meyve şekeri;Früktoz|biochem|Molecular|S|0|1|Crystals|0|180.156|1.69|||||||||||||||||F4F4F2|1|||C6H12O6|0|0|1200|||57-48-7
+m_c6h12o6_3|0|Galactose|Galaktoz|C₆H₁₂O₆||biochem|Molecular|S|0|1|Crystals|0|180.156|1.5|||||||||||||||||F4F4F2|1|||C6H12O6|0|0|1200|||59-23-4
+m_c5h10o5|0|Ribose|Riboz|C₅H₁₀O₅||biochem|Molecular|S|0|1|Crystals|0|150.13|1.2|||||||||||||||||F4F4F2|1|||C5H10O5|0|0|1200|||50-69-1
+m_c5h10o4|0|Deoxyribose|Deoksiriboz|C₅H₁₀O₄|2-Deoksiriboz|biochem|Molecular|S|0|1|Crystals|0|134.131|1.2|||||||||||||||||F4F4F2|1|||C5H10O4|0|0|1200|||533-67-5
+sucrose|1|Sucrose|Sükroz|C₁₂H₂₂O₁₁|Çay şekeri;Sakaroz;Şeker|biochem|Molecular|S|0|0|Powder|0||||||||||||||||||||||||0|0||||57-50-1
+m_c12h22o11|0|Lactose|Laktoz|C₁₂H₂₂O₁₁|Süt şekeri|biochem|Molecular|S|0|1|Crystals|0|342.297|1.53|||||||||||||||||F4F4F2|1|||C12H22O11|0|0|1200|||63-42-3
+m_c12h22o11_2|0|Maltose|Maltoz|C₁₂H₂₂O₁₁|Malt şekeri|biochem|Molecular|S|0|1|Crystals|0|342.297|1.54|||||||||||||||||F4F4F2|1|||C12H22O11|0|0|1200|||4482-75-1
+m_c2h5no2|0|Glycine|Glisin|C₂H₅NO₂|Aminoasetik asit|biochem|Molecular|S|0|1|Crystals|0|75.067|1.61|||||||||||||||||F4F4F2|1|||C2H5NO2|0|0|1200|||56-40-6
+m_c3h7no2|0|Alanine|Alanin|C₃H₇NO₂||biochem|Molecular|S|0|1|Crystals|0|89.094|1.42|||||||||||||||||F4F4F2|1|||C3H7NO2|0|0|1200|||338-69-2
+m_c5h11no2|0|Valine|Valin|C₅H₁₁NO₂||biochem|Molecular|S|0|1|Crystals|0|117.148|1.32|||||||||||||||||F4F4F2|1|||C5H11NO2|0|0|1200|||72-18-4
+m_c6h13no2|0|Leucine|Lösin|C₆H₁₃NO₂||biochem|Molecular|S|0|1|Crystals|0|131.175|1.29|||||||||||||||||F4F4F2|1|||C6H13NO2|0|0|1200|||328-38-1
+m_c6h13no2_2|0|Isoleucine|İzolösin|C₆H₁₃NO₂||biochem|Molecular|S|0|1|Crystals|0|131.175|1.2|||||||||||||||||F4F4F2|1|||C6H13NO2|0|0|1200|||1509-34-8
+m_c5h9no2|0|Proline|Prolin|C₅H₉NO₂||biochem|Molecular|S|0|1|Crystals|0|115.132|1.35|||||||||||||||||F4F4F2|1|||C5H9NO2|0|0|1200|||147-85-3
+m_c9h11no2|0|Phenylalanine|Fenilalanin|C₉H₁₁NO₂||biochem|Molecular|S|0|1|Crystals|0|165.192|1.29|||||||||||||||||F4F4F2|1|||C9H11NO2|0|0|1200|||63-91-2
+m_c11h12n2o2|0|Tryptophan|Triptofan|C₁₁H₁₂N₂O₂||biochem|Molecular|S|0|1|Crystals|0|204.229|1.36|||||||||||||||||F4F4F2|1|||C11H12N2O2|0|0|1200|||73-22-3
+m_c5h11no2s|0|Methionine|Metiyonin|C₅H₁₁NO₂S||biochem|Molecular|S|0|1|Crystals|0|149.208|1.34|||||||||||||||||F4F4F2|1|||C5H11NO2S|0|0|1200|||348-67-4
+m_c3h7no3|0|Serine|Serin|C₃H₇NO₃||biochem|Molecular|S|0|1|Crystals|0|105.093|1.6|||||||||||||||||F4F4F2|1|||C3H7NO3|0|0|1200|||56-45-1
+m_c4h9no3|0|Threonine|Treonin|C₄H₉NO₃||biochem|Molecular|S|0|1|Crystals|0|119.12|1.3|||||||||||||||||F4F4F2|1|||C4H9NO3|0|0|1200|||24830-94-2
+m_c3h7no2s|0|Cysteine|Sistein|C₃H₇NO₂S||biochem|Molecular|S|0|1|Crystals|0|121.154|1.33|||||||||||||||||F4F4F2|1|||C3H7NO2S|0|0|1200|||52-90-4
+m_c9h11no3|0|Tyrosine|Tirozin|C₉H₁₁NO₃||biochem|Molecular|S|0|0|Crystals|0|181.191|1.46|||||||||||||||||F4F4F2|1|||C9H11NO3|0|0|1200|||60-18-4
+m_c4h8n2o3|0|Asparagine|Asparagin|C₄H₈N₂O₃||biochem|Molecular|S|0|1|Crystals|0|132.119|1.54|||||||||||||||||F4F4F2|1|||C4H8N2O3|0|0|1200|||70-47-3
+m_c5h10n2o3|0|Glutamine|Glutamin|C₅H₁₀N₂O₃||biochem|Molecular|S|0|1|Crystals|0|146.146|1.47|||||||||||||||||F4F4F2|1|||C5H10N2O3|0|0|1200|||56-85-9
+m_c4h7no4|0|Aspartic acid|Aspartik asit|C₄H₇NO₄|Asparajik asit|biochem|Molecular|S|0|0|Crystals|0|133.103|1.66|||||||||||||||||F4F4F2|1|||C4H7NO4|0|0|1200|||1783-96-6
+m_c5h9no4|0|Glutamic acid|Glutamik asit|C₅H₉NO₄||biochem|Molecular|S|0|0|Crystals|0|147.13|1.46|||||||||||||||||F4F4F2|1|||C5H9NO4|0|0|1200|||56-86-0
+m_c6h14n2o2|0|Lysine|Lizin|C₆H₁₄N₂O₂||biochem|Molecular|S|0|1|Crystals|0|146.19|1.1|||||||||||||||||F4F4F2|1|||C6H14N2O2|0|0|1200|||56-87-1
+m_c6h14n4o2|0|Arginine|Arjinin|C₆H₁₄N₄O₂||biochem|Molecular|S|0|1|Crystals|0|174.204|1.1|||||||||||||||||F4F4F2|1|||C6H14N4O2|0|0|1200|||157-06-2
+m_c6h9n3o2|0|Histidine|Histidin|C₆H₉N₃O₂||biochem|Molecular|S|0|1|Crystals|0|155.157|1.3|||||||||||||||||F4F4F2|1|||C6H9N3O2|0|0|1200|||71-00-1
+m_c5h5n5|0|Adenine|Adenin|C₅H₅N₅||biochem|Molecular|S|0|0|Crystals|0|135.13|1.6|||||||||||||||||F4F4F2|1|||C5H5N5|0|0|1200|||73-24-5
+m_c5h5n5o|0|Guanine|Guanin|C₅H₅N₅O||biochem|Molecular|S|0|0|Crystals|0|151.129|2.2|||||||||||||||||F4F4F2|1|||C5H5N5O|0|0|1200|||73-40-5
+m_c4h5n3o|0|Cytosine|Sitozin|C₄H₅N₃O||biochem|Molecular|S|0|0|Crystals|0|111.104|1.55|||||||||||||||||F4F4F2|1|||C4H5N3O|0|0|1200|||71-30-7
+m_c5h6n2o2|0|Thymine|Timin|C₅H₆N₂O₂||biochem|Molecular|S|0|0|Crystals|0|126.115|1.23|||||||||||||||||F4F4F2|1|||C5H6N2O2|0|0|1200|||65-71-4
+m_c4h4n2o2|0|Uracil|Urasil|C₄H₄N₂O₂||biochem|Molecular|S|0|0|Crystals|0|112.088|1.32|||||||||||||||||F4F4F2|1|||C4H4N2O2|0|0|1200|||66-22-8
+m_c8h9no2|0|Paracetamol|Parasetamol|C₈H₉NO₂|Asetaminofen|drug|Molecular|S|0|0|Crystals|16|151.165|1.26|||||||||||||||||F4F4F2|1|||C8H9NO2|0|0|1200|||103-90-2
+m_c13h18o2|0|Ibuprofen|İbuprofen|C₁₃H₁₈O₂||drug|Molecular|S|0|0|Crystals|16|206.285|1.03|||||||||||||||||F4F4F2|1|||C13H18O2|0|0|1200|||15687-27-1
+m_c6h6n2o|0|Nicotinamide|Nikotinamit|C₆H₆N₂O|B3 vitamini|biochem|Molecular|S|0|1|Crystals|0|122.127|1.4|||||||||||||||||F4F4F2|1|||C6H6N2O|0|0|1200|||98-92-0
+m_c40h56|0|Beta-carotene|Beta-karoten|C₄₀H₅₆|Havuç pigmenti;Provitamin A|biochem|Molecular|S|0|0|Crystals|0|536.888|1|||||||||||||||||F28A1E|1|||C40H56|0|0|1200|||7235-40-7
+m_c17h20n4o6|0|Riboflavin|Riboflavin|C₁₇H₂₀N₄O₆|B2 vitamini|biochem|Molecular|S|0|0|Crystals|0|376.369|1.65|||||||||||||||||F2C531|1|||C17H20N4O6|0|0|1200|||83-88-5
+m_c7h5no3s|0|Saccharin|Sakarin|C₇H₅NO₃S|Tatlandırıcı|drug|Molecular|S|0|0|Crystals|0|183.181|0.83|||||||||||||||||F4F4F2|1|||C7H5NO3S|0|0|1200|||81-07-2
+m_c14h18n2o5|0|Aspartame|Aspartam|C₁₄H₁₈N₂O₅|E951|drug|Molecular|S|0|0|Crystals|0|294.307|1.35|||||||||||||||||F4F4F2|1|||C14H18N2O5|0|0|1200|||22839-47-0
+phenolphthalein|1|Phenolphthalein|Fenolftalein|C₂₀H₁₄O₄|Fenolftalin|indicator|Molecular|S|0|0|Powder|0||||||||||||||||||||||||0|0||||77-09-8
 m_c14h14n3nao3s|0|Methyl orange|Metil oranj|C₁₄H₁₄N₃NaO₃S|Metil turuncusu|indicator|Molecular|S|0|1|Crystals|2|327.334|1.28|||||||||||||||||F2A03A|1|40||C14H14N3NaO3S|0|0|1200|||
-m_c27h28br2o5s|0|Bromothymol blue|Bromtimol mavisi|C₂₇H₂₈Br₂O₅S|BTB|indicator|Molecular|S|0|0|Crystals|16|624.384|1.25|||||||||||||||||3A6AC8|1|||C27H28Br2O5S|0|0|1200|||
-m_c15h15n3o2|0|Methyl red|Metil kırmızısı|C₁₅H₁₅N₃O₂||indicator|Molecular|S|0|0|Crystals|16|269.304|1.2|||||||||||||||||D9301E|1|||C15H15N3O2|0|0|1200|||
-m_c27h30o5s|0|Thymol blue|Timol mavisi|C₂₇H₃₀O₅S||indicator|Molecular|S|0|0|Crystals|16|466.592|1.2|||||||||||||||||4A6AB8|1|||C27H30O5S|0|0|1200|||
-m_c32h22n6na2o6s2|0|Congo red|Kongo kırmızısı|C₃₂H₂₂N₆Na₂O₆S₂||indicator|Molecular|S|0|1|Crystals|512|696.664|1.4|||||||||||||||||C8201E|1|40||C32H22N6Na2O6S2|0|0|1200|||
-m_c16h18cln3s|0|Methylene blue|Metilen mavisi|C₁₆H₁₈ClN₃S||indicator|Molecular|S|0|1|Crystals|16|319.851|1|||||||||||||||||1E50C8|1|40||C16H18ClN3S|0|0|1200|||
-m_c25h30cln3|0|Crystal violet|Kristal viyole|C₂₅H₃₀ClN₃|Gentiyan moru|indicator|Molecular|S|0|1|Crystals|546|407.986|1.19|||||||||||||||||6A1E9A|1|40||C25H30ClN3|0|0|1200|||
-m_c14h8o4|0|Alizarin|Alizarin|C₁₄H₈O₄|Kök boya|indicator|Molecular|S|0|0|Crystals|16|240.214|1.54|||||||||||||||||E05A1E|1|||C14H8O4|0|0|1200|||
-m_c21h14br4o5s|0|Bromocresol green|Bromkrezol yeşili|C₂₁H₁₄Br₄O₅S||indicator|Molecular|S|0|0|Crystals|16|698.014|1.2|||||||||||||||||3A9A6A|1|||C21H14Br4O5S|0|0|1200|||
+m_c27h28br2o5s|0|Bromothymol blue|Bromtimol mavisi|C₂₇H₂₈Br₂O₅S|BTB|indicator|Molecular|S|0|0|Crystals|16|624.384|1.25|||||||||||||||||3A6AC8|1|||C27H28Br2O5S|0|0|1200|||76-59-5
+m_c15h15n3o2|0|Methyl red|Metil kırmızısı|C₁₅H₁₅N₃O₂||indicator|Molecular|S|0|0|Crystals|16|269.304|1.2|||||||||||||||||D9301E|1|||C15H15N3O2|0|0|1200|||493-52-7
+m_c27h30o5s|0|Thymol blue|Timol mavisi|C₂₇H₃₀O₅S||indicator|Molecular|S|0|0|Crystals|16|466.592|1.2|||||||||||||||||4A6AB8|1|||C27H30O5S|0|0|1200|||76-61-9
+m_c32h22n6na2o6s2|0|Congo red|Kongo kırmızısı|C₃₂H₂₂N₆Na₂O₆S₂||indicator|Molecular|S|0|1|Crystals|512|696.664|1.4|||||||||||||||||C8201E|1|40||C32H22N6Na2O6S2|0|0|1200|||573-58-0
+m_c16h18cln3s|0|Methylene blue|Metilen mavisi|C₁₆H₁₈ClN₃S||indicator|Molecular|S|0|1|Crystals|16|319.851|1|||||||||||||||||1E50C8|1|40||C16H18ClN3S|0|0|1200|||61-73-4
+m_c25h30cln3|0|Crystal violet|Kristal viyole|C₂₅H₃₀ClN₃|Gentiyan moru|indicator|Molecular|S|0|1|Crystals|546|407.986|1.19|||||||||||||||||6A1E9A|1|40||C25H30ClN3|0|0|1200|||548-62-9
+m_c14h8o4|0|Alizarin|Alizarin|C₁₄H₈O₄|Kök boya|indicator|Molecular|S|0|0|Crystals|16|240.214|1.54|||||||||||||||||E05A1E|1|||C14H8O4|0|0|1200|||72-48-0
+m_c21h14br4o5s|0|Bromocresol green|Bromkrezol yeşili|C₂₁H₁₄Br₄O₅S||indicator|Molecular|S|0|0|Crystals|16|698.014|1.2|||||||||||||||||3A9A6A|1|||C21H14Br4O5S|0|0|1200|||76-60-8
 universal_indicator|1||Üniversal indikatör||pH kâğıdı çözeltisi;Evrensel indikatör|indicator|Molecular|S|0|0|Powder|0||||||||||||||||||||||||0|0||||
-i_li_f|0|Lithium fluoride|Lityum florür|LiF||ionic|Salt|S|0|0|Powder|18|25.9384|2.0358||||||m_hf|1|Li|1|1|F|1|1|||1|F2F2F2|1||||0|0|800|||
-i_li_cl|0|Lithium chloride|Lityum klorür|LiCl||ionic|Salt|S|0|1|Crystals|16|42.39|2.07||||||||Li|1|1|Cl|1|1|||1|F2F2F2|1||Li+ Cl-||0|0|800|||
-i_li_br|0|Lithium bromide|Lityum bromür|LiBr||ionic|Salt|S|0|1|Crystals|16|86.844|2.58949||||||||Li|1|1|Br|1|1|||1|F2F2F2|1||Li+ Br-||0|0|800|||
-i_li_i|0|Lithium iodide|Lityum iyodür|LiI||ionic|Salt|S|0|1|Crystals|16|133.844|3.01677||||||||Li|1|1|I|1|1|||1|F2F2F2|1||Li+ I-||0|0|800|||
-i_li_oh|0|Lithium hydroxide|Lityum hidroksit|LiOH||ionic|StrongBase|S|0|1|Crystals|17|23.947|2.0177|||1|||||Li|1|1|OH|1|1|||1|F2F2F2|1||Li+ OH-||0|0|800|||
-i_li_no3|0|Lithium nitrate|Lityum nitrat|LiNO₃||ionic|Salt|S|0|1|Crystals|24|68.944|2.42676||||||||Li|1|1|NO3|1|1|||1|F2F2F2|1||Li+ NO3-||0|0|800|||
-i_li_no2|0|Lithium nitrite|Lityum nitrit|LiNO₂||ionic|Salt|S|0|1|Crystals|26|52.945|2.28132||||||m_hno2|1|Li|1|1|NO2|1|1|||1|F2F2F2|1||Li+ NO2-||0|0|800|||
-i_li_cn|0|Lithium cyanide|Lityum siyanür|LiCN||ionic|Salt|S|0|1|Crystals|50|32.958|2.09962||||||m_hcn|1|Li|1|1|CN|1|1|||1|F2F2F2|1||Li+ CN-||0|0|800|||
-i_li_scn|0|Lithium thiocyanate|Lityum tiyosiyanat|LiSCN||ionic|Salt|S|0|1|Crystals|16|65.018|2.39107||||||||Li|1|1|SCN|1|1|||1|F2F2F2|1||Li+ SCN-||0|0|800|||
-i_li_clo|0|Lithium hypochlorite|Lityum hipoklorit|LiClO||ionic|Salt|S|0|1|Crystals|49|58.389|2.33081||||||m_hclo|1|Li|1|1|ClO|1|1|||1|F2F2F2|1||Li+ ClO-||0|0|800|||
-i_li_clo3|0|Lithium chlorate|Lityum klorat|LiClO₃||ionic|Salt|S|0|1|Crystals|24|90.387|2.6217||||||||Li|1|1|ClO3|1|1|||1|F2F2F2|1||Li+ ClO3-||0|0|800|||
-i_li_clo4|0|Lithium perchlorate|Lityum perklorat|LiClO₄||ionic|Salt|S|0|1|Crystals|24|106.386|2.76715||||||||Li|1|1|ClO4|1|1|||1|F2F2F2|1||Li+ ClO4-||0|0|800|||
+i_li_f|0|Lithium fluoride|Lityum florür|LiF||ionic|Salt|S|0|0|Powder|18|25.9384|2.0358||||||m_hf|1|Li|1|1|F|1|1|||1|F2F2F2|1||||0|0|800|||7789-24-4
+i_li_cl|0|Lithium chloride|Lityum klorür|LiCl||ionic|Salt|S|0|1|Crystals|16|42.39|2.07||||||||Li|1|1|Cl|1|1|||1|F2F2F2|1||Li+ Cl-||0|0|800|||7447-41-8
+i_li_br|0|Lithium bromide|Lityum bromür|LiBr||ionic|Salt|S|0|1|Crystals|16|86.844|2.58949||||||||Li|1|1|Br|1|1|||1|F2F2F2|1||Li+ Br-||0|0|800|||7550-35-8
+i_li_i|0|Lithium iodide|Lityum iyodür|LiI||ionic|Salt|S|0|1|Crystals|16|133.844|3.01677||||||||Li|1|1|I|1|1|||1|F2F2F2|1||Li+ I-||0|0|800|||10377-51-2
+i_li_oh|0|Lithium hydroxide|Lityum hidroksit|LiOH||ionic|StrongBase|S|0|1|Crystals|17|23.947|2.0177|||1|||||Li|1|1|OH|1|1|||1|F2F2F2|1||Li+ OH-||0|0|800|||1310-65-2
+i_li_no3|0|Lithium nitrate|Lityum nitrat|LiNO₃||ionic|Salt|S|0|1|Crystals|24|68.944|2.42676||||||||Li|1|1|NO3|1|1|||1|F2F2F2|1||Li+ NO3-||0|0|800|||7790-69-4
+i_li_no2|0|Lithium nitrite|Lityum nitrit|LiNO₂||ionic|Salt|S|0|1|Crystals|26|52.945|2.28132||||||m_hno2|1|Li|1|1|NO2|1|1|||1|F2F2F2|1||Li+ NO2-||0|0|800|||13568-33-7
+i_li_cn|0|Lithium cyanide|Lityum siyanür|LiCN||ionic|Salt|S|0|1|Crystals|50|32.958|2.09962||||||m_hcn|1|Li|1|1|CN|1|1|||1|F2F2F2|1||Li+ CN-||0|0|800|||2408-36-8
+i_li_scn|0|Lithium thiocyanate|Lityum tiyosiyanat|LiSCN||ionic|Salt|S|0|1|Crystals|16|65.018|2.39107||||||||Li|1|1|SCN|1|1|||1|F2F2F2|1||Li+ SCN-||0|0|800|||556-65-0
+i_li_clo|0|Lithium hypochlorite|Lityum hipoklorit|LiClO||ionic|Salt|S|0|1|Crystals|49|58.389|2.33081||||||m_hclo|1|Li|1|1|ClO|1|1|||1|F2F2F2|1||Li+ ClO-||0|0|800|||13840-33-0
+i_li_clo3|0|Lithium chlorate|Lityum klorat|LiClO₃||ionic|Salt|S|0|1|Crystals|24|90.387|2.6217||||||||Li|1|1|ClO3|1|1|||1|F2F2F2|1||Li+ ClO3-||0|0|800|||13453-71-9
+i_li_clo4|0|Lithium perchlorate|Lityum perklorat|LiClO₄||ionic|Salt|S|0|1|Crystals|24|106.386|2.76715||||||||Li|1|1|ClO4|1|1|||1|F2F2F2|1||Li+ ClO4-||0|0|800|||7791-03-9
 i_li_bro3|0|Lithium bromate|Lityum bromat|LiBrO₃||ionic|Salt|S|0|1|Crystals|26|134.841|3.02583||||||||Li|1|1|BrO3|1|1|||1|F2F2F2|1||Li+ BrO3-||0|0|800|||
-i_li_io3|0|Lithium iodate|Lityum iyodat|LiIO₃||ionic|Salt|S|0|1|Crystals|24|181.841|3.4531||||||||Li|1|1|IO3|1|1|||1|F2F2F2|1||Li+ IO3-||0|0|800|||
+i_li_io3|0|Lithium iodate|Lityum iyodat|LiIO₃||ionic|Salt|S|0|1|Crystals|24|181.841|3.4531||||||||Li|1|1|IO3|1|1|||1|F2F2F2|1||Li+ IO3-||0|0|800|||13765-03-2
 i_li_mno4|0|Lithium permanganate|Lityum permanganat|LiMnO₄||ionic|Salt|S|0|1|Crystals|56|125.874|2.94431||||||||Li|1|1|MnO4|1|1|||1|7A0F8C|0.8|400|Li+ MnO4-||0|0|800|||
 i_li_hco3|0|Lithium hydrogencarbonate|Lityum bikarbonat|LiHCO₃|Lityum hidrojen karbonat|ionic|Salt|S|0|1|Crystals|16|67.956|2.41778||||||h_hco3_amph|1|Li|1|1|HCO3|1|1|||1|F2F2F2|1||Li+ HCO3-||0|0|800|||
 i_li_hso4|0|Lithium hydrogensulfate|Lityum bisülfat|LiHSO₄|Lityum hidrojen sülfat|ionic|Salt|S|0|1|Crystals|17|104.004|2.74549||||||||Li|1|1|HSO4|1|1||0.012|1|F2F2F2|1||Li+ HSO4-||0|0|800|||
-i_li_h2po4|0|Lithium dihydrogenphosphate|Lityum dihidrojen fosfat|LiH₂PO₄||ionic|Salt|S|0|1|Crystals|16|103.926|2.74478||||||||Li|1|1|H2PO4|1|1||6.2e-08|1|F2F2F2|1||Li+ H2PO4-||0|0|800|||
-i_li_ch3coo|0|Lithium acetate|Lityum asetat|CH₃COOLi|Lityum etanoat|ionic|Salt|S|0|1|Crystals|16|65.984|2.39985||||||acetic_acid|1|Li|1|1|CH3COO|1|1|||1|F2F2F2|1||Li+ CH3COO-||0|0|800|||
-i_li_hcoo|0|Lithium formate|Lityum format|HCOOLi|Lityum metanoat|ionic|Salt|S|0|1|Crystals|16|51.957|2.27234||||||m_hcooh|1|Li|1|1|HCOO|1|1|||1|F2F2F2|1||Li+ HCOO-||0|0|800|||
+i_li_h2po4|0|Lithium dihydrogenphosphate|Lityum dihidrojen fosfat|LiH₂PO₄||ionic|Salt|S|0|1|Crystals|16|103.926|2.74478||||||||Li|1|1|H2PO4|1|1||6.2e-08|1|F2F2F2|1||Li+ H2PO4-||0|0|800|||13453-80-0
+i_li_ch3coo|0|Lithium acetate|Lityum asetat|CH₃COOLi|Lityum etanoat|ionic|Salt|S|0|1|Crystals|16|65.984|2.39985||||||acetic_acid|1|Li|1|1|CH3COO|1|1|||1|F2F2F2|1||Li+ CH3COO-||0|0|800|||546-89-4
+i_li_hcoo|0|Lithium formate|Lityum format|HCOOLi|Lityum metanoat|ionic|Salt|S|0|1|Crystals|16|51.957|2.27234||||||m_hcooh|1|Li|1|1|HCOO|1|1|||1|F2F2F2|1||Li+ HCOO-||0|0|800|||556-63-8
 i_li_o|0|Lithium oxide|Lityum oksit|Li₂O||ionic|Salt|S|0|0|Powder|17|29.879|2.01||||||||Li|1|2|O|2|1|||1|F2F2F2|1||||0|0|800|||
-i_li_s|0|Lithium sulfide|Lityum sülfür|Li₂S||ionic|Salt|S|0|1|Crystals|48|45.94|2.21764||||||h_hs|1|Li|1|2|S|2|1|||1|F2E6A0|1||Li+*2 S^2-||0|0|800|||
-i_li_so4|0|Lithium sulfate|Lityum sülfat|Li₂SO₄||ionic|Salt|S|0|1|Crystals|16|109.936|2.79942||||||||Li|1|2|SO4|2|1|||1|F2F2F2|1||Li+*2 SO4^2-||0|0|800|||
+i_li_s|0|Lithium sulfide|Lityum sülfür|Li₂S||ionic|Salt|S|0|1|Crystals|48|45.94|2.21764||||||h_hs|1|Li|1|2|S|2|1|||1|F2E6A0|1||Li+*2 S^2-||0|0|800|||12136-58-2
+i_li_so4|0|Lithium sulfate|Lityum sülfat|Li₂SO₄||ionic|Salt|S|0|1|Crystals|16|109.936|2.79942||||||||Li|1|2|SO4|2|1|||1|F2F2F2|1||Li+*2 SO4^2-||0|0|800|||10377-48-7
 i_li_so3|0|Lithium sulfite|Lityum sülfit|Li₂SO₃||ionic|Salt|S|0|1|Crystals|16|93.937|2.65397||||||h_hso3|1|Li|1|2|SO3|2|1|||1|F2F2F2|1||Li+*2 SO3^2-||0|0|800|||
 i_li_s2o3|0|Lithium thiosulfate|Lityum tiyosülfat|Li₂S₂O₃||ionic|Salt|S|0|1|Crystals|16|125.997|2.94543||||||||Li|1|2|S2O3|2|1|||1|F2F2F2|1||Li+*2 S2O3^2-||0|0|800|||
-i_li_co3|0|Lithium carbonate|Lityum karbonat|Li₂CO₃||ionic|Salt|S|0|1|Crystals|16|73.888|2.47171||||||h_hco3|1|Li|1|2|CO3|2|1|||1|F2F2F2|1||Li+*2 CO3^2-||0|0|800|||
+i_li_co3|0|Lithium carbonate|Lityum karbonat|Li₂CO₃||ionic|Salt|S|0|1|Crystals|16|73.888|2.47171||||||h_hco3|1|Li|1|2|CO3|2|1|||1|F2F2F2|1||Li+*2 CO3^2-||0|0|800|||554-13-2
 i_li_c2o4|0|Lithium oxalate|Lityum oksalat|Li₂C₂O₄||ionic|Salt|S|0|1|Crystals|16|101.898|2.72635||||||h_hc2o4|1|Li|1|2|C2O4|2|1|||1|F2F2F2|1||Li+*2 C2O4^2-||0|0|800|||
-i_li_cro4|0|Lithium chromate|Lityum kromat|Li₂CrO₄||ionic|Salt|S|0|1|Crystals|570|129.872|2.98066||||||||Li|1|2|CrO4|2|1|||1|F2D21E|0.8|40|Li+*2 CrO4^2-||0|0|800|||
-i_li_cr2o7|0|Lithium dichromate|Lityum dikromat|Li₂Cr₂O₇||ionic|Salt|S|0|1|Crystals|570|229.865|3.88968||||||||Li|1|2|Cr2O7|2|1|||1|F27A1E|0.8|30|Li+*2 Cr2O7^2-||0|0|800|||
+i_li_cro4|0|Lithium chromate|Lityum kromat|Li₂CrO₄||ionic|Salt|S|0|1|Crystals|570|129.872|2.98066||||||||Li|1|2|CrO4|2|1|||1|F2D21E|0.8|40|Li+*2 CrO4^2-||0|0|800|||14307-35-8
+i_li_cr2o7|0|Lithium dichromate|Lityum dikromat|Li₂Cr₂O₇||ionic|Salt|S|0|1|Crystals|570|229.865|3.88968||||||||Li|1|2|Cr2O7|2|1|||1|F27A1E|0.8|30|Li+*2 Cr2O7^2-||0|0|800|||10022-48-7
 i_li_sio3|0|Lithium silicate|Lityum silikat|Li₂SiO₃||ionic|Salt|S|0|1|Crystals|16|89.962|2.61784||||||h_hsio3|1|Li|1|2|SiO3|2|1|||1|F2F2F2|1||Li+*2 SiO3^2-||0|0|800|||
 i_li_hpo4|0|Lithium hydrogenphosphate|Lityum hidrojen fosfat|Li₂HPO₄||ionic|Salt|S|0|1|Crystals|16|109.858|2.79871||||||h_h2po4|1|Li|1|2|HPO4|2|1|||1|F2F2F2|1||Li+*2 HPO4^2-||0|0|800|||
-i_li_po4|0|Lithium phosphate|Lityum fosfat|Li₃PO₄||ionic|Salt|S|0|0|Powder|16|115.79|2.85263||||||h_hpo4|1|Li|1|3|PO4|3|1|||1|F2F2F2|1||||0|0|800|||
+i_li_po4|0|Lithium phosphate|Lityum fosfat|Li₃PO₄||ionic|Salt|S|0|0|Powder|16|115.79|2.85263||||||h_hpo4|1|Li|1|3|PO4|3|1|||1|F2F2F2|1||||0|0|800|||10377-52-3
 i_li_b4o7|0|Lithium tetraborate|Lityum tetraborat|Li₂B₄O₇||ionic|Salt|S|0|1|Crystals|528|169.113|3.33739||||||m_h3bo3|1|Li|1|2|B4O7|2|1|||1|F2F2F2|1||Li+*2 B4O7^2-||0|0|800|||
 i_li_o2|0|Lithium peroxide|Lityum peroksit|Li₂O₂||ionic|Salt|S|0|0|Powder|25|45.878|2.21707||||||||Li|1|2|O2|2|1|||1|F2F2F2|1||||0|0|800|||
 i_li_n|0|Lithium nitride|Lityum nitrür|Li₃N||ionic|Salt|S|0|0|Powder|80|34.827|2.11661||||||||Li|1|3|N|3|1|||1|F2F2F2|1||||0|0|800|||
-i_li_h|0|Lithium hydride|Lityum hidrür|LiH||ionic|Salt|S|0|0|Powder|84|7.948|1.87225||||||||Li|1|1|H|1|1|||1|F2F2F2|1||||0|0|800|||
-i_li_c6h5coo|0|Lithium benzoate|Lityum benzoat|C₆H₅COOLi||ionic|Salt|S|0|1|Crystals|16|128.055|2.96414||||||m_c6h5cooh|1|Li|1|1|C6H5COO|1|1|||1|F2F2F2|1||Li+ C6H5COO-||0|0|800|||
-i_li_c6h5o7|0|Lithium citrate|Lityum sitrat|Li₃C₆H₅O₇||ionic|Salt|S|0|1|Crystals|16|209.919|3.70835||||||m_c6h8o7|1|Li|1|3|C6H5O7|3|1|||1|F2F2F2|1||Li+*3 C6H5O7^3-||0|0|800|||
-i_li_c3h5o3|0|Lithium lactate|Lityum laktat|LiC₃H₅O₃||ionic|Salt|S|0|1|Crystals|16|96.01|2.67282||||||m_c3h6o3|1|Li|1|1|C3H5O3|1|1|||1|F2F2F2|1||Li+ C3H5O3-||0|0|800|||
-i_li_c17h35coo|0|Lithium stearate|Lityum stearat|C₁₇H₃₅COOLi||ionic|Salt|S|0|0|Powder|16|290.416|4.44015||||||||Li|1|1|C17H35COO|1|1|||1|F2F2F2|1||||0|0|800|||
-i_li_moo4|0|Lithium molybdate|Lityum molibdat|Li₂MoO₄||ionic|Salt|S|0|1|Crystals|16|173.826|3.38024||||||||Li|1|2|MoO4|2|1|||1|F2F2F2|1||Li+*2 MoO4^2-||0|0|800|||
-i_na_f|0|Sodium fluoride|Sodyum florür|NaF||ionic|Salt|S|0|1|Crystals|2|41.9882|2.56||||||m_hf|1|Na|1|1|F|1|1|||1|F2F2F2|1||Na+ F-||0|0|800|||
-nacl|1|Sodium chloride|Sodyum klorür||Sofra tuzu;Kaya tuzu;Tuz|ionic|Molecular|S|0|0|Powder|0||||||||||Na|1|1|Cl|1|1|||1||||||0|0||||
-i_na_br|0|Sodium bromide|Sodyum bromür|NaBr||ionic|Salt|S|0|1|Crystals|0|102.894|3.21||||||||Na|1|1|Br|1|1|||1|F2F2F2|1||Na+ Br-||0|0|800|||
-i_na_i|0|Sodium iodide|Sodyum iyodür|NaI||ionic|Salt|S|0|1|Crystals|0|149.894|3.67||||||||Na|1|1|I|1|1|||1|F2F2F2|1||Na+ I-||0|0|800|||
-naoh|1|Sodium hydroxide|Sodyum hidroksit||Sud kostik;Kostik soda|ionic|Molecular|S|0|0|Powder|0||||||||||Na|1|1|OH|1|1|||1||||||0|0||||
-nano3|1|Sodium nitrate|Sodyum nitrat||Şili güherçilesi|ionic|Molecular|S|0|0|Powder|0||||||||||Na|1|1|NO3|1|1|||1||||||0|0||||
-i_na_no2|0|Sodium nitrite|Sodyum nitrit|NaNO₂||ionic|Salt|S|0|1|Crystals|10|68.9948|2.42723||||||m_hno2|1|Na|1|1|NO2|1|1|||1|F2F2F2|1||Na+ NO2-||0|0|800|||
-i_na_cn|0|Sodium cyanide|Sodyum siyanür|NaCN||ionic|Salt|S|0|1|Crystals|34|49.0078|2.24553||||||m_hcn|1|Na|1|1|CN|1|1|||1|F2F2F2|1||Na+ CN-||0|0|800|||
-i_na_scn|0|Sodium thiocyanate|Sodyum tiyosiyanat|NaSCN||ionic|Salt|S|0|1|Crystals|16|81.0678|2.53698||||||||Na|1|1|SCN|1|1|||1|F2F2F2|1||Na+ SCN-||0|0|800|||
-naocl|1|Sodium hypochlorite|Sodyum hipoklorit||Çamaşır suyu|ionic|Molecular|S|0|0|Powder|0||||||||m_hclo|1|Na|1|1|ClO|1|1|||1||||||0|0||||
-i_na_clo3|0|Sodium chlorate|Sodyum klorat|NaClO₃||ionic|Salt|S|0|1|Crystals|24|106.437|2.76761||||||||Na|1|1|ClO3|1|1|||1|F2F2F2|1||Na+ ClO3-||0|0|800|||
-i_na_clo4|0|Sodium perchlorate|Sodyum perklorat|NaClO₄||ionic|Salt|S|0|1|Crystals|24|122.436|2.52||||||||Na|1|1|ClO4|1|1|||1|F2F2F2|1||Na+ ClO4-||0|0|800|||
-i_na_bro3|0|Sodium bromate|Sodyum bromat|NaBrO₃||ionic|Salt|S|0|1|Crystals|10|150.891|3.17173||||||||Na|1|1|BrO3|1|1|||1|F2F2F2|1||Na+ BrO3-||0|0|800|||
-i_na_io3|0|Sodium iodate|Sodyum iyodat|NaIO₃||ionic|Salt|S|0|1|Crystals|24|197.891|3.59901||||||||Na|1|1|IO3|1|1|||1|F2F2F2|1||Na+ IO3-||0|0|800|||
-i_na_mno4|0|Sodium permanganate|Sodyum permanganat|NaMnO₄||ionic|Salt|S|0|1|Crystals|56|141.924|3.09022||||||||Na|1|1|MnO4|1|1|||1|7A0F8C|0.8|400|Na+ MnO4-||0|0|800|||
-nahco3|1|Sodium hydrogencarbonate|Sodyum bikarbonat||Karbonat;Kabartma tozu;Sodyum hidrojen karbonat;Sodyum hidrojen karbonat|ionic|Molecular|S|0|0|Powder|0||||||||h_hco3_amph|1|Na|1|1|HCO3|1|1|||1||||||0|0||||
+i_li_h|0|Lithium hydride|Lityum hidrür|LiH||ionic|Salt|S|0|0|Powder|84|7.948|1.87225||||||||Li|1|1|H|1|1|||1|F2F2F2|1||||0|0|800|||7580-67-8
+i_li_c6h5coo|0|Lithium benzoate|Lityum benzoat|C₆H₅COOLi||ionic|Salt|S|0|1|Crystals|16|128.055|2.96414||||||m_c6h5cooh|1|Li|1|1|C6H5COO|1|1|||1|F2F2F2|1||Li+ C6H5COO-||0|0|800|||553-54-8
+i_li_c6h5o7|0|Lithium citrate|Lityum sitrat|Li₃C₆H₅O₇||ionic|Salt|S|0|1|Crystals|16|209.919|3.70835||||||m_c6h8o7|1|Li|1|3|C6H5O7|3|1|||1|F2F2F2|1||Li+*3 C6H5O7^3-||0|0|800|||919-16-4
+i_li_c3h5o3|0|Lithium lactate|Lityum laktat|LiC₃H₅O₃||ionic|Salt|S|0|1|Crystals|16|96.01|2.67282||||||m_c3h6o3|1|Li|1|1|C3H5O3|1|1|||1|F2F2F2|1||Li+ C3H5O3-||0|0|800|||867-55-0
+i_li_c17h35coo|0|Lithium stearate|Lityum stearat|C₁₇H₃₅COOLi||ionic|Salt|S|0|0|Powder|16|290.416|4.44015||||||||Li|1|1|C17H35COO|1|1|||1|F2F2F2|1||||0|0|800|||4485-12-5
+i_li_moo4|0|Lithium molybdate|Lityum molibdat|Li₂MoO₄||ionic|Salt|S|0|1|Crystals|16|173.826|3.38024||||||||Li|1|2|MoO4|2|1|||1|F2F2F2|1||Li+*2 MoO4^2-||0|0|800|||13568-40-6
+i_na_f|0|Sodium fluoride|Sodyum florür|NaF||ionic|Salt|S|0|1|Crystals|2|41.9882|2.56||||||m_hf|1|Na|1|1|F|1|1|||1|F2F2F2|1||Na+ F-||0|0|800|||7681-49-4
+nacl|1|Sodium chloride|Sodyum klorür||Sofra tuzu;Kaya tuzu;Tuz|ionic|Molecular|S|0|0|Powder|0||||||||||Na|1|1|Cl|1|1|||1||||||0|0||||7647-14-5
+i_na_br|0|Sodium bromide|Sodyum bromür|NaBr||ionic|Salt|S|0|1|Crystals|0|102.894|3.21||||||||Na|1|1|Br|1|1|||1|F2F2F2|1||Na+ Br-||0|0|800|||7647-15-6
+i_na_i|0|Sodium iodide|Sodyum iyodür|NaI||ionic|Salt|S|0|1|Crystals|0|149.894|3.67||||||||Na|1|1|I|1|1|||1|F2F2F2|1||Na+ I-||0|0|800|||7681-82-5
+naoh|1|Sodium hydroxide|Sodyum hidroksit||Sud kostik;Kostik soda|ionic|Molecular|S|0|0|Powder|0||||||||||Na|1|1|OH|1|1|||1||||||0|0||||1310-73-2
+nano3|1|Sodium nitrate|Sodyum nitrat||Şili güherçilesi|ionic|Molecular|S|0|0|Powder|0||||||||||Na|1|1|NO3|1|1|||1||||||0|0||||7631-99-4
+i_na_no2|0|Sodium nitrite|Sodyum nitrit|NaNO₂||ionic|Salt|S|0|1|Crystals|10|68.9948|2.42723||||||m_hno2|1|Na|1|1|NO2|1|1|||1|F2F2F2|1||Na+ NO2-||0|0|800|||7632-00-0
+i_na_cn|0|Sodium cyanide|Sodyum siyanür|NaCN||ionic|Salt|S|0|1|Crystals|34|49.0078|2.24553||||||m_hcn|1|Na|1|1|CN|1|1|||1|F2F2F2|1||Na+ CN-||0|0|800|||143-33-9
+i_na_scn|0|Sodium thiocyanate|Sodyum tiyosiyanat|NaSCN||ionic|Salt|S|0|1|Crystals|16|81.0678|2.53698||||||||Na|1|1|SCN|1|1|||1|F2F2F2|1||Na+ SCN-||0|0|800|||540-72-7
+naocl|1|Sodium hypochlorite|Sodyum hipoklorit||Çamaşır suyu|ionic|Molecular|S|0|0|Powder|0||||||||m_hclo|1|Na|1|1|ClO|1|1|||1||||||0|0||||7681-52-9
+i_na_clo3|0|Sodium chlorate|Sodyum klorat|NaClO₃||ionic|Salt|S|0|1|Crystals|24|106.437|2.76761||||||||Na|1|1|ClO3|1|1|||1|F2F2F2|1||Na+ ClO3-||0|0|800|||7775-09-9
+i_na_clo4|0|Sodium perchlorate|Sodyum perklorat|NaClO₄||ionic|Salt|S|0|1|Crystals|24|122.436|2.52||||||||Na|1|1|ClO4|1|1|||1|F2F2F2|1||Na+ ClO4-||0|0|800|||7601-89-0
+i_na_bro3|0|Sodium bromate|Sodyum bromat|NaBrO₃||ionic|Salt|S|0|1|Crystals|10|150.891|3.17173||||||||Na|1|1|BrO3|1|1|||1|F2F2F2|1||Na+ BrO3-||0|0|800|||7789-38-0
+i_na_io3|0|Sodium iodate|Sodyum iyodat|NaIO₃||ionic|Salt|S|0|1|Crystals|24|197.891|3.59901||||||||Na|1|1|IO3|1|1|||1|F2F2F2|1||Na+ IO3-||0|0|800|||7681-55-2
+i_na_mno4|0|Sodium permanganate|Sodyum permanganat|NaMnO₄||ionic|Salt|S|0|1|Crystals|56|141.924|3.09022||||||||Na|1|1|MnO4|1|1|||1|7A0F8C|0.8|400|Na+ MnO4-||0|0|800|||10101-50-5
+nahco3|1|Sodium hydrogencarbonate|Sodyum bikarbonat||Karbonat;Kabartma tozu;Sodyum hidrojen karbonat;Sodyum hidrojen karbonat|ionic|Molecular|S|0|0|Powder|0||||||||h_hco3_amph|1|Na|1|1|HCO3|1|1|||1||||||0|0||||144-55-8
 i_na_hso4|0|Sodium hydrogensulfate|Sodyum bisülfat|NaHSO₄|Sodyum hidrojen sülfat|ionic|Salt|S|0|1|Crystals|1|120.054|2.8914||||||||Na|1|1|HSO4|1|1||0.012|1|F2F2F2|1||Na+ HSO4-||0|0|800|||
 i_na_h2po4|0|Sodium dihydrogenphosphate|Sodyum dihidrojen fosfat|NaH₂PO₄||ionic|Salt|S|0|1|Crystals|0|119.976|2.89069||||||||Na|1|1|H2PO4|1|1||6.2e-08|1|F2F2F2|1||Na+ H2PO4-||0|0|800|||
-sodium_acetate|1|Sodium acetate|Sodyum asetat||Sodyum etanoat;Sodyum etanoat|ionic|Molecular|S|0|0|Powder|0||||||||acetic_acid|1|Na|1|1|CH3COO|1|1|||1||||||0|0||||
-i_na_hcoo|0|Sodium formate|Sodyum format|HCOONa|Sodyum metanoat|ionic|Salt|S|0|1|Crystals|0|68.0068|2.41824||||||m_hcooh|1|Na|1|1|HCOO|1|1|||1|F2F2F2|1||Na+ HCOO-||0|0|800|||
+sodium_acetate|1|Sodium acetate|Sodyum asetat||Sodyum etanoat;Sodyum etanoat|ionic|Molecular|S|0|0|Powder|0||||||||acetic_acid|1|Na|1|1|CH3COO|1|1|||1||||||0|0||||127-09-3
+i_na_hcoo|0|Sodium formate|Sodyum format|HCOONa|Sodyum metanoat|ionic|Salt|S|0|1|Crystals|0|68.0068|2.41824||||||m_hcooh|1|Na|1|1|HCOO|1|1|||1|F2F2F2|1||Na+ HCOO-||0|0|800|||141-53-7
 i_na_o|0|Sodium oxide|Sodyum oksit|Na₂O||ionic|Salt|S|0|0|Powder|1|61.9785|2.27||||||||Na|1|2|O|2|1|||1|F2F2F2|1||||0|0|800|||
-i_na_s|0|Sodium sulfide|Sodyum sülfür|Na₂S||ionic|Salt|S|0|1|Crystals|32|78.0395|2.50945||||||h_hs|1|Na|1|2|S|2|1|||1|F2E6A0|1||Na+*2 S^2-||0|0|800|||
-na2so4|1|Sodium sulfate|Sodyum sülfat||Glauber tuzu|ionic|Molecular|S|0|0|Powder|0||||||||||Na|1|2|SO4|2|1|||1||||||0|0||||
-i_na_so3|0|Sodium sulfite|Sodyum sülfit|Na₂SO₃||ionic|Salt|S|0|1|Crystals|0|126.037|2.63||||||h_hso3|1|Na|1|2|SO3|2|1|||1|F2F2F2|1||Na+*2 SO3^2-||0|0|800|||
-i_na_s2o3|0|Sodium thiosulfate|Sodyum tiyosülfat|Na₂S₂O₃|Hipo|ionic|Salt|S|0|1|Crystals|0|158.097|1.67||||||||Na|1|2|S2O3|2|1|||1|F2F2F2|1||Na+*2 S2O3^2-||0|0|800|||
-i_na_co3|0|Sodium carbonate|Sodyum karbonat|Na₂CO₃|Çamaşır sodası;Soda|ionic|Salt|S|0|1|Crystals|16|105.988|2.54||||||h_hco3|1|Na|1|2|CO3|2|1|||1|F2F2F2|1||Na+*2 CO3^2-||0|0|800|||
-i_na_c2o4|0|Sodium oxalate|Sodyum oksalat|Na₂C₂O₄||ionic|Salt|S|0|1|Crystals|16|133.998|3.01816||||||h_hc2o4|1|Na|1|2|C2O4|2|1|||1|F2F2F2|1||Na+*2 C2O4^2-||0|0|800|||
-i_na_cro4|0|Sodium chromate|Sodyum kromat|Na₂CrO₄||ionic|Salt|S|0|1|Crystals|554|161.972|3.27247||||||||Na|1|2|CrO4|2|1|||1|F2D21E|0.8|40|Na+*2 CrO4^2-||0|0|800|||
-i_na_cr2o7|0|Sodium dichromate|Sodyum dikromat|Na₂Cr₂O₇||ionic|Salt|S|0|1|Crystals|554|261.965|4.1815||||||||Na|1|2|Cr2O7|2|1|||1|F27A1E|0.8|30|Na+*2 Cr2O7^2-||0|0|800|||
-i_na_sio3|0|Sodium silicate|Sodyum silikat|Na₂SiO₃|Su camı|ionic|Salt|S|0|1|Crystals|16|122.062|2.61||||||h_hsio3|1|Na|1|2|SiO3|2|1|||1|F2F2F2|1||Na+*2 SiO3^2-||0|0|800|||
-i_na_hpo4|0|Sodium hydrogenphosphate|Sodyum hidrojen fosfat|Na₂HPO₄||ionic|Salt|S|0|1|Crystals|0|141.957|3.09052||||||h_h2po4|1|Na|1|2|HPO4|2|1|||1|F2F2F2|1||Na+*2 HPO4^2-||0|0|800|||
-i_na_po4|0|Sodium phosphate|Sodyum fosfat|Na₃PO₄|TSP|ionic|Salt|S|0|1|Crystals|16|163.939|2.54||||||h_hpo4|1|Na|1|3|PO4|3|1|||1|F2F2F2|1||Na+*3 PO4^3-||0|0|800|||
-i_na_b4o7|0|Sodium tetraborate|Sodyum tetraborat|Na₂B₄O₇|Boraks|ionic|Salt|S|0|1|Crystals|512|201.213|3.6292||||||m_h3bo3|1|Na|1|2|B4O7|2|1|||1|F2F2F2|1||Na+*2 B4O7^2-||0|0|800|||
-i_na_o2|0|Sodium peroxide|Sodyum peroksit|Na₂O₂||ionic|Salt|S|0|0|Powder|9|77.9775|2.50889||||||||Na|1|2|O2|2|1|||1|F2E6A0|1||||0|0|800|||
-i_na_h|0|Sodium hydride|Sodyum hidrür|NaH||ionic|Salt|S|0|0|Powder|68|23.9978|2.01816||||||||Na|1|1|H|1|1|||1|F2F2F2|1||||0|0|800|||
-i_na_c6h5coo|0|Sodium benzoate|Sodyum benzoat|C₆H₅COONa|E211;Koruyucu|ionic|Salt|S|0|1|Crystals|0|144.105|3.11004||||||m_c6h5cooh|1|Na|1|1|C6H5COO|1|1|||1|F2F2F2|1||Na+ C6H5COO-||0|0|800|||
-i_na_c6h5o7|0|Sodium citrate|Sodyum sitrat|Na₃C₆H₅O₇|Trisodyum sitrat|ionic|Salt|S|0|1|Crystals|0|258.068|4.14608||||||m_c6h8o7|1|Na|1|3|C6H5O7|3|1|||1|F2F2F2|1||Na+*3 C6H5O7^3-||0|0|800|||
-i_na_c3h5o3|0|Sodium lactate|Sodyum laktat|NaC₃H₅O₃||ionic|Salt|S|0|1|Crystals|0|112.06|2.81873||||||m_c3h6o3|1|Na|1|1|C3H5O3|1|1|||1|F2F2F2|1||Na+ C3H5O3-||0|0|800|||
-i_na_c17h35coo|0|Sodium stearate|Sodyum stearat|C₁₇H₃₅COONa|Sabun;Sodyum sabunu|ionic|Salt|S|0|1|Crystals|0|306.466|4.58605||||||||Na|1|1|C17H35COO|1|1|||1|F2F2F2|1||Na+ C17H35COO-||0|0|800|||
+i_na_s|0|Sodium sulfide|Sodyum sülfür|Na₂S||ionic|Salt|S|0|1|Crystals|32|78.0395|2.50945||||||h_hs|1|Na|1|2|S|2|1|||1|F2E6A0|1||Na+*2 S^2-||0|0|800|||1313-82-2
+na2so4|1|Sodium sulfate|Sodyum sülfat||Glauber tuzu|ionic|Molecular|S|0|0|Powder|0||||||||||Na|1|2|SO4|2|1|||1||||||0|0||||7757-82-6
+i_na_so3|0|Sodium sulfite|Sodyum sülfit|Na₂SO₃||ionic|Salt|S|0|1|Crystals|0|126.037|2.63||||||h_hso3|1|Na|1|2|SO3|2|1|||1|F2F2F2|1||Na+*2 SO3^2-||0|0|800|||7757-83-7
+i_na_s2o3|0|Sodium thiosulfate|Sodyum tiyosülfat|Na₂S₂O₃|Hipo|ionic|Salt|S|0|1|Crystals|0|158.097|1.67||||||||Na|1|2|S2O3|2|1|||1|F2F2F2|1||Na+*2 S2O3^2-||0|0|800|||7772-98-7
+i_na_co3|0|Sodium carbonate|Sodyum karbonat|Na₂CO₃|Çamaşır sodası;Soda|ionic|Salt|S|0|1|Crystals|16|105.988|2.54||||||h_hco3|1|Na|1|2|CO3|2|1|||1|F2F2F2|1||Na+*2 CO3^2-||0|0|800|||497-19-8
+i_na_c2o4|0|Sodium oxalate|Sodyum oksalat|Na₂C₂O₄||ionic|Salt|S|0|1|Crystals|16|133.998|3.01816||||||h_hc2o4|1|Na|1|2|C2O4|2|1|||1|F2F2F2|1||Na+*2 C2O4^2-||0|0|800|||62-76-0
+i_na_cro4|0|Sodium chromate|Sodyum kromat|Na₂CrO₄||ionic|Salt|S|0|1|Crystals|554|161.972|3.27247||||||||Na|1|2|CrO4|2|1|||1|F2D21E|0.8|40|Na+*2 CrO4^2-||0|0|800|||7775-11-3
+i_na_cr2o7|0|Sodium dichromate|Sodyum dikromat|Na₂Cr₂O₇||ionic|Salt|S|0|1|Crystals|554|261.965|4.1815||||||||Na|1|2|Cr2O7|2|1|||1|F27A1E|0.8|30|Na+*2 Cr2O7^2-||0|0|800|||10588-01-9
+i_na_sio3|0|Sodium silicate|Sodyum silikat|Na₂SiO₃|Su camı|ionic|Salt|S|0|1|Crystals|16|122.062|2.61||||||h_hsio3|1|Na|1|2|SiO3|2|1|||1|F2F2F2|1||Na+*2 SiO3^2-||0|0|800|||6834-92-0
+i_na_hpo4|0|Sodium hydrogenphosphate|Sodyum hidrojen fosfat|Na₂HPO₄||ionic|Salt|S|0|1|Crystals|0|141.957|3.09052||||||h_h2po4|1|Na|1|2|HPO4|2|1|||1|F2F2F2|1||Na+*2 HPO4^2-||0|0|800|||7558-79-4
+i_na_po4|0|Sodium phosphate|Sodyum fosfat|Na₃PO₄|TSP|ionic|Salt|S|0|1|Crystals|16|163.939|2.54||||||h_hpo4|1|Na|1|3|PO4|3|1|||1|F2F2F2|1||Na+*3 PO4^3-||0|0|800|||7601-54-9
+i_na_b4o7|0|Sodium tetraborate|Sodyum tetraborat|Na₂B₄O₇|Boraks|ionic|Salt|S|0|1|Crystals|512|201.213|3.6292||||||m_h3bo3|1|Na|1|2|B4O7|2|1|||1|F2F2F2|1||Na+*2 B4O7^2-||0|0|800|||1330-43-4
+i_na_o2|0|Sodium peroxide|Sodyum peroksit|Na₂O₂||ionic|Salt|S|0|0|Powder|9|77.9775|2.50889||||||||Na|1|2|O2|2|1|||1|F2E6A0|1||||0|0|800|||1313-60-6
+i_na_h|0|Sodium hydride|Sodyum hidrür|NaH||ionic|Salt|S|0|0|Powder|68|23.9978|2.01816||||||||Na|1|1|H|1|1|||1|F2F2F2|1||||0|0|800|||7646-69-7
+i_na_c6h5coo|0|Sodium benzoate|Sodyum benzoat|C₆H₅COONa|E211;Koruyucu|ionic|Salt|S|0|1|Crystals|0|144.105|3.11004||||||m_c6h5cooh|1|Na|1|1|C6H5COO|1|1|||1|F2F2F2|1||Na+ C6H5COO-||0|0|800|||532-32-1
+i_na_c6h5o7|0|Sodium citrate|Sodyum sitrat|Na₃C₆H₅O₇|Trisodyum sitrat|ionic|Salt|S|0|1|Crystals|0|258.068|4.14608||||||m_c6h8o7|1|Na|1|3|C6H5O7|3|1|||1|F2F2F2|1||Na+*3 C6H5O7^3-||0|0|800|||68-04-2
+i_na_c3h5o3|0|Sodium lactate|Sodyum laktat|NaC₃H₅O₃||ionic|Salt|S|0|1|Crystals|0|112.06|2.81873||||||m_c3h6o3|1|Na|1|1|C3H5O3|1|1|||1|F2F2F2|1||Na+ C3H5O3-||0|0|800|||72-17-3
+i_na_c17h35coo|0|Sodium stearate|Sodyum stearat|C₁₇H₃₅COONa|Sabun;Sodyum sabunu|ionic|Salt|S|0|1|Crystals|0|306.466|4.58605||||||||Na|1|1|C17H35COO|1|1|||1|F2F2F2|1||Na+ C17H35COO-||0|0|800|||822-16-2
 i_na_fecn6_3|0|Sodium hexacyanoferrate(III)|Sodyum hekzasiyanoferrat(III)|Na₃[Fe(CN)₆]|Sodyum ferrisiyanür|ionic|Salt|S|0|1|Crystals|0|280.922|4.35384||||||||Na|1|3|FeCN6_3|3|1|||1|E0A020|0.8|20|Na+*3 Fe(CN)6^3-||0|0|800|||
 i_na_fecn6_4|0|Sodium hexacyanoferrate(II)|Sodyum hekzasiyanoferrat(II)|Na₄[Fe(CN)₆]|Sodyum ferrosiyanür|ionic|Salt|S|0|1|Crystals|0|303.912|4.56284||||||||Na|1|4|FeCN6_4|4|1|||1|F2E070|0.8|8|Na+*4 Fe(CN)6^4-||0|0|800|||
-i_na_moo4|0|Sodium molybdate|Sodyum molibdat|Na₂MoO₄||ionic|Salt|S|0|1|Crystals|16|205.926|3.67205||||||||Na|1|2|MoO4|2|1|||1|F2F2F2|1||Na+*2 MoO4^2-||0|0|800|||
-i_na_wo4|0|Sodium tungstate|Sodyum tungstat|Na₂WO₄||ionic|Salt|S|0|1|Crystals|0|293.816|4.47105||||||||Na|1|2|WO4|2|1|||1|F2F2F2|1||Na+*2 WO4^2-||0|0|800|||
+i_na_moo4|0|Sodium molybdate|Sodyum molibdat|Na₂MoO₄||ionic|Salt|S|0|1|Crystals|16|205.926|3.67205||||||||Na|1|2|MoO4|2|1|||1|F2F2F2|1||Na+*2 MoO4^2-||0|0|800|||7631-95-0
+i_na_wo4|0|Sodium tungstate|Sodyum tungstat|Na₂WO₄||ionic|Salt|S|0|1|Crystals|0|293.816|4.47105||||||||Na|1|2|WO4|2|1|||1|F2F2F2|1||Na+*2 WO4^2-||0|0|800|||13472-45-2
 i_na_aso4|0|Sodium arsenate|Sodyum arsenat|Na₃AsO₄||ionic|Salt|S|0|1|Crystals|546|207.887|3.68988||||||||Na|1|3|AsO4|3|1|||1|F2F2F2|1||Na+*3 AsO4^3-||0|0|800|||
-i_k_f|0|Potassium fluoride|Potasyum florür|KF||ionic|Salt|S|0|1|Crystals|2|58.0967|2.32815||||||m_hf|1|K|1|1|F|1|1|||1|F2F2F2|1||K+ F-||0|0|800|||
-kcl|1|Potassium chloride|Potasyum klorür|||ionic|Molecular|S|0|0|Powder|0||||||||||K|1|1|Cl|1|1|||1||||||0|0||||
-i_k_br|0|Potassium bromide|Potasyum bromür|KBr||ionic|Salt|S|0|1|Crystals|0|119.002|2.74||||||||K|1|1|Br|1|1|||1|F2F2F2|1||K+ Br-||0|0|800|||
-ki|1|Potassium iodide|Potasyum iyodür|||ionic|Molecular|S|0|0|Powder|0||||||||||K|1|1|I|1|1|||1||||||0|0||||
-koh|1|Potassium hydroxide|Potasyum hidroksit||Potas kostik|ionic|Molecular|S|0|0|Powder|0||||||||||K|1|1|OH|1|1|||1||||||0|0||||
-kno3|1|Potassium nitrate|Potasyum nitrat||Güherçile|ionic|Molecular|S|0|0|Powder|0||||||||||K|1|1|NO3|1|1|||1||||||0|0||||
-i_k_no2|0|Potassium nitrite|Potasyum nitrit|KNO₂||ionic|Salt|S|0|1|Crystals|10|85.1033|2.57367||||||m_hno2|1|K|1|1|NO2|1|1|||1|F2F2F2|1||K+ NO2-||0|0|800|||
-i_k_cn|0|Potassium cyanide|Potasyum siyanür|KCN||ionic|Salt|S|0|1|Crystals|34|65.1163|2.39197||||||m_hcn|1|K|1|1|CN|1|1|||1|F2F2F2|1||K+ CN-||0|0|800|||
-i_k_scn|0|Potassium thiocyanate|Potasyum tiyosiyanat|KSCN||ionic|Salt|S|0|1|Crystals|16|97.1763|1.89||||||||K|1|1|SCN|1|1|||1|F2F2F2|1||K+ SCN-||0|0|800|||
-i_k_clo|0|Potassium hypochlorite|Potasyum hipoklorit|KClO||ionic|Salt|S|0|1|Crystals|33|90.5473|2.62316||||||m_hclo|1|K|1|1|ClO|1|1|||1|F2F2F2|1||K+ ClO-||0|0|800|||
-i_k_clo3|0|Potassium chlorate|Potasyum klorat|KClO₃||ionic|Salt|S|0|1|Crystals|24|122.545|2.32||||||||K|1|1|ClO3|1|1|||1|F2F2F2|1||K+ ClO3-||0|0|800|||
-i_k_clo4|0|Potassium perchlorate|Potasyum perklorat|KClO₄||ionic|Salt|S|0|1|Crystals|24|138.544|3.05949||||||||K|1|1|ClO4|1|1|||1|F2F2F2|1||K+ ClO4-||0|0|800|||
-i_k_bro3|0|Potassium bromate|Potasyum bromat|KBrO₃||ionic|Salt|S|0|1|Crystals|10|166.999|3.31818||||||||K|1|1|BrO3|1|1|||1|F2F2F2|1||K+ BrO3-||0|0|800|||
-i_k_io3|0|Potassium iodate|Potasyum iyodat|KIO₃||ionic|Salt|S|0|1|Crystals|24|214|3.89||||||||K|1|1|IO3|1|1|||1|F2F2F2|1||K+ IO3-||0|0|800|||
-kmno4|1|Potassium permanganate|Potasyum permanganat||Permanganat|ionic|Molecular|S|0|0|Powder|0||||||||||K|1|1|MnO4|1|1|||1||||||0|0||||
-i_k_hco3|0|Potassium hydrogencarbonate|Potasyum bikarbonat|KHCO₃|Potasyum hidrojen karbonat|ionic|Salt|S|0|1|Crystals|0|100.114|2.71013||||||h_hco3_amph|1|K|1|1|HCO3|1|1|||1|F2F2F2|1||K+ HCO3-||0|0|800|||
+i_k_f|0|Potassium fluoride|Potasyum florür|KF||ionic|Salt|S|0|1|Crystals|2|58.0967|2.32815||||||m_hf|1|K|1|1|F|1|1|||1|F2F2F2|1||K+ F-||0|0|800|||7789-23-3
+kcl|1|Potassium chloride|Potasyum klorür|||ionic|Molecular|S|0|0|Powder|0||||||||||K|1|1|Cl|1|1|||1||||||0|0||||7447-40-7
+i_k_br|0|Potassium bromide|Potasyum bromür|KBr||ionic|Salt|S|0|1|Crystals|0|119.002|2.74||||||||K|1|1|Br|1|1|||1|F2F2F2|1||K+ Br-||0|0|800|||7758-02-3
+ki|1|Potassium iodide|Potasyum iyodür|||ionic|Molecular|S|0|0|Powder|0||||||||||K|1|1|I|1|1|||1||||||0|0||||7681-11-0
+koh|1|Potassium hydroxide|Potasyum hidroksit||Potas kostik|ionic|Molecular|S|0|0|Powder|0||||||||||K|1|1|OH|1|1|||1||||||0|0||||1310-58-3
+kno3|1|Potassium nitrate|Potasyum nitrat||Güherçile|ionic|Molecular|S|0|0|Powder|0||||||||||K|1|1|NO3|1|1|||1||||||0|0||||7757-79-1
+i_k_no2|0|Potassium nitrite|Potasyum nitrit|KNO₂||ionic|Salt|S|0|1|Crystals|10|85.1033|2.57367||||||m_hno2|1|K|1|1|NO2|1|1|||1|F2F2F2|1||K+ NO2-||0|0|800|||7758-09-0
+i_k_cn|0|Potassium cyanide|Potasyum siyanür|KCN||ionic|Salt|S|0|1|Crystals|34|65.1163|2.39197||||||m_hcn|1|K|1|1|CN|1|1|||1|F2F2F2|1||K+ CN-||0|0|800|||151-50-8
+i_k_scn|0|Potassium thiocyanate|Potasyum tiyosiyanat|KSCN||ionic|Salt|S|0|1|Crystals|16|97.1763|1.89||||||||K|1|1|SCN|1|1|||1|F2F2F2|1||K+ SCN-||0|0|800|||333-20-0
+i_k_clo|0|Potassium hypochlorite|Potasyum hipoklorit|KClO||ionic|Salt|S|0|1|Crystals|33|90.5473|2.62316||||||m_hclo|1|K|1|1|ClO|1|1|||1|F2F2F2|1||K+ ClO-||0|0|800|||7778-66-7
+i_k_clo3|0|Potassium chlorate|Potasyum klorat|KClO₃||ionic|Salt|S|0|1|Crystals|24|122.545|2.32||||||||K|1|1|ClO3|1|1|||1|F2F2F2|1||K+ ClO3-||0|0|800|||3811-04-9
+i_k_clo4|0|Potassium perchlorate|Potasyum perklorat|KClO₄||ionic|Salt|S|0|1|Crystals|24|138.544|3.05949||||||||K|1|1|ClO4|1|1|||1|F2F2F2|1||K+ ClO4-||0|0|800|||7778-74-7
+i_k_bro3|0|Potassium bromate|Potasyum bromat|KBrO₃||ionic|Salt|S|0|1|Crystals|10|166.999|3.31818||||||||K|1|1|BrO3|1|1|||1|F2F2F2|1||K+ BrO3-||0|0|800|||7758-01-2
+i_k_io3|0|Potassium iodate|Potasyum iyodat|KIO₃||ionic|Salt|S|0|1|Crystals|24|214|3.89||||||||K|1|1|IO3|1|1|||1|F2F2F2|1||K+ IO3-||0|0|800|||7758-05-6
+kmno4|1|Potassium permanganate|Potasyum permanganat||Permanganat|ionic|Molecular|S|0|0|Powder|0||||||||||K|1|1|MnO4|1|1|||1||||||0|0||||7722-64-7
+i_k_hco3|0|Potassium hydrogencarbonate|Potasyum bikarbonat|KHCO₃|Potasyum hidrojen karbonat|ionic|Salt|S|0|1|Crystals|0|100.114|2.71013||||||h_hco3_amph|1|K|1|1|HCO3|1|1|||1|F2F2F2|1||K+ HCO3-||0|0|800|||298-14-6
 i_k_hso4|0|Potassium hydrogensulfate|Potasyum bisülfat|KHSO₄|Potasyum hidrojen sülfat|ionic|Salt|S|0|1|Crystals|1|136.162|3.03784||||||||K|1|1|HSO4|1|1||0.012|1|F2F2F2|1||K+ HSO4-||0|0|800|||
 i_k_h2po4|0|Potassium dihydrogenphosphate|Potasyum dihidrojen fosfat|KH₂PO₄||ionic|Salt|S|0|1|Crystals|0|136.084|3.03713||||||||K|1|1|H2PO4|1|1||6.2e-08|1|F2F2F2|1||K+ H2PO4-||0|0|800|||
-potassium_acetate|1|Potassium acetate|Potasyum asetat||Potasyum etanoat|ionic|Molecular|S|0|0|Powder|0||||||||acetic_acid|1|K|1|1|CH3COO|1|1|||1||||||0|0||||
-i_k_hcoo|0|Potassium formate|Potasyum format|HCOOK|Potasyum metanoat|ionic|Salt|S|0|1|Crystals|0|84.1153|2.56468||||||m_hcooh|1|K|1|1|HCOO|1|1|||1|F2F2F2|1||K+ HCOO-||0|0|800|||
-i_k_o|0|Potassium oxide|Potasyum oksit|K₂O||ionic|Salt|S|0|0|Powder|1|94.1956|2.35||||||||K|1|2|O|2|1|||1|F2F2F2|1||||0|0|800|||
-i_k_s|0|Potassium sulfide|Potasyum sülfür|K₂S||ionic|Salt|S|0|1|Crystals|32|110.257|2.80233||||||h_hs|1|K|1|2|S|2|1|||1|F2E6A0|1||K+*2 S^2-||0|0|800|||
-k2so4|1|Potassium sulfate|Potasyum sülfat|||ionic|Molecular|S|0|0|Powder|0||||||||||K|1|2|SO4|2|1|||1||||||0|0||||
-i_k_so3|0|Potassium sulfite|Potasyum sülfit|K₂SO₃||ionic|Salt|S|0|1|Crystals|0|158.254|3.23867||||||h_hso3|1|K|1|2|SO3|2|1|||1|F2F2F2|1||K+*2 SO3^2-||0|0|800|||
+potassium_acetate|1|Potassium acetate|Potasyum asetat||Potasyum etanoat|ionic|Molecular|S|0|0|Powder|0||||||||acetic_acid|1|K|1|1|CH3COO|1|1|||1||||||0|0||||127-08-2
+i_k_hcoo|0|Potassium formate|Potasyum format|HCOOK|Potasyum metanoat|ionic|Salt|S|0|1|Crystals|0|84.1153|2.56468||||||m_hcooh|1|K|1|1|HCOO|1|1|||1|F2F2F2|1||K+ HCOO-||0|0|800|||590-29-4
+i_k_o|0|Potassium oxide|Potasyum oksit|K₂O||ionic|Salt|S|0|0|Powder|1|94.1956|2.35||||||||K|1|2|O|2|1|||1|F2F2F2|1||||0|0|800|||12136-45-7
+i_k_s|0|Potassium sulfide|Potasyum sülfür|K₂S||ionic|Salt|S|0|1|Crystals|32|110.257|2.80233||||||h_hs|1|K|1|2|S|2|1|||1|F2E6A0|1||K+*2 S^2-||0|0|800|||1312-73-8
+k2so4|1|Potassium sulfate|Potasyum sülfat|||ionic|Molecular|S|0|0|Powder|0||||||||||K|1|2|SO4|2|1|||1||||||0|0||||7778-80-5
+i_k_so3|0|Potassium sulfite|Potasyum sülfit|K₂SO₃||ionic|Salt|S|0|1|Crystals|0|158.254|3.23867||||||h_hso3|1|K|1|2|SO3|2|1|||1|F2F2F2|1||K+*2 SO3^2-||0|0|800|||10117-38-1
 i_k_s2o3|0|Potassium thiosulfate|Potasyum tiyosülfat|K₂S₂O₃||ionic|Salt|S|0|1|Crystals|0|190.314|3.53012||||||||K|1|2|S2O3|2|1|||1|F2F2F2|1||K+*2 S2O3^2-||0|0|800|||
-i_k_co3|0|Potassium carbonate|Potasyum karbonat|K₂CO₃|Potas|ionic|Salt|S|0|1|Crystals|16|138.205|2.43||||||h_hco3|1|K|1|2|CO3|2|1|||1|F2F2F2|1||K+*2 CO3^2-||0|0|800|||
-i_k_c2o4|0|Potassium oxalate|Potasyum oksalat|K₂C₂O₄||ionic|Salt|S|0|1|Crystals|16|166.215|3.31104||||||h_hc2o4|1|K|1|2|C2O4|2|1|||1|F2F2F2|1||K+*2 C2O4^2-||0|0|800|||
-i_k_cro4|0|Potassium chromate|Potasyum kromat|K₂CrO₄||ionic|Salt|S|0|1|Crystals|554|194.189|2.73||||||||K|1|2|CrO4|2|1|||1|F2D21E|0.8|40|K+*2 CrO4^2-||0|0|800|||
-i_k_cr2o7|0|Potassium dichromate|Potasyum dikromat|K₂Cr₂O₇|Bikromat|ionic|Salt|S|0|1|Crystals|554|294.182|2.68||||||||K|1|2|Cr2O7|2|1|||1|F27A1E|0.8|30|K+*2 Cr2O7^2-||0|0|800|||
+i_k_co3|0|Potassium carbonate|Potasyum karbonat|K₂CO₃|Potas|ionic|Salt|S|0|1|Crystals|16|138.205|2.43||||||h_hco3|1|K|1|2|CO3|2|1|||1|F2F2F2|1||K+*2 CO3^2-||0|0|800|||584-08-7
+i_k_c2o4|0|Potassium oxalate|Potasyum oksalat|K₂C₂O₄||ionic|Salt|S|0|1|Crystals|16|166.215|3.31104||||||h_hc2o4|1|K|1|2|C2O4|2|1|||1|F2F2F2|1||K+*2 C2O4^2-||0|0|800|||583-52-8
+i_k_cro4|0|Potassium chromate|Potasyum kromat|K₂CrO₄||ionic|Salt|S|0|1|Crystals|554|194.189|2.73||||||||K|1|2|CrO4|2|1|||1|F2D21E|0.8|40|K+*2 CrO4^2-||0|0|800|||7789-00-6
+i_k_cr2o7|0|Potassium dichromate|Potasyum dikromat|K₂Cr₂O₇|Bikromat|ionic|Salt|S|0|1|Crystals|554|294.182|2.68||||||||K|1|2|Cr2O7|2|1|||1|F27A1E|0.8|30|K+*2 Cr2O7^2-||0|0|800|||7778-50-9
 i_k_sio3|0|Potassium silicate|Potasyum silikat|K₂SiO₃||ionic|Salt|S|0|1|Crystals|16|154.279|3.20253||||||h_hsio3|1|K|1|2|SiO3|2|1|||1|F2F2F2|1||K+*2 SiO3^2-||0|0|800|||
 i_k_hpo4|0|Potassium hydrogenphosphate|Potasyum hidrojen fosfat|K₂HPO₄||ionic|Salt|S|0|1|Crystals|0|174.174|3.3834||||||h_h2po4|1|K|1|2|HPO4|2|1|||1|F2F2F2|1||K+*2 HPO4^2-||0|0|800|||
-i_k_po4|0|Potassium phosphate|Potasyum fosfat|K₃PO₄||ionic|Salt|S|0|1|Crystals|16|212.265|3.72968||||||h_hpo4|1|K|1|3|PO4|3|1|||1|F2F2F2|1||K+*3 PO4^3-||0|0|800|||
-i_k_b4o7|0|Potassium tetraborate|Potasyum tetraborat|K₂B₄O₇||ionic|Salt|S|0|1|Crystals|512|233.43|3.92209||||||m_h3bo3|1|K|1|2|B4O7|2|1|||1|F2F2F2|1||K+*2 B4O7^2-||0|0|800|||
-i_k_o2|0|Potassium peroxide|Potasyum peroksit|K₂O₂||ionic|Salt|S|0|0|Powder|9|110.195|2.80177||||||||K|1|2|O2|2|1|||1|F2F2F2|1||||0|0|800|||
-i_k_h|0|Potassium hydride|Potasyum hidrür|KH||ionic|Salt|S|0|0|Powder|68|40.1063|2.1646||||||||K|1|1|H|1|1|||1|F2F2F2|1||||0|0|800|||
-i_k_c6h5coo|0|Potassium benzoate|Potasyum benzoat|C₆H₅COOK||ionic|Salt|S|0|1|Crystals|0|160.213|3.25648||||||m_c6h5cooh|1|K|1|1|C6H5COO|1|1|||1|F2F2F2|1||K+ C6H5COO-||0|0|800|||
-i_k_c6h5o7|0|Potassium citrate|Potasyum sitrat|K₃C₆H₅O₇||ionic|Salt|S|0|1|Crystals|0|306.394|4.5854||||||m_c6h8o7|1|K|1|3|C6H5O7|3|1|||1|F2F2F2|1||K+*3 C6H5O7^3-||0|0|800|||
-i_k_c3h5o3|0|Potassium lactate|Potasyum laktat|KC₃H₅O₃||ionic|Salt|S|0|1|Crystals|0|128.168|2.96517||||||m_c3h6o3|1|K|1|1|C3H5O3|1|1|||1|F2F2F2|1||K+ C3H5O3-||0|0|800|||
-i_k_c17h35coo|0|Potassium stearate|Potasyum stearat|C₁₇H₃₅COOK|Arap sabunu;Potasyum sabunu|ionic|Salt|S|0|1|Crystals|0|322.574|4.73249||||||||K|1|1|C17H35COO|1|1|||1|F2F2F2|1||K+ C17H35COO-||0|0|800|||
-i_k_fecn6_3|0|Potassium hexacyanoferrate(III)|Potasyum hekzasiyanoferrat(III)|K₃[Fe(CN)₆]|Kırmızı kan tuzu;Potasyum ferrisiyanür|ionic|Salt|S|0|1|Crystals|0|329.248|4.79316||||||||K|1|3|FeCN6_3|3|1|||1|E0A020|0.8|20|K+*3 Fe(CN)6^3-||0|0|800|||
+i_k_po4|0|Potassium phosphate|Potasyum fosfat|K₃PO₄||ionic|Salt|S|0|1|Crystals|16|212.265|3.72968||||||h_hpo4|1|K|1|3|PO4|3|1|||1|F2F2F2|1||K+*3 PO4^3-||0|0|800|||7778-53-2
+i_k_b4o7|0|Potassium tetraborate|Potasyum tetraborat|K₂B₄O₇||ionic|Salt|S|0|1|Crystals|512|233.43|3.92209||||||m_h3bo3|1|K|1|2|B4O7|2|1|||1|F2F2F2|1||K+*2 B4O7^2-||0|0|800|||1332-77-0
+i_k_o2|0|Potassium peroxide|Potasyum peroksit|K₂O₂||ionic|Salt|S|0|0|Powder|9|110.195|2.80177||||||||K|1|2|O2|2|1|||1|F2F2F2|1||||0|0|800|||17014-71-0
+i_k_h|0|Potassium hydride|Potasyum hidrür|KH||ionic|Salt|S|0|0|Powder|68|40.1063|2.1646||||||||K|1|1|H|1|1|||1|F2F2F2|1||||0|0|800|||7693-26-7
+i_k_c6h5coo|0|Potassium benzoate|Potasyum benzoat|C₆H₅COOK||ionic|Salt|S|0|1|Crystals|0|160.213|3.25648||||||m_c6h5cooh|1|K|1|1|C6H5COO|1|1|||1|F2F2F2|1||K+ C6H5COO-||0|0|800|||582-25-2
+i_k_c6h5o7|0|Potassium citrate|Potasyum sitrat|K₃C₆H₅O₇||ionic|Salt|S|0|1|Crystals|0|306.394|4.5854||||||m_c6h8o7|1|K|1|3|C6H5O7|3|1|||1|F2F2F2|1||K+*3 C6H5O7^3-||0|0|800|||866-84-2
+i_k_c3h5o3|0|Potassium lactate|Potasyum laktat|KC₃H₅O₃||ionic|Salt|S|0|1|Crystals|0|128.168|2.96517||||||m_c3h6o3|1|K|1|1|C3H5O3|1|1|||1|F2F2F2|1||K+ C3H5O3-||0|0|800|||996-31-6
+i_k_c17h35coo|0|Potassium stearate|Potasyum stearat|C₁₇H₃₅COOK|Arap sabunu;Potasyum sabunu|ionic|Salt|S|0|1|Crystals|0|322.574|4.73249||||||||K|1|1|C17H35COO|1|1|||1|F2F2F2|1||K+ C17H35COO-||0|0|800|||593-29-3
+i_k_fecn6_3|0|Potassium hexacyanoferrate(III)|Potasyum hekzasiyanoferrat(III)|K₃[Fe(CN)₆]|Kırmızı kan tuzu;Potasyum ferrisiyanür|ionic|Salt|S|0|1|Crystals|0|329.248|4.79316||||||||K|1|3|FeCN6_3|3|1|||1|E0A020|0.8|20|K+*3 Fe(CN)6^3-||0|0|800|||13746-66-2
 i_k_fecn6_4|0|Potassium hexacyanoferrate(II)|Potasyum hekzasiyanoferrat(II)|K₄[Fe(CN)₆]|Sarı kan tuzu;Potasyum ferrosiyanür|ionic|Salt|S|0|1|Crystals|0|368.346|5.1486||||||||K|1|4|FeCN6_4|4|1|||1|F2E070|0.8|8|K+*4 Fe(CN)6^4-||0|0|800|||
 i_k_moo4|0|Potassium molybdate|Potasyum molibdat|K₂MoO₄||ionic|Salt|S|0|1|Crystals|16|238.143|3.96493||||||||K|1|2|MoO4|2|1|||1|F2F2F2|1||K+*2 MoO4^2-||0|0|800|||
 i_k_wo4|0|Potassium tungstate|Potasyum tungstat|K₂WO₄||ionic|Salt|S|0|1|Crystals|0|326.033|4.76393||||||||K|1|2|WO4|2|1|||1|F2F2F2|1||K+*2 WO4^2-||0|0|800|||
 i_k_aso4|0|Potassium arsenate|Potasyum arsenat|K₃AsO₄||ionic|Salt|S|0|1|Crystals|546|256.212|4.1292||||||||K|1|3|AsO4|3|1|||1|F2F2F2|1||K+*3 AsO4^3-||0|0|800|||
-i_rb_f|0|Rubidium fluoride|Rubidyum florür|RbF||ionic|Salt|S|0|1|Crystals|2|104.466|2.74969||||||m_hf|1|Rb|1|1|F|1|1|||1|F2F2F2|1||Rb+ F-||0|0|800|||
-i_rb_cl|0|Rubidium chloride|Rubidyum klorür|RbCl||ionic|Salt|S|0|1|Crystals|0|120.918|2.89925||||||||Rb|1|1|Cl|1|1|||1|F2F2F2|1||Rb+ Cl-||0|0|800|||
-i_rb_br|0|Rubidium bromide|Rubidyum bromür|RbBr||ionic|Salt|S|0|1|Crystals|0|165.372|3.30338||||||||Rb|1|1|Br|1|1|||1|F2F2F2|1||Rb+ Br-||0|0|800|||
-i_rb_i|0|Rubidium iodide|Rubidyum iyodür|RbI||ionic|Salt|S|0|1|Crystals|0|212.372|3.73066||||||||Rb|1|1|I|1|1|||1|F2F2F2|1||Rb+ I-||0|0|800|||
-i_rb_oh|0|Rubidium hydroxide|Rubidyum hidroksit|RbOH||ionic|StrongBase|S|0|1|Crystals|1|102.475|2.73159|||1|||||Rb|1|1|OH|1|1|||1|F2F2F2|1||Rb+ OH-||0|0|800|||
-i_rb_no3|0|Rubidium nitrate|Rubidyum nitrat|RbNO₃||ionic|Salt|S|0|1|Crystals|8|147.472|3.14065||||||||Rb|1|1|NO3|1|1|||1|F2F2F2|1||Rb+ NO3-||0|0|800|||
-i_rb_no2|0|Rubidium nitrite|Rubidyum nitrit|RbNO₂||ionic|Salt|S|0|1|Crystals|10|131.473|2.99521||||||m_hno2|1|Rb|1|1|NO2|1|1|||1|F2F2F2|1||Rb+ NO2-||0|0|800|||
-i_rb_cn|0|Rubidium cyanide|Rubidyum siyanür|RbCN||ionic|Salt|S|0|1|Crystals|34|111.486|2.81351||||||m_hcn|1|Rb|1|1|CN|1|1|||1|F2F2F2|1||Rb+ CN-||0|0|800|||
-i_rb_scn|0|Rubidium thiocyanate|Rubidyum tiyosiyanat|RbSCN||ionic|Salt|S|0|1|Crystals|16|143.546|3.10496||||||||Rb|1|1|SCN|1|1|||1|F2F2F2|1||Rb+ SCN-||0|0|800|||
+i_rb_f|0|Rubidium fluoride|Rubidyum florür|RbF||ionic|Salt|S|0|1|Crystals|2|104.466|2.74969||||||m_hf|1|Rb|1|1|F|1|1|||1|F2F2F2|1||Rb+ F-||0|0|800|||13446-74-7
+i_rb_cl|0|Rubidium chloride|Rubidyum klorür|RbCl||ionic|Salt|S|0|1|Crystals|0|120.918|2.89925||||||||Rb|1|1|Cl|1|1|||1|F2F2F2|1||Rb+ Cl-||0|0|800|||7791-11-9
+i_rb_br|0|Rubidium bromide|Rubidyum bromür|RbBr||ionic|Salt|S|0|1|Crystals|0|165.372|3.30338||||||||Rb|1|1|Br|1|1|||1|F2F2F2|1||Rb+ Br-||0|0|800|||7789-39-1
+i_rb_i|0|Rubidium iodide|Rubidyum iyodür|RbI||ionic|Salt|S|0|1|Crystals|0|212.372|3.73066||||||||Rb|1|1|I|1|1|||1|F2F2F2|1||Rb+ I-||0|0|800|||7790-29-6
+i_rb_oh|0|Rubidium hydroxide|Rubidyum hidroksit|RbOH||ionic|StrongBase|S|0|1|Crystals|1|102.475|2.73159|||1|||||Rb|1|1|OH|1|1|||1|F2F2F2|1||Rb+ OH-||0|0|800|||1310-82-3
+i_rb_no3|0|Rubidium nitrate|Rubidyum nitrat|RbNO₃||ionic|Salt|S|0|1|Crystals|8|147.472|3.14065||||||||Rb|1|1|NO3|1|1|||1|F2F2F2|1||Rb+ NO3-||0|0|800|||13126-12-0
+i_rb_no2|0|Rubidium nitrite|Rubidyum nitrit|RbNO₂||ionic|Salt|S|0|1|Crystals|10|131.473|2.99521||||||m_hno2|1|Rb|1|1|NO2|1|1|||1|F2F2F2|1||Rb+ NO2-||0|0|800|||13825-25-7
+i_rb_cn|0|Rubidium cyanide|Rubidyum siyanür|RbCN||ionic|Salt|S|0|1|Crystals|34|111.486|2.81351||||||m_hcn|1|Rb|1|1|CN|1|1|||1|F2F2F2|1||Rb+ CN-||0|0|800|||19073-56-4
+i_rb_scn|0|Rubidium thiocyanate|Rubidyum tiyosiyanat|RbSCN||ionic|Salt|S|0|1|Crystals|16|143.546|3.10496||||||||Rb|1|1|SCN|1|1|||1|F2F2F2|1||Rb+ SCN-||0|0|800|||3879-02-5
 i_rb_clo|0|Rubidium hypochlorite|Rubidyum hipoklorit|RbClO||ionic|Salt|S|0|1|Crystals|33|136.917|3.0447||||||m_hclo|1|Rb|1|1|ClO|1|1|||1|F2F2F2|1||Rb+ ClO-||0|0|800|||
-i_rb_clo3|0|Rubidium chlorate|Rubidyum klorat|RbClO₃||ionic|Salt|S|0|1|Crystals|24|168.915|3.33559||||||||Rb|1|1|ClO3|1|1|||1|F2F2F2|1||Rb+ ClO3-||0|0|800|||
-i_rb_clo4|0|Rubidium perchlorate|Rubidyum perklorat|RbClO₄||ionic|Salt|S|0|1|Crystals|24|184.914|3.48103||||||||Rb|1|1|ClO4|1|1|||1|F2F2F2|1||Rb+ ClO4-||0|0|800|||
+i_rb_clo3|0|Rubidium chlorate|Rubidyum klorat|RbClO₃||ionic|Salt|S|0|1|Crystals|24|168.915|3.33559||||||||Rb|1|1|ClO3|1|1|||1|F2F2F2|1||Rb+ ClO3-||0|0|800|||13446-71-4
+i_rb_clo4|0|Rubidium perchlorate|Rubidyum perklorat|RbClO₄||ionic|Salt|S|0|1|Crystals|24|184.914|3.48103||||||||Rb|1|1|ClO4|1|1|||1|F2F2F2|1||Rb+ ClO4-||0|0|800|||13510-42-4
 i_rb_bro3|0|Rubidium bromate|Rubidyum bromat|RbBrO₃||ionic|Salt|S|0|1|Crystals|10|213.369|3.73972||||||||Rb|1|1|BrO3|1|1|||1|F2F2F2|1||Rb+ BrO3-||0|0|800|||
-i_rb_io3|0|Rubidium iodate|Rubidyum iyodat|RbIO₃||ionic|Salt|S|0|1|Crystals|24|260.369|4.16699||||||||Rb|1|1|IO3|1|1|||1|F2F2F2|1||Rb+ IO3-||0|0|800|||
-i_rb_mno4|0|Rubidium permanganate|Rubidyum permanganat|RbMnO₄||ionic|Salt|S|0|1|Crystals|56|204.402|3.6582||||||||Rb|1|1|MnO4|1|1|||1|7A0F8C|0.8|400|Rb+ MnO4-||0|0|800|||
+i_rb_io3|0|Rubidium iodate|Rubidyum iyodat|RbIO₃||ionic|Salt|S|0|1|Crystals|24|260.369|4.16699||||||||Rb|1|1|IO3|1|1|||1|F2F2F2|1||Rb+ IO3-||0|0|800|||13446-76-9
+i_rb_mno4|0|Rubidium permanganate|Rubidyum permanganat|RbMnO₄||ionic|Salt|S|0|1|Crystals|56|204.402|3.6582||||||||Rb|1|1|MnO4|1|1|||1|7A0F8C|0.8|400|Rb+ MnO4-||0|0|800|||13465-49-1
 i_rb_hco3|0|Rubidium hydrogencarbonate|Rubidyum bikarbonat|RbHCO₃|Rubidyum hidrojen karbonat|ionic|Salt|S|0|1|Crystals|0|146.484|3.13167||||||h_hco3_amph|1|Rb|1|1|HCO3|1|1|||1|F2F2F2|1||Rb+ HCO3-||0|0|800|||
 i_rb_hso4|0|Rubidium hydrogensulfate|Rubidyum bisülfat|RbHSO₄|Rubidyum hidrojen sülfat|ionic|Salt|S|0|1|Crystals|1|182.532|3.45938||||||||Rb|1|1|HSO4|1|1||0.012|1|F2F2F2|1||Rb+ HSO4-||0|0|800|||
 i_rb_h2po4|0|Rubidium dihydrogenphosphate|Rubidyum dihidrojen fosfat|RbH₂PO₄||ionic|Salt|S|0|1|Crystals|0|182.454|3.45867||||||||Rb|1|1|H2PO4|1|1||6.2e-08|1|F2F2F2|1||Rb+ H2PO4-||0|0|800|||
-i_rb_ch3coo|0|Rubidium acetate|Rubidyum asetat|CH₃COORb|Rubidyum etanoat|ionic|Salt|S|0|1|Crystals|0|144.512|3.11374||||||acetic_acid|1|Rb|1|1|CH3COO|1|1|||1|F2F2F2|1||Rb+ CH3COO-||0|0|800|||
-i_rb_hcoo|0|Rubidium formate|Rubidyum format|HCOORb|Rubidyum metanoat|ionic|Salt|S|0|1|Crystals|0|130.485|2.98623||||||m_hcooh|1|Rb|1|1|HCOO|1|1|||1|F2F2F2|1||Rb+ HCOO-||0|0|800|||
+i_rb_ch3coo|0|Rubidium acetate|Rubidyum asetat|CH₃COORb|Rubidyum etanoat|ionic|Salt|S|0|1|Crystals|0|144.512|3.11374||||||acetic_acid|1|Rb|1|1|CH3COO|1|1|||1|F2F2F2|1||Rb+ CH3COO-||0|0|800|||563-67-7
+i_rb_hcoo|0|Rubidium formate|Rubidyum format|HCOORb|Rubidyum metanoat|ionic|Salt|S|0|1|Crystals|0|130.485|2.98623||||||m_hcooh|1|Rb|1|1|HCOO|1|1|||1|F2F2F2|1||Rb+ HCOO-||0|0|800|||3495-35-0
 i_rb_o|0|Rubidium oxide|Rubidyum oksit|Rb₂O||ionic|Salt|S|0|0|Powder|1|186.935|3.49941||||||||Rb|1|2|O|2|1|||1|F2F2F2|1||||0|0|800|||
 i_rb_s|0|Rubidium sulfide|Rubidyum sülfür|Rb₂S||ionic|Salt|S|0|1|Crystals|32|202.996|3.64541||||||h_hs|1|Rb|1|2|S|2|1|||1|F2E6A0|1||Rb+*2 S^2-||0|0|800|||
-i_rb_so4|0|Rubidium sulfate|Rubidyum sülfat|Rb₂SO₄||ionic|Salt|S|0|1|Crystals|0|266.992|4.2272||||||||Rb|1|2|SO4|2|1|||1|F2F2F2|1||Rb+*2 SO4^2-||0|0|800|||
+i_rb_so4|0|Rubidium sulfate|Rubidyum sülfat|Rb₂SO₄||ionic|Salt|S|0|1|Crystals|0|266.992|4.2272||||||||Rb|1|2|SO4|2|1|||1|F2F2F2|1||Rb+*2 SO4^2-||0|0|800|||7488-54-2
 i_rb_so3|0|Rubidium sulfite|Rubidyum sülfit|Rb₂SO₃||ionic|Salt|S|0|1|Crystals|0|250.993|4.08175||||||h_hso3|1|Rb|1|2|SO3|2|1|||1|F2F2F2|1||Rb+*2 SO3^2-||0|0|800|||
 i_rb_s2o3|0|Rubidium thiosulfate|Rubidyum tiyosülfat|Rb₂S₂O₃||ionic|Salt|S|0|1|Crystals|0|283.053|4.37321||||||||Rb|1|2|S2O3|2|1|||1|F2F2F2|1||Rb+*2 S2O3^2-||0|0|800|||
-i_rb_co3|0|Rubidium carbonate|Rubidyum karbonat|Rb₂CO₃||ionic|Salt|S|0|1|Crystals|16|230.944|3.89949||||||h_hco3|1|Rb|1|2|CO3|2|1|||1|F2F2F2|1||Rb+*2 CO3^2-||0|0|800|||
+i_rb_co3|0|Rubidium carbonate|Rubidyum karbonat|Rb₂CO₃||ionic|Salt|S|0|1|Crystals|16|230.944|3.89949||||||h_hco3|1|Rb|1|2|CO3|2|1|||1|F2F2F2|1||Rb+*2 CO3^2-||0|0|800|||584-09-8
 i_rb_c2o4|0|Rubidium oxalate|Rubidyum oksalat|Rb₂C₂O₄||ionic|Salt|S|0|1|Crystals|16|258.954|4.15412||||||h_hc2o4|1|Rb|1|2|C2O4|2|1|||1|F2F2F2|1||Rb+*2 C2O4^2-||0|0|800|||
-i_rb_cro4|0|Rubidium chromate|Rubidyum kromat|Rb₂CrO₄||ionic|Salt|S|0|1|Crystals|554|286.928|4.40843||||||||Rb|1|2|CrO4|2|1|||1|F2D21E|0.8|40|Rb+*2 CrO4^2-||0|0|800|||
-i_rb_cr2o7|0|Rubidium dichromate|Rubidyum dikromat|Rb₂Cr₂O₇||ionic|Salt|S|0|1|Crystals|554|386.921|5.31746||||||||Rb|1|2|Cr2O7|2|1|||1|F27A1E|0.8|30|Rb+*2 Cr2O7^2-||0|0|800|||
+i_rb_cro4|0|Rubidium chromate|Rubidyum kromat|Rb₂CrO₄||ionic|Salt|S|0|1|Crystals|554|286.928|4.40843||||||||Rb|1|2|CrO4|2|1|||1|F2D21E|0.8|40|Rb+*2 CrO4^2-||0|0|800|||13446-72-5
+i_rb_cr2o7|0|Rubidium dichromate|Rubidyum dikromat|Rb₂Cr₂O₇||ionic|Salt|S|0|1|Crystals|554|386.921|5.31746||||||||Rb|1|2|Cr2O7|2|1|||1|F27A1E|0.8|30|Rb+*2 Cr2O7^2-||0|0|800|||13446-73-6
 i_rb_sio3|0|Rubidium silicate|Rubidyum silikat|Rb₂SiO₃||ionic|Salt|S|0|1|Crystals|16|247.018|4.04561||||||h_hsio3|1|Rb|1|2|SiO3|2|1|||1|F2F2F2|1||Rb+*2 SiO3^2-||0|0|800|||
 i_rb_hpo4|0|Rubidium hydrogenphosphate|Rubidyum hidrojen fosfat|Rb₂HPO₄||ionic|Salt|S|0|1|Crystals|0|266.913|4.22649||||||h_h2po4|1|Rb|1|2|HPO4|2|1|||1|F2F2F2|1||Rb+*2 HPO4^2-||0|0|800|||
 i_rb_po4|0|Rubidium phosphate|Rubidyum fosfat|Rb₃PO₄||ionic|Salt|S|0|1|Crystals|16|351.373|4.9943||||||h_hpo4|1|Rb|1|3|PO4|3|1|||1|F2F2F2|1||Rb+*3 PO4^3-||0|0|800|||
-i_cs_f|0|Caesium fluoride|Sezyum florür|CsF||ionic|Salt|S|0|1|Crystals|2|151.904|3.18094||||||m_hf|1|Cs|1|1|F|1|1|||1|F2F2F2|1||Cs+ F-||0|0|800|||
-i_cs_cl|0|Caesium chloride|Sezyum klorür|CsCl||ionic|Salt|S|0|1|Crystals|0|168.355|3.3305||||||||Cs|1|1|Cl|1|1|||1|F2F2F2|1||Cs+ Cl-||0|0|800|||
-i_cs_br|0|Caesium bromide|Sezyum bromür|CsBr||ionic|Salt|S|0|1|Crystals|0|212.809|3.73463||||||||Cs|1|1|Br|1|1|||1|F2F2F2|1||Cs+ Br-||0|0|800|||
-i_cs_i|0|Caesium iodide|Sezyum iyodür|CsI||ionic|Salt|S|0|1|Crystals|0|259.81|4.16191||||||||Cs|1|1|I|1|1|||1|F2F2F2|1||Cs+ I-||0|0|800|||
-i_cs_oh|0|Caesium hydroxide|Sezyum hidroksit|CsOH||ionic|StrongBase|S|0|1|Crystals|1|149.912|3.16284|||1|||||Cs|1|1|OH|1|1|||1|F2F2F2|1||Cs+ OH-||0|0|800|||
-i_cs_no3|0|Caesium nitrate|Sezyum nitrat|CsNO₃||ionic|Salt|S|0|1|Crystals|8|194.909|3.5719||||||||Cs|1|1|NO3|1|1|||1|F2F2F2|1||Cs+ NO3-||0|0|800|||
+i_cs_f|0|Caesium fluoride|Sezyum florür|CsF||ionic|Salt|S|0|1|Crystals|2|151.904|3.18094||||||m_hf|1|Cs|1|1|F|1|1|||1|F2F2F2|1||Cs+ F-||0|0|800|||13400-13-0
+i_cs_cl|0|Caesium chloride|Sezyum klorür|CsCl||ionic|Salt|S|0|1|Crystals|0|168.355|3.3305||||||||Cs|1|1|Cl|1|1|||1|F2F2F2|1||Cs+ Cl-||0|0|800|||7647-17-8
+i_cs_br|0|Caesium bromide|Sezyum bromür|CsBr||ionic|Salt|S|0|1|Crystals|0|212.809|3.73463||||||||Cs|1|1|Br|1|1|||1|F2F2F2|1||Cs+ Br-||0|0|800|||7787-69-1
+i_cs_i|0|Caesium iodide|Sezyum iyodür|CsI||ionic|Salt|S|0|1|Crystals|0|259.81|4.16191||||||||Cs|1|1|I|1|1|||1|F2F2F2|1||Cs+ I-||0|0|800|||7789-17-5
+i_cs_oh|0|Caesium hydroxide|Sezyum hidroksit|CsOH||ionic|StrongBase|S|0|1|Crystals|1|149.912|3.16284|||1|||||Cs|1|1|OH|1|1|||1|F2F2F2|1||Cs+ OH-||0|0|800|||21351-79-1
+i_cs_no3|0|Caesium nitrate|Sezyum nitrat|CsNO₃||ionic|Salt|S|0|1|Crystals|8|194.909|3.5719||||||||Cs|1|1|NO3|1|1|||1|F2F2F2|1||Cs+ NO3-||0|0|800|||7789-18-6
 i_cs_no2|0|Caesium nitrite|Sezyum nitrit|CsNO₂||ionic|Salt|S|0|1|Crystals|10|178.91|3.42646||||||m_hno2|1|Cs|1|1|NO2|1|1|||1|F2F2F2|1||Cs+ NO2-||0|0|800|||
 i_cs_cn|0|Caesium cyanide|Sezyum siyanür|CsCN||ionic|Salt|S|0|1|Crystals|34|158.923|3.24476||||||m_hcn|1|Cs|1|1|CN|1|1|||1|F2F2F2|1||Cs+ CN-||0|0|800|||
-i_cs_scn|0|Caesium thiocyanate|Sezyum tiyosiyanat|CsSCN||ionic|Salt|S|0|1|Crystals|16|190.983|3.53621||||||||Cs|1|1|SCN|1|1|||1|F2F2F2|1||Cs+ SCN-||0|0|800|||
+i_cs_scn|0|Caesium thiocyanate|Sezyum tiyosiyanat|CsSCN||ionic|Salt|S|0|1|Crystals|16|190.983|3.53621||||||||Cs|1|1|SCN|1|1|||1|F2F2F2|1||Cs+ SCN-||0|0|800|||3879-01-4
 i_cs_clo|0|Caesium hypochlorite|Sezyum hipoklorit|CsClO||ionic|Salt|S|0|1|Crystals|33|184.354|3.47595||||||m_hclo|1|Cs|1|1|ClO|1|1|||1|F2F2F2|1||Cs+ ClO-||0|0|800|||
 i_cs_clo3|0|Caesium chlorate|Sezyum klorat|CsClO₃||ionic|Salt|S|0|1|Crystals|24|216.352|3.76684||||||||Cs|1|1|ClO3|1|1|||1|F2F2F2|1||Cs+ ClO3-||0|0|800|||
-i_cs_clo4|0|Caesium perchlorate|Sezyum perklorat|CsClO₄||ionic|Salt|S|0|1|Crystals|24|232.351|3.91229||||||||Cs|1|1|ClO4|1|1|||1|F2F2F2|1||Cs+ ClO4-||0|0|800|||
-i_cs_bro3|0|Caesium bromate|Sezyum bromat|CsBrO₃||ionic|Salt|S|0|1|Crystals|10|260.806|4.17097||||||||Cs|1|1|BrO3|1|1|||1|F2F2F2|1||Cs+ BrO3-||0|0|800|||
+i_cs_clo4|0|Caesium perchlorate|Sezyum perklorat|CsClO₄||ionic|Salt|S|0|1|Crystals|24|232.351|3.91229||||||||Cs|1|1|ClO4|1|1|||1|F2F2F2|1||Cs+ ClO4-||0|0|800|||13454-84-7
+i_cs_bro3|0|Caesium bromate|Sezyum bromat|CsBrO₃||ionic|Salt|S|0|1|Crystals|10|260.806|4.17097||||||||Cs|1|1|BrO3|1|1|||1|F2F2F2|1||Cs+ BrO3-||0|0|800|||13454-75-6
 i_cs_io3|0|Caesium iodate|Sezyum iyodat|CsIO₃||ionic|Salt|S|0|1|Crystals|24|307.807|4.59824||||||||Cs|1|1|IO3|1|1|||1|F2F2F2|1||Cs+ IO3-||0|0|800|||
 i_cs_mno4|0|Caesium permanganate|Sezyum permanganat|CsMnO₄||ionic|Salt|S|0|1|Crystals|56|251.839|4.08945||||||||Cs|1|1|MnO4|1|1|||1|7A0F8C|0.8|400|Cs+ MnO4-||0|0|800|||
 i_cs_hco3|0|Caesium hydrogencarbonate|Sezyum bikarbonat|CsHCO₃|Sezyum hidrojen karbonat|ionic|Salt|S|0|1|Crystals|0|193.921|3.56292||||||h_hco3_amph|1|Cs|1|1|HCO3|1|1|||1|F2F2F2|1||Cs+ HCO3-||0|0|800|||
 i_cs_hso4|0|Caesium hydrogensulfate|Sezyum bisülfat|CsHSO₄|Sezyum hidrojen sülfat|ionic|Salt|S|0|1|Crystals|1|229.969|3.89063||||||||Cs|1|1|HSO4|1|1||0.012|1|F2F2F2|1||Cs+ HSO4-||0|0|800|||
 i_cs_h2po4|0|Caesium dihydrogenphosphate|Sezyum dihidrojen fosfat|CsH₂PO₄||ionic|Salt|S|0|1|Crystals|0|229.891|3.88992||||||||Cs|1|1|H2PO4|1|1||6.2e-08|1|F2F2F2|1||Cs+ H2PO4-||0|0|800|||
-i_cs_ch3coo|0|Caesium acetate|Sezyum asetat|CH₃COOCs|Sezyum etanoat|ionic|Salt|S|0|1|Crystals|0|191.949|3.545||||||acetic_acid|1|Cs|1|1|CH3COO|1|1|||1|F2F2F2|1||Cs+ CH3COO-||0|0|800|||
+i_cs_ch3coo|0|Caesium acetate|Sezyum asetat|CH₃COOCs|Sezyum etanoat|ionic|Salt|S|0|1|Crystals|0|191.949|3.545||||||acetic_acid|1|Cs|1|1|CH3COO|1|1|||1|F2F2F2|1||Cs+ CH3COO-||0|0|800|||3396-11-0
 i_cs_hcoo|0|Caesium formate|Sezyum format|HCOOCs|Sezyum metanoat|ionic|Salt|S|0|1|Crystals|0|177.922|3.41748||||||m_hcooh|1|Cs|1|1|HCOO|1|1|||1|F2F2F2|1||Cs+ HCOO-||0|0|800|||
 i_cs_o|0|Caesium oxide|Sezyum oksit|Cs₂O||ionic|Salt|S|0|0|Powder|1|281.81|4.36191||||||||Cs|1|2|O|2|1|||1|F2F2F2|1||||0|0|800|||
-i_cs_s|0|Caesium sulfide|Sezyum sülfür|Cs₂S||ionic|Salt|S|0|1|Crystals|32|297.871|4.50792||||||h_hs|1|Cs|1|2|S|2|1|||1|F2E6A0|1||Cs+*2 S^2-||0|0|800|||
-i_cs_so4|0|Caesium sulfate|Sezyum sülfat|Cs₂SO₄||ionic|Salt|S|0|1|Crystals|0|361.867|5.0897||||||||Cs|1|2|SO4|2|1|||1|F2F2F2|1||Cs+*2 SO4^2-||0|0|800|||
+i_cs_s|0|Caesium sulfide|Sezyum sülfür|Cs₂S||ionic|Salt|S|0|1|Crystals|32|297.871|4.50792||||||h_hs|1|Cs|1|2|S|2|1|||1|F2E6A0|1||Cs+*2 S^2-||0|0|800|||12214-16-3
+i_cs_so4|0|Caesium sulfate|Sezyum sülfat|Cs₂SO₄||ionic|Salt|S|0|1|Crystals|0|361.867|5.0897||||||||Cs|1|2|SO4|2|1|||1|F2F2F2|1||Cs+*2 SO4^2-||0|0|800|||10294-54-9
 i_cs_so3|0|Caesium sulfite|Sezyum sülfit|Cs₂SO₃||ionic|Salt|S|0|1|Crystals|0|345.868|4.94425||||||h_hso3|1|Cs|1|2|SO3|2|1|||1|F2F2F2|1||Cs+*2 SO3^2-||0|0|800|||
 i_cs_s2o3|0|Caesium thiosulfate|Sezyum tiyosülfat|Cs₂S₂O₃||ionic|Salt|S|0|1|Crystals|0|377.928|5.23571||||||||Cs|1|2|S2O3|2|1|||1|F2F2F2|1||Cs+*2 S2O3^2-||0|0|800|||
-i_cs_co3|0|Caesium carbonate|Sezyum karbonat|Cs₂CO₃||ionic|Salt|S|0|1|Crystals|16|325.819|4.76199||||||h_hco3|1|Cs|1|2|CO3|2|1|||1|F2F2F2|1||Cs+*2 CO3^2-||0|0|800|||
+i_cs_co3|0|Caesium carbonate|Sezyum karbonat|Cs₂CO₃||ionic|Salt|S|0|1|Crystals|16|325.819|4.76199||||||h_hco3|1|Cs|1|2|CO3|2|1|||1|F2F2F2|1||Cs+*2 CO3^2-||0|0|800|||534-17-8
 i_cs_c2o4|0|Caesium oxalate|Sezyum oksalat|Cs₂C₂O₄||ionic|Salt|S|0|1|Crystals|16|353.829|5.01663||||||h_hc2o4|1|Cs|1|2|C2O4|2|1|||1|F2F2F2|1||Cs+*2 C2O4^2-||0|0|800|||
-i_cs_cro4|0|Caesium chromate|Sezyum kromat|Cs₂CrO₄||ionic|Salt|S|0|1|Crystals|554|381.803|5.27094||||||||Cs|1|2|CrO4|2|1|||1|F2D21E|0.8|40|Cs+*2 CrO4^2-||0|0|800|||
-i_cs_cr2o7|0|Caesium dichromate|Sezyum dikromat|Cs₂Cr₂O₇||ionic|Salt|S|0|1|Crystals|554|481.796|6.17996||||||||Cs|1|2|Cr2O7|2|1|||1|F27A1E|0.8|30|Cs+*2 Cr2O7^2-||0|0|800|||
+i_cs_cro4|0|Caesium chromate|Sezyum kromat|Cs₂CrO₄||ionic|Salt|S|0|1|Crystals|554|381.803|5.27094||||||||Cs|1|2|CrO4|2|1|||1|F2D21E|0.8|40|Cs+*2 CrO4^2-||0|0|800|||13454-78-9
+i_cs_cr2o7|0|Caesium dichromate|Sezyum dikromat|Cs₂Cr₂O₇||ionic|Salt|S|0|1|Crystals|554|481.796|6.17996||||||||Cs|1|2|Cr2O7|2|1|||1|F27A1E|0.8|30|Cs+*2 Cr2O7^2-||0|0|800|||13530-67-1
 i_cs_sio3|0|Caesium silicate|Sezyum silikat|Cs₂SiO₃||ionic|Salt|S|0|1|Crystals|16|341.893|4.90812||||||h_hsio3|1|Cs|1|2|SiO3|2|1|||1|F2F2F2|1||Cs+*2 SiO3^2-||0|0|800|||
 i_cs_hpo4|0|Caesium hydrogenphosphate|Sezyum hidrojen fosfat|Cs₂HPO₄||ionic|Salt|S|0|1|Crystals|0|361.789|5.08899||||||h_h2po4|1|Cs|1|2|HPO4|2|1|||1|F2F2F2|1||Cs+*2 HPO4^2-||0|0|800|||
-i_cs_po4|0|Caesium phosphate|Sezyum fosfat|Cs₃PO₄||ionic|Salt|S|0|1|Crystals|16|493.686|6.28806||||||h_hpo4|1|Cs|1|3|PO4|3|1|||1|F2F2F2|1||Cs+*3 PO4^3-||0|0|800|||
-i_nh4_f|0|Ammonium fluoride|Amonyum florür|NH₄F||ionic|Salt|S|0|1|Crystals|18|37.0374|2.1367||||||nh3|1|NH4|1|1|F|1|1|||1|F2F2F2|1||NH4+ F-||0|0|800|||
-nh4cl|1|Ammonium chloride|Amonyum klorür||Nişadır|ionic|Molecular|S|0|0|Powder|0||||||||nh3|1|NH4|1|1|Cl|1|1|||1||||||0|0||||
-i_nh4_br|0|Ammonium bromide|Amonyum bromür|NH₄Br||ionic|Salt|S|0|1|Crystals|16|97.943|2.69039||||||nh3|1|NH4|1|1|Br|1|1|||1|F2F2F2|1||NH4+ Br-||0|0|800|||
-i_nh4_i|0|Ammonium iodide|Amonyum iyodür|NH₄I||ionic|Salt|S|0|1|Crystals|16|144.943|3.11767||||||nh3|1|NH4|1|1|I|1|1|||1|F2F2F2|1||NH4+ I-||0|0|800|||
-nh4no3|1|Ammonium nitrate|Amonyum nitrat||Amonyum güherçilesi|ionic|Molecular|S|0|0|Powder|0||||||||nh3|1|NH4|1|1|NO3|1|1|||1||||||0|0||||
-i_nh4_no2|0|Ammonium nitrite|Amonyum nitrit|NH₄NO₂||ionic|Salt|S|0|1|Crystals|26|64.044|2.38222||||||nh3|1|NH4|1|1|NO2|1|1|||1|F2F2F2|1||NH4+ NO2-||0|0|800|||
-i_nh4_cn|0|Ammonium cyanide|Amonyum siyanür|NH₄CN||ionic|Salt|S|0|1|Crystals|50|44.057|2.20052||||||nh3|1|NH4|1|1|CN|1|1|||1|F2F2F2|1||NH4+ CN-||0|0|800|||
-i_nh4_scn|0|Ammonium thiocyanate|Amonyum tiyosiyanat|NH₄SCN||ionic|Salt|S|0|1|Crystals|16|76.117|2.49197||||||nh3|1|NH4|1|1|SCN|1|1|||1|F2F2F2|1||NH4+ SCN-||0|0|800|||
-i_nh4_clo3|0|Ammonium chlorate|Amonyum klorat|NH₄ClO₃||ionic|Salt|S|0|1|Crystals|24|101.486|2.7226||||||nh3|1|NH4|1|1|ClO3|1|1|||1|F2F2F2|1||NH4+ ClO3-||0|0|800|||
-i_nh4_clo4|0|Ammonium perchlorate|Amonyum perklorat|NH₄ClO₄||ionic|Salt|S|0|1|Crystals|24|117.485|2.86805||||||nh3|1|NH4|1|1|ClO4|1|1|||1|F2F2F2|1||NH4+ ClO4-||0|0|800|||
-i_nh4_bro3|0|Ammonium bromate|Amonyum bromat|NH₄BrO₃||ionic|Salt|S|0|1|Crystals|26|145.94|3.12673||||||nh3|1|NH4|1|1|BrO3|1|1|||1|F2F2F2|1||NH4+ BrO3-||0|0|800|||
-i_nh4_io3|0|Ammonium iodate|Amonyum iyodat|NH₄IO₃||ionic|Salt|S|0|1|Crystals|24|192.94|3.554||||||nh3|1|NH4|1|1|IO3|1|1|||1|F2F2F2|1||NH4+ IO3-||0|0|800|||
-i_nh4_mno4|0|Ammonium permanganate|Amonyum permanganat|NH₄MnO₄||ionic|Salt|S|0|1|Crystals|56|136.973|3.04521||||||nh3|1|NH4|1|1|MnO4|1|1|||1|7A0F8C|0.8|400|NH4+ MnO4-||0|0|800|||
-i_nh4_hco3|0|Ammonium hydrogencarbonate|Amonyum bikarbonat|NH₄HCO₃|Amonyum hidrojen karbonat|ionic|Salt|S|0|1|Crystals|16|79.055|2.51868||||||nh3|1|NH4|1|1|HCO3|1|1|||1|F2F2F2|1||NH4+ HCO3-||0|0|800|||
+i_cs_po4|0|Caesium phosphate|Sezyum fosfat|Cs₃PO₄||ionic|Salt|S|0|1|Crystals|16|493.686|6.28806||||||h_hpo4|1|Cs|1|3|PO4|3|1|||1|F2F2F2|1||Cs+*3 PO4^3-||0|0|800|||17893-64-0
+i_nh4_f|0|Ammonium fluoride|Amonyum florür|NH₄F||ionic|Salt|S|0|1|Crystals|18|37.0374|2.1367||||||nh3|1|NH4|1|1|F|1|1|||1|F2F2F2|1||NH4+ F-||0|0|800|||12125-01-8
+nh4cl|1|Ammonium chloride|Amonyum klorür||Nişadır|ionic|Molecular|S|0|0|Powder|0||||||||nh3|1|NH4|1|1|Cl|1|1|||1||||||0|0||||12125-02-9
+i_nh4_br|0|Ammonium bromide|Amonyum bromür|NH₄Br||ionic|Salt|S|0|1|Crystals|16|97.943|2.69039||||||nh3|1|NH4|1|1|Br|1|1|||1|F2F2F2|1||NH4+ Br-||0|0|800|||12124-97-9
+i_nh4_i|0|Ammonium iodide|Amonyum iyodür|NH₄I||ionic|Salt|S|0|1|Crystals|16|144.943|3.11767||||||nh3|1|NH4|1|1|I|1|1|||1|F2F2F2|1||NH4+ I-||0|0|800|||12027-06-4
+nh4no3|1|Ammonium nitrate|Amonyum nitrat||Amonyum güherçilesi|ionic|Molecular|S|0|0|Powder|0||||||||nh3|1|NH4|1|1|NO3|1|1|||1||||||0|0||||6484-52-2
+i_nh4_no2|0|Ammonium nitrite|Amonyum nitrit|NH₄NO₂||ionic|Salt|S|0|1|Crystals|26|64.044|2.38222||||||nh3|1|NH4|1|1|NO2|1|1|||1|F2F2F2|1||NH4+ NO2-||0|0|800|||13446-48-5
+i_nh4_cn|0|Ammonium cyanide|Amonyum siyanür|NH₄CN||ionic|Salt|S|0|1|Crystals|50|44.057|2.20052||||||nh3|1|NH4|1|1|CN|1|1|||1|F2F2F2|1||NH4+ CN-||0|0|800|||12211-52-8
+i_nh4_scn|0|Ammonium thiocyanate|Amonyum tiyosiyanat|NH₄SCN||ionic|Salt|S|0|1|Crystals|16|76.117|2.49197||||||nh3|1|NH4|1|1|SCN|1|1|||1|F2F2F2|1||NH4+ SCN-||0|0|800|||1762-95-4
+i_nh4_clo3|0|Ammonium chlorate|Amonyum klorat|NH₄ClO₃||ionic|Salt|S|0|1|Crystals|24|101.486|2.7226||||||nh3|1|NH4|1|1|ClO3|1|1|||1|F2F2F2|1||NH4+ ClO3-||0|0|800|||10192-29-7
+i_nh4_clo4|0|Ammonium perchlorate|Amonyum perklorat|NH₄ClO₄||ionic|Salt|S|0|1|Crystals|24|117.485|2.86805||||||nh3|1|NH4|1|1|ClO4|1|1|||1|F2F2F2|1||NH4+ ClO4-||0|0|800|||7790-98-9
+i_nh4_bro3|0|Ammonium bromate|Amonyum bromat|NH₄BrO₃||ionic|Salt|S|0|1|Crystals|26|145.94|3.12673||||||nh3|1|NH4|1|1|BrO3|1|1|||1|F2F2F2|1||NH4+ BrO3-||0|0|800|||13843-59-9
+i_nh4_io3|0|Ammonium iodate|Amonyum iyodat|NH₄IO₃||ionic|Salt|S|0|1|Crystals|24|192.94|3.554||||||nh3|1|NH4|1|1|IO3|1|1|||1|F2F2F2|1||NH4+ IO3-||0|0|800|||13446-09-8
+i_nh4_mno4|0|Ammonium permanganate|Amonyum permanganat|NH₄MnO₄||ionic|Salt|S|0|1|Crystals|56|136.973|3.04521||||||nh3|1|NH4|1|1|MnO4|1|1|||1|7A0F8C|0.8|400|NH4+ MnO4-||0|0|800|||13446-10-1
+i_nh4_hco3|0|Ammonium hydrogencarbonate|Amonyum bikarbonat|NH₄HCO₃|Amonyum hidrojen karbonat|ionic|Salt|S|0|1|Crystals|16|79.055|2.51868||||||nh3|1|NH4|1|1|HCO3|1|1|||1|F2F2F2|1||NH4+ HCO3-||0|0|800|||1066-33-7
 i_nh4_hso4|0|Ammonium hydrogensulfate|Amonyum bisülfat|NH₄HSO₄|Amonyum hidrojen sülfat|ionic|Salt|S|0|1|Crystals|17|115.103|2.84639||||||nh3|1|NH4|1|1|HSO4|1|1||0.012|1|F2F2F2|1||NH4+ HSO4-||0|0|800|||
-i_nh4_h2po4|0|Ammonium dihydrogenphosphate|Amonyum dihidrojen fosfat|NH₄H₂PO₄||ionic|Salt|S|0|1|Crystals|16|115.025|2.84568||||||nh3|1|NH4|1|1|H2PO4|1|1||6.2e-08|1|F2F2F2|1||NH4+ H2PO4-||0|0|800|||
-i_nh4_ch3coo|0|Ammonium acetate|Amonyum asetat|CH₃COONH₄|Amonyum etanoat|ionic|Salt|S|0|1|Crystals|16|77.083|2.50075||||||nh3|1|NH4|1|1|CH3COO|1|1|||1|F2F2F2|1||NH4+ CH3COO-||0|0|800|||
-i_nh4_hcoo|0|Ammonium formate|Amonyum format|HCOONH₄|Amonyum metanoat|ionic|Salt|S|0|1|Crystals|16|63.056|2.37324||||||nh3|1|NH4|1|1|HCOO|1|1|||1|F2F2F2|1||NH4+ HCOO-||0|0|800|||
-i_nh4_s|0|Ammonium sulfide|Amonyum sülfür|(NH₄)₂S||ionic|Salt|S|0|1|Crystals|48|68.138|2.41944||||||nh3|2|NH4|1|2|S|2|1|||1|F2E6A0|1||NH4+*2 S^2-||0|0|800|||
-nh4_2so4|1|Ammonium sulfate|Amonyum sülfat|||ionic|Molecular|S|0|0|Powder|0||||||||nh3|2|NH4|1|2|SO4|2|1|||1||||||0|0||||
-i_nh4_so3|0|Ammonium sulfite|Amonyum sülfit|(NH₄)₂SO₃||ionic|Salt|S|0|1|Crystals|16|116.135|2.85577||||||nh3|2|NH4|1|2|SO3|2|1|||1|F2F2F2|1||NH4+*2 SO3^2-||0|0|800|||
-i_nh4_s2o3|0|Ammonium thiosulfate|Amonyum tiyosülfat|(NH₄)₂S₂O₃||ionic|Salt|S|0|1|Crystals|16|148.195|3.14723||||||nh3|2|NH4|1|2|S2O3|2|1|||1|F2F2F2|1||NH4+*2 S2O3^2-||0|0|800|||
-i_nh4_co3|0|Ammonium carbonate|Amonyum karbonat|(NH₄)₂CO₃||ionic|Salt|S|0|1|Crystals|16|96.086|2.67351||||||nh3|2|NH4|1|2|CO3|2|1|||1|F2F2F2|1||NH4+*2 CO3^2-||0|0|800|||
-i_nh4_c2o4|0|Ammonium oxalate|Amonyum oksalat|(NH₄)₂C₂O₄||ionic|Salt|S|0|1|Crystals|16|124.096|2.92815||||||nh3|2|NH4|1|2|C2O4|2|1|||1|F2F2F2|1||NH4+*2 C2O4^2-||0|0|800|||
-i_nh4_cro4|0|Ammonium chromate|Amonyum kromat|(NH₄)₂CrO₄||ionic|Salt|S|0|1|Crystals|570|152.07|3.18246||||||nh3|2|NH4|1|2|CrO4|2|1|||1|F2D21E|0.8|40|NH4+*2 CrO4^2-||0|0|800|||
-i_nh4_cr2o7|0|Ammonium dichromate|Amonyum dikromat|(NH₄)₂Cr₂O₇||ionic|Salt|S|0|1|Crystals|570|252.063|4.09148||||||nh3|2|NH4|1|2|Cr2O7|2|1|||1|F27A1E|0.8|30|NH4+*2 Cr2O7^2-||0|0|800|||
-i_nh4_hpo4|0|Ammonium hydrogenphosphate|Amonyum hidrojen fosfat|(NH₄)₂HPO₄||ionic|Salt|S|0|1|Crystals|16|132.056|3.00051||||||nh3|2|NH4|1|2|HPO4|2|1|||1|F2F2F2|1||NH4+*2 HPO4^2-||0|0|800|||
+i_nh4_h2po4|0|Ammonium dihydrogenphosphate|Amonyum dihidrojen fosfat|NH₄H₂PO₄||ionic|Salt|S|0|1|Crystals|16|115.025|2.84568||||||nh3|1|NH4|1|1|H2PO4|1|1||6.2e-08|1|F2F2F2|1||NH4+ H2PO4-||0|0|800|||7722-76-1
+i_nh4_ch3coo|0|Ammonium acetate|Amonyum asetat|CH₃COONH₄|Amonyum etanoat|ionic|Salt|S|0|1|Crystals|16|77.083|2.50075||||||nh3|1|NH4|1|1|CH3COO|1|1|||1|F2F2F2|1||NH4+ CH3COO-||0|0|800|||631-61-8
+i_nh4_hcoo|0|Ammonium formate|Amonyum format|HCOONH₄|Amonyum metanoat|ionic|Salt|S|0|1|Crystals|16|63.056|2.37324||||||nh3|1|NH4|1|1|HCOO|1|1|||1|F2F2F2|1||NH4+ HCOO-||0|0|800|||540-69-2
+i_nh4_s|0|Ammonium sulfide|Amonyum sülfür|(NH₄)₂S||ionic|Salt|S|0|1|Crystals|48|68.138|2.41944||||||nh3|2|NH4|1|2|S|2|1|||1|F2E6A0|1||NH4+*2 S^2-||0|0|800|||12135-76-1
+nh4_2so4|1|Ammonium sulfate|Amonyum sülfat|||ionic|Molecular|S|0|0|Powder|0||||||||nh3|2|NH4|1|2|SO4|2|1|||1||||||0|0||||7783-20-2
+i_nh4_so3|0|Ammonium sulfite|Amonyum sülfit|(NH₄)₂SO₃||ionic|Salt|S|0|1|Crystals|16|116.135|2.85577||||||nh3|2|NH4|1|2|SO3|2|1|||1|F2F2F2|1||NH4+*2 SO3^2-||0|0|800|||10196-04-0
+i_nh4_s2o3|0|Ammonium thiosulfate|Amonyum tiyosülfat|(NH₄)₂S₂O₃||ionic|Salt|S|0|1|Crystals|16|148.195|3.14723||||||nh3|2|NH4|1|2|S2O3|2|1|||1|F2F2F2|1||NH4+*2 S2O3^2-||0|0|800|||7783-18-8
+i_nh4_co3|0|Ammonium carbonate|Amonyum karbonat|(NH₄)₂CO₃||ionic|Salt|S|0|1|Crystals|16|96.086|2.67351||||||nh3|2|NH4|1|2|CO3|2|1|||1|F2F2F2|1||NH4+*2 CO3^2-||0|0|800|||506-87-6
+i_nh4_c2o4|0|Ammonium oxalate|Amonyum oksalat|(NH₄)₂C₂O₄||ionic|Salt|S|0|1|Crystals|16|124.096|2.92815||||||nh3|2|NH4|1|2|C2O4|2|1|||1|F2F2F2|1||NH4+*2 C2O4^2-||0|0|800|||1113-38-8
+i_nh4_cro4|0|Ammonium chromate|Amonyum kromat|(NH₄)₂CrO₄||ionic|Salt|S|0|1|Crystals|570|152.07|3.18246||||||nh3|2|NH4|1|2|CrO4|2|1|||1|F2D21E|0.8|40|NH4+*2 CrO4^2-||0|0|800|||7788-98-9
+i_nh4_cr2o7|0|Ammonium dichromate|Amonyum dikromat|(NH₄)₂Cr₂O₇||ionic|Salt|S|0|1|Crystals|570|252.063|4.09148||||||nh3|2|NH4|1|2|Cr2O7|2|1|||1|F27A1E|0.8|30|NH4+*2 Cr2O7^2-||0|0|800|||7789-09-5
+i_nh4_hpo4|0|Ammonium hydrogenphosphate|Amonyum hidrojen fosfat|(NH₄)₂HPO₄||ionic|Salt|S|0|1|Crystals|16|132.056|3.00051||||||nh3|2|NH4|1|2|HPO4|2|1|||1|F2F2F2|1||NH4+*2 HPO4^2-||0|0|800|||7783-28-0
 i_nh4_po4|0|Ammonium phosphate|Amonyum fosfat|(NH₄)₃PO₄||ionic|Salt|S|0|1|Crystals|16|149.087|3.15533||||||nh3|3|NH4|1|3|PO4|3|1|||1|F2F2F2|1||NH4+*3 PO4^3-||0|0|800|||
 i_nh4_b4o7|0|Ammonium tetraborate|Amonyum tetraborat|(NH₄)₂B₄O₇||ionic|Salt|S|0|1|Crystals|528|191.311|3.53919||||||nh3|2|NH4|1|2|B4O7|2|1|||1|F2F2F2|1||NH4+*2 B4O7^2-||0|0|800|||
-i_nh4_c6h5coo|0|Ammonium benzoate|Amonyum benzoat|C₆H₅COONH₄||ionic|Salt|S|0|1|Crystals|16|139.154|3.06504||||||nh3|1|NH4|1|1|C6H5COO|1|1|||1|F2F2F2|1||NH4+ C6H5COO-||0|0|800|||
+i_nh4_c6h5coo|0|Ammonium benzoate|Amonyum benzoat|C₆H₅COONH₄||ionic|Salt|S|0|1|Crystals|16|139.154|3.06504||||||nh3|1|NH4|1|1|C6H5COO|1|1|||1|F2F2F2|1||NH4+ C6H5COO-||0|0|800|||1863-63-4
 i_nh4_c6h5o7|0|Ammonium citrate|Amonyum sitrat|(NH₄)₃C₆H₅O₇||ionic|Salt|S|0|1|Crystals|16|243.216|4.01105||||||nh3|3|NH4|1|3|C6H5O7|3|1|||1|F2F2F2|1||NH4+*3 C6H5O7^3-||0|0|800|||
-i_nh4_c3h5o3|0|Ammonium lactate|Amonyum laktat|NH₄C₃H₅O₃||ionic|Salt|S|0|1|Crystals|16|107.109|2.77372||||||nh3|1|NH4|1|1|C3H5O3|1|1|||1|F2F2F2|1||NH4+ C3H5O3-||0|0|800|||
+i_nh4_c3h5o3|0|Ammonium lactate|Amonyum laktat|NH₄C₃H₅O₃||ionic|Salt|S|0|1|Crystals|16|107.109|2.77372||||||nh3|1|NH4|1|1|C3H5O3|1|1|||1|F2F2F2|1||NH4+ C3H5O3-||0|0|800|||515-98-0
 i_nh4_fecn6_3|0|Ammonium hexacyanoferrate(III)|Amonyum hekzasiyanoferrat(III)|(NH₄)₃[Fe(CN)₆]|Amonyum ferrisiyanür|ionic|Salt|S|0|1|Crystals|16|266.07|4.21882||||||nh3|3|NH4|1|3|FeCN6_3|3|1|||1|E0A020|0.8|20|NH4+*3 Fe(CN)6^3-||0|0|800|||
 i_nh4_fecn6_4|0|Ammonium hexacyanoferrate(II)|Amonyum hekzasiyanoferrat(II)|(NH₄)₄[Fe(CN)₆]|Amonyum ferrosiyanür|ionic|Salt|S|0|1|Crystals|16|284.109|4.38281||||||nh3|4|NH4|1|4|FeCN6_4|4|1|||1|F2E070|0.8|8|NH4+*4 Fe(CN)6^4-||0|0|800|||
-i_nh4_moo4|0|Ammonium molybdate|Amonyum molibdat|(NH₄)₂MoO₄||ionic|Salt|S|0|1|Crystals|16|196.024|3.58204||||||nh3|2|NH4|1|2|MoO4|2|1|||1|F2F2F2|1||NH4+*2 MoO4^2-||0|0|800|||
-i_ag_f|0|Silver fluoride|Gümüş florür|AgF||ionic|Salt|S|0|1|Crystals|34|126.867|2.95333||||||m_hf|1|Ag|1|1|F|1|1|||1|F2F2F2|1||Ag+ F-||0|0|800|||
-agcl|1|Silver chloride|Gümüş klorür|||ionic|Molecular|S|0|0|Powder|0||||||||||Ag|1|1|Cl|1|1|||1||||||0|0||||
-i_ag_br|0|Silver bromide|Gümüş bromür|AgBr||ionic|Salt|S|0|0|Powder|32|187.772|6.47||||||||Ag|1|1|Br|1|1|||1|F2E8B8|1||||0|0|800|||
+i_nh4_moo4|0|Ammonium molybdate|Amonyum molibdat|(NH₄)₂MoO₄||ionic|Salt|S|0|1|Crystals|16|196.024|3.58204||||||nh3|2|NH4|1|2|MoO4|2|1|||1|F2F2F2|1||NH4+*2 MoO4^2-||0|0|800|||13106-76-8
+i_ag_f|0|Silver fluoride|Gümüş florür|AgF||ionic|Salt|S|0|1|Crystals|34|126.867|2.95333||||||m_hf|1|Ag|1|1|F|1|1|||1|F2F2F2|1||Ag+ F-||0|0|800|||7775-41-9
+agcl|1|Silver chloride|Gümüş klorür|||ionic|Molecular|S|0|0|Powder|0||||||||||Ag|1|1|Cl|1|1|||1||||||0|0||||7783-90-6
+i_ag_br|0|Silver bromide|Gümüş bromür|AgBr||ionic|Salt|S|0|0|Powder|32|187.772|6.47||||||||Ag|1|1|Br|1|1|||1|F2E8B8|1||||0|0|800|||7785-23-1
 i_ag_i|0|Silver iodide|Gümüş iyodür|AgI||ionic|Salt|S|0|0|Powder|32|234.773|5.68||||||||Ag|1|1|I|1|1|||1|F2DC5A|1||||0|0|800|||
-agno3|1|Silver nitrate|Gümüş nitrat||Cehennem taşı|ionic|Molecular|S|0|0|Powder|0||||||||||Ag|1|1|NO3|1|1|||1||||||0|0||||
-i_ag_no2|0|Silver nitrite|Gümüş nitrit|AgNO₂||ionic|Salt|S|0|0|Powder|42|153.873|3.19885||||||m_hno2|1|Ag|1|1|NO2|1|1|||1|F2F2F2|1||||0|0|800|||
+agno3|1|Silver nitrate|Gümüş nitrat||Cehennem taşı|ionic|Molecular|S|0|0|Powder|0||||||||||Ag|1|1|NO3|1|1|||1||||||0|0||||7761-88-8
+i_ag_no2|0|Silver nitrite|Gümüş nitrit|AgNO₂||ionic|Salt|S|0|0|Powder|42|153.873|3.19885||||||m_hno2|1|Ag|1|1|NO2|1|1|||1|F2F2F2|1||||0|0|800|||7783-99-5
 i_ag_cn|0|Silver cyanide|Gümüş siyanür|AgCN||ionic|Salt|S|0|0|Powder|34|133.886|3.01715||||||m_hcn|1|Ag|1|1|CN|1|1|||1|F2F2F2|1||||0|0|800|||
-i_ag_scn|0|Silver thiocyanate|Gümüş tiyosiyanat|AgSCN||ionic|Salt|S|0|0|Powder|48|165.946|3.3086||||||||Ag|1|1|SCN|1|1|||1|F2F2F2|1||||0|0|800|||
-i_ag_clo3|0|Silver chlorate|Gümüş klorat|AgClO₃||ionic|Salt|S|0|1|Crystals|56|191.315|3.53923||||||||Ag|1|1|ClO3|1|1|||1|F2F2F2|1||Ag+ ClO3-||0|0|800|||
-i_ag_clo4|0|Silver perchlorate|Gümüş perklorat|AgClO₄||ionic|Salt|S|0|1|Crystals|56|207.314|3.68467||||||||Ag|1|1|ClO4|1|1|||1|F2F2F2|1||Ag+ ClO4-||0|0|800|||
+i_ag_scn|0|Silver thiocyanate|Gümüş tiyosiyanat|AgSCN||ionic|Salt|S|0|0|Powder|48|165.946|3.3086||||||||Ag|1|1|SCN|1|1|||1|F2F2F2|1||||0|0|800|||1701-93-5
+i_ag_clo3|0|Silver chlorate|Gümüş klorat|AgClO₃||ionic|Salt|S|0|1|Crystals|56|191.315|3.53923||||||||Ag|1|1|ClO3|1|1|||1|F2F2F2|1||Ag+ ClO3-||0|0|800|||7783-92-8
+i_ag_clo4|0|Silver perchlorate|Gümüş perklorat|AgClO₄||ionic|Salt|S|0|1|Crystals|56|207.314|3.68467||||||||Ag|1|1|ClO4|1|1|||1|F2F2F2|1||Ag+ ClO4-||0|0|800|||7783-93-9
 i_ag_bro3|0|Silver bromate|Gümüş bromat|AgBrO₃||ionic|Salt|S|0|0|Powder|42|235.769|3.94336||||||||Ag|1|1|BrO3|1|1|||1|F2F2F2|1||||0|0|800|||
-i_ag_io3|0|Silver iodate|Gümüş iyodat|AgIO₃||ionic|Salt|S|0|0|Powder|56|282.77|4.37063||||||||Ag|1|1|IO3|1|1|||1|F2F2F2|1||||0|0|800|||
-i_ag_mno4|0|Silver permanganate|Gümüş permanganat|AgMnO₄||ionic|Salt|S|0|1|Crystals|56|226.802|3.86184||||||||Ag|1|1|MnO4|1|1|||1|7A0F8C|0.8|400|Ag+ MnO4-||0|0|800|||
-i_ag_ch3coo|0|Silver acetate|Gümüş asetat|CH₃COOAg|Gümüş etanoat|ionic|Salt|S|0|1|Crystals|32|166.912|3.31738||||||acetic_acid|1|Ag|1|1|CH3COO|1|1|||1|F2F2F2|1||Ag+ CH3COO-||0|0|800|||
-i_ag_o|0|Silver oxide|Gümüş oksit|Ag₂O||ionic|Salt|S|0|0|Powder|32|231.735|7.14||||||||Ag|1|2|O|2|1|||1|2A2420|1||||0|0|800|||
+i_ag_io3|0|Silver iodate|Gümüş iyodat|AgIO₃||ionic|Salt|S|0|0|Powder|56|282.77|4.37063||||||||Ag|1|1|IO3|1|1|||1|F2F2F2|1||||0|0|800|||7783-97-3
+i_ag_mno4|0|Silver permanganate|Gümüş permanganat|AgMnO₄||ionic|Salt|S|0|1|Crystals|56|226.802|3.86184||||||||Ag|1|1|MnO4|1|1|||1|7A0F8C|0.8|400|Ag+ MnO4-||0|0|800|||7783-98-4
+i_ag_ch3coo|0|Silver acetate|Gümüş asetat|CH₃COOAg|Gümüş etanoat|ionic|Salt|S|0|1|Crystals|32|166.912|3.31738||||||acetic_acid|1|Ag|1|1|CH3COO|1|1|||1|F2F2F2|1||Ag+ CH3COO-||0|0|800|||563-63-3
+i_ag_o|0|Silver oxide|Gümüş oksit|Ag₂O||ionic|Salt|S|0|0|Powder|32|231.735|7.14||||||||Ag|1|2|O|2|1|||1|2A2420|1||||0|0|800|||20667-12-3
 i_ag_s|0|Silver sulfide|Gümüş sülfür|Ag₂S||ionic|Salt|S|0|0|Powder|32|247.796|4.05269||||||h_hs|1|Ag|1|2|S|2|1|||1|1E1E1E|1||||0|0|800|||
-i_ag_so4|0|Silver sulfate|Gümüş sülfat|Ag₂SO₄||ionic|Salt|S|0|1|Crystals|32|311.792|4.63448||||||||Ag|1|2|SO4|2|1|||1|F2F2F2|1||Ag+*2 SO4^2-||0|0|800|||
-i_ag_so3|0|Silver sulfite|Gümüş sülfit|Ag₂SO₃||ionic|Salt|S|0|0|Powder|32|295.793|4.48903||||||h_hso3|1|Ag|1|2|SO3|2|1|||1|F2F2F2|1||||0|0|800|||
-i_ag_co3|0|Silver carbonate|Gümüş karbonat|Ag₂CO₃||ionic|Salt|S|0|0|Powder|32|275.744|4.30677||||||h_hco3|1|Ag|1|2|CO3|2|1|||1|F2F2F2|1||||0|0|800|||
-i_ag_c2o4|0|Silver oxalate|Gümüş oksalat|Ag₂C₂O₄||ionic|Salt|S|0|0|Powder|48|303.754|4.5614||||||h_hc2o4|1|Ag|1|2|C2O4|2|1|||1|F2F2F2|1||||0|0|800|||
-i_ag_cro4|0|Silver chromate|Gümüş kromat|Ag₂CrO₄||ionic|Salt|S|0|0|Powder|554|331.728|4.81571||||||||Ag|1|2|CrO4|2|1|||1|A8321E|1||||0|0|800|||
-i_ag_cr2o7|0|Silver dichromate|Gümüş dikromat|Ag₂Cr₂O₇||ionic|Salt|S|0|0|Powder|554|431.722|5.72474||||||||Ag|1|2|Cr2O7|2|1|||1|F27A1E|1||||0|0|800|||
+i_ag_so4|0|Silver sulfate|Gümüş sülfat|Ag₂SO₄||ionic|Salt|S|0|1|Crystals|32|311.792|4.63448||||||||Ag|1|2|SO4|2|1|||1|F2F2F2|1||Ag+*2 SO4^2-||0|0|800|||10294-26-5
+i_ag_so3|0|Silver sulfite|Gümüş sülfit|Ag₂SO₃||ionic|Salt|S|0|0|Powder|32|295.793|4.48903||||||h_hso3|1|Ag|1|2|SO3|2|1|||1|F2F2F2|1||||0|0|800|||13465-98-0
+i_ag_co3|0|Silver carbonate|Gümüş karbonat|Ag₂CO₃||ionic|Salt|S|0|0|Powder|32|275.744|4.30677||||||h_hco3|1|Ag|1|2|CO3|2|1|||1|F2F2F2|1||||0|0|800|||534-16-7
+i_ag_c2o4|0|Silver oxalate|Gümüş oksalat|Ag₂C₂O₄||ionic|Salt|S|0|0|Powder|48|303.754|4.5614||||||h_hc2o4|1|Ag|1|2|C2O4|2|1|||1|F2F2F2|1||||0|0|800|||533-51-7
+i_ag_cro4|0|Silver chromate|Gümüş kromat|Ag₂CrO₄||ionic|Salt|S|0|0|Powder|554|331.728|4.81571||||||||Ag|1|2|CrO4|2|1|||1|A8321E|1||||0|0|800|||7784-01-2
+i_ag_cr2o7|0|Silver dichromate|Gümüş dikromat|Ag₂Cr₂O₇||ionic|Salt|S|0|0|Powder|554|431.722|5.72474||||||||Ag|1|2|Cr2O7|2|1|||1|F27A1E|1||||0|0|800|||7784-02-3
 i_ag_po4|0|Silver phosphate|Gümüş fosfat|Ag₃PO₄||ionic|Salt|S|0|0|Powder|32|418.574|5.60522||||||h_hpo4|1|Ag|1|3|PO4|3|1|||1|F2E05A|1||||0|0|800|||
-i_ag_c6h5coo|0|Silver benzoate|Gümüş benzoat|C₆H₅COOAg||ionic|Salt|S|0|0|Powder|32|228.983|3.88167||||||m_c6h5cooh|1|Ag|1|1|C6H5COO|1|1|||1|F2F2F2|1||||0|0|800|||
+i_ag_c6h5coo|0|Silver benzoate|Gümüş benzoat|C₆H₅COOAg||ionic|Salt|S|0|0|Powder|32|228.983|3.88167||||||m_c6h5cooh|1|Ag|1|1|C6H5COO|1|1|||1|F2F2F2|1||||0|0|800|||532-31-0
 i_ag_fecn6_3|0|Silver hexacyanoferrate(III)|Gümüş hekzasiyanoferrat(III)|Ag₃[Fe(CN)₆]|Gümüş ferrisiyanür|ionic|Salt|S|0|0|Powder|32|535.558|6.66871||||||||Ag|1|3|FeCN6_3|3|1|||1|E0801E|1||||0|0|800|||
-i_ag_aso4|0|Silver arsenate|Gümüş arsenat|Ag₃AsO₄||ionic|Salt|S|0|0|Powder|546|462.522|6.00475||||||||Ag|1|3|AsO4|3|1|||1|8A4A1E|1||||0|0|800|||
-i_cu1_cl|0|Copper(I) chloride|Bakır(I) klorür|CuCl||ionic|Salt|S|0|0|Powder|48|98.996|2.69996||||||||Cu1|1|1|Cl|1|1|||1|F2F2F2|1||||0|0|800|||
-i_cu1_br|0|Copper(I) bromide|Bakır(I) bromür|CuBr||ionic|Salt|S|0|0|Powder|48|143.45|3.10409||||||||Cu1|1|1|Br|1|1|||1|F2F2F2|1||||0|0|800|||
-i_cu1_i|0|Copper(I) iodide|Bakır(I) iyodür|CuI||ionic|Salt|S|0|0|Powder|48|190.45|3.53137||||||||Cu1|1|1|I|1|1|||1|F2F2F2|1||||0|0|800|||
-i_cu1_cn|0|Copper(I) cyanide|Bakır(I) siyanür|CuCN||ionic|Salt|S|0|0|Powder|50|89.564|2.61422||||||m_hcn|1|Cu1|1|1|CN|1|1|||1|F2F2F2|1||||0|0|800|||
+i_ag_aso4|0|Silver arsenate|Gümüş arsenat|Ag₃AsO₄||ionic|Salt|S|0|0|Powder|546|462.522|6.00475||||||||Ag|1|3|AsO4|3|1|||1|8A4A1E|1||||0|0|800|||13510-44-6
+i_cu1_cl|0|Copper(I) chloride|Bakır(I) klorür|CuCl||ionic|Salt|S|0|0|Powder|48|98.996|2.69996||||||||Cu1|1|1|Cl|1|1|||1|F2F2F2|1||||0|0|800|||7758-89-6
+i_cu1_br|0|Copper(I) bromide|Bakır(I) bromür|CuBr||ionic|Salt|S|0|0|Powder|48|143.45|3.10409||||||||Cu1|1|1|Br|1|1|||1|F2F2F2|1||||0|0|800|||7787-70-4
+i_cu1_i|0|Copper(I) iodide|Bakır(I) iyodür|CuI||ionic|Salt|S|0|0|Powder|48|190.45|3.53137||||||||Cu1|1|1|I|1|1|||1|F2F2F2|1||||0|0|800|||7681-65-4
+i_cu1_cn|0|Copper(I) cyanide|Bakır(I) siyanür|CuCN||ionic|Salt|S|0|0|Powder|50|89.564|2.61422||||||m_hcn|1|Cu1|1|1|CN|1|1|||1|F2F2F2|1||||0|0|800|||544-92-3
 i_cu1_scn|0|Copper(I) thiocyanate|Bakır(I) tiyosiyanat|CuSCN||ionic|Salt|S|0|0|Powder|48|121.624|2.90567||||||||Cu1|1|1|SCN|1|1|||1|F2F2F2|1||||0|0|800|||
-i_cu1_o|0|Copper(I) oxide|Bakır(I) oksit|Cu₂O||ionic|Salt|S|0|0|Powder|48|143.091|6||||||||Cu1|1|2|O|2|1|||1|B0281E|1||||0|0|800|||
-i_cu1_s|0|Copper(I) sulfide|Bakır(I) sülfür|Cu₂S||ionic|Salt|S|0|0|Powder|48|159.152|3.24684||||||h_hs|1|Cu1|1|2|S|2|1|||1|1E1E1E|1||||0|0|800|||
-i_mg_f|0|Magnesium fluoride|Magnezyum florür|MgF₂||ionic|Salt|S|0|0|Powder|2|62.3018|2.36638||||||m_hf|2|Mg|2|1|F|1|2|||2|F2F2F2|1||||0|0|800|||
-mgcl2|1|Magnesium chloride|Magnezyum klorür|||ionic|Molecular|S|0|0|Powder|0||||||||||Mg|2|1|Cl|1|2|||2||||||0|0||||
-i_mg_br|0|Magnesium bromide|Magnezyum bromür|MgBr₂||ionic|Salt|S|0|1|Crystals|0|184.113|3.47375||||||||Mg|2|1|Br|1|2|||2|F2F2F2|1||Mg^2+ Br-*2||0|0|800|||
-i_mg_i|0|Magnesium iodide|Magnezyum iyodür|MgI₂||ionic|Salt|S|0|1|Crystals|0|278.114|4.32831||||||||Mg|2|1|I|1|2|||2|F2F2F2|1||Mg^2+ I-*2||0|0|800|||
-i_mg_oh|0|Magnesium hydroxide|Magnezyum hidroksit|Mg(OH)₂||ionic|Salt|S|0|0|Powder|0|58.319|2.34||||||||Mg|2|1|OH|1|2|||2|F2F2F2|1||||0|0|800|||
-i_mg_no3|0|Magnesium nitrate|Magnezyum nitrat|Mg(NO₃)₂||ionic|Salt|S|0|1|Crystals|8|148.313|3.1483||||||||Mg|2|1|NO3|1|2|||2|F2F2F2|1||Mg^2+ NO3-*2||0|0|800|||
+i_cu1_o|0|Copper(I) oxide|Bakır(I) oksit|Cu₂O||ionic|Salt|S|0|0|Powder|48|143.091|6||||||||Cu1|1|2|O|2|1|||1|B0281E|1||||0|0|800|||1317-39-1
+i_cu1_s|0|Copper(I) sulfide|Bakır(I) sülfür|Cu₂S||ionic|Salt|S|0|0|Powder|48|159.152|3.24684||||||h_hs|1|Cu1|1|2|S|2|1|||1|1E1E1E|1||||0|0|800|||22205-45-4
+i_mg_f|0|Magnesium fluoride|Magnezyum florür|MgF₂||ionic|Salt|S|0|0|Powder|2|62.3018|2.36638||||||m_hf|2|Mg|2|1|F|1|2|||2|F2F2F2|1||||0|0|800|||7783-40-6
+mgcl2|1|Magnesium chloride|Magnezyum klorür|||ionic|Molecular|S|0|0|Powder|0||||||||||Mg|2|1|Cl|1|2|||2||||||0|0||||7786-30-3
+i_mg_br|0|Magnesium bromide|Magnezyum bromür|MgBr₂||ionic|Salt|S|0|1|Crystals|0|184.113|3.47375||||||||Mg|2|1|Br|1|2|||2|F2F2F2|1||Mg^2+ Br-*2||0|0|800|||7789-48-2
+i_mg_i|0|Magnesium iodide|Magnezyum iyodür|MgI₂||ionic|Salt|S|0|1|Crystals|0|278.114|4.32831||||||||Mg|2|1|I|1|2|||2|F2F2F2|1||Mg^2+ I-*2||0|0|800|||10377-58-9
+i_mg_oh|0|Magnesium hydroxide|Magnezyum hidroksit|Mg(OH)₂||ionic|Salt|S|0|0|Powder|0|58.319|2.34||||||||Mg|2|1|OH|1|2|||2|F2F2F2|1||||0|0|800|||1309-42-8
+i_mg_no3|0|Magnesium nitrate|Magnezyum nitrat|Mg(NO₃)₂||ionic|Salt|S|0|1|Crystals|8|148.313|3.1483||||||||Mg|2|1|NO3|1|2|||2|F2F2F2|1||Mg^2+ NO3-*2||0|0|800|||10377-60-3
 i_mg_no2|0|Magnesium nitrite|Magnezyum nitrit|Mg(NO₂)₂||ionic|Salt|S|0|1|Crystals|10|116.315|2.85741||||||m_hno2|2|Mg|2|1|NO2|1|2|||2|F2F2F2|1||Mg^2+ NO2-*2||0|0|800|||
-i_mg_scn|0|Magnesium thiocyanate|Magnezyum tiyosiyanat|Mg(SCN)₂||ionic|Salt|S|0|1|Crystals|16|140.461|3.07692||||||||Mg|2|1|SCN|1|2|||2|F2F2F2|1||Mg^2+ SCN-*2||0|0|800|||
+i_mg_scn|0|Magnesium thiocyanate|Magnezyum tiyosiyanat|Mg(SCN)₂||ionic|Salt|S|0|1|Crystals|16|140.461|3.07692||||||||Mg|2|1|SCN|1|2|||2|F2F2F2|1||Mg^2+ SCN-*2||0|0|800|||306-61-6
 i_mg_clo3|0|Magnesium chlorate|Magnezyum klorat|Mg(ClO₃)₂||ionic|Salt|S|0|1|Crystals|24|191.199|3.53817||||||||Mg|2|1|ClO3|1|2|||2|F2F2F2|1||Mg^2+ ClO3-*2||0|0|800|||
-i_mg_clo4|0|Magnesium perchlorate|Magnezyum perklorat|Mg(ClO₄)₂||ionic|Salt|S|0|1|Crystals|24|223.197|3.82906||||||||Mg|2|1|ClO4|1|2|||2|F2F2F2|1||Mg^2+ ClO4-*2||0|0|800|||
-i_mg_bro3|0|Magnesium bromate|Magnezyum bromat|Mg(BrO₃)₂||ionic|Salt|S|0|1|Crystals|10|280.107|4.34643||||||||Mg|2|1|BrO3|1|2|||2|F2F2F2|1||Mg^2+ BrO3-*2||0|0|800|||
-i_mg_io3|0|Magnesium iodate|Magnezyum iyodat|Mg(IO₃)₂||ionic|Salt|S|0|1|Crystals|24|374.108|5.20098||||||||Mg|2|1|IO3|1|2|||2|F2F2F2|1||Mg^2+ IO3-*2||0|0|800|||
-i_mg_mno4|0|Magnesium permanganate|Magnezyum permanganat|Mg(MnO₄)₂||ionic|Salt|S|0|1|Crystals|56|262.173|4.18339||||||||Mg|2|1|MnO4|1|2|||2|7A0F8C|0.8|400|Mg^2+ MnO4-*2||0|0|800|||
+i_mg_clo4|0|Magnesium perchlorate|Magnezyum perklorat|Mg(ClO₄)₂||ionic|Salt|S|0|1|Crystals|24|223.197|3.82906||||||||Mg|2|1|ClO4|1|2|||2|F2F2F2|1||Mg^2+ ClO4-*2||0|0|800|||10034-81-8
+i_mg_bro3|0|Magnesium bromate|Magnezyum bromat|Mg(BrO₃)₂||ionic|Salt|S|0|1|Crystals|10|280.107|4.34643||||||||Mg|2|1|BrO3|1|2|||2|F2F2F2|1||Mg^2+ BrO3-*2||0|0|800|||14519-17-6
+i_mg_io3|0|Magnesium iodate|Magnezyum iyodat|Mg(IO₃)₂||ionic|Salt|S|0|1|Crystals|24|374.108|5.20098||||||||Mg|2|1|IO3|1|2|||2|F2F2F2|1||Mg^2+ IO3-*2||0|0|800|||7790-32-1
+i_mg_mno4|0|Magnesium permanganate|Magnezyum permanganat|Mg(MnO₄)₂||ionic|Salt|S|0|1|Crystals|56|262.173|4.18339||||||||Mg|2|1|MnO4|1|2|||2|7A0F8C|0.8|400|Mg^2+ MnO4-*2||0|0|800|||10377-62-5
 i_mg_h2po4|0|Magnesium dihydrogenphosphate|Magnezyum dihidrojen fosfat|Mg(H₂PO₄)₂||ionic|Salt|S|0|1|Crystals|0|218.277|3.78433||||||||Mg|2|1|H2PO4|1|2||6.2e-08|2|F2F2F2|1||Mg^2+ H2PO4-*2||0|0|800|||
-i_mg_ch3coo|0|Magnesium acetate|Magnezyum asetat|(CH₃COO)₂Mg|Magnezyum etanoat|ionic|Salt|S|0|1|Crystals|0|142.393|3.09448||||||acetic_acid|2|Mg|2|1|CH3COO|1|2|||2|F2F2F2|1||Mg^2+ CH3COO-*2||0|0|800|||
-i_mg_hcoo|0|Magnesium formate|Magnezyum format|(HCOO)₂Mg|Magnezyum metanoat|ionic|Salt|S|0|1|Crystals|0|114.339|2.83945||||||m_hcooh|2|Mg|2|1|HCOO|1|2|||2|F2F2F2|1||Mg^2+ HCOO-*2||0|0|800|||
-i_mg_o|0|Magnesium oxide|Magnezyum oksit|MgO||ionic|Salt|S|0|0|Powder|1|40.304|3.58||||||||Mg|2|1|O|2|1|||1|F2F2F2|1||||0|0|800|||
-i_mg_s|0|Magnesium sulfide|Magnezyum sülfür|MgS||ionic|Salt|S|0|1|Crystals|32|56.365|2.31241||||||h_hs|1|Mg|2|1|S|2|1|||1|F2E6A0|1||Mg^2+ S^2-||0|0|800|||
-mgso4|1|Magnesium sulfate|Magnezyum sülfat||İngiliz tuzu;Epsom tuzu|ionic|Molecular|S|0|0|Powder|0||||||||||Mg|2|1|SO4|2|1|||1||||||0|0||||
-i_mg_so3|0|Magnesium sulfite|Magnezyum sülfit|MgSO₃||ionic|Salt|S|0|0|Powder|0|104.362|2.74875||||||h_hso3|1|Mg|2|1|SO3|2|1|||1|F2F2F2|1||||0|0|800|||
+i_mg_ch3coo|0|Magnesium acetate|Magnezyum asetat|(CH₃COO)₂Mg|Magnezyum etanoat|ionic|Salt|S|0|1|Crystals|0|142.393|3.09448||||||acetic_acid|2|Mg|2|1|CH3COO|1|2|||2|F2F2F2|1||Mg^2+ CH3COO-*2||0|0|800|||142-72-3
+i_mg_hcoo|0|Magnesium formate|Magnezyum format|(HCOO)₂Mg|Magnezyum metanoat|ionic|Salt|S|0|1|Crystals|0|114.339|2.83945||||||m_hcooh|2|Mg|2|1|HCOO|1|2|||2|F2F2F2|1||Mg^2+ HCOO-*2||0|0|800|||557-39-1
+i_mg_o|0|Magnesium oxide|Magnezyum oksit|MgO||ionic|Salt|S|0|0|Powder|1|40.304|3.58||||||||Mg|2|1|O|2|1|||1|F2F2F2|1||||0|0|800|||1309-48-4
+i_mg_s|0|Magnesium sulfide|Magnezyum sülfür|MgS||ionic|Salt|S|0|1|Crystals|32|56.365|2.31241||||||h_hs|1|Mg|2|1|S|2|1|||1|F2E6A0|1||Mg^2+ S^2-||0|0|800|||12032-36-9
+mgso4|1|Magnesium sulfate|Magnezyum sülfat||İngiliz tuzu;Epsom tuzu|ionic|Molecular|S|0|0|Powder|0||||||||||Mg|2|1|SO4|2|1|||1||||||0|0||||7487-88-9
+i_mg_so3|0|Magnesium sulfite|Magnezyum sülfit|MgSO₃||ionic|Salt|S|0|0|Powder|0|104.362|2.74875||||||h_hso3|1|Mg|2|1|SO3|2|1|||1|F2F2F2|1||||0|0|800|||7757-88-2
 i_mg_s2o3|0|Magnesium thiosulfate|Magnezyum tiyosülfat|MgS₂O₃||ionic|Salt|S|0|1|Crystals|0|136.422|3.0402||||||||Mg|2|1|S2O3|2|1|||1|F2F2F2|1||Mg^2+ S2O3^2-||0|0|800|||
-i_mg_co3|0|Magnesium carbonate|Magnezyum karbonat|MgCO₃||ionic|Salt|S|0|0|Powder|0|84.313|2.96||||||h_hco3|1|Mg|2|1|CO3|2|1|||1|F2F2F2|1||||0|0|800|||
+i_mg_co3|0|Magnesium carbonate|Magnezyum karbonat|MgCO₃||ionic|Salt|S|0|0|Powder|0|84.313|2.96||||||h_hco3|1|Mg|2|1|CO3|2|1|||1|F2F2F2|1||||0|0|800|||546-93-0
 i_mg_c2o4|0|Magnesium oxalate|Magnezyum oksalat|MgC₂O₄||ionic|Salt|S|0|0|Powder|16|112.323|2.82112||||||h_hc2o4|1|Mg|2|1|C2O4|2|1|||1|F2F2F2|1||||0|0|800|||
-i_mg_cro4|0|Magnesium chromate|Magnezyum kromat|MgCrO₄||ionic|Salt|S|0|1|Crystals|554|140.297|3.07543||||||||Mg|2|1|CrO4|2|1|||1|F2D21E|0.8|40|Mg^2+ CrO4^2-||0|0|800|||
+i_mg_cro4|0|Magnesium chromate|Magnezyum kromat|MgCrO₄||ionic|Salt|S|0|1|Crystals|554|140.297|3.07543||||||||Mg|2|1|CrO4|2|1|||1|F2D21E|0.8|40|Mg^2+ CrO4^2-||0|0|800|||13423-61-5
 i_mg_cr2o7|0|Magnesium dichromate|Magnezyum dikromat|MgCr₂O₇||ionic|Salt|S|0|1|Crystals|554|240.29|3.98446||||||||Mg|2|1|Cr2O7|2|1|||1|F27A1E|0.8|30|Mg^2+ Cr2O7^2-||0|0|800|||
 i_mg_sio3|0|Magnesium silicate|Magnezyum silikat|MgSiO₃||ionic|Salt|S|0|0|Powder|0|100.387|2.71261||||||h_hsio3|1|Mg|2|1|SiO3|2|1|||1|F2F2F2|1||||0|0|800|||
 i_mg_hpo4|0|Magnesium hydrogenphosphate|Magnezyum hidrojen fosfat|MgHPO₄||ionic|Salt|S|0|0|Powder|0|120.283|2.89348||||||h_h2po4|1|Mg|2|1|HPO4|2|1|||1|F2F2F2|1||||0|0|800|||
 i_mg_po4|0|Magnesium phosphate|Magnezyum fosfat|Mg₃(PO₄)₂||ionic|Salt|S|0|0|Powder|0|262.855|4.18959||||||h_hpo4|2|Mg|2|3|PO4|3|2|||2|F2F2F2|1||||0|0|800|||
 i_mg_b4o7|0|Magnesium tetraborate|Magnezyum tetraborat|MgB₄O₇||ionic|Salt|S|0|0|Powder|512|179.538|3.43216||||||m_h3bo3|1|Mg|2|1|B4O7|2|1|||1|F2F2F2|1||||0|0|800|||
-i_mg_o2|0|Magnesium peroxide|Magnezyum peroksit|MgO₂||ionic|Salt|S|0|0|Powder|9|56.303|2.31185||||||||Mg|2|1|O2|2|1|||1|F2F2F2|1||||0|0|800|||
+i_mg_o2|0|Magnesium peroxide|Magnezyum peroksit|MgO₂||ionic|Salt|S|0|0|Powder|9|56.303|2.31185||||||||Mg|2|1|O2|2|1|||1|F2F2F2|1||||0|0|800|||1312-95-4
 i_mg_n|0|Magnesium nitride|Magnezyum nitrür|Mg₃N₂||ionic|Salt|S|0|0|Powder|80|100.929|2.71754||||||||Mg|2|3|N|3|2|||2|F2F2F2|1||||0|0|800|||
-i_mg_h|0|Magnesium hydride|Magnezyum hidrür|MgH₂||ionic|Salt|S|0|0|Powder|68|26.321|2.03928||||||||Mg|2|1|H|1|2|||2|F2F2F2|1||||0|0|800|||
+i_mg_h|0|Magnesium hydride|Magnezyum hidrür|MgH₂||ionic|Salt|S|0|0|Powder|68|26.321|2.03928||||||||Mg|2|1|H|1|2|||2|F2F2F2|1||||0|0|800|||7693-27-8
 i_mg_c6h5coo|0|Magnesium benzoate|Magnezyum benzoat|(C₆H₅COO)₂Mg||ionic|Salt|S|0|1|Crystals|0|266.535|4.22305||||||m_c6h5cooh|2|Mg|2|1|C6H5COO|1|2|||2|F2F2F2|1||Mg^2+ C6H5COO-*2||0|0|800|||
 i_mg_c6h5o7|0|Magnesium citrate|Magnezyum sitrat|Mg₃(C₆H₅O₇)₂||ionic|Salt|S|0|1|Crystals|0|451.113|5.90103||||||m_c6h8o7|2|Mg|2|3|C6H5O7|3|2|||2|F2F2F2|1||Mg^2+*3 C6H5O7^3-*2||0|0|800|||
-i_mg_c3h5o3|0|Magnesium lactate|Magnezyum laktat|Mg(C₃H₅O₃)₂||ionic|Salt|S|0|1|Crystals|0|202.445|3.64041||||||m_c3h6o3|2|Mg|2|1|C3H5O3|1|2|||2|F2F2F2|1||Mg^2+ C3H5O3-*2||0|0|800|||
-i_mg_c17h35coo|0|Magnesium stearate|Magnezyum stearat|(C₁₇H₃₅COO)₂Mg||ionic|Salt|S|0|0|Powder|0|591.257|7.17506||||||||Mg|2|1|C17H35COO|1|2|||2|F2F2F2|1||||0|0|800|||
-i_ca_f|0|Calcium fluoride|Kalsiyum florür|CaF₂|Florit|ionic|Salt|S|0|0|Powder|2|78.0748|3.18||||||m_hf|2|Ca|2|1|F|1|2|||2|F2F2F2|1||||0|0|800|||
-cacl2|1|Calcium chloride|Kalsiyum klorür|||ionic|Molecular|S|0|0|Powder|0||||||||||Ca|2|1|Cl|1|2|||2||||||0|0||||
+i_mg_c3h5o3|0|Magnesium lactate|Magnezyum laktat|Mg(C₃H₅O₃)₂||ionic|Salt|S|0|1|Crystals|0|202.445|3.64041||||||m_c3h6o3|2|Mg|2|1|C3H5O3|1|2|||2|F2F2F2|1||Mg^2+ C3H5O3-*2||0|0|800|||18917-93-6
+i_mg_c17h35coo|0|Magnesium stearate|Magnezyum stearat|(C₁₇H₃₅COO)₂Mg||ionic|Salt|S|0|0|Powder|0|591.257|7.17506||||||||Mg|2|1|C17H35COO|1|2|||2|F2F2F2|1||||0|0|800|||557-04-0
+i_ca_f|0|Calcium fluoride|Kalsiyum florür|CaF₂|Florit|ionic|Salt|S|0|0|Powder|2|78.0748|3.18||||||m_hf|2|Ca|2|1|F|1|2|||2|F2F2F2|1||||0|0|800|||7789-75-5
+cacl2|1|Calcium chloride|Kalsiyum klorür|||ionic|Molecular|S|0|0|Powder|0||||||||||Ca|2|1|Cl|1|2|||2||||||0|0||||10043-52-4
 i_ca_br|0|Calcium bromide|Kalsiyum bromür|CaBr₂||ionic|Salt|S|0|1|Crystals|0|199.886|3.61715||||||||Ca|2|1|Br|1|2|||2|F2F2F2|1||Ca^2+ Br-*2||0|0|800|||
 i_ca_i|0|Calcium iodide|Kalsiyum iyodür|CaI₂||ionic|Salt|S|0|1|Crystals|0|293.887|4.4717||||||||Ca|2|1|I|1|2|||2|F2F2F2|1||Ca^2+ I-*2||0|0|800|||
-i_ca_oh|0|Calcium hydroxide|Kalsiyum hidroksit|Ca(OH)₂|Sönmüş kireç;Kireç suyu|ionic|StrongBase|S|0|1|Crystals|1|74.092|2.21|||2|||||Ca|2|1|OH|1|2|||2|F2F2F2|1||Ca^2+ OH-*2||0|0|800|||
-i_ca_no3|0|Calcium nitrate|Kalsiyum nitrat|Ca(NO₃)₂||ionic|Salt|S|0|1|Crystals|8|164.086|3.29169||||||||Ca|2|1|NO3|1|2|||2|F2F2F2|1||Ca^2+ NO3-*2||0|0|800|||
-i_ca_no2|0|Calcium nitrite|Kalsiyum nitrit|Ca(NO₂)₂||ionic|Salt|S|0|1|Crystals|10|132.088|3.0008||||||m_hno2|2|Ca|2|1|NO2|1|2|||2|F2F2F2|1||Ca^2+ NO2-*2||0|0|800|||
-i_ca_cn|0|Calcium cyanide|Kalsiyum siyanür|Ca(CN)₂||ionic|Salt|S|0|1|Crystals|34|92.114|2.6374||||||m_hcn|2|Ca|2|1|CN|1|2|||2|F2F2F2|1||Ca^2+ CN-*2||0|0|800|||
-i_ca_scn|0|Calcium thiocyanate|Kalsiyum tiyosiyanat|Ca(SCN)₂||ionic|Salt|S|0|1|Crystals|16|156.234|3.22031||||||||Ca|2|1|SCN|1|2|||2|F2F2F2|1||Ca^2+ SCN-*2||0|0|800|||
-i_ca_clo|0|Calcium hypochlorite|Kalsiyum hipoklorit|Ca(ClO)₂|Kireç kaymağı|ionic|Salt|S|0|1|Crystals|33|142.976|3.09978||||||m_hclo|2|Ca|2|1|ClO|1|2|||2|F2F2F2|1||Ca^2+ ClO-*2||0|0|800|||
-i_ca_clo3|0|Calcium chlorate|Kalsiyum klorat|Ca(ClO₃)₂||ionic|Salt|S|0|1|Crystals|24|206.972|3.68156||||||||Ca|2|1|ClO3|1|2|||2|F2F2F2|1||Ca^2+ ClO3-*2||0|0|800|||
-i_ca_clo4|0|Calcium perchlorate|Kalsiyum perklorat|Ca(ClO₄)₂||ionic|Salt|S|0|1|Crystals|24|238.97|3.97245||||||||Ca|2|1|ClO4|1|2|||2|F2F2F2|1||Ca^2+ ClO4-*2||0|0|800|||
-i_ca_bro3|0|Calcium bromate|Kalsiyum bromat|Ca(BrO₃)₂||ionic|Salt|S|0|1|Crystals|10|295.88|4.48982||||||||Ca|2|1|BrO3|1|2|||2|F2F2F2|1||Ca^2+ BrO3-*2||0|0|800|||
-i_ca_io3|0|Calcium iodate|Kalsiyum iyodat|Ca(IO₃)₂||ionic|Salt|S|0|0|Powder|24|389.881|5.34437||||||||Ca|2|1|IO3|1|2|||2|F2F2F2|1||||0|0|800|||
-i_ca_mno4|0|Calcium permanganate|Kalsiyum permanganat|Ca(MnO₄)₂||ionic|Salt|S|0|1|Crystals|56|277.946|4.32678||||||||Ca|2|1|MnO4|1|2|||2|7A0F8C|0.8|400|Ca^2+ MnO4-*2||0|0|800|||
-i_ca_h2po4|0|Calcium dihydrogenphosphate|Kalsiyum dihidrojen fosfat|Ca(H₂PO₄)₂||ionic|Salt|S|0|1|Crystals|0|234.05|3.92772||||||||Ca|2|1|H2PO4|1|2||6.2e-08|2|F2F2F2|1||Ca^2+ H2PO4-*2||0|0|800|||
-i_ca_ch3coo|0|Calcium acetate|Kalsiyum asetat|(CH₃COO)₂Ca|Kalsiyum etanoat|ionic|Salt|S|0|1|Crystals|0|158.166|3.23787||||||acetic_acid|2|Ca|2|1|CH3COO|1|2|||2|F2F2F2|1||Ca^2+ CH3COO-*2||0|0|800|||
-i_ca_hcoo|0|Calcium formate|Kalsiyum format|(HCOO)₂Ca|Kalsiyum metanoat|ionic|Salt|S|0|1|Crystals|0|130.112|2.98284||||||m_hcooh|2|Ca|2|1|HCOO|1|2|||2|F2F2F2|1||Ca^2+ HCOO-*2||0|0|800|||
-i_ca_o|0|Calcium oxide|Kalsiyum oksit|CaO|Sönmemiş kireç|ionic|Salt|S|0|0|Powder|1|56.077|3.34||||||||Ca|2|1|O|2|1|||1|F2F2F2|1||||0|0|800|||
-i_ca_s|0|Calcium sulfide|Kalsiyum sülfür|CaS||ionic|Salt|S|0|1|Crystals|32|72.138|2.4558||||||h_hs|1|Ca|2|1|S|2|1|||1|F2E6A0|1||Ca^2+ S^2-||0|0|800|||
-i_ca_so4|0|Calcium sulfate|Kalsiyum sülfat|CaSO₄|Alçı;Jips|ionic|Salt|S|0|0|Powder|0|136.134|2.96||||||||Ca|2|1|SO4|2|1|||1|F2F2F2|1||||0|0|800|||
-i_ca_so3|0|Calcium sulfite|Kalsiyum sülfit|CaSO₃||ionic|Salt|S|0|0|Powder|0|120.135|2.89214||||||h_hso3|1|Ca|2|1|SO3|2|1|||1|F2F2F2|1||||0|0|800|||
-i_ca_s2o3|0|Calcium thiosulfate|Kalsiyum tiyosülfat|CaS₂O₃||ionic|Salt|S|0|1|Crystals|0|152.195|3.18359||||||||Ca|2|1|S2O3|2|1|||1|F2F2F2|1||Ca^2+ S2O3^2-||0|0|800|||
-caco3|1|Calcium carbonate|Kalsiyum karbonat||Kireç taşı;Mermer;Tebeşir|ionic|Molecular|S|0|0|Powder|0||||||||h_hco3|1|Ca|2|1|CO3|2|1|||1||||||0|0||||
-i_ca_c2o4|0|Calcium oxalate|Kalsiyum oksalat|CaC₂O₄||ionic|Salt|S|0|0|Powder|16|128.096|2.96451||||||h_hc2o4|1|Ca|2|1|C2O4|2|1|||1|F2F2F2|1||||0|0|800|||
-i_ca_cro4|0|Calcium chromate|Kalsiyum kromat|CaCrO₄||ionic|Salt|S|0|1|Crystals|554|156.07|3.21882||||||||Ca|2|1|CrO4|2|1|||1|F2D21E|0.8|40|Ca^2+ CrO4^2-||0|0|800|||
-i_ca_cr2o7|0|Calcium dichromate|Kalsiyum dikromat|CaCr₂O₇||ionic|Salt|S|0|1|Crystals|554|256.063|4.12785||||||||Ca|2|1|Cr2O7|2|1|||1|F27A1E|0.8|30|Ca^2+ Cr2O7^2-||0|0|800|||
+i_ca_oh|0|Calcium hydroxide|Kalsiyum hidroksit|Ca(OH)₂|Sönmüş kireç;Kireç suyu|ionic|StrongBase|S|0|1|Crystals|1|74.092|2.21|||2|||||Ca|2|1|OH|1|2|||2|F2F2F2|1||Ca^2+ OH-*2||0|0|800|||1305-62-0
+i_ca_no3|0|Calcium nitrate|Kalsiyum nitrat|Ca(NO₃)₂||ionic|Salt|S|0|1|Crystals|8|164.086|3.29169||||||||Ca|2|1|NO3|1|2|||2|F2F2F2|1||Ca^2+ NO3-*2||0|0|800|||10124-37-5
+i_ca_no2|0|Calcium nitrite|Kalsiyum nitrit|Ca(NO₂)₂||ionic|Salt|S|0|1|Crystals|10|132.088|3.0008||||||m_hno2|2|Ca|2|1|NO2|1|2|||2|F2F2F2|1||Ca^2+ NO2-*2||0|0|800|||13780-06-8
+i_ca_cn|0|Calcium cyanide|Kalsiyum siyanür|Ca(CN)₂||ionic|Salt|S|0|1|Crystals|34|92.114|2.6374||||||m_hcn|2|Ca|2|1|CN|1|2|||2|F2F2F2|1||Ca^2+ CN-*2||0|0|800|||592-01-8
+i_ca_scn|0|Calcium thiocyanate|Kalsiyum tiyosiyanat|Ca(SCN)₂||ionic|Salt|S|0|1|Crystals|16|156.234|3.22031||||||||Ca|2|1|SCN|1|2|||2|F2F2F2|1||Ca^2+ SCN-*2||0|0|800|||2092-16-2
+i_ca_clo|0|Calcium hypochlorite|Kalsiyum hipoklorit|Ca(ClO)₂|Kireç kaymağı|ionic|Salt|S|0|1|Crystals|33|142.976|3.09978||||||m_hclo|2|Ca|2|1|ClO|1|2|||2|F2F2F2|1||Ca^2+ ClO-*2||0|0|800|||7778-54-3
+i_ca_clo3|0|Calcium chlorate|Kalsiyum klorat|Ca(ClO₃)₂||ionic|Salt|S|0|1|Crystals|24|206.972|3.68156||||||||Ca|2|1|ClO3|1|2|||2|F2F2F2|1||Ca^2+ ClO3-*2||0|0|800|||10137-74-3
+i_ca_clo4|0|Calcium perchlorate|Kalsiyum perklorat|Ca(ClO₄)₂||ionic|Salt|S|0|1|Crystals|24|238.97|3.97245||||||||Ca|2|1|ClO4|1|2|||2|F2F2F2|1||Ca^2+ ClO4-*2||0|0|800|||13477-36-6
+i_ca_bro3|0|Calcium bromate|Kalsiyum bromat|Ca(BrO₃)₂||ionic|Salt|S|0|1|Crystals|10|295.88|4.48982||||||||Ca|2|1|BrO3|1|2|||2|F2F2F2|1||Ca^2+ BrO3-*2||0|0|800|||10102-75-7
+i_ca_io3|0|Calcium iodate|Kalsiyum iyodat|Ca(IO₃)₂||ionic|Salt|S|0|0|Powder|24|389.881|5.34437||||||||Ca|2|1|IO3|1|2|||2|F2F2F2|1||||0|0|800|||7789-80-2
+i_ca_mno4|0|Calcium permanganate|Kalsiyum permanganat|Ca(MnO₄)₂||ionic|Salt|S|0|1|Crystals|56|277.946|4.32678||||||||Ca|2|1|MnO4|1|2|||2|7A0F8C|0.8|400|Ca^2+ MnO4-*2||0|0|800|||10118-76-0
+i_ca_h2po4|0|Calcium dihydrogenphosphate|Kalsiyum dihidrojen fosfat|Ca(H₂PO₄)₂||ionic|Salt|S|0|1|Crystals|0|234.05|3.92772||||||||Ca|2|1|H2PO4|1|2||6.2e-08|2|F2F2F2|1||Ca^2+ H2PO4-*2||0|0|800|||7758-23-8
+i_ca_ch3coo|0|Calcium acetate|Kalsiyum asetat|(CH₃COO)₂Ca|Kalsiyum etanoat|ionic|Salt|S|0|1|Crystals|0|158.166|3.23787||||||acetic_acid|2|Ca|2|1|CH3COO|1|2|||2|F2F2F2|1||Ca^2+ CH3COO-*2||0|0|800|||62-54-4
+i_ca_hcoo|0|Calcium formate|Kalsiyum format|(HCOO)₂Ca|Kalsiyum metanoat|ionic|Salt|S|0|1|Crystals|0|130.112|2.98284||||||m_hcooh|2|Ca|2|1|HCOO|1|2|||2|F2F2F2|1||Ca^2+ HCOO-*2||0|0|800|||544-17-2
+i_ca_o|0|Calcium oxide|Kalsiyum oksit|CaO|Sönmemiş kireç|ionic|Salt|S|0|0|Powder|1|56.077|3.34||||||||Ca|2|1|O|2|1|||1|F2F2F2|1||||0|0|800|||1305-78-8
+i_ca_s|0|Calcium sulfide|Kalsiyum sülfür|CaS||ionic|Salt|S|0|1|Crystals|32|72.138|2.4558||||||h_hs|1|Ca|2|1|S|2|1|||1|F2E6A0|1||Ca^2+ S^2-||0|0|800|||20548-54-3
+i_ca_so4|0|Calcium sulfate|Kalsiyum sülfat|CaSO₄|Alçı;Jips|ionic|Salt|S|0|0|Powder|0|136.134|2.96||||||||Ca|2|1|SO4|2|1|||1|F2F2F2|1||||0|0|800|||7778-18-9
+i_ca_so3|0|Calcium sulfite|Kalsiyum sülfit|CaSO₃||ionic|Salt|S|0|0|Powder|0|120.135|2.89214||||||h_hso3|1|Ca|2|1|SO3|2|1|||1|F2F2F2|1||||0|0|800|||10257-55-3
+i_ca_s2o3|0|Calcium thiosulfate|Kalsiyum tiyosülfat|CaS₂O₃||ionic|Salt|S|0|1|Crystals|0|152.195|3.18359||||||||Ca|2|1|S2O3|2|1|||1|F2F2F2|1||Ca^2+ S2O3^2-||0|0|800|||10124-41-1
+caco3|1|Calcium carbonate|Kalsiyum karbonat||Kireç taşı;Mermer;Tebeşir|ionic|Molecular|S|0|0|Powder|0||||||||h_hco3|1|Ca|2|1|CO3|2|1|||1||||||0|0||||471-34-1
+i_ca_c2o4|0|Calcium oxalate|Kalsiyum oksalat|CaC₂O₄||ionic|Salt|S|0|0|Powder|16|128.096|2.96451||||||h_hc2o4|1|Ca|2|1|C2O4|2|1|||1|F2F2F2|1||||0|0|800|||563-72-4
+i_ca_cro4|0|Calcium chromate|Kalsiyum kromat|CaCrO₄||ionic|Salt|S|0|1|Crystals|554|156.07|3.21882||||||||Ca|2|1|CrO4|2|1|||1|F2D21E|0.8|40|Ca^2+ CrO4^2-||0|0|800|||13765-19-0
+i_ca_cr2o7|0|Calcium dichromate|Kalsiyum dikromat|CaCr₂O₇||ionic|Salt|S|0|1|Crystals|554|256.063|4.12785||||||||Ca|2|1|Cr2O7|2|1|||1|F27A1E|0.8|30|Ca^2+ Cr2O7^2-||0|0|800|||14307-49-4
 i_ca_sio3|0|Calcium silicate|Kalsiyum silikat|CaSiO₃||ionic|Salt|S|0|0|Powder|0|116.16|2.856||||||h_hsio3|1|Ca|2|1|SiO3|2|1|||1|F2F2F2|1||||0|0|800|||
-i_ca_hpo4|0|Calcium hydrogenphosphate|Kalsiyum hidrojen fosfat|CaHPO₄||ionic|Salt|S|0|0|Powder|0|136.056|3.03687||||||h_h2po4|1|Ca|2|1|HPO4|2|1|||1|F2F2F2|1||||0|0|800|||
-i_ca_po4|0|Calcium phosphate|Kalsiyum fosfat|Ca₃(PO₄)₂||ionic|Salt|S|0|0|Powder|0|310.174|3.14||||||h_hpo4|2|Ca|2|3|PO4|3|2|||2|F2F2F2|1||||0|0|800|||
+i_ca_hpo4|0|Calcium hydrogenphosphate|Kalsiyum hidrojen fosfat|CaHPO₄||ionic|Salt|S|0|0|Powder|0|136.056|3.03687||||||h_h2po4|1|Ca|2|1|HPO4|2|1|||1|F2F2F2|1||||0|0|800|||7757-93-9
+i_ca_po4|0|Calcium phosphate|Kalsiyum fosfat|Ca₃(PO₄)₂||ionic|Salt|S|0|0|Powder|0|310.174|3.14||||||h_hpo4|2|Ca|2|3|PO4|3|2|||2|F2F2F2|1||||0|0|800|||7758-87-4
 i_ca_b4o7|0|Calcium tetraborate|Kalsiyum tetraborat|CaB₄O₇||ionic|Salt|S|0|0|Powder|512|195.311|3.57555||||||m_h3bo3|1|Ca|2|1|B4O7|2|1|||1|F2F2F2|1||||0|0|800|||
-i_ca_o2|0|Calcium peroxide|Kalsiyum peroksit|CaO₂||ionic|Salt|S|0|0|Powder|9|72.076|2.45524||||||||Ca|2|1|O2|2|1|||1|F2F2F2|1||||0|0|800|||
+i_ca_o2|0|Calcium peroxide|Kalsiyum peroksit|CaO₂||ionic|Salt|S|0|0|Powder|9|72.076|2.45524||||||||Ca|2|1|O2|2|1|||1|F2F2F2|1||||0|0|800|||12049-69-3
 i_ca_n|0|Calcium nitride|Kalsiyum nitrür|Ca₃N₂||ionic|Salt|S|0|0|Powder|80|148.248|3.14771||||||||Ca|2|3|N|3|2|||2|F2F2F2|1||||0|0|800|||
-i_ca_h|0|Calcium hydride|Kalsiyum hidrür|CaH₂||ionic|Salt|S|0|0|Powder|68|42.094|2.18267||||||||Ca|2|1|H|1|2|||2|F2F2F2|1||||0|0|800|||
+i_ca_h|0|Calcium hydride|Kalsiyum hidrür|CaH₂||ionic|Salt|S|0|0|Powder|68|42.094|2.18267||||||||Ca|2|1|H|1|2|||2|F2F2F2|1||||0|0|800|||7789-78-8
 i_ca_c6h5coo|0|Calcium benzoate|Kalsiyum benzoat|(C₆H₅COO)₂Ca||ionic|Salt|S|0|1|Crystals|0|282.308|4.36644||||||m_c6h5cooh|2|Ca|2|1|C6H5COO|1|2|||2|F2F2F2|1||Ca^2+ C6H5COO-*2||0|0|800|||
-i_ca_c6h5o7|0|Calcium citrate|Kalsiyum sitrat|Ca₃(C₆H₅O₇)₂||ionic|Salt|S|0|0|Powder|0|498.432|6.3312||||||m_c6h8o7|2|Ca|2|3|C6H5O7|3|2|||2|F2F2F2|1||||0|0|800|||
-i_ca_c3h5o3|0|Calcium lactate|Kalsiyum laktat|Ca(C₃H₅O₃)₂||ionic|Salt|S|0|1|Crystals|0|218.218|3.7838||||||m_c3h6o3|2|Ca|2|1|C3H5O3|1|2|||2|F2F2F2|1||Ca^2+ C3H5O3-*2||0|0|800|||
-i_ca_c17h35coo|0|Calcium stearate|Kalsiyum stearat|(C₁₇H₃₅COO)₂Ca|Sabun kiri (kireçli su)|ionic|Salt|S|0|0|Powder|0|607.03|7.31845||||||||Ca|2|1|C17H35COO|1|2|||2|F2F2F2|1||||0|0|800|||
+i_ca_c6h5o7|0|Calcium citrate|Kalsiyum sitrat|Ca₃(C₆H₅O₇)₂||ionic|Salt|S|0|0|Powder|0|498.432|6.3312||||||m_c6h8o7|2|Ca|2|3|C6H5O7|3|2|||2|F2F2F2|1||||0|0|800|||813-94-5
+i_ca_c3h5o3|0|Calcium lactate|Kalsiyum laktat|Ca(C₃H₅O₃)₂||ionic|Salt|S|0|1|Crystals|0|218.218|3.7838||||||m_c3h6o3|2|Ca|2|1|C3H5O3|1|2|||2|F2F2F2|1||Ca^2+ C3H5O3-*2||0|0|800|||814-80-2
+i_ca_c17h35coo|0|Calcium stearate|Kalsiyum stearat|(C₁₇H₃₅COO)₂Ca|Sabun kiri (kireçli su)|ionic|Salt|S|0|0|Powder|0|607.03|7.31845||||||||Ca|2|1|C17H35COO|1|2|||2|F2F2F2|1||||0|0|800|||1592-23-0
 i_ca_fecn6_4|0|Calcium hexacyanoferrate(II)|Kalsiyum hekzasiyanoferrat(II)|Ca₂[Fe(CN)₆]|Kalsiyum ferrosiyanür|ionic|Salt|S|0|1|Crystals|0|292.109|4.45554||||||||Ca|2|2|FeCN6_4|4|1|||1|F2E070|0.8|8|Ca^2+*2 Fe(CN)6^4-||0|0|800|||
-i_ca_moo4|0|Calcium molybdate|Kalsiyum molibdat|CaMoO₄||ionic|Salt|S|0|0|Powder|16|200.024|3.6184||||||||Ca|2|1|MoO4|2|1|||1|F2F2F2|1||||0|0|800|||
-i_ca_wo4|0|Calcium tungstate|Kalsiyum tungstat|CaWO₄|Şelit|ionic|Salt|S|0|0|Powder|0|287.914|4.4174||||||||Ca|2|1|WO4|2|1|||1|F2F2F2|1||||0|0|800|||
-i_ca_aso4|0|Calcium arsenate|Kalsiyum arsenat|Ca₃(AsO₄)₂||ionic|Salt|S|0|0|Powder|546|398.069|5.41881||||||||Ca|2|3|AsO4|3|2|||2|F2F2F2|1||||0|0|800|||
-i_sr_f|0|Strontium fluoride|Stronsiyum florür|SrF₂||ionic|Salt|S|0|0|Powder|2|125.617|2.94197||||||m_hf|2|Sr|2|1|F|1|2|||2|F2F2F2|1||||0|0|800|||
+i_ca_moo4|0|Calcium molybdate|Kalsiyum molibdat|CaMoO₄||ionic|Salt|S|0|0|Powder|16|200.024|3.6184||||||||Ca|2|1|MoO4|2|1|||1|F2F2F2|1||||0|0|800|||7789-82-4
+i_ca_wo4|0|Calcium tungstate|Kalsiyum tungstat|CaWO₄|Şelit|ionic|Salt|S|0|0|Powder|0|287.914|4.4174||||||||Ca|2|1|WO4|2|1|||1|F2F2F2|1||||0|0|800|||7790-75-2
+i_ca_aso4|0|Calcium arsenate|Kalsiyum arsenat|Ca₃(AsO₄)₂||ionic|Salt|S|0|0|Powder|546|398.069|5.41881||||||||Ca|2|3|AsO4|3|2|||2|F2F2F2|1||||0|0|800|||7778-44-1
+i_sr_f|0|Strontium fluoride|Stronsiyum florür|SrF₂||ionic|Salt|S|0|0|Powder|2|125.617|2.94197||||||m_hf|2|Sr|2|1|F|1|2|||2|F2F2F2|1||||0|0|800|||7783-48-4
 i_sr_cl|0|Strontium chloride|Stronsiyum klorür|SrCl₂||ionic|Salt|S|0|1|Crystals|0|158.52|3.05||||||||Sr|2|1|Cl|1|2|||2|F2F2F2|1||Sr^2+ Cl-*2||0|0|800|||
 i_sr_br|0|Strontium bromide|Stronsiyum bromür|SrBr₂||ionic|Salt|S|0|1|Crystals|0|247.428|4.04935||||||||Sr|2|1|Br|1|2|||2|F2F2F2|1||Sr^2+ Br-*2||0|0|800|||
 i_sr_i|0|Strontium iodide|Stronsiyum iyodür|SrI₂||ionic|Salt|S|0|1|Crystals|0|341.429|4.9039||||||||Sr|2|1|I|1|2|||2|F2F2F2|1||Sr^2+ I-*2||0|0|800|||
-i_sr_oh|0|Strontium hydroxide|Stronsiyum hidroksit|Sr(OH)₂||ionic|StrongBase|S|0|1|Crystals|1|121.634|2.90576|||2|||||Sr|2|1|OH|1|2|||2|F2F2F2|1||Sr^2+ OH-*2||0|0|800|||
-i_sr_no3|0|Strontium nitrate|Stronsiyum nitrat|Sr(NO₃)₂||ionic|Salt|S|0|1|Crystals|8|211.628|3.72389||||||||Sr|2|1|NO3|1|2|||2|F2F2F2|1||Sr^2+ NO3-*2||0|0|800|||
-i_sr_no2|0|Strontium nitrite|Stronsiyum nitrit|Sr(NO₂)₂||ionic|Salt|S|0|1|Crystals|10|179.63|3.433||||||m_hno2|2|Sr|2|1|NO2|1|2|||2|F2F2F2|1||Sr^2+ NO2-*2||0|0|800|||
+i_sr_oh|0|Strontium hydroxide|Stronsiyum hidroksit|Sr(OH)₂||ionic|StrongBase|S|0|1|Crystals|1|121.634|2.90576|||2|||||Sr|2|1|OH|1|2|||2|F2F2F2|1||Sr^2+ OH-*2||0|0|800|||18480-07-4
+i_sr_no3|0|Strontium nitrate|Stronsiyum nitrat|Sr(NO₃)₂||ionic|Salt|S|0|1|Crystals|8|211.628|3.72389||||||||Sr|2|1|NO3|1|2|||2|F2F2F2|1||Sr^2+ NO3-*2||0|0|800|||10042-76-9
+i_sr_no2|0|Strontium nitrite|Stronsiyum nitrit|Sr(NO₂)₂||ionic|Salt|S|0|1|Crystals|10|179.63|3.433||||||m_hno2|2|Sr|2|1|NO2|1|2|||2|F2F2F2|1||Sr^2+ NO2-*2||0|0|800|||13470-06-9
 i_sr_cn|0|Strontium cyanide|Stronsiyum siyanür|Sr(CN)₂||ionic|Salt|S|0|1|Crystals|34|139.656|3.0696||||||m_hcn|2|Sr|2|1|CN|1|2|||2|F2F2F2|1||Sr^2+ CN-*2||0|0|800|||
 i_sr_scn|0|Strontium thiocyanate|Stronsiyum tiyosiyanat|Sr(SCN)₂||ionic|Salt|S|0|1|Crystals|16|203.776|3.65251||||||||Sr|2|1|SCN|1|2|||2|F2F2F2|1||Sr^2+ SCN-*2||0|0|800|||
-i_sr_clo3|0|Strontium chlorate|Stronsiyum klorat|Sr(ClO₃)₂||ionic|Salt|S|0|1|Crystals|24|254.514|4.11376||||||||Sr|2|1|ClO3|1|2|||2|F2F2F2|1||Sr^2+ ClO3-*2||0|0|800|||
-i_sr_clo4|0|Strontium perchlorate|Stronsiyum perklorat|Sr(ClO₄)₂||ionic|Salt|S|0|1|Crystals|24|286.512|4.40465||||||||Sr|2|1|ClO4|1|2|||2|F2F2F2|1||Sr^2+ ClO4-*2||0|0|800|||
-i_sr_bro3|0|Strontium bromate|Stronsiyum bromat|Sr(BrO₃)₂||ionic|Salt|S|0|1|Crystals|10|343.422|4.92202||||||||Sr|2|1|BrO3|1|2|||2|F2F2F2|1||Sr^2+ BrO3-*2||0|0|800|||
-i_sr_io3|0|Strontium iodate|Stronsiyum iyodat|Sr(IO₃)₂||ionic|Salt|S|0|0|Powder|24|437.423|5.77657||||||||Sr|2|1|IO3|1|2|||2|F2F2F2|1||||0|0|800|||
+i_sr_clo3|0|Strontium chlorate|Stronsiyum klorat|Sr(ClO₃)₂||ionic|Salt|S|0|1|Crystals|24|254.514|4.11376||||||||Sr|2|1|ClO3|1|2|||2|F2F2F2|1||Sr^2+ ClO3-*2||0|0|800|||7791-10-8
+i_sr_clo4|0|Strontium perchlorate|Stronsiyum perklorat|Sr(ClO₄)₂||ionic|Salt|S|0|1|Crystals|24|286.512|4.40465||||||||Sr|2|1|ClO4|1|2|||2|F2F2F2|1||Sr^2+ ClO4-*2||0|0|800|||13450-97-0
+i_sr_bro3|0|Strontium bromate|Stronsiyum bromat|Sr(BrO₃)₂||ionic|Salt|S|0|1|Crystals|10|343.422|4.92202||||||||Sr|2|1|BrO3|1|2|||2|F2F2F2|1||Sr^2+ BrO3-*2||0|0|800|||14519-18-7
+i_sr_io3|0|Strontium iodate|Stronsiyum iyodat|Sr(IO₃)₂||ionic|Salt|S|0|0|Powder|24|437.423|5.77657||||||||Sr|2|1|IO3|1|2|||2|F2F2F2|1||||0|0|800|||13470-01-4
 i_sr_mno4|0|Strontium permanganate|Stronsiyum permanganat|Sr(MnO₄)₂||ionic|Salt|S|0|1|Crystals|56|325.488|4.75898||||||||Sr|2|1|MnO4|1|2|||2|7A0F8C|0.8|400|Sr^2+ MnO4-*2||0|0|800|||
-i_sr_ch3coo|0|Strontium acetate|Stronsiyum asetat|(CH₃COO)₂Sr|Stronsiyum etanoat|ionic|Salt|S|0|1|Crystals|0|205.708|3.67007||||||acetic_acid|2|Sr|2|1|CH3COO|1|2|||2|F2F2F2|1||Sr^2+ CH3COO-*2||0|0|800|||
-i_sr_hcoo|0|Strontium formate|Stronsiyum format|(HCOO)₂Sr|Stronsiyum metanoat|ionic|Salt|S|0|1|Crystals|0|177.654|3.41504||||||m_hcooh|2|Sr|2|1|HCOO|1|2|||2|F2F2F2|1||Sr^2+ HCOO-*2||0|0|800|||
+i_sr_ch3coo|0|Strontium acetate|Stronsiyum asetat|(CH₃COO)₂Sr|Stronsiyum etanoat|ionic|Salt|S|0|1|Crystals|0|205.708|3.67007||||||acetic_acid|2|Sr|2|1|CH3COO|1|2|||2|F2F2F2|1||Sr^2+ CH3COO-*2||0|0|800|||543-94-2
+i_sr_hcoo|0|Strontium formate|Stronsiyum format|(HCOO)₂Sr|Stronsiyum metanoat|ionic|Salt|S|0|1|Crystals|0|177.654|3.41504||||||m_hcooh|2|Sr|2|1|HCOO|1|2|||2|F2F2F2|1||Sr^2+ HCOO-*2||0|0|800|||592-89-2
 i_sr_o|0|Strontium oxide|Stronsiyum oksit|SrO||ionic|Salt|S|0|0|Powder|1|103.619|4.7||||||||Sr|2|1|O|2|1|||1|F2F2F2|1||||0|0|800|||
-i_sr_s|0|Strontium sulfide|Stronsiyum sülfür|SrS||ionic|Salt|S|0|1|Crystals|32|119.68|2.888||||||h_hs|1|Sr|2|1|S|2|1|||1|F2E6A0|1||Sr^2+ S^2-||0|0|800|||
-i_sr_so4|0|Strontium sulfate|Stronsiyum sülfat|SrSO₄||ionic|Salt|S|0|0|Powder|0|183.676|3.46978||||||||Sr|2|1|SO4|2|1|||1|F2F2F2|1||||0|0|800|||
-i_sr_so3|0|Strontium sulfite|Stronsiyum sülfit|SrSO₃||ionic|Salt|S|0|0|Powder|0|167.677|3.32434||||||h_hso3|1|Sr|2|1|SO3|2|1|||1|F2F2F2|1||||0|0|800|||
+i_sr_s|0|Strontium sulfide|Stronsiyum sülfür|SrS||ionic|Salt|S|0|1|Crystals|32|119.68|2.888||||||h_hs|1|Sr|2|1|S|2|1|||1|F2E6A0|1||Sr^2+ S^2-||0|0|800|||1314-96-1
+i_sr_so4|0|Strontium sulfate|Stronsiyum sülfat|SrSO₄||ionic|Salt|S|0|0|Powder|0|183.676|3.46978||||||||Sr|2|1|SO4|2|1|||1|F2F2F2|1||||0|0|800|||7759-02-6
+i_sr_so3|0|Strontium sulfite|Stronsiyum sülfit|SrSO₃||ionic|Salt|S|0|0|Powder|0|167.677|3.32434||||||h_hso3|1|Sr|2|1|SO3|2|1|||1|F2F2F2|1||||0|0|800|||13451-02-0
 i_sr_s2o3|0|Strontium thiosulfate|Stronsiyum tiyosülfat|SrS₂O₃||ionic|Salt|S|0|1|Crystals|0|199.737|3.61579||||||||Sr|2|1|S2O3|2|1|||1|F2F2F2|1||Sr^2+ S2O3^2-||0|0|800|||
-i_sr_co3|0|Strontium carbonate|Stronsiyum karbonat|SrCO₃||ionic|Salt|S|0|0|Powder|0|147.628|3.14207||||||h_hco3|1|Sr|2|1|CO3|2|1|||1|F2F2F2|1||||0|0|800|||
-i_sr_c2o4|0|Strontium oxalate|Stronsiyum oksalat|SrC₂O₄||ionic|Salt|S|0|0|Powder|16|175.638|3.39671||||||h_hc2o4|1|Sr|2|1|C2O4|2|1|||1|F2F2F2|1||||0|0|800|||
-i_sr_cro4|0|Strontium chromate|Stronsiyum kromat|SrCrO₄||ionic|Salt|S|0|0|Powder|554|203.612|3.65102||||||||Sr|2|1|CrO4|2|1|||1|F2DA3A|1||||0|0|800|||
+i_sr_co3|0|Strontium carbonate|Stronsiyum karbonat|SrCO₃||ionic|Salt|S|0|0|Powder|0|147.628|3.14207||||||h_hco3|1|Sr|2|1|CO3|2|1|||1|F2F2F2|1||||0|0|800|||1633-05-2
+i_sr_c2o4|0|Strontium oxalate|Stronsiyum oksalat|SrC₂O₄||ionic|Salt|S|0|0|Powder|16|175.638|3.39671||||||h_hc2o4|1|Sr|2|1|C2O4|2|1|||1|F2F2F2|1||||0|0|800|||814-95-9
+i_sr_cro4|0|Strontium chromate|Stronsiyum kromat|SrCrO₄||ionic|Salt|S|0|0|Powder|554|203.612|3.65102||||||||Sr|2|1|CrO4|2|1|||1|F2DA3A|1||||0|0|800|||7789-06-2
 i_sr_cr2o7|0|Strontium dichromate|Stronsiyum dikromat|SrCr₂O₇||ionic|Salt|S|0|1|Crystals|554|303.605|4.56005||||||||Sr|2|1|Cr2O7|2|1|||1|F27A1E|0.8|30|Sr^2+ Cr2O7^2-||0|0|800|||
 i_sr_sio3|0|Strontium silicate|Stronsiyum silikat|SrSiO₃||ionic|Salt|S|0|0|Powder|0|163.702|3.2882||||||h_hsio3|1|Sr|2|1|SiO3|2|1|||1|F2F2F2|1||||0|0|800|||
-i_sr_hpo4|0|Strontium hydrogenphosphate|Stronsiyum hidrojen fosfat|SrHPO₄||ionic|Salt|S|0|0|Powder|0|183.598|3.46907||||||h_h2po4|1|Sr|2|1|HPO4|2|1|||1|F2F2F2|1||||0|0|800|||
+i_sr_hpo4|0|Strontium hydrogenphosphate|Stronsiyum hidrojen fosfat|SrHPO₄||ionic|Salt|S|0|0|Powder|0|183.598|3.46907||||||h_h2po4|1|Sr|2|1|HPO4|2|1|||1|F2F2F2|1||||0|0|800|||13450-99-2
 i_sr_po4|0|Strontium phosphate|Stronsiyum fosfat|Sr₃(PO₄)₂||ionic|Salt|S|0|0|Powder|0|452.8|5.91636||||||h_hpo4|2|Sr|2|3|PO4|3|2|||2|F2F2F2|1||||0|0|800|||
-i_sr_o2|0|Strontium peroxide|Stronsiyum peroksit|SrO₂||ionic|Salt|S|0|0|Powder|9|119.618|2.88744||||||||Sr|2|1|O2|2|1|||1|F2F2F2|1||||0|0|800|||
+i_sr_o2|0|Strontium peroxide|Stronsiyum peroksit|SrO₂||ionic|Salt|S|0|0|Powder|9|119.618|2.88744||||||||Sr|2|1|O2|2|1|||1|F2F2F2|1||||0|0|800|||1314-18-7
 i_sr_n|0|Strontium nitride|Stronsiyum nitrür|Sr₃N₂||ionic|Salt|S|0|0|Powder|80|290.874|4.44431||||||||Sr|2|3|N|3|2|||2|F2F2F2|1||||0|0|800|||
-i_sr_h|0|Strontium hydride|Stronsiyum hidrür|SrH₂||ionic|Salt|S|0|0|Powder|68|89.636|2.61487||||||||Sr|2|1|H|1|2|||2|F2F2F2|1||||0|0|800|||
+i_sr_h|0|Strontium hydride|Stronsiyum hidrür|SrH₂||ionic|Salt|S|0|0|Powder|68|89.636|2.61487||||||||Sr|2|1|H|1|2|||2|F2F2F2|1||||0|0|800|||13598-33-9
 i_ba_f|0|Barium fluoride|Baryum florür|BaF₂||ionic|Salt|S|0|0|Powder|16|175.324|3.39385||||||m_hf|2|Ba|2|1|F|1|2|||2|F2F2F2|1||||0|0|800|||
-i_ba_cl|0|Barium chloride|Baryum klorür|BaCl₂||ionic|Salt|S|0|1|Crystals|18|208.227|3.86||||||||Ba|2|1|Cl|1|2|||2|F2F2F2|1||Ba^2+ Cl-*2||0|0|800|||
-i_ba_br|0|Barium bromide|Baryum bromür|BaBr₂||ionic|Salt|S|0|1|Crystals|18|297.135|4.50123||||||||Ba|2|1|Br|1|2|||2|F2F2F2|1||Ba^2+ Br-*2||0|0|800|||
-i_ba_i|0|Barium iodide|Baryum iyodür|BaI₂||ionic|Salt|S|0|1|Crystals|18|391.136|5.35578||||||||Ba|2|1|I|1|2|||2|F2F2F2|1||Ba^2+ I-*2||0|0|800|||
+i_ba_cl|0|Barium chloride|Baryum klorür|BaCl₂||ionic|Salt|S|0|1|Crystals|18|208.227|3.86||||||||Ba|2|1|Cl|1|2|||2|F2F2F2|1||Ba^2+ Cl-*2||0|0|800|||10361-37-2
+i_ba_br|0|Barium bromide|Baryum bromür|BaBr₂||ionic|Salt|S|0|1|Crystals|18|297.135|4.50123||||||||Ba|2|1|Br|1|2|||2|F2F2F2|1||Ba^2+ Br-*2||0|0|800|||10553-31-8
+i_ba_i|0|Barium iodide|Baryum iyodür|BaI₂||ionic|Salt|S|0|1|Crystals|18|391.136|5.35578||||||||Ba|2|1|I|1|2|||2|F2F2F2|1||Ba^2+ I-*2||0|0|800|||13718-50-8
 i_ba_oh|0|Barium hydroxide|Baryum hidroksit|Ba(OH)₂||ionic|StrongBase|S|0|1|Crystals|19|171.341|3.35765|||2|||||Ba|2|1|OH|1|2|||2|F2F2F2|1||Ba^2+ OH-*2||0|0|800|||
-i_ba_no3|0|Barium nitrate|Baryum nitrat|Ba(NO₃)₂||ionic|Salt|S|0|1|Crystals|26|261.335|4.17577||||||||Ba|2|1|NO3|1|2|||2|F2F2F2|1||Ba^2+ NO3-*2||0|0|800|||
-i_ba_no2|0|Barium nitrite|Baryum nitrit|Ba(NO₂)₂||ionic|Salt|S|0|1|Crystals|26|229.337|3.88488||||||m_hno2|2|Ba|2|1|NO2|1|2|||2|F2F2F2|1||Ba^2+ NO2-*2||0|0|800|||
+i_ba_no3|0|Barium nitrate|Baryum nitrat|Ba(NO₃)₂||ionic|Salt|S|0|1|Crystals|26|261.335|4.17577||||||||Ba|2|1|NO3|1|2|||2|F2F2F2|1||Ba^2+ NO3-*2||0|0|800|||10022-31-8
+i_ba_no2|0|Barium nitrite|Baryum nitrit|Ba(NO₂)₂||ionic|Salt|S|0|1|Crystals|26|229.337|3.88488||||||m_hno2|2|Ba|2|1|NO2|1|2|||2|F2F2F2|1||Ba^2+ NO2-*2||0|0|800|||115216-77-8
 i_ba_cn|0|Barium cyanide|Baryum siyanür|Ba(CN)₂||ionic|Salt|S|0|1|Crystals|50|189.363|3.52148||||||m_hcn|2|Ba|2|1|CN|1|2|||2|F2F2F2|1||Ba^2+ CN-*2||0|0|800|||
 i_ba_scn|0|Barium thiocyanate|Baryum tiyosiyanat|Ba(SCN)₂||ionic|Salt|S|0|1|Crystals|18|253.483|4.10439||||||||Ba|2|1|SCN|1|2|||2|F2F2F2|1||Ba^2+ SCN-*2||0|0|800|||
-i_ba_clo3|0|Barium chlorate|Baryum klorat|Ba(ClO₃)₂||ionic|Salt|S|0|1|Crystals|26|304.221|4.56565||||||||Ba|2|1|ClO3|1|2|||2|F2F2F2|1||Ba^2+ ClO3-*2||0|0|800|||
-i_ba_clo4|0|Barium perchlorate|Baryum perklorat|Ba(ClO₄)₂||ionic|Salt|S|0|1|Crystals|26|336.219|4.85654||||||||Ba|2|1|ClO4|1|2|||2|F2F2F2|1||Ba^2+ ClO4-*2||0|0|800|||
-i_ba_bro3|0|Barium bromate|Baryum bromat|Ba(BrO₃)₂||ionic|Salt|S|0|1|Crystals|26|393.129|5.3739||||||||Ba|2|1|BrO3|1|2|||2|F2F2F2|1||Ba^2+ BrO3-*2||0|0|800|||
-i_ba_io3|0|Barium iodate|Baryum iyodat|Ba(IO₃)₂||ionic|Salt|S|0|0|Powder|24|487.13|6.22845||||||||Ba|2|1|IO3|1|2|||2|F2F2F2|1||||0|0|800|||
-i_ba_mno4|0|Barium permanganate|Baryum permanganat|Ba(MnO₄)₂||ionic|Salt|S|0|1|Crystals|58|375.195|5.21086||||||||Ba|2|1|MnO4|1|2|||2|7A0F8C|0.8|400|Ba^2+ MnO4-*2||0|0|800|||
-i_ba_ch3coo|0|Barium acetate|Baryum asetat|(CH₃COO)₂Ba|Baryum etanoat|ionic|Salt|S|0|1|Crystals|18|255.415|4.12195||||||acetic_acid|2|Ba|2|1|CH3COO|1|2|||2|F2F2F2|1||Ba^2+ CH3COO-*2||0|0|800|||
-i_ba_hcoo|0|Barium formate|Baryum format|(HCOO)₂Ba|Baryum metanoat|ionic|Salt|S|0|1|Crystals|18|227.361|3.86692||||||m_hcooh|2|Ba|2|1|HCOO|1|2|||2|F2F2F2|1||Ba^2+ HCOO-*2||0|0|800|||
-i_ba_o|0|Barium oxide|Baryum oksit|BaO||ionic|Salt|S|0|0|Powder|17|153.326|5.72||||||||Ba|2|1|O|2|1|||1|F2F2F2|1||||0|0|800|||
-i_ba_s|0|Barium sulfide|Baryum sülfür|BaS||ionic|Salt|S|0|1|Crystals|50|169.387|3.33988||||||h_hs|1|Ba|2|1|S|2|1|||1|F2E6A0|1||Ba^2+ S^2-||0|0|800|||
-i_ba_so4|0|Barium sulfate|Baryum sülfat|BaSO₄|Barit|ionic|Salt|S|0|0|Powder|16|233.383|4.5||||||||Ba|2|1|SO4|2|1|||1|F2F2F2|1||||0|0|800|||
-i_ba_so3|0|Barium sulfite|Baryum sülfit|BaSO₃||ionic|Salt|S|0|0|Powder|16|217.384|3.77622||||||h_hso3|1|Ba|2|1|SO3|2|1|||1|F2F2F2|1||||0|0|800|||
-i_ba_s2o3|0|Barium thiosulfate|Baryum tiyosülfat|BaS₂O₃||ionic|Salt|S|0|0|Powder|16|249.444|4.06767||||||||Ba|2|1|S2O3|2|1|||1|F2F2F2|1||||0|0|800|||
-i_ba_co3|0|Barium carbonate|Baryum karbonat|BaCO₃||ionic|Salt|S|0|0|Powder|16|197.335|3.59395||||||h_hco3|1|Ba|2|1|CO3|2|1|||1|F2F2F2|1||||0|0|800|||
-i_ba_c2o4|0|Barium oxalate|Baryum oksalat|BaC₂O₄||ionic|Salt|S|0|0|Powder|16|225.345|3.84859||||||h_hc2o4|1|Ba|2|1|C2O4|2|1|||1|F2F2F2|1||||0|0|800|||
-i_ba_cro4|0|Barium chromate|Baryum kromat|BaCrO₄||ionic|Salt|S|0|0|Powder|568|253.319|4.1029||||||||Ba|2|1|CrO4|2|1|||1|F2DA3A|1||||0|0|800|||
-i_ba_cr2o7|0|Barium dichromate|Baryum dikromat|BaCr₂O₇||ionic|Salt|S|0|1|Crystals|570|353.312|5.01193||||||||Ba|2|1|Cr2O7|2|1|||1|F27A1E|0.8|30|Ba^2+ Cr2O7^2-||0|0|800|||
-i_ba_sio3|0|Barium silicate|Baryum silikat|BaSiO₃||ionic|Salt|S|0|0|Powder|16|213.409|3.74008||||||h_hsio3|1|Ba|2|1|SiO3|2|1|||1|F2F2F2|1||||0|0|800|||
+i_ba_clo3|0|Barium chlorate|Baryum klorat|Ba(ClO₃)₂||ionic|Salt|S|0|1|Crystals|26|304.221|4.56565||||||||Ba|2|1|ClO3|1|2|||2|F2F2F2|1||Ba^2+ ClO3-*2||0|0|800|||13477-00-4
+i_ba_clo4|0|Barium perchlorate|Baryum perklorat|Ba(ClO₄)₂||ionic|Salt|S|0|1|Crystals|26|336.219|4.85654||||||||Ba|2|1|ClO4|1|2|||2|F2F2F2|1||Ba^2+ ClO4-*2||0|0|800|||13465-95-7
+i_ba_bro3|0|Barium bromate|Baryum bromat|Ba(BrO₃)₂||ionic|Salt|S|0|1|Crystals|26|393.129|5.3739||||||||Ba|2|1|BrO3|1|2|||2|F2F2F2|1||Ba^2+ BrO3-*2||0|0|800|||13967-90-3
+i_ba_io3|0|Barium iodate|Baryum iyodat|Ba(IO₃)₂||ionic|Salt|S|0|0|Powder|24|487.13|6.22845||||||||Ba|2|1|IO3|1|2|||2|F2F2F2|1||||0|0|800|||10567-69-8
+i_ba_mno4|0|Barium permanganate|Baryum permanganat|Ba(MnO₄)₂||ionic|Salt|S|0|1|Crystals|58|375.195|5.21086||||||||Ba|2|1|MnO4|1|2|||2|7A0F8C|0.8|400|Ba^2+ MnO4-*2||0|0|800|||7787-36-2
+i_ba_ch3coo|0|Barium acetate|Baryum asetat|(CH₃COO)₂Ba|Baryum etanoat|ionic|Salt|S|0|1|Crystals|18|255.415|4.12195||||||acetic_acid|2|Ba|2|1|CH3COO|1|2|||2|F2F2F2|1||Ba^2+ CH3COO-*2||0|0|800|||543-80-6
+i_ba_hcoo|0|Barium formate|Baryum format|(HCOO)₂Ba|Baryum metanoat|ionic|Salt|S|0|1|Crystals|18|227.361|3.86692||||||m_hcooh|2|Ba|2|1|HCOO|1|2|||2|F2F2F2|1||Ba^2+ HCOO-*2||0|0|800|||541-43-5
+i_ba_o|0|Barium oxide|Baryum oksit|BaO||ionic|Salt|S|0|0|Powder|17|153.326|5.72||||||||Ba|2|1|O|2|1|||1|F2F2F2|1||||0|0|800|||1304-28-5
+i_ba_s|0|Barium sulfide|Baryum sülfür|BaS||ionic|Salt|S|0|1|Crystals|50|169.387|3.33988||||||h_hs|1|Ba|2|1|S|2|1|||1|F2E6A0|1||Ba^2+ S^2-||0|0|800|||21109-95-5
+i_ba_so4|0|Barium sulfate|Baryum sülfat|BaSO₄|Barit|ionic|Salt|S|0|0|Powder|16|233.383|4.5||||||||Ba|2|1|SO4|2|1|||1|F2F2F2|1||||0|0|800|||7727-43-7
+i_ba_so3|0|Barium sulfite|Baryum sülfit|BaSO₃||ionic|Salt|S|0|0|Powder|16|217.384|3.77622||||||h_hso3|1|Ba|2|1|SO3|2|1|||1|F2F2F2|1||||0|0|800|||7787-39-5
+i_ba_s2o3|0|Barium thiosulfate|Baryum tiyosülfat|BaS₂O₃||ionic|Salt|S|0|0|Powder|16|249.444|4.06767||||||||Ba|2|1|S2O3|2|1|||1|F2F2F2|1||||0|0|800|||35112-53-9
+i_ba_co3|0|Barium carbonate|Baryum karbonat|BaCO₃||ionic|Salt|S|0|0|Powder|16|197.335|3.59395||||||h_hco3|1|Ba|2|1|CO3|2|1|||1|F2F2F2|1||||0|0|800|||513-77-9
+i_ba_c2o4|0|Barium oxalate|Baryum oksalat|BaC₂O₄||ionic|Salt|S|0|0|Powder|16|225.345|3.84859||||||h_hc2o4|1|Ba|2|1|C2O4|2|1|||1|F2F2F2|1||||0|0|800|||516-02-9
+i_ba_cro4|0|Barium chromate|Baryum kromat|BaCrO₄||ionic|Salt|S|0|0|Powder|568|253.319|4.1029||||||||Ba|2|1|CrO4|2|1|||1|F2DA3A|1||||0|0|800|||10294-40-3
+i_ba_cr2o7|0|Barium dichromate|Baryum dikromat|BaCr₂O₇||ionic|Salt|S|0|1|Crystals|570|353.312|5.01193||||||||Ba|2|1|Cr2O7|2|1|||1|F27A1E|0.8|30|Ba^2+ Cr2O7^2-||0|0|800|||10031-16-0
+i_ba_sio3|0|Barium silicate|Baryum silikat|BaSiO₃||ionic|Salt|S|0|0|Powder|16|213.409|3.74008||||||h_hsio3|1|Ba|2|1|SiO3|2|1|||1|F2F2F2|1||||0|0|800|||13255-26-0
 i_ba_hpo4|0|Barium hydrogenphosphate|Baryum hidrojen fosfat|BaHPO₄||ionic|Salt|S|0|0|Powder|16|233.305|3.92095||||||h_h2po4|1|Ba|2|1|HPO4|2|1|||1|F2F2F2|1||||0|0|800|||
-i_ba_po4|0|Barium phosphate|Baryum fosfat|Ba₃(PO₄)₂||ionic|Salt|S|0|0|Powder|16|601.921|7.272||||||h_hpo4|2|Ba|2|3|PO4|3|2|||2|F2F2F2|1||||0|0|800|||
+i_ba_po4|0|Barium phosphate|Baryum fosfat|Ba₃(PO₄)₂||ionic|Salt|S|0|0|Powder|16|601.921|7.272||||||h_hpo4|2|Ba|2|3|PO4|3|2|||2|F2F2F2|1||||0|0|800|||13517-08-3
 i_ba_b4o7|0|Barium tetraborate|Baryum tetraborat|BaB₄O₇||ionic|Salt|S|0|0|Powder|528|292.56|4.45964||||||m_h3bo3|1|Ba|2|1|B4O7|2|1|||1|F2F2F2|1||||0|0|800|||
-i_ba_o2|0|Barium peroxide|Baryum peroksit|BaO₂||ionic|Salt|S|0|0|Powder|25|169.325|3.33932||||||||Ba|2|1|O2|2|1|||1|F2F2F2|1||||0|0|800|||
-i_ba_n|0|Barium nitride|Baryum nitrür|Ba₃N₂||ionic|Salt|S|0|0|Powder|80|439.995|5.79995||||||||Ba|2|3|N|3|2|||2|F2F2F2|1||||0|0|800|||
-i_ba_h|0|Barium hydride|Baryum hidrür|BaH₂||ionic|Salt|S|0|0|Powder|84|139.343|3.06675||||||||Ba|2|1|H|1|2|||2|F2F2F2|1||||0|0|800|||
-i_be_f|0|Beryllium fluoride|Berilyum florür|BeF₂||ionic|Salt|S|0|1|Crystals|514|47.009|2.22735||||||m_hf|2|Be|2|1|F|1|2||3e-07|1|F2F2F2|1||Be^2+ F-*2||0|0|800|||
-i_be_cl|0|Beryllium chloride|Berilyum klorür|BeCl₂||ionic|Salt|S|0|1|Crystals|514|79.9122|2.52647||||||||Be|2|1|Cl|1|2||3e-07|1|F2F2F2|1||Be^2+ Cl-*2||0|0|800|||
-i_be_br|0|Beryllium bromide|Berilyum bromür|BeBr₂||ionic|Salt|S|0|1|Crystals|514|168.82|3.33473||||||||Be|2|1|Br|1|2||3e-07|1|F2F2F2|1||Be^2+ Br-*2||0|0|800|||
-i_be_i|0|Beryllium iodide|Berilyum iyodür|BeI₂||ionic|Salt|S|0|1|Crystals|514|262.821|4.18928||||||||Be|2|1|I|1|2||3e-07|1|F2F2F2|1||Be^2+ I-*2||0|0|800|||
-i_be_oh|0|Beryllium hydroxide|Berilyum hidroksit|Be(OH)₂||ionic|Salt|S|0|0|Powder|514|43.0262|2.19115||||||||Be|2|1|OH|1|2||3e-07|1|F2F2F2|1||||0|0|800|||
-i_be_no3|0|Beryllium nitrate|Berilyum nitrat|Be(NO₃)₂||ionic|Salt|S|0|1|Crystals|522|133.02|3.00927||||||||Be|2|1|NO3|1|2||3e-07|1|F2F2F2|1||Be^2+ NO3-*2||0|0|800|||
-i_be_clo4|0|Beryllium perchlorate|Berilyum perklorat|Be(ClO₄)₂||ionic|Salt|S|0|1|Crystals|538|207.904|3.69004||||||||Be|2|1|ClO4|1|2||3e-07|1|F2F2F2|1||Be^2+ ClO4-*2||0|0|800|||
-i_be_ch3coo|0|Beryllium acetate|Berilyum asetat|(CH₃COO)₂Be|Berilyum etanoat|ionic|Salt|S|0|1|Crystals|514|127.1|2.95546||||||acetic_acid|2|Be|2|1|CH3COO|1|2||3e-07|1|F2F2F2|1||Be^2+ CH3COO-*2||0|0|800|||
-i_be_o|0|Beryllium oxide|Berilyum oksit|BeO||ionic|Salt|S|0|0|Powder|514|25.0112|2.02737||||||||Be|2|1|O|2|1||3e-07|1|F2F2F2|1||||0|0|800|||
-i_be_s|0|Beryllium sulfide|Berilyum sülfür|BeS||ionic|Salt|S|0|0|Powder|546|41.0722|2.17338||||||h_hs|1|Be|2|1|S|2|1||3e-07|1|1E1E1E|1||||0|0|800|||
-i_be_so4|0|Beryllium sulfate|Berilyum sülfat|BeSO₄||ionic|Salt|S|0|1|Crystals|514|105.068|2.75517||||||||Be|2|1|SO4|2|1||3e-07|1|F2F2F2|1||Be^2+ SO4^2-||0|0|800|||
+i_ba_o2|0|Barium peroxide|Baryum peroksit|BaO₂||ionic|Salt|S|0|0|Powder|25|169.325|3.33932||||||||Ba|2|1|O2|2|1|||1|F2F2F2|1||||0|0|800|||1304-29-6
+i_ba_n|0|Barium nitride|Baryum nitrür|Ba₃N₂||ionic|Salt|S|0|0|Powder|80|439.995|5.79995||||||||Ba|2|3|N|3|2|||2|F2F2F2|1||||0|0|800|||12047-79-9
+i_ba_h|0|Barium hydride|Baryum hidrür|BaH₂||ionic|Salt|S|0|0|Powder|84|139.343|3.06675||||||||Ba|2|1|H|1|2|||2|F2F2F2|1||||0|0|800|||13477-09-3
+i_be_f|0|Beryllium fluoride|Berilyum florür|BeF₂||ionic|Salt|S|0|1|Crystals|514|47.009|2.22735||||||m_hf|2|Be|2|1|F|1|2||3e-07|1|F2F2F2|1||Be^2+ F-*2||0|0|800|||7787-49-7
+i_be_cl|0|Beryllium chloride|Berilyum klorür|BeCl₂||ionic|Salt|S|0|1|Crystals|514|79.9122|2.52647||||||||Be|2|1|Cl|1|2||3e-07|1|F2F2F2|1||Be^2+ Cl-*2||0|0|800|||7787-47-5
+i_be_br|0|Beryllium bromide|Berilyum bromür|BeBr₂||ionic|Salt|S|0|1|Crystals|514|168.82|3.33473||||||||Be|2|1|Br|1|2||3e-07|1|F2F2F2|1||Be^2+ Br-*2||0|0|800|||7787-46-4
+i_be_i|0|Beryllium iodide|Berilyum iyodür|BeI₂||ionic|Salt|S|0|1|Crystals|514|262.821|4.18928||||||||Be|2|1|I|1|2||3e-07|1|F2F2F2|1||Be^2+ I-*2||0|0|800|||7787-53-3
+i_be_oh|0|Beryllium hydroxide|Berilyum hidroksit|Be(OH)₂||ionic|Salt|S|0|0|Powder|514|43.0262|2.19115||||||||Be|2|1|OH|1|2||3e-07|1|F2F2F2|1||||0|0|800|||13327-32-7
+i_be_no3|0|Beryllium nitrate|Berilyum nitrat|Be(NO₃)₂||ionic|Salt|S|0|1|Crystals|522|133.02|3.00927||||||||Be|2|1|NO3|1|2||3e-07|1|F2F2F2|1||Be^2+ NO3-*2||0|0|800|||13597-99-4
+i_be_clo4|0|Beryllium perchlorate|Berilyum perklorat|Be(ClO₄)₂||ionic|Salt|S|0|1|Crystals|538|207.904|3.69004||||||||Be|2|1|ClO4|1|2||3e-07|1|F2F2F2|1||Be^2+ ClO4-*2||0|0|800|||13597-95-0
+i_be_ch3coo|0|Beryllium acetate|Berilyum asetat|(CH₃COO)₂Be|Berilyum etanoat|ionic|Salt|S|0|1|Crystals|514|127.1|2.95546||||||acetic_acid|2|Be|2|1|CH3COO|1|2||3e-07|1|F2F2F2|1||Be^2+ CH3COO-*2||0|0|800|||543-81-7
+i_be_o|0|Beryllium oxide|Berilyum oksit|BeO||ionic|Salt|S|0|0|Powder|514|25.0112|2.02737||||||||Be|2|1|O|2|1||3e-07|1|F2F2F2|1||||0|0|800|||1304-56-9
+i_be_s|0|Beryllium sulfide|Berilyum sülfür|BeS||ionic|Salt|S|0|0|Powder|546|41.0722|2.17338||||||h_hs|1|Be|2|1|S|2|1||3e-07|1|1E1E1E|1||||0|0|800|||13598-22-6
+i_be_so4|0|Beryllium sulfate|Berilyum sülfat|BeSO₄||ionic|Salt|S|0|1|Crystals|514|105.068|2.75517||||||||Be|2|1|SO4|2|1||3e-07|1|F2F2F2|1||Be^2+ SO4^2-||0|0|800|||13510-49-1
 i_be_c2o4|0|Beryllium oxalate|Berilyum oksalat|BeC₂O₄||ionic|Salt|S|0|0|Powder|530|97.0302|2.68209||||||h_hc2o4|1|Be|2|1|C2O4|2|1||3e-07|1|F2F2F2|1||||0|0|800|||
 i_be_po4|0|Beryllium phosphate|Berilyum fosfat|Be₃(PO₄)₂||ionic|Salt|S|0|0|Powder|514|216.976|3.77251||||||h_hpo4|2|Be|2|3|PO4|3|2||3e-07|3|F2F2F2|1||||0|0|800|||
 i_zn_f|0|Zinc fluoride|Çinko florür|ZnF₂||ionic|Salt|S|0|1|Crystals|34|103.377|2.73979||||||m_hf|2|Zn|2|1|F|1|2||2.5e-10|1|F2F2F2|1||Zn^2+ F-*2||0|0|800|||
-zncl2|1|Zinc chloride|Çinko klorür|||ionic|Molecular|S|0|0|Powder|0||||||||||Zn|2|1|Cl|1|2||2.5e-10|1||||||0|0||||
+zncl2|1|Zinc chloride|Çinko klorür|||ionic|Molecular|S|0|0|Powder|0||||||||||Zn|2|1|Cl|1|2||2.5e-10|1||||||0|0||||7646-85-7
 i_zn_br|0|Zinc bromide|Çinko bromür|ZnBr₂||ionic|Salt|S|0|1|Crystals|32|225.188|3.84716||||||||Zn|2|1|Br|1|2||2.5e-10|1|F2F2F2|1||Zn^2+ Br-*2||0|0|800|||
-i_zn_i|0|Zinc iodide|Çinko iyodür|ZnI₂||ionic|Salt|S|0|1|Crystals|32|319.189|4.70172||||||||Zn|2|1|I|1|2||2.5e-10|1|F2F2F2|1||Zn^2+ I-*2||0|0|800|||
-i_zn_oh|0|Zinc hydroxide|Çinko hidroksit|Zn(OH)₂||ionic|Salt|S|0|0|Powder|32|99.394|2.70358||||||||Zn|2|1|OH|1|2||2.5e-10|1|F2F2F2|1||||0|0|800|||
-i_zn_no3|0|Zinc nitrate|Çinko nitrat|Zn(NO₃)₂||ionic|Salt|S|0|1|Crystals|40|189.388|3.52171||||||||Zn|2|1|NO3|1|2||2.5e-10|1|F2F2F2|1||Zn^2+ NO3-*2||0|0|800|||
+i_zn_i|0|Zinc iodide|Çinko iyodür|ZnI₂||ionic|Salt|S|0|1|Crystals|32|319.189|4.70172||||||||Zn|2|1|I|1|2||2.5e-10|1|F2F2F2|1||Zn^2+ I-*2||0|0|800|||10139-47-6
+i_zn_oh|0|Zinc hydroxide|Çinko hidroksit|Zn(OH)₂||ionic|Salt|S|0|0|Powder|32|99.394|2.70358||||||||Zn|2|1|OH|1|2||2.5e-10|1|F2F2F2|1||||0|0|800|||20427-58-1
+i_zn_no3|0|Zinc nitrate|Çinko nitrat|Zn(NO₃)₂||ionic|Salt|S|0|1|Crystals|40|189.388|3.52171||||||||Zn|2|1|NO3|1|2||2.5e-10|1|F2F2F2|1||Zn^2+ NO3-*2||0|0|800|||7779-88-6
 i_zn_cn|0|Zinc cyanide|Çinko siyanür|Zn(CN)₂||ionic|Salt|S|0|0|Powder|34|117.416|2.86742||||||m_hcn|2|Zn|2|1|CN|1|2||2.5e-10|1|F2F2F2|1||||0|0|800|||
 i_zn_scn|0|Zinc thiocyanate|Çinko tiyosiyanat|Zn(SCN)₂||ionic|Salt|S|0|1|Crystals|48|181.536|3.45033||||||||Zn|2|1|SCN|1|2||2.5e-10|1|F2F2F2|1||Zn^2+ SCN-*2||0|0|800|||
-i_zn_clo3|0|Zinc chlorate|Çinko klorat|Zn(ClO₃)₂||ionic|Salt|S|0|1|Crystals|56|232.274|3.91158||||||||Zn|2|1|ClO3|1|2||2.5e-10|1|F2F2F2|1||Zn^2+ ClO3-*2||0|0|800|||
-i_zn_clo4|0|Zinc perchlorate|Çinko perklorat|Zn(ClO₄)₂||ionic|Salt|S|0|1|Crystals|56|264.272|4.20247||||||||Zn|2|1|ClO4|1|2||2.5e-10|1|F2F2F2|1||Zn^2+ ClO4-*2||0|0|800|||
-i_zn_bro3|0|Zinc bromate|Çinko bromat|Zn(BrO₃)₂||ionic|Salt|S|0|1|Crystals|42|321.182|4.71984||||||||Zn|2|1|BrO3|1|2||2.5e-10|1|F2F2F2|1||Zn^2+ BrO3-*2||0|0|800|||
-i_zn_io3|0|Zinc iodate|Çinko iyodat|Zn(IO₃)₂||ionic|Salt|S|0|1|Crystals|56|415.183|5.57439||||||||Zn|2|1|IO3|1|2||2.5e-10|1|F2F2F2|1||Zn^2+ IO3-*2||0|0|800|||
-i_zn_mno4|0|Zinc permanganate|Çinko permanganat|Zn(MnO₄)₂||ionic|Salt|S|0|1|Crystals|56|303.248|4.5568||||||||Zn|2|1|MnO4|1|2||2.5e-10|1|7A0F8C|0.8|400|Zn^2+ MnO4-*2||0|0|800|||
-i_zn_ch3coo|0|Zinc acetate|Çinko asetat|(CH₃COO)₂Zn|Çinko etanoat|ionic|Salt|S|0|1|Crystals|32|183.468|3.46789||||||acetic_acid|2|Zn|2|1|CH3COO|1|2||2.5e-10|1|F2F2F2|1||Zn^2+ CH3COO-*2||0|0|800|||
-i_zn_hcoo|0|Zinc formate|Çinko format|(HCOO)₂Zn|Çinko metanoat|ionic|Salt|S|0|1|Crystals|32|155.414|3.21285||||||m_hcooh|2|Zn|2|1|HCOO|1|2||2.5e-10|1|F2F2F2|1||Zn^2+ HCOO-*2||0|0|800|||
-i_zn_o|0|Zinc oxide|Çinko oksit|ZnO||ionic|Salt|S|0|0|Powder|32|81.379|5.61||||||||Zn|2|1|O|2|1||2.5e-10|1|F2F2F2|1||||0|0|800|||
-i_zn_s|0|Zinc sulfide|Çinko sülfür|ZnS|Sfalerit|ionic|Salt|S|0|0|Powder|32|97.44|4.09||||||h_hs|1|Zn|2|1|S|2|1||2.5e-10|1|F0F0E8|1||||0|0|800|||
-znso4|1|Zinc sulfate|Çinko sülfat|||ionic|Molecular|S|0|0|Powder|0||||||||||Zn|2|1|SO4|2|1||2.5e-10|1||||||0|0||||
-i_zn_so3|0|Zinc sulfite|Çinko sülfit|ZnSO₃||ionic|Salt|S|0|0|Powder|32|145.437|3.12215||||||h_hso3|1|Zn|2|1|SO3|2|1||2.5e-10|1|F2F2F2|1||||0|0|800|||
-i_zn_co3|0|Zinc carbonate|Çinko karbonat|ZnCO₃||ionic|Salt|S|0|0|Powder|32|125.388|2.93989||||||h_hco3|1|Zn|2|1|CO3|2|1||2.5e-10|1|F2F2F2|1||||0|0|800|||
-i_zn_c2o4|0|Zinc oxalate|Çinko oksalat|ZnC₂O₄||ionic|Salt|S|0|0|Powder|48|153.398|3.19453||||||h_hc2o4|1|Zn|2|1|C2O4|2|1||2.5e-10|1|F2F2F2|1||||0|0|800|||
-i_zn_cro4|0|Zinc chromate|Çinko kromat|ZnCrO₄||ionic|Salt|S|0|0|Powder|554|181.372|3.44884||||||||Zn|2|1|CrO4|2|1||2.5e-10|1|F2D21E|1||||0|0|800|||
+i_zn_clo3|0|Zinc chlorate|Çinko klorat|Zn(ClO₃)₂||ionic|Salt|S|0|1|Crystals|56|232.274|3.91158||||||||Zn|2|1|ClO3|1|2||2.5e-10|1|F2F2F2|1||Zn^2+ ClO3-*2||0|0|800|||10361-95-2
+i_zn_clo4|0|Zinc perchlorate|Çinko perklorat|Zn(ClO₄)₂||ionic|Salt|S|0|1|Crystals|56|264.272|4.20247||||||||Zn|2|1|ClO4|1|2||2.5e-10|1|F2F2F2|1||Zn^2+ ClO4-*2||0|0|800|||13637-61-1
+i_zn_bro3|0|Zinc bromate|Çinko bromat|Zn(BrO₃)₂||ionic|Salt|S|0|1|Crystals|42|321.182|4.71984||||||||Zn|2|1|BrO3|1|2||2.5e-10|1|F2F2F2|1||Zn^2+ BrO3-*2||0|0|800|||14519-07-4
+i_zn_io3|0|Zinc iodate|Çinko iyodat|Zn(IO₃)₂||ionic|Salt|S|0|1|Crystals|56|415.183|5.57439||||||||Zn|2|1|IO3|1|2||2.5e-10|1|F2F2F2|1||Zn^2+ IO3-*2||0|0|800|||7790-37-6
+i_zn_mno4|0|Zinc permanganate|Çinko permanganat|Zn(MnO₄)₂||ionic|Salt|S|0|1|Crystals|56|303.248|4.5568||||||||Zn|2|1|MnO4|1|2||2.5e-10|1|7A0F8C|0.8|400|Zn^2+ MnO4-*2||0|0|800|||23414-72-4
+i_zn_ch3coo|0|Zinc acetate|Çinko asetat|(CH₃COO)₂Zn|Çinko etanoat|ionic|Salt|S|0|1|Crystals|32|183.468|3.46789||||||acetic_acid|2|Zn|2|1|CH3COO|1|2||2.5e-10|1|F2F2F2|1||Zn^2+ CH3COO-*2||0|0|800|||557-34-6
+i_zn_hcoo|0|Zinc formate|Çinko format|(HCOO)₂Zn|Çinko metanoat|ionic|Salt|S|0|1|Crystals|32|155.414|3.21285||||||m_hcooh|2|Zn|2|1|HCOO|1|2||2.5e-10|1|F2F2F2|1||Zn^2+ HCOO-*2||0|0|800|||557-41-5
+i_zn_o|0|Zinc oxide|Çinko oksit|ZnO||ionic|Salt|S|0|0|Powder|32|81.379|5.61||||||||Zn|2|1|O|2|1||2.5e-10|1|F2F2F2|1||||0|0|800|||1314-13-2
+i_zn_s|0|Zinc sulfide|Çinko sülfür|ZnS|Sfalerit|ionic|Salt|S|0|0|Powder|32|97.44|4.09||||||h_hs|1|Zn|2|1|S|2|1||2.5e-10|1|F0F0E8|1||||0|0|800|||1314-98-3
+znso4|1|Zinc sulfate|Çinko sülfat|||ionic|Molecular|S|0|0|Powder|0||||||||||Zn|2|1|SO4|2|1||2.5e-10|1||||||0|0||||7733-02-0
+i_zn_so3|0|Zinc sulfite|Çinko sülfit|ZnSO₃||ionic|Salt|S|0|0|Powder|32|145.437|3.12215||||||h_hso3|1|Zn|2|1|SO3|2|1||2.5e-10|1|F2F2F2|1||||0|0|800|||13597-44-9
+i_zn_co3|0|Zinc carbonate|Çinko karbonat|ZnCO₃||ionic|Salt|S|0|0|Powder|32|125.388|2.93989||||||h_hco3|1|Zn|2|1|CO3|2|1||2.5e-10|1|F2F2F2|1||||0|0|800|||3486-35-9
+i_zn_c2o4|0|Zinc oxalate|Çinko oksalat|ZnC₂O₄||ionic|Salt|S|0|0|Powder|48|153.398|3.19453||||||h_hc2o4|1|Zn|2|1|C2O4|2|1||2.5e-10|1|F2F2F2|1||||0|0|800|||547-68-2
+i_zn_cro4|0|Zinc chromate|Çinko kromat|ZnCrO₄||ionic|Salt|S|0|0|Powder|554|181.372|3.44884||||||||Zn|2|1|CrO4|2|1||2.5e-10|1|F2D21E|1||||0|0|800|||13530-65-9
 i_zn_sio3|0|Zinc silicate|Çinko silikat|ZnSiO₃||ionic|Salt|S|0|0|Powder|32|141.462|3.08602||||||h_hsio3|1|Zn|2|1|SiO3|2|1||2.5e-10|1|F2F2F2|1||||0|0|800|||
-i_zn_po4|0|Zinc phosphate|Çinko fosfat|Zn₃(PO₄)₂||ionic|Salt|S|0|0|Powder|32|386.08|5.30981||||||h_hpo4|2|Zn|2|3|PO4|3|2||2.5e-10|3|F2F2F2|1||||0|0|800|||
-i_zn_o2|0|Zinc peroxide|Çinko peroksit|ZnO₂||ionic|Salt|S|0|0|Powder|41|97.378|2.68525||||||||Zn|2|1|O2|2|1||2.5e-10|1|F2F2F2|1||||0|0|800|||
+i_zn_po4|0|Zinc phosphate|Çinko fosfat|Zn₃(PO₄)₂||ionic|Salt|S|0|0|Powder|32|386.08|5.30981||||||h_hpo4|2|Zn|2|3|PO4|3|2||2.5e-10|3|F2F2F2|1||||0|0|800|||7779-90-0
+i_zn_o2|0|Zinc peroxide|Çinko peroksit|ZnO₂||ionic|Salt|S|0|0|Powder|41|97.378|2.68525||||||||Zn|2|1|O2|2|1||2.5e-10|1|F2F2F2|1||||0|0|800|||1314-22-3
 i_zn_c6h5coo|0|Zinc benzoate|Çinko benzoat|(C₆H₅COO)₂Zn||ionic|Salt|S|0|1|Crystals|32|307.61|4.59645||||||m_c6h5cooh|2|Zn|2|1|C6H5COO|1|2||2.5e-10|1|F2F2F2|1||Zn^2+ C6H5COO-*2||0|0|800|||
-i_zn_c6h5o7|0|Zinc citrate|Çinko sitrat|Zn₃(C₆H₅O₇)₂||ionic|Salt|S|0|0|Powder|32|574.338|7.02125||||||m_c6h8o7|2|Zn|2|3|C6H5O7|3|2||2.5e-10|3|F2F2F2|1||||0|0|800|||
+i_zn_c6h5o7|0|Zinc citrate|Çinko sitrat|Zn₃(C₆H₅O₇)₂||ionic|Salt|S|0|0|Powder|32|574.338|7.02125||||||m_c6h8o7|2|Zn|2|3|C6H5O7|3|2||2.5e-10|3|F2F2F2|1||||0|0|800|||546-46-3
 i_zn_c3h5o3|0|Zinc lactate|Çinko laktat|Zn(C₃H₅O₃)₂||ionic|Salt|S|0|1|Crystals|32|243.52|4.01382||||||m_c3h6o3|2|Zn|2|1|C3H5O3|1|2||2.5e-10|1|F2F2F2|1||Zn^2+ C3H5O3-*2||0|0|800|||
-i_zn_c17h35coo|0|Zinc stearate|Çinko stearat|(C₁₇H₃₅COO)₂Zn||ionic|Salt|S|0|0|Powder|32|632.332|7.5||||||||Zn|2|1|C17H35COO|1|2||2.5e-10|1|F2F2F2|1||||0|0|800|||
+i_zn_c17h35coo|0|Zinc stearate|Çinko stearat|(C₁₇H₃₅COO)₂Zn||ionic|Salt|S|0|0|Powder|32|632.332|7.5||||||||Zn|2|1|C17H35COO|1|2||2.5e-10|1|F2F2F2|1||||0|0|800|||557-05-1
 i_zn_fecn6_3|0|Zinc hexacyanoferrate(III)|Çinko hekzasiyanoferrat(III)|Zn₃[Fe(CN)₆]₂|Çinko ferrisiyanür|ionic|Salt|S|0|0|Powder|32|620.046|7.43678||||||||Zn|2|3|FeCN6_3|3|2||2.5e-10|3|D9401E|1||||0|0|800|||
 i_zn_fecn6_4|0|Zinc hexacyanoferrate(II)|Çinko hekzasiyanoferrat(II)|Zn₂[Fe(CN)₆]|Çinko ferrosiyanür|ionic|Salt|S|0|0|Powder|32|342.713|4.91557||||||||Zn|2|2|FeCN6_4|4|1||2.5e-10|2|F2D86A|1||||0|0|800|||
-i_cd_f|0|Cadmium fluoride|Kadmiyum florür|CdF₂||ionic|Salt|S|0|1|Crystals|546|150.411|3.16737||||||m_hf|2|Cd|2|1|F|1|2||4e-10|1|F2F2F2|1||Cd^2+ F-*2||0|0|800|||
-i_cd_cl|0|Cadmium chloride|Kadmiyum klorür|CdCl₂||ionic|Salt|S|0|1|Crystals|546|183.314|3.46649||||||||Cd|2|1|Cl|1|2||4e-10|1|F2F2F2|1||Cd^2+ Cl-*2||0|0|800|||
+i_cd_f|0|Cadmium fluoride|Kadmiyum florür|CdF₂||ionic|Salt|S|0|1|Crystals|546|150.411|3.16737||||||m_hf|2|Cd|2|1|F|1|2||4e-10|1|F2F2F2|1||Cd^2+ F-*2||0|0|800|||7790-79-6
+i_cd_cl|0|Cadmium chloride|Kadmiyum klorür|CdCl₂||ionic|Salt|S|0|1|Crystals|546|183.314|3.46649||||||||Cd|2|1|Cl|1|2||4e-10|1|F2F2F2|1||Cd^2+ Cl-*2||0|0|800|||10108-64-2
 i_cd_br|0|Cadmium bromide|Kadmiyum bromür|CdBr₂||ionic|Salt|S|0|1|Crystals|546|272.222|4.27475||||||||Cd|2|1|Br|1|2||4e-10|1|F2F2F2|1||Cd^2+ Br-*2||0|0|800|||
-i_cd_i|0|Cadmium iodide|Kadmiyum iyodür|CdI₂||ionic|Salt|S|0|1|Crystals|546|366.223|5.1293||||||||Cd|2|1|I|1|2||4e-10|1|F2F2F2|1||Cd^2+ I-*2||0|0|800|||
+i_cd_i|0|Cadmium iodide|Kadmiyum iyodür|CdI₂||ionic|Salt|S|0|1|Crystals|546|366.223|5.1293||||||||Cd|2|1|I|1|2||4e-10|1|F2F2F2|1||Cd^2+ I-*2||0|0|800|||7790-80-9
 i_cd_oh|0|Cadmium hydroxide|Kadmiyum hidroksit|Cd(OH)₂||ionic|Salt|S|0|0|Powder|546|146.428|3.13116||||||||Cd|2|1|OH|1|2||4e-10|1|F2F2F2|1||||0|0|800|||
-i_cd_no3|0|Cadmium nitrate|Kadmiyum nitrat|Cd(NO₃)₂||ionic|Salt|S|0|1|Crystals|554|236.422|3.94929||||||||Cd|2|1|NO3|1|2||4e-10|1|F2F2F2|1||Cd^2+ NO3-*2||0|0|800|||
-i_cd_cn|0|Cadmium cyanide|Kadmiyum siyanür|Cd(CN)₂||ionic|Salt|S|0|0|Powder|546|164.45|3.295||||||m_hcn|2|Cd|2|1|CN|1|2||4e-10|1|F2F2F2|1||||0|0|800|||
+i_cd_no3|0|Cadmium nitrate|Kadmiyum nitrat|Cd(NO₃)₂||ionic|Salt|S|0|1|Crystals|554|236.422|3.94929||||||||Cd|2|1|NO3|1|2||4e-10|1|F2F2F2|1||Cd^2+ NO3-*2||0|0|800|||10325-94-7
+i_cd_cn|0|Cadmium cyanide|Kadmiyum siyanür|Cd(CN)₂||ionic|Salt|S|0|0|Powder|546|164.45|3.295||||||m_hcn|2|Cd|2|1|CN|1|2||4e-10|1|F2F2F2|1||||0|0|800|||542-83-6
 i_cd_scn|0|Cadmium thiocyanate|Kadmiyum tiyosiyanat|Cd(SCN)₂||ionic|Salt|S|0|1|Crystals|562|228.57|3.87791||||||||Cd|2|1|SCN|1|2||4e-10|1|F2F2F2|1||Cd^2+ SCN-*2||0|0|800|||
 i_cd_clo3|0|Cadmium chlorate|Kadmiyum klorat|Cd(ClO₃)₂||ionic|Salt|S|0|1|Crystals|570|279.308|4.33916||||||||Cd|2|1|ClO3|1|2||4e-10|1|F2F2F2|1||Cd^2+ ClO3-*2||0|0|800|||
-i_cd_clo4|0|Cadmium perchlorate|Kadmiyum perklorat|Cd(ClO₄)₂||ionic|Salt|S|0|1|Crystals|570|311.306|4.63005||||||||Cd|2|1|ClO4|1|2||4e-10|1|F2F2F2|1||Cd^2+ ClO4-*2||0|0|800|||
+i_cd_clo4|0|Cadmium perchlorate|Kadmiyum perklorat|Cd(ClO₄)₂||ionic|Salt|S|0|1|Crystals|570|311.306|4.63005||||||||Cd|2|1|ClO4|1|2||4e-10|1|F2F2F2|1||Cd^2+ ClO4-*2||0|0|800|||13760-37-7
 i_cd_bro3|0|Cadmium bromate|Kadmiyum bromat|Cd(BrO₃)₂||ionic|Salt|S|0|1|Crystals|554|368.216|5.14742||||||||Cd|2|1|BrO3|1|2||4e-10|1|F2F2F2|1||Cd^2+ BrO3-*2||0|0|800|||
-i_cd_io3|0|Cadmium iodate|Kadmiyum iyodat|Cd(IO₃)₂||ionic|Salt|S|0|1|Crystals|570|462.217|6.00197||||||||Cd|2|1|IO3|1|2||4e-10|1|F2F2F2|1||Cd^2+ IO3-*2||0|0|800|||
-i_cd_ch3coo|0|Cadmium acetate|Kadmiyum asetat|(CH₃COO)₂Cd|Kadmiyum etanoat|ionic|Salt|S|0|1|Crystals|546|230.502|3.89547||||||acetic_acid|2|Cd|2|1|CH3COO|1|2||4e-10|1|F2F2F2|1||Cd^2+ CH3COO-*2||0|0|800|||
-i_cd_hcoo|0|Cadmium formate|Kadmiyum format|(HCOO)₂Cd|Kadmiyum metanoat|ionic|Salt|S|0|1|Crystals|546|202.448|3.64044||||||m_hcooh|2|Cd|2|1|HCOO|1|2||4e-10|1|F2F2F2|1||Cd^2+ HCOO-*2||0|0|800|||
-i_cd_o|0|Cadmium oxide|Kadmiyum oksit|CdO||ionic|Salt|S|0|0|Powder|546|128.413|2.96739||||||||Cd|2|1|O|2|1||4e-10|1|F2F2F2|1||||0|0|800|||
-i_cd_s|0|Cadmium sulfide|Kadmiyum sülfür|CdS||ionic|Salt|S|0|0|Powder|546|144.474|3.1134||||||h_hs|1|Cd|2|1|S|2|1||4e-10|1|F5C518|1||||0|0|800|||
-i_cd_so4|0|Cadmium sulfate|Kadmiyum sülfat|CdSO₄||ionic|Salt|S|0|1|Crystals|546|208.47|3.69518||||||||Cd|2|1|SO4|2|1||4e-10|1|F2F2F2|1||Cd^2+ SO4^2-||0|0|800|||
+i_cd_io3|0|Cadmium iodate|Kadmiyum iyodat|Cd(IO₃)₂||ionic|Salt|S|0|1|Crystals|570|462.217|6.00197||||||||Cd|2|1|IO3|1|2||4e-10|1|F2F2F2|1||Cd^2+ IO3-*2||0|0|800|||7790-81-0
+i_cd_ch3coo|0|Cadmium acetate|Kadmiyum asetat|(CH₃COO)₂Cd|Kadmiyum etanoat|ionic|Salt|S|0|1|Crystals|546|230.502|3.89547||||||acetic_acid|2|Cd|2|1|CH3COO|1|2||4e-10|1|F2F2F2|1||Cd^2+ CH3COO-*2||0|0|800|||543-90-8
+i_cd_hcoo|0|Cadmium formate|Kadmiyum format|(HCOO)₂Cd|Kadmiyum metanoat|ionic|Salt|S|0|1|Crystals|546|202.448|3.64044||||||m_hcooh|2|Cd|2|1|HCOO|1|2||4e-10|1|F2F2F2|1||Cd^2+ HCOO-*2||0|0|800|||4464-23-7
+i_cd_o|0|Cadmium oxide|Kadmiyum oksit|CdO||ionic|Salt|S|0|0|Powder|546|128.413|2.96739||||||||Cd|2|1|O|2|1||4e-10|1|F2F2F2|1||||0|0|800|||1306-19-0
+i_cd_s|0|Cadmium sulfide|Kadmiyum sülfür|CdS||ionic|Salt|S|0|0|Powder|546|144.474|3.1134||||||h_hs|1|Cd|2|1|S|2|1||4e-10|1|F5C518|1||||0|0|800|||1306-23-6
+i_cd_so4|0|Cadmium sulfate|Kadmiyum sülfat|CdSO₄||ionic|Salt|S|0|1|Crystals|546|208.47|3.69518||||||||Cd|2|1|SO4|2|1||4e-10|1|F2F2F2|1||Cd^2+ SO4^2-||0|0|800|||10124-36-4
 i_cd_so3|0|Cadmium sulfite|Kadmiyum sülfit|CdSO₃||ionic|Salt|S|0|0|Powder|546|192.471|3.54974||||||h_hso3|1|Cd|2|1|SO3|2|1||4e-10|1|F2F2F2|1||||0|0|800|||
-i_cd_co3|0|Cadmium carbonate|Kadmiyum karbonat|CdCO₃||ionic|Salt|S|0|0|Powder|546|172.422|3.36747||||||h_hco3|1|Cd|2|1|CO3|2|1||4e-10|1|F2F2F2|1||||0|0|800|||
+i_cd_co3|0|Cadmium carbonate|Kadmiyum karbonat|CdCO₃||ionic|Salt|S|0|0|Powder|546|172.422|3.36747||||||h_hco3|1|Cd|2|1|CO3|2|1||4e-10|1|F2F2F2|1||||0|0|800|||513-78-0
 i_cd_c2o4|0|Cadmium oxalate|Kadmiyum oksalat|CdC₂O₄||ionic|Salt|S|0|0|Powder|562|200.432|3.62211||||||h_hc2o4|1|Cd|2|1|C2O4|2|1||4e-10|1|F2F2F2|1||||0|0|800|||
-i_cd_cro4|0|Cadmium chromate|Kadmiyum kromat|CdCrO₄||ionic|Salt|S|0|0|Powder|554|228.406|3.87642||||||||Cd|2|1|CrO4|2|1||4e-10|1|F2D21E|1||||0|0|800|||
-i_cd_po4|0|Cadmium phosphate|Kadmiyum fosfat|Cd₃(PO₄)₂||ionic|Salt|S|0|0|Powder|546|527.182|6.59256||||||h_hpo4|2|Cd|2|3|PO4|3|2||4e-10|3|F2F2F2|1||||0|0|800|||
-i_hg2_f|0|Mercury(II) fluoride|Cıva(II) florür|HgF₂||ionic|Salt|S|0|1|Crystals|546|238.589|3.96899||||||m_hf|2|Hg2|2|1|F|1|2||0.00026|1|F2F2F2|1||Hg^2+ F-*2||0|0|800|||
-i_hg2_cl|0|Mercury(II) chloride|Cıva(II) klorür|HgCl₂||ionic|Salt|S|0|1|Crystals|546|271.492|4.26811||||||||Hg2|2|1|Cl|1|2||0.00026|1|F2F2F2|1||Hg^2+ Cl-*2||0|0|800|||
-i_hg2_br|0|Mercury(II) bromide|Cıva(II) bromür|HgBr₂||ionic|Salt|S|0|1|Crystals|546|360.4|5.07636||||||||Hg2|2|1|Br|1|2||0.00026|1|F2F2F2|1||Hg^2+ Br-*2||0|0|800|||
-i_hg2_i|0|Mercury(II) iodide|Cıva(II) iyodür|HgI₂||ionic|Salt|S|0|0|Powder|546|454.401|5.93092||||||||Hg2|2|1|I|1|2||0.00026|1|E0301E|1||||0|0|800|||
-i_hg2_no3|0|Mercury(II) nitrate|Cıva(II) nitrat|Hg(NO₃)₂||ionic|Salt|S|0|1|Crystals|554|324.6|4.75091||||||||Hg2|2|1|NO3|1|2||0.00026|1|F2F2F2|1||Hg^2+ NO3-*2||0|0|800|||
-i_hg2_cn|0|Mercury(II) cyanide|Cıva(II) siyanür|Hg(CN)₂||ionic|Salt|S|0|1|Crystals|546|252.628|4.09662||||||m_hcn|2|Hg2|2|1|CN|1|2||0.00026|1|F2F2F2|1||Hg^2+ CN-*2||0|0|800|||
+i_cd_cro4|0|Cadmium chromate|Kadmiyum kromat|CdCrO₄||ionic|Salt|S|0|0|Powder|554|228.406|3.87642||||||||Cd|2|1|CrO4|2|1||4e-10|1|F2D21E|1||||0|0|800|||14312-00-6
+i_cd_po4|0|Cadmium phosphate|Kadmiyum fosfat|Cd₃(PO₄)₂||ionic|Salt|S|0|0|Powder|546|527.182|6.59256||||||h_hpo4|2|Cd|2|3|PO4|3|2||4e-10|3|F2F2F2|1||||0|0|800|||13477-17-3
+i_hg2_f|0|Mercury(II) fluoride|Cıva(II) florür|HgF₂||ionic|Salt|S|0|1|Crystals|546|238.589|3.96899||||||m_hf|2|Hg2|2|1|F|1|2||0.00026|1|F2F2F2|1||Hg^2+ F-*2||0|0|800|||7783-39-3
+i_hg2_cl|0|Mercury(II) chloride|Cıva(II) klorür|HgCl₂||ionic|Salt|S|0|1|Crystals|546|271.492|4.26811||||||||Hg2|2|1|Cl|1|2||0.00026|1|F2F2F2|1||Hg^2+ Cl-*2||0|0|800|||7487-94-7
+i_hg2_br|0|Mercury(II) bromide|Cıva(II) bromür|HgBr₂||ionic|Salt|S|0|1|Crystals|546|360.4|5.07636||||||||Hg2|2|1|Br|1|2||0.00026|1|F2F2F2|1||Hg^2+ Br-*2||0|0|800|||7789-47-1
+i_hg2_i|0|Mercury(II) iodide|Cıva(II) iyodür|HgI₂||ionic|Salt|S|0|0|Powder|546|454.401|5.93092||||||||Hg2|2|1|I|1|2||0.00026|1|E0301E|1||||0|0|800|||7774-29-0
+i_hg2_no3|0|Mercury(II) nitrate|Cıva(II) nitrat|Hg(NO₃)₂||ionic|Salt|S|0|1|Crystals|554|324.6|4.75091||||||||Hg2|2|1|NO3|1|2||0.00026|1|F2F2F2|1||Hg^2+ NO3-*2||0|0|800|||10045-94-0
+i_hg2_cn|0|Mercury(II) cyanide|Cıva(II) siyanür|Hg(CN)₂||ionic|Salt|S|0|1|Crystals|546|252.628|4.09662||||||m_hcn|2|Hg2|2|1|CN|1|2||0.00026|1|F2F2F2|1||Hg^2+ CN-*2||0|0|800|||592-04-1
 i_hg2_scn|0|Mercury(II) thiocyanate|Cıva(II) tiyosiyanat|Hg(SCN)₂||ionic|Salt|S|0|0|Powder|562|316.748|4.67953||||||||Hg2|2|1|SCN|1|2||0.00026|1|F2F2F2|1||||0|0|800|||
-i_hg2_clo4|0|Mercury(II) perchlorate|Cıva(II) perklorat|Hg(ClO₄)₂||ionic|Salt|S|0|1|Crystals|570|399.484|5.43167||||||||Hg2|2|1|ClO4|1|2||0.00026|1|F2F2F2|1||Hg^2+ ClO4-*2||0|0|800|||
-i_hg2_ch3coo|0|Mercury(II) acetate|Cıva(II) asetat|(CH₃COO)₂Hg|Cıva(II) etanoat|ionic|Salt|S|0|1|Crystals|546|318.68|4.69709||||||acetic_acid|2|Hg2|2|1|CH3COO|1|2||0.00026|1|F2F2F2|1||Hg^2+ CH3COO-*2||0|0|800|||
-i_hg2_o|0|Mercury(II) oxide|Cıva(II) oksit|HgO||ionic|Salt|S|0|0|Powder|546|216.591|11.14||||||||Hg2|2|1|O|2|1||0.00026|1|D9401E|1||||0|0|800|||
-i_hg2_s|0|Mercury(II) sulfide|Cıva(II) sülfür|HgS|Zinober|ionic|Salt|S|0|0|Powder|546|232.652|3.91502||||||h_hs|1|Hg2|2|1|S|2|1||0.00026|1|1E1E1E|1||||0|0|800|||
-i_hg2_so4|0|Mercury(II) sulfate|Cıva(II) sülfat|HgSO₄||ionic|Salt|S|0|0|Powder|546|296.648|4.4968||||||||Hg2|2|1|SO4|2|1||0.00026|1|F2F2F2|1||||0|0|800|||
-i_hg2_c2o4|0|Mercury(II) oxalate|Cıva(II) oksalat|HgC₂O₄||ionic|Salt|S|0|0|Powder|562|288.61|4.42373||||||h_hc2o4|1|Hg2|2|1|C2O4|2|1||0.00026|1|F2F2F2|1||||0|0|800|||
-i_hg2_cro4|0|Mercury(II) chromate|Cıva(II) kromat|HgCrO₄||ionic|Salt|S|0|0|Powder|554|316.584|4.67804||||||||Hg2|2|1|CrO4|2|1||0.00026|1|F2D21E|1||||0|0|800|||
+i_hg2_clo4|0|Mercury(II) perchlorate|Cıva(II) perklorat|Hg(ClO₄)₂||ionic|Salt|S|0|1|Crystals|570|399.484|5.43167||||||||Hg2|2|1|ClO4|1|2||0.00026|1|F2F2F2|1||Hg^2+ ClO4-*2||0|0|800|||7616-83-3
+i_hg2_ch3coo|0|Mercury(II) acetate|Cıva(II) asetat|(CH₃COO)₂Hg|Cıva(II) etanoat|ionic|Salt|S|0|1|Crystals|546|318.68|4.69709||||||acetic_acid|2|Hg2|2|1|CH3COO|1|2||0.00026|1|F2F2F2|1||Hg^2+ CH3COO-*2||0|0|800|||1600-27-7
+i_hg2_o|0|Mercury(II) oxide|Cıva(II) oksit|HgO||ionic|Salt|S|0|0|Powder|546|216.591|11.14||||||||Hg2|2|1|O|2|1||0.00026|1|D9401E|1||||0|0|800|||21908-53-2
+i_hg2_s|0|Mercury(II) sulfide|Cıva(II) sülfür|HgS|Zinober|ionic|Salt|S|0|0|Powder|546|232.652|3.91502||||||h_hs|1|Hg2|2|1|S|2|1||0.00026|1|1E1E1E|1||||0|0|800|||1344-48-5
+i_hg2_so4|0|Mercury(II) sulfate|Cıva(II) sülfat|HgSO₄||ionic|Salt|S|0|0|Powder|546|296.648|4.4968||||||||Hg2|2|1|SO4|2|1||0.00026|1|F2F2F2|1||||0|0|800|||7783-35-9
+i_hg2_c2o4|0|Mercury(II) oxalate|Cıva(II) oksalat|HgC₂O₄||ionic|Salt|S|0|0|Powder|562|288.61|4.42373||||||h_hc2o4|1|Hg2|2|1|C2O4|2|1||0.00026|1|F2F2F2|1||||0|0|800|||3444-13-1
+i_hg2_cro4|0|Mercury(II) chromate|Cıva(II) kromat|HgCrO₄||ionic|Salt|S|0|0|Powder|554|316.584|4.67804||||||||Hg2|2|1|CrO4|2|1||0.00026|1|F2D21E|1||||0|0|800|||13444-75-2
 i_hg2_po4|0|Mercury(II) phosphate|Cıva(II) fosfat|Hg₃(PO₄)₂||ionic|Salt|S|0|0|Powder|546|791.716|7.5||||||h_hpo4|2|Hg2|2|3|PO4|3|2||0.00026|3|F2F2F2|1||||0|0|800|||
-i_pb2_f|0|Lead(II) fluoride|Kurşun(II) florür|PbF₂||ionic|Salt|S|0|0|Powder|546|245.197|4.02906||||||m_hf|2|Pb2|2|1|F|1|2||1.5e-08|1|F2F2F2|1||||0|0|800|||
-i_pb2_cl|0|Lead(II) chloride|Kurşun(II) klorür|PbCl₂||ionic|Salt|S|0|0|Powder|546|278.1|4.32818||||||||Pb2|2|1|Cl|1|2||1.5e-08|1|F2F2F2|1||||0|0|800|||
-i_pb2_br|0|Lead(II) bromide|Kurşun(II) bromür|PbBr₂||ionic|Salt|S|0|0|Powder|546|367.008|5.13644||||||||Pb2|2|1|Br|1|2||1.5e-08|1|F2F2F2|1||||0|0|800|||
-i_pb2_i|0|Lead(II) iodide|Kurşun(II) iyodür|PbI₂|Altın yağmuru (çökelek)|ionic|Salt|S|0|0|Powder|546|461.009|6.16||||||||Pb2|2|1|I|1|2||1.5e-08|1|F5C518|1||||0|0|800|||
+i_pb2_f|0|Lead(II) fluoride|Kurşun(II) florür|PbF₂||ionic|Salt|S|0|0|Powder|546|245.197|4.02906||||||m_hf|2|Pb2|2|1|F|1|2||1.5e-08|1|F2F2F2|1||||0|0|800|||7783-46-2
+i_pb2_cl|0|Lead(II) chloride|Kurşun(II) klorür|PbCl₂||ionic|Salt|S|0|0|Powder|546|278.1|4.32818||||||||Pb2|2|1|Cl|1|2||1.5e-08|1|F2F2F2|1||||0|0|800|||7758-95-4
+i_pb2_br|0|Lead(II) bromide|Kurşun(II) bromür|PbBr₂||ionic|Salt|S|0|0|Powder|546|367.008|5.13644||||||||Pb2|2|1|Br|1|2||1.5e-08|1|F2F2F2|1||||0|0|800|||10031-22-8
+i_pb2_i|0|Lead(II) iodide|Kurşun(II) iyodür|PbI₂|Altın yağmuru (çökelek)|ionic|Salt|S|0|0|Powder|546|461.009|6.16||||||||Pb2|2|1|I|1|2||1.5e-08|1|F5C518|1||||0|0|800|||10101-63-0
 i_pb2_oh|0|Lead(II) hydroxide|Kurşun(II) hidroksit|Pb(OH)₂||ionic|Salt|S|0|0|Powder|546|241.214|3.99285||||||||Pb2|2|1|OH|1|2||1.5e-08|1|F2F2F2|1||||0|0|800|||
-i_pb2_no3|0|Lead(II) nitrate|Kurşun(II) nitrat|Pb(NO₃)₂||ionic|Salt|S|0|1|Crystals|554|331.208|4.53||||||||Pb2|2|1|NO3|1|2||1.5e-08|1|F2F2F2|1||Pb^2+ NO3-*2||0|0|800|||
-i_pb2_cn|0|Lead(II) cyanide|Kurşun(II) siyanür|Pb(CN)₂||ionic|Salt|S|0|0|Powder|546|259.236|4.15669||||||m_hcn|2|Pb2|2|1|CN|1|2||1.5e-08|1|F2F2F2|1||||0|0|800|||
-i_pb2_scn|0|Lead(II) thiocyanate|Kurşun(II) tiyosiyanat|Pb(SCN)₂||ionic|Salt|S|0|1|Crystals|562|323.356|4.7396||||||||Pb2|2|1|SCN|1|2||1.5e-08|1|F2F2F2|1||Pb^2+ SCN-*2||0|0|800|||
+i_pb2_no3|0|Lead(II) nitrate|Kurşun(II) nitrat|Pb(NO₃)₂||ionic|Salt|S|0|1|Crystals|554|331.208|4.53||||||||Pb2|2|1|NO3|1|2||1.5e-08|1|F2F2F2|1||Pb^2+ NO3-*2||0|0|800|||10099-74-8
+i_pb2_cn|0|Lead(II) cyanide|Kurşun(II) siyanür|Pb(CN)₂||ionic|Salt|S|0|0|Powder|546|259.236|4.15669||||||m_hcn|2|Pb2|2|1|CN|1|2||1.5e-08|1|F2F2F2|1||||0|0|800|||592-05-2
+i_pb2_scn|0|Lead(II) thiocyanate|Kurşun(II) tiyosiyanat|Pb(SCN)₂||ionic|Salt|S|0|1|Crystals|562|323.356|4.7396||||||||Pb2|2|1|SCN|1|2||1.5e-08|1|F2F2F2|1||Pb^2+ SCN-*2||0|0|800|||592-87-0
 i_pb2_clo3|0|Lead(II) chlorate|Kurşun(II) klorat|Pb(ClO₃)₂||ionic|Salt|S|0|1|Crystals|570|374.094|5.20085||||||||Pb2|2|1|ClO3|1|2||1.5e-08|1|F2F2F2|1||Pb^2+ ClO3-*2||0|0|800|||
 i_pb2_clo4|0|Lead(II) perchlorate|Kurşun(II) perklorat|Pb(ClO₄)₂||ionic|Salt|S|0|1|Crystals|570|406.092|5.49175||||||||Pb2|2|1|ClO4|1|2||1.5e-08|1|F2F2F2|1||Pb^2+ ClO4-*2||0|0|800|||
 i_pb2_bro3|0|Lead(II) bromate|Kurşun(II) bromat|Pb(BrO₃)₂||ionic|Salt|S|0|1|Crystals|554|463.002|6.00911||||||||Pb2|2|1|BrO3|1|2||1.5e-08|1|F2F2F2|1||Pb^2+ BrO3-*2||0|0|800|||
 i_pb2_io3|0|Lead(II) iodate|Kurşun(II) iyodat|Pb(IO₃)₂||ionic|Salt|S|0|0|Powder|570|557.003|6.86366||||||||Pb2|2|1|IO3|1|2||1.5e-08|1|F2F2F2|1||||0|0|800|||
-i_pb2_ch3coo|0|Lead(II) acetate|Kurşun(II) asetat|(CH₃COO)₂Pb|Kurşun(II) etanoat|ionic|Salt|S|0|1|Crystals|546|325.288|4.75716||||||acetic_acid|2|Pb2|2|1|CH3COO|1|2||1.5e-08|1|F2F2F2|1||Pb^2+ CH3COO-*2||0|0|800|||
-i_pb2_hcoo|0|Lead(II) formate|Kurşun(II) format|(HCOO)₂Pb|Kurşun(II) metanoat|ionic|Salt|S|0|1|Crystals|546|297.234|4.50213||||||m_hcooh|2|Pb2|2|1|HCOO|1|2||1.5e-08|1|F2F2F2|1||Pb^2+ HCOO-*2||0|0|800|||
-i_pb2_o|0|Lead(II) oxide|Kurşun(II) oksit|PbO||ionic|Salt|S|0|0|Powder|546|223.199|9.53||||||||Pb2|2|1|O|2|1||1.5e-08|1|F2C531|1||||0|0|800|||
-i_pb2_s|0|Lead(II) sulfide|Kurşun(II) sülfür|PbS|Galen|ionic|Salt|S|0|0|Powder|546|239.26|3.97509||||||h_hs|1|Pb2|2|1|S|2|1||1.5e-08|1|1E1E1E|1||||0|0|800|||
-i_pb2_so4|0|Lead(II) sulfate|Kurşun(II) sülfat|PbSO₄||ionic|Salt|S|0|0|Powder|546|303.256|4.55687||||||||Pb2|2|1|SO4|2|1||1.5e-08|1|F2F2F2|1||||0|0|800|||
+i_pb2_ch3coo|0|Lead(II) acetate|Kurşun(II) asetat|(CH₃COO)₂Pb|Kurşun(II) etanoat|ionic|Salt|S|0|1|Crystals|546|325.288|4.75716||||||acetic_acid|2|Pb2|2|1|CH3COO|1|2||1.5e-08|1|F2F2F2|1||Pb^2+ CH3COO-*2||0|0|800|||301-04-2
+i_pb2_hcoo|0|Lead(II) formate|Kurşun(II) format|(HCOO)₂Pb|Kurşun(II) metanoat|ionic|Salt|S|0|1|Crystals|546|297.234|4.50213||||||m_hcooh|2|Pb2|2|1|HCOO|1|2||1.5e-08|1|F2F2F2|1||Pb^2+ HCOO-*2||0|0|800|||811-54-1
+i_pb2_o|0|Lead(II) oxide|Kurşun(II) oksit|PbO||ionic|Salt|S|0|0|Powder|546|223.199|9.53||||||||Pb2|2|1|O|2|1||1.5e-08|1|F2C531|1||||0|0|800|||1314-27-8
+i_pb2_s|0|Lead(II) sulfide|Kurşun(II) sülfür|PbS|Galen|ionic|Salt|S|0|0|Powder|546|239.26|3.97509||||||h_hs|1|Pb2|2|1|S|2|1||1.5e-08|1|1E1E1E|1||||0|0|800|||1314-87-0
+i_pb2_so4|0|Lead(II) sulfate|Kurşun(II) sülfat|PbSO₄||ionic|Salt|S|0|0|Powder|546|303.256|4.55687||||||||Pb2|2|1|SO4|2|1||1.5e-08|1|F2F2F2|1||||0|0|800|||7446-14-2
 i_pb2_so3|0|Lead(II) sulfite|Kurşun(II) sülfit|PbSO₃||ionic|Salt|S|0|0|Powder|546|287.257|4.41143||||||h_hso3|1|Pb2|2|1|SO3|2|1||1.5e-08|1|F2F2F2|1||||0|0|800|||
-i_pb2_s2o3|0|Lead(II) thiosulfate|Kurşun(II) tiyosülfat|PbS₂O₃||ionic|Salt|S|0|0|Powder|546|319.317|4.70288||||||||Pb2|2|1|S2O3|2|1||1.5e-08|1|F2F2F2|1||||0|0|800|||
-i_pb2_co3|0|Lead(II) carbonate|Kurşun(II) karbonat|PbCO₃||ionic|Salt|S|0|0|Powder|546|267.208|4.22916||||||h_hco3|1|Pb2|2|1|CO3|2|1||1.5e-08|1|F2F2F2|1||||0|0|800|||
-i_pb2_c2o4|0|Lead(II) oxalate|Kurşun(II) oksalat|PbC₂O₄||ionic|Salt|S|0|0|Powder|562|295.218|4.4838||||||h_hc2o4|1|Pb2|2|1|C2O4|2|1||1.5e-08|1|F2F2F2|1||||0|0|800|||
+i_pb2_s2o3|0|Lead(II) thiosulfate|Kurşun(II) tiyosülfat|PbS₂O₃||ionic|Salt|S|0|0|Powder|546|319.317|4.70288||||||||Pb2|2|1|S2O3|2|1||1.5e-08|1|F2F2F2|1||||0|0|800|||13478-50-7
+i_pb2_co3|0|Lead(II) carbonate|Kurşun(II) karbonat|PbCO₃||ionic|Salt|S|0|0|Powder|546|267.208|4.22916||||||h_hco3|1|Pb2|2|1|CO3|2|1||1.5e-08|1|F2F2F2|1||||0|0|800|||598-63-0
+i_pb2_c2o4|0|Lead(II) oxalate|Kurşun(II) oksalat|PbC₂O₄||ionic|Salt|S|0|0|Powder|562|295.218|4.4838||||||h_hc2o4|1|Pb2|2|1|C2O4|2|1||1.5e-08|1|F2F2F2|1||||0|0|800|||814-93-7
 i_pb2_cro4|0|Lead(II) chromate|Kurşun(II) kromat|PbCrO₄||ionic|Salt|S|0|0|Powder|554|323.192|4.73811||||||||Pb2|2|1|CrO4|2|1||1.5e-08|1|F5C518|1||||0|0|800|||
 i_pb2_sio3|0|Lead(II) silicate|Kurşun(II) silikat|PbSiO₃||ionic|Salt|S|0|0|Powder|546|283.282|4.37529||||||h_hsio3|1|Pb2|2|1|SiO3|2|1||1.5e-08|1|F2F2F2|1||||0|0|800|||
 i_pb2_po4|0|Lead(II) phosphate|Kurşun(II) fosfat|Pb₃(PO₄)₂||ionic|Salt|S|0|0|Powder|546|811.54|7.5||||||h_hpo4|2|Pb2|2|3|PO4|3|2||1.5e-08|3|F2F2F2|1||||0|0|800|||
-i_pb2_moo4|0|Lead(II) molybdate|Kurşun(II) molibdat|PbMoO₄|Vulfenit|ionic|Salt|S|0|0|Powder|562|367.146|5.13769||||||||Pb2|2|1|MoO4|2|1||1.5e-08|1|F2A03A|1||||0|0|800|||
+i_pb2_moo4|0|Lead(II) molybdate|Kurşun(II) molibdat|PbMoO₄|Vulfenit|ionic|Salt|S|0|0|Powder|562|367.146|5.13769||||||||Pb2|2|1|MoO4|2|1||1.5e-08|1|F2A03A|1||||0|0|800|||10190-55-3
 i_pb2_aso4|0|Lead(II) arsenate|Kurşun(II) arsenat|Pb₃(AsO₄)₂||ionic|Salt|S|0|0|Powder|546|899.435|7.5||||||||Pb2|2|3|AsO4|3|2||1.5e-08|3|F2F2F2|1||||0|0|800|||
-i_sn2_f|0|Tin(II) fluoride|Kalay(II) florür|SnF₂||ionic|Salt|S|0|1|Crystals|18|156.707|3.22461||||||m_hf|2|Sn2|2|1|F|1|2||0.0004|1|F2F2F2|1||Sn^2+ F-*2||0|0|800|||
-i_sn2_cl|0|Tin(II) chloride|Kalay(II) klorür|SnCl₂||ionic|Salt|S|0|1|Crystals|16|189.61|3.52373||||||||Sn2|2|1|Cl|1|2||0.0004|1|F2F2F2|1||Sn^2+ Cl-*2||0|0|800|||
-i_sn2_br|0|Tin(II) bromide|Kalay(II) bromür|SnBr₂||ionic|Salt|S|0|1|Crystals|16|278.518|4.33198||||||||Sn2|2|1|Br|1|2||0.0004|1|F2F2F2|1||Sn^2+ Br-*2||0|0|800|||
-i_sn2_i|0|Tin(II) iodide|Kalay(II) iyodür|SnI₂||ionic|Salt|S|0|1|Crystals|16|372.519|5.18654||||||||Sn2|2|1|I|1|2||0.0004|1|F2F2F2|1||Sn^2+ I-*2||0|0|800|||
+i_sn2_f|0|Tin(II) fluoride|Kalay(II) florür|SnF₂||ionic|Salt|S|0|1|Crystals|18|156.707|3.22461||||||m_hf|2|Sn2|2|1|F|1|2||0.0004|1|F2F2F2|1||Sn^2+ F-*2||0|0|800|||7783-47-3
+i_sn2_cl|0|Tin(II) chloride|Kalay(II) klorür|SnCl₂||ionic|Salt|S|0|1|Crystals|16|189.61|3.52373||||||||Sn2|2|1|Cl|1|2||0.0004|1|F2F2F2|1||Sn^2+ Cl-*2||0|0|800|||7772-99-8
+i_sn2_br|0|Tin(II) bromide|Kalay(II) bromür|SnBr₂||ionic|Salt|S|0|1|Crystals|16|278.518|4.33198||||||||Sn2|2|1|Br|1|2||0.0004|1|F2F2F2|1||Sn^2+ Br-*2||0|0|800|||10031-24-0
+i_sn2_i|0|Tin(II) iodide|Kalay(II) iyodür|SnI₂||ionic|Salt|S|0|1|Crystals|16|372.519|5.18654||||||||Sn2|2|1|I|1|2||0.0004|1|F2F2F2|1||Sn^2+ I-*2||0|0|800|||10294-70-9
 i_sn2_oh|0|Tin(II) hydroxide|Kalay(II) hidroksit|Sn(OH)₂||ionic|Salt|S|0|0|Powder|16|152.724|3.1884||||||||Sn2|2|1|OH|1|2||0.0004|1|F2F2F2|1||||0|0|800|||
 i_sn2_clo4|0|Tin(II) perchlorate|Kalay(II) perklorat|Sn(ClO₄)₂||ionic|Salt|S|0|1|Crystals|24|317.602|4.68729||||||||Sn2|2|1|ClO4|1|2||0.0004|1|F2F2F2|1||Sn^2+ ClO4-*2||0|0|800|||
-i_sn2_ch3coo|0|Tin(II) acetate|Kalay(II) asetat|(CH₃COO)₂Sn|Kalay(II) etanoat|ionic|Salt|S|0|1|Crystals|16|236.798|3.95271||||||acetic_acid|2|Sn2|2|1|CH3COO|1|2||0.0004|1|F2F2F2|1||Sn^2+ CH3COO-*2||0|0|800|||
-i_sn2_o|0|Tin(II) oxide|Kalay(II) oksit|SnO||ionic|Salt|S|0|0|Powder|16|134.709|3.02463||||||||Sn2|2|1|O|2|1||0.0004|1|F2F2F2|1||||0|0|800|||
-i_sn2_s|0|Tin(II) sulfide|Kalay(II) sülfür|SnS||ionic|Salt|S|0|0|Powder|48|150.77|3.17064||||||h_hs|1|Sn2|2|1|S|2|1||0.0004|1|6B4A2A|1||||0|0|800|||
-i_sn2_so4|0|Tin(II) sulfate|Kalay(II) sülfat|SnSO₄||ionic|Salt|S|0|1|Crystals|16|214.766|3.75242||||||||Sn2|2|1|SO4|2|1||0.0004|1|F2F2F2|1||Sn^2+ SO4^2-||0|0|800|||
-i_sn2_c2o4|0|Tin(II) oxalate|Kalay(II) oksalat|SnC₂O₄||ionic|Salt|S|0|0|Powder|16|206.728|3.67935||||||h_hc2o4|1|Sn2|2|1|C2O4|2|1||0.0004|1|F2F2F2|1||||0|0|800|||
-i_mn2_f|0|Manganese(II) fluoride|Mangan(II) florür|MnF₂||ionic|Salt|S|0|1|Crystals|18|92.9349|2.64486||||||m_hf|2|Mn2|2|1|F|1|2||3e-11|1|F2C9D0|0.8|0.3|Mn^2+ F-*2||0|0|800|||
+i_sn2_ch3coo|0|Tin(II) acetate|Kalay(II) asetat|(CH₃COO)₂Sn|Kalay(II) etanoat|ionic|Salt|S|0|1|Crystals|16|236.798|3.95271||||||acetic_acid|2|Sn2|2|1|CH3COO|1|2||0.0004|1|F2F2F2|1||Sn^2+ CH3COO-*2||0|0|800|||638-39-1
+i_sn2_o|0|Tin(II) oxide|Kalay(II) oksit|SnO||ionic|Salt|S|0|0|Powder|16|134.709|3.02463||||||||Sn2|2|1|O|2|1||0.0004|1|F2F2F2|1||||0|0|800|||21651-19-4
+i_sn2_s|0|Tin(II) sulfide|Kalay(II) sülfür|SnS||ionic|Salt|S|0|0|Powder|48|150.77|3.17064||||||h_hs|1|Sn2|2|1|S|2|1||0.0004|1|6B4A2A|1||||0|0|800|||1314-95-0
+i_sn2_so4|0|Tin(II) sulfate|Kalay(II) sülfat|SnSO₄||ionic|Salt|S|0|1|Crystals|16|214.766|3.75242||||||||Sn2|2|1|SO4|2|1||0.0004|1|F2F2F2|1||Sn^2+ SO4^2-||0|0|800|||7488-55-3
+i_sn2_c2o4|0|Tin(II) oxalate|Kalay(II) oksalat|SnC₂O₄||ionic|Salt|S|0|0|Powder|16|206.728|3.67935||||||h_hc2o4|1|Sn2|2|1|C2O4|2|1||0.0004|1|F2F2F2|1||||0|0|800|||814-94-8
+i_mn2_f|0|Manganese(II) fluoride|Mangan(II) florür|MnF₂||ionic|Salt|S|0|1|Crystals|18|92.9349|2.64486||||||m_hf|2|Mn2|2|1|F|1|2||3e-11|1|F2C9D0|0.8|0.3|Mn^2+ F-*2||0|0|800|||7782-64-1
 i_mn2_cl|0|Manganese(II) chloride|Mangan(II) klorür|MnCl₂||ionic|Salt|S|0|1|Crystals|16|125.838|2.94398||||||||Mn2|2|1|Cl|1|2||3e-11|1|F2C9D0|0.8|0.3|Mn^2+ Cl-*2||0|0|800|||
-i_mn2_br|0|Manganese(II) bromide|Mangan(II) bromür|MnBr₂||ionic|Salt|S|0|1|Crystals|16|214.746|3.75224||||||||Mn2|2|1|Br|1|2||3e-11|1|F2C9D0|0.8|0.3|Mn^2+ Br-*2||0|0|800|||
-i_mn2_i|0|Manganese(II) iodide|Mangan(II) iyodür|MnI₂||ionic|Salt|S|0|1|Crystals|16|308.747|4.60679||||||||Mn2|2|1|I|1|2||3e-11|1|F2C9D0|0.8|0.3|Mn^2+ I-*2||0|0|800|||
+i_mn2_br|0|Manganese(II) bromide|Mangan(II) bromür|MnBr₂||ionic|Salt|S|0|1|Crystals|16|214.746|3.75224||||||||Mn2|2|1|Br|1|2||3e-11|1|F2C9D0|0.8|0.3|Mn^2+ Br-*2||0|0|800|||13446-03-2
+i_mn2_i|0|Manganese(II) iodide|Mangan(II) iyodür|MnI₂||ionic|Salt|S|0|1|Crystals|16|308.747|4.60679||||||||Mn2|2|1|I|1|2||3e-11|1|F2C9D0|0.8|0.3|Mn^2+ I-*2||0|0|800|||7790-33-2
 i_mn2_oh|0|Manganese(II) hydroxide|Mangan(II) hidroksit|Mn(OH)₂||ionic|Salt|S|0|0|Powder|16|88.952|2.60865||||||||Mn2|2|1|OH|1|2||3e-11|1|D9C3A5|1||||0|0|800|||
-i_mn2_no3|0|Manganese(II) nitrate|Mangan(II) nitrat|Mn(NO₃)₂||ionic|Salt|S|0|1|Crystals|24|178.946|3.42678||||||||Mn2|2|1|NO3|1|2||3e-11|1|F2C9D0|0.8|0.3|Mn^2+ NO3-*2||0|0|800|||
+i_mn2_no3|0|Manganese(II) nitrate|Mangan(II) nitrat|Mn(NO₃)₂||ionic|Salt|S|0|1|Crystals|24|178.946|3.42678||||||||Mn2|2|1|NO3|1|2||3e-11|1|F2C9D0|0.8|0.3|Mn^2+ NO3-*2||0|0|800|||10377-66-9
 i_mn2_scn|0|Manganese(II) thiocyanate|Mangan(II) tiyosiyanat|Mn(SCN)₂||ionic|Salt|S|0|1|Crystals|16|171.094|3.3554||||||||Mn2|2|1|SCN|1|2||3e-11|1|F2C9D0|0.8|0.3|Mn^2+ SCN-*2||0|0|800|||
-i_mn2_clo4|0|Manganese(II) perchlorate|Mangan(II) perklorat|Mn(ClO₄)₂||ionic|Salt|S|0|1|Crystals|24|253.83|4.10755||||||||Mn2|2|1|ClO4|1|2||3e-11|1|F2C9D0|0.8|0.3|Mn^2+ ClO4-*2||0|0|800|||
-i_mn2_ch3coo|0|Manganese(II) acetate|Mangan(II) asetat|(CH₃COO)₂Mn|Mangan(II) etanoat|ionic|Salt|S|0|1|Crystals|16|173.026|3.37296||||||acetic_acid|2|Mn2|2|1|CH3COO|1|2||3e-11|1|F2C9D0|0.8|0.3|Mn^2+ CH3COO-*2||0|0|800|||
+i_mn2_clo4|0|Manganese(II) perchlorate|Mangan(II) perklorat|Mn(ClO₄)₂||ionic|Salt|S|0|1|Crystals|24|253.83|4.10755||||||||Mn2|2|1|ClO4|1|2||3e-11|1|F2C9D0|0.8|0.3|Mn^2+ ClO4-*2||0|0|800|||13770-16-6
+i_mn2_ch3coo|0|Manganese(II) acetate|Mangan(II) asetat|(CH₃COO)₂Mn|Mangan(II) etanoat|ionic|Salt|S|0|1|Crystals|16|173.026|3.37296||||||acetic_acid|2|Mn2|2|1|CH3COO|1|2||3e-11|1|F2C9D0|0.8|0.3|Mn^2+ CH3COO-*2||0|0|800|||638-38-0
 i_mn2_hcoo|0|Manganese(II) formate|Mangan(II) format|(HCOO)₂Mn|Mangan(II) metanoat|ionic|Salt|S|0|1|Crystals|16|144.972|3.11793||||||m_hcooh|2|Mn2|2|1|HCOO|1|2||3e-11|1|F2C9D0|0.8|0.3|Mn^2+ HCOO-*2||0|0|800|||
-i_mn2_o|0|Manganese(II) oxide|Mangan(II) oksit|MnO||ionic|Salt|S|0|0|Powder|16|70.937|5.37||||||||Mn2|2|1|O|2|1||3e-11|1|3E6E3E|1||||0|0|800|||
-i_mn2_s|0|Manganese(II) sulfide|Mangan(II) sülfür|MnS||ionic|Salt|S|0|0|Powder|48|86.998|2.59089||||||h_hs|1|Mn2|2|1|S|2|1||3e-11|1|E6A0A0|1||||0|0|800|||
+i_mn2_o|0|Manganese(II) oxide|Mangan(II) oksit|MnO||ionic|Salt|S|0|0|Powder|16|70.937|5.37||||||||Mn2|2|1|O|2|1||3e-11|1|3E6E3E|1||||0|0|800|||1344-43-0
+i_mn2_s|0|Manganese(II) sulfide|Mangan(II) sülfür|MnS||ionic|Salt|S|0|0|Powder|48|86.998|2.59089||||||h_hs|1|Mn2|2|1|S|2|1||3e-11|1|E6A0A0|1||||0|0|800|||18820-29-6
 i_mn2_so4|0|Manganese(II) sulfate|Mangan(II) sülfat|MnSO₄||ionic|Salt|S|0|1|Crystals|16|150.994|3.17267||||||||Mn2|2|1|SO4|2|1||3e-11|1|F2C9D0|0.8|0.3|Mn^2+ SO4^2-||0|0|800|||
 i_mn2_so3|0|Manganese(II) sulfite|Mangan(II) sülfit|MnSO₃||ionic|Salt|S|0|0|Powder|16|134.995|3.02723||||||h_hso3|1|Mn2|2|1|SO3|2|1||3e-11|1|F0C8D0|1||||0|0|800|||
-i_mn2_co3|0|Manganese(II) carbonate|Mangan(II) karbonat|MnCO₃||ionic|Salt|S|0|0|Powder|16|114.946|2.84496||||||h_hco3|1|Mn2|2|1|CO3|2|1||3e-11|1|E8C0C8|1||||0|0|800|||
-i_mn2_c2o4|0|Manganese(II) oxalate|Mangan(II) oksalat|MnC₂O₄||ionic|Salt|S|0|0|Powder|16|142.956|3.0996||||||h_hc2o4|1|Mn2|2|1|C2O4|2|1||3e-11|1|F0C8D0|1||||0|0|800|||
+i_mn2_co3|0|Manganese(II) carbonate|Mangan(II) karbonat|MnCO₃||ionic|Salt|S|0|0|Powder|16|114.946|2.84496||||||h_hco3|1|Mn2|2|1|CO3|2|1||3e-11|1|E8C0C8|1||||0|0|800|||598-62-9
+i_mn2_c2o4|0|Manganese(II) oxalate|Mangan(II) oksalat|MnC₂O₄||ionic|Salt|S|0|0|Powder|16|142.956|3.0996||||||h_hc2o4|1|Mn2|2|1|C2O4|2|1||3e-11|1|F0C8D0|1||||0|0|800|||640-67-5
 i_mn2_po4|0|Manganese(II) phosphate|Mangan(II) fosfat|Mn₃(PO₄)₂||ionic|Salt|S|0|0|Powder|16|354.754|5.02503||||||h_hpo4|2|Mn2|2|3|PO4|3|2||3e-11|3|F2F2F2|1||||0|0|800|||
 i_fe2_f|0|Iron(II) fluoride|Demir(II) florür|FeF₂||ionic|Salt|S|0|1|Crystals|18|93.8418|2.65311||||||m_hf|2|Fe2|2|1|F|1|2||3e-10|1|9ED39A|0.8|1.2|Fe^2+ F-*2||0|0|800|||
-fecl2|1|Iron(II) chloride|Demir(II) klorür|||ionic|Molecular|S|0|0|Powder|0||||||||||Fe2|2|1|Cl|1|2||3e-10|1||||||0|0||||
+fecl2|1|Iron(II) chloride|Demir(II) klorür|||ionic|Molecular|S|0|0|Powder|0||||||||||Fe2|2|1|Cl|1|2||3e-10|1||||||0|0||||7758-94-3
 i_fe2_br|0|Iron(II) bromide|Demir(II) bromür|FeBr₂||ionic|Salt|S|0|1|Crystals|16|215.653|3.76048||||||||Fe2|2|1|Br|1|2||3e-10|1|9ED39A|0.8|1.2|Fe^2+ Br-*2||0|0|800|||
-i_fe2_i|0|Iron(II) iodide|Demir(II) iyodür|FeI₂||ionic|Salt|S|0|1|Crystals|16|309.654|4.61504||||||||Fe2|2|1|I|1|2||3e-10|1|9ED39A|0.8|1.2|Fe^2+ I-*2||0|0|800|||
-i_fe2_oh|0|Iron(II) hydroxide|Demir(II) hidroksit|Fe(OH)₂||ionic|Salt|S|0|0|Powder|16|89.859|2.6169||||||||Fe2|2|1|OH|1|2||3e-10|1|6E8B5A|1||||0|0|800|||
+i_fe2_i|0|Iron(II) iodide|Demir(II) iyodür|FeI₂||ionic|Salt|S|0|1|Crystals|16|309.654|4.61504||||||||Fe2|2|1|I|1|2||3e-10|1|9ED39A|0.8|1.2|Fe^2+ I-*2||0|0|800|||7783-86-0
+i_fe2_oh|0|Iron(II) hydroxide|Demir(II) hidroksit|Fe(OH)₂||ionic|Salt|S|0|0|Powder|16|89.859|2.6169||||||||Fe2|2|1|OH|1|2||3e-10|1|6E8B5A|1||||0|0|800|||18624-44-7
 i_fe2_no3|0|Iron(II) nitrate|Demir(II) nitrat|Fe(NO₃)₂||ionic|Salt|S|0|1|Crystals|24|179.853|3.43503||||||||Fe2|2|1|NO3|1|2||3e-10|1|9ED39A|0.8|1.2|Fe^2+ NO3-*2||0|0|800|||
 i_fe2_scn|0|Iron(II) thiocyanate|Demir(II) tiyosiyanat|Fe(SCN)₂||ionic|Salt|S|0|1|Crystals|16|172.001|3.36365||||||||Fe2|2|1|SCN|1|2||3e-10|1|9ED39A|0.8|1.2|Fe^2+ SCN-*2||0|0|800|||
 i_fe2_clo4|0|Iron(II) perchlorate|Demir(II) perklorat|Fe(ClO₄)₂||ionic|Salt|S|0|1|Crystals|24|254.737|4.11579||||||||Fe2|2|1|ClO4|1|2||3e-10|1|9ED39A|0.8|1.2|Fe^2+ ClO4-*2||0|0|800|||
-i_fe2_ch3coo|0|Iron(II) acetate|Demir(II) asetat|(CH₃COO)₂Fe|Demir(II) etanoat|ionic|Salt|S|0|1|Crystals|16|173.933|3.38121||||||acetic_acid|2|Fe2|2|1|CH3COO|1|2||3e-10|1|9ED39A|0.8|1.2|Fe^2+ CH3COO-*2||0|0|800|||
+i_fe2_ch3coo|0|Iron(II) acetate|Demir(II) asetat|(CH₃COO)₂Fe|Demir(II) etanoat|ionic|Salt|S|0|1|Crystals|16|173.933|3.38121||||||acetic_acid|2|Fe2|2|1|CH3COO|1|2||3e-10|1|9ED39A|0.8|1.2|Fe^2+ CH3COO-*2||0|0|800|||3094-87-9
 i_fe2_hcoo|0|Iron(II) formate|Demir(II) format|(HCOO)₂Fe|Demir(II) metanoat|ionic|Salt|S|0|1|Crystals|16|145.879|3.12617||||||m_hcooh|2|Fe2|2|1|HCOO|1|2||3e-10|1|9ED39A|0.8|1.2|Fe^2+ HCOO-*2||0|0|800|||
-i_fe2_o|0|Iron(II) oxide|Demir(II) oksit|FeO||ionic|Salt|S|0|0|Powder|16|71.844|2.45313||||||||Fe2|2|1|O|2|1||3e-10|1|1E1E1E|1||||0|0|800|||
-i_fe2_s|0|Iron(II) sulfide|Demir(II) sülfür|FeS||ionic|Salt|S|0|0|Powder|48|87.905|2.59914||||||h_hs|1|Fe2|2|1|S|2|1||3e-10|1|1E1E1E|1||||0|0|800|||
-feso4|1|Iron(II) sulfate|Demir(II) sülfat|||ionic|Molecular|S|0|0|Powder|0||||||||||Fe2|2|1|SO4|2|1||3e-10|1||||||0|0||||
+i_fe2_o|0|Iron(II) oxide|Demir(II) oksit|FeO||ionic|Salt|S|0|0|Powder|16|71.844|2.45313||||||||Fe2|2|1|O|2|1||3e-10|1|1E1E1E|1||||0|0|800|||1345-25-1
+i_fe2_s|0|Iron(II) sulfide|Demir(II) sülfür|FeS||ionic|Salt|S|0|0|Powder|48|87.905|2.59914||||||h_hs|1|Fe2|2|1|S|2|1||3e-10|1|1E1E1E|1||||0|0|800|||1317-37-9
+feso4|1|Iron(II) sulfate|Demir(II) sülfat|||ionic|Molecular|S|0|0|Powder|0||||||||||Fe2|2|1|SO4|2|1||3e-10|1||||||0|0||||7720-78-7
 i_fe2_so3|0|Iron(II) sulfite|Demir(II) sülfit|FeSO₃||ionic|Salt|S|0|0|Powder|16|135.902|3.03547||||||h_hso3|1|Fe2|2|1|SO3|2|1||3e-10|1|A8D8A0|1||||0|0|800|||
-i_fe2_co3|0|Iron(II) carbonate|Demir(II) karbonat|FeCO₃||ionic|Salt|S|0|0|Powder|16|115.853|2.85321||||||h_hco3|1|Fe2|2|1|CO3|2|1||3e-10|1|B5A07A|1||||0|0|800|||
-i_fe2_c2o4|0|Iron(II) oxalate|Demir(II) oksalat|FeC₂O₄||ionic|Salt|S|0|0|Powder|16|143.863|3.10785||||||h_hc2o4|1|Fe2|2|1|C2O4|2|1||3e-10|1|A8D8A0|1||||0|0|800|||
+i_fe2_co3|0|Iron(II) carbonate|Demir(II) karbonat|FeCO₃||ionic|Salt|S|0|0|Powder|16|115.853|2.85321||||||h_hco3|1|Fe2|2|1|CO3|2|1||3e-10|1|B5A07A|1||||0|0|800|||563-71-3
+i_fe2_c2o4|0|Iron(II) oxalate|Demir(II) oksalat|FeC₂O₄||ionic|Salt|S|0|0|Powder|16|143.863|3.10785||||||h_hc2o4|1|Fe2|2|1|C2O4|2|1||3e-10|1|A8D8A0|1||||0|0|800|||516-03-0
 i_fe2_po4|0|Iron(II) phosphate|Demir(II) fosfat|Fe₃(PO₄)₂||ionic|Salt|S|0|0|Powder|16|357.475|5.04977||||||h_hpo4|2|Fe2|2|3|PO4|3|2||3e-10|3|F2F2F2|1||||0|0|800|||
-i_fe2_c3h5o3|0|Iron(II) lactate|Demir(II) laktat|Fe(C₃H₅O₃)₂||ionic|Salt|S|0|1|Crystals|16|233.985|3.92714||||||m_c3h6o3|2|Fe2|2|1|C3H5O3|1|2||3e-10|1|9ED39A|0.8|1.2|Fe^2+ C3H5O3-*2||0|0|800|||
+i_fe2_c3h5o3|0|Iron(II) lactate|Demir(II) laktat|Fe(C₃H₅O₃)₂||ionic|Salt|S|0|1|Crystals|16|233.985|3.92714||||||m_c3h6o3|2|Fe2|2|1|C3H5O3|1|2||3e-10|1|9ED39A|0.8|1.2|Fe^2+ C3H5O3-*2||0|0|800|||5905-52-2
 i_fe2_fecn6_3|0|Iron(II) hexacyanoferrate(III)|Demir(II) hekzasiyanoferrat(III)|Fe₃[Fe(CN)₆]₂|Turnbull mavisi;Demir(II) ferrisiyanür|ionic|Salt|S|0|0|Powder|16|591.441|7.17674||||||||Fe2|2|3|FeCN6_3|3|2||3e-10|3|1A3A9A|1||||0|0|800|||
-i_co2_f|0|Cobalt(II) fluoride|Kobalt(II) florür|CoF₂||ionic|Salt|S|0|1|Crystals|562|96.93|2.68118||||||m_hf|2|Co2|2|1|F|1|2||1.3e-09|1|E07AA8|0.8|2.5|Co^2+ F-*2||0|0|800|||
+i_co2_f|0|Cobalt(II) fluoride|Kobalt(II) florür|CoF₂||ionic|Salt|S|0|1|Crystals|562|96.93|2.68118||||||m_hf|2|Co2|2|1|F|1|2||1.3e-09|1|E07AA8|0.8|2.5|Co^2+ F-*2||0|0|800|||10026-17-2
 i_co2_cl|0|Cobalt(II) chloride|Kobalt(II) klorür|CoCl₂||ionic|Salt|S|0|1|Crystals|560|129.833|3.36||||||||Co2|2|1|Cl|1|2||1.3e-09|1|E07AA8|0.8|2.5|Co^2+ Cl-*2||0|0|800|||
-i_co2_br|0|Cobalt(II) bromide|Kobalt(II) bromür|CoBr₂||ionic|Salt|S|0|1|Crystals|560|218.741|3.78856||||||||Co2|2|1|Br|1|2||1.3e-09|1|E07AA8|0.8|2.5|Co^2+ Br-*2||0|0|800|||
-i_co2_i|0|Cobalt(II) iodide|Kobalt(II) iyodür|CoI₂||ionic|Salt|S|0|1|Crystals|560|312.742|4.64311||||||||Co2|2|1|I|1|2||1.3e-09|1|E07AA8|0.8|2.5|Co^2+ I-*2||0|0|800|||
+i_co2_br|0|Cobalt(II) bromide|Kobalt(II) bromür|CoBr₂||ionic|Salt|S|0|1|Crystals|560|218.741|3.78856||||||||Co2|2|1|Br|1|2||1.3e-09|1|E07AA8|0.8|2.5|Co^2+ Br-*2||0|0|800|||7789-43-7
+i_co2_i|0|Cobalt(II) iodide|Kobalt(II) iyodür|CoI₂||ionic|Salt|S|0|1|Crystals|560|312.742|4.64311||||||||Co2|2|1|I|1|2||1.3e-09|1|E07AA8|0.8|2.5|Co^2+ I-*2||0|0|800|||15238-00-3
 i_co2_oh|0|Cobalt(II) hydroxide|Kobalt(II) hidroksit|Co(OH)₂||ionic|Salt|S|0|0|Powder|560|92.9472|2.64497||||||||Co2|2|1|OH|1|2||1.3e-09|1|C9708C|1||||0|0|800|||
-i_co2_no3|0|Cobalt(II) nitrate|Kobalt(II) nitrat|Co(NO₃)₂||ionic|Salt|S|0|1|Crystals|568|182.941|3.4631||||||||Co2|2|1|NO3|1|2||1.3e-09|1|E07AA8|0.8|2.5|Co^2+ NO3-*2||0|0|800|||
+i_co2_no3|0|Cobalt(II) nitrate|Kobalt(II) nitrat|Co(NO₃)₂||ionic|Salt|S|0|1|Crystals|568|182.941|3.4631||||||||Co2|2|1|NO3|1|2||1.3e-09|1|E07AA8|0.8|2.5|Co^2+ NO3-*2||0|0|800|||10141-05-6
 i_co2_cn|0|Cobalt(II) cyanide|Kobalt(II) siyanür|Co(CN)₂||ionic|Salt|S|0|0|Powder|562|110.969|2.80881||||||m_hcn|2|Co2|2|1|CN|1|2||1.3e-09|1|D45A8A|1||||0|0|800|||
 i_co2_scn|0|Cobalt(II) thiocyanate|Kobalt(II) tiyosiyanat|Co(SCN)₂||ionic|Salt|S|0|1|Crystals|560|175.089|3.39172||||||||Co2|2|1|SCN|1|2||1.3e-09|1|E07AA8|0.8|2.5|Co^2+ SCN-*2||0|0|800|||
 i_co2_clo3|0|Cobalt(II) chlorate|Kobalt(II) klorat|Co(ClO₃)₂||ionic|Salt|S|0|1|Crystals|568|225.827|3.85297||||||||Co2|2|1|ClO3|1|2||1.3e-09|1|E07AA8|0.8|2.5|Co^2+ ClO3-*2||0|0|800|||
-i_co2_clo4|0|Cobalt(II) perchlorate|Kobalt(II) perklorat|Co(ClO₄)₂||ionic|Salt|S|0|1|Crystals|568|257.825|4.14387||||||||Co2|2|1|ClO4|1|2||1.3e-09|1|E07AA8|0.8|2.5|Co^2+ ClO4-*2||0|0|800|||
+i_co2_clo4|0|Cobalt(II) perchlorate|Kobalt(II) perklorat|Co(ClO₄)₂||ionic|Salt|S|0|1|Crystals|568|257.825|4.14387||||||||Co2|2|1|ClO4|1|2||1.3e-09|1|E07AA8|0.8|2.5|Co^2+ ClO4-*2||0|0|800|||13455-31-7
 i_co2_bro3|0|Cobalt(II) bromate|Kobalt(II) bromat|Co(BrO₃)₂||ionic|Salt|S|0|1|Crystals|570|314.735|4.66123||||||||Co2|2|1|BrO3|1|2||1.3e-09|1|E07AA8|0.8|2.5|Co^2+ BrO3-*2||0|0|800|||
 i_co2_io3|0|Cobalt(II) iodate|Kobalt(II) iyodat|Co(IO₃)₂||ionic|Salt|S|0|1|Crystals|568|408.736|5.51578||||||||Co2|2|1|IO3|1|2||1.3e-09|1|E07AA8|0.8|2.5|Co^2+ IO3-*2||0|0|800|||
-i_co2_ch3coo|0|Cobalt(II) acetate|Kobalt(II) asetat|(CH₃COO)₂Co|Kobalt(II) etanoat|ionic|Salt|S|0|1|Crystals|560|177.021|3.40928||||||acetic_acid|2|Co2|2|1|CH3COO|1|2||1.3e-09|1|E07AA8|0.8|2.5|Co^2+ CH3COO-*2||0|0|800|||
-i_co2_hcoo|0|Cobalt(II) formate|Kobalt(II) format|(HCOO)₂Co|Kobalt(II) metanoat|ionic|Salt|S|0|1|Crystals|560|148.967|3.15425||||||m_hcooh|2|Co2|2|1|HCOO|1|2||1.3e-09|1|E07AA8|0.8|2.5|Co^2+ HCOO-*2||0|0|800|||
-i_co2_o|0|Cobalt(II) oxide|Kobalt(II) oksit|CoO||ionic|Salt|S|0|0|Powder|560|74.9322|2.4812||||||||Co2|2|1|O|2|1||1.3e-09|1|5A5A3A|1||||0|0|800|||
-i_co2_s|0|Cobalt(II) sulfide|Kobalt(II) sülfür|CoS||ionic|Salt|S|0|0|Powder|560|90.9932|2.62721||||||h_hs|1|Co2|2|1|S|2|1||1.3e-09|1|1E1E1E|1||||0|0|800|||
-i_co2_so4|0|Cobalt(II) sulfate|Kobalt(II) sülfat|CoSO₄||ionic|Salt|S|0|1|Crystals|560|154.989|3.20899||||||||Co2|2|1|SO4|2|1||1.3e-09|1|E07AA8|0.8|2.5|Co^2+ SO4^2-||0|0|800|||
+i_co2_ch3coo|0|Cobalt(II) acetate|Kobalt(II) asetat|(CH₃COO)₂Co|Kobalt(II) etanoat|ionic|Salt|S|0|1|Crystals|560|177.021|3.40928||||||acetic_acid|2|Co2|2|1|CH3COO|1|2||1.3e-09|1|E07AA8|0.8|2.5|Co^2+ CH3COO-*2||0|0|800|||71-48-7
+i_co2_hcoo|0|Cobalt(II) formate|Kobalt(II) format|(HCOO)₂Co|Kobalt(II) metanoat|ionic|Salt|S|0|1|Crystals|560|148.967|3.15425||||||m_hcooh|2|Co2|2|1|HCOO|1|2||1.3e-09|1|E07AA8|0.8|2.5|Co^2+ HCOO-*2||0|0|800|||544-18-3
+i_co2_o|0|Cobalt(II) oxide|Kobalt(II) oksit|CoO||ionic|Salt|S|0|0|Powder|560|74.9322|2.4812||||||||Co2|2|1|O|2|1||1.3e-09|1|5A5A3A|1||||0|0|800|||1307-96-6
+i_co2_s|0|Cobalt(II) sulfide|Kobalt(II) sülfür|CoS||ionic|Salt|S|0|0|Powder|560|90.9932|2.62721||||||h_hs|1|Co2|2|1|S|2|1||1.3e-09|1|1E1E1E|1||||0|0|800|||1317-42-6
+i_co2_so4|0|Cobalt(II) sulfate|Kobalt(II) sülfat|CoSO₄||ionic|Salt|S|0|1|Crystals|560|154.989|3.20899||||||||Co2|2|1|SO4|2|1||1.3e-09|1|E07AA8|0.8|2.5|Co^2+ SO4^2-||0|0|800|||10124-43-3
 i_co2_so3|0|Cobalt(II) sulfite|Kobalt(II) sülfit|CoSO₃||ionic|Salt|S|0|0|Powder|560|138.99|3.06355||||||h_hso3|1|Co2|2|1|SO3|2|1||1.3e-09|1|D45A8A|1||||0|0|800|||
-i_co2_co3|0|Cobalt(II) carbonate|Kobalt(II) karbonat|CoCO₃||ionic|Salt|S|0|0|Powder|560|118.941|2.88128||||||h_hco3|1|Co2|2|1|CO3|2|1||1.3e-09|1|C9709A|1||||0|0|800|||
-i_co2_c2o4|0|Cobalt(II) oxalate|Kobalt(II) oksalat|CoC₂O₄||ionic|Salt|S|0|0|Powder|560|146.951|3.13592||||||h_hc2o4|1|Co2|2|1|C2O4|2|1||1.3e-09|1|D45A8A|1||||0|0|800|||
+i_co2_co3|0|Cobalt(II) carbonate|Kobalt(II) karbonat|CoCO₃||ionic|Salt|S|0|0|Powder|560|118.941|2.88128||||||h_hco3|1|Co2|2|1|CO3|2|1||1.3e-09|1|C9709A|1||||0|0|800|||513-79-1
+i_co2_c2o4|0|Cobalt(II) oxalate|Kobalt(II) oksalat|CoC₂O₄||ionic|Salt|S|0|0|Powder|560|146.951|3.13592||||||h_hc2o4|1|Co2|2|1|C2O4|2|1||1.3e-09|1|D45A8A|1||||0|0|800|||134761-87-8
 i_co2_cro4|0|Cobalt(II) chromate|Kobalt(II) kromat|CoCrO₄||ionic|Salt|S|0|0|Powder|570|174.925|3.39023||||||||Co2|2|1|CrO4|2|1||1.3e-09|1|F2D21E|1||||0|0|800|||
-i_co2_po4|0|Cobalt(II) phosphate|Kobalt(II) fosfat|Co₃(PO₄)₂||ionic|Salt|S|0|0|Powder|560|366.739|5.13399||||||h_hpo4|2|Co2|2|3|PO4|3|2||1.3e-09|3|F2F2F2|1||||0|0|800|||
+i_co2_po4|0|Cobalt(II) phosphate|Kobalt(II) fosfat|Co₃(PO₄)₂||ionic|Salt|S|0|0|Powder|560|366.739|5.13399||||||h_hpo4|2|Co2|2|3|PO4|3|2||1.3e-09|3|F2F2F2|1||||0|0|800|||13455-36-2
 i_ni2_f|0|Nickel(II) fluoride|Nikel(II) florür|NiF₂||ionic|Salt|S|0|1|Crystals|562|96.6902|2.679||||||m_hf|2|Ni2|2|1|F|1|2||2.5e-11|1|3FBF5F|0.8|2.5|Ni^2+ F-*2||0|0|800|||
-i_ni2_cl|0|Nickel(II) chloride|Nikel(II) klorür|NiCl₂||ionic|Salt|S|0|1|Crystals|560|129.593|2.97812||||||||Ni2|2|1|Cl|1|2||2.5e-11|1|3FBF5F|0.8|2.5|Ni^2+ Cl-*2||0|0|800|||
-i_ni2_br|0|Nickel(II) bromide|Nikel(II) bromür|NiBr₂||ionic|Salt|S|0|1|Crystals|560|218.501|3.78638||||||||Ni2|2|1|Br|1|2||2.5e-11|1|3FBF5F|0.8|2.5|Ni^2+ Br-*2||0|0|800|||
-i_ni2_i|0|Nickel(II) iodide|Nikel(II) iyodür|NiI₂||ionic|Salt|S|0|1|Crystals|560|312.502|4.64093||||||||Ni2|2|1|I|1|2||2.5e-11|1|3FBF5F|0.8|2.5|Ni^2+ I-*2||0|0|800|||
-i_ni2_oh|0|Nickel(II) hydroxide|Nikel(II) hidroksit|Ni(OH)₂||ionic|Salt|S|0|0|Powder|560|92.7074|2.64279||||||||Ni2|2|1|OH|1|2||2.5e-11|1|7CC47F|1||||0|0|800|||
-i_ni2_no3|0|Nickel(II) nitrate|Nikel(II) nitrat|Ni(NO₃)₂||ionic|Salt|S|0|1|Crystals|568|182.701|3.46092||||||||Ni2|2|1|NO3|1|2||2.5e-11|1|3FBF5F|0.8|2.5|Ni^2+ NO3-*2||0|0|800|||
-i_ni2_cn|0|Nickel(II) cyanide|Nikel(II) siyanür|Ni(CN)₂||ionic|Salt|S|0|0|Powder|562|110.729|2.80663||||||m_hcn|2|Ni2|2|1|CN|1|2||2.5e-11|1|4CAF50|1||||0|0|800|||
+i_ni2_cl|0|Nickel(II) chloride|Nikel(II) klorür|NiCl₂||ionic|Salt|S|0|1|Crystals|560|129.593|2.97812||||||||Ni2|2|1|Cl|1|2||2.5e-11|1|3FBF5F|0.8|2.5|Ni^2+ Cl-*2||0|0|800|||7718-54-9
+i_ni2_br|0|Nickel(II) bromide|Nikel(II) bromür|NiBr₂||ionic|Salt|S|0|1|Crystals|560|218.501|3.78638||||||||Ni2|2|1|Br|1|2||2.5e-11|1|3FBF5F|0.8|2.5|Ni^2+ Br-*2||0|0|800|||13462-88-9
+i_ni2_i|0|Nickel(II) iodide|Nikel(II) iyodür|NiI₂||ionic|Salt|S|0|1|Crystals|560|312.502|4.64093||||||||Ni2|2|1|I|1|2||2.5e-11|1|3FBF5F|0.8|2.5|Ni^2+ I-*2||0|0|800|||13462-90-3
+i_ni2_oh|0|Nickel(II) hydroxide|Nikel(II) hidroksit|Ni(OH)₂||ionic|Salt|S|0|0|Powder|560|92.7074|2.64279||||||||Ni2|2|1|OH|1|2||2.5e-11|1|7CC47F|1||||0|0|800|||12054-48-7
+i_ni2_no3|0|Nickel(II) nitrate|Nikel(II) nitrat|Ni(NO₃)₂||ionic|Salt|S|0|1|Crystals|568|182.701|3.46092||||||||Ni2|2|1|NO3|1|2||2.5e-11|1|3FBF5F|0.8|2.5|Ni^2+ NO3-*2||0|0|800|||13138-45-9
+i_ni2_cn|0|Nickel(II) cyanide|Nikel(II) siyanür|Ni(CN)₂||ionic|Salt|S|0|0|Powder|562|110.729|2.80663||||||m_hcn|2|Ni2|2|1|CN|1|2||2.5e-11|1|4CAF50|1||||0|0|800|||557-19-7
 i_ni2_scn|0|Nickel(II) thiocyanate|Nikel(II) tiyosiyanat|Ni(SCN)₂||ionic|Salt|S|0|1|Crystals|560|174.849|3.38954||||||||Ni2|2|1|SCN|1|2||2.5e-11|1|3FBF5F|0.8|2.5|Ni^2+ SCN-*2||0|0|800|||
 i_ni2_clo3|0|Nickel(II) chlorate|Nikel(II) klorat|Ni(ClO₃)₂||ionic|Salt|S|0|1|Crystals|568|225.587|3.85079||||||||Ni2|2|1|ClO3|1|2||2.5e-11|1|3FBF5F|0.8|2.5|Ni^2+ ClO3-*2||0|0|800|||
-i_ni2_clo4|0|Nickel(II) perchlorate|Nikel(II) perklorat|Ni(ClO₄)₂||ionic|Salt|S|0|1|Crystals|568|257.585|4.14169||||||||Ni2|2|1|ClO4|1|2||2.5e-11|1|3FBF5F|0.8|2.5|Ni^2+ ClO4-*2||0|0|800|||
+i_ni2_clo4|0|Nickel(II) perchlorate|Nikel(II) perklorat|Ni(ClO₄)₂||ionic|Salt|S|0|1|Crystals|568|257.585|4.14169||||||||Ni2|2|1|ClO4|1|2||2.5e-11|1|3FBF5F|0.8|2.5|Ni^2+ ClO4-*2||0|0|800|||13637-71-3
 i_ni2_bro3|0|Nickel(II) bromate|Nikel(II) bromat|Ni(BrO₃)₂||ionic|Salt|S|0|1|Crystals|570|314.495|4.65905||||||||Ni2|2|1|BrO3|1|2||2.5e-11|1|3FBF5F|0.8|2.5|Ni^2+ BrO3-*2||0|0|800|||
 i_ni2_io3|0|Nickel(II) iodate|Nikel(II) iyodat|Ni(IO₃)₂||ionic|Salt|S|0|1|Crystals|568|408.496|5.5136||||||||Ni2|2|1|IO3|1|2||2.5e-11|1|3FBF5F|0.8|2.5|Ni^2+ IO3-*2||0|0|800|||
-i_ni2_ch3coo|0|Nickel(II) acetate|Nikel(II) asetat|(CH₃COO)₂Ni|Nikel(II) etanoat|ionic|Salt|S|0|1|Crystals|560|176.781|3.4071||||||acetic_acid|2|Ni2|2|1|CH3COO|1|2||2.5e-11|1|3FBF5F|0.8|2.5|Ni^2+ CH3COO-*2||0|0|800|||
+i_ni2_ch3coo|0|Nickel(II) acetate|Nikel(II) asetat|(CH₃COO)₂Ni|Nikel(II) etanoat|ionic|Salt|S|0|1|Crystals|560|176.781|3.4071||||||acetic_acid|2|Ni2|2|1|CH3COO|1|2||2.5e-11|1|3FBF5F|0.8|2.5|Ni^2+ CH3COO-*2||0|0|800|||373-02-4
 i_ni2_hcoo|0|Nickel(II) formate|Nikel(II) format|(HCOO)₂Ni|Nikel(II) metanoat|ionic|Salt|S|0|1|Crystals|560|148.727|3.15207||||||m_hcooh|2|Ni2|2|1|HCOO|1|2||2.5e-11|1|3FBF5F|0.8|2.5|Ni^2+ HCOO-*2||0|0|800|||
-i_ni2_o|0|Nickel(II) oxide|Nikel(II) oksit|NiO||ionic|Salt|S|0|0|Powder|560|74.6924|6.67||||||||Ni2|2|1|O|2|1||2.5e-11|1|5A8A4A|1||||0|0|800|||
-i_ni2_s|0|Nickel(II) sulfide|Nikel(II) sülfür|NiS||ionic|Salt|S|0|0|Powder|560|90.7534|2.62503||||||h_hs|1|Ni2|2|1|S|2|1||2.5e-11|1|1E1E1E|1||||0|0|800|||
-i_ni2_so4|0|Nickel(II) sulfate|Nikel(II) sülfat|NiSO₄||ionic|Salt|S|0|1|Crystals|560|154.749|4.01||||||||Ni2|2|1|SO4|2|1||2.5e-11|1|3FBF5F|0.8|2.5|Ni^2+ SO4^2-||0|0|800|||
+i_ni2_o|0|Nickel(II) oxide|Nikel(II) oksit|NiO||ionic|Salt|S|0|0|Powder|560|74.6924|6.67||||||||Ni2|2|1|O|2|1||2.5e-11|1|5A8A4A|1||||0|0|800|||1313-99-1
+i_ni2_s|0|Nickel(II) sulfide|Nikel(II) sülfür|NiS||ionic|Salt|S|0|0|Powder|560|90.7534|2.62503||||||h_hs|1|Ni2|2|1|S|2|1||2.5e-11|1|1E1E1E|1||||0|0|800|||16812-54-7
+i_ni2_so4|0|Nickel(II) sulfate|Nikel(II) sülfat|NiSO₄||ionic|Salt|S|0|1|Crystals|560|154.749|4.01||||||||Ni2|2|1|SO4|2|1||2.5e-11|1|3FBF5F|0.8|2.5|Ni^2+ SO4^2-||0|0|800|||7786-81-4
 i_ni2_so3|0|Nickel(II) sulfite|Nikel(II) sülfit|NiSO₃||ionic|Salt|S|0|0|Powder|560|138.75|3.06137||||||h_hso3|1|Ni2|2|1|SO3|2|1||2.5e-11|1|4CAF50|1||||0|0|800|||
-i_ni2_co3|0|Nickel(II) carbonate|Nikel(II) karbonat|NiCO₃||ionic|Salt|S|0|0|Powder|560|118.701|2.8791||||||h_hco3|1|Ni2|2|1|CO3|2|1||2.5e-11|1|7CC47F|1||||0|0|800|||
+i_ni2_co3|0|Nickel(II) carbonate|Nikel(II) karbonat|NiCO₃||ionic|Salt|S|0|0|Powder|560|118.701|2.8791||||||h_hco3|1|Ni2|2|1|CO3|2|1||2.5e-11|1|7CC47F|1||||0|0|800|||3333-67-3
 i_ni2_c2o4|0|Nickel(II) oxalate|Nikel(II) oksalat|NiC₂O₄||ionic|Salt|S|0|0|Powder|560|146.711|3.13374||||||h_hc2o4|1|Ni2|2|1|C2O4|2|1||2.5e-11|1|4CAF50|1||||0|0|800|||
 i_ni2_cro4|0|Nickel(II) chromate|Nikel(II) kromat|NiCrO₄||ionic|Salt|S|0|0|Powder|570|174.685|3.38805||||||||Ni2|2|1|CrO4|2|1||2.5e-11|1|F2D21E|1||||0|0|800|||
-i_ni2_po4|0|Nickel(II) phosphate|Nikel(II) fosfat|Ni₃(PO₄)₂||ionic|Salt|S|0|0|Powder|560|366.02|5.12745||||||h_hpo4|2|Ni2|2|3|PO4|3|2||2.5e-11|3|7CC47F|1||||0|0|800|||
-i_cu2_f|0|Copper(II) fluoride|Bakır(II) florür|CuF₂||ionic|Salt|S|0|1|Crystals|50|101.543|2.72312||||||m_hf|2|Cu2|2|1|F|1|2||3e-08|1|1F6FE5|0.8|4|Cu^2+ F-*2||0|0|800|||
-i_cu2_cl|0|Copper(II) chloride|Bakır(II) klorür|CuCl₂||ionic|Salt|S|0|1|Crystals|48|134.446|3.39||||||||Cu2|2|1|Cl|1|2||3e-08|1|1F6FE5|0.8|4|Cu^2+ Cl-*2||0|0|800|||
-i_cu2_br|0|Copper(II) bromide|Bakır(II) bromür|CuBr₂||ionic|Salt|S|0|1|Crystals|48|223.354|3.83049||||||||Cu2|2|1|Br|1|2||3e-08|1|1F6FE5|0.8|4|Cu^2+ Br-*2||0|0|800|||
+i_ni2_po4|0|Nickel(II) phosphate|Nikel(II) fosfat|Ni₃(PO₄)₂||ionic|Salt|S|0|0|Powder|560|366.02|5.12745||||||h_hpo4|2|Ni2|2|3|PO4|3|2||2.5e-11|3|7CC47F|1||||0|0|800|||10381-36-9
+i_cu2_f|0|Copper(II) fluoride|Bakır(II) florür|CuF₂||ionic|Salt|S|0|1|Crystals|50|101.543|2.72312||||||m_hf|2|Cu2|2|1|F|1|2||3e-08|1|1F6FE5|0.8|4|Cu^2+ F-*2||0|0|800|||7789-19-7
+i_cu2_cl|0|Copper(II) chloride|Bakır(II) klorür|CuCl₂||ionic|Salt|S|0|1|Crystals|48|134.446|3.39||||||||Cu2|2|1|Cl|1|2||3e-08|1|1F6FE5|0.8|4|Cu^2+ Cl-*2||0|0|800|||7447-39-4
+i_cu2_br|0|Copper(II) bromide|Bakır(II) bromür|CuBr₂||ionic|Salt|S|0|1|Crystals|48|223.354|3.83049||||||||Cu2|2|1|Br|1|2||3e-08|1|1F6FE5|0.8|4|Cu^2+ Br-*2||0|0|800|||7789-45-9
 cu_oh_2|1|Copper(II) hydroxide|Bakır(II) hidroksit|||ionic|Molecular|S|0|0|Powder|0||||||||||Cu2|2|1|OH|1|2||3e-08|1||||||0|0||||
-cu_no3_2|1|Copper(II) nitrate|Bakır(II) nitrat|||ionic|Molecular|S|0|0|Powder|0||||||||||Cu2|2|1|NO3|1|2||3e-08|1||||||0|0||||
+cu_no3_2|1|Copper(II) nitrate|Bakır(II) nitrat|||ionic|Molecular|S|0|0|Powder|0||||||||||Cu2|2|1|NO3|1|2||3e-08|1||||||0|0||||3251-23-8
 i_cu2_scn|0|Copper(II) thiocyanate|Bakır(II) tiyosiyanat|Cu(SCN)₂||ionic|Salt|S|0|1|Crystals|48|179.702|3.43365||||||||Cu2|2|1|SCN|1|2||3e-08|1|1F6FE5|0.8|4|Cu^2+ SCN-*2||0|0|800|||
 i_cu2_clo3|0|Copper(II) chlorate|Bakır(II) klorat|Cu(ClO₃)₂||ionic|Salt|S|0|1|Crystals|56|230.44|3.89491||||||||Cu2|2|1|ClO3|1|2||3e-08|1|1F6FE5|0.8|4|Cu^2+ ClO3-*2||0|0|800|||
-i_cu2_clo4|0|Copper(II) perchlorate|Bakır(II) perklorat|Cu(ClO₄)₂||ionic|Salt|S|0|1|Crystals|56|262.438|4.1858||||||||Cu2|2|1|ClO4|1|2||3e-08|1|1F6FE5|0.8|4|Cu^2+ ClO4-*2||0|0|800|||
+i_cu2_clo4|0|Copper(II) perchlorate|Bakır(II) perklorat|Cu(ClO₄)₂||ionic|Salt|S|0|1|Crystals|56|262.438|4.1858||||||||Cu2|2|1|ClO4|1|2||3e-08|1|1F6FE5|0.8|4|Cu^2+ ClO4-*2||0|0|800|||17031-32-2
 i_cu2_bro3|0|Copper(II) bromate|Bakır(II) bromat|Cu(BrO₃)₂||ionic|Salt|S|0|1|Crystals|58|319.348|4.70316||||||||Cu2|2|1|BrO3|1|2||3e-08|1|1F6FE5|0.8|4|Cu^2+ BrO3-*2||0|0|800|||
 i_cu2_io3|0|Copper(II) iodate|Bakır(II) iyodat|Cu(IO₃)₂||ionic|Salt|S|0|0|Powder|56|413.349|5.55772||||||||Cu2|2|1|IO3|1|2||3e-08|1|2E7DE0|1||||0|0|800|||
-i_cu2_ch3coo|0|Copper(II) acetate|Bakır(II) asetat|(CH₃COO)₂Cu|Bakır(II) etanoat|ionic|Salt|S|0|1|Crystals|48|181.634|3.45122||||||acetic_acid|2|Cu2|2|1|CH3COO|1|2||3e-08|1|1F6FE5|0.8|4|Cu^2+ CH3COO-*2||0|0|800|||
+i_cu2_ch3coo|0|Copper(II) acetate|Bakır(II) asetat|(CH₃COO)₂Cu|Bakır(II) etanoat|ionic|Salt|S|0|1|Crystals|48|181.634|3.45122||||||acetic_acid|2|Cu2|2|1|CH3COO|1|2||3e-08|1|1F6FE5|0.8|4|Cu^2+ CH3COO-*2||0|0|800|||142-71-2
 i_cu2_hcoo|0|Copper(II) formate|Bakır(II) format|(HCOO)₂Cu|Bakır(II) metanoat|ionic|Salt|S|0|1|Crystals|48|153.58|3.19618||||||m_hcooh|2|Cu2|2|1|HCOO|1|2||3e-08|1|1F6FE5|0.8|4|Cu^2+ HCOO-*2||0|0|800|||
-i_cu2_o|0|Copper(II) oxide|Bakır(II) oksit|CuO|Bakır oksit|ionic|Salt|S|0|0|Powder|48|79.545|6.31||||||||Cu2|2|1|O|2|1||3e-08|1|1E1E1E|1||||0|0|800|||
-i_cu2_s|0|Copper(II) sulfide|Bakır(II) sülfür|CuS||ionic|Salt|S|0|0|Powder|48|95.606|2.66915||||||h_hs|1|Cu2|2|1|S|2|1||3e-08|1|1E1E1E|1||||0|0|800|||
-cuso4|1|Copper(II) sulfate|Bakır(II) sülfat||Göztaşı|ionic|Molecular|S|0|0|Powder|0||||||||||Cu2|2|1|SO4|2|1||3e-08|1||||||0|0||||
-i_cu2_co3|0|Copper(II) carbonate|Bakır(II) karbonat|CuCO₃||ionic|Salt|S|0|0|Powder|48|123.554|2.92322||||||h_hco3|1|Cu2|2|1|CO3|2|1||3e-08|1|3FA87A|1||||0|0|800|||
-i_cu2_c2o4|0|Copper(II) oxalate|Bakır(II) oksalat|CuC₂O₄||ionic|Salt|S|0|0|Powder|48|151.564|3.17785||||||h_hc2o4|1|Cu2|2|1|C2O4|2|1||3e-08|1|2E7DE0|1||||0|0|800|||
-i_cu2_cro4|0|Copper(II) chromate|Bakır(II) kromat|CuCrO₄||ionic|Salt|S|0|0|Powder|570|179.538|3.43216||||||||Cu2|2|1|CrO4|2|1||3e-08|1|F2D21E|1||||0|0|800|||
+i_cu2_o|0|Copper(II) oxide|Bakır(II) oksit|CuO|Bakır oksit|ionic|Salt|S|0|0|Powder|48|79.545|6.31||||||||Cu2|2|1|O|2|1||3e-08|1|1E1E1E|1||||0|0|800|||1317-38-0
+i_cu2_s|0|Copper(II) sulfide|Bakır(II) sülfür|CuS||ionic|Salt|S|0|0|Powder|48|95.606|2.66915||||||h_hs|1|Cu2|2|1|S|2|1||3e-08|1|1E1E1E|1||||0|0|800|||1317-40-4
+cuso4|1|Copper(II) sulfate|Bakır(II) sülfat||Göztaşı|ionic|Molecular|S|0|0|Powder|0||||||||||Cu2|2|1|SO4|2|1||3e-08|1||||||0|0||||7758-98-7
+i_cu2_co3|0|Copper(II) carbonate|Bakır(II) karbonat|CuCO₃||ionic|Salt|S|0|0|Powder|48|123.554|2.92322||||||h_hco3|1|Cu2|2|1|CO3|2|1||3e-08|1|3FA87A|1||||0|0|800|||1184-64-1
+i_cu2_c2o4|0|Copper(II) oxalate|Bakır(II) oksalat|CuC₂O₄||ionic|Salt|S|0|0|Powder|48|151.564|3.17785||||||h_hc2o4|1|Cu2|2|1|C2O4|2|1||3e-08|1|2E7DE0|1||||0|0|800|||814-91-5
+i_cu2_cro4|0|Copper(II) chromate|Bakır(II) kromat|CuCrO₄||ionic|Salt|S|0|0|Powder|570|179.538|3.43216||||||||Cu2|2|1|CrO4|2|1||3e-08|1|F2D21E|1||||0|0|800|||13548-42-0
 i_cu2_po4|0|Copper(II) phosphate|Bakır(II) fosfat|Cu₃(PO₄)₂||ionic|Salt|S|0|0|Powder|48|380.578|5.2598||||||h_hpo4|2|Cu2|2|3|PO4|3|2||3e-08|3|4A9AD8|1||||0|0|800|||
 i_cu2_fecn6_4|0|Copper(II) hexacyanoferrate(II)|Bakır(II) hekzasiyanoferrat(II)|Cu₂[Fe(CN)₆]|Bakır(II) ferrosiyanür|ionic|Salt|S|0|0|Powder|48|339.045|4.88223||||||||Cu2|2|2|FeCN6_4|4|1||3e-08|2|7A3A1A|1||||0|0|800|||
-i_fe3_f|0|Iron(III) fluoride|Demir(III) florür|FeF₃||ionic|Salt|S|0|0|Powder|18|112.84|2.82582||||||m_hf|3|Fe3|3|1|F|1|3||0.0063|1|B5651D|1||||0|0|800|||
-fecl3|1|Iron(III) chloride|Demir(III) klorür|||ionic|Molecular|S|0|0|Powder|0||||||||||Fe3|3|1|Cl|1|3||0.0063|1||||||0|0||||
+i_fe3_f|0|Iron(III) fluoride|Demir(III) florür|FeF₃||ionic|Salt|S|0|0|Powder|18|112.84|2.82582||||||m_hf|3|Fe3|3|1|F|1|3||0.0063|1|B5651D|1||||0|0|800|||7783-50-8
+fecl3|1|Iron(III) chloride|Demir(III) klorür|||ionic|Molecular|S|0|0|Powder|0||||||||||Fe3|3|1|Cl|1|3||0.0063|1||||||0|0||||7705-08-0
 i_fe3_br|0|Iron(III) bromide|Demir(III) bromür|FeBr₃||ionic|Salt|S|0|1|Crystals|16|295.557|4.48688||||||||Fe3|3|1|Br|1|3||0.0063|1|D9901A|0.8|3|Fe^3+ Br-*3||0|0|800|||
-fe_oh_3|1|Iron(III) hydroxide|Demir(III) hidroksit|||ionic|Molecular|S|0|0|Powder|0||||||||||Fe3|3|1|OH|1|3||0.0063|1||||||0|0||||
+fe_oh_3|1|Iron(III) hydroxide|Demir(III) hidroksit|||ionic|Molecular|S|0|0|Powder|0||||||||||Fe3|3|1|OH|1|3||0.0063|1||||||0|0||||1309-33-7
 i_fe3_no3|0|Iron(III) nitrate|Demir(III) nitrat|Fe(NO₃)₃||ionic|Salt|S|0|1|Crystals|24|241.857|3.9987||||||||Fe3|3|1|NO3|1|3||0.0063|1|D9901A|0.8|3|Fe^3+ NO3-*3||0|0|800|||
 i_fe3_scn|0|Iron(III) thiocyanate|Demir(III) tiyosiyanat|Fe(SCN)₃||ionic|Salt|S|0|1|Crystals|16|230.079|3.89163||||||||Fe3|3|1|SCN|1|3||0.0063|1|8B0A0A|0.8|150|Fe^3+ SCN-*3||0|1|800|||
 i_fe3_clo4|0|Iron(III) perchlorate|Demir(III) perklorat|Fe(ClO₄)₃||ionic|Salt|S|0|1|Crystals|24|354.183|5.01985||||||||Fe3|3|1|ClO4|1|3||0.0063|1|D9901A|0.8|3|Fe^3+ ClO4-*3||0|0|800|||
 i_fe3_ch3coo|0|Iron(III) acetate|Demir(III) asetat|(CH₃COO)₃Fe|Demir(III) etanoat|ionic|Salt|S|0|1|Crystals|16|232.977|3.91797||||||acetic_acid|3|Fe3|3|1|CH3COO|1|3||0.0063|1|D9901A|0.8|3|Fe^3+ CH3COO-*3||0|0|800|||
-i_fe3_o|0|Iron(III) oxide|Demir(III) oksit|Fe₂O₃|Pas;Hematit|ionic|Salt|S|0|0|Powder|16|159.687|5.24||||||||Fe3|3|2|O|2|3||0.0063|2|8A2F1A|1||||0|0|800|||
-i_fe3_so4|0|Iron(III) sulfate|Demir(III) sülfat|Fe₂(SO₄)₃||ionic|Salt|S|0|1|Crystals|16|399.858|5.43507||||||||Fe3|3|2|SO4|2|3||0.0063|2|D9901A|0.8|3|Fe^3+*2 SO4^2-*3||0|0|800|||
+i_fe3_o|0|Iron(III) oxide|Demir(III) oksit|Fe₂O₃|Pas;Hematit|ionic|Salt|S|0|0|Powder|16|159.687|5.24||||||||Fe3|3|2|O|2|3||0.0063|2|8A2F1A|1||||0|0|800|||1309-37-1
+i_fe3_so4|0|Iron(III) sulfate|Demir(III) sülfat|Fe₂(SO₄)₃||ionic|Salt|S|0|1|Crystals|16|399.858|5.43507||||||||Fe3|3|2|SO4|2|3||0.0063|2|D9901A|0.8|3|Fe^3+*2 SO4^2-*3||0|0|800|||10028-22-5
 i_fe3_c2o4|0|Iron(III) oxalate|Demir(III) oksalat|Fe₂(C₂O₄)₃||ionic|Salt|S|0|1|Crystals|16|375.744|5.21585||||||h_hc2o4|3|Fe3|3|2|C2O4|2|3||0.0063|2|D9901A|0.8|3|Fe^3+*2 C2O4^2-*3||0|0|800|||
-i_fe3_po4|0|Iron(III) phosphate|Demir(III) fosfat|FePO₄||ionic|Salt|S|0|0|Powder|16|150.815|3.17104||||||h_hpo4|1|Fe3|3|1|PO4|3|1||0.0063|1|E8D8A0|1||||0|0|800|||
-i_fe3_c6h5o7|0|Iron(III) citrate|Demir(III) sitrat|FeC₆H₅O₇||ionic|Salt|S|0|1|Crystals|16|244.944|4.02676||||||m_c6h8o7|1|Fe3|3|1|C6H5O7|3|1||0.0063|1|D9901A|0.8|3|Fe^3+ C6H5O7^3-||0|0|800|||
-i_fe3_fecn6_4|0|Iron(III) hexacyanoferrate(II)|Demir(III) hekzasiyanoferrat(II)|Fe₄[Fe(CN)₆]₃|Prusya mavisi;Berlin mavisi;Demir(III) ferrosiyanür|ionic|Salt|S|0|0|Powder|16|859.239|7.5||||||||Fe3|3|4|FeCN6_4|4|3||0.0063|4|1A3A9A|1||||0|0|800|||
+i_fe3_po4|0|Iron(III) phosphate|Demir(III) fosfat|FePO₄||ionic|Salt|S|0|0|Powder|16|150.815|3.17104||||||h_hpo4|1|Fe3|3|1|PO4|3|1||0.0063|1|E8D8A0|1||||0|0|800|||10045-86-0
+i_fe3_c6h5o7|0|Iron(III) citrate|Demir(III) sitrat|FeC₆H₅O₇||ionic|Salt|S|0|1|Crystals|16|244.944|4.02676||||||m_c6h8o7|1|Fe3|3|1|C6H5O7|3|1||0.0063|1|D9901A|0.8|3|Fe^3+ C6H5O7^3-||0|0|800|||3522-50-7
+i_fe3_fecn6_4|0|Iron(III) hexacyanoferrate(II)|Demir(III) hekzasiyanoferrat(II)|Fe₄[Fe(CN)₆]₃|Prusya mavisi;Berlin mavisi;Demir(III) ferrosiyanür|ionic|Salt|S|0|0|Powder|16|859.239|7.5||||||||Fe3|3|4|FeCN6_4|4|3||0.0063|4|1A3A9A|1||||0|0|800|||14038-43-8
 i_fe3_aso4|0|Iron(III) arsenate|Demir(III) arsenat|FeAsO₄||ionic|Salt|S|0|0|Powder|562|194.763|3.57057||||||||Fe3|3|1|AsO4|3|1||0.0063|1|B5651D|1||||0|0|800|||
-i_al_f|0|Aluminium fluoride|Alüminyum florür|AlF₃||ionic|Salt|S|0|0|Powder|18|83.9767|2.56342||||||m_hf|3|Al|3|1|F|1|3||1.4e-05|1|F2F2F2|1||||0|0|800|||
-i_al_cl|0|Aluminium chloride|Alüminyum klorür|AlCl₃||ionic|Salt|S|0|1|Crystals|16|133.332|3.0121||||||||Al|3|1|Cl|1|3||1.4e-05|1|F2F2F2|1||Al^3+ Cl-*3||0|0|800|||
-i_al_br|0|Aluminium bromide|Alüminyum bromür|AlBr₃||ionic|Salt|S|0|1|Crystals|16|266.694|4.22449||||||||Al|3|1|Br|1|3||1.4e-05|1|F2F2F2|1||Al^3+ Br-*3||0|0|800|||
-i_al_i|0|Aluminium iodide|Alüminyum iyodür|AlI₃||ionic|Salt|S|0|1|Crystals|16|407.695|5.50632||||||||Al|3|1|I|1|3||1.4e-05|1|F2F2F2|1||Al^3+ I-*3||0|0|800|||
+i_al_f|0|Aluminium fluoride|Alüminyum florür|AlF₃||ionic|Salt|S|0|0|Powder|18|83.9767|2.56342||||||m_hf|3|Al|3|1|F|1|3||1.4e-05|1|F2F2F2|1||||0|0|800|||13595-82-9
+i_al_cl|0|Aluminium chloride|Alüminyum klorür|AlCl₃||ionic|Salt|S|0|1|Crystals|16|133.332|3.0121||||||||Al|3|1|Cl|1|3||1.4e-05|1|F2F2F2|1||Al^3+ Cl-*3||0|0|800|||7446-70-0
+i_al_br|0|Aluminium bromide|Alüminyum bromür|AlBr₃||ionic|Salt|S|0|1|Crystals|16|266.694|4.22449||||||||Al|3|1|Br|1|3||1.4e-05|1|F2F2F2|1||Al^3+ Br-*3||0|0|800|||7727-15-3
+i_al_i|0|Aluminium iodide|Alüminyum iyodür|AlI₃||ionic|Salt|S|0|1|Crystals|16|407.695|5.50632||||||||Al|3|1|I|1|3||1.4e-05|1|F2F2F2|1||Al^3+ I-*3||0|0|800|||7784-23-8
 i_al_oh|0|Aluminium hydroxide|Alüminyum hidroksit|Al(OH)₃||ionic|Salt|S|0|0|Powder|16|78.0025|2.50911||||||||Al|3|1|OH|1|3||1.4e-05|1|F2F2F2|1||||0|0|800|||
 i_al_no3|0|Aluminium nitrate|Alüminyum nitrat|Al(NO₃)₃||ionic|Salt|S|0|1|Crystals|24|212.994|3.7363||||||||Al|3|1|NO3|1|3||1.4e-05|1|F2F2F2|1||Al^3+ NO3-*3||0|0|800|||
-i_al_clo4|0|Aluminium perchlorate|Alüminyum perklorat|Al(ClO₄)₃||ionic|Salt|S|0|1|Crystals|24|325.32|4.75745||||||||Al|3|1|ClO4|1|3||1.4e-05|1|F2F2F2|1||Al^3+ ClO4-*3||0|0|800|||
+i_al_clo4|0|Aluminium perchlorate|Alüminyum perklorat|Al(ClO₄)₃||ionic|Salt|S|0|1|Crystals|24|325.32|4.75745||||||||Al|3|1|ClO4|1|3||1.4e-05|1|F2F2F2|1||Al^3+ ClO4-*3||0|0|800|||14452-39-2
 i_al_ch3coo|0|Aluminium acetate|Alüminyum asetat|(CH₃COO)₃Al|Alüminyum etanoat|ionic|Salt|S|0|1|Crystals|16|204.114|3.65558||||||acetic_acid|3|Al|3|1|CH3COO|1|3||1.4e-05|1|F2F2F2|1||Al^3+ CH3COO-*3||0|0|800|||
-i_al_o|0|Aluminium oxide|Alüminyum oksit|Al₂O₃|Alümina;Korundum|ionic|Salt|S|0|0|Powder|16|101.96|3.95||||||||Al|3|2|O|2|3||1.4e-05|2|F2F2F2|1||||0|0|800|||
-i_al_so4|0|Aluminium sulfate|Alüminyum sülfat|Al₂(SO₄)₃||ionic|Salt|S|0|1|Crystals|16|342.131|2.67||||||||Al|3|2|SO4|2|3||1.4e-05|2|F2F2F2|1||Al^3+*2 SO4^2-*3||0|0|800|||
-i_al_po4|0|Aluminium phosphate|Alüminyum fosfat|AlPO₄||ionic|Salt|S|0|0|Powder|16|121.951|2.90865||||||h_hpo4|1|Al|3|1|PO4|3|1||1.4e-05|1|F2F2F2|1||||0|0|800|||
-i_al_n|0|Aluminium nitride|Alüminyum nitrür|AlN||ionic|Salt|S|0|0|Powder|80|40.9885|2.17262||||||||Al|3|1|N|3|1||1.4e-05|1|F2F2F2|1||||0|0|800|||
-i_al_c17h35coo|0|Aluminium stearate|Alüminyum stearat|(C₁₇H₃₅COO)₃Al||ionic|Salt|S|0|0|Powder|16|877.41|7.5||||||||Al|3|1|C17H35COO|1|3||1.4e-05|1|F2F2F2|1||||0|0|800|||
+i_al_o|0|Aluminium oxide|Alüminyum oksit|Al₂O₃|Alümina;Korundum|ionic|Salt|S|0|0|Powder|16|101.96|3.95||||||||Al|3|2|O|2|3||1.4e-05|2|F2F2F2|1||||0|0|800|||39377-45-2
+i_al_so4|0|Aluminium sulfate|Alüminyum sülfat|Al₂(SO₄)₃||ionic|Salt|S|0|1|Crystals|16|342.131|2.67||||||||Al|3|2|SO4|2|3||1.4e-05|2|F2F2F2|1||Al^3+*2 SO4^2-*3||0|0|800|||10124-29-5
+i_al_po4|0|Aluminium phosphate|Alüminyum fosfat|AlPO₄||ionic|Salt|S|0|0|Powder|16|121.951|2.90865||||||h_hpo4|1|Al|3|1|PO4|3|1||1.4e-05|1|F2F2F2|1||||0|0|800|||7784-30-7
+i_al_n|0|Aluminium nitride|Alüminyum nitrür|AlN||ionic|Salt|S|0|0|Powder|80|40.9885|2.17262||||||||Al|3|1|N|3|1||1.4e-05|1|F2F2F2|1||||0|0|800|||24304-00-5
+i_al_c17h35coo|0|Aluminium stearate|Alüminyum stearat|(C₁₇H₃₅COO)₃Al||ionic|Salt|S|0|0|Powder|16|877.41|7.5||||||||Al|3|1|C17H35COO|1|3||1.4e-05|1|F2F2F2|1||||0|0|800|||637-12-7
 i_cr3_f|0|Chromium(III) fluoride|Krom(III) florür|CrF₃||ionic|Salt|S|0|0|Powder|18|108.991|2.79083||||||m_hf|3|Cr3|3|1|F|1|3||0.00016|1|2F6B3F|1||||0|0|800|||
-i_cr3_cl|0|Chromium(III) chloride|Krom(III) klorür|CrCl₃||ionic|Salt|S|0|1|Crystals|16|158.346|3.23951||||||||Cr3|3|1|Cl|1|3||0.00016|1|3E8E5C|0.8|3|Cr^3+ Cl-*3||0|0|800|||
+i_cr3_cl|0|Chromium(III) chloride|Krom(III) klorür|CrCl₃||ionic|Salt|S|0|1|Crystals|16|158.346|3.23951||||||||Cr3|3|1|Cl|1|3||0.00016|1|3E8E5C|0.8|3|Cr^3+ Cl-*3||0|0|800|||10025-73-7
 i_cr3_br|0|Chromium(III) bromide|Krom(III) bromür|CrBr₃||ionic|Salt|S|0|1|Crystals|16|291.708|4.45189||||||||Cr3|3|1|Br|1|3||0.00016|1|3E8E5C|0.8|3|Cr^3+ Br-*3||0|0|800|||
-i_cr3_i|0|Chromium(III) iodide|Krom(III) iyodür|CrI₃||ionic|Salt|S|0|1|Crystals|16|432.71|5.73372||||||||Cr3|3|1|I|1|3||0.00016|1|3E8E5C|0.8|3|Cr^3+ I-*3||0|0|800|||
-i_cr3_oh|0|Chromium(III) hydroxide|Krom(III) hidroksit|Cr(OH)₃||ionic|Salt|S|0|0|Powder|16|103.017|2.73652||||||||Cr3|3|1|OH|1|3||0.00016|1|6E8B6E|1||||0|0|800|||
-i_cr3_no3|0|Chromium(III) nitrate|Krom(III) nitrat|Cr(NO₃)₃||ionic|Salt|S|0|1|Crystals|24|238.008|3.96371||||||||Cr3|3|1|NO3|1|3||0.00016|1|3E8E5C|0.8|3|Cr^3+ NO3-*3||0|0|800|||
+i_cr3_i|0|Chromium(III) iodide|Krom(III) iyodür|CrI₃||ionic|Salt|S|0|1|Crystals|16|432.71|5.73372||||||||Cr3|3|1|I|1|3||0.00016|1|3E8E5C|0.8|3|Cr^3+ I-*3||0|0|800|||13569-75-0
+i_cr3_oh|0|Chromium(III) hydroxide|Krom(III) hidroksit|Cr(OH)₃||ionic|Salt|S|0|0|Powder|16|103.017|2.73652||||||||Cr3|3|1|OH|1|3||0.00016|1|6E8B6E|1||||0|0|800|||1308-14-1
+i_cr3_no3|0|Chromium(III) nitrate|Krom(III) nitrat|Cr(NO₃)₃||ionic|Salt|S|0|1|Crystals|24|238.008|3.96371||||||||Cr3|3|1|NO3|1|3||0.00016|1|3E8E5C|0.8|3|Cr^3+ NO3-*3||0|0|800|||13548-38-4
 i_cr3_clo4|0|Chromium(III) perchlorate|Krom(III) perklorat|Cr(ClO₄)₃||ionic|Salt|S|0|1|Crystals|24|350.334|4.98486||||||||Cr3|3|1|ClO4|1|3||0.00016|1|3E8E5C|0.8|3|Cr^3+ ClO4-*3||0|0|800|||
-i_cr3_ch3coo|0|Chromium(III) acetate|Krom(III) asetat|(CH₃COO)₃Cr|Krom(III) etanoat|ionic|Salt|S|0|1|Crystals|16|229.128|3.88298||||||acetic_acid|3|Cr3|3|1|CH3COO|1|3||0.00016|1|3E8E5C|0.8|3|Cr^3+ CH3COO-*3||0|0|800|||
-i_cr3_o|0|Chromium(III) oxide|Krom(III) oksit|Cr₂O₃||ionic|Salt|S|0|0|Powder|16|151.989|5.22||||||||Cr3|3|2|O|2|3||0.00016|2|2F6B3F|1||||0|0|800|||
-i_cr3_s|0|Chromium(III) sulfide|Krom(III) sülfür|Cr₂S₃||ionic|Salt|S|0|0|Powder|48|200.172|3.61975||||||h_hs|3|Cr3|3|2|S|2|3||0.00016|2|1E1E1E|1||||0|0|800|||
-i_cr3_so4|0|Chromium(III) sulfate|Krom(III) sülfat|Cr₂(SO₄)₃||ionic|Salt|S|0|1|Crystals|16|392.16|5.36509||||||||Cr3|3|2|SO4|2|3||0.00016|2|3E8E5C|0.8|3|Cr^3+*2 SO4^2-*3||0|0|800|||
+i_cr3_ch3coo|0|Chromium(III) acetate|Krom(III) asetat|(CH₃COO)₃Cr|Krom(III) etanoat|ionic|Salt|S|0|1|Crystals|16|229.128|3.88298||||||acetic_acid|3|Cr3|3|1|CH3COO|1|3||0.00016|1|3E8E5C|0.8|3|Cr^3+ CH3COO-*3||0|0|800|||1066-30-4
+i_cr3_o|0|Chromium(III) oxide|Krom(III) oksit|Cr₂O₃||ionic|Salt|S|0|0|Powder|16|151.989|5.22||||||||Cr3|3|2|O|2|3||0.00016|2|2F6B3F|1||||0|0|800|||1308-38-9
+i_cr3_s|0|Chromium(III) sulfide|Krom(III) sülfür|Cr₂S₃||ionic|Salt|S|0|0|Powder|48|200.172|3.61975||||||h_hs|3|Cr3|3|2|S|2|3||0.00016|2|1E1E1E|1||||0|0|800|||12018-22-3
+i_cr3_so4|0|Chromium(III) sulfate|Krom(III) sülfat|Cr₂(SO₄)₃||ionic|Salt|S|0|1|Crystals|16|392.16|5.36509||||||||Cr3|3|2|SO4|2|3||0.00016|2|3E8E5C|0.8|3|Cr^3+*2 SO4^2-*3||0|0|800|||10101-53-8
 i_cr3_po4|0|Chromium(III) phosphate|Krom(III) fosfat|CrPO₄||ionic|Salt|S|0|0|Powder|16|146.966|3.13605||||||h_hpo4|1|Cr3|3|1|PO4|3|1||0.00016|1|F2F2F2|1||||0|0|800|||
-i_bi3_f|0|Bismuth(III) fluoride|Bizmut(III) florür|BiF₃||ionic|Salt|S|0|0|Powder|18|265.976|4.21796||||||m_hf|3|Bi3|3|1|F|1|3||0.01|1|F2F2F2|1||||0|0|800|||
-i_bi3_cl|0|Bismuth(III) chloride|Bizmut(III) klorür|BiCl₃||ionic|Salt|S|0|1|Crystals|16|315.33|4.66664||||||||Bi3|3|1|Cl|1|3||0.01|1|F2F2F2|1||Bi^3+ Cl-*3||0|0|800|||
-i_bi3_br|0|Bismuth(III) bromide|Bizmut(III) bromür|BiBr₃||ionic|Salt|S|0|1|Crystals|16|448.692|5.87902||||||||Bi3|3|1|Br|1|3||0.01|1|F2F2F2|1||Bi^3+ Br-*3||0|0|800|||
-i_bi3_i|0|Bismuth(III) iodide|Bizmut(III) iyodür|BiI₃||ionic|Salt|S|0|0|Powder|16|589.694|7.16085||||||||Bi3|3|1|I|1|3||0.01|1|3A2A2A|1||||0|0|800|||
+i_bi3_f|0|Bismuth(III) fluoride|Bizmut(III) florür|BiF₃||ionic|Salt|S|0|0|Powder|18|265.976|4.21796||||||m_hf|3|Bi3|3|1|F|1|3||0.01|1|F2F2F2|1||||0|0|800|||7787-61-3
+i_bi3_cl|0|Bismuth(III) chloride|Bizmut(III) klorür|BiCl₃||ionic|Salt|S|0|1|Crystals|16|315.33|4.66664||||||||Bi3|3|1|Cl|1|3||0.01|1|F2F2F2|1||Bi^3+ Cl-*3||0|0|800|||7787-60-2
+i_bi3_br|0|Bismuth(III) bromide|Bizmut(III) bromür|BiBr₃||ionic|Salt|S|0|1|Crystals|16|448.692|5.87902||||||||Bi3|3|1|Br|1|3||0.01|1|F2F2F2|1||Bi^3+ Br-*3||0|0|800|||7787-58-8
+i_bi3_i|0|Bismuth(III) iodide|Bizmut(III) iyodür|BiI₃||ionic|Salt|S|0|0|Powder|16|589.694|7.16085||||||||Bi3|3|1|I|1|3||0.01|1|3A2A2A|1||||0|0|800|||7787-64-6
 i_bi3_oh|0|Bismuth(III) hydroxide|Bizmut(III) hidroksit|Bi(OH)₃||ionic|Salt|S|0|0|Powder|16|260.001|4.16365||||||||Bi3|3|1|OH|1|3||0.01|1|F2F2F2|1||||0|0|800|||
 i_bi3_no3|0|Bismuth(III) nitrate|Bizmut(III) nitrat|Bi(NO₃)₃||ionic|Salt|S|0|1|Crystals|24|394.992|5.39084||||||||Bi3|3|1|NO3|1|3||0.01|1|F2F2F2|1||Bi^3+ NO3-*3||0|0|800|||
 i_bi3_o|0|Bismuth(III) oxide|Bizmut(III) oksit|Bi₂O₃||ionic|Salt|S|0|0|Powder|16|465.958|8.9||||||||Bi3|3|2|O|2|3||0.01|2|F2DA6A|1||||0|0|800|||
 i_bi3_s|0|Bismuth(III) sulfide|Bizmut(III) sülfür|Bi₂S₃||ionic|Salt|S|0|0|Powder|48|514.141|6.47401||||||h_hs|3|Bi3|3|2|S|2|3||0.01|2|3A2A1E|1||||0|0|800|||
-i_bi3_po4|0|Bismuth(III) phosphate|Bizmut(III) fosfat|BiPO₄||ionic|Salt|S|0|0|Powder|16|303.95|4.56318||||||h_hpo4|1|Bi3|3|1|PO4|3|1||0.01|1|F2F2F2|1||||0|0|800|||
+i_bi3_po4|0|Bismuth(III) phosphate|Bizmut(III) fosfat|BiPO₄||ionic|Salt|S|0|0|Powder|16|303.95|4.56318||||||h_hpo4|1|Bi3|3|1|PO4|3|1||0.01|1|F2F2F2|1||||0|0|800|||10049-01-1
 i_sn4_f|0|Tin(IV) fluoride|Kalay(IV) florür|SnF₄||ionic|Salt|S|0|1|Crystals|3|194.704|3.57003||||||m_hf|4|Sn4|4|1|F|1|4||0.01|1|F2F2F2|1||Sn^4+ F-*4||0|0|800|||
-i_sn4_cl|0|Tin(IV) chloride|Kalay(IV) klorür|SnCl₄||ionic|Salt|S|0|1|Crystals|1|260.51|4.16827||||||||Sn4|4|1|Cl|1|4||0.01|1|F2F2F2|1||Sn^4+ Cl-*4||0|0|800|||
-i_sn4_br|0|Tin(IV) bromide|Kalay(IV) bromür|SnBr₄||ionic|Salt|S|0|1|Crystals|1|438.326|5.78478||||||||Sn4|4|1|Br|1|4||0.01|1|F2F2F2|1||Sn^4+ Br-*4||0|0|800|||
-i_sn4_i|0|Tin(IV) iodide|Kalay(IV) iyodür|SnI₄||ionic|Salt|S|0|1|Crystals|1|626.328|7.49389||||||||Sn4|4|1|I|1|4||0.01|1|F2F2F2|1||Sn^4+ I-*4||0|0|800|||
-i_sn4_o|0|Tin(IV) oxide|Kalay(IV) oksit|SnO₂||ionic|Salt|S|0|0|Powder|1|150.708|6.95||||||||Sn4|4|1|O|2|2||0.01|1|F2F2F2|1||||0|0|800|||
-i_sn4_s|0|Tin(IV) sulfide|Kalay(IV) sülfür|SnS₂||ionic|Salt|S|0|0|Powder|33|182.83|3.46209||||||h_hs|2|Sn4|4|1|S|2|2||0.01|1|D9B53A|1||||0|0|800|||
+i_sn4_cl|0|Tin(IV) chloride|Kalay(IV) klorür|SnCl₄||ionic|Salt|S|0|1|Crystals|1|260.51|4.16827||||||||Sn4|4|1|Cl|1|4||0.01|1|F2F2F2|1||Sn^4+ Cl-*4||0|0|800|||7646-78-8
+i_sn4_br|0|Tin(IV) bromide|Kalay(IV) bromür|SnBr₄||ionic|Salt|S|0|1|Crystals|1|438.326|5.78478||||||||Sn4|4|1|Br|1|4||0.01|1|F2F2F2|1||Sn^4+ Br-*4||0|0|800|||7789-67-5
+i_sn4_i|0|Tin(IV) iodide|Kalay(IV) iyodür|SnI₄||ionic|Salt|S|0|1|Crystals|1|626.328|7.49389||||||||Sn4|4|1|I|1|4||0.01|1|F2F2F2|1||Sn^4+ I-*4||0|0|800|||7790-47-8
+i_sn4_o|0|Tin(IV) oxide|Kalay(IV) oksit|SnO₂||ionic|Salt|S|0|0|Powder|1|150.708|6.95||||||||Sn4|4|1|O|2|2||0.01|1|F2F2F2|1||||0|0|800|||18282-10-5
+i_sn4_s|0|Tin(IV) sulfide|Kalay(IV) sülfür|SnS₂||ionic|Salt|S|0|0|Powder|33|182.83|3.46209||||||h_hs|2|Sn4|4|1|S|2|2||0.01|1|D9B53A|1||||0|0|800|||1315-01-1
 i_sn4_so4|0|Tin(IV) sulfate|Kalay(IV) sülfat|Sn(SO₄)₂||ionic|Salt|S|0|1|Crystals|1|310.822|4.62565||||||||Sn4|4|1|SO4|2|2||0.01|1|F2F2F2|1||Sn^4+ SO4^2-*2||0|0|800|||
-i_mn4_o|0|Manganese(IV) oxide|Mangan(IV) oksit|MnO₂|Mangan dioksit;Pirolüzit|ionic|Salt|S|0|0|Powder|0|86.936|2.59033||||||||Mn4|4|1|O|2|2|||2|1E1E1E|1||||0|0|800|||
-i_pb4_o|0|Lead(IV) oxide|Kurşun(IV) oksit|PbO₂||ionic|Salt|S|0|0|Powder|0|239.198|3.97453||||||||Pb4|4|1|O|2|2|||2|4A2A1E|1||||0|0|800|||
-i_cu2_so4_5h2o|0|Copper(II) sulfate pentahydrate|Bakır(II) sülfat pentahidrat|CuSO₄·5H₂O|Göztaşı;Mavi vitriol|ionic|Salt|S|0|1|Crystals|48|249.677|1.9|||||||1|Cu2|2|1|SO4|2|1||3e-08|1|1F6FE5|1|4|Cu^2+ SO4^2-||0|0|1200|||
-i_mg_so4_7h2o|0|Magnesium sulfate heptahydrate|Magnezyum sülfat heptahidrat|MgSO₄·7H₂O|İngiliz tuzu;Epsom tuzu|ionic|Salt|S|0|1|Crystals|0|246.466|1.9|||||||1|Mg|2|1|SO4|2|1|||1|F2F2F2|1||Mg^2+ SO4^2-||0|0|1200|||
-i_na_so4_10h2o|0|Sodium sulfate decahydrate|Sodyum sülfat dekahidrat|Na₂SO₄·10H₂O|Glauber tuzu|ionic|Salt|S|0|1|Crystals|0|322.186|1.9|||||||1|Na|1|2|SO4|2|1|||2|F2F2F2|1||Na+*2 SO4^2-||0|0|1200|||
-i_na_co3_10h2o|0|Sodium carbonate decahydrate|Sodyum karbonat dekahidrat|Na₂CO₃·10H₂O|Çamaşır sodası (kristal)|ionic|Salt|S|0|1|Crystals|0|286.138|1.9||||||h_hco3|1|Na|1|2|CO3|2|1|||2|F2F2F2|1||Na+*2 CO3^2-||0|0|1200|||
-i_ca_so4_2h2o|0|Calcium sulfate dihydrate|Kalsiyum sülfat dihidrat|CaSO₄·2H₂O|Alçı taşı;Jips|ionic|Salt|S|0|0|Crystals|0|172.164|1.9|||||||1|Ca|2|1|SO4|2|1|||1|F2F2EE|1||||0|0|1200|||
-i_fe2_so4_7h2o|0|Iron(II) sulfate heptahydrate|Demir(II) sülfat heptahidrat|FeSO₄·7H₂O|Yeşil vitriol;Karaboya|ionic|Salt|S|0|1|Crystals|16|278.006|1.9|||||||1|Fe2|2|1|SO4|2|1||3e-10|1|9ED39A|1|1.2|Fe^2+ SO4^2-||0|0|1200|||
-i_zn_so4_7h2o|0|Zinc sulfate heptahydrate|Çinko sülfat heptahidrat|ZnSO₄·7H₂O|Beyaz vitriol|ionic|Salt|S|0|1|Crystals|32|287.541|1.9|||||||1|Zn|2|1|SO4|2|1||2.5e-10|1|F2F2F2|1||Zn^2+ SO4^2-||0|0|1200|||
+i_mn4_o|0|Manganese(IV) oxide|Mangan(IV) oksit|MnO₂|Mangan dioksit;Pirolüzit|ionic|Salt|S|0|0|Powder|0|86.936|2.59033||||||||Mn4|4|1|O|2|2|||2|1E1E1E|1||||0|0|800|||1313-13-9
+i_pb4_o|0|Lead(IV) oxide|Kurşun(IV) oksit|PbO₂||ionic|Salt|S|0|0|Powder|0|239.198|3.97453||||||||Pb4|4|1|O|2|2|||2|4A2A1E|1||||0|0|800|||1309-60-0
+i_cu2_so4_5h2o|0|Copper(II) sulfate pentahydrate|Bakır(II) sülfat pentahidrat|CuSO₄·5H₂O|Göztaşı;Mavi vitriol|ionic|Salt|S|0|1|Crystals|48|249.677|1.9|||||||1|Cu2|2|1|SO4|2|1||3e-08|1|1F6FE5|1|4|Cu^2+ SO4^2-||0|0|1200|||7758-99-8
+i_mg_so4_7h2o|0|Magnesium sulfate heptahydrate|Magnezyum sülfat heptahidrat|MgSO₄·7H₂O|İngiliz tuzu;Epsom tuzu|ionic|Salt|S|0|1|Crystals|0|246.466|1.9|||||||1|Mg|2|1|SO4|2|1|||1|F2F2F2|1||Mg^2+ SO4^2-||0|0|1200|||10034-99-8
+i_na_so4_10h2o|0|Sodium sulfate decahydrate|Sodyum sülfat dekahidrat|Na₂SO₄·10H₂O|Glauber tuzu|ionic|Salt|S|0|1|Crystals|0|322.186|1.9|||||||1|Na|1|2|SO4|2|1|||2|F2F2F2|1||Na+*2 SO4^2-||0|0|1200|||7727-73-3
+i_na_co3_10h2o|0|Sodium carbonate decahydrate|Sodyum karbonat dekahidrat|Na₂CO₃·10H₂O|Çamaşır sodası (kristal)|ionic|Salt|S|0|1|Crystals|0|286.138|1.9||||||h_hco3|1|Na|1|2|CO3|2|1|||2|F2F2F2|1||Na+*2 CO3^2-||0|0|1200|||6132-02-1
+i_ca_so4_2h2o|0|Calcium sulfate dihydrate|Kalsiyum sülfat dihidrat|CaSO₄·2H₂O|Alçı taşı;Jips|ionic|Salt|S|0|0|Crystals|0|172.164|1.9|||||||1|Ca|2|1|SO4|2|1|||1|F2F2EE|1||||0|0|1200|||10101-41-4
+i_fe2_so4_7h2o|0|Iron(II) sulfate heptahydrate|Demir(II) sülfat heptahidrat|FeSO₄·7H₂O|Yeşil vitriol;Karaboya|ionic|Salt|S|0|1|Crystals|16|278.006|1.9|||||||1|Fe2|2|1|SO4|2|1||3e-10|1|9ED39A|1|1.2|Fe^2+ SO4^2-||0|0|1200|||7782-63-0
+i_zn_so4_7h2o|0|Zinc sulfate heptahydrate|Çinko sülfat heptahidrat|ZnSO₄·7H₂O|Beyaz vitriol|ionic|Salt|S|0|1|Crystals|32|287.541|1.9|||||||1|Zn|2|1|SO4|2|1||2.5e-10|1|F2F2F2|1||Zn^2+ SO4^2-||0|0|1200|||7446-20-0
 i_co2_cl_6h2o|0|Cobalt(II) chloride hexahydrate|Kobalt(II) klorür hekzahidrat|CoCl₂·6H₂O|Nem göstergesi|ionic|Salt|S|0|1|Crystals|560|237.923|1.9|||||||2|Co2|2|1|Cl|1|2||1.3e-09|1|C8406A|1|2.5|Co^2+ Cl-*2||0|0|1200|||
-i_ni2_so4_6h2o|0|Nickel(II) sulfate hexahydrate|Nikel(II) sülfat hekzahidrat|NiSO₄·6H₂O||ionic|Salt|S|0|1|Crystals|560|262.839|1.9|||||||1|Ni2|2|1|SO4|2|1||2.5e-11|1|3FBF5F|1|2.5|Ni^2+ SO4^2-||0|0|1200|||
-i_na_b4o7_10h2o|0|Sodium tetraborate decahydrate|Sodyum tetraborat dekahidrat|Na₂B₄O₇·10H₂O|Boraks|ionic|Salt|S|0|1|Crystals|512|381.363|1.9||||||m_h3bo3|1|Na|1|2|B4O7|2|1|||2|F2F2F2|1||Na+*2 B4O7^2-||0|0|1200|||
-i_na_s2o3_5h2o|0|Sodium thiosulfate pentahydrate|Sodyum tiyosülfat pentahidrat|Na₂S₂O₃·5H₂O|Hipo|ionic|Salt|S|0|1|Crystals|0|248.172|1.9|||||||1|Na|1|2|S2O3|2|1|||2|F2F2F2|1||Na+*2 S2O3^2-||0|0|1200|||
+i_ni2_so4_6h2o|0|Nickel(II) sulfate hexahydrate|Nikel(II) sülfat hekzahidrat|NiSO₄·6H₂O||ionic|Salt|S|0|1|Crystals|560|262.839|1.9|||||||1|Ni2|2|1|SO4|2|1||2.5e-11|1|3FBF5F|1|2.5|Ni^2+ SO4^2-||0|0|1200|||10101-97-0
+i_na_b4o7_10h2o|0|Sodium tetraborate decahydrate|Sodyum tetraborat dekahidrat|Na₂B₄O₇·10H₂O|Boraks|ionic|Salt|S|0|1|Crystals|512|381.363|1.9||||||m_h3bo3|1|Na|1|2|B4O7|2|1|||2|F2F2F2|1||Na+*2 B4O7^2-||0|0|1200|||1303-96-4
+i_na_s2o3_5h2o|0|Sodium thiosulfate pentahydrate|Sodyum tiyosülfat pentahidrat|Na₂S₂O₃·5H₂O|Hipo|ionic|Salt|S|0|1|Crystals|0|248.172|1.9|||||||1|Na|1|2|S2O3|2|1|||2|F2F2F2|1||Na+*2 S2O3^2-||0|0|1200|||10102-17-7
 i_cu2_cl_2h2o|0|Copper(II) chloride dihydrate|Bakır(II) klorür dihidrat|CuCl₂·2H₂O||ionic|Salt|S|0|1|Crystals|48|170.476|1.9|||||||2|Cu2|2|1|Cl|1|2||3e-08|1|3AA58A|1|4|Cu^2+ Cl-*2||0|0|1200|||
 i_fe3_cl_6h2o|0|Iron(III) chloride hexahydrate|Demir(III) klorür hekzahidrat|FeCl₃·6H₂O||ionic|Salt|S|0|1|Crystals|16|270.285|1.9|||||||3|Fe3|3|1|Cl|1|3||0.0063|1|C88A1A|1|3|Fe^3+ Cl-*3||0|0|1200|||
 i_al_so4_18h2o|0|Aluminium sulfate octadecahydrate|Alüminyum sülfat oktadekahidrat|Al₂(SO₄)₃·18H₂O||ionic|Salt|S|0|1|Crystals|16|666.401|1.9|||||||3|Al|3|2|SO4|2|3||1.4e-05|2|F2F2F2|1||Al^3+*2 SO4^2-*3||0|0|1200|||
 i_ba_cl_2h2o|0|Barium chloride dihydrate|Baryum klorür dihidrat|BaCl₂·2H₂O||ionic|Salt|S|0|1|Crystals|18|244.257|1.9|||||||2|Ba|2|1|Cl|1|2|||1|F2F2F2|1||Ba^2+ Cl-*2||0|0|1200|||
-i_ca_cl_6h2o|0|Calcium chloride hexahydrate|Kalsiyum klorür hekzahidrat|CaCl₂·6H₂O||ionic|Salt|S|0|1|Crystals|0|219.068|1.9|||||||2|Ca|2|1|Cl|1|2|||1|F2F2F2|1||Ca^2+ Cl-*2||0|0|1200|||
+i_ca_cl_6h2o|0|Calcium chloride hexahydrate|Kalsiyum klorür hekzahidrat|CaCl₂·6H₂O||ionic|Salt|S|0|1|Crystals|0|219.068|1.9|||||||2|Ca|2|1|Cl|1|2|||1|F2F2F2|1||Ca^2+ Cl-*2||0|0|1200|||7774-34-7
 i_mg_cl_6h2o|0|Magnesium chloride hexahydrate|Magnezyum klorür hekzahidrat|MgCl₂·6H₂O||ionic|Salt|S|0|1|Crystals|0|203.295|1.9|||||||2|Mg|2|1|Cl|1|2|||1|F2F2F2|1||Mg^2+ Cl-*2||0|0|1200|||
 i_na_hpo4_12h2o|0|Disodium hydrogenphosphate dodecahydrate|Disodyum hidrojen fosfat dodekahidrat|Na₂HPO₄·12H₂O||ionic|Salt|S|0|1|Crystals|0|358.137|1.9||||||h_h2po4|1|Na|1|2|HPO4|2|1|||2|F2F2F2|1||Na+*2 HPO4^2-||0|0|1200|||
-i_pb2_ch3coo_3h2o|0|Lead(II) acetate trihydrate|Kurşun(II) asetat trihidrat|Pb(CH₃COO)₂·3H₂O|Kurşun şekeri|ionic|Salt|S|0|1|Crystals|546|379.333|1.9||||||acetic_acid|2|Pb2|2|1|CH3COO|1|2||1.5e-08|1|F2F2F2|1||Pb^2+ CH3COO-*2||0|0|1200|||
-i_na_ch3coo_3h2o|0|Sodium acetate trihydrate|Sodyum asetat trihidrat|CH₃COONa·3H₂O|Sıcak buz|ionic|Salt|S|0|1|Crystals|0|136.079|1.9||||||acetic_acid|1|Na|1|1|CH3COO|1|1|||1|F2F2F2|1||Na+ CH3COO-||0|0|1200|||
+i_pb2_ch3coo_3h2o|0|Lead(II) acetate trihydrate|Kurşun(II) asetat trihidrat|Pb(CH₃COO)₂·3H₂O|Kurşun şekeri|ionic|Salt|S|0|1|Crystals|546|379.333|1.9||||||acetic_acid|2|Pb2|2|1|CH3COO|1|2||1.5e-08|1|F2F2F2|1||Pb^2+ CH3COO-*2||0|0|1200|||6080-56-4
+i_na_ch3coo_3h2o|0|Sodium acetate trihydrate|Sodyum asetat trihidrat|CH₃COONa·3H₂O|Sıcak buz|ionic|Salt|S|0|1|Crystals|0|136.079|1.9||||||acetic_acid|1|Na|1|1|CH3COO|1|1|||1|F2F2F2|1||Na+ CH3COO-||0|0|1200|||6131-90-4
 x_fe3o4|0|Iron(II,III) oxide|Demir(II,III) oksit|Fe₃O₄|Manyetit;Magnetit|ionic|Salt|S|0|0|Powder|0|231.531|3|||||||||||||||||1E1E1E|1||||0|0|800|||
 x_pb3o4|0|Lead(II,IV) oxide|Kurşun(II,IV) oksit|Pb₃O₄|Sülüğen;Minyum|ionic|Salt|S|0|0|Powder|546|685.596|3|||||||||||||||||D9401E|1||||0|0|800|||
 x_kalso42|0|Potassium aluminium sulfate|Potasyum alüminyum sülfat|KAl(SO₄)₂|Şap;Potasyum şapı|ionic|Salt|S|0|1|Crystals|16|258.192|3|||||||||||||||||F2F2F2|1||||0|0|800|||
 x_nh42feso42|0|Ammonium iron(II) sulfate|Amonyum demir(II) sülfat|(NH₄)₂Fe(SO₄)₂|Mohr tuzu|ionic|Salt|S|0|1|Crystals|16|284.035|3|||||||||||||||||B8D8A8|1||||0|0|800|||
-x_ca5po43oh|0|Hydroxyapatite|Hidroksiapatit|Ca₅(PO₄)₃OH|Diş minesi;Kemik minerali|ionic|Salt|S|0|0|Powder|0|502.306|3|||||||||||||||||F2F0E8|1||||0|0|800|||
+x_ca5po43oh|0|Hydroxyapatite|Hidroksiapatit|Ca₅(PO₄)₃OH|Diş minesi;Kemik minerali|ionic|Salt|S|0|0|Powder|0|502.306|3|||||||||||||||||F2F0E8|1||||0|0|800|||1306-06-5
 x_ca5po43f|0|Fluorapatite|Florapatit|Ca₅(PO₄)₃F||ionic|Salt|S|0|0|Powder|0|504.298|3|||||||||||||||||F2F0E8|1||||0|0|800|||
-x_camgco32|0|Dolomite|Dolomit|CaMg(CO₃)₂|Kalsiyum magnezyum karbonat|ionic|Salt|S|0|0|Powder|0|184.399|3|||||||||||||||||EDE8DD|1||||0|0|800|||
-x_cu2oh2co3|0|Basic copper carbonate|Bakır(II) karbonat hidroksit|Cu₂(OH)₂CO₃|Malakit;Bakır pası|ionic|Salt|S|0|0|Powder|48|221.114|3|||||||||||||||||3FA87A|1||||0|0|800|||
-x_na2sif6|0|Sodium hexafluorosilicate|Sodyum hekzaflorosilikat|Na₂SiF₆||ionic|Salt|S|0|0|Powder|2|188.055|3|||||||||||||||||F2F2F2|1||||0|0|800|||
-x_naalo2|0|Sodium aluminate|Sodyum alüminat|NaAlO₂||ionic|Salt|S|0|1|Crystals|1|81.9693|3|||||||||||||||||F2F2F2|1||||0|0|800|||
-e_h|0|Hydrogen|Hidrojen|H₂|H|element|Molecular|A|1|0|Granules|260|2.016|||||||||||||||H|||D8D8D8|1|||H|0|0|500|||
-e_he|0|Helium|Helyum|He|He|element|Molecular|A|1|0|Granules|256|4.0026|||||||||||||||He|||D8D8D8|1|||He|0|0|500|||
-e_li|0|Lithium|Lityum|Li|Li|element|ReactiveMetal|S|0|0|Chunks|69|6.94|0.534||||||||||||||Li|||B8BCC4|1|||Li|0|0|500|||
-e_be|0|Beryllium|Berilyum|Be|Be|element|Metal|S|0|0|Granules|514|9.01218|1.85||||||||||||||Be|||B8BCC4|1|||Be|0|0|500|||
-e_b|0|Boron|Bor|B|B|element|Molecular|S|0|0|Granules|0|10.81|2.34||||||||||||||B|||4A3A2A|1|||B|0|0|500|||
-e_c|0|Carbon|Karbon|C|Grafit;Kömür;C|element|Molecular|S|0|0|Powder|0|12.011|2.2||||||||||||||C|||2A2A2A|1|||C|0|0|500|||
-e_n|0|Nitrogen|Azot|N₂|N|element|Molecular|A|1|0|Granules|256|28.014|||||||||||||||N|||D8D8D8|1|||N|0|0|500|||
-e_o|0|Oxygen|Oksijen|O₂|O|element|Molecular|A|1|0|Granules|264|31.998|||||||||||||||O|||D8D8D8|1|||O|0|0|500|||
-e_f|0|Fluorine|Flor|F₂|F|element|Molecular|A|1|0|Granules|267|37.9968|||||||||||||||F|||D8D8D8|1|||F|0|0|500|||
-e_ne|0|Neon|Neon|Ne|Ne|element|Molecular|A|1|0|Granules|256|20.1797|||||||||||||||Ne|||D8D8D8|1|||Ne|0|0|500|||
-sodium|1|Sodium|Sodyum||Na|element|Molecular|S|0|0|Powder|0||||||||||||||||Na||||||||0|0||||
-mg|1|Magnesium|Magnezyum||Magnezyum şerit;Mg|element|Molecular|S|0|0|Powder|0||||||||||||||||Mg||||||||0|0||||
-e_al|0|Aluminium|Alüminyum|Al|Alüminyum tozu;Alüminyum folyo;Al|element|Metal|S|0|0|Powder|4|26.9815|2.7||||||||||||||Al|||B8BCC4|1|||Al|0|0|500|||
-e_si|0|Silicon|Silisyum|Si|Si|element|Molecular|S|0|0|Chunks|0|28.085|2.3296||||||||||||||Si|||6A6E78|1|||Si|0|0|500|||
-e_p|0|Phosphorus|Fosfor|P|Kırmızı fosfor;P|element|Molecular|S|0|0|Granules|38|30.9738|1.823||||||||||||||P|||B03A2A|1|||P|0|0|500|||
-e_s|0|Sulfur|Kükürt|S|Kükürt tozu;S|element|Molecular|S|0|0|Powder|16|32.06|2.07||||||||||||||S|||F2E03A|1|||S|0|0|500|||
-e_cl|0|Chlorine|Klor|Cl₂|Cl|element|Molecular|A|1|0|Granules|298|70.9|||||||||||||||Cl|||D8D8D8|1|||Cl|0|0|500|||
-e_ar|0|Argon|Argon|Ar|Ar|element|Molecular|A|1|0|Granules|256|39.948|||||||||||||||Ar|||D8D8D8|1|||Ar|0|0|500|||
-e_k|0|Potassium|Potasyum|K|K|element|ReactiveMetal|S|0|0|Chunks|69|39.0983|0.89||||||||||||||K|||B8BCC4|1|||K|0|0|500|||
-e_ca|0|Calcium|Kalsiyum|Ca|Ca|element|Metal|S|0|0|Chunks|64|40.078|1.54||||||||||||||Ca|||D8D8D0|1|||Ca|0|0|500|||
-e_sc|0|Scandium|Skandiyum|Sc|Sc|element|Metal|S|0|0|Granules|0|44.9559|2.99||||||||||||||Sc|||B8BCC4|1|||Sc|0|0|500|||
-e_ti|0|Titanium|Titanyum|Ti|Ti|element|Metal|S|0|0|Granules|0|47.867|4.506||||||||||||||Ti|||8A8E96|1|||Ti|0|0|500|||
-e_v|0|Vanadium|Vanadyum|V|V|element|Metal|S|0|0|Granules|0|50.9415|6||||||||||||||V|||B8BCC4|1|||V|0|0|500|||
-e_cr|0|Chromium|Krom|Cr|Cr|element|Metal|S|0|0|Granules|0|51.9961|7.15||||||||||||||Cr|||B8BCC4|1|||Cr|0|0|500|||
-e_mn|0|Manganese|Mangan|Mn|Mn|element|Metal|S|0|0|Granules|0|54.938|7.3||||||||||||||Mn|||B8BCC4|1|||Mn|0|0|500|||
-fe|1|Iron|Demir||Demir tozu;Demir talaşı;Fe|element|Molecular|S|0|0|Powder|0||||||||||||||||Fe||||||||0|0||||
-e_co|0|Cobalt|Kobalt|Co|Co|element|Metal|S|0|0|Granules|528|58.9332|8.86||||||||||||||Co|||B8BCC4|1|||Co|0|0|500|||
-e_ni|0|Nickel|Nikel|Ni|Ni|element|Metal|S|0|0|Granules|528|58.6934|8.9||||||||||||||Ni|||B8BCC4|1|||Ni|0|0|500|||
-cu|1|Copper|Bakır||Bakır talaşı;Bakır tel;Cu|element|Molecular|S|0|0|Powder|0||||||||||||||||Cu||||||||0|0||||
-zn|1|Zinc|Çinko||Çinko granül;Zn|element|Molecular|S|0|0|Powder|0||||||||||||||||Zn||||||||0|0||||
-e_ga|0|Gallium|Galyum|Ga|Ga|element|Metal|S|0|0|Granules|0|69.723|5.91||||||||||||||Ga|||B8BCC4|1|||Ga|0|0|500|||
-e_ge|0|Germanium|Germanyum|Ge|Ge|element|Molecular|S|0|0|Granules|0|72.63|5.3234||||||||||||||Ge|||D8D8D8|1|||Ge|0|0|500|||
-e_as|0|Arsenic|Arsenik|As|As|element|Molecular|S|0|0|Granules|34|74.9216|5.75||||||||||||||As|||7A7A7A|1|||As|0|0|500|||
-e_se|0|Selenium|Selenyum|Se|Se|element|Molecular|S|0|0|Granules|2|78.971|4.809||||||||||||||Se|||5A2A2A|1|||Se|0|0|500|||
-e_br|0|Bromine|Brom|Br₂|Br|element|Molecular|L|0|0|Granules|35|159.808|3.1028|58.8|||||||||||||Br|||8A2A0A|0.9|||Br|0|0|500|182792||
-e_kr|0|Krypton|Kripton|Kr|Kr|element|Molecular|A|1|0|Granules|256|83.798|||||||||||||||Kr|||D8D8D8|1|||Kr|0|0|500|||
-e_rb|0|Rubidium|Rubidyum|Rb|Rb|element|ReactiveMetal|S|0|0|Chunks|69|85.4678|1.53||||||||||||||Rb|||B8BCC4|1|||Rb|0|0|500|||
-e_sr|0|Strontium|Stronsiyum|Sr|Sr|element|Metal|S|0|0|Chunks|64|87.62|2.64||||||||||||||Sr|||B8BCC4|1|||Sr|0|0|500|||
-e_y|0|Yttrium|İtriyum|Y|Y|element|Metal|S|0|0|Granules|0|88.9058|4.47||||||||||||||Y|||B8BCC4|1|||Y|0|0|500|||
-e_zr|0|Zirconium|Zirkonyum|Zr|Zr|element|Metal|S|0|0|Granules|0|91.224|6.52||||||||||||||Zr|||B8BCC4|1|||Zr|0|0|500|||
-e_nb|0|Niobium|Niyobyum|Nb|Nb|element|Metal|S|0|0|Granules|0|92.9064|8.57||||||||||||||Nb|||B8BCC4|1|||Nb|0|0|500|||
-e_mo|0|Molybdenum|Molibden|Mo|Mo|element|Metal|S|0|0|Granules|0|95.95|10.2||||||||||||||Mo|||B8BCC4|1|||Mo|0|0|500|||
-e_ru|0|Ruthenium|Rutenyum|Ru|Ru|element|Metal|S|0|0|Granules|0|101.07|12.1||||||||||||||Ru|||B8BCC4|1|||Ru|0|0|500|||
-e_rh|0|Rhodium|Rodyum|Rh|Rh|element|Metal|S|0|0|Granules|0|102.906|12.4||||||||||||||Rh|||B8BCC4|1|||Rh|0|0|500|||
-e_pd|0|Palladium|Paladyum|Pd|Pd|element|Metal|S|0|0|Granules|0|106.42|12||||||||||||||Pd|||B8BCC4|1|||Pd|0|0|500|||
-ag|1|Silver|Gümüş||Ag|element|Molecular|S|0|0|Powder|0||||||||||||||||Ag||||||||0|0||||
-e_cd|0|Cadmium|Kadmiyum|Cd|Cd|element|Metal|S|0|0|Granules|546|112.414|8.69||||||||||||||Cd|||B8BCC4|1|||Cd|0|0|500|||
-e_in|0|Indium|İndiyum|In|In|element|Metal|S|0|0|Granules|0|114.818|7.31||||||||||||||In|||B8BCC4|1|||In|0|0|500|||
-e_sn|0|Tin|Kalay|Sn|Sn|element|Metal|S|0|0|Granules|0|118.71|7.287||||||||||||||Sn|||B8BCC4|1|||Sn|0|0|500|||
-e_sb|0|Antimony|Antimon|Sb|Sb|element|Molecular|S|0|0|Granules|48|121.76|6.68||||||||||||||Sb|||D8D8D8|1|||Sb|0|0|500|||
-e_te|0|Tellurium|Tellür|Te|Te|element|Molecular|S|0|0|Granules|0|127.6|6.232||||||||||||||Te|||D8D8D8|1|||Te|0|0|500|||
-e_i|0|Iodine|İyot|I₂|I|element|Molecular|S|0|0|Crystals|48|253.809|4.933||||||||||||||I|||3A2A4A|1|||I|0|0|500|||
-e_xe|0|Xenon|Ksenon|Xe|Xe|element|Molecular|A|1|0|Granules|256|131.293|||||||||||||||Xe|||D8D8D8|1|||Xe|0|0|500|||
-e_cs|0|Caesium|Sezyum|Cs|Cs|element|ReactiveMetal|S|0|0|Chunks|69|132.905|1.873||||||||||||||Cs|||E8D8A0|1|||Cs|0|0|500|||
-e_ba|0|Barium|Baryum|Ba|Ba|element|Metal|S|0|0|Chunks|80|137.327|3.62||||||||||||||Ba|||B8BCC4|1|||Ba|0|0|500|||
-e_la|0|Lanthanum|Lantan|La|La|element|Metal|S|0|0|Granules|0|138.905|6.15||||||||||||||La|||B8BCC4|1|||La|0|0|500|||
-e_ce|0|Cerium|Seryum|Ce|Ce|element|Metal|S|0|0|Granules|0|140.116|6.77||||||||||||||Ce|||B8BCC4|1|||Ce|0|0|500|||
-e_pr|0|Praseodymium|Praseodim|Pr|Pr|element|Metal|S|0|0|Granules|0|140.908|6.773||||||||||||||Pr|||B8BCC4|1|||Pr|0|0|500|||
-e_nd|0|Neodymium|Neodim|Nd|Nd|element|Metal|S|0|0|Granules|0|144.242|7.01||||||||||||||Nd|||B8BCC4|1|||Nd|0|0|500|||
-e_sm|0|Samarium|Samaryum|Sm|Sm|element|Metal|S|0|0|Granules|0|150.36|7.52||||||||||||||Sm|||B8BCC4|1|||Sm|0|0|500|||
-e_eu|0|Europium|Evropiyum|Eu|Eu|element|Metal|S|0|0|Granules|0|151.964|5.24||||||||||||||Eu|||B8BCC4|1|||Eu|0|0|500|||
-e_gd|0|Gadolinium|Gadolinyum|Gd|Gd|element|Metal|S|0|0|Granules|0|157.25|7.9||||||||||||||Gd|||B8BCC4|1|||Gd|0|0|500|||
-e_tb|0|Terbium|Terbiyum|Tb|Tb|element|Metal|S|0|0|Granules|0|158.925|8.23||||||||||||||Tb|||B8BCC4|1|||Tb|0|0|500|||
-e_dy|0|Dysprosium|Disprosyum|Dy|Dy|element|Metal|S|0|0|Granules|0|162.5|8.55||||||||||||||Dy|||B8BCC4|1|||Dy|0|0|500|||
-e_ho|0|Holmium|Holmiyum|Ho|Ho|element|Metal|S|0|0|Granules|0|164.93|8.8||||||||||||||Ho|||B8BCC4|1|||Ho|0|0|500|||
-e_er|0|Erbium|Erbiyum|Er|Er|element|Metal|S|0|0|Granules|0|167.259|9.07||||||||||||||Er|||B8BCC4|1|||Er|0|0|500|||
-e_tm|0|Thulium|Tulyum|Tm|Tm|element|Metal|S|0|0|Granules|0|168.934|9.321||||||||||||||Tm|||B8BCC4|1|||Tm|0|0|500|||
-e_yb|0|Ytterbium|İterbiyum|Yb|Yb|element|Metal|S|0|0|Granules|0|173.045|6.9||||||||||||||Yb|||B8BCC4|1|||Yb|0|0|500|||
-e_lu|0|Lutetium|Lutesyum|Lu|Lu|element|Metal|S|0|0|Granules|0|174.967|9.84||||||||||||||Lu|||B8BCC4|1|||Lu|0|0|500|||
-e_hf|0|Hafnium|Hafniyum|Hf|Hf|element|Metal|S|0|0|Granules|0|178.49|13.3||||||||||||||Hf|||B8BCC4|1|||Hf|0|0|500|||
-e_ta|0|Tantalum|Tantal|Ta|Ta|element|Metal|S|0|0|Granules|0|180.948|16.4||||||||||||||Ta|||B8BCC4|1|||Ta|0|0|500|||
-e_w|0|Tungsten|Tungsten|W|W|element|Metal|S|0|0|Granules|0|183.84|19.3||||||||||||||W|||B8BCC4|1|||W|0|0|500|||
-e_re|0|Rhenium|Renyum|Re|Re|element|Metal|S|0|0|Granules|0|186.207|20.8||||||||||||||Re|||B8BCC4|1|||Re|0|0|500|||
-e_os|0|Osmium|Osmiyum|Os|Os|element|Metal|S|0|0|Granules|0|190.23|22.5872||||||||||||||Os|||B8BCC4|1|||Os|0|0|500|||
-e_ir|0|Iridium|İridyum|Ir|Ir|element|Metal|S|0|0|Granules|0|192.217|22.5622||||||||||||||Ir|||B8BCC4|1|||Ir|0|0|500|||
-e_pt|0|Platinum|Platin|Pt|Pt|element|Metal|S|0|0|Granules|0|195.084|21.5||||||||||||||Pt|||B8BCC4|1|||Pt|0|0|500|||
-e_au|0|Gold|Altın|Au|Au|element|Metal|S|0|0|Granules|0|196.967|19.3||||||||||||||Au|||E6B422|1|||Au|0|0|500|||
-e_hg|0|Mercury|Cıva|Hg|Civa;Hg|element|Metal|L|0|0|Granules|546|200.592|13.5336|356.619|||||||||||||Hg|||C8CCD2|0.9|||Hg|0|0|500|276281||
-e_tl|0|Thallium|Talyum|Tl|Tl|element|Metal|S|0|0|Granules|514|204.38|11.8||||||||||||||Tl|||B8BCC4|1|||Tl|0|0|500|||
-e_pb|0|Lead|Kurşun|Pb|Pb|element|Metal|S|0|0|Granules|546|207.2|11.3||||||||||||||Pb|||6E7278|1|||Pb|0|0|500|||
-e_bi|0|Bismuth|Bizmut|Bi|Bi|element|Metal|S|0|0|Chunks|0|208.98|9.79||||||||||||||Bi|||C8B8C8|1|||Bi|0|0|500|||
+x_camgco32|0|Dolomite|Dolomit|CaMg(CO₃)₂|Kalsiyum magnezyum karbonat|ionic|Salt|S|0|0|Powder|0|184.399|3|||||||||||||||||EDE8DD|1||||0|0|800|||16389-88-1
+x_cu2oh2co3|0|Basic copper carbonate|Bakır(II) karbonat hidroksit|Cu₂(OH)₂CO₃|Malakit;Bakır pası|ionic|Salt|S|0|0|Powder|48|221.114|3|||||||||||||||||3FA87A|1||||0|0|800|||12069-69-1
+x_na2sif6|0|Sodium hexafluorosilicate|Sodyum hekzaflorosilikat|Na₂SiF₆||ionic|Salt|S|0|0|Powder|2|188.055|3|||||||||||||||||F2F2F2|1||||0|0|800|||16893-85-9
+x_naalo2|0|Sodium aluminate|Sodyum alüminat|NaAlO₂||ionic|Salt|S|0|1|Crystals|1|81.9693|3|||||||||||||||||F2F2F2|1||||0|0|800|||11138-49-1
+e_h|0|Hydrogen|Hidrojen|H₂|H|element|Molecular|A|1|0|Granules|260|2.016|||||||||||||||H|||D8D8D8|1|||H|0|0|500|||1333-74-0
+e_he|0|Helium|Helyum|He|He|element|Molecular|A|1|0|Granules|256|4.0026|||||||||||||||He|||D8D8D8|1|||He|0|0|500|||7440-59-7
+e_li|0|Lithium|Lityum|Li|Li|element|ReactiveMetal|S|0|0|Chunks|69|6.94|0.534||||||||||||||Li|||B8BCC4|1|||Li|0|0|500|||7439-93-2
+e_be|0|Beryllium|Berilyum|Be|Be|element|Metal|S|0|0|Granules|514|9.01218|1.85||||||||||||||Be|||B8BCC4|1|||Be|0|0|500|||7440-41-7
+e_b|0|Boron|Bor|B|B|element|Molecular|S|0|0|Granules|0|10.81|2.34||||||||||||||B|||4A3A2A|1|||B|0|0|500|||7440-42-8
+e_c|0|Carbon|Karbon|C|Grafit;Kömür;C|element|Molecular|S|0|0|Powder|0|12.011|2.2||||||||||||||C|||2A2A2A|1|||C|0|0|500|||7440-44-0
+e_n|0|Nitrogen|Azot|N₂|N|element|Molecular|A|1|0|Granules|256|28.014|||||||||||||||N|||D8D8D8|1|||N|0|0|500|||7727-37-9
+e_o|0|Oxygen|Oksijen|O₂|O|element|Molecular|A|1|0|Granules|264|31.998|||||||||||||||O|||D8D8D8|1|||O|0|0|500|||7782-44-7
+e_f|0|Fluorine|Flor|F₂|F|element|Molecular|A|1|0|Granules|267|37.9968|||||||||||||||F|||D8D8D8|1|||F|0|0|500|||7782-41-4
+e_ne|0|Neon|Neon|Ne|Ne|element|Molecular|A|1|0|Granules|256|20.1797|||||||||||||||Ne|||D8D8D8|1|||Ne|0|0|500|||7440-01-9
+sodium|1|Sodium|Sodyum||Na|element|Molecular|S|0|0|Powder|0||||||||||||||||Na||||||||0|0||||7440-23-5
+mg|1|Magnesium|Magnezyum||Magnezyum şerit;Mg|element|Molecular|S|0|0|Powder|0||||||||||||||||Mg||||||||0|0||||7439-95-4
+e_al|0|Aluminium|Alüminyum|Al|Alüminyum tozu;Alüminyum folyo;Al|element|Metal|S|0|0|Powder|4|26.9815|2.7||||||||||||||Al|||B8BCC4|1|||Al|0|0|500|||7429-90-5
+e_si|0|Silicon|Silisyum|Si|Si|element|Molecular|S|0|0|Chunks|0|28.085|2.3296||||||||||||||Si|||6A6E78|1|||Si|0|0|500|||7440-21-3
+e_p|0|Phosphorus|Fosfor|P|Kırmızı fosfor;P|element|Molecular|S|0|0|Granules|38|30.9738|1.823||||||||||||||P|||B03A2A|1|||P|0|0|500|||7723-14-0
+e_s|0|Sulfur|Kükürt|S|Kükürt tozu;S|element|Molecular|S|0|0|Powder|16|32.06|2.07||||||||||||||S|||F2E03A|1|||S|0|0|500|||7704-34-9
+e_cl|0|Chlorine|Klor|Cl₂|Cl|element|Molecular|A|1|0|Granules|298|70.9|||||||||||||||Cl|||D8D8D8|1|||Cl|0|0|500|||7782-50-5
+e_ar|0|Argon|Argon|Ar|Ar|element|Molecular|A|1|0|Granules|256|39.948|||||||||||||||Ar|||D8D8D8|1|||Ar|0|0|500|||7440-37-1
+e_k|0|Potassium|Potasyum|K|K|element|ReactiveMetal|S|0|0|Chunks|69|39.0983|0.89||||||||||||||K|||B8BCC4|1|||K|0|0|500|||7440-09-7
+e_ca|0|Calcium|Kalsiyum|Ca|Ca|element|Metal|S|0|0|Chunks|64|40.078|1.54||||||||||||||Ca|||D8D8D0|1|||Ca|0|0|500|||7440-70-2
+e_sc|0|Scandium|Skandiyum|Sc|Sc|element|Metal|S|0|0|Granules|0|44.9559|2.99||||||||||||||Sc|||B8BCC4|1|||Sc|0|0|500|||7440-20-2
+e_ti|0|Titanium|Titanyum|Ti|Ti|element|Metal|S|0|0|Granules|0|47.867|4.506||||||||||||||Ti|||8A8E96|1|||Ti|0|0|500|||7440-32-6
+e_v|0|Vanadium|Vanadyum|V|V|element|Metal|S|0|0|Granules|0|50.9415|6||||||||||||||V|||B8BCC4|1|||V|0|0|500|||7440-62-2
+e_cr|0|Chromium|Krom|Cr|Cr|element|Metal|S|0|0|Granules|0|51.9961|7.15||||||||||||||Cr|||B8BCC4|1|||Cr|0|0|500|||7440-47-3
+e_mn|0|Manganese|Mangan|Mn|Mn|element|Metal|S|0|0|Granules|0|54.938|7.3||||||||||||||Mn|||B8BCC4|1|||Mn|0|0|500|||7439-96-5
+fe|1|Iron|Demir||Demir tozu;Demir talaşı;Fe|element|Molecular|S|0|0|Powder|0||||||||||||||||Fe||||||||0|0||||7439-89-6
+e_co|0|Cobalt|Kobalt|Co|Co|element|Metal|S|0|0|Granules|528|58.9332|8.86||||||||||||||Co|||B8BCC4|1|||Co|0|0|500|||7440-48-4
+e_ni|0|Nickel|Nikel|Ni|Ni|element|Metal|S|0|0|Granules|528|58.6934|8.9||||||||||||||Ni|||B8BCC4|1|||Ni|0|0|500|||7440-02-0
+cu|1|Copper|Bakır||Bakır talaşı;Bakır tel;Cu|element|Molecular|S|0|0|Powder|0||||||||||||||||Cu||||||||0|0||||7440-50-8
+zn|1|Zinc|Çinko||Çinko granül;Zn|element|Molecular|S|0|0|Powder|0||||||||||||||||Zn||||||||0|0||||7440-66-6
+e_ga|0|Gallium|Galyum|Ga|Ga|element|Metal|S|0|0|Granules|0|69.723|5.91||||||||||||||Ga|||B8BCC4|1|||Ga|0|0|500|||7440-55-3
+e_ge|0|Germanium|Germanyum|Ge|Ge|element|Molecular|S|0|0|Granules|0|72.63|5.3234||||||||||||||Ge|||D8D8D8|1|||Ge|0|0|500|||7440-56-4
+e_as|0|Arsenic|Arsenik|As|As|element|Molecular|S|0|0|Granules|34|74.9216|5.75||||||||||||||As|||7A7A7A|1|||As|0|0|500|||7440-38-2
+e_se|0|Selenium|Selenyum|Se|Se|element|Molecular|S|0|0|Granules|2|78.971|4.809||||||||||||||Se|||5A2A2A|1|||Se|0|0|500|||7782-49-2
+e_br|0|Bromine|Brom|Br₂|Br|element|Molecular|L|0|0|Granules|35|159.808|3.1028|58.8|||||||||||||Br|||8A2A0A|0.9|||Br|0|0|500|182792||7726-95-6
+e_kr|0|Krypton|Kripton|Kr|Kr|element|Molecular|A|1|0|Granules|256|83.798|||||||||||||||Kr|||D8D8D8|1|||Kr|0|0|500|||7439-90-9
+e_rb|0|Rubidium|Rubidyum|Rb|Rb|element|ReactiveMetal|S|0|0|Chunks|69|85.4678|1.53||||||||||||||Rb|||B8BCC4|1|||Rb|0|0|500|||7440-17-7
+e_sr|0|Strontium|Stronsiyum|Sr|Sr|element|Metal|S|0|0|Chunks|64|87.62|2.64||||||||||||||Sr|||B8BCC4|1|||Sr|0|0|500|||7440-24-6
+e_y|0|Yttrium|İtriyum|Y|Y|element|Metal|S|0|0|Granules|0|88.9058|4.47||||||||||||||Y|||B8BCC4|1|||Y|0|0|500|||7440-65-5
+e_zr|0|Zirconium|Zirkonyum|Zr|Zr|element|Metal|S|0|0|Granules|0|91.224|6.52||||||||||||||Zr|||B8BCC4|1|||Zr|0|0|500|||7440-67-7
+e_nb|0|Niobium|Niyobyum|Nb|Nb|element|Metal|S|0|0|Granules|0|92.9064|8.57||||||||||||||Nb|||B8BCC4|1|||Nb|0|0|500|||7440-03-1
+e_mo|0|Molybdenum|Molibden|Mo|Mo|element|Metal|S|0|0|Granules|0|95.95|10.2||||||||||||||Mo|||B8BCC4|1|||Mo|0|0|500|||7439-98-7
+e_ru|0|Ruthenium|Rutenyum|Ru|Ru|element|Metal|S|0|0|Granules|0|101.07|12.1||||||||||||||Ru|||B8BCC4|1|||Ru|0|0|500|||7440-18-8
+e_rh|0|Rhodium|Rodyum|Rh|Rh|element|Metal|S|0|0|Granules|0|102.906|12.4||||||||||||||Rh|||B8BCC4|1|||Rh|0|0|500|||7440-16-6
+e_pd|0|Palladium|Paladyum|Pd|Pd|element|Metal|S|0|0|Granules|0|106.42|12||||||||||||||Pd|||B8BCC4|1|||Pd|0|0|500|||7440-05-3
+ag|1|Silver|Gümüş||Ag|element|Molecular|S|0|0|Powder|0||||||||||||||||Ag||||||||0|0||||7440-22-4
+e_cd|0|Cadmium|Kadmiyum|Cd|Cd|element|Metal|S|0|0|Granules|546|112.414|8.69||||||||||||||Cd|||B8BCC4|1|||Cd|0|0|500|||7440-43-9
+e_in|0|Indium|İndiyum|In|In|element|Metal|S|0|0|Granules|0|114.818|7.31||||||||||||||In|||B8BCC4|1|||In|0|0|500|||7440-74-6
+e_sn|0|Tin|Kalay|Sn|Sn|element|Metal|S|0|0|Granules|0|118.71|7.287||||||||||||||Sn|||B8BCC4|1|||Sn|0|0|500|||7440-31-5
+e_sb|0|Antimony|Antimon|Sb|Sb|element|Molecular|S|0|0|Granules|48|121.76|6.68||||||||||||||Sb|||D8D8D8|1|||Sb|0|0|500|||7440-36-0
+e_te|0|Tellurium|Tellür|Te|Te|element|Molecular|S|0|0|Granules|0|127.6|6.232||||||||||||||Te|||D8D8D8|1|||Te|0|0|500|||13494-80-9
+e_i|0|Iodine|İyot|I₂|I|element|Molecular|S|0|0|Crystals|48|253.809|4.933||||||||||||||I|||3A2A4A|1|||I|0|0|500|||7553-56-2
+e_xe|0|Xenon|Ksenon|Xe|Xe|element|Molecular|A|1|0|Granules|256|131.293|||||||||||||||Xe|||D8D8D8|1|||Xe|0|0|500|||7440-63-3
+e_cs|0|Caesium|Sezyum|Cs|Cs|element|ReactiveMetal|S|0|0|Chunks|69|132.905|1.873||||||||||||||Cs|||E8D8A0|1|||Cs|0|0|500|||7440-46-2
+e_ba|0|Barium|Baryum|Ba|Ba|element|Metal|S|0|0|Chunks|80|137.327|3.62||||||||||||||Ba|||B8BCC4|1|||Ba|0|0|500|||7440-39-3
+e_la|0|Lanthanum|Lantan|La|La|element|Metal|S|0|0|Granules|0|138.905|6.15||||||||||||||La|||B8BCC4|1|||La|0|0|500|||7439-91-0
+e_ce|0|Cerium|Seryum|Ce|Ce|element|Metal|S|0|0|Granules|0|140.116|6.77||||||||||||||Ce|||B8BCC4|1|||Ce|0|0|500|||7440-45-1
+e_pr|0|Praseodymium|Praseodim|Pr|Pr|element|Metal|S|0|0|Granules|0|140.908|6.773||||||||||||||Pr|||B8BCC4|1|||Pr|0|0|500|||7440-10-0
+e_nd|0|Neodymium|Neodim|Nd|Nd|element|Metal|S|0|0|Granules|0|144.242|7.01||||||||||||||Nd|||B8BCC4|1|||Nd|0|0|500|||7440-00-8
+e_sm|0|Samarium|Samaryum|Sm|Sm|element|Metal|S|0|0|Granules|0|150.36|7.52||||||||||||||Sm|||B8BCC4|1|||Sm|0|0|500|||7440-19-9
+e_eu|0|Europium|Evropiyum|Eu|Eu|element|Metal|S|0|0|Granules|0|151.964|5.24||||||||||||||Eu|||B8BCC4|1|||Eu|0|0|500|||7440-53-1
+e_gd|0|Gadolinium|Gadolinyum|Gd|Gd|element|Metal|S|0|0|Granules|0|157.25|7.9||||||||||||||Gd|||B8BCC4|1|||Gd|0|0|500|||7440-54-2
+e_tb|0|Terbium|Terbiyum|Tb|Tb|element|Metal|S|0|0|Granules|0|158.925|8.23||||||||||||||Tb|||B8BCC4|1|||Tb|0|0|500|||7440-27-9
+e_dy|0|Dysprosium|Disprosyum|Dy|Dy|element|Metal|S|0|0|Granules|0|162.5|8.55||||||||||||||Dy|||B8BCC4|1|||Dy|0|0|500|||7429-91-6
+e_ho|0|Holmium|Holmiyum|Ho|Ho|element|Metal|S|0|0|Granules|0|164.93|8.8||||||||||||||Ho|||B8BCC4|1|||Ho|0|0|500|||7440-60-0
+e_er|0|Erbium|Erbiyum|Er|Er|element|Metal|S|0|0|Granules|0|167.259|9.07||||||||||||||Er|||B8BCC4|1|||Er|0|0|500|||7440-52-0
+e_tm|0|Thulium|Tulyum|Tm|Tm|element|Metal|S|0|0|Granules|0|168.934|9.321||||||||||||||Tm|||B8BCC4|1|||Tm|0|0|500|||7440-30-4
+e_yb|0|Ytterbium|İterbiyum|Yb|Yb|element|Metal|S|0|0|Granules|0|173.045|6.9||||||||||||||Yb|||B8BCC4|1|||Yb|0|0|500|||7440-64-4
+e_lu|0|Lutetium|Lutesyum|Lu|Lu|element|Metal|S|0|0|Granules|0|174.967|9.84||||||||||||||Lu|||B8BCC4|1|||Lu|0|0|500|||7439-94-3
+e_hf|0|Hafnium|Hafniyum|Hf|Hf|element|Metal|S|0|0|Granules|0|178.49|13.3||||||||||||||Hf|||B8BCC4|1|||Hf|0|0|500|||7440-58-6
+e_ta|0|Tantalum|Tantal|Ta|Ta|element|Metal|S|0|0|Granules|0|180.948|16.4||||||||||||||Ta|||B8BCC4|1|||Ta|0|0|500|||7440-25-7
+e_w|0|Tungsten|Tungsten|W|W|element|Metal|S|0|0|Granules|0|183.84|19.3||||||||||||||W|||B8BCC4|1|||W|0|0|500|||7440-33-7
+e_re|0|Rhenium|Renyum|Re|Re|element|Metal|S|0|0|Granules|0|186.207|20.8||||||||||||||Re|||B8BCC4|1|||Re|0|0|500|||7440-15-5
+e_os|0|Osmium|Osmiyum|Os|Os|element|Metal|S|0|0|Granules|0|190.23|22.5872||||||||||||||Os|||B8BCC4|1|||Os|0|0|500|||7440-04-2
+e_ir|0|Iridium|İridyum|Ir|Ir|element|Metal|S|0|0|Granules|0|192.217|22.5622||||||||||||||Ir|||B8BCC4|1|||Ir|0|0|500|||7439-88-5
+e_pt|0|Platinum|Platin|Pt|Pt|element|Metal|S|0|0|Granules|0|195.084|21.5||||||||||||||Pt|||B8BCC4|1|||Pt|0|0|500|||7440-06-4
+e_au|0|Gold|Altın|Au|Au|element|Metal|S|0|0|Granules|0|196.967|19.3||||||||||||||Au|||E6B422|1|||Au|0|0|500|||7440-57-5
+e_hg|0|Mercury|Cıva|Hg|Civa;Hg|element|Metal|L|0|0|Granules|546|200.592|13.5336|356.619|||||||||||||Hg|||C8CCD2|0.9|||Hg|0|0|500|276281||7439-97-6
+e_tl|0|Thallium|Talyum|Tl|Tl|element|Metal|S|0|0|Granules|514|204.38|11.8||||||||||||||Tl|||B8BCC4|1|||Tl|0|0|500|||7440-28-0
+e_pb|0|Lead|Kurşun|Pb|Pb|element|Metal|S|0|0|Granules|546|207.2|11.3||||||||||||||Pb|||6E7278|1|||Pb|0|0|500|||7439-92-1
+e_bi|0|Bismuth|Bizmut|Bi|Bi|element|Metal|S|0|0|Chunks|0|208.98|9.79||||||||||||||Bi|||C8B8C8|1|||Bi|0|0|500|||7440-69-9
 c_506650|0|Gold(I) cyanide|Altın(I) siyanür|AuCN|Gold(I) cyanide|ionic|Salt|S|0|0|Powder|34|222.985|7.2||||||m_hcn|1|Au1|1|1|CN|1|1|||1|E6C24A|1||||0|0|800|||506-65-0
 c_527093|0|Copper(II) gluconate|Bakır(II) glukonat|Cu(C₆H₁₁O₇)₂|Copper(II) gluconate|ionic|Salt|S|0|1|Crystals|48|453.84|5.92582||||||acetic_acid|2|Cu2|2|1|C6H11O7|1|2||3e-08|1|1F6FE5|0.8|4|Cu^2+ C6H11O7-*2||0|0|800||d|527-09-3
 c_546678|0|Lead(IV) acetate|Kurşun(IV) asetat|(CH₃COO)₄Pb|Lead(IV) acetate|ionic|Salt|S|0|1|Crystals|546|443.376|2.23||||||acetic_acid|4|Pb4|4|1|CH3COO|1|4|||1|F2F2F2|1||Pb^4+ CH3COO-*4||0|0|800|||546-67-8
@@ -2053,7 +2053,7 @@ c_53463|0|Methantheline bromide|Metantelin bromür|C₂₁H₂₆BrNO₃|Methant
 c_53703|0|Dibenz[a,h]anthracene|Dibenz[a,h]antrasen|C₂₂H₁₄|Dibenz[a,h]anthracene;C22H14|organic|Molecular|S|0|0|Crystals|0|278.354|1.2|||||||||||||||||F4F4F2|1|||C22H14|0|0|1200||Ld|53-70-3
 c_53861|0|Indomethacin|İndometasin|C₁₉H₁₆ClNO₄|Indomethacin;C19H16ClNO4|organic|Molecular|S|0|0|Crystals|0|357.79|1.2|||||||||||||||||F4F4F2|1|||C19H16ClNO4|0|0|1200||Ld|53-86-1
 c_53963|0|2-(Acetylamino)fluorene|2-(Asetilamino)floren|C₁₅H₁₃NO|2-(Acetylamino)fluorene;C15H13NO|organic|Molecular|S|0|0|Crystals|0|223.275|1.2|||||||||||||||||F4F4F2|1|||C15H13NO|0|0|1200||Ld|53-96-3
-c_54046|0|3,4,5-Trimethoxybenzeneethanamine|3,4,5-Trimetoksibenzeneetanamin|C₁₁H₁₇NO₃|3,4,5-Trimethoxybenzeneethanamine;C11H17NO3|organic|Molecular|S|0|0|Crystals|0|211.261|1.2|||||||||||||||||F4F4F2|1|||C11H17NO3|0|0|1200||Ld|54-04-6
+c_54046|0|3,4,5-Trimethoxybenzeneethanamine|3,4,5-Trimetoksibenzenetanamin|C₁₁H₁₇NO₃|3,4,5-Trimethoxybenzeneethanamine;C11H17NO3|organic|Molecular|S|0|0|Crystals|0|211.261|1.2|||||||||||||||||F4F4F2|1|||C11H17NO3|0|0|1200||Ld|54-04-6
 c_54057|0|Chloroquine|Klorokin|C₁₈H₂₆ClN₃|Chloroquine;C18H26ClN3|organic|Molecular|S|0|0|Crystals|0|319.877|1.2|||||||||||||||||F4F4F2|1|||C18H26ClN3|0|0|1200||Ld|54-05-7
 c_54251|0|6-Azauridine|6-Azauridin|C₈H₁₁N₃O₆|6-Azauridine;C8H11N3O6|organic|Molecular|S|0|0|Crystals|0|245.191|1.2|||||||||||||||||F4F4F2|1|||C8H11N3O6|0|0|1200||Ld|54-25-1
 c_54364|0|2-Methyl-1,2-di-3-pyridinyl-1-propanone|2-Metil-1,2-di-3-piridinil-1-propanon|C₁₄H₁₄N₂O|2-Methyl-1,2-di-3-pyridinyl-1-propanone;C14H14N2O|organic|Molecular|S|0|0|Crystals|0|226.279|1.2|||||||||||||||||F4F4F2|1|||C14H14N2O|0|0|1200||Ld|54-36-4
@@ -2131,7 +2131,7 @@ c_58968|0|Uridine|Uridin|C₉H₁₂N₂O₆|Uridine;C9H12N2O6|organic|Molecular
 c_59007|0|4,8-Dihydroxy-2-quinolinecarboxylic acid|4,8-Dihidroksi-2-kinolinekarboksilik asit|C₁₀H₇NO₄|4,8-Dihydroxy-2-quinolinecarboxylic acid;C10H7NO4|organic|Molecular|S|0|0|Crystals|0|205.169|1.2|||||||||||||||||F4F4F2|1|||C10H7NO4|0|0|1200||Ld|59-00-7
 c_59267|0|N,N-Diethyl-3-pyridinecarboxamide|N,N-dietil-3-piridinekarboksamit|C₁₀H₁₄N₂O|N,N-Diethyl-3-pyridinecarboxamide;C10H14N2O|organic|Molecular|L|0|0|Powder|0|178.235|1.06025|||||||||||||||||E8F2FA|0.18|||C10H14N2O|0|0|2000||L|59-26-7
 c_59314|0|2-Quinolinol|2-Kinolinol|C₉H₇NO|2-Quinolinol;C9H7NO|organic|Molecular|S|0|0|Crystals|0|145.161|1.2|||||||||||||||||F4F4F2|1|||C9H7NO|0|0|1200||Ld|59-31-4
-c_59405|0|4-Amino-N-2-quinoxalinylbenzenesulfonamide|4-Amino-N-2-kinoksalinilbenzenesülfonamit|C₁₄H₁₂N₄O₂S|4-Amino-N-2-quinoxalinylbenzenesulfonamide;C14H12N4O2S|organic|Molecular|S|0|0|Crystals|0|300.336|1.2|||||||||||||||||F4F4F2|1|||C14H12N4O2S|0|0|1200||Ld|59-40-5
+c_59405|0|4-Amino-N-2-quinoxalinylbenzenesulfonamide|4-Amino-N-2-kinoksalinilbenzensülfonamit|C₁₄H₁₂N₄O₂S|4-Amino-N-2-quinoxalinylbenzenesulfonamide;C14H12N4O2S|organic|Molecular|S|0|0|Crystals|0|300.336|1.2|||||||||||||||||F4F4F2|1|||C14H12N4O2S|0|0|1200||Ld|59-40-5
 c_59438|0|Thiamine chloride|Tiamin klorür|C₁₂H₁₇ClN₄OS|Thiamine chloride;C12H17ClN4OS|organic|Molecular|S|0|0|Crystals|0|300.805|1.2|||||||||||||||||F4F4F2|1|||C12H17ClN4OS|0|0|1200||Ld|59-43-8
 c_59461|0|2-Diethylaminoethyl 4-aminobenzoate|2-Dietilaminoetil 4-aminobenzoat|C₁₃H₂₀N₂O₂|2-Diethylaminoethyl 4-aminobenzoate;C13H20N2O2|organic|Molecular|S|0|0|Crystals|0|236.315|1.2|||||||||||||||||F4F4F2|1|||C13H20N2O2|0|0|1200||Ld|59-46-1
 c_59483|0|1,3-Dihydro-2H-indol-2-one|1,3-Dihidro-2H-indol-2-on|C₈H₇NO|1,3-Dihydro-2H-indol-2-one;C8H7NO|organic|Molecular|S|0|0|Crystals|0|133.15|1.2|||||||||||||||||F4F4F2|1|||C8H7NO|0|0|1200||Ld|59-48-3
@@ -2174,13 +2174,13 @@ c_62908|0|19-Nortestosterone phenylpropionate|19-Nortestosteron fenilpropionat|C
 c_63058|0|Androst-4-ene-3,17-dione|Androst-4-en-3,17-dion|C₁₉H₂₆O₂|Androst-4-ene-3,17-dione;C19H26O2|organic|Molecular|S|0|0|Crystals|0|286.415|1.2|||||||||||||||||F4F4F2|1|||C19H26O2|0|0|1200||Ld|63-05-8
 c_63127|0|Benzquinamide|Benzkinamit|C₂₂H₃₂N₂O₅|Benzquinamide;C22H32N2O5|organic|Molecular|S|0|0|Crystals|0|404.507|1.2|||||||||||||||||F4F4F2|1|||C22H32N2O5|0|0|1200||Ld|63-12-7
 c_63252|0|Carbaryl|Karbaril|C₁₂H₁₁NO₂|Carbaryl;C12H11NO2|organic|Molecular|S|0|0|Crystals|0|201.225|1.22825|||||||||||||||||F4F4F2|1|||C12H11NO2|0|0|1200||L|63-25-2
-c_63741|0|4-Aminobenzenesulfonamide|4-Aminobenzenesülfonamit|C₆H₈N₂O₂S|4-Aminobenzenesulfonamide;C6H8N2O2S|organic|Molecular|S|0|0|Crystals|0|172.202|1.0825|||||||||||||||||F4F4F2|1|||C6H8N2O2S|0|0|1200||L|63-74-1
+c_63741|0|4-Aminobenzenesulfonamide|4-Aminobenzensülfonamit|C₆H₈N₂O₂S|4-Aminobenzenesulfonamide;C6H8N2O2S|organic|Molecular|S|0|0|Crystals|0|172.202|1.0825|||||||||||||||||F4F4F2|1|||C6H8N2O2S|0|0|1200||L|63-74-1
 c_63752|0|Arecoline|Arekolin|C₈H₁₃NO₂|Arecoline;C8H13NO2|organic|Molecular|L|0|0|Powder|0|155.197|1.04852|209||||||||||||||||E8F2FA|0.18|||C8H13NO2|0|0|2000|273389|L|63-75-2
 c_63923|0|Phenoxybenzamine hydrochloride|Fenoksibenzamin hidroklorür|C₁₈H₂₃Cl₂NO|Phenoxybenzamine hydrochloride;C18H23Cl2NO|organic|Molecular|S|0|0|Crystals|0|340.288|1.2|||||||||||||||||F4F4F2|1|||C18H23Cl2NO|0|0|1200||Ld|63-92-3
 c_63989|0|(Phenylacetyl)urea|(Fenilasetil)üre|C₉H₁₀N₂O₂|(Phenylacetyl)urea;C9H10N2O2|organic|Molecular|S|0|0|Crystals|0|178.191|1.2|||||||||||||||||F4F4F2|1|||C9H10N2O2|0|0|1200||Ld|63-98-9
 c_64028|0|Tetrasodium EDTA|Tetrasodiyum edta|C₁₀H₁₂N₂Na₄O₈|Tetrasodium EDTA;C10H12N2Na4O8|organic|Molecular|S|0|0|Crystals|0|380.171|1.2|||||||||||||||||F4F4F2|1|||C10H12N2Na4O8|0|0|1200||Ld|64-02-8
-c_64040|0|Benzeneethanamine|Benzeneetanamin|C₈H₁₁N|Benzeneethanamine;C8H11N|organic|Molecular|L|0|0|Powder|0|121.183|0.964025|204||||||||||||||||E8F2FA|0.18|||C8H11N|0|0|2000|346494|L|64-04-0
-c_64108|0|Phenylurea|Fenilurea|C₇H₈N₂O|Phenylurea;C7H8N2O|organic|Molecular|S|0|0|Crystals|0|136.154|1.30225|||||||||||||||||F4F4F2|1|||C7H8N2O|0|0|1200||L|64-10-8
+c_64040|0|Benzeneethanamine|Benzenetanamin|C₈H₁₁N|Benzeneethanamine;C8H11N|organic|Molecular|L|0|0|Powder|0|121.183|0.964025|204||||||||||||||||E8F2FA|0.18|||C8H11N|0|0|2000|346494|L|64-04-0
+c_64108|0|Phenylurea|Fenilüre|C₇H₈N₂O|Phenylurea;C7H8N2O|organic|Molecular|S|0|0|Crystals|0|136.154|1.30225|||||||||||||||||F4F4F2|1|||C7H8N2O|0|0|1200||L|64-10-8
 c_64653|0|4-Ethyl-4-methyl-2,6-piperidinedione|4-Etil-4-metil-2,6-piperidinedion|C₈H₁₃NO₂|4-Ethyl-4-methyl-2,6-piperidinedione;C8H13NO2|organic|Molecular|S|0|0|Crystals|0|155.197|1.2|||||||||||||||||F4F4F2|1|||C8H13NO2|0|0|1200||Ld|64-65-3
 c_64697|0|Iodoacetic acid|İodoasetik asit|C₂H₃IO₂|Iodoacetic acid;C2H3IO2|organic|Molecular|S|0|0|Crystals|0|185.948|1.2|||||||||||||||||F4F4F2|1|||C2H3IO2|0|0|1200||Ld|64-69-7
 c_64755|0|Tetracycline hydrochloride|Tetrasiklin hidroklorür|C₂₂H₂₅ClN₂O₈|Tetracycline hydrochloride;C22H25ClN2O8|organic|Molecular|S|0|0|Crystals|0|480.898|1.2|||||||||||||||||F4F4F2|1|||C22H25ClN2O8|0|0|1200||Ld|64-75-5
@@ -2216,7 +2216,7 @@ c_68042|0|Trisodium citrate|Trizodiyum sitrat|C₆H₅Na₃O₇|Trisodium citrat
 c_68224|0|Norethisterone|Noretisteron|C₂₀H₂₆O₂|Norethisterone;C20H26O2|organic|Molecular|S|0|0|Crystals|0|298.426|1.2|||||||||||||||||F4F4F2|1|||C20H26O2|0|0|1200||Ld|68-22-4
 c_68235|0|Norethynodrel|Noretinodrel|C₂₀H₂₆O₂|Norethynodrel;C20H26O2|organic|Molecular|S|0|0|Crystals|0|298.426|1.2|||||||||||||||||F4F4F2|1|||C20H26O2|0|0|1200||Ld|68-23-5
 c_68268|0|Retinol|Retinol|C₂₀H₃₀O|Retinol;C20H30O|organic|Molecular|S|0|0|Crystals|0|286.459|1.2|||||||||||||||||F4F4F2|1|||C20H30O|0|0|1200||Ld|68-26-8
-c_68359|0|4-Amino-N-2-pyrimidinylbenzenesulfonamide|4-Amino-N-2-pirimidinilbenzenesülfonamit|C₁₀H₁₀N₄O₂S|4-Amino-N-2-pyrimidinylbenzenesulfonamide;C10H10N4O2S|organic|Molecular|S|0|0|Crystals|0|250.276|1.2|||||||||||||||||F4F4F2|1|||C10H10N4O2S|0|0|1200||Ld|68-35-9
+c_68359|0|4-Amino-N-2-pyrimidinylbenzenesulfonamide|4-Amino-N-2-pirimidinilbenzensülfonamit|C₁₀H₁₀N₄O₂S|4-Amino-N-2-pyrimidinylbenzenesulfonamide;C10H10N4O2S|organic|Molecular|S|0|0|Crystals|0|250.276|1.2|||||||||||||||||F4F4F2|1|||C10H10N4O2S|0|0|1200||Ld|68-35-9
 c_68360|0|1,4-Bis(trichloromethyl)benzene|1,4-Bis(triklorometil)benzen|C₈H₄Cl₆|1,4-Bis(trichloromethyl)benzene;C8H4Cl6|organic|Molecular|S|0|0|Crystals|0|312.82|1.2|||||||||||||||||F4F4F2|1|||C8H4Cl6|0|0|1200||Ld|68-36-0
 c_69249|0|Cinchotoxine|Sinkotoksin|C₁₉H₂₂N₂O|Cinchotoxine;C19H22N2O|organic|Molecular|S|0|0|Crystals|0|294.398|1.2|||||||||||||||||F4F4F2|1|||C19H22N2O|0|0|1200||Ld|69-24-9
 c_69578|0|Benzylpenicillin sodium|Benzilpenisillin sodyum|C₁₆H₁₇N₂NaO₄S|Benzylpenicillin sodium;C16H17N2NaO4S|organic|Molecular|S|0|0|Crystals|0|356.372|1.41|||||||||||||||||F4F4F2|1|||C16H17N2NaO4S|0|0|1200||L|69-57-8
@@ -2231,7 +2231,7 @@ c_70348|0|1-Fluoro-2,4-dinitrobenzene|1-Floro-2,4-dinitrobenzen|C₆H₃FN₂O�
 c_70473|0|L-Asparagine|L-asparagin|C₄H₈N₂O₃|L-Asparagine;C4H8N2O3|organic|Molecular|S|0|0|Crystals|0|132.119|1.54315|||||||||||||||||F4F4F2|1|||C4H8N2O3|0|0|1200||L|70-47-3
 c_70519|0|Desferrioxamine|Desferrioksamin|C₂₅H₄₈N₆O₈|Desferrioxamine;C25H48N6O8|organic|Molecular|S|0|0|Crystals|0|560.693|1.2|||||||||||||||||F4F4F2|1|||C25H48N6O8|0|0|1200||Ld|70-51-9
 c_70542|0|DL-Lysine|Dl-lisin|C₆H₁₄N₂O₂|DL-Lysine;C6H14N2O2|organic|Molecular|S|0|0|Crystals|0|146.19|1.2|||||||||||||||||F4F4F2|1|||C6H14N2O2|0|0|1200||Ld|70-54-2
-c_70553|0|4-Methylbenzenesulfonamide|4-Metilbenzenesülfonamit|C₇H₉NO₂S|4-Methylbenzenesulfonamide;C7H9NO2S|organic|Molecular|S|0|0|Crystals|0|171.214|1.2|||||||||||||||||F4F4F2|1|||C7H9NO2S|0|0|1200||Ld|70-55-3
+c_70553|0|4-Methylbenzenesulfonamide|4-Metilbenzensülfonamit|C₇H₉NO₂S|4-Methylbenzenesulfonamide;C7H9NO2S|organic|Molecular|S|0|0|Crystals|0|171.214|1.2|||||||||||||||||F4F4F2|1|||C7H9NO2S|0|0|1200||Ld|70-55-3
 c_70699|0|1-(4-Aminophenyl)-1-propanone|1-(4-Aminofenil)-1-propanon|C₉H₁₁NO|1-(4-Aminophenyl)-1-propanone;C9H11NO|organic|Molecular|S|0|0|Crystals|0|149.193|1.2|||||||||||||||||F4F4F2|1|||C9H11NO|0|0|1200||Ld|70-69-9
 c_70702|0|1-(4-Hydroxyphenyl)-1-propanone|1-(4-Hidroksifenil)-1-propanon|C₉H₁₀O₂|1-(4-Hydroxyphenyl)-1-propanone;C9H10O2|organic|Molecular|S|0|0|Crystals|0|150.177|1.2|||||||||||||||||F4F4F2|1|||C9H10O2|0|0|1200||Ld|70-70-2
 c_71272|0|Succinylcholine chloride|Suksinilkolin klorür|C₁₄H₃₀Cl₂N₂O₄|Succinylcholine chloride;C14H30Cl2N2O4|organic|Molecular|S|0|0|Crystals|0|361.304|1.2|||||||||||||||||F4F4F2|1|||C14H30Cl2N2O4|0|0|1200||Ld|71-27-2
@@ -2252,7 +2252,7 @@ c_72639|0|Methandrostenolone|Metandrostenolon|C₂₀H₂₈O₂|Methandrostenol
 c_73314|0|N-[2-(5-Methoxy-1H-indol-3-yl)ethyl]acetamide|N-[2-(5-metoksi-1H-indol-3-il)etil]asetamit|C₁₃H₁₆N₂O₂|N-[2-(5-Methoxy-1H-indol-3-yl)ethyl]acetamide;C13H16N2O2|organic|Molecular|S|0|0|Crystals|0|232.283|1.2|||||||||||||||||F4F4F2|1|||C13H16N2O2|0|0|1200||Ld|73-31-4
 c_73483|0|Bendroflumethiazide|Bendroflumetiazit|C₁₅H₁₄F₃N₃O₄S₂|Bendroflumethiazide;C15H14F3N3O4S2|organic|Molecular|S|0|0|Crystals|0|421.409|1.2|||||||||||||||||F4F4F2|1|||C15H14F3N3O4S2|0|0|1200||Ld|73-48-3
 c_74113|0|4-Chlorobenzoic acid|4-Klorobenzoik asit|C₇H₅ClO₂|4-Chlorobenzoic acid;C7H5ClO2|organic|Molecular|S|0|0|Crystals|0|156.565|1.2|||||||||||||||||F4F4F2|1|||C7H5ClO2|0|0|1200||Ld|74-11-3
-c_74395|0|4-[(4-Nitrophenyl)azo]-1,3-benzenediol|4-[(4-Nitrofenil)azo]-1,3-benzenediol|C₁₂H₉N₃O₄|4-[(4-Nitrophenyl)azo]-1,3-benzenediol;C12H9N3O4|organic|Molecular|S|0|0|Crystals|0|259.221|1.2|||||||||||||||||F4F4F2|1|||C12H9N3O4|0|0|1200||Ld|74-39-5
+c_74395|0|4-[(4-Nitrophenyl)azo]-1,3-benzenediol|4-[(4-Nitrofenil)azo]-1,3-benzendiol|C₁₂H₉N₃O₄|4-[(4-Nitrophenyl)azo]-1,3-benzenediol;C12H9N3O4|organic|Molecular|S|0|0|Crystals|0|259.221|1.2|||||||||||||||||F4F4F2|1|||C12H9N3O4|0|0|1200||Ld|74-39-5
 c_74555|0|Ethambutol|Etambütol|C₁₀H₂₄N₂O₂|Ethambutol;C10H24N2O2|organic|Molecular|S|0|0|Crystals|0|204.314|1.2|||||||||||||||||F4F4F2|1|||C10H24N2O2|0|0|1200||Ld|74-55-5
 c_74793|0|L-Arginine|L-arginin|C₆H₁₄N₄O₂|L-Arginine;C6H14N4O2|organic|Molecular|S|0|0|Crystals|0|174.204|1.2|||||||||||||||||F4F4F2|1|||C6H14N4O2|0|0|1200||Ld|74-79-3
 c_75172|0|Formaldehyde oxime|Formaldehit oksim|CH₃NO|Formaldehyde oxime;CH3NO|organic|Molecular|L|0|0|Powder|0|45.041|1.13325|||||||||||||||||E8F2FA|0.18|||CH3NO|0|0|2000||L|75-17-2
@@ -2290,7 +2290,7 @@ c_76802|0|Tephrosin|Tefrosin|C₂₃H₂₂O₇|Tephrosin;C23H22O7|organic|Molec
 c_76835|0|Chlorotriphenylmethane|Klorotrifenilmetan|C₁₉H₁₅Cl|Chlorotriphenylmethane;C19H15Cl|organic|Molecular|S|0|0|Crystals|0|278.779|1.2|||||||||||||||||F4F4F2|1|||C19H15Cl|0|0|1200||Ld|76-83-5
 c_76846|0|Triphenylmethanol|Trifenilmetanol|C₁₉H₁₆O|Triphenylmethanol;C19H16O|organic|Molecular|S|0|0|Crystals|0|260.336|1.199|||||||||||||||||F4F4F2|1|||C19H16O|0|0|1200||L|76-84-6
 c_76891|0|Methyl α-hydroxydiphenylacetate|Metil α-hidroksidifenilasetat|C₁₅H₁₄O₃|Methyl α-hydroxydiphenylacetate;C15H14O3|organic|Molecular|S|0|0|Crystals|0|242.274|1.2|||||||||||||||||F4F4F2|1|||C15H14O3|0|0|1200||Ld|76-89-1
-c_76937|0|α-Hydroxy-α-phenylbenzeneacetic acid|α-Hidroksi-α-fenilbenzeneasetik asit|C₁₄H₁₂O₃|α-Hydroxy-α-phenylbenzeneacetic acid;C14H12O3|organic|Molecular|S|0|0|Crystals|0|228.247|1.2|||||||||||||||||F4F4F2|1|||C14H12O3|0|0|1200||Ld|76-93-7
+c_76937|0|α-Hydroxy-α-phenylbenzeneacetic acid|α-Hidroksi-α-fenilbenzenasetik asit|C₁₄H₁₂O₃|α-Hydroxy-α-phenylbenzeneacetic acid;C14H12O3|organic|Molecular|S|0|0|Crystals|0|228.247|1.2|||||||||||||||||F4F4F2|1|||C14H12O3|0|0|1200||Ld|76-93-7
 c_76948|0|5-Methyl-5-phenyl-2,4,6(1H,3H,5H)-pyrimidinetrione|5-Metil-5-fenil-2,4,6(1H,3H,5H)-pirimidinetrion|C₁₁H₁₀N₂O₃|5-Methyl-5-phenyl-2,4,6(1H,3H,5H)-pyrimidinetrione;C11H10N2O3|organic|Molecular|S|0|0|Crystals|0|218.212|1.2|||||||||||||||||F4F4F2|1|||C11H10N2O3|0|0|1200||Ld|76-94-8
 c_76993|0|6-(Dimethylamino)-4,4-diphenyl-3-heptanone|6-(Dimetilamino)-4,4-difenil-3-heptanon|C₂₁H₂₇NO|6-(Dimethylamino)-4,4-diphenyl-3-heptanone;C21H27NO|organic|Molecular|S|0|0|Crystals|0|309.453|1.2|||||||||||||||||F4F4F2|1|||C21H27NO|0|0|1200||Ld|76-99-3
 c_77021|0|Aprobarbital|Aprobarbital|C₁₀H₁₄N₂O₃|Aprobarbital;C10H14N2O3|organic|Molecular|S|0|0|Crystals|0|210.233|1.2|||||||||||||||||F4F4F2|1|||C10H14N2O3|0|0|1200||Ld|77-02-1
@@ -2362,7 +2362,7 @@ c_79538|0|Chloropentafluoroacetone|Kloropentafloroaseton|C₃ClF₅O|Chloropenta
 c_79550|0|1,2,2,6,6-Pentamethylpiperidine|1,2,2,6,6-Pentametilpiperidin|C₁₀H₂₁N|1,2,2,6,6-Pentamethylpiperidine;C10H21N|organic|Molecular|L|0|0|Powder|0|155.285|0.858|147||||||||||||||||E8F2FA|0.18|||C10H21N|0|0|2000|238099|L|79-55-0
 c_79572|0|Oxytetracycline|Oksitetrasiklin|C₂₂H₂₄N₂O₉|Oxytetracycline;C22H24N2O9|organic|Molecular|S|0|0|Crystals|0|460.439|1.6342|||||||||||||||||F4F4F2|1|||C22H24N2O9|0|0|1200||L|79-57-2
 c_79583|0|Rubijervine|Rubijervin|C₂₇H₄₃NO₂|Rubijervine;C27H43NO2|organic|Molecular|S|0|0|Crystals|0|413.646|1.2|||||||||||||||||F4F4F2|1|||C27H43NO2|0|0|1200||Ld|79-58-3
-c_79743|0|2,5-Bis(1,1-dimethylpropyl)-1,4-benzenediol|2,5-Bis(1,1-dimetilpropil)-1,4-benzenediol|C₁₆H₂₆O₂|2,5-Bis(1,1-dimethylpropyl)-1,4-benzenediol;C16H26O2|organic|Molecular|S|0|0|Crystals|0|250.382|1.2|||||||||||||||||F4F4F2|1|||C16H26O2|0|0|1200||Ld|79-74-3
+c_79743|0|2,5-Bis(1,1-dimethylpropyl)-1,4-benzenediol|2,5-Bis(1,1-dimetilpropil)-1,4-benzendiol|C₁₆H₂₆O₂|2,5-Bis(1,1-dimethylpropyl)-1,4-benzenediol;C16H26O2|organic|Molecular|S|0|0|Crystals|0|250.382|1.2|||||||||||||||||F4F4F2|1|||C16H26O2|0|0|1200||Ld|79-74-3
 c_79812|0|Retinyl palmitate|Retinil palmitat|C₃₆H₆₀O₂|Retinyl palmitate;C36H60O2|organic|Molecular|S|0|0|Crystals|0|524.874|1.2|||||||||||||||||F4F4F2|1|||C36H60O2|0|0|1200||Ld|79-81-2
 c_79914|0|Terebic acid|Terebik asit|C₇H₁₀O₄|Terebic acid;C7H10O4|organic|Molecular|S|0|0|Crystals|0|158.153|0.815|||||||||||||||||F4F4F2|1|||C7H10O4|0|0|1200||L|79-91-4
 c_79947|0|Bromdian|Bromdian|C₁₅H₁₂Br₄O₂|Bromdian;C15H12Br4O2|organic|Molecular|S|0|0|Crystals|0|543.875|1.2|||||||||||||||||F4F4F2|1|||C15H12Br4O2|0|0|1200||Ld|79-94-7
@@ -2373,13 +2373,13 @@ c_80068|0|1,1-Bis(4-chlorophenyl)ethanol|1,1-Bis(4-klorofenil)etanol|C₁₄H₁
 c_80079|0|Bis(4-chlorophenyl) sulfone|Bis(4-klorofenil) sülfon|C₁₂H₈Cl₂O₂S|Bis(4-chlorophenyl) sulfone;C12H8Cl2O2S|organic|Molecular|S|0|0|Crystals|0|287.154|1.2|||||||||||||||||F4F4F2|1|||C12H8Cl2O2S|0|0|1200||Ld|80-07-9
 c_80080|0|Bis(4-aminophenyl) sulfone|Bis(4-aminofenil) sülfon|C₁₂H₁₂N₂O₂S|Bis(4-aminophenyl) sulfone;C12H12N2O2S|organic|Molecular|S|0|0|Crystals|0|248.3|1.2|||||||||||||||||F4F4F2|1|||C12H12N2O2S|0|0|1200||Ld|80-08-0
 c_80091|0|Bis(4-hydroxyphenyl) sulfone|Bis(4-hidroksifenil) sülfon|C₁₂H₁₀O₄S|Bis(4-hydroxyphenyl) sulfone;C12H10O4S|organic|Molecular|S|0|0|Crystals|0|250.268|1.36631|||||||||||||||||F4F4F2|1|||C12H10O4S|0|0|1200||L|80-09-1
-c_80115|0|N,4-Dimethyl-N-nitrosobenzenesulfonamide|N,4-dimetil-N-nitrosobenzenesülfonamit|C₈H₁₀N₂O₃S|N,4-Dimethyl-N-nitrosobenzenesulfonamide;C8H10N2O3S|organic|Molecular|S|0|0|Crystals|0|214.239|1.2|||||||||||||||||F4F4F2|1|||C8H10N2O3S|0|0|1200||Ld|80-11-5
-c_80182|0|Methyl benzenesulfonate|Metil benzenesülfonat|C₇H₈O₃S|Methyl benzenesulfonate;C7H8O3S|organic|Molecular|L|0|0|Powder|0|172.198|1.27302|||||||||||||||||E8F2FA|0.18|||C7H8O3S|0|0|2000||L|80-18-2
+c_80115|0|N,4-Dimethyl-N-nitrosobenzenesulfonamide|N,4-dimetil-N-nitrosobenzensülfonamit|C₈H₁₀N₂O₃S|N,4-Dimethyl-N-nitrosobenzenesulfonamide;C8H10N2O3S|organic|Molecular|S|0|0|Crystals|0|214.239|1.2|||||||||||||||||F4F4F2|1|||C8H10N2O3S|0|0|1200||Ld|80-11-5
+c_80182|0|Methyl benzenesulfonate|Metil benzensülfonat|C₇H₈O₃S|Methyl benzenesulfonate;C7H8O3S|organic|Molecular|L|0|0|Powder|0|172.198|1.27302|||||||||||||||||E8F2FA|0.18|||C7H8O3S|0|0|2000||L|80-18-2
 c_80320|0|Sulfachlorpyridazine|Sülfaklorpiridazin|C₁₀H₉ClN₄O₂S|Sulfachlorpyridazine;C10H9ClN4O2S|organic|Molecular|S|0|0|Crystals|0|284.718|1.2|||||||||||||||||F4F4F2|1|||C10H9ClN4O2S|0|0|1200||Ld|80-32-0
-c_80331|0|4-Chlorophenyl 4-chlorobenzenesulfonate|4-Klorofenil 4-klorobenzenesülfonat|C₁₂H₈Cl₂O₃S|4-Chlorophenyl 4-chlorobenzenesulfonate;C12H8Cl2O3S|organic|Molecular|S|0|0|Crystals|0|303.153|1.2|||||||||||||||||F4F4F2|1|||C12H8Cl2O3S|0|0|1200||Ld|80-33-1
+c_80331|0|4-Chlorophenyl 4-chlorobenzenesulfonate|4-Klorofenil 4-klorobenzensülfonat|C₁₂H₈Cl₂O₃S|4-Chlorophenyl 4-chlorobenzenesulfonate;C12H8Cl2O3S|organic|Molecular|S|0|0|Crystals|0|303.153|1.2|||||||||||||||||F4F4F2|1|||C12H8Cl2O3S|0|0|1200||Ld|80-33-1
 c_80353|0|Sulfamethoxypyridazine|Sülfametoksipiridazin|C₁₁H₁₂N₄O₃S|Sulfamethoxypyridazine;C11H12N4O3S|organic|Molecular|S|0|0|Crystals|0|280.302|1.2|||||||||||||||||F4F4F2|1|||C11H12N4O3S|0|0|1200||Ld|80-35-3
-c_80386|0|4-Chlorophenyl benzenesulfonate|4-Klorofenil benzenesülfonat|C₁₂H₉ClO₃S|4-Chlorophenyl benzenesulfonate;C12H9ClO3S|organic|Molecular|S|0|0|Crystals|0|268.711|1.33|||||||||||||||||F4F4F2|1|||C12H9ClO3S|0|0|1200||L|80-38-6
-c_80397|0|N-Ethyl-4-methylbenzenesulfonamide|N-etil-4-metilbenzenesülfonamit|C₉H₁₃NO₂S|N-Ethyl-4-methylbenzenesulfonamide;C9H13NO2S|organic|Molecular|S|0|0|Crystals|0|199.268|1.2|||||||||||||||||F4F4F2|1|||C9H13NO2S|0|0|1200||Ld|80-39-7
+c_80386|0|4-Chlorophenyl benzenesulfonate|4-Klorofenil benzensülfonat|C₁₂H₉ClO₃S|4-Chlorophenyl benzenesulfonate;C12H9ClO3S|organic|Molecular|S|0|0|Crystals|0|268.711|1.33|||||||||||||||||F4F4F2|1|||C12H9ClO3S|0|0|1200||L|80-38-6
+c_80397|0|N-Ethyl-4-methylbenzenesulfonamide|N-etil-4-metilbenzensülfonamit|C₉H₁₃NO₂S|N-Ethyl-4-methylbenzenesulfonamide;C9H13NO2S|organic|Molecular|S|0|0|Crystals|0|199.268|1.2|||||||||||||||||F4F4F2|1|||C9H13NO2S|0|0|1200||Ld|80-39-7
 c_80400|0|Ethyl p-toluenesulfonate|Etil p-toluenesülfonat|C₉H₁₂O₃S|Ethyl p-toluenesulfonate;C9H12O3S|organic|Molecular|S|0|0|Crystals|0|200.252|1.16648|||||||||||||||||F4F4F2|1|||C9H12O3S|0|0|1200||L|80-40-0
 c_80488|0|Methyl 4-toluenesulfonate|Metil 4-toluenesülfonat|C₈H₁₀O₃S|Methyl 4-toluenesulfonate;C8H10O3S|organic|Molecular|L|0|0|Powder|0|186.225|1.20874|292||||||||||||||||E8F2FA|0.18|||C8H10O3S|0|0|2000|267060|L|80-48-8
 c_80502|0|Anisotropine methylbromide|Anizotropin metilbromür|C₁₇H₃₂BrNO₂|Anisotropine methylbromide;C17H32BrNO2|organic|Molecular|S|0|0|Crystals|0|362.352|1.2|||||||||||||||||F4F4F2|1|||C17H32BrNO2|0|0|1200||Ld|80-50-2
@@ -2422,7 +2422,7 @@ c_82575|0|Visnagin|Visnagin|C₁₃H₁₀O₄|Visnagin;C13H10O4|organic|Molecul
 c_82622|0|3,4,6-Trichloro-2-nitrophenol|3,4,6-Trikloro-2-nitrofenol|C₆H₂Cl₃NO₃|3,4,6-Trichloro-2-nitrophenol;C6H2Cl3NO3|organic|Molecular|S|0|0|Crystals|0|242.436|1.2|||||||||||||||||F4F4F2|1|||C6H2Cl3NO3|0|0|1200||Ld|82-62-2
 c_82666|0|2-(Diphenylacetyl)-1H-indene-1,3(2H)-dione|2-(Difenilasetil)-1H-inden-1,3(2H)-dion|C₂₃H₁₆O₃|2-(Diphenylacetyl)-1H-indene-1,3(2H)-dione;C23H16O3|organic|Molecular|S|0|0|Crystals|0|340.378|1.2|||||||||||||||||F4F4F2|1|||C23H16O3|0|0|1200||Ld|82-66-6
 c_82688|0|Pentachloronitrobenzene|Pentakloronitrobenzen|C₆Cl₅NO₂|Pentachloronitrobenzene;C6Cl5NO2|organic|Molecular|S|0|0|Crystals|0|295.321|1.71825|||||||||||||||||F4F4F2|1|||C6Cl5NO2|0|0|1200||L|82-68-8
-c_82713|0|2,4,6-Trinitro-1,3-benzenediol|2,4,6-Trinitro-1,3-benzenediol|C₆H₃N₃O₈|2,4,6-Trinitro-1,3-benzenediol;C6H3N3O8|organic|Molecular|S|0|0|Crystals|0|245.103|1.2|||||||||||||||||F4F4F2|1|||C6H3N3O8|0|0|1200||Ld|82-71-3
+c_82713|0|2,4,6-Trinitro-1,3-benzenediol|2,4,6-Trinitro-1,3-benzendiol|C₆H₃N₃O₈|2,4,6-Trinitro-1,3-benzenediol;C6H3N3O8|organic|Molecular|S|0|0|Crystals|0|245.103|1.2|||||||||||||||||F4F4F2|1|||C6H3N3O8|0|0|1200||Ld|82-71-3
 c_82860|0|1,2-Acenaphthylenedione|1,2-Asenaftilenedion|C₁₂H₆O₂|1,2-Acenaphthylenedione;C12H6O2|organic|Molecular|S|0|0|Crystals|0|182.178|1.48002|||||||||||||||||F4F4F2|1|||C12H6O2|0|0|1200||L|82-86-0
 c_82882|0|Phenindamine|Fenindamin|C₁₉H₁₉N|Phenindamine;C19H19N|organic|Molecular|S|0|0|Crystals|0|261.368|1.17|||||||||||||||||F4F4F2|1|||C19H19N|0|0|1200||L|82-88-2
 c_82928|0|Cyclizine|Siklizin|C₁₈H₂₂N₂|Cyclizine;C18H22N2|organic|Molecular|S|0|0|Crystals|0|266.388|1.2|||||||||||||||||F4F4F2|1|||C18H22N2|0|0|1200||Ld|82-92-8
@@ -2449,7 +2449,7 @@ c_83670|0|Theobromine|Teobromin|C₇H₈N₄O₂|Theobromine;C7H8N4O2|organic|Mo
 c_83738|0|5,7-Diiodo-8-quinolinol|5,7-Diiodo-8-kinolinol|C₉H₅I₂NO|5,7-Diiodo-8-quinolinol;C9H5I2NO|organic|Molecular|S|0|0|Crystals|0|396.954|1.2|||||||||||||||||F4F4F2|1|||C9H5I2NO|0|0|1200||Ld|83-73-8
 c_83749|0|12-Methoxyibogamine|12-Metoksiibogamin|C₂₀H₂₆N₂O|12-Methoxyibogamine;C20H26N2O|organic|Molecular|S|0|0|Crystals|0|310.441|1.2|||||||||||||||||F4F4F2|1|||C20H26N2O|0|0|1200||Ld|83-74-9
 c_83794|0|Rotenone|Rotenon|C₂₃H₂₂O₆|Rotenone;C23H22O6|organic|Molecular|S|0|0|Crystals|0|394.423|1.2|||||||||||||||||F4F4F2|1|||C23H22O6|0|0|1200||Ld|83-79-4
-c_83818|0|N,N,N',N'-Tetraethyl-1,2-benzenedicarboxamide|N,N,N',N'-tetretil-1,2-benzenedikarboksamit|C₁₆H₂₄N₂O₂|N,N,N',N'-Tetraethyl-1,2-benzenedicarboxamide;C16H24N2O2|organic|Molecular|S|0|0|Crystals|0|276.38|1.2|||||||||||||||||F4F4F2|1|||C16H24N2O2|0|0|1200||Ld|83-81-8
+c_83818|0|N,N,N',N'-Tetraethyl-1,2-benzenedicarboxamide|N,N,N',N'-tetretil-1,2-benzendikarboksamit|C₁₆H₂₄N₂O₂|N,N,N',N'-Tetraethyl-1,2-benzenedicarboxamide;C16H24N2O2|organic|Molecular|S|0|0|Crystals|0|276.38|1.2|||||||||||||||||F4F4F2|1|||C16H24N2O2|0|0|1200||Ld|83-81-8
 c_83896|0|Quinacrine|Kinakrin|C₂₃H₃₀ClN₃O|Quinacrine;C23H30ClN3O|organic|Molecular|S|0|0|Crystals|0|399.963|1.2|||||||||||||||||F4F4F2|1|||C23H30ClN3O|0|0|1200||Ld|83-89-6
 c_83954|0|4,7,8-Trimethoxyfuro[2,3-b]quinoline|4,7,8-Trimetoksifuro[2,3-b]kinolin|C₁₄H₁₃NO₄|4,7,8-Trimethoxyfuro[2,3-b]quinoline;C14H13NO4|organic|Molecular|S|0|0|Crystals|0|259.261|1.2|||||||||||||||||F4F4F2|1|||C14H13NO4|0|0|1200||Ld|83-95-4
 c_84117|0|9,10-Phenanthrenedione|9,10-Fenantrenedion|C₁₄H₈O₂|9,10-Phenanthrenedione;C14H8O2|organic|Molecular|S|0|0|Crystals|0|208.216|1.40522|||||||||||||||||F4F4F2|1|||C14H8O2|0|0|1200||L|84-11-7
@@ -2474,7 +2474,7 @@ c_85007|0|Diquat dibromide|Dikat dibromür|C₁₂H₁₂Br₂N₂|Diquat dibrom
 c_85029|0|Benzo[f]quinoline|Benzo[f]kinolin|C₁₃H₉N|Benzo[f]quinoline;C13H9N|organic|Molecular|S|0|0|Crystals|0|179.222|1.2|||||||||||||||||F4F4F2|1|||C13H9N|0|0|1200||Ld|85-02-9
 c_85198|0|2-Chloro-5-hydroxybenzophenone|2-Kloro-5-hidroksibenzofenon|C₁₃H₉ClO₂|2-Chloro-5-hydroxybenzophenone;C13H9ClO2|organic|Molecular|S|0|0|Crystals|0|232.663|1.2|||||||||||||||||F4F4F2|1|||C13H9ClO2|0|0|1200||Ld|85-19-8
 c_85290|0|(2-Chlorophenyl)(4-chlorophenyl)methanone|(2-Klorofenil)(4-klorofenil)metanon|C₁₃H₈Cl₂O|(2-Chlorophenyl)(4-chlorophenyl)methanone;C13H8Cl2O|organic|Molecular|S|0|0|Crystals|0|251.106|1.39314|||||||||||||||||F4F4F2|1|||C13H8Cl2O|0|0|1200||L|85-29-0
-c_85347|0|2,3,6-Trichlorobenzeneacetic acid|2,3,6-Triklorobenzeneasetik asit|C₈H₅Cl₃O₂|2,3,6-Trichlorobenzeneacetic acid;C8H5Cl3O2|organic|Molecular|S|0|0|Crystals|0|239.476|1.2|||||||||||||||||F4F4F2|1|||C8H5Cl3O2|0|0|1200||Ld|85-34-7
+c_85347|0|2,3,6-Trichlorobenzeneacetic acid|2,3,6-Triklorobenzenasetik asit|C₈H₅Cl₃O₂|2,3,6-Trichlorobenzeneacetic acid;C8H5Cl3O2|organic|Molecular|S|0|0|Crystals|0|239.476|1.2|||||||||||||||||F4F4F2|1|||C8H5Cl3O2|0|0|1200||Ld|85-34-7
 c_85381|0|2-Hydroxy-3-nitrobenzoic acid|2-Hidroksi-3-nitrobenzoik asit|C₇H₅NO₅|2-Hydroxy-3-nitrobenzoic acid;C7H5NO5|organic|Molecular|S|0|0|Crystals|0|183.119|1.2|||||||||||||||||F4F4F2|1|||C7H5NO5|0|0|1200||Ld|85-38-1
 c_85405|0|1,2,3,6-Tetrahydrophthalimide|1,2,3,6-Tetrahidroftalimit|C₈H₉NO₂|1,2,3,6-Tetrahydrophthalimide;C8H9NO2|organic|Molecular|S|0|0|Crystals|0|151.165|1.2|||||||||||||||||F4F4F2|1|||C8H9NO2|0|0|1200||Ld|85-40-5
 c_85416|0|1H-Isoindole-1,3(2H)-dione|1H-izoindol-1,3(2H)-dion|C₈H₅NO₂|1H-Isoindole-1,3(2H)-dione;C8H5NO2|organic|Molecular|S|0|0|Crystals|0|147.133|1.2|||||||||||||||||F4F4F2|1|||C8H5NO2|0|0|1200||Ld|85-41-6
@@ -2500,7 +2500,7 @@ c_86000|0|2-Nitrobiphenyl|2-Nitrobifenil|C₁₂H₉NO₂|2-Nitrobiphenyl;C12H9N
 c_86124|0|Thenaldine|Tenaldin|C₁₇H₂₂N₂S|Thenaldine;C17H22N2S|organic|Molecular|S|0|0|Crystals|0|286.437|1.2|||||||||||||||||F4F4F2|1|||C17H22N2S|0|0|1200||Ld|86-12-4
 c_86260|0|2-Methoxy-1,1'-biphenyl|2-Metoksi-1,1'-bifenil|C₁₃H₁₂O|2-Methoxy-1,1'-biphenyl;C13H12O|organic|Molecular|S|0|0|Crystals|0|184.238|1.0234|||||||||||||||||F4F4F2|1|||C13H12O|0|0|1200||L|86-26-0
 c_86282|0|9-Ethyl-9H-carbazole|9-Etil-9H-karbazol|C₁₄H₁₃N|9-Ethyl-9H-carbazole;C14H13N|organic|Molecular|S|0|0|Crystals|0|195.265|1.0598|||||||||||||||||F4F4F2|1|||C14H13N|0|0|1200||L|86-28-2
-c_86293|0|α-Phenylbenzeneacetonitrile|α-Fenilbenzeneasetonitril|C₁₄H₁₁N|α-Phenylbenzeneacetonitrile;C14H11N|organic|Molecular|S|0|0|Crystals|0|193.249|1.2|||||||||||||||||F4F4F2|1|||C14H11N|0|0|1200||Ld|86-29-3
+c_86293|0|α-Phenylbenzeneacetonitrile|α-Fenilbenzenasetonitril|C₁₄H₁₁N|α-Phenylbenzeneacetonitrile;C14H11N|organic|Molecular|S|0|0|Crystals|0|193.249|1.2|||||||||||||||||F4F4F2|1|||C14H11N|0|0|1200||Ld|86-29-3
 c_86306|0|N-Nitrosodiphenylamine|N-nitrosodifenilamin|C₁₂H₁₀N₂O|N-Nitrosodiphenylamine;C12H10N2O|organic|Molecular|S|0|0|Crystals|0|198.225|1.2|||||||||||||||||F4F4F2|1|||C12H10N2O|0|0|1200||Ld|86-30-6
 c_86340|0|1-Methyl-3-phenyl-2,5-pyrrolidinedione|1-Metil-3-fenil-2,5-pirrolidinedion|C₁₁H₁₁NO₂|1-Methyl-3-phenyl-2,5-pyrrolidinedione;C11H11NO2|organic|Molecular|S|0|0|Crystals|0|189.214|1.2|||||||||||||||||F4F4F2|1|||C11H11NO2|0|0|1200||Ld|86-34-0
 c_86351|0|Ethotoin|Etotoin|C₁₁H₁₂N₂O₂|Ethotoin;C11H12N2O2|organic|Molecular|S|0|0|Crystals|0|204.229|1.2|||||||||||||||||F4F4F2|1|||C11H12N2O2|0|0|1200||Ld|86-35-1
@@ -2518,7 +2518,7 @@ c_86806|0|Dimethisoquin|Dimetizokin|C₁₇H₂₄N₂O|Dimethisoquin;C17H24N2O|
 c_86817|0|3,4,5-Trimethoxybenzaldehyde|3,4,5-Trimetoksibenzaldehit|C₁₀H₁₂O₄|3,4,5-Trimethoxybenzaldehyde;C10H12O4|organic|Molecular|S|0|0|Crystals|0|196.202|1.2|||||||||||||||||F4F4F2|1|||C10H12O4|0|0|1200||Ld|86-81-7
 c_86840|0|1-Isocyanatonaphthalene|1-İzosianatonaftalen|C₁₁H₇NO|1-Isocyanatonaphthalene;C11H7NO|organic|Molecular|L|0|0|Powder|0|169.183|1.17742|269||||||||||||||||E8F2FA|0.18|||C11H7NO|0|0|2000|281998|L|86-84-0
 c_86873|0|1-Naphthaleneacetic acid|1-Naftaleneasetik asit|C₁₂H₁₀O₂|1-Naphthaleneacetic acid;C12H10O2|organic|Molecular|S|0|0|Crystals|0|186.21|1.2|||||||||||||||||F4F4F2|1|||C12H10O2|0|0|1200||Ld|86-87-3
-c_86884|0|1-Naphthalenylthiourea|1-Naftaleniltiourea|C₁₁H₁₀N₂S|1-Naphthalenylthiourea;C11H10N2S|organic|Molecular|S|0|0|Crystals|0|202.275|1.2|||||||||||||||||F4F4F2|1|||C11H10N2S|0|0|1200||Ld|86-88-4
+c_86884|0|1-Naphthalenylthiourea|1-Naftaleniltioüre|C₁₁H₁₀N₂S|1-Naphthalenylthiourea;C11H10N2S|organic|Molecular|S|0|0|Crystals|0|202.275|1.2|||||||||||||||||F4F4F2|1|||C11H10N2S|0|0|1200||Ld|86-88-4
 c_86931|0|1,4-Dihydro-1-phenyl-5H-tetrazole-5-thione|1,4-Dihidro-1-fenil-5H-tetrazol-5-tion|C₇H₆N₄S|1,4-Dihydro-1-phenyl-5H-tetrazole-5-thione;C7H6N4S|organic|Molecular|S|0|0|Crystals|0|178.213|1.2|||||||||||||||||F4F4F2|1|||C7H6N4S|0|0|1200||Ld|86-93-1
 c_86953|0|4-Hydroxy-2-quinolinone|4-Hidroksi-2-kinolinon|C₉H₇NO₂|4-Hydroxy-2-quinolinone;C9H7NO2|organic|Molecular|S|0|0|Crystals|0|161.16|1.2|||||||||||||||||F4F4F2|1|||C9H7NO2|0|0|1200||Ld|86-95-3
 c_86986|0|4,7-Dichloroquinoline|4,7-Diklorokinolin|C₉H₅Cl₂N|4,7-Dichloroquinoline;C9H5Cl2N|organic|Molecular|S|0|0|Crystals|0|198.046|1.2|||||||||||||||||F4F4F2|1|||C9H5Cl2N|0|0|1200||Ld|86-98-6
@@ -2562,12 +2562,12 @@ c_88142|0|2-Furancarboxylic acid|2-Furankarboksilik asit|C₅H₄O₃|2-Furancar
 c_88153|0|1-(2-Thienyl)ethanone|1-(2-Tienil)etanon|C₆H₆OS|1-(2-Thienyl)ethanone;C6H6OS|organic|Molecular|L|0|0|Powder|0|126.173|1.16792|215||||||||||||||||E8F2FA|0.18|||C6H6OS|0|0|2000|340463|L|88-15-3
 c_88164|0|1-Chloro-2-(trifluoromethyl)benzene|1-Kloro-2-(triflorometil)benzen|C₇H₄ClF₃|1-Chloro-2-(trifluoromethyl)benzene;C7H4ClF3|organic|Molecular|L|0|0|Powder|0|180.554|1.25403|153||||||||||||||||E8F2FA|0.18|||C7H4ClF3|0|0|2000|207701|L|88-16-4
 c_88175|0|2-(Trifluoromethyl)aniline|2-(Triflorometil)anilin|C₇H₆F₃N|2-(Trifluoromethyl)aniline;C7H6F3N|organic|Molecular|S|0|0|Crystals|0|161.127|1.28225|||||||||||||||||F4F4F2|1|||C7H6F3N|0|0|1200||L|88-17-5
-c_88197|0|2-Methylbenzenesulfonamide|2-Metilbenzenesülfonamit|C₇H₉NO₂S|2-Methylbenzenesulfonamide;C7H9NO2S|organic|Molecular|S|0|0|Crystals|0|171.214|1.2|||||||||||||||||F4F4F2|1|||C7H9NO2S|0|0|1200||Ld|88-19-7
+c_88197|0|2-Methylbenzenesulfonamide|2-Metilbenzensülfonamit|C₇H₉NO₂S|2-Methylbenzenesulfonamide;C7H9NO2S|organic|Molecular|S|0|0|Crystals|0|171.214|1.2|||||||||||||||||F4F4F2|1|||C7H9NO2S|0|0|1200||Ld|88-19-7
 c_88244|0|Bis(3-tert-butyl-5-ethyl-2-hydroxyphenyl)methane|Bis(3-tert-bütil-5-etil-2-hidroksifenil)metan|C₂₅H₃₆O₂|Bis(3-tert-butyl-5-ethyl-2-hydroxyphenyl)methane;C25H36O2|organic|Molecular|S|0|0|Crystals|0|368.561|1.2|||||||||||||||||F4F4F2|1|||C25H36O2|0|0|1200||Ld|88-24-4
 c_88277|0|2,6-Di-tert-butyl-4-(dimethylaminomethyl)phenol|2,6-Di-tert-bütil-4-(dimetilaminometil)fenol|C₁₇H₂₉NO|2,6-Di-tert-butyl-4-(dimethylaminomethyl)phenol;C17H29NO|organic|Molecular|S|0|0|Crystals|0|263.425|1.2|||||||||||||||||F4F4F2|1|||C17H29NO|0|0|1200||Ld|88-27-7
 c_88299|0|Versalide|Versalit|C₁₈H₂₆O|Versalide;C18H26O|organic|Molecular|S|0|0|Crystals|0|258.405|1.2|||||||||||||||||F4F4F2|1|||C18H26O|0|0|1200||Ld|88-29-9
 c_88324|0|3-tert-Butyl-4-methoxyphenol|3-Tert-bütil-4-metoksifenol|C₁₁H₁₆O₂|3-tert-Butyl-4-methoxyphenol;C11H16O2|organic|Molecular|S|0|0|Crystals|0|180.247|1.2|||||||||||||||||F4F4F2|1|||C11H16O2|0|0|1200||Ld|88-32-4
-c_88584|0|2,5-Di-tert-butyl-1,4-benzenediol|2,5-Di-tert-bütil-1,4-benzenediol|C₁₄H₂₂O₂|2,5-Di-tert-butyl-1,4-benzenediol;C14H22O2|organic|Molecular|S|0|0|Crystals|0|222.328|1.2|||||||||||||||||F4F4F2|1|||C14H22O2|0|0|1200||Ld|88-58-4
+c_88584|0|2,5-Di-tert-butyl-1,4-benzenediol|2,5-Di-tert-bütil-1,4-benzendiol|C₁₄H₂₂O₂|2,5-Di-tert-butyl-1,4-benzenediol;C14H22O2|organic|Molecular|S|0|0|Crystals|0|222.328|1.2|||||||||||||||||F4F4F2|1|||C14H22O2|0|0|1200||Ld|88-58-4
 c_88608|0|2-tert-Butyl-5-methylphenol|2-Tert-bütil-5-metilfenol|C₁₁H₁₆O|2-tert-Butyl-5-methylphenol;C11H16O|organic|Molecular|S|0|0|Crystals|0|164.248|0.9228|||||||||||||||||F4F4F2|1|||C11H16O|0|0|1200||L|88-60-8
 c_88653|0|2-Bromobenzoic acid|2-Bromobenzoik asit|C₇H₅BrO₂|2-Bromobenzoic acid;C7H5BrO2|organic|Molecular|S|0|0|Crystals|0|201.019|1.92925|||||||||||||||||F4F4F2|1|||C7H5BrO2|0|0|1200||L|88-65-3
 c_88675|0|2-Iodobenzoic acid|2-İodobenzoik asit|C₇H₅IO₂|2-Iodobenzoic acid;C7H5IO2|organic|Molecular|S|0|0|Crystals|0|248.019|2.2525|||||||||||||||||F4F4F2|1|||C7H5IO2|0|0|1200||L|88-67-5
@@ -2576,16 +2576,16 @@ c_88755|0|2-Nitrophenol|2-Nitrofenol|C₆H₅NO₃|2-Nitrophenol;C6H5NO3|organic
 c_88824|0|2,3,5-Triiodobenzoic acid|2,3,5-Triiodobenzoik asit|C₇H₃I₃O₂|2,3,5-Triiodobenzoic acid;C7H3I3O2|organic|Molecular|S|0|0|Crystals|0|499.812|1.2|||||||||||||||||F4F4F2|1|||C7H3I3O2|0|0|1200||Ld|88-82-4
 c_88879|0|4-Chloro-2,6-dinitrophenol|4-Kloro-2,6-dinitrofenol|C₆H₃ClN₂O₅|4-Chloro-2,6-dinitrophenol;C6H3ClN2O5|organic|Molecular|S|0|0|Crystals|0|218.549|1.7422|||||||||||||||||F4F4F2|1|||C6H3ClN2O5|0|0|1200||L|88-87-9
 c_88880|0|2-Chloro-1,3,5-trinitrobenzene|2-Kloro-1,3,5-trinitrobenzen|C₆H₂ClN₃O₆|2-Chloro-1,3,5-trinitrobenzene;C6H2ClN3O6|organic|Molecular|S|0|0|Crystals|0|247.547|1.7972|||||||||||||||||F4F4F2|1|||C6H2ClN3O6|0|0|1200||L|88-88-0
-c_88959|0|1,2-Benzenedicarbonyl dichloride|1,2-Benzenedikarbonil diklorür|C₈H₄Cl₂O₂|1,2-Benzenedicarbonyl dichloride;C8H4Cl2O2|organic|Molecular|L|0|0|Powder|0|203.018|1.40892|284||||||||||||||||E8F2FA|0.18|||C8H4Cl2O2|0|0|2000|241502|L|88-95-9
-c_88960|0|1,2-Benzenedicarboxamide|1,2-Benzenedikarboksamit|C₈H₈N₂O₂|1,2-Benzenedicarboxamide;C8H8N2O2|organic|Molecular|S|0|0|Crystals|0|164.164|1.2|||||||||||||||||F4F4F2|1|||C8H8N2O2|0|0|1200||Ld|88-96-0
+c_88959|0|1,2-Benzenedicarbonyl dichloride|1,2-Benzendikarbonil diklorür|C₈H₄Cl₂O₂|1,2-Benzenedicarbonyl dichloride;C8H4Cl2O2|organic|Molecular|L|0|0|Powder|0|203.018|1.40892|284||||||||||||||||E8F2FA|0.18|||C8H4Cl2O2|0|0|2000|241502|L|88-95-9
+c_88960|0|1,2-Benzenedicarboxamide|1,2-Benzendikarboksamit|C₈H₈N₂O₂|1,2-Benzenedicarboxamide;C8H8N2O2|organic|Molecular|S|0|0|Crystals|0|164.164|1.2|||||||||||||||||F4F4F2|1|||C8H8N2O2|0|0|1200||Ld|88-96-0
 c_89009|0|2,3-Pyridinedicarboxylic acid|2,3-Piridinedikarboksilik asit|C₇H₅NO₄|2,3-Pyridinedicarboxylic acid;C7H5NO4|organic|Molecular|S|0|0|Crystals|0|167.12|1.2|||||||||||||||||F4F4F2|1|||C7H5NO4|0|0|1200||Ld|89-00-9
-c_89021|0|2,4-Dinitrobenzenesulfonic acid|2,4-Dinitrobenzenesülfonik asit|C₆H₄N₂O₇S|2,4-Dinitrobenzenesulfonic acid;C6H4N2O7S|organic|Molecular|S|0|0|Crystals|0|248.165|1.2|||||||||||||||||F4F4F2|1|||C6H4N2O7S|0|0|1200||Ld|89-02-1
+c_89021|0|2,4-Dinitrobenzenesulfonic acid|2,4-Dinitrobenzensülfonik asit|C₆H₄N₂O₇S|2,4-Dinitrobenzenesulfonic acid;C6H4N2O7S|organic|Molecular|S|0|0|Crystals|0|248.165|1.2|||||||||||||||||F4F4F2|1|||C6H4N2O7S|0|0|1200||Ld|89-02-1
 c_89247|0|5-Phenyl-2,4-imidazolidinedione|5-Fenil-2,4-imidazolidinedion|C₉H₈N₂O₂|5-Phenyl-2,4-imidazolidinedione;C9H8N2O2|organic|Molecular|S|0|0|Crystals|0|176.175|1.2|||||||||||||||||F4F4F2|1|||C9H8N2O2|0|0|1200||Ld|89-24-7
 c_89258|0|2,4-Dihydro-5-methyl-2-phenyl-3H-pyrazol-3-one|2,4-Dihidro-5-metil-2-fenil-3H-pirazol-3-on|C₁₀H₁₀N₂O|2,4-Dihydro-5-methyl-2-phenyl-3H-pyrazol-3-one;C10H10N2O|organic|Molecular|S|0|0|Crystals|0|174.203|1.2|||||||||||||||||F4F4F2|1|||C10H10N2O|0|0|1200||Ld|89-25-8
 c_89372|0|2,4-Dinitrophenyl dimethylcarbamodithioate|2,4-Dinitrofenil dimetilkarbamoditioat|C₉H₉N₃O₄S₂|2,4-Dinitrophenyl dimethylcarbamodithioate;C9H9N3O4S2|organic|Molecular|S|0|0|Crystals|0|287.308|1.542|||||||||||||||||F4F4F2|1|||C9H9N3O4S2|0|0|1200||L|89-37-2
 c_89394|0|1,4-Dimethoxy-2-nitrobenzene|1,4-Dimetoksi-2-nitrobenzen|C₈H₉NO₄|1,4-Dimethoxy-2-nitrobenzene;C8H9NO4|organic|Molecular|S|0|0|Crystals|0|183.163|1.16661|||||||||||||||||F4F4F2|1|||C8H9NO4|0|0|1200||L|89-39-4
 c_89407|0|5-Nitro-1H-isoindole-1,3(2H)-dione|5-Nitro-1H-izoindol-1,3(2H)-dion|C₈H₄N₂O₄|5-Nitro-1H-isoindole-1,3(2H)-dione;C8H4N2O4|organic|Molecular|S|0|0|Crystals|0|192.13|1.2|||||||||||||||||F4F4F2|1|||C8H4N2O4|0|0|1200||Ld|89-40-7
-c_89510|0|2-Carboxybenzeneacetic acid|2-Karboksibenzeneasetik asit|C₉H₈O₄|2-Carboxybenzeneacetic acid;C9H8O4|organic|Molecular|S|0|0|Crystals|0|180.159|1.41002|||||||||||||||||F4F4F2|1|||C9H8O4|0|0|1200||L|89-51-0
+c_89510|0|2-Carboxybenzeneacetic acid|2-Karboksibenzenasetik asit|C₉H₈O₄|2-Carboxybenzeneacetic acid;C9H8O4|organic|Molecular|S|0|0|Crystals|0|180.159|1.41002|||||||||||||||||F4F4F2|1|||C9H8O4|0|0|1200||L|89-51-0
 c_89521|0|2-(Acetylamino)benzoic acid|2-(Asetilamino)benzoik asit|C₉H₉NO₃|2-(Acetylamino)benzoic acid;C9H9NO3|organic|Molecular|S|0|0|Crystals|0|179.175|1.2|||||||||||||||||F4F4F2|1|||C9H9NO3|0|0|1200||Ld|89-52-1
 c_89543|0|5-Amino-2-chlorobenzoic acid|5-Amino-2-klorobenzoik asit|C₇H₆ClNO₂|5-Amino-2-chlorobenzoic acid;C7H6ClNO2|organic|Molecular|S|0|0|Crystals|0|171.58|1.51915|||||||||||||||||F4F4F2|1|||C7H6ClNO2|0|0|1200||L|89-54-3
 c_89554|0|5-Bromo-2-hydroxybenzoic acid|5-Bromo-2-hidroksibenzoik asit|C₇H₅BrO₃|5-Bromo-2-hydroxybenzoic acid;C7H5BrO3|organic|Molecular|S|0|0|Crystals|0|217.018|1.2|||||||||||||||||F4F4F2|1|||C7H5BrO3|0|0|1200||Ld|89-55-4
@@ -2611,16 +2611,16 @@ c_89849|0|1-(2,4-Dihydroxyphenyl)ethanone|1-(2,4-Dihidroksifenil)etanon|C₈H₈
 c_89861|0|2,4-Dihydroxybenzoic acid|2,4-Dihidroksibenzoik asit|C₇H₆O₄|2,4-Dihydroxybenzoic acid;C7H6O4|organic|Molecular|S|0|0|Crystals|0|154.121|1.2|||||||||||||||||F4F4F2|1|||C7H6O4|0|0|1200||Ld|89-86-1
 c_89872|0|2,4-Dimethyl-1-nitrobenzene|2,4-Dimetil-1-nitrobenzen|C₈H₉NO₂|2,4-Dimethyl-1-nitrobenzene;C8H9NO2|organic|Molecular|L|0|0|Powder|0|151.165|1.13515|243||||||||||||||||E8F2FA|0.18|||C8H9NO2|0|0|2000|300474|L|89-87-2
 c_89929|0|1-(Bromomethyl)-2-methylbenzene|1-(Bromometil)-2-metilbenzen|C₈H₉Br|1-(Bromomethyl)-2-methylbenzene;C8H9Br|organic|Molecular|L|0|0|Powder|0|185.064|1.38112|217||||||||||||||||E8F2FA|0.18|||C8H9Br|0|0|2000|233072|L|89-92-9
-c_89930|0|2-Methylbenzenemethanamine|2-Metilbenzenemetanamin|C₈H₁₁N|2-Methylbenzenemethanamine;C8H11N|organic|Molecular|L|0|0|Powder|0|121.183|0.976619|206||||||||||||||||E8F2FA|0.18|||C8H11N|0|0|2000|347946|L|89-93-0
+c_89930|0|2-Methylbenzenemethanamine|2-Metilbenzenmetanamin|C₈H₁₁N|2-Methylbenzenemethanamine;C8H11N|organic|Molecular|L|0|0|Powder|0|121.183|0.976619|206||||||||||||||||E8F2FA|0.18|||C8H11N|0|0|2000|347946|L|89-93-0
 c_89963|0|1-Chloro-2-ethylbenzene|1-Kloro-2-etilbenzen|C₈H₉Cl|1-Chloro-2-ethylbenzene;C8H9Cl|organic|Molecular|L|0|0|Powder|0|140.61|1.05692|177||||||||||||||||E8F2FA|0.18|||C8H9Cl|0|0|2000|281724|L|89-96-3
 c_89985|0|2-Chlorobenzaldehyde|2-Klorobenzaldehit|C₇H₅ClO|2-Chlorobenzaldehyde;C7H5ClO|organic|Molecular|L|0|0|Powder|0|140.566|1.24832|212.1||||||||||||||||E8F2FA|0.18|||C7H5ClO|0|0|2000|303786|L|89-98-5
-c_90017|0|2-Hydroxybenzenemethanol|2-Hidroksibenzenemetanol|C₇H₈O₂|2-Hydroxybenzenemethanol;C7H8O2|organic|Molecular|S|0|0|Crystals|0|124.139|1.16132|||||||||||||||||F4F4F2|1|||C7H8O2|0|0|1200||L|90-01-7
+c_90017|0|2-Hydroxybenzenemethanol|2-Hidroksibenzenmetanol|C₇H₈O₂|2-Hydroxybenzenemethanol;C7H8O2|organic|Molecular|S|0|0|Crystals|0|124.139|1.16132|||||||||||||||||F4F4F2|1|||C7H8O2|0|0|1200||L|90-01-7
 c_90142|0|1-Iodonaphthalene|1-İodonaftalen|C₁₀H₇I|1-Iodonaphthalene;C10H7I|organic|Molecular|L|0|0|Powder|0|254.07|1.73992|303||||||||||||||||E8F2FA|0.18|||C10H7I|0|0|2000|199556|L|90-14-2
 c_90153|0|1-Naphthol|1-Naftol|C₁₀H₈O|1-Naphthol;C10H8O|organic|Molecular|S|0|0|Crystals|0|144.173|1.099|||||||||||||||||F4F4F2|1|||C10H8O|0|0|1200||L|90-15-3
 c_90197|0|Rhamnetin|Rhamnetin|C₁₆H₁₂O₇|Rhamnetin;C16H12O7|organic|Molecular|S|0|0|Crystals|0|316.265|1.2|||||||||||||||||F4F4F2|1|||C16H12O7|0|0|1200||Ld|90-19-7
 c_90244|0|2,4-Dimethoxy-6-hydroxyacetophenone|2,4-Dimetoksi-6-hidroksiasetofenon|C₁₀H₁₂O₄|2,4-Dimethoxy-6-hydroxyacetophenone;C10H12O4|organic|Molecular|S|0|0|Crystals|0|196.202|1.2|||||||||||||||||F4F4F2|1|||C10H12O4|0|0|1200||Ld|90-24-4
-c_90266|0|α-Ethylbenzeneacetamide|α-Etilbenzeneasetamit|C₁₀H₁₃NO|α-Ethylbenzeneacetamide;C10H13NO|organic|Molecular|S|0|0|Crystals|0|163.22|1.2|||||||||||||||||F4F4F2|1|||C10H13NO|0|0|1200||Ld|90-26-6
-c_90277|0|α-Ethylbenzeneacetic acid|α-Etilbenzeneasetik asit|C₁₀H₁₂O₂|α-Ethylbenzeneacetic acid;C10H12O2|organic|Molecular|S|0|0|Crystals|0|164.204|1.2|||||||||||||||||F4F4F2|1|||C10H12O2|0|0|1200||Ld|90-27-7
+c_90266|0|α-Ethylbenzeneacetamide|α-Etilbenzenasetamit|C₁₀H₁₃NO|α-Ethylbenzeneacetamide;C10H13NO|organic|Molecular|S|0|0|Crystals|0|163.22|1.2|||||||||||||||||F4F4F2|1|||C10H13NO|0|0|1200||Ld|90-26-6
+c_90277|0|α-Ethylbenzeneacetic acid|α-Etilbenzenasetik asit|C₁₀H₁₂O₂|α-Ethylbenzeneacetic acid;C10H12O2|organic|Molecular|S|0|0|Crystals|0|164.204|1.2|||||||||||||||||F4F4F2|1|||C10H12O2|0|0|1200||Ld|90-27-7
 c_90302|0|N-Phenyl-1-naphthalenamine|N-fenil-1-naftalenamin|C₁₆H₁₃N|N-Phenyl-1-naphthalenamine;C16H13N|organic|Molecular|S|0|0|Crystals|0|219.287|1.2|||||||||||||||||F4F4F2|1|||C16H13N|0|0|1200||Ld|90-30-2
 c_90335|0|7-Hydroxy-4-methyl-2H-1-benzopyran-2-one|7-Hidroksi-4-metil-2H-1-benzopiran-2-on|C₁₀H₈O₃|7-Hydroxy-4-methyl-2H-1-benzopyran-2-one;C10H8O3|organic|Molecular|S|0|0|Crystals|0|176.171|1.2|||||||||||||||||F4F4F2|1|||C10H8O3|0|0|1200||Ld|90-33-5
 c_90391|0|Sparteine|Spartein|C₁₅H₂₆N₂|Sparteine;C15H26N2|organic|Molecular|S|0|0|Crystals|0|234.387|1.01962|||||||||||||||||F4F4F2|1|||C15H26N2|0|0|1200||L|90-39-1
@@ -2640,10 +2640,10 @@ c_90904|0|(4-Bromophenyl)phenylmethanone|(4-Bromofenil)fenilmetanon|C₁₃H₉B
 c_90948|0|N,N,N',N'-Tetramethyl-4,4'-diaminobenzophenone|N,N,N',N'-tetrametil-4,4'-diaminobenzofenon|C₁₇H₂₀N₂O|N,N,N',N'-Tetramethyl-4,4'-diaminobenzophenone;C17H20N2O|organic|Molecular|S|0|0|Crystals|0|268.36|1.2|||||||||||||||||F4F4F2|1|||C17H20N2O|0|0|1200||Ld|90-94-8
 c_90982|0|4,4'-Dichlorobenzophenone|4,4'-Diklorobenzofenon|C₁₃H₈Cl₂O|4,4'-Dichlorobenzophenone;C13H8Cl2O|organic|Molecular|S|0|0|Crystals|0|251.106|1.45002|||||||||||||||||F4F4F2|1|||C13H8Cl2O|0|0|1200||L|90-98-2
 c_90993|0|Chlorodiphenylmethane|Klorodifenilmetan|C₁₃H₁₁Cl|Chlorodiphenylmethane;C13H11Cl|organic|Molecular|L|0|0|Powder|0|202.681|1.14025|||||||||||||||||E8F2FA|0.18|||C13H11Cl|0|0|2000||L|90-99-3
-c_91009|0|α-Phenylbenzenemethanamine|α-Fenilbenzenemetanamin|C₁₃H₁₃N|α-Phenylbenzenemethanamine;C13H13N|organic|Molecular|S|0|0|Crystals|0|183.254|1.06332|||||||||||||||||F4F4F2|1|||C13H13N|0|0|1200||L|91-00-9
+c_91009|0|α-Phenylbenzenemethanamine|α-Fenilbenzenmetanamin|C₁₃H₁₃N|α-Phenylbenzenemethanamine;C13H13N|organic|Molecular|S|0|0|Crystals|0|183.254|1.06332|||||||||||||||||F4F4F2|1|||C13H13N|0|0|1200||L|91-00-9
 c_91010|0|Diphenylmethanol|Difenilmetanol|C₁₃H₁₂O|Diphenylmethanol;C13H12O|organic|Molecular|S|0|0|Crystals|0|184.238|1.2|||||||||||||||||F4F4F2|1|||C13H12O|0|0|1200||Ld|91-01-0
 c_91021|0|Phenyl-2-pyridinylmethanone|Fenil-2-piridinilmetanon|C₁₂H₉NO|Phenyl-2-pyridinylmethanone;C12H9NO|organic|Molecular|S|0|0|Crystals|0|183.21|1.15562|||||||||||||||||F4F4F2|1|||C12H9NO|0|0|1200||L|91-02-1
-c_91043|0|2-Hydroxy-5-methyl-1,3-benzenedimethanol|2-Hidroksi-5-metil-1,3-benzenedimetanol|C₉H₁₂O₃|2-Hydroxy-5-methyl-1,3-benzenedimethanol;C9H12O3|organic|Molecular|S|0|0|Crystals|0|168.192|1.2|||||||||||||||||F4F4F2|1|||C9H12O3|0|0|1200||Ld|91-04-3
+c_91043|0|2-Hydroxy-5-methyl-1,3-benzenedimethanol|2-Hidroksi-5-metil-1,3-benzendimetanol|C₉H₁₂O₃|2-Hydroxy-5-methyl-1,3-benzenedimethanol;C9H12O3|organic|Molecular|S|0|0|Crystals|0|168.192|1.2|||||||||||||||||F4F4F2|1|||C9H12O3|0|0|1200||Ld|91-04-3
 c_91134|0|1,2-Bis(bromomethyl)benzene|1,2-Bis(bromometil)benzen|C₈H₈Br₂|1,2-Bis(bromomethyl)benzene;C8H8Br2|organic|Molecular|S|0|0|Crystals|0|263.96|1.98825|||||||||||||||||F4F4F2|1|||C8H8Br2|0|0|1200||L|91-13-4
 c_91156|0|o-Dicyanobenzene|O-disianobenzen|C₈H₄N₂|o-Dicyanobenzene;C8H4N2|organic|Molecular|S|0|0|Crystals|0|128.134|1.12503|||||||||||||||||F4F4F2|1|||C8H4N2|0|0|1200||L|91-15-6
 c_91167|0|1,2-Dimethoxybenzene|1,2-Dimetoksibenzen|C₈H₁₀O₂|1,2-Dimethoxybenzene;C8H10O2|organic|Molecular|L|0|0|Powder|0|138.166|1.08103|206||||||||||||||||E8F2FA|0.18|||C8H10O2|0|0|2000|305178|L|91-16-7
@@ -2652,7 +2652,7 @@ c_91190|0|Quinoxaline|Kinoksalin|C₈H₆N₂|Quinoxaline;C8H6N2|organic|Molecul
 c_91214|0|1,2,3,4-Tetrahydroisoquinoline|1,2,3,4-Tetrahidroizokinolin|C₉H₁₁N|1,2,3,4-Tetrahydroisoquinoline;C9H11N|organic|Molecular|L|0|0|Powder|0|133.194|1.06422|232.5||||||||||||||||E8F2FA|0.18|||C9H11N|0|0|2000|334078|L|91-21-4
 c_91338|0|Benzthiazide|Benztiazit|C₁₅H₁₄ClN₃O₄S₃|Benzthiazide;C15H14ClN3O4S3|organic|Molecular|S|0|0|Crystals|0|431.924|1.2|||||||||||||||||F4F4F2|1|||C15H14ClN3O4S3|0|0|1200||Ld|91-33-8
 c_91407|0|2-(Phenylamino)benzoic acid|2-(Fenilamino)benzoik asit|C₁₃H₁₁NO₂|2-(Phenylamino)benzoic acid;C13H11NO2|organic|Molecular|S|0|0|Crystals|0|213.236|1.2|||||||||||||||||F4F4F2|1|||C13H11NO2|0|0|1200||Ld|91-40-7
-c_91485|0|trans-α-(Phenylmethylene)benzeneacetic acid|Trans-α-(fenilmetilen)benzeneasetik asit|C₁₅H₁₂O₂|trans-α-(Phenylmethylene)benzeneacetic acid;C15H12O2|organic|Molecular|S|0|0|Crystals|0|224.259|1.2|||||||||||||||||F4F4F2|1|||C15H12O2|0|0|1200||Ld|91-48-5
+c_91485|0|trans-α-(Phenylmethylene)benzeneacetic acid|Trans-α-(fenilmetilen)benzenasetik asit|C₁₅H₁₂O₂|trans-α-(Phenylmethylene)benzeneacetic acid;C15H12O2|organic|Molecular|S|0|0|Crystals|0|224.259|1.2|||||||||||||||||F4F4F2|1|||C15H12O2|0|0|1200||Ld|91-48-5
 c_91496|0|N-Butyl-N-phenylacetamide|N-bütil-N-fenilasetamit|C₁₂H₁₇NO|N-Butyl-N-phenylacetamide;C12H17NO|organic|Molecular|L|0|0|Powder|0|191.274|0.99122|281||||||||||||||||E8F2FA|0.18|||C12H17NO|0|0|2000|254949|L|91-49-6
 c_91521|0|2,4-Dimethoxybenzoic acid|2,4-Dimetoksibenzoik asit|C₉H₁₀O₄|2,4-Dimethoxybenzoic acid;C9H10O4|organic|Molecular|S|0|0|Crystals|0|182.175|1.2|||||||||||||||||F4F4F2|1|||C9H10O4|0|0|1200||Ld|91-52-1
 c_91554|0|2,3-Dimethyl-1H-indole|2,3-Dimetil-1H-indol|C₁₀H₁₁N|2,3-Dimethyl-1H-indole;C10H11N|organic|Molecular|S|0|0|Crystals|0|145.205|1.2|||||||||||||||||F4F4F2|1|||C10H11N|0|0|1200||Ld|91-55-4
@@ -2664,7 +2664,7 @@ c_91623|0|6-Methylquinoline|6-Metilkinolin|C₁₀H₉N|6-Methylquinoline;C10H9N
 c_91645|0|2H-1-Benzopyran-2-one|2H-1-benzopiran-2-on|C₉H₆O₂|2H-1-Benzopyran-2-one;C9H6O2|organic|Molecular|S|0|0|Crystals|0|146.145|0.9352|||||||||||||||||F4F4F2|1|||C9H6O2|0|0|1200||L|91-64-5
 c_91656|0|Cyclohexyldiethylamine|Siklohekzildietilamin|C₁₀H₂₁N|Cyclohexyldiethylamine;C10H21N|organic|Molecular|L|0|0|Powder|0|155.285|0.844325|192||||||||||||||||E8F2FA|0.18|||C10H21N|0|0|2000|263600|L|91-65-6
 c_91689|0|3-(Diethylamino)phenol|3-(Dietilamino)fenol|C₁₀H₁₅NO|3-(Diethylamino)phenol;C10H15NO|organic|Molecular|S|0|0|Crystals|0|165.236|1.2|||||||||||||||||F4F4F2|1|||C10H15NO|0|0|1200||Ld|91-68-9
-c_91736|0|N-Phenyl-N-benzylbenzenemethanamine|N-fenil-N-benzilbenzenemetanamin|C₂₀H₁₉N|N-Phenyl-N-benzylbenzenemethanamine;C20H19N|organic|Molecular|S|0|0|Crystals|0|273.379|1.04448|||||||||||||||||F4F4F2|1|||C20H19N|0|0|1200||L|91-73-6
+c_91736|0|N-Phenyl-N-benzylbenzenemethanamine|N-fenil-N-benzilbenzenmetanamin|C₂₀H₁₉N|N-Phenyl-N-benzylbenzenemethanamine;C20H19N|organic|Molecular|S|0|0|Crystals|0|273.379|1.04448|||||||||||||||||F4F4F2|1|||C20H19N|0|0|1200||L|91-73-6
 c_91758|0|Antazoline|Antazolin|C₁₇H₁₉N₃|Antazoline;C17H19N3|organic|Molecular|S|0|0|Crystals|0|265.36|1.2|||||||||||||||||F4F4F2|1|||C17H19N3|0|0|1200||Ld|91-75-8
 c_91769|0|6-Phenyl-1,3,5-triazine-2,4-diamine|6-Fenil-1,3,5-triazin-2,4-diamin|C₉H₉N₅|6-Phenyl-1,3,5-triazine-2,4-diamine;C9H9N5|organic|Molecular|S|0|0|Crystals|0|187.206|1.2|||||||||||||||||F4F4F2|1|||C9H9N5|0|0|1200||Ld|91-76-9
 c_91781|0|Hexahydro-1,3,5-triphenyl-1,3,5-triazine|Hekzahidro-1,3,5-trifenil-1,3,5-triazin|C₂₁H₂₁N₃|Hexahydro-1,3,5-triphenyl-1,3,5-triazine;C21H21N3|organic|Molecular|S|0|0|Crystals|0|315.42|1.2|||||||||||||||||F4F4F2|1|||C21H21N3|0|0|1200||Ld|91-78-1
@@ -2703,9 +2703,9 @@ c_92955|0|p-Xenylcarbimide|P-ksenilkarbimit|C₁₃H₉NO|p-Xenylcarbimide;C13H9
 c_92999|0|N,N,2-Trimethyl-6-quinolinamine|N,N,2-trimetil-6-kinolinamin|C₁₂H₁₄N₂|N,N,2-Trimethyl-6-quinolinamine;C12H14N2|organic|Molecular|S|0|0|Crystals|0|186.258|1.2|||||||||||||||||F4F4F2|1|||C12H14N2|0|0|1200||Ld|92-99-9
 c_93016|0|6-Hydroxy-2-naphthalenesulfonic acid|6-Hidroksi-2-naftalenesülfonik asit|C₁₀H₈O₄S|6-Hydroxy-2-naphthalenesulfonic acid;C10H8O4S|organic|Molecular|S|0|0|Crystals|0|224.23|1.2|||||||||||||||||F4F4F2|1|||C10H8O4S|0|0|1200||Ld|93-01-6
 c_93027|0|2,5-Dimethoxybenzaldehyde|2,5-Dimetoksibenzaldehit|C₉H₁₀O₃|2,5-Dimethoxybenzaldehyde;C9H10O3|organic|Molecular|S|0|0|Crystals|0|166.176|1.2|||||||||||||||||F4F4F2|1|||C9H10O3|0|0|1200||Ld|93-02-7
-c_93038|0|3,4-Dimethoxybenzenemethanol|3,4-Dimetoksibenzenemetanol|C₉H₁₂O₃|3,4-Dimethoxybenzenemethanol;C9H12O3|organic|Molecular|L|0|0|Powder|0|168.192|1.17817|298||||||||||||||||E8F2FA|0.18|||C9H12O3|0|0|2000|298832|L|93-03-8
+c_93038|0|3,4-Dimethoxybenzenemethanol|3,4-Dimetoksibenzenmetanol|C₉H₁₂O₃|3,4-Dimethoxybenzenemethanol;C9H12O3|organic|Molecular|L|0|0|Powder|0|168.192|1.17817|298||||||||||||||||E8F2FA|0.18|||C9H12O3|0|0|2000|298832|L|93-03-8
 c_93049|0|2-Methoxynaphthalene|2-Metoksinaftalen|C₁₁H₁₀O|2-Methoxynaphthalene;C11H10O|organic|Molecular|S|0|0|Crystals|0|158.2|1.2|||||||||||||||||F4F4F2|1|||C11H10O|0|0|1200||Ld|93-04-9
-c_93050|0|N,N-Diethyl-1,4-benzenediamine|N,N-dietil-1,4-benzenediamin|C₁₀H₁₆N₂|N,N-Diethyl-1,4-benzenediamine;C10H16N2|organic|Molecular|L|0|0|Powder|0|164.252|1|261||||||||||||||||E8F2FA|0.18|||C10H16N2|0|0|2000|286177|Ld|93-05-0
+c_93050|0|N,N-Diethyl-1,4-benzenediamine|N,N-dietil-1,4-benzendiamin|C₁₀H₁₆N₂|N,N-Diethyl-1,4-benzenediamine;C10H16N2|organic|Molecular|L|0|0|Powder|0|164.252|1|261||||||||||||||||E8F2FA|0.18|||C10H16N2|0|0|2000|286177|Ld|93-05-0
 c_93072|0|3,4-Dimethoxybenzoic acid|3,4-Dimetoksibenzoik asit|C₉H₁₀O₄|3,4-Dimethoxybenzoic acid;C9H10O4|organic|Molecular|S|0|0|Crystals|0|182.175|1.2|||||||||||||||||F4F4F2|1|||C9H10O4|0|0|1200||Ld|93-07-2
 c_93083|0|2-Acetonaphthone|2-Asetonafton|C₁₂H₁₀O|2-Acetonaphthone;C12H10O|organic|Molecular|S|0|0|Crystals|0|170.211|1.2|||||||||||||||||F4F4F2|1|||C12H10O|0|0|1200||Ld|93-08-3
 c_93094|0|2-Naphthalenecarboxylic acid|2-Naftalenekarboksilik asit|C₁₁H₈O₂|2-Naphthalenecarboxylic acid;C11H8O2|organic|Molecular|S|0|0|Crystals|0|172.183|1.0771|||||||||||||||||F4F4F2|1|||C11H8O2|0|0|1200||L|93-09-4
@@ -2714,20 +2714,20 @@ c_93118|0|2-Naphthalenesulfonyl chloride|2-Naftalenesülfonil klorür|C₁₀H�
 c_93141|0|3-(2-Methoxyphenoxy)-1,2-propanediol|3-(2-Metoksifenoksi)-1,2-propanediol|C₁₀H₁₄O₄|3-(2-Methoxyphenoxy)-1,2-propanediol;C10H14O4|organic|Molecular|S|0|0|Crystals|0|198.218|1.2|||||||||||||||||F4F4F2|1|||C10H14O4|0|0|1200||Ld|93-14-1
 c_93152|0|4-Allyl-1,2-dimethoxybenzene|4-Allil-1,2-dimetoksibenzen|C₁₁H₁₄O₂|4-Allyl-1,2-dimethoxybenzene;C11H14O2|organic|Molecular|L|0|0|Powder|0|178.231|1.03962|254.7||||||||||||||||E8F2FA|0.18|||C11H14O2|0|0|2000|260621|L|93-15-2
 c_93185|0|2-Ethoxynaphthalene|2-Etoksinaftalen|C₁₂H₁₂O|2-Ethoxynaphthalene;C12H12O|organic|Molecular|S|0|0|Crystals|0|172.227|1.06402|||||||||||||||||F4F4F2|1|||C12H12O|0|0|1200||L|93-18-5
-c_93254|0|2-Methoxybenzeneacetic acid|2-Metoksibenzeneasetik asit|C₉H₁₀O₃|2-Methoxybenzeneacetic acid;C9H10O3|organic|Molecular|S|0|0|Crystals|0|166.176|1.2|||||||||||||||||F4F4F2|1|||C9H10O3|0|0|1200||Ld|93-25-4
+c_93254|0|2-Methoxybenzeneacetic acid|2-Metoksibenzenasetik asit|C₉H₁₀O₃|2-Methoxybenzeneacetic acid;C9H10O3|organic|Molecular|S|0|0|Crystals|0|166.176|1.2|||||||||||||||||F4F4F2|1|||C9H10O3|0|0|1200||Ld|93-25-4
 c_93265|0|N-(2-Methoxyphenyl)acetamide|N-(2-metoksifenil)asetamit|C₉H₁₁NO₂|N-(2-Methoxyphenyl)acetamide;C9H11NO2|organic|Molecular|S|0|0|Crystals|0|165.192|1.2|||||||||||||||||F4F4F2|1|||C9H11NO2|0|0|1200||Ld|93-26-5
 c_93287|0|4-Allyl-2-methoxyphenyl acetate|4-Allil-2-metoksifenil asetat|C₁₂H₁₄O₃|4-Allyl-2-methoxyphenyl acetate;C12H14O3|organic|Molecular|S|0|0|Crystals|0|206.241|1.08062|||||||||||||||||F4F4F2|1|||C12H14O3|0|0|1200||L|93-28-7
 c_93356|0|7-Hydroxy-2H-1-benzopyran-2-one|7-Hidroksi-2H-1-benzopiran-2-on|C₉H₆O₃|7-Hydroxy-2H-1-benzopyran-2-one;C9H6O3|organic|Molecular|S|0|0|Crystals|0|162.144|1.2|||||||||||||||||F4F4F2|1|||C9H6O3|0|0|1200||Ld|93-35-6
 c_93378|0|2,7-Dimethylquinoline|2,7-Dimetilkinolin|C₁₁H₁₁N|2,7-Dimethylquinoline;C11H11N|organic|Molecular|S|0|0|Crystals|0|157.216|1.2|||||||||||||||||F4F4F2|1|||C11H11N|0|0|1200||Ld|93-37-8
 c_93390|0|7-(β-D-Glucopyranosyloxy)-2H-1-benzopyran-2-one|7-(β-D-glukopiranosiloksi)-2H-1-benzopiran-2-on|C₂₄H₃₀ClFO₅|7-(β-D-Glucopyranosyloxy)-2H-1-benzopyran-2-one;C24H30ClFO5|organic|Molecular|S|0|0|Crystals|0|452.947|1.2|||||||||||||||||F4F4F2|1|||C24H30ClFO5|0|0|1200||Ld|93-39-0
-c_93403|0|3,4-Dimethoxybenzeneacetic acid|3,4-Dimetoksibenzeneasetik asit|C₁₀H₁₂O₄|3,4-Dimethoxybenzeneacetic acid;C10H12O4|organic|Molecular|S|0|0|Crystals|0|196.202|1.2|||||||||||||||||F4F4F2|1|||C10H12O4|0|0|1200||Ld|93-40-3
+c_93403|0|3,4-Dimethoxybenzeneacetic acid|3,4-Dimetoksibenzenasetik asit|C₁₀H₁₂O₄|3,4-Dimethoxybenzeneacetic acid;C10H12O4|organic|Molecular|S|0|0|Crystals|0|196.202|1.2|||||||||||||||||F4F4F2|1|||C10H12O4|0|0|1200||Ld|93-40-3
 c_93425|0|2-Mercapto-N-2-naphthylacetamide|2-Merkapto-N-2-naftilasetamit|C₁₂H₁₁NOS|2-Mercapto-N-2-naphthylacetamide;C12H11NOS|organic|Molecular|S|0|0|Crystals|0|217.286|1.2|||||||||||||||||F4F4F2|1|||C12H11NOS|0|0|1200||Ld|93-42-5
 c_93447|0|2-Naphthyl benzoate|2-Naftil benzoat|C₁₇H₁₂O₂|2-Naphthyl benzoate;C17H12O2|organic|Molecular|S|0|0|Crystals|0|248.281|1.2|||||||||||||||||F4F4F2|1|||C17H12O2|0|0|1200||Ld|93-44-7
-c_93469|0|N,N'-Di-2-naphthyl-1,4-benzenediamine|N,N'-di-2-naftil-1,4-benzenediamin|C₂₆H₂₀N₂|N,N'-Di-2-naphthyl-1,4-benzenediamine;C26H20N2|organic|Molecular|S|0|0|Crystals|0|360.46|1.2|||||||||||||||||F4F4F2|1|||C26H20N2|0|0|1200||Ld|93-46-9
+c_93469|0|N,N'-Di-2-naphthyl-1,4-benzenediamine|N,N'-di-2-naftil-1,4-benzendiamin|C₂₆H₂₀N₂|N,N'-Di-2-naphthyl-1,4-benzenediamine;C26H20N2|organic|Molecular|S|0|0|Crystals|0|360.46|1.2|||||||||||||||||F4F4F2|1|||C26H20N2|0|0|1200||Ld|93-46-9
 c_93505|0|4-Chloro-2-methoxyaniline|4-Kloro-2-metoksianilin|C₇H₈ClNO|4-Chloro-2-methoxyaniline;C7H8ClNO|organic|Molecular|S|0|0|Crystals|0|157.597|1.2|||||||||||||||||F4F4F2|1|||C7H8ClNO|0|0|1200||Ld|93-50-5
 c_93527|0|(1,2-Dibromoethyl)benzene|(1,2-Dibromoetil)benzen|C₈H₈Br₂|(1,2-Dibromoethyl)benzene;C8H8Br2|organic|Molecular|S|0|0|Crystals|0|263.96|1.2|||||||||||||||||F4F4F2|1|||C8H8Br2|0|0|1200||Ld|93-52-7
 c_93550|0|1-Phenyl-1-propanone|1-Fenil-1-propanon|C₉H₁₀O|1-Phenyl-1-propanone;C9H10O|organic|Molecular|L|0|0|Powder|0|134.178|1.00962|217.4||||||||||||||||E8F2FA|0.18|||C9H10O|0|0|2000|321725|L|93-55-0
-c_93594|0|Benzenecarboperoxoic acid|Benzenekarboperoksoik asit|C₇H₆O₃|Benzenecarboperoxoic acid;C7H6O3|organic|Molecular|S|0|0|Crystals|0|138.122|1.2|||||||||||||||||F4F4F2|1|||C7H6O3|0|0|1200||Ld|93-59-4
+c_93594|0|Benzenecarboperoxoic acid|Benzenkarboperoksoik asit|C₇H₆O₃|Benzenecarboperoxoic acid;C7H6O3|organic|Molecular|S|0|0|Crystals|0|138.122|1.2|||||||||||||||||F4F4F2|1|||C7H6O3|0|0|1200||Ld|93-59-4
 c_93607|0|Methyl 3-pyridinecarboxylate|Metil 3-piridinekarboksilat|C₇H₇NO₂|Methyl 3-pyridinecarboxylate;C7H7NO2|organic|Molecular|S|0|0|Crystals|0|137.138|1.2|||||||||||||||||F4F4F2|1|||C7H7NO2|0|0|1200||Ld|93-60-7
 c_93618|0|N-Methyl-N-phenylformamide|N-metil-N-fenilformamit|C₈H₉NO|N-Methyl-N-phenylformamide;C8H9NO|organic|Molecular|L|0|0|Powder|0|135.166|1.09482|243||||||||||||||||E8F2FA|0.18|||C8H9NO|0|0|2000|336040|L|93-61-8
 c_93685|0|N-(2-Methylphenyl)-3-oxo-butanamide|N-(2-metilfenil)-3-okso-bütanamit|C₁₁H₁₃NO₂|N-(2-Methylphenyl)-3-oxo-butanamide;C11H13NO2|organic|Molecular|S|0|0|Crystals|0|191.23|1.2|||||||||||||||||F4F4F2|1|||C11H13NO2|0|0|1200||Ld|93-68-5
@@ -2742,7 +2742,7 @@ c_93981|0|N-Phenylbenzamide|N-fenilbenzamit|C₁₃H₁₁NO|N-Phenylbenzamide;C
 c_93992|0|Phenyl benzoate|Fenil benzoat|C₁₃H₁₀O₂|Phenyl benzoate;C13H10O2|organic|Molecular|S|0|0|Crystals|0|198.221|1.2352|||||||||||||||||F4F4F2|1|||C13H10O2|0|0|1200||L|93-99-2
 c_94020|0|Ethyl benzoylacetate|Etil benzoilasetat|C₁₁H₁₂O₃|Ethyl benzoylacetate;C11H12O3|organic|Molecular|L|0|0|Powder|0|192.214|1.12021|||||||||||||||||E8F2FA|0.18|||C11H12O3|0|0|2000||L|94-02-0
 c_94053|0|Ethyl 2-cyano-3-ethoxyacrylate|Etil 2-siano-3-etoksiakrilat|C₈H₁₁NO₃|Ethyl 2-cyano-3-ethoxyacrylate;C8H11NO3|organic|Molecular|S|0|0|Crystals|0|169.18|1.2|||||||||||||||||F4F4F2|1|||C8H11NO3|0|0|1200||Ld|94-05-3
-c_94075|0|4-Hydroxy-α-[(methylamino)methyl]benzenemethanol|4-Hidroksi-α-[(metilamino)metil]benzenemetanol|C₉H₁₃NO₂|4-Hydroxy-α-[(methylamino)methyl]benzenemethanol;C9H13NO2|organic|Molecular|S|0|0|Crystals|0|167.208|1.2|||||||||||||||||F4F4F2|1|||C9H13NO2|0|0|1200||Ld|94-07-5
+c_94075|0|4-Hydroxy-α-[(methylamino)methyl]benzenemethanol|4-Hidroksi-α-[(metilamino)metil]benzenmetanol|C₉H₁₃NO₂|4-Hydroxy-α-[(methylamino)methyl]benzenemethanol;C9H13NO2|organic|Molecular|S|0|0|Crystals|0|167.208|1.2|||||||||||||||||F4F4F2|1|||C9H13NO2|0|0|1200||Ld|94-07-5
 c_94086|0|Ethyl 4-methylbenzoate|Etil 4-metilbenzoat|C₁₀H₁₂O₂|Ethyl 4-methylbenzoate;C10H12O2|organic|Molecular|L|0|0|Powder|0|164.204|1.02692|236||||||||||||||||E8F2FA|0.18|||C10H12O2|0|0|2000|272863|L|94-08-6
 c_94097|0|Ethyl 4-aminobenzoate|Etil 4-aminobenzoat|C₉H₁₁NO₂|Ethyl 4-aminobenzoate;C9H11NO2|organic|Molecular|S|0|0|Crystals|0|165.192|1.2|||||||||||||||||F4F4F2|1|||C9H11NO2|0|0|1200||Ld|94-09-7
 c_94111|0|Isopropyl (2,4-dichlorophenoxy)acetate|İzopropil (2,4-diklorofenoksi)asetat|C₁₁H₁₂Cl₂O₃|Isopropyl (2,4-dichlorophenoxy)acetate;C11H12Cl2O3|organic|Molecular|L|0|0|Powder|0|263.114|1.2625|||||||||||||||||E8F2FA|0.18|||C11H12Cl2O3|0|0|2000||L|94-11-1
@@ -2797,8 +2797,8 @@ c_95567|0|2-Bromophenol|2-Bromofenol|C₆H₅BrO|2-Bromophenol;C6H5BrO|organic|M
 c_95590|0|2,3-Dichloro-1,4-dioxane|2,3-Dikloro-1,4-dioksan|C₄H₆Cl₂O₂|2,3-Dichloro-1,4-dioxane;C4H6Cl2O2|organic|Molecular|S|0|0|Crystals|0|156.99|1.4682|||||||||||||||||F4F4F2|1|||C4H6Cl2O2|0|0|1200||L|95-59-0
 c_95647|0|3,4-Dimethylaniline|3,4-Dimetilanilin|C₈H₁₁N|3,4-Dimethylaniline;C8H11N|organic|Molecular|S|0|0|Crystals|0|121.183|1.07618|||||||||||||||||F4F4F2|1|||C8H11N|0|0|1200||L|95-64-7
 c_95692|0|4-Chloro-2-methylaniline|4-Kloro-2-metilanilin|C₇H₈ClN|4-Chloro-2-methylaniline;C7H8ClN|organic|Molecular|S|0|0|Crystals|0|141.598|1.2|||||||||||||||||F4F4F2|1|||C7H8ClN|0|0|1200||Ld|95-69-2
-c_95705|0|2-Methyl-1,4-benzenediamine|2-Metil-1,4-benzenediamin|C₇H₁₀N₂|2-Methyl-1,4-benzenediamine;C7H10N2|organic|Molecular|S|0|0|Crystals|0|122.171|1.2|||||||||||||||||F4F4F2|1|||C7H10N2|0|0|1200||Ld|95-70-5
-c_95716|0|2-Methyl-1,4-benzenediol|2-Metil-1,4-benzenediol|C₇H₈O₂|2-Methyl-1,4-benzenediol;C7H8O2|organic|Molecular|S|0|0|Crystals|0|124.139|1.2|||||||||||||||||F4F4F2|1|||C7H8O2|0|0|1200||Ld|95-71-6
+c_95705|0|2-Methyl-1,4-benzenediamine|2-Metil-1,4-benzendiamin|C₇H₁₀N₂|2-Methyl-1,4-benzenediamine;C7H10N2|organic|Molecular|S|0|0|Crystals|0|122.171|1.2|||||||||||||||||F4F4F2|1|||C7H10N2|0|0|1200||Ld|95-70-5
+c_95716|0|2-Methyl-1,4-benzenediol|2-Metil-1,4-benzendiol|C₇H₈O₂|2-Methyl-1,4-benzenediol;C7H8O2|organic|Molecular|S|0|0|Crystals|0|124.139|1.2|||||||||||||||||F4F4F2|1|||C7H8O2|0|0|1200||Ld|95-71-6
 c_95727|0|2-Chloro-1,4-dimethylbenzene|2-Kloro-1,4-dimetilbenzen|C₈H₉Cl|2-Chloro-1,4-dimethylbenzene;C8H9Cl|organic|Molecular|L|0|0|Powder|0|140.61|1.05892|185||||||||||||||||E8F2FA|0.18|||C8H9Cl|0|0|2000|286731|L|95-72-7
 c_95749|0|3-Chloro-4-methylaniline|3-Kloro-4-metilanilin|C₇H₈ClN|3-Chloro-4-methylaniline;C7H8ClN|organic|Molecular|S|0|0|Crystals|0|141.598|1.2|||||||||||||||||F4F4F2|1|||C7H8ClN|0|0|1200||Ld|95-74-9
 c_95750|0|3,4-Dichlorotoluene|3,4-Diklorotoluen|C₇H₆Cl₂|3,4-Dichlorotoluene;C7H6Cl2|organic|Molecular|L|0|0|Powder|0|161.025|1.25642|208||||||||||||||||E8F2FA|0.18|||C7H6Cl2|0|0|2000|262948|L|95-75-0
@@ -2806,10 +2806,10 @@ c_95772|0|3,4-Dichlorophenol|3,4-Diklorofenol|C₆H₄Cl₂O|3,4-Dichlorophenol;
 c_95783|0|2,5-Dimethylaniline|2,5-Dimetilanilin|C₈H₁₁N|2,5-Dimethylaniline;C8H11N|organic|Molecular|L|0|0|Powder|0|121.183|0.979021|214||||||||||||||||E8F2FA|0.18|||C8H11N|0|0|2000|353756|L|95-78-3
 c_95794|0|5-Chloro-2-methylaniline|5-Kloro-2-metilanilin|C₇H₈ClN|5-Chloro-2-methylaniline;C7H8ClN|organic|Molecular|S|0|0|Crystals|0|141.598|1.2|||||||||||||||||F4F4F2|1|||C7H8ClN|0|0|1200||Ld|95-79-4
 c_95829|0|2,5-Dichloroaniline|2,5-Dikloroanilin|C₆H₅Cl₂N|2,5-Dichloroaniline;C6H5Cl2N|organic|Molecular|S|0|0|Crystals|0|162.013|1.2|||||||||||||||||F4F4F2|1|||C6H5Cl2N|0|0|1200||Ld|95-82-9
-c_95830|0|4-Chloro-1,2-benzenediamine|4-Kloro-1,2-benzenediamin|C₆H₇ClN₂|4-Chloro-1,2-benzenediamine;C6H7ClN2|organic|Molecular|S|0|0|Crystals|0|142.586|1.2|||||||||||||||||F4F4F2|1|||C6H7ClN2|0|0|1200||Ld|95-83-0
+c_95830|0|4-Chloro-1,2-benzenediamine|4-Kloro-1,2-benzendiamin|C₆H₇ClN₂|4-Chloro-1,2-benzenediamine;C6H7ClN2|organic|Molecular|S|0|0|Crystals|0|142.586|1.2|||||||||||||||||F4F4F2|1|||C6H7ClN2|0|0|1200||Ld|95-83-0
 c_95841|0|2-Amino-4-methylphenol|2-Amino-4-metilfenol|C₇H₉NO|2-Amino-4-methylphenol;C7H9NO|organic|Molecular|S|0|0|Crystals|0|123.155|1.2|||||||||||||||||F4F4F2|1|||C7H9NO|0|0|1200||Ld|95-84-1
 c_95852|0|2-Amino-4-chlorophenol|2-Amino-4-klorofenol|C₆H₆ClNO|2-Amino-4-chlorophenol;C6H6ClNO|organic|Molecular|S|0|0|Crystals|0|143.57|1.2|||||||||||||||||F4F4F2|1|||C6H6ClNO|0|0|1200||Ld|95-85-2
-c_95885|0|4-Chloro-1,3-benzenediol|4-Kloro-1,3-benzenediol|C₆H₅ClO₂|4-Chloro-1,3-benzenediol;C6H5ClO2|organic|Molecular|L|0|0|Powder|0|144.554|1|257||||||||||||||||E8F2FA|0.18|||C6H5ClO2|0|0|2000|322739|Ld|95-88-5
+c_95885|0|4-Chloro-1,3-benzenediol|4-Kloro-1,3-benzendiol|C₆H₅ClO₂|4-Chloro-1,3-benzenediol;C6H5ClO2|organic|Molecular|L|0|0|Powder|0|144.554|1|257||||||||||||||||E8F2FA|0.18|||C6H5ClO2|0|0|2000|322739|Ld|95-88-5
 c_95943|0|1,2,4,5-Tetrachlorobenzene|1,2,4,5-Tetraklorobenzen|C₆H₂Cl₄|1,2,4,5-Tetrachlorobenzene;C6H2Cl4|organic|Molecular|S|0|0|Crystals|0|215.882|1.85822|||||||||||||||||F4F4F2|1|||C6H2Cl4|0|0|1200||L|95-94-3
 c_95954|0|2,4,5-Trichlorophenol|2,4,5-Triklorofenol|C₆H₃Cl₃O|2,4,5-Trichlorophenol;C6H3Cl3O|organic|Molecular|S|0|0|Crystals|0|197.439|1.2|||||||||||||||||F4F4F2|1|||C6H3Cl3O|0|0|1200||Ld|95-95-4
 c_96004|0|2-Hydroxycyclodecanone|2-Hidroksisiklodekanon|C₁₀H₁₈O₂|2-Hydroxycyclodecanone;C10H18O2|organic|Molecular|S|0|0|Crystals|0|170.252|1.2|||||||||||||||||F4F4F2|1|||C10H18O2|0|0|1200||Ld|96-00-4
@@ -2840,9 +2840,9 @@ c_96979|0|2-Hydroxy-5-nitrobenzoic acid|2-Hidroksi-5-nitrobenzoik asit|C₇H₅N
 c_96991|0|4-Chloro-3-nitrobenzoic acid|4-Kloro-3-nitrobenzoik asit|C₇H₄ClNO₄|4-Chloro-3-nitrobenzoic acid;C7H4ClNO4|organic|Molecular|S|0|0|Crystals|0|201.562|1.64518|||||||||||||||||F4F4F2|1|||C7H4ClNO4|0|0|1200||L|96-99-1
 c_97029|0|2,4-Dinitroaniline|2,4-Dinitroanilin|C₆H₅N₃O₄|2,4-Dinitroaniline;C6H5N3O4|organic|Molecular|S|0|0|Crystals|0|183.123|1.61514|||||||||||||||||F4F4F2|1|||C6H5N3O4|0|0|1200||L|97-02-9
 c_97052|0|2-Hydroxy-5-sulfobenzoic acid|2-Hidroksi-5-sülfobenzoik asit|C₇H₆O₆S|2-Hydroxy-5-sulfobenzoic acid;C7H6O6S|organic|Molecular|S|0|0|Crystals|0|218.179|1.2|||||||||||||||||F4F4F2|1|||C7H6O6S|0|0|1200||Ld|97-05-2
-c_97085|0|4-Chloro-3-nitrobenzenesulfonyl chloride|4-Kloro-3-nitrobenzenesülfonil klorür|C₆H₃Cl₂NO₄S|4-Chloro-3-nitrobenzenesulfonyl chloride;C6H3Cl2NO4S|organic|Molecular|S|0|0|Crystals|0|256.053|1.2|||||||||||||||||F4F4F2|1|||C6H3Cl2NO4S|0|0|1200||Ld|97-08-5
-c_97096|0|4-Chloro-3-nitrobenzenesulfonamide|4-Kloro-3-nitrobenzenesülfonamit|C₆H₅ClN₂O₄S|4-Chloro-3-nitrobenzenesulfonamide;C6H5ClN2O4S|organic|Molecular|S|0|0|Crystals|0|236.626|1.2|||||||||||||||||F4F4F2|1|||C6H5ClN2O4S|0|0|1200||Ld|97-09-6
-c_97165|0|2,4-Dichlorophenyl benzenesulfonate|2,4-Diklorofenil benzenesülfonat|C₁₂H₈Cl₂O₃S|2,4-Dichlorophenyl benzenesulfonate;C12H8Cl2O3S|organic|Molecular|S|0|0|Crystals|0|303.153|1.2|||||||||||||||||F4F4F2|1|||C12H8Cl2O3S|0|0|1200||Ld|97-16-5
+c_97085|0|4-Chloro-3-nitrobenzenesulfonyl chloride|4-Kloro-3-nitrobenzensülfonil klorür|C₆H₃Cl₂NO₄S|4-Chloro-3-nitrobenzenesulfonyl chloride;C6H3Cl2NO4S|organic|Molecular|S|0|0|Crystals|0|256.053|1.2|||||||||||||||||F4F4F2|1|||C6H3Cl2NO4S|0|0|1200||Ld|97-08-5
+c_97096|0|4-Chloro-3-nitrobenzenesulfonamide|4-Kloro-3-nitrobenzensülfonamit|C₆H₅ClN₂O₄S|4-Chloro-3-nitrobenzenesulfonamide;C6H5ClN2O4S|organic|Molecular|S|0|0|Crystals|0|236.626|1.2|||||||||||||||||F4F4F2|1|||C6H5ClN2O4S|0|0|1200||Ld|97-09-6
+c_97165|0|2,4-Dichlorophenyl benzenesulfonate|2,4-Diklorofenil benzensülfonat|C₁₂H₈Cl₂O₃S|2,4-Dichlorophenyl benzenesulfonate;C12H8Cl2O3S|organic|Molecular|S|0|0|Crystals|0|303.153|1.2|||||||||||||||||F4F4F2|1|||C12H8Cl2O3S|0|0|1200||Ld|97-16-5
 c_97187|0|Bithionol|Bitionol|C₁₂H₆Cl₄O₂S|Bithionol;C12H6Cl4O2S|organic|Molecular|S|0|0|Crystals|0|356.038|1.7325|||||||||||||||||F4F4F2|1|||C12H6Cl4O2S|0|0|1200||L|97-18-7
 c_97234|0|Dichlorophene|Diklorofen|C₁₃H₁₀Cl₂O₂|Dichlorophene;C13H10Cl2O2|organic|Molecular|S|0|0|Crystals|0|269.121|1.2|||||||||||||||||F4F4F2|1|||C13H10Cl2O2|0|0|1200||Ld|97-23-4
 c_97245|0|Bis(2-hydroxy-5-chlorophenyl) sulfide|Bis(2-hidroksi-5-klorofenil) sülfür|C₁₂H₈Cl₂O₂S|Bis(2-hydroxy-5-chlorophenyl) sulfide;C12H8Cl2O2S|organic|Molecular|S|0|0|Crystals|0|287.154|1.2|||||||||||||||||F4F4F2|1|||C12H8Cl2O2S|0|0|1200||Ld|97-24-5
@@ -2861,32 +2861,32 @@ c_97972|0|2-Chloro-1,1-dimethoxyethane|2-Kloro-1,1-dimetoksietan|C₄H₉ClO₂|
 c_98022|0|2-Furanmethanethiol|2-Furanmetanetiol|C₅H₆OS|2-Furanmethanethiol;C5H6OS|organic|Molecular|L|0|0|Powder|0|114.162|1.13192|157||||||||||||||||E8F2FA|0.18|||C5H6OS|0|0|2000|331574|L|98-02-2
 c_98033|0|2-Thiophenecarboxaldehyde|2-Tiofenekarboksaldehit|C₅H₄OS|2-Thiophenecarboxaldehyde;C5H4OS|organic|Molecular|L|0|0|Powder|0|112.146|1.21272|199||||||||||||||||E8F2FA|0.18|||C5H4OS|0|0|2000|370492|L|98-03-3
 c_98044|0|Phenyltrimethylammonium iodide|Feniltrimetilammoniyum iyodür|C₉H₁₄IN|Phenyltrimethylammonium iodide;C9H14IN|organic|Molecular|S|0|0|Crystals|0|263.122|1.2|||||||||||||||||F4F4F2|1|||C9H14IN|0|0|1200||Ld|98-04-4
-c_98099|0|Benzenesulfonyl chloride|Benzenesülfonil klorür|C₆H₅ClO₂S|Benzenesulfonyl chloride;C6H5ClO2S|organic|Molecular|L|0|0|Powder|0|176.614|1.34702|252||||||||||||||||E8F2FA|0.18|||C6H5ClO2S|0|0|2000|261662|L|98-09-9
-c_98102|0|Benzenesulfonamide|Benzenesülfonamit|C₆H₇NO₂S|Benzenesulfonamide;C6H7NO2S|organic|Molecular|S|0|0|Crystals|0|157.187|1.2|||||||||||||||||F4F4F2|1|||C6H7NO2S|0|0|1200||Ld|98-10-2
+c_98099|0|Benzenesulfonyl chloride|Benzensülfonil klorür|C₆H₅ClO₂S|Benzenesulfonyl chloride;C6H5ClO2S|organic|Molecular|L|0|0|Powder|0|176.614|1.34702|252||||||||||||||||E8F2FA|0.18|||C6H5ClO2S|0|0|2000|261662|L|98-09-9
+c_98102|0|Benzenesulfonamide|Benzensülfonamit|C₆H₇NO₂S|Benzenesulfonamide;C6H7NO2S|organic|Molecular|S|0|0|Crystals|0|157.187|1.2|||||||||||||||||F4F4F2|1|||C6H7NO2S|0|0|1200||Ld|98-10-2
 c_98157|0|1-Chloro-3-(trifluoromethyl)benzene|1-Kloro-3-(triflorometil)benzen|C₇H₄ClF₃|1-Chloro-3-(trifluoromethyl)benzene;C7H4ClF3|organic|Molecular|L|0|0|Powder|0|180.554|1.33112|126||||||||||||||||E8F2FA|0.18|||C7H4ClF3|0|0|2000|194541|L|98-15-7
 c_98168|0|3-(Trifluoromethyl)aniline|3-(Triflorometil)anilin|C₇H₆F₃N|3-(Trifluoromethyl)aniline;C7H6F3N|organic|Molecular|L|0|0|Powder|0|161.127|1.30471|187||||||||||||||||E8F2FA|0.18|||C7H6F3N|0|0|2000|251312|L|98-16-8
 c_98179|0|3-(Trifluoromethyl)phenol|3-(Triflorometil)fenol|C₇H₅F₃O|3-(Trifluoromethyl)phenol;C7H5F3O|organic|Molecular|L|0|0|Powder|0|162.111|1.34183|178||||||||||||||||E8F2FA|0.18|||C7H5F3O|0|0|2000|244901|L|98-17-9
 c_98191|0|1-tert-Butyl-3,5-dimethylbenzene|1-Tert-bütil-3,5-dimetilbenzen|C₁₂H₁₈|1-tert-Butyl-3,5-dimethylbenzene;C12H18|organic|Molecular|L|0|0|Powder|0|162.276|0.86682|207||||||||||||||||E8F2FA|0.18|||C12H18|0|0|2000|260379|L|98-19-1
 c_98271|0|4-tert-Butyl-2-methylphenol|4-Tert-bütil-2-metilfenol|C₁₁H₁₆O|4-tert-Butyl-2-methylphenol;C11H16O|organic|Molecular|S|0|0|Crystals|0|164.248|0.9652|||||||||||||||||F4F4F2|1|||C11H16O|0|0|1200||L|98-27-1
-c_98475|0|3-Nitrobenzenesulfonic acid|3-Nitrobenzenesülfonik asit|C₆H₅NO₅S|3-Nitrobenzenesulfonic acid;C6H5NO5S|organic|Molecular|S|0|0|Crystals|0|203.168|1.2|||||||||||||||||F4F4F2|1|||C6H5NO5S|0|0|1200||Ld|98-47-5
+c_98475|0|3-Nitrobenzenesulfonic acid|3-Nitrobenzensülfonik asit|C₆H₅NO₅S|3-Nitrobenzenesulfonic acid;C6H5NO5S|organic|Molecular|S|0|0|Crystals|0|203.168|1.2|||||||||||||||||F4F4F2|1|||C6H5NO5S|0|0|1200||Ld|98-47-5
 c_98511|0|1-tert-Butyl-4-methylbenzene|1-Tert-bütil-4-metilbenzen|C₁₁H₁₆|1-tert-Butyl-4-methylbenzene;C11H16|organic|Molecular|L|0|0|Powder|0|148.249|0.86122|193||||||||||||||||E8F2FA|0.18|||C11H16|0|0|2000|276705|L|98-51-1
 c_98533|0|4-tert-Butylcyclohexanone|4-Tert-bütilsiklohekzanon|C₁₀H₁₈O|4-tert-Butylcyclohexanone;C10H18O|organic|Molecular|S|0|0|Crystals|0|154.253|1.2|||||||||||||||||F4F4F2|1|||C10H18O|0|0|1200||Ld|98-53-3
 c_98577|0|1-Chloro-4-(methylsulfonyl)benzene|1-Kloro-4-(metilsülfonil)benzen|C₇H₇ClO₂S|1-Chloro-4-(methylsulfonyl)benzene;C7H7ClO2S|organic|Molecular|S|0|0|Crystals|0|190.641|1.2|||||||||||||||||F4F4F2|1|||C7H7ClO2S|0|0|1200||Ld|98-57-7
-c_98588|0|4-Bromobenzenesulfonyl chloride|4-Bromobenzenesülfonil klorür|C₆H₄BrClO₂S|4-Bromobenzenesulfonyl chloride;C6H4BrClO2S|organic|Molecular|S|0|0|Crystals|0|255.51|1.2|||||||||||||||||F4F4F2|1|||C6H4BrClO2S|0|0|1200||Ld|98-58-8
+c_98588|0|4-Bromobenzenesulfonyl chloride|4-Bromobenzensülfonil klorür|C₆H₄BrClO₂S|4-Bromobenzenesulfonyl chloride;C6H4BrClO2S|organic|Molecular|S|0|0|Crystals|0|255.51|1.2|||||||||||||||||F4F4F2|1|||C6H4BrClO2S|0|0|1200||Ld|98-58-8
 c_98599|0|p-Toluenesulfonyl chloride|P-toluenesülfonil klorür|C₇H₇ClO₂S|p-Toluenesulfonyl chloride;C7H7ClO2S|organic|Molecular|S|0|0|Crystals|0|190.641|1.2|||||||||||||||||F4F4F2|1|||C7H7ClO2S|0|0|1200||Ld|98-59-9
-c_98602|0|4-Chlorobenzenesulfonyl chloride|4-Klorobenzenesülfonil klorür|C₆H₄Cl₂O₂S|4-Chlorobenzenesulfonyl chloride;C6H4Cl2O2S|organic|Molecular|S|0|0|Crystals|0|211.056|1.2|||||||||||||||||F4F4F2|1|||C6H4Cl2O2S|0|0|1200||Ld|98-60-2
-c_98613|0|4-Iodobenzenesulfonyl chloride|4-İodobenzenesülfonil klorür|C₆H₄ClIO₂S|4-Iodobenzenesulfonyl chloride;C6H4ClIO2S|organic|Molecular|S|0|0|Crystals|0|302.51|1.2|||||||||||||||||F4F4F2|1|||C6H4ClIO2S|0|0|1200||Ld|98-61-3
-c_98624|0|4-Aminobenzenesulfonyl fluoride|4-Aminobenzenesülfonil florür|C₆H₆FNO₂S|4-Aminobenzenesulfonyl fluoride;C6H6FNO2S|organic|Molecular|S|0|0|Crystals|0|175.177|1.2|||||||||||||||||F4F4F2|1|||C6H6FNO2S|0|0|1200||Ld|98-62-4
-c_98646|0|4-Chlorobenzenesulfonamide|4-Klorobenzenesülfonamit|C₆H₆ClNO₂S|4-Chlorobenzenesulfonamide;C6H6ClNO2S|organic|Molecular|S|0|0|Crystals|0|191.629|1.2|||||||||||||||||F4F4F2|1|||C6H6ClNO2S|0|0|1200||Ld|98-64-6
-c_98680|0|4-Methoxybenzenesulfonyl chloride|4-Metoksibenzenesülfonil klorür|C₇H₇ClO₃S|4-Methoxybenzenesulfonyl chloride;C7H7ClO3S|organic|Molecular|S|0|0|Crystals|0|206.64|1.2|||||||||||||||||F4F4F2|1|||C7H7ClO3S|0|0|1200||Ld|98-68-0
-c_98715|0|4-Hydrazinobenzenesulfonic acid|4-Hidrazinobenzenesülfonik asit|C₆H₈N₂O₃S|4-Hydrazinobenzenesulfonic acid;C6H8N2O3S|organic|Molecular|S|0|0|Crystals|0|188.201|1.2|||||||||||||||||F4F4F2|1|||C6H8N2O3S|0|0|1200||Ld|98-71-5
+c_98602|0|4-Chlorobenzenesulfonyl chloride|4-Klorobenzensülfonil klorür|C₆H₄Cl₂O₂S|4-Chlorobenzenesulfonyl chloride;C6H4Cl2O2S|organic|Molecular|S|0|0|Crystals|0|211.056|1.2|||||||||||||||||F4F4F2|1|||C6H4Cl2O2S|0|0|1200||Ld|98-60-2
+c_98613|0|4-Iodobenzenesulfonyl chloride|4-İodobenzensülfonil klorür|C₆H₄ClIO₂S|4-Iodobenzenesulfonyl chloride;C6H4ClIO2S|organic|Molecular|S|0|0|Crystals|0|302.51|1.2|||||||||||||||||F4F4F2|1|||C6H4ClIO2S|0|0|1200||Ld|98-61-3
+c_98624|0|4-Aminobenzenesulfonyl fluoride|4-Aminobenzensülfonil florür|C₆H₆FNO₂S|4-Aminobenzenesulfonyl fluoride;C6H6FNO2S|organic|Molecular|S|0|0|Crystals|0|175.177|1.2|||||||||||||||||F4F4F2|1|||C6H6FNO2S|0|0|1200||Ld|98-62-4
+c_98646|0|4-Chlorobenzenesulfonamide|4-Klorobenzensülfonamit|C₆H₆ClNO₂S|4-Chlorobenzenesulfonamide;C6H6ClNO2S|organic|Molecular|S|0|0|Crystals|0|191.629|1.2|||||||||||||||||F4F4F2|1|||C6H6ClNO2S|0|0|1200||Ld|98-64-6
+c_98680|0|4-Methoxybenzenesulfonyl chloride|4-Metoksibenzensülfonil klorür|C₇H₇ClO₃S|4-Methoxybenzenesulfonyl chloride;C7H7ClO3S|organic|Molecular|S|0|0|Crystals|0|206.64|1.2|||||||||||||||||F4F4F2|1|||C7H7ClO3S|0|0|1200||Ld|98-68-0
+c_98715|0|4-Hydrazinobenzenesulfonic acid|4-Hidrazinobenzensülfonik asit|C₆H₈N₂O₃S|4-Hydrazinobenzenesulfonic acid;C6H8N2O3S|organic|Molecular|S|0|0|Crystals|0|188.201|1.2|||||||||||||||||F4F4F2|1|||C6H8N2O3S|0|0|1200||Ld|98-71-5
 c_98737|0|4-tert-Butylbenzoic acid|4-Tert-bütilbenzoik asit|C₁₁H₁₄O₂|4-tert-Butylbenzoic acid;C11H14O2|organic|Molecular|S|0|0|Crystals|0|178.231|1.2|||||||||||||||||F4F4F2|1|||C11H14O2|0|0|1200||Ld|98-73-7
-c_98748|0|4-Nitrobenzenesulfonyl chloride|4-Nitrobenzenesülfonil klorür|C₆H₄ClNO₄S|4-Nitrobenzenesulfonyl chloride;C6H4ClNO4S|organic|Molecular|S|0|0|Crystals|0|221.611|1.2|||||||||||||||||F4F4F2|1|||C6H4ClNO4S|0|0|1200||Ld|98-74-8
+c_98748|0|4-Nitrobenzenesulfonyl chloride|4-Nitrobenzensülfonil klorür|C₆H₄ClNO₄S|4-Nitrobenzenesulfonyl chloride;C6H4ClNO4S|organic|Molecular|S|0|0|Crystals|0|221.611|1.2|||||||||||||||||F4F4F2|1|||C6H4ClNO4S|0|0|1200||Ld|98-74-8
 c_98793|0|L-Pyroglutamic acid|L-piroglutamik asit|C₅H₇NO₃|L-Pyroglutamic acid;C5H7NO3|organic|Molecular|S|0|0|Crystals|0|129.115|1.2|||||||||||||||||F4F4F2|1|||C5H7NO3|0|0|1200||Ld|98-79-3
-c_98806|0|Benzeneboronic acid|Benzeneboronik asit|C₆H₇BO₂|Benzeneboronic acid;C6H7BO2|organic|Molecular|S|0|0|Crystals|0|121.93|1.2|||||||||||||||||F4F4F2|1|||C6H7BO2|0|0|1200||Ld|98-80-6
+c_98806|0|Benzeneboronic acid|Benzenboronik asit|C₆H₇BO₂|Benzeneboronic acid;C6H7BO2|organic|Molecular|S|0|0|Crystals|0|121.93|1.2|||||||||||||||||F4F4F2|1|||C6H7BO2|0|0|1200||Ld|98-80-6
 c_98817|0|(1-Bromovinyl)benzene|(1-Bromovinil)benzen|C₈H₇Br|(1-Bromovinyl)benzene;C8H7Br|organic|Molecular|L|0|0|Powder|0|183.048|1.40252|||||||||||||||||E8F2FA|0.18|||C8H7Br|0|0|2000||L|98-81-7
 c_98895|0|Cyclohexanecarboxylic acid|Siklohekzanekarboksilik asit|C₇H₁₂O₂|Cyclohexanecarboxylic acid;C7H12O2|organic|Molecular|S|0|0|Crystals|0|128.171|1.03342|||||||||||||||||F4F4F2|1|||C7H12O2|0|0|1200||L|98-89-5
-c_98919|0|Benzenecarbothioic acid|Benzenekarbotioik asit|C₇H₆OS|Benzenecarbothioic acid;C7H6OS|organic|Molecular|L|0|0|Powder|0|138.184|1.282|||||||||||||||||E8F2FA|0.18|||C7H6OS|0|0|2000||L|98-91-9
+c_98919|0|Benzenecarbothioic acid|Benzenkarbotioik asit|C₇H₆OS|Benzenecarbothioic acid;C7H6OS|organic|Molecular|L|0|0|Powder|0|138.184|1.282|||||||||||||||||E8F2FA|0.18|||C7H6OS|0|0|2000||L|98-91-9
 c_98920|0|3-Pyridinecarboxamide|3-Piridinekarboksamit|C₆H₆N₂O|3-Pyridinecarboxamide;C6H6N2O|organic|Molecular|S|0|0|Crystals|0|122.127|1.40025|||||||||||||||||F4F4F2|1|||C6H6N2O|0|0|1200||L|98-92-0
 c_98942|0|Cyclohexyldimethylamine|Siklohekzildimetilamin|C₈H₁₇N|Cyclohexyldimethylamine;C8H17N|organic|Molecular|L|0|0|Powder|0|127.231|1|161||||||||||||||||E8F2FA|0.18|||C8H17N|0|0|2000|300282|Ld|98-94-2
 c_98964|0|Pyrazinecarboxamide|Pirazinekarboksamit|C₅H₅N₃O|Pyrazinecarboxamide;C5H5N3O|organic|Molecular|S|0|0|Crystals|0|123.115|1.2|||||||||||||||||F4F4F2|1|||C5H5N3O|0|0|1200||Ld|98-96-4
@@ -2903,7 +2903,7 @@ c_99172|0|Populin|Populin|C₂₀H₂₂O₈|Populin;C20H22O8|organic|Molecular|
 c_99207|0|Trehalose|Trehaloz|C₁₂H₂₂O₁₁|Trehalose;C12H22O11|organic|Molecular|S|0|0|Crystals|0|342.297|1.5824|||||||||||||||||F4F4F2|1|||C12H22O11|0|0|1200||L|99-20-7
 c_99241|0|Methyl 3,4,5-trihydroxybenzoate|Metil 3,4,5-trihidroksibenzoat|C₈H₈O₅|Methyl 3,4,5-trihydroxybenzoate;C8H8O5|organic|Molecular|S|0|0|Crystals|0|184.147|1.2|||||||||||||||||F4F4F2|1|||C8H8O5|0|0|1200||Ld|99-24-1
 c_99309|0|2,6-Dichloro-4-nitroaniline|2,6-Dikloro-4-nitroanilin|C₆H₄Cl₂N₂O₂|2,6-Dichloro-4-nitroaniline;C6H4Cl2N2O2|organic|Molecular|S|0|0|Crystals|0|207.01|1.2|||||||||||||||||F4F4F2|1|||C6H4Cl2N2O2|0|0|1200||Ld|99-30-9
-c_99310|0|5-Amino-1,3-benzenedicarboxylic acid|5-Amino-1,3-benzenedikarboksilik asit|C₈H₇NO₄|5-Amino-1,3-benzenedicarboxylic acid;C8H7NO4|organic|Molecular|S|0|0|Crystals|0|181.147|1.2|||||||||||||||||F4F4F2|1|||C8H7NO4|0|0|1200||Ld|99-31-0
+c_99310|0|5-Amino-1,3-benzenedicarboxylic acid|5-Amino-1,3-benzendikarboksilik asit|C₈H₇NO₄|5-Amino-1,3-benzenedicarboxylic acid;C8H7NO4|organic|Molecular|S|0|0|Crystals|0|181.147|1.2|||||||||||||||||F4F4F2|1|||C8H7NO4|0|0|1200||Ld|99-31-0
 c_99321|0|4-Oxo-4H-pyran-2,6-dicarboxylic acid|4-Okso-4H-piran-2,6-dikarboksilik asit|C₇H₄O₆|4-Oxo-4H-pyran-2,6-dicarboxylic acid;C7H4O6|organic|Molecular|S|0|0|Crystals|0|184.103|1.2|||||||||||||||||F4F4F2|1|||C7H4O6|0|0|1200||Ld|99-32-1
 c_99332|0|3,5-Dinitrobenzoyl chloride|3,5-Dinitrobenzoil klorür|C₇H₃ClN₂O₅|3,5-Dinitrobenzoyl chloride;C7H3ClN2O5|organic|Molecular|S|0|0|Crystals|0|230.56|1.2|||||||||||||||||F4F4F2|1|||C7H3ClN2O5|0|0|1200||Ld|99-33-2
 c_99343|0|3,5-Dinitrobenzoic acid|3,5-Dinitrobenzoik asit|C₇H₄N₂O₆|3,5-Dinitrobenzoic acid;C7H4N2O6|organic|Molecular|S|0|0|Crystals|0|212.117|1.2|||||||||||||||||F4F4F2|1|||C7H4N2O6|0|0|1200||Ld|99-34-3
@@ -2913,7 +2913,7 @@ c_99503|0|3,4-Dihydroxybenzoic acid|3,4-Dihidroksibenzoik asit|C₇H₆O₄|3,4-
 c_99514|0|1,2-Dimethyl-4-nitrobenzene|1,2-Dimetil-4-nitrobenzen|C₈H₉NO₂|1,2-Dimethyl-4-nitrobenzene;C8H9NO2|organic|Molecular|S|0|0|Crystals|0|151.165|1.11215|||||||||||||||||F4F4F2|1|||C8H9NO2|0|0|1200||L|99-51-4
 c_99525|0|2-Methyl-4-nitroaniline|2-Metil-4-nitroanilin|C₇H₈N₂O₂|2-Methyl-4-nitroaniline;C7H8N2O2|organic|Molecular|S|0|0|Crystals|0|152.153|1.15861|||||||||||||||||F4F4F2|1|||C7H8N2O2|0|0|1200||L|99-52-5
 c_99558|0|2-Methyl-5-nitroaniline|2-Metil-5-nitroanilin|C₇H₈N₂O₂|2-Methyl-5-nitroaniline;C7H8N2O2|organic|Molecular|S|0|0|Crystals|0|152.153|1.2|||||||||||||||||F4F4F2|1|||C7H8N2O2|0|0|1200||Ld|99-55-8
-c_99569|0|4-Nitro-1,2-benzenediamine|4-Nitro-1,2-benzenediamin|C₆H₇N₃O₂|4-Nitro-1,2-benzenediamine;C6H7N3O2|organic|Molecular|S|0|0|Crystals|0|153.141|1.2|||||||||||||||||F4F4F2|1|||C6H7N3O2|0|0|1200||Ld|99-56-9
+c_99569|0|4-Nitro-1,2-benzenediamine|4-Nitro-1,2-benzendiamin|C₆H₇N₃O₂|4-Nitro-1,2-benzenediamine;C6H7N3O2|organic|Molecular|S|0|0|Crystals|0|153.141|1.2|||||||||||||||||F4F4F2|1|||C6H7N3O2|0|0|1200||Ld|99-56-9
 c_99570|0|2-Amino-4-nitrophenol|2-Amino-4-nitrofenol|C₆H₆N₂O₃|2-Amino-4-nitrophenol;C6H6N2O3|organic|Molecular|S|0|0|Crystals|0|154.125|1.2|||||||||||||||||F4F4F2|1|||C6H6N2O3|0|0|1200||Ld|99-57-0
 c_99592|0|2-Methoxy-5-nitroaniline|2-Metoksi-5-nitroanilin|C₇H₈N₂O₃|2-Methoxy-5-nitroaniline;C7H8N2O3|organic|Molecular|S|0|0|Crystals|0|168.152|1.20681|||||||||||||||||F4F4F2|1|||C7H8N2O3|0|0|1200||L|99-59-2
 c_99605|0|2-Chloro-4-nitrobenzoic acid|2-Kloro-4-nitrobenzoik asit|C₇H₄ClNO₄|2-Chloro-4-nitrobenzoic acid;C7H4ClNO4|organic|Molecular|S|0|0|Crystals|0|201.562|1.2|||||||||||||||||F4F4F2|1|||C7H4ClNO4|0|0|1200||Ld|99-60-5
@@ -2932,7 +2932,7 @@ c_99912|0|1-(4-Chlorophenyl)ethanone|1-(4-Klorofenil)etanon|C₈H₇ClO|1-(4-Chl
 c_99923|0|1-(4-Aminophenyl)ethanone|1-(4-Aminofenil)etanon|C₈H₉NO|1-(4-Aminophenyl)ethanone;C8H9NO|organic|Molecular|S|0|0|Crystals|0|135.166|1.2|||||||||||||||||F4F4F2|1|||C8H9NO|0|0|1200||Ld|99-92-3
 c_99967|0|4-Hydroxybenzoic acid|4-Hidroksibenzoik asit|C₇H₆O₃|4-Hydroxybenzoic acid;C7H6O3|organic|Molecular|S|0|0|Crystals|0|138.122|1.4625|||||||||||||||||F4F4F2|1|||C7H6O3|0|0|1200||L|99-96-7
 c_99978|0|4-Methyl-N,N-dimethylaniline|4-Metil-N,N-dimetilanilin|C₉H₁₃N|4-Methyl-N,N-dimethylaniline;C9H13N|organic|Molecular|L|0|0|Powder|0|135.21|0.93662|211||||||||||||||||E8F2FA|0.18|||C9H13N|0|0|2000|315104|L|99-97-8
-c_99989|0|N,N-Dimethyl-1,4-benzenediamine|N,N-dimetil-1,4-benzenediamin|C₈H₁₂N₂|N,N-Dimethyl-1,4-benzenediamine;C8H12N2|organic|Molecular|S|0|0|Crystals|0|136.198|1.0362|||||||||||||||||F4F4F2|1|||C8H12N2|0|0|1200||L|99-98-9
+c_99989|0|N,N-Dimethyl-1,4-benzenediamine|N,N-dimetil-1,4-benzendiamin|C₈H₁₂N₂|N,N-Dimethyl-1,4-benzenediamine;C8H12N2|organic|Molecular|S|0|0|Crystals|0|136.198|1.0362|||||||||||||||||F4F4F2|1|||C8H12N2|0|0|1200||L|99-98-9
 c_100027|0|4-Nitrophenol|4-Nitrofenol|C₆H₅NO₃|4-Nitrophenol;C6H5NO3|organic|Molecular|S|0|0|Crystals|0|139.11|1.4792|||||||||||||||||F4F4F2|1|||C6H5NO3|0|0|1200||L|100-02-7
 c_100061|0|4-Acetylanisole|4-Asetilanizol|C₉H₁₀O₂|4-Acetylanisole;C9H10O2|organic|Molecular|S|0|0|Crystals|0|150.177|1.08184|||||||||||||||||F4F4F2|1|||C9H10O2|0|0|1200||L|100-06-1
 c_100072|0|4-Methoxybenzoyl chloride|4-Metoksibenzoil klorür|C₈H₇ClO₂|4-Methoxybenzoyl chloride;C8H7ClO2|organic|Molecular|L|0|0|Powder|0|170.592|1.2612|262.5||||||||||||||||E8F2FA|0.18|||C8H7ClO2|0|0|2000|276315|L|100-07-2
@@ -2944,10 +2944,10 @@ c_100141|0|1-(Chloromethyl)-4-nitrobenzene|1-(Klorometil)-4-nitrobenzen|C₇H₆
 c_100152|0|N-Methyl-4-nitroaniline|N-metil-4-nitroanilin|C₇H₈N₂O₂|N-Methyl-4-nitroaniline;C7H8N2O2|organic|Molecular|S|0|0|Crystals|0|152.153|1.20115|||||||||||||||||F4F4F2|1|||C7H8N2O2|0|0|1200||L|100-15-2
 c_100174|0|4-Nitroanisole|4-Nitroanizol|C₇H₇NO₃|4-Nitroanisole;C7H7NO3|organic|Molecular|S|0|0|Crystals|0|153.137|1.21926|||||||||||||||||F4F4F2|1|||C7H7NO3|0|0|1200||L|100-17-4
 c_100196|0|1-(4-Nitrophenyl)ethanone|1-(4-Nitrofenil)etanon|C₈H₇NO₃|1-(4-Nitrophenyl)ethanone;C8H7NO3|organic|Molecular|S|0|0|Crystals|0|165.148|1.2|||||||||||||||||F4F4F2|1|||C8H7NO3|0|0|1200||Ld|100-19-6
-c_100221|0|N,N,N',N'-Tetramethyl-1,4-benzenediamine|N,N,N',N'-tetrametil-1,4-benzenediamin|C₁₀H₁₆N₂|N,N,N',N'-Tetramethyl-1,4-benzenediamine;C10H16N2|organic|Molecular|S|0|0|Crystals|0|164.252|1.2|||||||||||||||||F4F4F2|1|||C10H16N2|0|0|1200||Ld|100-22-1
+c_100221|0|N,N,N',N'-Tetramethyl-1,4-benzenediamine|N,N,N',N'-tetrametil-1,4-benzendiamin|C₁₀H₁₆N₂|N,N,N',N'-Tetramethyl-1,4-benzenediamine;C10H16N2|organic|Molecular|S|0|0|Crystals|0|164.252|1.2|||||||||||||||||F4F4F2|1|||C10H16N2|0|0|1200||Ld|100-22-1
 c_100232|0|N,N-Dimethyl-4-nitroaniline|N,N-dimetil-4-nitroanilin|C₈H₁₀N₂O₂|N,N-Dimethyl-4-nitroaniline;C8H10N2O2|organic|Molecular|S|0|0|Crystals|0|166.18|1.2|||||||||||||||||F4F4F2|1|||C8H10N2O2|0|0|1200||Ld|100-23-2
 c_100265|0|2,5-Pyridinedicarboxylic acid|2,5-Piridinedikarboksilik asit|C₇H₅NO₄|2,5-Pyridinedicarboxylic acid;C7H5NO4|organic|Molecular|S|0|0|Crystals|0|167.12|1.2|||||||||||||||||F4F4F2|1|||C7H5NO4|0|0|1200||Ld|100-26-5
-c_100276|0|4-Nitrobenzeneethanol|4-Nitrobenzeneetanol|C₈H₉NO₃|4-Nitrobenzeneethanol;C8H9NO3|organic|Molecular|S|0|0|Crystals|0|167.164|1.2|||||||||||||||||F4F4F2|1|||C8H9NO3|0|0|1200||Ld|100-27-6
+c_100276|0|4-Nitrobenzeneethanol|4-Nitrobenzenetanol|C₈H₉NO₃|4-Nitrobenzeneethanol;C8H9NO3|organic|Molecular|S|0|0|Crystals|0|167.164|1.2|||||||||||||||||F4F4F2|1|||C8H9NO3|0|0|1200||Ld|100-27-6
 c_100287|0|1-Isocyanato-4-nitrobenzene|1-İzosianato-4-nitrobenzen|C₇H₄N₂O₃|1-Isocyanato-4-nitrobenzene;C7H4N2O3|organic|Molecular|S|0|0|Crystals|0|164.12|1.2|||||||||||||||||F4F4F2|1|||C7H4N2O3|0|0|1200||Ld|100-28-7
 c_100298|0|1-Ethoxy-4-nitrobenzene|1-Etoksi-4-nitrobenzen|C₈H₉NO₃|1-Ethoxy-4-nitrobenzene;C8H9NO3|organic|Molecular|S|0|0|Crystals|0|167.164|1.11761|||||||||||||||||F4F4F2|1|||C8H9NO3|0|0|1200||L|100-29-8
 c_100323|0|Bis(4-nitrophenyl) disulfide|Bis(4-nitrofenil) disülfür|C₁₂H₈N₂O₄S₂|Bis(4-nitrophenyl) disulfide;C12H8N2O4S2|organic|Molecular|S|0|0|Crystals|0|308.326|1.2|||||||||||||||||F4F4F2|1|||C12H8N2O4S2|0|0|1200||Ld|100-32-3
@@ -2962,7 +2962,7 @@ c_100709|0|2-Pyridinecarbonitrile|2-Piridinekarbonitril|C₆H₄N₂|2-Pyridinec
 c_100710|0|2-Ethylpyridine|2-Etilpiridin|C₇H₉N|2-Ethylpyridine;C7H9N|organic|Molecular|L|0|0|Powder|0|107.156|0.950225|149||||||||||||||||E8F2FA|0.18|||C7H9N|0|0|2000|346683|L|100-71-0
 c_100721|0|Tetrahydro-2H-pyran-2-methanol|Tetrahidro-2H-piran-2-metanol|C₆H₁₂O₂|Tetrahydro-2H-pyran-2-methanol;C6H12O2|organic|Molecular|L|0|0|Powder|0|116.16|1.02725|189||||||||||||||||E8F2FA|0.18|||C6H12O2|0|0|2000|350114|L|100-72-1
 c_100754|0|N-Nitrosopiperidine|N-nitrosopiperidin|C₅H₁₀N₂O|N-Nitrosopiperidine;C5H10N2O|organic|Molecular|L|0|0|Powder|0|114.148|1.06312|211||||||||||||||||E8F2FA|0.18|||C5H10N2O|0|0|2000|373245|L|100-75-4
-c_100812|0|3-Methylbenzenemethanamine|3-Metilbenzenemetanamin|C₈H₁₁N|3-Methylbenzenemethanamine;C8H11N|organic|Molecular|L|0|0|Powder|0|121.183|0.96625|203.5||||||||||||||||E8F2FA|0.18|||C8H11N|0|0|2000|346131|L|100-81-2
+c_100812|0|3-Methylbenzenemethanamine|3-Metilbenzenmetanamin|C₈H₁₁N|3-Methylbenzenemethanamine;C8H11N|organic|Molecular|L|0|0|Powder|0|121.183|0.96625|203.5||||||||||||||||E8F2FA|0.18|||C8H11N|0|0|2000|346131|L|100-81-2
 c_100834|0|3-Hydroxybenzaldehyde|3-Hidroksibenzaldehit|C₇H₆O₂|3-Hydroxybenzaldehyde;C7H6O2|organic|Molecular|S|0|0|Crystals|0|122.123|1.11791|||||||||||||||||F4F4F2|1|||C7H6O2|0|0|1200||L|100-83-4
 c_100845|0|3-Methylanisole|3-Metilanizol|C₈H₁₀O|3-Methylanisole;C8H10O|organic|Molecular|L|0|0|Powder|0|122.167|0.96925|177||||||||||||||||E8F2FA|0.18|||C8H10O|0|0|2000|324255|L|100-84-5
 c_100867|0|1-Phenyl-2-methyl-2-propanol|1-Fenil-2-metil-2-propanol|C₁₀H₁₄O|1-Phenyl-2-methyl-2-propanol;C10H14O|organic|Molecular|L|0|0|Powder|0|150.221|0.978716|215||||||||||||||||E8F2FA|0.18|||C10H14O|0|0|2000|285960|L|100-86-7
@@ -2980,18 +2980,18 @@ c_101382|0|2,6-Dichloro-4-(chloroimino)-2,5-cyclohexadien-1-one|2,6-Dikloro-4-(k
 c_101393|0|2-Methyl-3-phenyl-2-propenal|2-Metil-3-fenil-2-propenal|C₁₀H₁₀O|2-Methyl-3-phenyl-2-propenal;C10H10O|organic|Molecular|L|0|0|Powder|0|146.189|1.04072|251.6||||||||||||||||E8F2FA|0.18|||C10H10O|0|0|2000|315879|L|101-39-3
 c_101406|0|N,α-Dimethylcyclohexaneethanamine|N,α-dimetilsiklohekzaneetanamin|C₁₀H₂₁N|N,α-Dimethylcyclohexaneethanamine;C10H21N|organic|Molecular|L|0|0|Powder|0|155.285|0.85012|205||||||||||||||||E8F2FA|0.18|||C10H21N|0|0|2000|270968|L|101-40-6
 c_101417|0|Methyl 2-phenylacetate|Metil 2-fenilasetat|C₉H₁₀O₂|Methyl 2-phenylacetate;C9H10O2|organic|Molecular|L|0|0|Powder|0|150.177|1.06222|215||||||||||||||||E8F2FA|0.18|||C9H10O2|0|0|2000|286044|L|101-41-7
-c_101428|0|N,N-Dimethyl-N'-phenylurea|N,N-dimetil-N'-fenilurea|C₉H₁₂N₂O|N,N-Dimethyl-N'-phenylurea;C9H12N2O|organic|Molecular|S|0|0|Crystals|0|164.208|1.2|||||||||||||||||F4F4F2|1|||C9H12N2O|0|0|1200||Ld|101-42-8
+c_101428|0|N,N-Dimethyl-N'-phenylurea|N,N-dimetil-N'-fenilüre|C₉H₁₂N₂O|N,N-Dimethyl-N'-phenylurea;C9H12N2O|organic|Molecular|S|0|0|Crystals|0|164.208|1.2|||||||||||||||||F4F4F2|1|||C9H12N2O|0|0|1200||Ld|101-42-8
 c_101439|0|Cyclohexyl methacrylate|Siklohekzil metakrilat|C₁₀H₁₆O₂|Cyclohexyl methacrylate;C10H16O2|organic|Molecular|L|0|0|Powder|0|168.236|0.96262|209||||||||||||||||E8F2FA|0.18|||C10H16O2|0|0|2000|252200|L|101-43-9
 c_101484|0|(2,2-Dimethoxyethyl)benzene|(2,2-Dimetoksietil)benzen|C₁₀H₁₄O₂|(2,2-Dimethoxyethyl)benzene;C10H14O2|organic|Molecular|L|0|0|Powder|0|166.22|1|193.5||||||||||||||||E8F2FA|0.18|||C10H14O2|0|0|2000|247053|Ld|101-48-4
 c_101531|0|4-Benzylphenol|4-Benzilfenol|C₁₃H₁₂O|4-Benzylphenol;C13H12O|organic|Molecular|S|0|0|Crystals|0|184.238|1.2|||||||||||||||||F4F4F2|1|||C13H12O|0|0|1200||Ld|101-53-1
 c_101553|0|1-Bromo-4-phenoxybenzene|1-Bromo-4-fenoksibenzen|C₁₂H₉BrO|1-Bromo-4-phenoxybenzene;C12H9BrO|organic|Molecular|L|0|0|Powder|0|249.107|1.60882|||||||||||||||||E8F2FA|0.18|||C12H9BrO|0|0|2000||L|101-55-3
-c_101575|0|4-(Phenylamino)benzenesulfonic acid|4-(Fenilamino)benzenesülfonik asit|C₁₂H₁₁NO₃S|4-(Phenylamino)benzenesulfonic acid;C12H11NO3S|organic|Molecular|S|0|0|Crystals|0|249.284|1.2|||||||||||||||||F4F4F2|1|||C12H11NO3S|0|0|1200||Ld|101-57-5
+c_101575|0|4-(Phenylamino)benzenesulfonic acid|4-(Fenilamino)benzensülfonik asit|C₁₂H₁₁NO₃S|4-(Phenylamino)benzenesulfonic acid;C12H11NO3S|organic|Molecular|S|0|0|Crystals|0|249.284|1.2|||||||||||||||||F4F4F2|1|||C12H11NO3S|0|0|1200||Ld|101-57-5
 c_101600|0|21H,23H-Porphine|21H,23H-porfin|C₂₀H₁₄N₄|21H,23H-Porphine;C20H14N4|organic|Molecular|S|0|0|Crystals|0|310.36|1.33625|||||||||||||||||F4F4F2|1|||C20H14N4|0|0|1200||L|101-60-0
 c_101611|0|Bis[4-(dimethylamino)phenyl]methane|Bis[4-(dimetilamino)fenil]metan|C₁₇H₂₂N₂|Bis[4-(dimethylamino)phenyl]methane;C17H22N2|organic|Molecular|S|0|0|Crystals|0|254.377|1.2|||||||||||||||||F4F4F2|1|||C17H22N2|0|0|1200||Ld|101-61-1
 c_101633|0|4,4'-Dinitrodiphenyl ether|4,4'-Dinitrodifenil eter|C₁₂H₈N₂O₅|4,4'-Dinitrodiphenyl ether;C12H8N2O5|organic|Molecular|S|0|0|Crystals|0|260.205|1.2|||||||||||||||||F4F4F2|1|||C12H8N2O5|0|0|1200||Ld|101-63-3
 c_101644|0|N-(p-Methoxyphenyl)-p-phenylenediamine|N-(p-metoksifenil)-p-fenilenediamin|C₁₃H₁₄N₂O|N-(p-Methoxyphenyl)-p-phenylenediamine;C13H14N2O|organic|Molecular|S|0|0|Crystals|0|214.268|1.2|||||||||||||||||F4F4F2|1|||C13H14N2O|0|0|1200||Ld|101-64-4
 c_101702|0|4-Methoxy-N-(4-methoxyphenyl)aniline|4-Metoksi-N-(4-metoksifenil)anilin|C₁₄H₁₅NO₂|4-Methoxy-N-(4-methoxyphenyl)aniline;C14H15NO2|organic|Molecular|S|0|0|Crystals|0|229.279|1.2|||||||||||||||||F4F4F2|1|||C14H15NO2|0|0|1200||Ld|101-70-2
-c_101724|0|N-Isopropyl-N'-phenyl-1,4-benzenediamine|N-izopropil-N'-fenil-1,4-benzenediamin|C₁₅H₁₈N₂|N-Isopropyl-N'-phenyl-1,4-benzenediamine;C15H18N2|organic|Molecular|S|0|0|Crystals|0|226.323|1.2|||||||||||||||||F4F4F2|1|||C15H18N2|0|0|1200||Ld|101-72-4
+c_101724|0|N-Isopropyl-N'-phenyl-1,4-benzenediamine|N-izopropil-N'-fenil-1,4-benzendiamin|C₁₅H₁₈N₂|N-Isopropyl-N'-phenyl-1,4-benzenediamine;C15H18N2|organic|Molecular|S|0|0|Crystals|0|226.323|1.2|||||||||||||||||F4F4F2|1|||C15H18N2|0|0|1200||Ld|101-72-4
 c_101735|0|4-Isopropoxydiphenylamine|4-İzopropoksidifenilamin|C₁₅H₁₇NO|4-Isopropoxydiphenylamine;C15H17NO|organic|Molecular|S|0|0|Crystals|0|227.307|1.2|||||||||||||||||F4F4F2|1|||C15H17NO|0|0|1200||Ld|101-73-5
 c_101757|0|4-Phenylazodiphenylamine|4-Fenilazodifenilamin|C₁₈H₁₅N₃|4-Phenylazodiphenylamine;C18H15N3|organic|Molecular|S|0|0|Crystals|0|273.339|1.2|||||||||||||||||F4F4F2|1|||C18H15N3|0|0|1200||Ld|101-75-7
 c_101768|0|Bis(4-chlorophenyl)methane|Bis(4-klorofenil)metan|C₁₃H₁₀Cl₂|Bis(4-chlorophenyl)methane;C13H10Cl2|organic|Molecular|S|0|0|Crystals|0|237.123|1.36517|||||||||||||||||F4F4F2|1|||C13H10Cl2|0|0|1200||L|101-76-8
@@ -3006,8 +3006,8 @@ c_101995|0|Ethyl phenylcarbamate|Etil fenilkarbamat|C₉H₁₁NO₂|Ethyl pheny
 c_102023|0|Phenyl biguanide|Fenil biguanit|C₈H₁₁N₅|Phenyl biguanide;C8H11N5|organic|Molecular|S|0|0|Crystals|0|177.211|1.2|||||||||||||||||F4F4F2|1|||C8H11N5|0|0|1200||Ld|102-02-3
 c_102045|0|1,3-Diphenyl-2-propanone|1,3-Difenil-2-propanon|C₁₅H₁₄O|1,3-Diphenyl-2-propanone;C15H14O|organic|Molecular|S|0|0|Crystals|0|210.276|1.195|||||||||||||||||F4F4F2|1|||C15H14O|0|0|1200||L|102-04-5
 c_102067|0|N,N'-Diphenylguanidine|N,N'-difenilguanidin|C₁₃H₁₃N₃|N,N'-Diphenylguanidine;C13H13N3|organic|Molecular|S|0|0|Crystals|0|211.268|1.132|||||||||||||||||F4F4F2|1|||C13H13N3|0|0|1200||L|102-06-7
-c_102078|0|N,N'-Diphenylurea|N,N'-difenilurea|C₁₃H₁₂N₂O|N,N'-Diphenylurea;C13H12N2O|organic|Molecular|S|0|0|Crystals|0|212.252|1.23925|||||||||||||||||F4F4F2|1|||C13H12N2O|0|0|1200||L|102-07-8
-c_102089|0|N,N'-Diphenylthiourea|N,N'-difeniltiourea|C₁₃H₁₂N₂S|N,N'-Diphenylthiourea;C13H12N2S|organic|Molecular|S|0|0|Crystals|0|228.313|1.3225|||||||||||||||||F4F4F2|1|||C13H12N2S|0|0|1200||L|102-08-9
+c_102078|0|N,N'-Diphenylurea|N,N'-difenilüre|C₁₃H₁₂N₂O|N,N'-Diphenylurea;C13H12N2O|organic|Molecular|S|0|0|Crystals|0|212.252|1.23925|||||||||||||||||F4F4F2|1|||C13H12N2O|0|0|1200||L|102-07-8
+c_102089|0|N,N'-Diphenylthiourea|N,N'-difeniltioüre|C₁₃H₁₂N₂S|N,N'-Diphenylthiourea;C13H12N2S|organic|Molecular|S|0|0|Crystals|0|228.313|1.3225|||||||||||||||||F4F4F2|1|||C13H12N2S|0|0|1200||L|102-08-9
 c_102090|0|Diphenyl carbonate|Difenil karbonat|C₁₃H₁₀O₃|Diphenyl carbonate;C13H10O3|organic|Molecular|S|0|0|Crystals|0|214.22|1.12159|||||||||||||||||F4F4F2|1|||C13H10O3|0|0|1200||L|102-09-0
 c_102136|0|Isobutyl phenylacetate|İzobütil fenilasetat|C₁₂H₁₆O₂|Isobutyl phenylacetate;C12H16O2|organic|Molecular|L|0|0|Powder|0|192.258|0.99918|247||||||||||||||||E8F2FA|0.18|||C12H16O2|0|0|2000|238082|L|102-13-6
 c_102147|0|4-Oxo-4-(phenylamino)butanoic acid|4-Okso-4-(fenilamino)bütanoik asit|C₁₀H₁₁NO₃|4-Oxo-4-(phenylamino)butanoic acid;C10H11NO3|organic|Molecular|S|0|0|Crystals|0|193.202|1.2|||||||||||||||||F4F4F2|1|||C10H11NO3|0|0|1200||Ld|102-14-7
@@ -3017,7 +3017,7 @@ c_102283|0|N-(3-Aminophenyl)acetamide|N-(3-aminofenil)asetamit|C₈H₁₀N₂O|
 c_102454|0|N,α-Dimethylcyclopentaneethanamine|N,α-dimetilsiklopentaneetanamin|C₉H₁₉N|N,α-Dimethylcyclopentaneethanamine;C9H19N|organic|Molecular|L|0|0|Powder|0|141.258|1|171||||||||||||||||E8F2FA|0.18|||C9H19N|0|0|2000|276694|Ld|102-45-4
 c_102476|0|1,2-Dichloro-4-(chloromethyl)benzene|1,2-Dikloro-4-(klorometil)benzen|C₇H₅Cl₃|1,2-Dichloro-4-(chloromethyl)benzene;C7H5Cl3|organic|Molecular|S|0|0|Crystals|0|195.467|1.2|||||||||||||||||F4F4F2|1|||C7H5Cl3|0|0|1200||Ld|102-47-6
 c_102501|0|4-Methoxy-2-methylaniline|4-Metoksi-2-metilanilin|C₈H₁₁NO|4-Methoxy-2-methylaniline;C8H11NO|organic|Molecular|S|0|0|Crystals|0|137.182|1.06525|||||||||||||||||F4F4F2|1|||C8H11NO|0|0|1200||L|102-50-1
-c_102512|0|4-Methoxy-1,2-benzenediamine|4-Metoksi-1,2-benzenediamin|C₇H₁₀N₂O|4-Methoxy-1,2-benzenediamine;C7H10N2O|organic|Molecular|S|0|0|Crystals|0|138.17|1.2|||||||||||||||||F4F4F2|1|||C7H10N2O|0|0|1200||Ld|102-51-2
+c_102512|0|4-Methoxy-1,2-benzenediamine|4-Metoksi-1,2-benzendiamin|C₇H₁₀N₂O|4-Methoxy-1,2-benzenediamine;C7H10N2O|organic|Molecular|S|0|0|Crystals|0|138.17|1.2|||||||||||||||||F4F4F2|1|||C7H10N2O|0|0|1200||Ld|102-51-2
 c_102523|0|1,1,3,3-Tetramethoxypropane|1,1,3,3-Tetrametoksipropan|C₇H₁₆O₄|1,1,3,3-Tetramethoxypropane;C7H16O4|organic|Molecular|L|0|0|Powder|0|164.201|0.99725|183||||||||||||||||E8F2FA|0.18|||C7H16O4|0|0|2000|244464|L|102-52-3
 c_102534|0|N,N,N',N'-Tetraethylmethanediamine|N,N,N',N'-tetretilmetanediamin|C₉H₂₂N₂|N,N,N',N'-Tetraethylmethanediamine;C9H22N2|organic|Molecular|L|0|0|Powder|0|158.289|0.80002|152||||||||||||||||E8F2FA|0.18|||C9H22N2|0|0|2000|236360|L|102-53-4
 c_102567|0|2,5-Dimethoxyaniline|2,5-Dimetoksianilin|C₈H₁₁NO₂|2,5-Dimethoxyaniline;C8H11NO2|organic|Molecular|S|0|0|Crystals|0|153.181|1.2|||||||||||||||||F4F4F2|1|||C8H11NO2|0|0|1200||Ld|102-56-7
@@ -3029,8 +3029,8 @@ c_102976|0|Benzylisopropylamine|Benzilizopropilamin|C₁₀H₁₅N|Benzylisopro
 c_103015|0|N-Phenylglycine|N-fenilglisin|C₈H₉NO₂|N-Phenylglycine;C8H9NO2|organic|Molecular|S|0|0|Crystals|0|151.165|1.2|||||||||||||||||F4F4F2|1|||C8H9NO2|0|0|1200||Ld|103-01-5
 c_103026|0|2-Propanone phenylhydrazone|2-Propanon fenilhidrazon|C₉H₁₂N₂|2-Propanone phenylhydrazone;C9H12N2|organic|Molecular|S|0|0|Crystals|0|148.209|1.2|||||||||||||||||F4F4F2|1|||C9H12N2|0|0|1200||Ld|103-02-6
 c_103037|0|2-Phenylhydrazinecarboxamide|2-Fenilhidrazinekarboksamit|C₇H₉N₃O|2-Phenylhydrazinecarboxamide;C7H9N3O|organic|Molecular|S|0|0|Crystals|0|151.169|1.2|||||||||||||||||F4F4F2|1|||C7H9N3O|0|0|1200||Ld|103-03-7
-c_103059|0|α,α-Dimethylbenzenepropanol|α,α-Dimetilbenzenepropanol|C₁₁H₁₆O|α,α-Dimethylbenzenepropanol;C11H16O|organic|Molecular|L|0|0|Powder|0|164.248|0.962621|||||||||||||||||E8F2FA|0.18|||C11H16O|0|0|2000||L|103-05-9
-c_103128|0|4-[(2,4-Diaminophenyl)azo]benzenesulfonamide|4-[(2,4-Diaminofenil)azo]benzenesülfonamit|C₁₂H₁₃N₅O₂S|4-[(2,4-Diaminophenyl)azo]benzenesulfonamide;C12H13N5O2S|organic|Molecular|S|0|0|Crystals|0|291.329|1.2|||||||||||||||||F4F4F2|1|||C12H13N5O2S|0|0|1200||Ld|103-12-8
+c_103059|0|α,α-Dimethylbenzenepropanol|α,α-Dimetilbenzenpropanol|C₁₁H₁₆O|α,α-Dimethylbenzenepropanol;C11H16O|organic|Molecular|L|0|0|Powder|0|164.248|0.962621|||||||||||||||||E8F2FA|0.18|||C11H16O|0|0|2000||L|103-05-9
+c_103128|0|4-[(2,4-Diaminophenyl)azo]benzenesulfonamide|4-[(2,4-Diaminofenil)azo]benzensülfonamit|C₁₂H₁₃N₅O₂S|4-[(2,4-Diaminophenyl)azo]benzenesulfonamide;C12H13N5O2S|organic|Molecular|S|0|0|Crystals|0|291.329|1.2|||||||||||||||||F4F4F2|1|||C12H13N5O2S|0|0|1200||Ld|103-12-8
 c_103162|0|4-(Phenylmethoxy)phenol|4-(Fenilmetoksi)fenol|C₁₃H₁₂O₂|4-(Phenylmethoxy)phenol;C13H12O2|organic|Molecular|S|0|0|Crystals|0|200.237|1.2|||||||||||||||||F4F4F2|1|||C13H12O2|0|0|1200||Ld|103-16-2
 c_103173|0|Chlorbenside|Klorbensit|C₁₃H₁₀Cl₂S|Chlorbenside;C13H10Cl2S|organic|Molecular|S|0|0|Crystals|0|269.183|1.42102|||||||||||||||||F4F4F2|1|||C13H10Cl2S|0|0|1200||L|103-17-3
 c_103195|0|Bis(4-methylphenyl) disulfide|Bis(4-metilfenil) disülfür|C₁₄H₁₄S₂|Bis(4-methylphenyl) disulfide;C14H14S2|organic|Molecular|S|0|0|Crystals|0|246.386|1.11451|||||||||||||||||F4F4F2|1|||C14H14S2|0|0|1200||L|103-19-5
@@ -3045,23 +3045,23 @@ c_103457|0|2-Phenylethyl acetate|2-Feniletil asetat|C₁₀H₁₂O₂|2-Phenyle
 c_103480|0|2-Phenylethyl 2-methylpropanoate|2-Feniletil 2-metilpropanoat|C₁₂H₁₆O₂|2-Phenylethyl 2-methylpropanoate;C12H16O2|organic|Molecular|L|0|0|Powder|0|192.258|0.995015|250||||||||||||||||E8F2FA|0.18|||C12H16O2|0|0|2000|239455|L|103-48-0
 c_103491|0|Dibenzylamine|Dibenzilamin|C₁₄H₁₅N|Dibenzylamine;C14H15N|organic|Molecular|L|0|0|Powder|0|197.281|1.02562|||||||||||||||||E8F2FA|0.18|||C14H15N|0|0|2000||L|103-49-1
 c_103639|0|(2-Bromoethyl)benzene|(2-Bromoetil)benzen|C₈H₉Br|(2-Bromoethyl)benzene;C8H9Br|organic|Molecular|L|0|0|Powder|0|185.064|1.36432|216||||||||||||||||E8F2FA|0.18|||C8H9Br|0|0|2000|232596|L|103-63-9
-c_103673|0|N-Methylbenzenemethanamine|N-metilbenzenemetanamin|C₈H₁₁N|N-Methylbenzenemethanamine;C8H11N|organic|Molecular|L|0|0|Powder|0|121.183|0.944218|180.5||||||||||||||||E8F2FA|0.18|||C8H11N|0|0|2000|329429|L|103-67-3
+c_103673|0|N-Methylbenzenemethanamine|N-metilbenzenmetanamin|C₈H₁₁N|N-Methylbenzenemethanamine;C8H11N|organic|Molecular|L|0|0|Powder|0|121.183|0.944218|180.5||||||||||||||||E8F2FA|0.18|||C8H11N|0|0|2000|329429|L|103-67-3
 c_103720|0|Phenyl isothiocyanate|Fenil izotiosianat|C₇H₅NS|Phenyl isothiocyanate;C7H5NS|organic|Molecular|L|0|0|Powder|0|135.184|1.13032|220||||||||||||||||E8F2FA|0.18|||C7H5NS|0|0|2000|321023|L|103-72-0
 c_103742|0|2-Pyridineethanol|2-Piridineetanol|C₇H₉NO|2-Pyridineethanol;C7H9NO|organic|Molecular|L|0|0|Powder|0|123.155|1.09125|||||||||||||||||E8F2FA|0.18|||C7H9NO|0|0|2000||L|103-74-2
 c_103753|0|2-Ethoxy-3,4-dihydro-2H-pyran|2-Etoksi-3,4-dihidro-2H-piran|C₇H₁₂O₂|2-Ethoxy-3,4-dihydro-2H-pyran;C7H12O2|organic|Molecular|L|0|0|Powder|0|128.171|0.965825|132||||||||||||||||E8F2FA|0.18|||C7H12O2|0|0|2000|278169|L|103-75-3
 c_103797|0|1-Phenyl-2-propanone|1-Fenil-2-propanon|C₉H₁₀O|1-Phenyl-2-propanone;C9H10O|organic|Molecular|L|0|0|Powder|0|134.178|1.01572|214||||||||||||||||E8F2FA|0.18|||C9H10O|0|0|2000|319495|L|103-79-7
-c_103811|0|Benzeneacetamide|Benzeneasetamit|C₈H₉NO|Benzeneacetamide;C8H9NO|organic|Molecular|S|0|0|Crystals|0|135.166|1.2|||||||||||||||||F4F4F2|1|||C8H9NO|0|0|1200||Ld|103-81-1
-c_103822|0|Benzeneacetic acid|Benzeneasetik asit|C₈H₈O₂|Benzeneacetic acid;C8H8O2|organic|Molecular|S|0|0|Crystals|0|136.15|1.2286|||||||||||||||||F4F4F2|1|||C8H8O2|0|0|1200||L|103-82-2
+c_103811|0|Benzeneacetamide|Benzenasetamit|C₈H₉NO|Benzeneacetamide;C8H9NO|organic|Molecular|S|0|0|Crystals|0|135.166|1.2|||||||||||||||||F4F4F2|1|||C8H9NO|0|0|1200||Ld|103-81-1
+c_103822|0|Benzeneacetic acid|Benzenasetik asit|C₈H₈O₂|Benzeneacetic acid;C8H8O2|organic|Molecular|S|0|0|Crystals|0|136.15|1.2286|||||||||||||||||F4F4F2|1|||C8H8O2|0|0|1200||L|103-82-2
 c_103833|0|N,N-Dimethylbenzylamine|N,N-dimetilbenzilamin|C₉H₁₃N|N,N-Dimethylbenzylamine;C9H13N|organic|Molecular|L|0|0|Powder|0|135.21|0.915|179||||||||||||||||E8F2FA|0.18|||C9H13N|0|0|2000|294277|L|103-83-3
-c_103855|0|Phenylthiourea|Feniltiourea|C₇H₈N₂S|Phenylthiourea;C7H8N2S|organic|Molecular|S|0|0|Crystals|0|152.215|1.2|||||||||||||||||F4F4F2|1|||C7H8N2S|0|0|1200||Ld|103-85-5
+c_103855|0|Phenylthiourea|Feniltioüre|C₇H₈N₂S|Phenylthiourea;C7H8N2S|organic|Molecular|S|0|0|Crystals|0|152.215|1.2|||||||||||||||||F4F4F2|1|||C7H8N2S|0|0|1200||Ld|103-85-5
 c_103888|0|N-(4-Bromophenyl)acetamide|N-(4-bromofenil)asetamit|C₈H₈BrNO|N-(4-Bromophenyl)acetamide;C8H8BrNO|organic|Molecular|S|0|0|Crystals|0|214.062|1.71725|||||||||||||||||F4F4F2|1|||C8H8BrNO|0|0|1200||L|103-88-8
 c_103899|0|4-Methylacetanilide|4-Metilasetanilit|C₉H₁₁NO|4-Methylacetanilide;C9H11NO|organic|Molecular|S|0|0|Crystals|0|149.193|1.21202|||||||||||||||||F4F4F2|1|||C9H11NO|0|0|1200||L|103-89-9
-c_103957|0|4-Isopropyl-α-methylbenzenepropanal|4-İzopropil-α-metilbenzenepropanal|C₁₃H₁₈O|4-Isopropyl-α-methylbenzenepropanal;C13H18O|organic|Molecular|L|0|0|Powder|0|190.286|0.94592|270||||||||||||||||E8F2FA|0.18|||C13H18O|0|0|2000|251186|L|103-95-7
+c_103957|0|4-Isopropyl-α-methylbenzenepropanal|4-İzopropil-α-metilbenzenpropanal|C₁₃H₁₈O|4-Isopropyl-α-methylbenzenepropanal;C13H18O|organic|Molecular|L|0|0|Powder|0|190.286|0.94592|270||||||||||||||||E8F2FA|0.18|||C13H18O|0|0|2000|251186|L|103-95-7
 c_103991|0|N-(4-Hydroxyphenyl)octadecanamide|N-(4-hidroksifenil)oktadekanamit|C₂₄H₄₁NO₂|N-(4-Hydroxyphenyl)octadecanamide;C24H41NO2|organic|Molecular|S|0|0|Crystals|0|375.597|1.2|||||||||||||||||F4F4F2|1|||C24H41NO2|0|0|1200||Ld|103-99-1
-c_104030|0|4-Nitrobenzeneacetic acid|4-Nitrobenzeneasetik asit|C₈H₇NO₄|4-Nitrobenzeneacetic acid;C8H7NO4|organic|Molecular|S|0|0|Crystals|0|181.147|1.2|||||||||||||||||F4F4F2|1|||C8H7NO4|0|0|1200||Ld|104-03-0
+c_104030|0|4-Nitrobenzeneacetic acid|4-Nitrobenzenasetik asit|C₈H₇NO₄|4-Nitrobenzeneacetic acid;C8H7NO4|organic|Molecular|S|0|0|Crystals|0|181.147|1.2|||||||||||||||||F4F4F2|1|||C8H7NO4|0|0|1200||Ld|104-03-0
 c_104041|0|N-(4-Nitrophenyl)acetamide|N-(4-nitrofenil)asetamit|C₈H₈N₂O₃|N-(4-Nitrophenyl)acetamide;C8H8N2O3|organic|Molecular|S|0|0|Crystals|0|180.163|1.2|||||||||||||||||F4F4F2|1|||C8H8N2O3|0|0|1200||Ld|104-04-1
-c_104096|0|4-Methylbenzeneacetaldehyde|4-Metilbenzeneasetaldehit|C₉H₁₀O|4-Methylbenzeneacetaldehyde;C9H10O|organic|Molecular|S|0|0|Crystals|0|134.178|1.00522|||||||||||||||||F4F4F2|1|||C9H10O|0|0|1200||L|104-09-6
-c_104109|0|4-Aminobenzeneethanol|4-Aminobenzeneetanol|C₈H₁₁NO|4-Aminobenzeneethanol;C8H11NO|organic|Molecular|S|0|0|Crystals|0|137.182|1.2|||||||||||||||||F4F4F2|1|||C8H11NO|0|0|1200||Ld|104-10-9
+c_104096|0|4-Methylbenzeneacetaldehyde|4-Metilbenzenasetaldehit|C₉H₁₀O|4-Methylbenzeneacetaldehyde;C9H10O|organic|Molecular|S|0|0|Crystals|0|134.178|1.00522|||||||||||||||||F4F4F2|1|||C9H10O|0|0|1200||L|104-09-6
+c_104109|0|4-Aminobenzeneethanol|4-Aminobenzenetanol|C₈H₁₁NO|4-Aminobenzeneethanol;C8H11NO|organic|Molecular|S|0|0|Crystals|0|137.182|1.2|||||||||||||||||F4F4F2|1|||C8H11NO|0|0|1200||Ld|104-10-9
 c_104121|0|4-Chlorophenyl isocyanate|4-Klorofenil izosianat|C₇H₄ClNO|4-Chlorophenyl isocyanate;C7H4ClNO|organic|Molecular|S|0|0|Crystals|0|153.565|1.2|||||||||||||||||F4F4F2|1|||C7H4ClNO|0|0|1200||Ld|104-12-1
 c_104132|0|4-Butylaniline|4-Bütilanilin|C₁₀H₁₅N|4-Butylaniline;C10H15N|organic|Molecular|L|0|0|Powder|0|149.237|0.9452|261||||||||||||||||E8F2FA|0.18|||C10H15N|0|0|2000|314970|L|104-13-2
 c_104212|0|4-Methoxybenzyl acetate|4-Metoksibenzil asetat|C₁₀H₁₂O₃|4-Methoxybenzyl acetate;C10H12O3|organic|Molecular|S|0|0|Crystals|0|180.203|1.10525|||||||||||||||||F4F4F2|1|||C10H12O3|0|0|1200||L|104-21-2
@@ -3072,10 +3072,10 @@ c_104405|0|4-Nonylphenol|4-Nonilfenol|C₁₅H₂₄O|4-Nonylphenol;C15H24O|orga
 c_104427|0|4-Dodecylaniline|4-Dodesilanilin|C₁₈H₃₁N|4-Dodecylaniline;C18H31N|organic|Molecular|S|0|0|Crystals|0|261.453|1.2|||||||||||||||||F4F4F2|1|||C18H31N|0|0|1200||Ld|104-42-7
 c_104438|0|4-Dodecylphenol|4-Dodesilfenol|C₁₈H₃₀O|4-Dodecylphenol;C18H30O|organic|Molecular|S|0|0|Crystals|0|262.437|1.2|||||||||||||||||F4F4F2|1|||C18H30O|0|0|1200||Ld|104-43-8
 c_104450|0|1-Methoxy-4-propylbenzene|1-Metoksi-4-propilbenzen|C₁₀H₁₄O|1-Methoxy-4-propylbenzene;C10H14O|organic|Molecular|L|0|0|Powder|0|150.221|0.94722|211.5||||||||||||||||E8F2FA|0.18|||C10H14O|0|0|2000|283910|L|104-45-0
-c_104472|0|4-Methoxybenzeneacetonitrile|4-Metoksibenzeneasetonitril|C₉H₉NO|4-Methoxybenzeneacetonitrile;C9H9NO|organic|Molecular|L|0|0|Powder|0|147.177|1.08452|286.5||||||||||||||||E8F2FA|0.18|||C9H9NO|0|0|2000|334626|L|104-47-2
+c_104472|0|4-Methoxybenzeneacetonitrile|4-Metoksibenzenasetonitril|C₉H₉NO|4-Methoxybenzeneacetonitrile;C9H9NO|organic|Molecular|L|0|0|Powder|0|147.177|1.08452|286.5||||||||||||||||E8F2FA|0.18|||C9H9NO|0|0|2000|334626|L|104-47-2
 c_104494|0|1,4-Diisocyanatobenzene|1,4-Diizosianatobenzen|C₈H₄N₂O₂|1,4-Diisocyanatobenzene;C8H4N2O2|organic|Molecular|S|0|0|Crystals|0|160.132|1.2|||||||||||||||||F4F4F2|1|||C8H4N2O2|0|0|1200||Ld|104-49-4
 c_104529|0|(3-Chloropropyl)benzene|(3-Kloropropil)benzen|C₉H₁₁Cl|(3-Chloropropyl)benzene;C9H11Cl|organic|Molecular|L|0|0|Powder|0|154.637|1.05621|216||||||||||||||||E8F2FA|0.18|||C9H11Cl|0|0|2000|278363|L|104-52-9
-c_104530|0|Benzenepropanal|Benzenepropanal|C₉H₁₀O|Benzenepropanal;C9H10O|organic|Molecular|S|0|0|Crystals|0|134.178|1.01902|||||||||||||||||F4F4F2|1|||C9H10O|0|0|1200||L|104-53-0
+c_104530|0|Benzenepropanal|Benzenpropanal|C₉H₁₀O|Benzenepropanal;C9H10O|organic|Molecular|S|0|0|Crystals|0|134.178|1.01902|||||||||||||||||F4F4F2|1|||C9H10O|0|0|1200||L|104-53-0
 c_104632|0|2-[Benzylamino]ethanol|2-[Benzilamino]etanol|C₉H₁₃NO|2-[Benzylamino]ethanol;C9H13NO|organic|Molecular|L|0|0|Powder|0|151.209|1.06525|280||||||||||||||||E8F2FA|0.18|||C9H13NO|0|0|2000|321920|L|104-63-2
 c_104654|0|Cinnamyl formate|Sinnamil format|C₁₀H₁₀O₂|Cinnamyl formate;C10H10O2|organic|Molecular|L|0|0|Powder|0|162.188|1.08625|252||||||||||||||||E8F2FA|0.18|||C10H10O2|0|0|2000|284936|L|104-65-4
 c_104665|0|1,2-Diphenoxyethane|1,2-Difenoksietan|C₁₄H₁₄O₂|1,2-Diphenoxyethane;C14H14O2|organic|Molecular|S|0|0|Crystals|0|214.264|1.2|||||||||||||||||F4F4F2|1|||C14H14O2|0|0|1200||Ld|104-66-5
@@ -3086,7 +3086,7 @@ c_104803|0|2,5-Anhydro-3,4-dideoxyhexitol|2,5-Anhidro-3,4-dideoksihekzitol|C₆H
 c_104814|0|1-(Bromomethyl)-4-methylbenzene|1-(Bromometil)-4-metilbenzen|C₈H₉Br|1-(Bromomethyl)-4-methylbenzene;C8H9Br|organic|Molecular|S|0|0|Crystals|0|185.064|1.32425|||||||||||||||||F4F4F2|1|||C8H9Br|0|0|1200||L|104-81-4
 c_104825|0|1-(Chloromethyl)-4-methylbenzene|1-(Klorometil)-4-metilbenzen|C₈H₉Cl|1-(Chloromethyl)-4-methylbenzene;C8H9Cl|organic|Molecular|L|0|0|Powder|0|140.61|1.05122|201||||||||||||||||E8F2FA|0.18|||C8H9Cl|0|0|2000|296744|L|104-82-5
 c_104836|0|1-Chloro-4-(chloromethyl)benzene|1-Kloro-4-(klorometil)benzen|C₇H₆Cl₂|1-Chloro-4-(chloromethyl)benzene;C7H6Cl2|organic|Molecular|S|0|0|Crystals|0|161.025|1.2|||||||||||||||||F4F4F2|1|||C7H6Cl2|0|0|1200||Ld|104-83-6
-c_104847|0|4-Methylbenzenemethanamine|4-Metilbenzenemetanamin|C₈H₁₁N|4-Methylbenzenemethanamine;C8H11N|organic|Molecular|L|0|0|Powder|0|121.183|0.9522|195||||||||||||||||E8F2FA|0.18|||C8H11N|0|0|2000|339959|L|104-84-7
+c_104847|0|4-Methylbenzenemethanamine|4-Metilbenzenmetanamin|C₈H₁₁N|4-Methylbenzenemethanamine;C8H11N|organic|Molecular|L|0|0|Powder|0|121.183|0.9522|195||||||||||||||||E8F2FA|0.18|||C8H11N|0|0|2000|339959|L|104-84-7
 c_104858|0|4-Methylbenzonitrile|4-Metilbenzonitril|C₈H₇N|4-Methylbenzonitrile;C8H7N|organic|Molecular|S|0|0|Crystals|0|117.151|0.97623|||||||||||||||||F4F4F2|1|||C8H7N|0|0|1200||L|104-85-8
 c_104881|0|4-Chlorobenzaldehyde|4-Klorobenzaldehit|C₇H₅ClO|4-Chlorobenzaldehyde;C7H5ClO|organic|Molecular|S|0|0|Crystals|0|140.566|1.19661|||||||||||||||||F4F4F2|1|||C7H5ClO|0|0|1200||L|104-88-1
 c_104905|0|5-Ethyl-2-picoline|5-Etil-2-pikolin|C₈H₁₁N|5-Ethyl-2-picoline;C8H11N|organic|Molecular|L|0|0|Powder|0|121.183|0.92022|178||||||||||||||||E8F2FA|0.18|||C8H11N|0|0|2000|327614|L|104-90-5
@@ -3096,14 +3096,14 @@ c_104949|0|4-Methoxyaniline|4-Metoksianilin|C₇H₉NO|4-Methoxyaniline;C7H9NO|o
 c_104961|0|4-(Methylthio)aniline|4-(Metiltio)anilin|C₇H₉NS|4-(Methylthio)aniline;C7H9NS|organic|Molecular|L|0|0|Powder|0|139.216|1.13792|272.5||||||||||||||||E8F2FA|0.18|||C7H9NS|0|0|2000|344912|L|104-96-1
 c_104983|0|Urocanic acid|Urokanik asit|C₆H₆N₂O₂|Urocanic acid;C6H6N2O2|organic|Molecular|S|0|0|Crystals|0|138.126|1.2|||||||||||||||||F4F4F2|1|||C6H6N2O2|0|0|1200||Ld|104-98-3
 c_105077|0|4-Formylbenzonitrile|4-Formilbenzonitril|C₈H₅NO|4-Formylbenzonitrile;C8H5NO|organic|Molecular|S|0|0|Crystals|0|131.134|1.2|||||||||||||||||F4F4F2|1|||C8H5NO|0|0|1200||Ld|105-07-7
-c_105135|0|4-Methoxybenzenemethanol|4-Metoksibenzenemetanol|C₈H₁₀O₂|4-Methoxybenzenemethanol;C8H10O2|organic|Molecular|L|0|0|Powder|0|138.166|1.10926|254||||||||||||||||E8F2FA|0.18|||C8H10O2|0|0|2000|335750|L|105-13-5
+c_105135|0|4-Methoxybenzenemethanol|4-Metoksibenzenmetanol|C₈H₁₀O₂|4-Methoxybenzenemethanol;C8H10O2|organic|Molecular|L|0|0|Powder|0|138.166|1.10926|254||||||||||||||||E8F2FA|0.18|||C8H10O2|0|0|2000|335750|L|105-13-5
 c_105317|0|1-Hexyn-3-ol|1-Hekzin-3-ol|C₆H₁₀O|1-Hexyn-3-ol;C6H10O|organic|Molecular|L|0|0|Powder|0|98.145|0.87042|142||||||||||||||||E8F2FA|0.18|||C6H10O|0|0|2000|372237|L|105-31-7
 c_105362|0|Ethyl bromoacetate|Etil bromoasetat|C₄H₇BrO₂|Ethyl bromoacetate;C4H7BrO2|organic|Molecular|L|0|0|Powder|0|167.002|1.50322|159||||||||||||||||E8F2FA|0.18|||C4H7BrO2|0|0|2000|227717|L|105-36-2
 c_105408|0|Ethyl N-methylcarbamate|Etil N-metilkarbamat|C₄H₉NO₂|Ethyl N-methylcarbamate;C4H9NO2|organic|Molecular|L|0|0|Powder|0|103.121|1.01152|169||||||||||||||||E8F2FA|0.18|||C4H9NO2|0|0|2000|377316|L|105-40-8
 c_105419|0|4-Methyl-2-hexanamine|4-Metil-2-hekzanamin|C₇H₁₇N|4-Methyl-2-hexanamine;C7H17N|organic|Molecular|L|0|0|Powder|0|115.22|0.76552|132.5||||||||||||||||E8F2FA|0.18|||C7H17N|0|0|2000|309818|L|105-41-9
 c_105486|0|Isopropyl chloroacetate|İzopropil kloroasetat|C₅H₉ClO₂|Isopropyl chloroacetate;C5H9ClO2|organic|Molecular|L|0|0|Powder|0|136.575|1.08882|150||||||||||||||||E8F2FA|0.18|||C5H9ClO2|0|0|2000|272650|L|105-48-6
 c_105500|0|Diethyl 3-oxo-1,5-pentanedioate|Dietil 3-okso-1,5-pentanedioat|C₉H₁₄O₅|Diethyl 3-oxo-1,5-pentanedioate;C9H14O5|organic|Molecular|S|0|0|Crystals|0|202.206|1.1132|||||||||||||||||F4F4F2|1|||C9H14O5|0|0|1200||L|105-50-0
-c_105555|0|N,N'-Diethylthiourea|N,N'-dietiltiourea|C₅H₁₂N₂S|N,N'-Diethylthiourea;C5H12N2S|organic|Molecular|S|0|0|Crystals|0|132.225|1.2|||||||||||||||||F4F4F2|1|||C5H12N2S|0|0|1200||Ld|105-55-5
+c_105555|0|N,N'-Diethylthiourea|N,N'-dietiltioüre|C₅H₁₂N₂S|N,N'-Diethylthiourea;C5H12N2S|organic|Molecular|S|0|0|Crystals|0|132.225|1.2|||||||||||||||||F4F4F2|1|||C5H12N2S|0|0|1200||Ld|105-55-5
 c_105657|0|Diisopropyl thioperoxydicarbonate|Diizopropil tioperoksidikarbonat|C₈H₁₄O₂S₄|Diisopropyl thioperoxydicarbonate;C8H14O2S4|organic|Molecular|S|0|0|Crystals|0|270.438|1.2|||||||||||||||||F4F4F2|1|||C8H14O2S4|0|0|1200||Ld|105-65-7
 c_105680|0|Isopentyl propanoate|İzopentil propanoat|C₈H₁₆O₂|Isopentyl propanoate;C8H16O2|organic|Molecular|L|0|0|Powder|0|144.214|0.86972|173||||||||||||||||E8F2FA|0.18|||C8H16O2|0|0|2000|272243|L|105-68-0
 c_105704|0|Glycerol 1,3-diacetate|Gliserol 1,3-diasetat|C₇H₁₂O₅|Glycerol 1,3-diacetate;C7H12O5|organic|Molecular|L|0|0|Powder|0|176.168|1.17915|260||||||||||||||||E8F2FA|0.18|||C7H12O5|0|0|2000|266321|L|105-70-4
@@ -3121,10 +3121,10 @@ c_106309|0|Ethyl heptanoate|Etil heptanoat|C₉H₁₈O₂|Ethyl heptanoate;C9H1
 c_106398|0|1-Bromo-4-chlorobenzene|1-Bromo-4-klorobenzen|C₆H₄BrCl|1-Bromo-4-chlorobenzene;C6H4BrCl|organic|Molecular|S|0|0|Crystals|0|191.452|1.57671|||||||||||||||||F4F4F2|1|||C6H4BrCl|0|0|1200||L|106-39-8
 c_106401|0|4-Bromoaniline|4-Bromoanilin|C₆H₆BrN|4-Bromoaniline;C6H6BrN|organic|Molecular|S|0|0|Crystals|0|172.025|1.49701|||||||||||||||||F4F4F2|1|||C6H6BrN|0|0|1200||L|106-40-1
 c_106412|0|4-Bromophenol|4-Bromofenol|C₆H₅BrO|4-Bromophenol;C6H5BrO|organic|Molecular|S|0|0|Crystals|0|173.009|1.84015|||||||||||||||||F4F4F2|1|||C6H5BrO|0|0|1200||L|106-41-2
-c_106456|0|4-Methylbenzenethiol|4-Metilbenzenetiol|C₇H₈S|4-Methylbenzenethiol;C7H8S|organic|Molecular|S|0|0|Crystals|0|124.201|1.02205|||||||||||||||||F4F4F2|1|||C7H8S|0|0|1200||L|106-45-6
+c_106456|0|4-Methylbenzenethiol|4-Metilbenzentiol|C₇H₈S|4-Methylbenzenethiol;C7H8S|organic|Molecular|S|0|0|Crystals|0|124.201|1.02205|||||||||||||||||F4F4F2|1|||C7H8S|0|0|1200||L|106-45-6
 c_106525|0|1-Methyl-4-piperidinol|1-Metil-4-piperidinol|C₆H₁₃NO|1-Methyl-4-piperidinol;C6H13NO|organic|Molecular|S|0|0|Crystals|0|115.176|1.2|||||||||||||||||F4F4F2|1|||C6H13NO|0|0|1200||Ld|106-52-5
-c_106536|0|4-Bromobenzenethiol|4-Bromobenzenetiol|C₆H₅BrS|4-Bromobenzenethiol;C6H5BrS|organic|Molecular|S|0|0|Crystals|0|189.07|1.52608|||||||||||||||||F4F4F2|1|||C6H5BrS|0|0|1200||L|106-53-6
-c_106547|0|4-Chlorobenzenethiol|4-Klorobenzenetiol|C₆H₅ClS|4-Chlorobenzenethiol;C6H5ClS|organic|Molecular|S|0|0|Crystals|0|144.616|1.19112|||||||||||||||||F4F4F2|1|||C6H5ClS|0|0|1200||L|106-54-7
+c_106536|0|4-Bromobenzenethiol|4-Bromobenzentiol|C₆H₅BrS|4-Bromobenzenethiol;C6H5BrS|organic|Molecular|S|0|0|Crystals|0|189.07|1.52608|||||||||||||||||F4F4F2|1|||C6H5BrS|0|0|1200||L|106-53-6
+c_106547|0|4-Chlorobenzenethiol|4-Klorobenzentiol|C₆H₅ClS|4-Chlorobenzenethiol;C6H5ClS|organic|Molecular|S|0|0|Crystals|0|144.616|1.19112|||||||||||||||||F4F4F2|1|||C6H5ClS|0|0|1200||L|106-54-7
 c_106581|0|1,4-Dimethylpiperazine|1,4-Dimetilpiperazin|C₆H₁₄N₂|1,4-Dimethylpiperazine;C6H14N2|organic|Molecular|L|0|0|Powder|0|114.192|0.86002|129.8||||||||||||||||E8F2FA|0.18|||C6H14N2|0|0|2000|310526|L|106-58-1
 c_106605|0|5-Amino-4-oxopentanoic acid|5-Amino-4-oksopentanoik asit|C₅H₉NO₃|5-Amino-4-oxopentanoic acid;C5H9NO3|organic|Molecular|S|0|0|Crystals|0|131.131|1.2|||||||||||||||||F4F4F2|1|||C5H9NO3|0|0|1200||Ld|106-60-5
 c_106707|0|Methyl hexanoate|Metil hekzanoat|C₇H₁₄O₂|Methyl hexanoate;C7H14O2|organic|Molecular|L|0|0|Powder|0|130.187|0.88462|151||||||||||||||||E8F2FA|0.18|||C7H14O2|0|0|2000|286705|L|106-70-7
@@ -3161,13 +3161,13 @@ c_108236|0|Isopropyl chloroformate|İzopropil kloroformat|C₄H₇ClO₂|Isoprop
 c_108269|0|3-Methyl-2-pyrazolin-5-one|3-Metil-2-pirazolin-5-on|C₄H₆N₂O|3-Methyl-2-pyrazolin-5-one;C4H6N2O|organic|Molecular|S|0|0|Crystals|0|98.105|1.2|||||||||||||||||F4F4F2|1|||C4H6N2O|0|0|1200||Ld|108-26-9
 c_108270|0|5-Methyl-2-pyrrolidinone|5-Metil-2-pirrolidinon|C₅H₉NO|5-Methyl-2-pyrrolidinone;C5H9NO|organic|Molecular|S|0|0|Crystals|0|99.133|1.04582|||||||||||||||||F4F4F2|1|||C5H9NO|0|0|1200||L|108-27-0
 c_108372|0|1-Bromo-3-chlorobenzene|1-Bromo-3-klorobenzen|C₆H₄BrCl|1-Bromo-3-chlorobenzene;C6H4BrCl|organic|Molecular|L|0|0|Powder|0|191.452|1.63022|196||||||||||||||||E8F2FA|0.18|||C6H4BrCl|0|0|2000|215643|L|108-37-2
-c_108407|0|3-Methylbenzenethiol|3-Metilbenzenetiol|C₇H₈S|3-Methylbenzenethiol;C7H8S|organic|Molecular|L|0|0|Powder|0|124.201|1.0442|196||||||||||||||||E8F2FA|0.18|||C7H8S|0|0|2000|332406|L|108-40-7
+c_108407|0|3-Methylbenzenethiol|3-Metilbenzentiol|C₇H₈S|3-Methylbenzenethiol;C7H8S|organic|Molecular|L|0|0|Powder|0|124.201|1.0442|196||||||||||||||||E8F2FA|0.18|||C7H8S|0|0|2000|332406|L|108-40-7
 c_108418|0|3-Chlorotoluene|3-Klorotoluen|C₇H₇Cl|3-Chlorotoluene;C7H7Cl|organic|Molecular|L|0|0|Powder|0|126.583|1.0752|162.1||||||||||||||||E8F2FA|0.18|||C7H7Cl|0|0|2000|302584|L|108-41-8
 c_108509|0|2,6-Dimethylpyrazine|2,6-Dimetilpirazin|C₆H₈N₂|2,6-Dimethylpyrazine;C6H8N2|organic|Molecular|S|0|0|Crystals|0|108.144|0.96475|||||||||||||||||F4F4F2|1|||C6H8N2|0|0|1200||L|108-50-9
 c_108521|0|4-Methyl-2-pyrimidinamine|4-Metil-2-pirimidinamin|C₅H₇N₃|4-Methyl-2-pyrimidinamine;C5H7N3|organic|Molecular|S|0|0|Crystals|0|109.132|1.2|||||||||||||||||F4F4F2|1|||C5H7N3|0|0|1200||Ld|108-52-1
 c_108601|0|2,2'-Dichlorodiisopropyl ether|2,2'-Diklorodiizopropil eter|C₆H₁₂Cl₂O|2,2'-Dichlorodiisopropyl ether;C6H12Cl2O|organic|Molecular|L|0|0|Powder|0|171.061|1.1032|184||||||||||||||||E8F2FA|0.18|||C6H12Cl2O|0|0|2000|235175|L|108-60-1
 c_108690|0|3,5-Dimethylaniline|3,5-Dimetilanilin|C₈H₁₁N|3,5-Dimethylaniline;C8H11N|organic|Molecular|L|0|0|Powder|0|121.183|0.97062|217||||||||||||||||E8F2FA|0.18|||C8H11N|0|0|2000|355934|L|108-69-0
-c_108736|0|1,3,5-Benzenetriol|1,3,5-Benzenetriol|C₆H₆O₃|1,3,5-Benzenetriol;C6H6O3|organic|Molecular|S|0|0|Crystals|0|126.111|1.4625|||||||||||||||||F4F4F2|1|||C6H6O3|0|0|1200||L|108-73-6
+c_108736|0|1,3,5-Benzenetriol|1,3,5-Benzentriol|C₆H₆O₃|1,3,5-Benzenetriol;C6H6O3|organic|Molecular|S|0|0|Crystals|0|126.111|1.4625|||||||||||||||||F4F4F2|1|||C6H6O3|0|0|1200||L|108-73-6
 c_108770|0|2,4,6-Trichloro-1,3,5-triazine|2,4,6-Trikloro-1,3,5-triazin|C₃Cl₃N₃|2,4,6-Trichloro-1,3,5-triazine;C3Cl3N3|organic|Molecular|S|0|0|Crystals|0|184.404|1.2|||||||||||||||||F4F4F2|1|||C3Cl3N3|0|0|1200||Ld|108-77-0
 c_108805|0|Cyanuric acid|Sianurik asit|C₃H₃N₃O₃|Cyanuric acid;C3H3N3O3|organic|Molecular|S|0|0|Crystals|0|129.075|1.7525|||||||||||||||||F4F4F2|1|||C3H3N3O3|0|0|1200||L|108-80-5
 c_108849|0|sec-Hexyl acetate|Sec-hekzil asetat|C₈H₁₆O₂|sec-Hexyl acetate;C8H16O2|organic|Molecular|L|0|0|Powder|0|144.214|0.880525|147.5||||||||||||||||E8F2FA|0.18|||C8H16O2|0|0|2000|256682|L|108-84-9
@@ -3181,10 +3181,10 @@ c_109079|0|2-Methylpiperazine|2-Metilpiperazin|C₅H₁₂N₂|2-Methylpiperazin
 c_109080|0|2-Methylpyrazine|2-Metilpirazin|C₅H₆N₂|2-Methylpyrazine;C5H6N2|organic|Molecular|L|0|0|Powder|0|94.117|1.032|129||||||||||||||||E8F2FA|0.18|||C5H6N2|0|0|2000|376013|L|109-08-0
 c_109091|0|2-Chloropyridine|2-Kloropiridin|C₅H₄ClN|2-Chloropyridine;C5H4ClN|organic|Molecular|L|0|0|Powder|0|113.544|1.20515|170||||||||||||||||E8F2FA|0.18|||C5H4ClN|0|0|2000|343455|L|109-09-1
 c_109126|0|2-Pyrimidinamine|2-Pirimidinamin|C₄H₅N₃|2-Pyrimidinamine;C4H5N3|organic|Molecular|S|0|0|Crystals|0|95.105|1.2|||||||||||||||||F4F4F2|1|||C4H5N3|0|0|1200||Ld|109-12-6
-c_109466|0|N,N'-Dibutylthiourea|N,N'-dibütiltiourea|C₉H₂₀N₂S|N,N'-Dibutylthiourea;C9H20N2S|organic|Molecular|S|0|0|Crystals|0|188.333|1.2|||||||||||||||||F4F4F2|1|||C9H20N2S|0|0|1200||Ld|109-46-6
+c_109466|0|N,N'-Dibutylthiourea|N,N'-dibütiltioüre|C₉H₂₀N₂S|N,N'-Dibutylthiourea;C9H20N2S|organic|Molecular|S|0|0|Crystals|0|188.333|1.2|||||||||||||||||F4F4F2|1|||C9H20N2S|0|0|1200||Ld|109-46-6
 c_109535|0|Isobutyl vinyl ether|İzobütil vinil eter|C₆H₁₂O|Isobutyl vinyl ether;C6H12O|organic|Molecular|L|0|0|Powder|0|100.161|0.76452|83||||||||||||||||E8F2FA|0.18|||C6H12O|0|0|2000|312908|L|109-53-5
 c_109568|0|2-(Isopropylamino)ethanol|2-(İzopropilamino)etanol|C₅H₁₃NO|2-(Isopropylamino)ethanol;C5H13NO|organic|Molecular|S|0|0|Crystals|0|103.165|0.89702|||||||||||||||||F4F4F2|1|||C5H13NO|0|0|1200||L|109-56-8
-c_109579|0|Allylthiourea|Alliltiourea|C₄H₈N₂S|Allylthiourea;C4H8N2S|organic|Molecular|S|0|0|Crystals|0|116.182|1.2172|||||||||||||||||F4F4F2|1|||C4H8N2S|0|0|1200||L|109-57-9
+c_109579|0|Allylthiourea|Alliltioüre|C₄H₈N₂S|Allylthiourea;C4H8N2S|organic|Molecular|S|0|0|Crystals|0|116.182|1.2172|||||||||||||||||F4F4F2|1|||C4H8N2S|0|0|1200||L|109-57-9
 c_109591|0|2-Isopropoxyethanol|2-İzopropoksietanol|C₅H₁₂O₂|2-Isopropoxyethanol;C5H12O2|organic|Molecular|L|0|0|Powder|0|104.149|0.90302|141.6||||||||||||||||E8F2FA|0.18|||C5H12O2|0|0|2000|350440|L|109-59-1
 c_109615|0|Propyl chlorocarbonate|Propil klorokarbonat|C₄H₇ClO₂|Propyl chlorocarbonate;C4H7ClO2|organic|Molecular|L|0|0|Powder|0|122.548|1.09012|111||||||||||||||||E8F2FA|0.18|||C4H7ClO2|0|0|2000|275853|L|109-61-5
 c_109637|0|Boron trifluoride etherate|Bor triflorür eterat|C₄H₁₀BF₃O|Boron trifluoride etherate;C4H10BF3O|organic|Molecular|L|0|0|Powder|0|141.928|1.12525|125.5||||||||||||||||E8F2FA|0.18|||C4H10BF3O|0|0|2000|247176|L|109-63-7
@@ -3313,7 +3313,7 @@ c_116290|0|Tetradifon|Tetradifon|C₁₂H₆Cl₄O₂S|Tetradifon;C12H6Cl4O2S|or
 c_116314|0|Retinal (all trans)|Retinal (all trans)|C₂₀H₂₈O|Retinal (all trans);C20H28O|organic|Molecular|S|0|0|Crystals|0|284.443|1.2|||||||||||||||||F4F4F2|1|||C20H28O|0|0|1200||Ld|116-31-4
 c_116381|0|Edrophonium chloride|Edrofoniyum klorür|C₁₀H₁₆ClNO|Edrophonium chloride;C10H16ClNO|organic|Molecular|S|0|0|Crystals|0|201.694|1.2|||||||||||||||||F4F4F2|1|||C10H16ClNO|0|0|1200||Ld|116-38-1
 c_116438|0|Succinylsulphathiazole|Suksinilsülfatiazol|C₁₃H₁₃N₃O₅S₂|Succinylsulphathiazole;C13H13N3O5S2|organic|Molecular|S|0|0|Crystals|0|355.383|1.2|||||||||||||||||F4F4F2|1|||C13H13N3O5S2|0|0|1200||Ld|116-43-8
-c_116449|0|4-Amino-N-pyrazinylbenzenesulfonamide|4-Amino-N-pirazinilbenzenesülfonamit|C₁₀H₁₀N₄O₂S|4-Amino-N-pyrazinylbenzenesulfonamide;C10H10N4O2S|organic|Molecular|S|0|0|Crystals|0|250.276|1.2|||||||||||||||||F4F4F2|1|||C10H10N4O2S|0|0|1200||Ld|116-44-9
+c_116449|0|4-Amino-N-pyrazinylbenzenesulfonamide|4-Amino-N-pirazinilbenzensülfonamit|C₁₀H₁₀N₄O₂S|4-Amino-N-pyrazinylbenzenesulfonamide;C10H10N4O2S|organic|Molecular|S|0|0|Crystals|0|250.276|1.2|||||||||||||||||F4F4F2|1|||C10H10N4O2S|0|0|1200||Ld|116-44-9
 c_116529|0|N,N'-Bis(2,2,2-trichloro-1-hydroxyethyl)urea|N,N'-bis(2,2,2-trikloro-1-hidroksietil)üre|C₅H₆Cl₆N₂O₃|N,N'-Bis(2,2,2-trichloro-1-hydroxyethyl)urea;C5H6Cl6N2O3|organic|Molecular|S|0|0|Crystals|0|354.814|1.2|||||||||||||||||F4F4F2|1|||C5H6Cl6N2O3|0|0|1200||Ld|116-52-9
 c_116541|0|Methyl dichloroacetate|Metil dikloroasetat|C₃H₄Cl₂O₂|Methyl dichloroacetate;C3H4Cl2O2|organic|Molecular|L|0|0|Powder|0|142.963|1.37742|127||||||||||||||||E8F2FA|0.18|||C3H4Cl2O2|0|0|2000|246310|L|116-54-1
 c_116858|0|1-Amino-4-hydroxy-9,10-anthracenedione|1-Amino-4-hidroksi-9,10-antrasenedion|C₁₄H₉NO₃|1-Amino-4-hydroxy-9,10-anthracenedione;C14H9NO3|organic|Molecular|S|0|0|Crystals|0|239.23|1.2|||||||||||||||||F4F4F2|1|||C14H9NO3|0|0|1200||Ld|116-85-8
@@ -3323,7 +3323,7 @@ c_117113|0|1-Amino-5-chloro-9,10-anthracenedione|1-Amino-5-kloro-9,10-antrasened
 c_117124|0|1,5-Dihydroxy-9,10-anthracenedione|1,5-Dihidroksi-9,10-antrasenedion|C₁₄H₈O₄|1,5-Dihydroxy-9,10-anthracenedione;C14H8O4|organic|Molecular|S|0|0|Crystals|0|240.214|1.2|||||||||||||||||F4F4F2|1|||C14H8O4|0|0|1200||Ld|117-12-4
 c_117180|0|1,2,4,5-Tetrachloro-3-nitrobenzene|1,2,4,5-Tetrakloro-3-nitrobenzen|C₆HCl₄NO₂|1,2,4,5-Tetrachloro-3-nitrobenzene;C6HCl4NO2|organic|Molecular|S|0|0|Crystals|0|260.879|1.74425|||||||||||||||||F4F4F2|1|||C6HCl4NO2|0|0|1200||L|117-18-0
 c_117271|0|2-Nitro-1,1-bis(p-chlorophenyl)propane|2-Nitro-1,1-bis(p-klorofenil)propan|C₁₅H₁₃Cl₂NO₂|2-Nitro-1,1-bis(p-chlorophenyl)propane;C15H13Cl2NO2|organic|Molecular|S|0|0|Crystals|0|310.174|1.2|||||||||||||||||F4F4F2|1|||C15H13Cl2NO2|0|0|1200||Ld|117-27-1
-c_117340|0|α-Phenylbenzeneacetic acid|α-Fenilbenzeneasetik asit|C₁₄H₁₂O₂|α-Phenylbenzeneacetic acid;C14H12O2|organic|Molecular|S|0|0|Crystals|0|212.248|1.25715|||||||||||||||||F4F4F2|1|||C14H12O2|0|0|1200||L|117-34-0
+c_117340|0|α-Phenylbenzeneacetic acid|α-Fenilbenzenasetik asit|C₁₄H₁₂O₂|α-Phenylbenzeneacetic acid;C14H12O2|organic|Molecular|S|0|0|Crystals|0|212.248|1.25715|||||||||||||||||F4F4F2|1|||C14H12O2|0|0|1200||L|117-34-0
 c_117373|0|2-(4-Methoxyphenyl)-1H-indene-1,3(2H)-dione|2-(4-Metoksifenil)-1H-inden-1,3(2H)-dion|C₁₆H₁₂O₃|2-(4-Methoxyphenyl)-1H-indene-1,3(2H)-dione;C16H12O3|organic|Molecular|S|0|0|Crystals|0|252.269|1.2|||||||||||||||||F4F4F2|1|||C16H12O3|0|0|1200||Ld|117-37-3
 c_117395|0|Quercetin|Kersetin|C₁₅H₁₀O₇|Quercetin;C15H10O7|organic|Molecular|S|0|0|Crystals|0|302.238|1.2|||||||||||||||||F4F4F2|1|||C15H10O7|0|0|1200||Ld|117-39-5
 c_117624|0|2-Amino-1,5-naphthalenedisulfonic acid|2-Amino-1,5-naftalenedisülfonik asit|C₁₀H₉NO₆S₂|2-Amino-1,5-naphthalenedisulfonic acid;C10H9NO6S2|organic|Molecular|S|0|0|Crystals|0|303.303|1.2|||||||||||||||||F4F4F2|1|||C10H9NO6S2|0|0|1200||Ld|117-62-4
@@ -3365,7 +3365,7 @@ c_119426|0|2-Cyclohexylphenol|2-Siklohekzilfenol|C₁₂H₁₆O|2-Cyclohexylphe
 c_119471|0|Bis(2-hydroxy-3-tert-butyl-5-methylphenyl)methane|Bis(2-hidroksi-3-tert-bütil-5-metilfenil)metan|C₂₃H₃₂O₂|Bis(2-hydroxy-3-tert-butyl-5-methylphenyl)methane;C23H32O2|organic|Molecular|S|0|0|Crystals|0|340.507|1.2|||||||||||||||||F4F4F2|1|||C23H32O2|0|0|1200||Ld|119-47-1
 c_119482|0|Dimorpholamine|Dimorfolamin|C₂₀H₃₈N₄O₄|Dimorpholamine;C20H38N4O4|organic|Molecular|S|0|0|Crystals|0|398.548|1.2|||||||||||||||||F4F4F2|1|||C20H38N4O4|0|0|1200||Ld|119-48-2
 c_119528|0|4,4'-Dimethoxybenzoin|4,4'-Dimetoksibenzoin|C₁₆H₁₆O₄|4,4'-Dimethoxybenzoin;C16H16O4|organic|Molecular|S|0|0|Crystals|0|272.3|1.2|||||||||||||||||F4F4F2|1|||C16H16O4|0|0|1200||Ld|119-52-8
-c_119562|0|4-Chloro-α-phenylbenzenemethanol|4-Kloro-α-fenilbenzenemetanol|C₁₃H₁₁ClO|4-Chloro-α-phenylbenzenemethanol;C13H11ClO|organic|Molecular|S|0|0|Crystals|0|218.68|1.2|||||||||||||||||F4F4F2|1|||C13H11ClO|0|0|1200||Ld|119-56-2
+c_119562|0|4-Chloro-α-phenylbenzenemethanol|4-Kloro-α-fenilbenzenmetanol|C₁₃H₁₁ClO|4-Chloro-α-phenylbenzenemethanol;C13H11ClO|organic|Molecular|S|0|0|Crystals|0|218.68|1.2|||||||||||||||||F4F4F2|1|||C13H11ClO|0|0|1200||Ld|119-56-2
 c_119584|0|Bis(4-dimethylaminophenyl)methanol|Bis(4-dimetilaminofenil)metanol|C₁₇H₂₂N₂O|Bis(4-dimethylaminophenyl)methanol;C17H22N2O|organic|Molecular|S|0|0|Crystals|0|270.376|1.2|||||||||||||||||F4F4F2|1|||C17H22N2O|0|0|1200||Ld|119-58-4
 c_119608|0|Dicyclohexylmethanone|Disiklohekzilmetanon|C₁₃H₂₂O|Dicyclohexylmethanone;C13H22O|organic|Molecular|S|0|0|Crystals|0|194.318|0.986|||||||||||||||||F4F4F2|1|||C13H22O|0|0|1200||L|119-60-8
 c_119686|0|2-(Methylamino)benzoic acid|2-(Metilamino)benzoik asit|C₈H₉NO₂|2-(Methylamino)benzoic acid;C8H9NO2|organic|Molecular|S|0|0|Crystals|0|151.165|1.2|||||||||||||||||F4F4F2|1|||C8H9NO2|0|0|1200||Ld|119-68-6
@@ -3404,17 +3404,17 @@ c_120876|0|9,10-Dihydroxyoctadecanoic acid|9,10-Dihidroksioktadekanoik asit|C₁
 c_120898|0|Imidazolidinetrione|İmidazolidinetrion|C₃H₂N₂O₃|Imidazolidinetrione;C3H2N2O3|organic|Molecular|S|0|0|Crystals|0|114.06|1.2|||||||||||||||||F4F4F2|1|||C3H2N2O3|0|0|1200||Ld|120-89-8
 c_120934|0|2-Imidazolidinone|2-İmidazolidinon|C₃H₆N₂O|2-Imidazolidinone;C3H6N2O|organic|Molecular|S|0|0|Crystals|0|86.094|1.2|||||||||||||||||F4F4F2|1|||C3H6N2O|0|0|1200||Ld|120-93-4
 c_120956|0|2,4-Bis(1,1-dimethylpropyl)phenol|2,4-Bis(1,1-dimetilpropil)fenol|C₁₆H₂₆O|2,4-Bis(1,1-dimethylpropyl)phenol;C16H26O|organic|Molecular|S|0|0|Crystals|0|234.383|1.2|||||||||||||||||F4F4F2|1|||C16H26O|0|0|1200||Ld|120-95-6
-c_120978|0|4,5-Dichloro-1,3-benzenedisulfonamide|4,5-Dikloro-1,3-benzenedisülfonamit|C₆H₆Cl₂N₂O₄S₂|4,5-Dichloro-1,3-benzenedisulfonamide;C6H6Cl2N2O4S2|organic|Molecular|S|0|0|Crystals|0|305.144|1.2|||||||||||||||||F4F4F2|1|||C6H6Cl2N2O4S2|0|0|1200||Ld|120-97-8
-c_121039|0|2-Methyl-5-nitrobenzenesulfonic acid|2-Metil-5-nitrobenzenesülfonik asit|C₇H₇NO₅S|2-Methyl-5-nitrobenzenesulfonic acid;C7H7NO5S|organic|Molecular|S|0|0|Crystals|0|217.195|1.2|||||||||||||||||F4F4F2|1|||C7H7NO5S|0|0|1200||Ld|121-03-9
+c_120978|0|4,5-Dichloro-1,3-benzenedisulfonamide|4,5-Dikloro-1,3-benzendisülfonamit|C₆H₆Cl₂N₂O₄S₂|4,5-Dichloro-1,3-benzenedisulfonamide;C6H6Cl2N2O4S2|organic|Molecular|S|0|0|Crystals|0|305.144|1.2|||||||||||||||||F4F4F2|1|||C6H6Cl2N2O4S2|0|0|1200||Ld|120-97-8
+c_121039|0|2-Methyl-5-nitrobenzenesulfonic acid|2-Metil-5-nitrobenzensülfonik asit|C₇H₇NO₅S|2-Methyl-5-nitrobenzenesulfonic acid;C7H7NO5S|organic|Molecular|S|0|0|Crystals|0|217.195|1.2|||||||||||||||||F4F4F2|1|||C7H7NO5S|0|0|1200||Ld|121-03-9
 c_121062|0|Tris(2,6-dimethylphenyl) phosphate|Tris(2,6-dimetilfenil) fosfat|C₂₄H₂₇O₄P|Tris(2,6-dimethylphenyl) phosphate;C24H27O4P|organic|Molecular|S|0|0|Crystals|0|410.45|1.2|||||||||||||||||F4F4F2|1|||C24H27O4P|0|0|1200||Ld|121-06-2
-c_121302|0|4-Amino-6-chloro-1,3-benzenedisulfonamide|4-Amino-6-kloro-1,3-benzenedisülfonamit|C₆H₈ClN₃O₄S₂|4-Amino-6-chloro-1,3-benzenedisulfonamide;C6H8ClN3O4S2|organic|Molecular|S|0|0|Crystals|0|285.717|1.2|||||||||||||||||F4F4F2|1|||C6H8ClN3O4S2|0|0|1200||Ld|121-30-2
+c_121302|0|4-Amino-6-chloro-1,3-benzenedisulfonamide|4-Amino-6-kloro-1,3-benzendisülfonamit|C₆H₈ClN₃O₄S₂|4-Amino-6-chloro-1,3-benzenedisulfonamide;C6H8ClN3O4S2|organic|Molecular|S|0|0|Crystals|0|285.717|1.2|||||||||||||||||F4F4F2|1|||C6H8ClN3O4S2|0|0|1200||Ld|121-30-2
 c_121459|0|Trimethyl phosphite|Trimetil fosfit|C₃H₉O₃P|Trimethyl phosphite;C3H9O3P|organic|Molecular|L|0|0|Powder|0|124.076|1.05182|110||||||||||||||||E8F2FA|0.18|||C3H9O3P|0|0|2000|271747|L|121-45-9
 c_121460|0|2,5-Norbornadiene|2,5-Norbornadien|C₇H₈|2,5-Norbornadiene;C7H8|organic|Molecular|L|0|0|Powder|0|92.141|0.90642|90||||||||||||||||E8F2FA|0.18|||C7H8|0|0|2000|346829|L|121-46-0
-c_121517|0|3-Nitrobenzenesulfonyl chloride|3-Nitrobenzenesülfonil klorür|C₆H₄ClNO₄S|3-Nitrobenzenesulfonyl chloride;C6H4ClNO4S|organic|Molecular|S|0|0|Crystals|0|221.611|1.2|||||||||||||||||F4F4F2|1|||C6H4ClNO4S|0|0|1200||Ld|121-51-7
+c_121517|0|3-Nitrobenzenesulfonyl chloride|3-Nitrobenzensülfonil klorür|C₆H₄ClNO₄S|3-Nitrobenzenesulfonyl chloride;C6H4ClNO4S|organic|Molecular|S|0|0|Crystals|0|221.611|1.2|||||||||||||||||F4F4F2|1|||C6H4ClNO4S|0|0|1200||Ld|121-51-7
 c_121540|0|Benzethonium chloride|Benzetoniyum klorür|C₂₇H₄₂ClNO₂|Benzethonium chloride;C27H42ClNO2|organic|Molecular|S|0|0|Crystals|0|448.088|1.2|||||||||||||||||F4F4F2|1|||C27H42ClNO2|0|0|1200||Ld|121-54-0
-c_121608|0|4-(Acetylamino)benzenesulfonyl chloride|4-(Asetilamino)benzenesülfonil klorür|C₈H₈ClNO₃S|4-(Acetylamino)benzenesulfonyl chloride;C8H8ClNO3S|organic|Molecular|S|0|0|Crystals|0|233.666|1.2|||||||||||||||||F4F4F2|1|||C8H8ClNO3S|0|0|1200||Ld|121-60-8
+c_121608|0|4-(Acetylamino)benzenesulfonyl chloride|4-(Asetilamino)benzensülfonil klorür|C₈H₈ClNO₃S|4-(Acetylamino)benzenesulfonyl chloride;C8H8ClNO3S|organic|Molecular|S|0|0|Crystals|0|233.666|1.2|||||||||||||||||F4F4F2|1|||C8H8ClNO3S|0|0|1200||Ld|121-60-8
 c_121619|0|N-[4-(Aminosulfonyl)phenyl]acetamide|N-[4-(aminosülfonil)fenil]asetamit|C₈H₁₀N₂O₃S|N-[4-(Aminosulfonyl)phenyl]acetamide;C8H10N2O3S|organic|Molecular|S|0|0|Crystals|0|214.239|1.2|||||||||||||||||F4F4F2|1|||C8H10N2O3S|0|0|1200||Ld|121-61-9
-c_121631|0|4,4'-Oxybis(benzenesulfonyl chloride)|4,4'-Oksibis(benzenesülfonil klorür)|C₁₂H₈Cl₂O₅S₂|4,4'-Oxybis(benzenesulfonyl chloride);C12H8Cl2O5S2|organic|Molecular|S|0|0|Crystals|0|367.211|1.2|||||||||||||||||F4F4F2|1|||C12H8Cl2O5S2|0|0|1200||Ld|121-63-1
+c_121631|0|4,4'-Oxybis(benzenesulfonyl chloride)|4,4'-Oksibis(benzensülfonil klorür)|C₁₂H₈Cl₂O₅S₂|4,4'-Oxybis(benzenesulfonyl chloride);C12H8Cl2O5S2|organic|Molecular|S|0|0|Crystals|0|367.211|1.2|||||||||||||||||F4F4F2|1|||C12H8Cl2O5S2|0|0|1200||Ld|121-63-1
 c_121711|0|1-(3-Hydroxyphenyl)ethanone|1-(3-Hidroksifenil)etanon|C₈H₈O₂|1-(3-Hydroxyphenyl)ethanone;C8H8O2|organic|Molecular|S|0|0|Crystals|0|136.15|1.09921|||||||||||||||||F4F4F2|1|||C8H8O2|0|0|1200||L|121-71-1
 c_121722|0|3-Methyl-N,N-dimethylaniline|3-Metil-N,N-dimetilanilin|C₉H₁₃N|3-Methyl-N,N-dimethylaniline;C9H13N|organic|Molecular|L|0|0|Powder|0|135.21|0.94102|194||||||||||||||||E8F2FA|0.18|||C9H13N|0|0|2000|304040|L|121-72-2
 c_121799|0|Propyl 3,4,5-trihydroxybenzoate|Propil 3,4,5-trihidroksibenzoat|C₁₀H₁₂O₅|Propyl 3,4,5-trihydroxybenzoate;C10H12O5|organic|Molecular|S|0|0|Crystals|0|212.201|1.2|||||||||||||||||F4F4F2|1|||C10H12O5|0|0|1200||Ld|121-79-9
@@ -3432,7 +3432,7 @@ c_122010|0|4-Chlorobenzoyl chloride|4-Klorobenzoil klorür|C₇H₄Cl₂O|4-Chlo
 c_122032|0|4-Isopropylbenzaldehyde|4-İzopropilbenzaldehit|C₁₀H₁₂O|4-Isopropylbenzaldehyde;C10H12O|organic|Molecular|L|0|0|Powder|0|148.205|0.97552|226||||||||||||||||E8F2FA|0.18|||C10H12O|0|0|2000|296381|L|122-03-2
 c_122043|0|4-Nitrobenzoyl chloride|4-Nitrobenzoil klorür|C₇H₄ClNO₃|4-Nitrobenzoyl chloride;C7H4ClNO3|organic|Molecular|S|0|0|Crystals|0|185.563|1.2|||||||||||||||||F4F4F2|1|||C7H4ClNO3|0|0|1200||Ld|122-04-3
 c_122076|0|2,2-Dimethoxy-N-methylethanamine|2,2-Dimetoksi-N-metiletanamin|C₅H₁₃NO₂|2,2-Dimethoxy-N-methylethanamine;C5H13NO2|organic|Molecular|L|0|0|Powder|0|119.164|0.92825|140||||||||||||||||E8F2FA|0.18|||C5H13NO2|0|0|2000|305102|L|122-07-6
-c_122098|0|α,α-Dimethylbenzeneethanamine|α,α-Dimetilbenzeneetanamin|C₁₀H₁₅N|α,α-Dimethylbenzeneethanamine;C10H15N|organic|Molecular|L|0|0|Powder|0|149.237|1|205||||||||||||||||E8F2FA|0.18|||C10H15N|0|0|2000|281949|Ld|122-09-8
+c_122098|0|α,α-Dimethylbenzeneethanamine|α,α-Dimetilbenzenetanamin|C₁₀H₁₅N|α,α-Dimethylbenzeneethanamine;C10H15N|organic|Molecular|L|0|0|Powder|0|149.237|1|205||||||||||||||||E8F2FA|0.18|||C10H15N|0|0|2000|281949|Ld|122-09-8
 c_122112|0|Sulfadimethoxine|Sülfadimetoksin|C₁₂H₁₄N₄O₄S|Sulfadimethoxine;C12H14N4O4S|organic|Molecular|S|0|0|Crystals|0|310.328|1.2|||||||||||||||||F4F4F2|1|||C12H14N4O4S|0|0|1200||Ld|122-11-2
 c_122156|0|Dimetan (R)-|Dimetan (R)-|C₁₁H₁₇NO₃|Dimetan (R)-;C11H17NO3|organic|Molecular|S|0|0|Crystals|0|211.261|1.2|||||||||||||||||F4F4F2|1|||C11H17NO3|0|0|1200||Ld|122-15-6
 c_122203|0|Triisopropanolamine|Triizopropanolamin|C₉H₂₁NO₃|Triisopropanolamine;C9H21NO3|organic|Molecular|S|0|0|Crystals|0|191.271|1.02|||||||||||||||||F4F4F2|1|||C9H21NO3|0|0|1200||L|122-20-3
@@ -3452,7 +3452,7 @@ c_122690|0|Cinnamyl cinnamate|Sinnamil sinnamat|C₁₈H₁₆O₂|Cinnamyl cinn
 c_122703|0|2-Phenylethyl propanoate|2-Feniletil propanoat|C₁₁H₁₄O₂|2-Phenylethyl propanoate;C11H14O2|organic|Molecular|L|0|0|Powder|0|178.231|1.0225|231||||||||||||||||E8F2FA|0.18|||C11H14O2|0|0|2000|248920|L|122-70-3
 c_122725|0|3-Phenylpropyl acetate|3-Fenilpropil asetat|C₁₁H₁₄O₂|3-Phenylpropyl acetate;C11H14O2|organic|Molecular|L|0|0|Powder|0|178.231|1|||||||||||||||||E8F2FA|0.18|||C11H14O2|0|0|2000||Ld|122-72-5
 c_122736|0|[(3-Methylbutoxy)methyl]benzene|[(3-Metilbütoksi)metil]benzen|C₁₂H₁₈O|[(3-Methylbutoxy)methyl]benzene;C12H18O|organic|Molecular|L|0|0|Powder|0|178.275|0.9092|236||||||||||||||||E8F2FA|0.18|||C12H18O|0|0|2000|251326|L|122-73-6
-c_122781|0|Benzeneacetaldehyde|Benzeneasetaldehit|C₈H₈O|Benzeneacetaldehyde;C8H8O|organic|Molecular|S|0|0|Crystals|0|120.151|1.02722|||||||||||||||||F4F4F2|1|||C8H8O|0|0|1200||L|122-78-1
+c_122781|0|Benzeneacetaldehyde|Benzenasetaldehit|C₈H₈O|Benzeneacetaldehyde;C8H8O|organic|Molecular|S|0|0|Crystals|0|120.151|1.02722|||||||||||||||||F4F4F2|1|||C8H8O|0|0|1200||L|122-78-1
 c_122805|0|N-(4-Aminophenyl)acetamide|N-(4-aminofenil)asetamit|C₈H₁₀N₂O|N-(4-Aminophenyl)acetamide;C8H10N2O|organic|Molecular|S|0|0|Crystals|0|150.181|1.2|||||||||||||||||F4F4F2|1|||C8H10N2O|0|0|1200||Ld|122-80-5
 c_122849|0|1-(4-Methoxyphenyl)-2-propanone|1-(4-Metoksifenil)-2-propanon|C₁₀H₁₂O₂|1-(4-Methoxyphenyl)-2-propanone;C10H12O2|organic|Molecular|L|0|0|Powder|0|164.204|1.06942|268||||||||||||||||E8F2FA|0.18|||C10H12O2|0|0|2000|290012|L|122-84-9
 c_122850|0|N-(4-Formylphenyl)acetamide|N-(4-formilfenil)asetamit|C₉H₉NO₂|N-(4-Formylphenyl)acetamide;C9H9NO2|organic|Molecular|S|0|0|Crystals|0|163.176|1.2|||||||||||||||||F4F4F2|1|||C9H9NO2|0|0|1200||Ld|122-85-0
@@ -3519,12 +3519,12 @@ c_126818|0|5,5-Dimethyl-1,3-cyclohexanedione|5,5-Dimetil-1,3-siklohekzanedion|C�
 c_126841|0|2,2-Diethoxypropane|2,2-Dietoksipropan|C₇H₁₆O₂|2,2-Diethoxypropane;C7H16O2|organic|Molecular|L|0|0|Powder|0|132.203|0.820021|101||||||||||||||||E8F2FA|0.18|||C7H16O2|0|0|2000|249050|L|126-84-1
 c_126863|0|2,4,7,9-Tetramethyl-5-decyne-4,7-diol|2,4,7,9-Tetrametil-5-desin-4,7-diol|C₁₄H₂₆O₂|2,4,7,9-Tetramethyl-5-decyne-4,7-diol;C14H26O2|organic|Molecular|S|0|0|Crystals|0|226.36|1.2|||||||||||||||||F4F4F2|1|||C14H26O2|0|0|1200||Ld|126-86-3
 c_127060|0|2-Propanone oxime|2-Propanon oksim|C₃H₇NO|2-Propanone oxime;C3H7NO|organic|Molecular|S|0|0|Crystals|0|73.095|0.911362|||||||||||||||||F4F4F2|1|||C3H7NO|0|0|1200||L|127-06-0
-c_127071|0|Hydroxyurea|Hidroksiurea|CH₄N₂O₂|Hydroxyurea;CH4N2O2|organic|Molecular|S|0|0|Crystals|0|76.055|1.2|||||||||||||||||F4F4F2|1|||CH4N2O2|0|0|1200||Ld|127-07-1
+c_127071|0|Hydroxyurea|Hidroksiüre|CH₄N₂O₂|Hydroxyurea;CH4N2O2|organic|Molecular|S|0|0|Crystals|0|76.055|1.2|||||||||||||||||F4F4F2|1|||CH4N2O2|0|0|1200||Ld|127-07-1
 c_127480|0|3,5,5-Trimethyl-2,4-oxazolidinedione|3,5,5-Trimetil-2,4-oksazolidinedion|C₆H₉NO₃|3,5,5-Trimethyl-2,4-oxazolidinedione;C6H9NO3|organic|Molecular|S|0|0|Crystals|0|143.142|1.2|||||||||||||||||F4F4F2|1|||C6H9NO3|0|0|1200||Ld|127-48-0
 c_127526|0|Chloramine B|Kloramin b|C₆H₅ClNNaO₂S|Chloramine B;C6H5ClNNaO2S|organic|Molecular|S|0|0|Crystals|0|213.611|1.2|||||||||||||||||F4F4F2|1|||C6H5ClNNaO2S|0|0|1200||Ld|127-52-6
 c_127639|0|Diphenyl sulfone|Difenil sülfon|C₁₂H₁₀O₂S|Diphenyl sulfone;C12H10O2S|organic|Molecular|S|0|0|Crystals|0|218.27|1.2522|||||||||||||||||F4F4F2|1|||C12H10O2S|0|0|1200||L|127-63-9
 c_127651|0|Chloramine T|Kloramin t|C₇H₇ClNNaO₂S|Chloramine T;C7H7ClNNaO2S|organic|Molecular|S|0|0|Crystals|0|227.638|1.2|||||||||||||||||F4F4F2|1|||C7H7ClNNaO2S|0|0|1200||Ld|127-65-1
-c_127662|0|α-Ethynyl-α-methylbenzenemethanol|α-Etinil-α-metilbenzenemetanol|C₁₀H₁₀O|α-Ethynyl-α-methylbenzenemethanol;C10H10O|organic|Molecular|S|0|0|Crystals|0|146.189|1.03142|||||||||||||||||F4F4F2|1|||C10H10O|0|0|1200||L|127-66-2
+c_127662|0|α-Ethynyl-α-methylbenzenemethanol|α-Etinil-α-metilbenzenmetanol|C₁₀H₁₀O|α-Ethynyl-α-methylbenzenemethanol;C10H10O|organic|Molecular|S|0|0|Crystals|0|146.189|1.03142|||||||||||||||||F4F4F2|1|||C10H10O|0|0|1200||L|127-66-2
 c_127695|0|Sulfisoxazole|Sülfizoksazol|C₁₁H₁₃N₃O₃S|Sulfisoxazole;C11H13N3O3S|organic|Molecular|S|0|0|Crystals|0|267.303|1.2|||||||||||||||||F4F4F2|1|||C11H13N3O3S|0|0|1200||Ld|127-69-5
 c_127719|0|Sulfabenzamide|Sülfabenzamit|C₁₃H₁₂N₂O₃S|Sulfabenzamide;C13H12N2O3S|organic|Molecular|S|0|0|Crystals|0|276.31|1.2|||||||||||||||||F4F4F2|1|||C13H12N2O3S|0|0|1200||Ld|127-71-9
 c_127797|0|Sulfamerazine|Sülfamerazin|C₁₁H₁₂N₄O₂S|Sulfamerazine;C11H12N4O2S|organic|Molecular|S|0|0|Crystals|0|264.303|1.2|||||||||||||||||F4F4F2|1|||C11H12N4O2S|0|0|1200||Ld|127-79-7
@@ -3591,9 +3591,9 @@ c_133131|0|Diethyl ethylmalonate|Dietil etilmalonat|C₉H₁₆O₄|Diethyl ethy
 c_133142|0|Bis(2,4-dichlorobenzoyl) peroxide|Bis(2,4-diklorobenzoil) peroksit|C₁₄H₆Cl₄O₄|Bis(2,4-dichlorobenzoyl) peroxide;C14H6Cl4O4|organic|Molecular|S|0|0|Crystals|0|379.998|1.2|||||||||||||||||F4F4F2|1|||C14H6Cl4O4|0|0|1200||Ld|133-14-2
 c_133266|0|Peucedanin|Peusedanin|C₁₅H₁₄O₄|Peucedanin;C15H14O4|organic|Molecular|S|0|0|Crystals|0|258.273|1.2|||||||||||||||||F4F4F2|1|||C15H14O4|0|0|1200||Ld|133-26-6
 c_133324|0|1H-Indole-3-butanoic acid|1H-indol-3-bütanoik asit|C₁₂H₁₃NO₂|1H-Indole-3-butanoic acid;C12H13NO2|organic|Molecular|S|0|0|Crystals|0|203.241|1.2|||||||||||||||||F4F4F2|1|||C12H13NO2|0|0|1200||Ld|133-32-4
-c_133493|0|Pentachlorobenzenethiol|Pentaklorobenzenetiol|C₆HCl₅S|Pentachlorobenzenethiol;C6HCl5S|organic|Molecular|S|0|0|Crystals|0|282.384|1.2|||||||||||||||||F4F4F2|1|||C6HCl5S|0|0|1200||Ld|133-49-3
+c_133493|0|Pentachlorobenzenethiol|Pentaklorobenzentiol|C₆HCl₅S|Pentachlorobenzenethiol;C6HCl5S|organic|Molecular|S|0|0|Crystals|0|282.384|1.2|||||||||||||||||F4F4F2|1|||C6HCl5S|0|0|1200||Ld|133-49-3
 c_133539|0|2,4-Dichloro-3,5-dimethylphenol|2,4-Dikloro-3,5-dimetilfenol|C₈H₈Cl₂O|2,4-Dichloro-3,5-dimethylphenol;C8H8Cl2O|organic|Molecular|S|0|0|Crystals|0|191.051|1.2|||||||||||||||||F4F4F2|1|||C8H8Cl2O|0|0|1200||Ld|133-53-9
-c_133595|0|2-Methylbenzenesulfonyl chloride|2-Metilbenzenesülfonil klorür|C₇H₇ClO₂S|2-Methylbenzenesulfonyl chloride;C7H7ClO2S|organic|Molecular|L|0|0|Powder|0|190.641|1.33832|||||||||||||||||E8F2FA|0.18|||C7H7ClO2S|0|0|2000||L|133-59-5
+c_133595|0|2-Methylbenzenesulfonyl chloride|2-Metilbenzensülfonil klorür|C₇H₇ClO₂S|2-Methylbenzenesulfonyl chloride;C7H7ClO2S|organic|Molecular|L|0|0|Powder|0|190.641|1.33832|||||||||||||||||E8F2FA|0.18|||C7H7ClO2S|0|0|2000||L|133-59-5
 c_133904|0|3-Amino-2,5-dichlorobenzoic acid|3-Amino-2,5-diklorobenzoik asit|C₇H₅Cl₂NO₂|3-Amino-2,5-dichlorobenzoic acid;C7H5Cl2NO2|organic|Molecular|S|0|0|Crystals|0|206.022|1.2|||||||||||||||||F4F4F2|1|||C7H5Cl2NO2|0|0|1200||Ld|133-90-4
 c_133915|0|2-Hydroxy-3,5-diiodobenzoic acid|2-Hidroksi-3,5-diiodobenzoik asit|C₇H₄I₂O₃|2-Hydroxy-3,5-diiodobenzoic acid;C7H4I2O3|organic|Molecular|S|0|0|Crystals|0|389.915|1.2|||||||||||||||||F4F4F2|1|||C7H4I2O3|0|0|1200||Ld|133-91-5
 c_134043|0|Pelargonidin chloride|Pelargonidin klorür|C₁₅H₁₁ClO₅|Pelargonidin chloride;C15H11ClO5|organic|Molecular|S|0|0|Crystals|0|306.698|1.2|||||||||||||||||F4F4F2|1|||C15H11ClO5|0|0|1200||Ld|134-04-3
@@ -3620,20 +3620,20 @@ c_135886|0|N-Phenyl-2-naphthalenamine|N-fenil-2-naftalenamin|C₁₆H₁₃N|N-P
 c_136254|0|2-(2,4,5-Trichlorophenoxy)ethyl 2,2-dichloropropanoate|2-(2,4,5-Triklorofenoksi)etil 2,2-dikloropropanoat|C₁₁H₉Cl₅O₃|2-(2,4,5-Trichlorophenoxy)ethyl 2,2-dichloropropanoate;C11H9Cl5O3|organic|Molecular|S|0|0|Crystals|0|366.44|1.555|||||||||||||||||F4F4F2|1|||C11H9Cl5O3|0|0|1200||L|136-25-4
 c_136470|0|Tetracaine hydrochloride|Tetrakain hidroklorür|C₁₅H₂₅ClN₂O₂|Tetracaine hydrochloride;C15H25ClN2O2|organic|Molecular|S|0|0|Crystals|0|300.827|1.2|||||||||||||||||F4F4F2|1|||C15H25ClN2O2|0|0|1200||Ld|136-47-0
 c_136721|0|trans,trans-5-(1,3-Benzodioxol-5-yl)-2,4-pentadienoic acid|Trans,trans-5-(1,3-benzodioksol-5-il)-2,4-pentadienoik asit|C₁₂H₁₀O₄|trans,trans-5-(1,3-Benzodioxol-5-yl)-2,4-pentadienoic acid;C12H10O4|organic|Molecular|S|0|0|Crystals|0|218.208|1.2|||||||||||||||||F4F4F2|1|||C12H10O4|0|0|1200||Ld|136-72-1
-c_136776|0|4-Hexyl-1,3-benzenediol|4-Hekzil-1,3-benzenediol|C₁₂H₁₈O₂|4-Hexyl-1,3-benzenediol;C12H18O2|organic|Molecular|S|0|0|Crystals|0|194.274|1.2|||||||||||||||||F4F4F2|1|||C12H18O2|0|0|1200||Ld|136-77-6
+c_136776|0|4-Hexyl-1,3-benzenediol|4-Hekzil-1,3-benzendiol|C₁₂H₁₈O₂|4-Hexyl-1,3-benzenediol;C12H18O2|organic|Molecular|S|0|0|Crystals|0|194.274|1.2|||||||||||||||||F4F4F2|1|||C12H18O2|0|0|1200||Ld|136-77-6
 c_136801|0|2-[(2-Methylphenyl)amino]ethanol|2-[(2-Metilfenil)amino]etanol|C₉H₁₃NO|2-[(2-Methylphenyl)amino]ethanol;C9H13NO|organic|Molecular|L|0|0|Powder|0|151.209|1.07942|285.5||||||||||||||||E8F2FA|0.18|||C9H13NO|0|0|2000|325121|L|136-80-1
 c_136845|0|1,3-Bis(hydroxymethyl)-2-imidazolidone|1,3-Bis(hidroksimetil)-2-imidazolidon|C₅H₁₀N₂O₃|1,3-Bis(hydroxymethyl)-2-imidazolidone;C5H10N2O3|organic|Molecular|S|0|0|Crystals|0|146.146|1.2|||||||||||||||||F4F4F2|1|||C5H10N2O3|0|0|1200||Ld|136-84-5
 c_136958|0|2-Benzothiazolamine|2-Benzotiazolamin|C₇H₆N₂S|2-Benzothiazolamine;C7H6N2S|organic|Molecular|S|0|0|Crystals|0|150.199|1.2|||||||||||||||||F4F4F2|1|||C7H6N2S|0|0|1200||Ld|136-95-8
 c_137042|0|2-Chloroaniline hydrochloride|2-Kloroanilin hidroklorür|C₆H₇Cl₂N|2-Chloroaniline hydrochloride;C6H7Cl2N|organic|Molecular|S|0|0|Crystals|0|164.029|1.50518|||||||||||||||||F4F4F2|1|||C6H7Cl2N|0|0|1200||L|137-04-2
-c_137064|0|2-Methylbenzenethiol|2-Metilbenzenetiol|C₇H₈S|2-Methylbenzenethiol;C7H8S|organic|Molecular|L|0|0|Powder|0|124.201|1.0412|192||||||||||||||||E8F2FA|0.18|||C7H8S|0|0|2000|329572|L|137-06-4
-c_137075|0|2-Aminobenzenethiol|2-Aminobenzenetiol|C₆H₇NS|2-Aminobenzenethiol;C6H7NS|organic|Molecular|S|0|0|Crystals|0|125.189|1.2|||||||||||||||||F4F4F2|1|||C6H7NS|0|0|1200||Ld|137-07-5
+c_137064|0|2-Methylbenzenethiol|2-Metilbenzentiol|C₇H₈S|2-Methylbenzenethiol;C7H8S|organic|Molecular|L|0|0|Powder|0|124.201|1.0412|192||||||||||||||||E8F2FA|0.18|||C7H8S|0|0|2000|329572|L|137-06-4
+c_137075|0|2-Aminobenzenethiol|2-Aminobenzentiol|C₆H₇NS|2-Aminobenzenethiol;C6H7NS|organic|Molecular|S|0|0|Crystals|0|125.189|1.2|||||||||||||||||F4F4F2|1|||C6H7NS|0|0|1200||Ld|137-07-5
 c_137177|0|2,4,5-Trimethylaniline|2,4,5-Trimetilanilin|C₉H₁₃N|2,4,5-Trimethylaniline;C9H13N|organic|Molecular|S|0|0|Crystals|0|135.21|0.95725|||||||||||||||||F4F4F2|1|||C9H13N|0|0|1200||L|137-17-7
 c_137188|0|2,5-Dimethyl-2,5-cyclohexadiene-1,4-dione|2,5-Dimetil-2,5-siklohekzadien-1,4-dion|C₈H₈O₂|2,5-Dimethyl-2,5-cyclohexadiene-1,4-dione;C8H8O2|organic|Molecular|S|0|0|Crystals|0|136.15|1.2|||||||||||||||||F4F4F2|1|||C8H8O2|0|0|1200||Ld|137-18-8
-c_137199|0|4,6-Dichloro-1,3-benzenediol|4,6-Dikloro-1,3-benzenediol|C₆H₄Cl₂O₂|4,6-Dichloro-1,3-benzenediol;C6H4Cl2O2|organic|Molecular|S|0|0|Crystals|0|178.996|1.2|||||||||||||||||F4F4F2|1|||C6H4Cl2O2|0|0|1200||Ld|137-19-9
+c_137199|0|4,6-Dichloro-1,3-benzenediol|4,6-Dikloro-1,3-benzendiol|C₆H₄Cl₂O₂|4,6-Dichloro-1,3-benzenediol;C6H4Cl2O2|organic|Molecular|S|0|0|Crystals|0|178.996|1.2|||||||||||||||||F4F4F2|1|||C6H4Cl2O2|0|0|1200||Ld|137-19-9
 c_137268|0|Thiram|Tiram|C₆H₁₂N₂S₄|Thiram;C6H12N2S4|organic|Molecular|S|0|0|Crystals|0|240.416|1.2|||||||||||||||||F4F4F2|1|||C6H12N2S4|0|0|1200||Ld|137-26-8
 c_137439|0|Bromocyclopentane|Bromosiklopentan|C₅H₉Br|Bromocyclopentane;C5H9Br|organic|Molecular|L|0|0|Powder|0|149.031|1.38732|137.5||||||||||||||||E8F2FA|0.18|||C5H9Br|0|0|2000|242481|L|137-43-9
 c_137586|0|2-(Diethylamino)-N-(2,6-dimethylphenyl)acetamide|2-(Dietilamino)-N-(2,6-dimetilfenil)asetamit|C₁₄H₂₂N₂O|2-(Diethylamino)-N-(2,6-dimethylphenyl)acetamide;C14H22N2O|organic|Molecular|S|0|0|Crystals|0|234.343|1.2|||||||||||||||||F4F4F2|1|||C14H22N2O|0|0|1200||Ld|137-58-6
-c_138421|0|4-Nitrobenzenesulfonic acid|4-Nitrobenzenesülfonik asit|C₆H₅NO₅S|4-Nitrobenzenesulfonic acid;C6H5NO5S|organic|Molecular|S|0|0|Crystals|0|203.168|1.2|||||||||||||||||F4F4F2|1|||C6H5NO5S|0|0|1200||Ld|138-42-1
+c_138421|0|4-Nitrobenzenesulfonic acid|4-Nitrobenzensülfonik asit|C₆H₅NO₅S|4-Nitrobenzenesulfonic acid;C6H5NO5S|organic|Molecular|S|0|0|Crystals|0|203.168|1.2|||||||||||||||||F4F4F2|1|||C6H5NO5S|0|0|1200||Ld|138-42-1
 c_138523|0|2-(Hydroxymethyl)phenyl-β-D-glucopyranoside|2-(Hidroksimetil)fenil-β-D-glukopiranosit|C₁₃H₁₈O₇|2-(Hydroxymethyl)phenyl-β-D-glucopyranoside;C13H18O7|organic|Molecular|S|0|0|Crystals|0|286.28|1.4342|||||||||||||||||F4F4F2|1|||C13H18O7|0|0|1200||L|138-52-3
 c_138534|0|Mandelonitrile glucoside|Mandelonitril glukosit|C₁₄H₁₇NO₆|Mandelonitrile glucoside;C14H17NO6|organic|Molecular|S|0|0|Crystals|0|295.291|1.2|||||||||||||||||F4F4F2|1|||C14H17NO6|0|0|1200||Ld|138-53-4
 c_138590|0|Shikimic acid|Shikimik asit|C₇H₁₀O₅|Shikimic acid;C7H10O5|organic|Molecular|S|0|0|Crystals|0|174.152|1.2|||||||||||||||||F4F4F2|1|||C7H10O5|0|0|1200||Ld|138-59-0
@@ -3649,16 +3649,16 @@ c_140283|0|N,N'-Dibenzyl-1,2-ethanediamine|N,N'-dibenzil-1,2-etanediamin|C₁₆
 c_140396|0|4-Methylphenyl acetate|4-Metilfenil asetat|C₉H₁₀O₂|4-Methylphenyl acetate;C9H10O2|organic|Molecular|L|0|0|Powder|0|150.177|1.05122|213||||||||||||||||E8F2FA|0.18|||C9H10O2|0|0|2000|284872|L|140-39-6
 c_140409|0|N-(5-Nitro-2-thiazolyl)acetamide|N-(5-nitro-2-tiazolil)asetamit|C₅H₅N₃O₃S|N-(5-Nitro-2-thiazolyl)acetamide;C5H5N3O3S|organic|Molecular|S|0|0|Crystals|0|187.173|1.2|||||||||||||||||F4F4F2|1|||C5H5N3O3S|0|0|1200||Ld|140-40-9
 c_140498|0|4-(2-Chloroacetyl)acetanilide|4-(2-Kloroasetil)asetanilit|C₁₀H₁₀ClNO₂|4-(2-Chloroacetyl)acetanilide;C10H10ClNO2|organic|Molecular|S|0|0|Crystals|0|211.645|1.2|||||||||||||||||F4F4F2|1|||C10H10ClNO2|0|0|1200||Ld|140-49-8
-c_140534|0|4-Chlorobenzeneacetonitrile|4-Klorobenzeneasetonitril|C₈H₆ClN|4-Chlorobenzeneacetonitrile;C8H6ClN|organic|Molecular|S|0|0|Crystals|0|151.593|1.17783|||||||||||||||||F4F4F2|1|||C8H6ClN|0|0|1200||L|140-53-4
+c_140534|0|4-Chlorobenzeneacetonitrile|4-Klorobenzenasetonitril|C₈H₆ClN|4-Chlorobenzeneacetonitrile;C8H6ClN|organic|Molecular|S|0|0|Crystals|0|151.593|1.17783|||||||||||||||||F4F4F2|1|||C8H6ClN|0|0|1200||L|140-53-4
 c_140578|0|Aramite|Aramit|C₁₅H₂₃ClO₄S|Aramite;C15H23ClO4S|organic|Molecular|L|0|0|Powder|0|334.855|1.1432|||||||||||||||||E8F2FA|0.18|||C15H23ClO4S|0|0|2000||L|140-57-8
 c_140670|0|1-Methoxy-4-(2-propenyl)benzene|1-Metoksi-4-(2-propenil)benzen|C₁₀H₁₂O|1-Methoxy-4-(2-propenyl)benzene;C10H12O|organic|Molecular|L|0|0|Powder|0|148.205|0.96525|216||||||||||||||||E8F2FA|0.18|||C10H12O|0|0|2000|290444|L|140-67-0
 c_140727|0|1-Hexadecylpyridinium bromide|1-Hekzadesilpiridiniyum bromür|C₂₁H₃₈BrN|1-Hexadecylpyridinium bromide;C21H38BrN|organic|Molecular|S|0|0|Crystals|0|384.446|1.2|||||||||||||||||F4F4F2|1|||C21H38BrN|0|0|1200||Ld|140-72-7
-c_140750|0|4-Fluorobenzenemethanamine|4-Florobenzenemetanamin|C₇H₈FN|4-Fluorobenzenemethanamine;C7H8FN|organic|Molecular|L|0|0|Powder|0|125.146|1|183||||||||||||||||E8F2FA|0.18|||C7H8FN|0|0|2000|320754|Ld|140-75-0
+c_140750|0|4-Fluorobenzenemethanamine|4-Florobenzenmetanamin|C₇H₈FN|4-Fluorobenzenemethanamine;C7H8FN|organic|Molecular|L|0|0|Powder|0|125.146|1|183||||||||||||||||E8F2FA|0.18|||C7H8FN|0|0|2000|320754|Ld|140-75-0
 c_140794|0|1,4-Dinitrosopiperazine|1,4-Dinitrosopiperazin|C₄H₈N₄O₂|1,4-Dinitrosopiperazine;C4H8N4O2|organic|Molecular|S|0|0|Crystals|0|144.134|1.2|||||||||||||||||F4F4F2|1|||C4H8N4O2|0|0|1200||Ld|140-79-4
 c_140807|0|N',N'-Diethyl-1,4-pentanediamine|N',N'-dietil-1,4-pentanediamin|C₉H₂₂N₂|N',N'-Diethyl-1,4-pentanediamine;C9H22N2|organic|Molecular|L|0|0|Powder|0|158.289|0.8142|201||||||||||||||||E8F2FA|0.18|||C9H22N2|0|0|2000|263601|L|140-80-7
 c_140829|0|2-[2-(Diethylamino)ethoxy]ethanol|2-[2-(Dietilamino)etoksi]etanol|C₈H₁₉NO₂|2-[2-(Diethylamino)ethoxy]ethanol;C8H19NO2|organic|Molecular|L|0|0|Powder|0|161.245|0.942125|221.5||||||||||||||||E8F2FA|0.18|||C8H19NO2|0|0|2000|269957|L|140-82-9
 c_140874|0|Cyanoacetohydrazide|Sianoasetohidrazit|C₃H₅N₃O|Cyanoacetohydrazide;C3H5N3O|organic|Molecular|S|0|0|Crystals|0|99.093|1.2|||||||||||||||||F4F4F2|1|||C3H5N3O|0|0|1200||Ld|140-87-4
-c_140954|0|Oxymethurea|Oksimeturea|C₃H₈N₂O₃|Oxymethurea;C3H8N2O3|organic|Molecular|S|0|0|Crystals|0|120.108|1.2|||||||||||||||||F4F4F2|1|||C3H8N2O3|0|0|1200||Ld|140-95-4
+c_140954|0|Oxymethurea|Oksimetüre|C₃H₈N₂O₃|Oxymethurea;C3H8N2O3|organic|Molecular|S|0|0|Crystals|0|120.108|1.2|||||||||||||||||F4F4F2|1|||C3H8N2O3|0|0|1200||Ld|140-95-4
 c_141037|0|Dibutyl succinate|Dibütil suksinat|C₁₂H₂₂O₄|Dibutyl succinate;C12H22O4|organic|Molecular|L|0|0|Powder|0|230.304|0.97522|269||||||||||||||||E8F2FA|0.18|||C12H22O4|0|0|2000|207157|L|141-03-7
 c_141048|0|Diisobutyl hexanedioate|Diizobütil hekzanedioat|C₁₄H₂₆O₄|Diisobutyl hexanedioate;C14H26O4|organic|Molecular|S|0|0|Crystals|0|258.358|0.954319|||||||||||||||||F4F4F2|1|||C14H26O4|0|0|1200||L|141-04-8
 c_141060|0|Propyl pentanoate|Propil pentanoat|C₈H₁₆O₂|Propyl pentanoate;C8H16O2|organic|Molecular|L|0|0|Powder|0|144.214|0.86992|167||||||||||||||||E8F2FA|0.18|||C8H16O2|0|0|2000|268581|L|141-06-0
@@ -3681,7 +3681,7 @@ c_142223|0|Diallyl diethylene glycol carbonate|Diallil dietilen glikol karbonat|
 c_142267|0|N-Acetylethanolamine|N-asetiletanolamin|C₄H₉NO₂|N-Acetylethanolamine;C4H9NO2|organic|Molecular|S|0|0|Crystals|0|103.121|1.10793|||||||||||||||||F4F4F2|1|||C4H9NO2|0|0|1200||L|142-26-7
 c_142303|0|2,5-Dimethyl-3-hexyne-2,5-diol|2,5-Dimetil-3-hekzin-2,5-diol|C₈H₁₄O₂|2,5-Dimethyl-3-hexyne-2,5-diol;C8H14O2|organic|Molecular|S|0|0|Crystals|0|142.198|0.9472|||||||||||||||||F4F4F2|1|||C8H14O2|0|0|1200||L|142-30-3
 c_142450|0|2-Butynedioic acid|2-Bütinedioik asit|C₄H₂O₄|2-Butynedioic acid;C4H2O4|organic|Molecular|S|0|0|Crystals|0|114.056|1.2|||||||||||||||||F4F4F2|1|||C4H2O4|0|0|1200||Ld|142-45-0
-c_142461|0|2,5-Dithiobiurea|2,5-Ditiobiurea|C₂H₆N₄S₂|2,5-Dithiobiurea;C2H6N4S2|organic|Molecular|S|0|0|Crystals|0|150.218|1.2|||||||||||||||||F4F4F2|1|||C2H6N4S2|0|0|1200||Ld|142-46-1
+c_142461|0|2,5-Dithiobiurea|2,5-Ditiobiüre|C₂H₆N₄S₂|2,5-Dithiobiurea;C2H6N4S2|organic|Molecular|S|0|0|Crystals|0|150.218|1.2|||||||||||||||||F4F4F2|1|||C2H6N4S2|0|0|1200||Ld|142-46-1
 c_142609|0|Octyl propanoate|Oktil propanoat|C₁₁H₂₂O₂|Octyl propanoate;C11H22O2|organic|Molecular|L|0|0|Powder|0|186.295|0.86632|226||||||||||||||||E8F2FA|0.18|||C11H22O2|0|0|2000|235783|L|142-60-9
 c_142610|0|Hexanoyl chloride|Hekzanoil klorür|C₆H₁₁ClO|Hexanoyl chloride;C6H11ClO|organic|Molecular|L|0|0|Powder|0|134.603|0.97842|153||||||||||||||||E8F2FA|0.18|||C6H11ClO|0|0|2000|278606|L|142-61-0
 c_142734|0|Iminodiacetic acid|İminodiasetik asit|C₄H₇NO₄|Iminodiacetic acid;C4H7NO4|organic|Molecular|S|0|0|Crystals|0|133.103|1.2|||||||||||||||||F4F4F2|1|||C4H7NO4|0|0|1200||Ld|142-73-4
@@ -3702,7 +3702,7 @@ c_144490|0|Fluoroacetic acid|Floroasetik asit|C₂H₃FO₂|Fluoroacetic acid;C2
 c_144796|0|Chloromethyldiphenylsilane|Klorometildifenilsilan|C₁₃H₁₃ClSi|Chloromethyldiphenylsilane;C13H13ClSi|organic|Molecular|S|0|0|Crystals|0|232.782|1.12772|||||||||||||||||F4F4F2|1|||C13H13ClSi|0|0|1200||L|144-79-6
 c_144809|0|N-[(4-Aminophenyl)sulfonyl]acetamide|N-[(4-aminofenil)sülfonil]asetamit|C₈H₁₀N₂O₃S|N-[(4-Aminophenyl)sulfonyl]acetamide;C8H10N2O3S|organic|Molecular|S|0|0|Crystals|0|214.239|1.2|||||||||||||||||F4F4F2|1|||C8H10N2O3S|0|0|1200||Ld|144-80-9
 c_144821|0|Sulfamethiazole|Sülfametiazol|C₉H₁₀N₄O₂S₂|Sulfamethiazole;C9H10N4O2S2|organic|Molecular|S|0|0|Crystals|0|270.325|1.2|||||||||||||||||F4F4F2|1|||C9H10N4O2S2|0|0|1200||Ld|144-82-1
-c_144832|0|4-Amino-N-2-pyridinylbenzenesulfonamide|4-Amino-N-2-piridinilbenzenesülfonamit|C₁₁H₁₁N₃O₂S|4-Amino-N-2-pyridinylbenzenesulfonamide;C11H11N3O2S|organic|Molecular|S|0|0|Crystals|0|249.288|1.2|||||||||||||||||F4F4F2|1|||C11H11N3O2S|0|0|1200||Ld|144-83-2
+c_144832|0|4-Amino-N-2-pyridinylbenzenesulfonamide|4-Amino-N-2-piridinilbenzensülfonamit|C₁₁H₁₁N₃O₂S|4-Amino-N-2-pyridinylbenzenesulfonamide;C11H11N3O2S|organic|Molecular|S|0|0|Crystals|0|249.288|1.2|||||||||||||||||F4F4F2|1|||C11H11N3O2S|0|0|1200||Ld|144-83-2
 c_144901|0|L-3-Amino-2-methylpropanoic acid|L-3-amino-2-metilpropanoik asit|C₄H₉NO₂|L-3-Amino-2-methylpropanoic acid;C4H9NO2|organic|Molecular|S|0|0|Crystals|0|103.121|1.2|||||||||||||||||F4F4F2|1|||C4H9NO2|0|0|1200||Ld|144-90-1
 c_145506|0|p-Naphtholbenzein|P-naftolbenzein|C₂₇H₁₈O₂|p-Naphtholbenzein;C27H18O2|organic|Molecular|S|0|0|Crystals|0|374.439|1.2|||||||||||||||||F4F4F2|1|||C27H18O2|0|0|1200||Ld|145-50-6
 c_145948|0|7-Chloro-2,3-dihydro-1H-inden-4-ol|7-Kloro-2,3-dihidro-1H-inden-4-ol|C₉H₉ClO|7-Chloro-2,3-dihydro-1H-inden-4-ol;C9H9ClO|organic|Molecular|S|0|0|Crystals|0|168.62|1.2|||||||||||||||||F4F4F2|1|||C9H9ClO|0|0|1200||Ld|145-94-8
@@ -3726,7 +3726,7 @@ c_150469|0|Triethyl borate|Trietil borat|C₆H₁₅BO₃|Triethyl borate;C6H15B
 c_150505|0|Merphos|Merfoz|C₁₂H₂₇PS₃|Merphos;C12H27PS3|organic|Molecular|S|0|0|Crystals|0|298.502|1.022|||||||||||||||||F4F4F2|1|||C12H27PS3|0|0|1200||L|150-50-5
 c_150607|0|Dibenzyl disulfide|Dibenzil disülfür|C₁₄H₁₄S₂|Dibenzyl disulfide;C14H14S2|organic|Molecular|S|0|0|Crystals|0|246.386|1.2|||||||||||||||||F4F4F2|1|||C14H14S2|0|0|1200||Ld|150-60-7
 c_150618|0|N,N'-Diphenyl-1,2-ethanediamine|N,N'-difenil-1,2-etanediamin|C₁₄H₁₆N₂|N,N'-Diphenyl-1,2-ethanediamine;C14H16N2|organic|Molecular|S|0|0|Crystals|0|212.296|1.2|||||||||||||||||F4F4F2|1|||C14H16N2|0|0|1200||Ld|150-61-8
-c_150685|0|N'-(4-Chlorophenyl)-N,N-dimethylurea|N'-(4-klorofenil)-N,N-dimetilurea|C₉H₁₁ClN₂O|N'-(4-Chlorophenyl)-N,N-dimethylurea;C9H11ClN2O|organic|Molecular|S|0|0|Crystals|0|198.65|1.2|||||||||||||||||F4F4F2|1|||C9H11ClN2O|0|0|1200||Ld|150-68-5
+c_150685|0|N'-(4-Chlorophenyl)-N,N-dimethylurea|N'-(4-klorofenil)-N,N-dimetilüre|C₉H₁₁ClN₂O|N'-(4-Chlorophenyl)-N,N-dimethylurea;C9H11ClN2O|organic|Molecular|S|0|0|Crystals|0|198.65|1.2|||||||||||||||||F4F4F2|1|||C9H11ClN2O|0|0|1200||Ld|150-68-5
 c_150696|0|(4-Ethoxyphenyl)urea|(4-Etoksifenil)üre|C₉H₁₂N₂O₂|(4-Ethoxyphenyl)urea;C9H12N2O2|organic|Molecular|S|0|0|Crystals|0|180.207|1.2|||||||||||||||||F4F4F2|1|||C9H12N2O2|0|0|1200||Ld|150-69-6
 c_150776|0|N,N,N',N'-Tetraethyl-1,2-ethanediamine|N,N,N',N'-tetretil-1,2-etanediamin|C₁₀H₂₄N₂|N,N,N',N'-Tetraethyl-1,2-ethanediamine;C10H24N2|organic|Molecular|L|0|0|Powder|0|172.316|0.80825|192||||||||||||||||E8F2FA|0.18|||C10H24N2|0|0|2000|237547|L|150-77-6
 c_150787|0|1,4-Dimethoxybenzene|1,4-Dimetoksibenzen|C₈H₁₀O₂|1,4-Dimethoxybenzene;C8H10O2|organic|Molecular|S|0|0|Crystals|0|138.166|1.03756|||||||||||||||||F4F4F2|1|||C8H10O2|0|0|1200||L|150-78-7
@@ -3745,11 +3745,11 @@ c_153617|0|Cephalothin|Sefalotin|C₁₆H₁₆N₂O₆S₂|Cephalothin;C16H16N2
 c_153786|0|9H-Fluoren-2-amine|9H-floren-2-amin|C₁₃H₁₁N|9H-Fluoren-2-amine;C13H11N|organic|Molecular|S|0|0|Crystals|0|181.238|1.2|||||||||||||||||F4F4F2|1|||C13H11N|0|0|1200||Ld|153-78-6
 c_154416|0|Phenylpropanolamine hydrochloride|Fenilpropanolamin hidroklorür|C₉H₁₄ClNO|Phenylpropanolamine hydrochloride;C9H14ClNO|organic|Molecular|S|0|0|Crystals|0|187.667|1.2|||||||||||||||||F4F4F2|1|||C9H14ClNO|0|0|1200||Ld|154-41-6
 c_154427|0|2-Amino-1,7-dihydro-6H-purine-6-thione|2-Amino-1,7-dihidro-6H-purin-6-tion|C₅H₅N₅S|2-Amino-1,7-dihydro-6H-purine-6-thione;C5H5N5S|organic|Molecular|S|0|0|Crystals|0|167.19|1.2|||||||||||||||||F4F4F2|1|||C5H5N5S|0|0|1200||Ld|154-42-7
-c_154938|0|N,N'-Bis(2-chloroethyl)-N-nitrosourea|N,N'-bis(2-kloroetil)-N-nitrosourea|C₅H₉Cl₂N₃O₂|N,N'-Bis(2-chloroethyl)-N-nitrosourea;C5H9Cl2N3O2|organic|Molecular|S|0|0|Crystals|0|214.046|1.2|||||||||||||||||F4F4F2|1|||C5H9Cl2N3O2|0|0|1200||Ld|154-93-8
+c_154938|0|N,N'-Bis(2-chloroethyl)-N-nitrosourea|N,N'-bis(2-kloroetil)-N-nitrosoüre|C₅H₉Cl₂N₃O₂|N,N'-Bis(2-chloroethyl)-N-nitrosourea;C5H9Cl2N3O2|organic|Molecular|S|0|0|Crystals|0|214.046|1.2|||||||||||||||||F4F4F2|1|||C5H9Cl2N3O2|0|0|1200||Ld|154-93-8
 c_155099|0|Tranylcypromine|Tranilsipromin|C₉H₁₁N|Tranylcypromine;C9H11N|organic|Molecular|S|0|0|Crystals|0|133.194|1.2|||||||||||||||||F4F4F2|1|||C9H11N|0|0|1200||Ld|155-09-9
-c_156069|0|α-Oxobenzenepropanoic acid|α-Oksobenzenepropanoik asit|C₉H₈O₃|α-Oxobenzenepropanoic acid;C9H8O3|organic|Molecular|S|0|0|Crystals|0|164.16|1.2|||||||||||||||||F4F4F2|1|||C9H8O3|0|0|1200||Ld|156-06-9
+c_156069|0|α-Oxobenzenepropanoic acid|α-Oksobenzenpropanoik asit|C₉H₈O₃|α-Oxobenzenepropanoic acid;C9H8O3|organic|Molecular|S|0|0|Crystals|0|164.16|1.2|||||||||||||||||F4F4F2|1|||C9H8O3|0|0|1200||Ld|156-06-9
 c_156105|0|4-Nitroso-N-phenylaniline|4-Nitroso-N-fenilanilin|C₁₂H₁₀N₂O|4-Nitroso-N-phenylaniline;C12H10N2O|organic|Molecular|S|0|0|Crystals|0|198.225|1.2|||||||||||||||||F4F4F2|1|||C12H10N2O|0|0|1200||Ld|156-10-5
-c_156387|0|4-Hydroxybenzeneacetic acid|4-Hidroksibenzeneasetik asit|C₈H₈O₃|4-Hydroxybenzeneacetic acid;C8H8O3|organic|Molecular|S|0|0|Crystals|0|152.149|1.2|||||||||||||||||F4F4F2|1|||C8H8O3|0|0|1200||Ld|156-38-7
+c_156387|0|4-Hydroxybenzeneacetic acid|4-Hidroksibenzenasetik asit|C₈H₈O₃|4-Hydroxybenzeneacetic acid;C8H8O3|organic|Molecular|S|0|0|Crystals|0|152.149|1.2|||||||||||||||||F4F4F2|1|||C8H8O3|0|0|1200||Ld|156-38-7
 c_156569|0|Hypoglycin A|Hipoglisin a|C₇H₁₁NO₂|Hypoglycin A;C7H11NO2|organic|Molecular|S|0|0|Crystals|0|141.17|1.2|||||||||||||||||F4F4F2|1|||C7H11NO2|0|0|1200||Ld|156-56-9
 c_189559|0|Dibenzo[a,i]pyrene|Dibenzo[a,i]piren|C₂₄H₁₄|Dibenzo[a,i]pyrene;C24H14|organic|Molecular|S|0|0|Crystals|0|302.376|1.2|||||||||||||||||F4F4F2|1|||C24H14|0|0|1200||Ld|189-55-9
 c_189640|0|Dibenzo[a,h]pyrene|Dibenzo[a,h]piren|C₂₄H₁₄|Dibenzo[a,h]pyrene;C24H14|organic|Molecular|S|0|0|Crystals|0|302.376|1.2|||||||||||||||||F4F4F2|1|||C24H14|0|0|1200||Ld|189-64-0
@@ -3852,7 +3852,7 @@ c_305033|0|Chlorambucil|Klorambusil|C₁₄H₁₉Cl₂NO₂|Chlorambucil;C14H19
 c_305624|0|2,4-Diaminobutanoic acid|2,4-Diaminobütanoik asit|C₄H₁₀N₂O₂|2,4-Diaminobutanoic acid;C4H10N2O2|organic|Molecular|S|0|0|Crystals|0|118.136|1.2|||||||||||||||||F4F4F2|1|||C4H10N2O2|0|0|1200||Ld|305-62-4
 c_305840|0|Carnosine|Karnosin|C₉H₁₄N₄O₃|Carnosine;C9H14N4O3|organic|Molecular|S|0|0|Crystals|0|226.236|1.2|||||||||||||||||F4F4F2|1|||C9H14N4O3|0|0|1200||Ld|305-84-0
 c_305851|0|2,6-Diiodo-4-nitrophenol|2,6-Diiodo-4-nitrofenol|C₆H₃I₂NO₃|2,6-Diiodo-4-nitrophenol;C6H3I2NO3|organic|Molecular|S|0|0|Crystals|0|390.903|1.2|||||||||||||||||F4F4F2|1|||C6H3I2NO3|0|0|1200||Ld|305-85-1
-c_306081|0|4-Hydroxy-3-methoxybenzeneacetic acid|4-Hidroksi-3-metoksibenzeneasetik asit|C₉H₁₀O₄|4-Hydroxy-3-methoxybenzeneacetic acid;C9H10O4|organic|Molecular|S|0|0|Crystals|0|182.175|1.2|||||||||||||||||F4F4F2|1|||C9H10O4|0|0|1200||Ld|306-08-1
+c_306081|0|4-Hydroxy-3-methoxybenzeneacetic acid|4-Hidroksi-3-metoksibenzenasetik asit|C₉H₁₀O₄|4-Hydroxy-3-methoxybenzeneacetic acid;C9H10O4|organic|Molecular|S|0|0|Crystals|0|182.175|1.2|||||||||||||||||F4F4F2|1|||C9H10O4|0|0|1200||Ld|306-08-1
 c_306525|0|Triclofos|Triklofoz|C₂H₄Cl₃O₄P|Triclofos;C2H4Cl3O4P|organic|Molecular|S|0|0|Crystals|0|229.374|1.2|||||||||||||||||F4F4F2|1|||C2H4Cl3O4P|0|0|1200||Ld|306-52-5
 c_306945|0|Perfluorodecalin|Perflorodekalin|C₁₀F₁₈|Perfluorodecalin;C10F18|organic|Molecular|L|0|0|Powder|0|462.081|1.93053|143||||||||||||||||E8F2FA|0.18|||C10F18|0|0|2000|79252.7|L|306-94-5
 c_307302|0|2,2,3,3,4,4,5,5,6,6,7,7,8,8,8-Pentadecafluoro-1-octanol|2,2,3,3,4,4,5,5,6,6,7,7,8,8,8-Pentadekafloro-1-oktanol|C₈H₃F₁₅O|2,2,3,3,4,4,5,5,6,6,7,7,8,8,8-Pentadecafluoro-1-octanol;C8H3F15O|organic|Molecular|S|0|0|Crystals|0|400.087|1.2|||||||||||||||||F4F4F2|1|||C8H3F15O|0|0|1200||Ld|307-30-2
@@ -3878,7 +3878,7 @@ c_323091|0|2-Fluoronaphthalene|2-Floronaftalen|C₁₀H₇F|2-Fluoronaphthalene;
 c_324743|0|4-Fluoro-1,1'-biphenyl|4-Floro-1,1'-bifenil|C₁₂H₉F|4-Fluoro-1,1'-biphenyl;C12H9F|organic|Molecular|S|0|0|Crystals|0|172.202|1.24725|||||||||||||||||F4F4F2|1|||C12H9F|0|0|1200||L|324-74-3
 c_326067|0|4,4,4-Trifluoro-1-phenyl-1,3-butanedione|4,4,4-Trifloro-1-fenil-1,3-bütanedion|C₁₀H₇F₃O₂|4,4,4-Trifluoro-1-phenyl-1,3-butanedione;C10H7F3O2|organic|Molecular|S|0|0|Crystals|0|216.159|1.2|||||||||||||||||F4F4F2|1|||C10H7F3O2|0|0|1200||Ld|326-06-7
 c_326567|0|Methyl 1,3-benzodioxole-5-carboxylate|Metil 1,3-benzodioksol-5-karboksilat|C₉H₈O₄|Methyl 1,3-benzodioxole-5-carboxylate;C9H8O4|organic|Molecular|S|0|0|Crystals|0|180.159|1.2|||||||||||||||||F4F4F2|1|||C9H8O4|0|0|1200||Ld|326-56-7
-c_326625|0|2-Fluorobenzeneacetonitrile|2-Florobenzeneasetonitril|C₈H₆FN|2-Fluorobenzeneacetonitrile;C8H6FN|organic|Molecular|L|0|0|Powder|0|135.141|1.05925|232||||||||||||||||E8F2FA|0.18|||C8H6FN|0|0|2000|328938|L|326-62-5
+c_326625|0|2-Fluorobenzeneacetonitrile|2-Florobenzenasetonitril|C₈H₆FN|2-Fluorobenzeneacetonitrile;C8H6FN|organic|Molecular|L|0|0|Powder|0|135.141|1.05925|232||||||||||||||||E8F2FA|0.18|||C8H6FN|0|0|2000|328938|L|326-62-5
 c_326910|0|4,4,4-Trifluoro-1-(2-thienyl)-1,3-butanedione|4,4,4-Trifloro-1-(2-tienil)-1,3-bütanedion|C₈H₅F₃O₂S|4,4,4-Trifluoro-1-(2-thienyl)-1,3-butanedione;C8H5F3O2S|organic|Molecular|S|0|0|Crystals|0|222.181|1.2|||||||||||||||||F4F4F2|1|||C8H5F3O2S|0|0|1200||Ld|326-91-0
 c_327548|0|1,2,4,5-Tetrafluorobenzene|1,2,4,5-Tetraflorobenzen|C₆H₂F₄|1,2,4,5-Tetrafluorobenzene;C6H2F4|organic|Molecular|L|0|0|Powder|0|150.076|1.42552|90.2||||||||||||||||E8F2FA|0.18|||C6H2F4|0|0|2000|213058|L|327-54-8
 c_327924|0|1,5-Difluoro-2,4-dinitrobenzene|1,5-Difloro-2,4-dinitrobenzen|C₆H₂F₂N₂O₄|1,5-Difluoro-2,4-dinitrobenzene;C6H2F2N2O4|organic|Molecular|S|0|0|Crystals|0|204.089|1.2|||||||||||||||||F4F4F2|1|||C6H2F2N2O4|0|0|1200||Ld|327-92-4
@@ -3887,7 +3887,7 @@ c_328392|0|DL-Leucine|Dl-leusin|C₆H₁₃NO₂|DL-Leucine;C6H13NO2|organic|Mol
 c_328507|0|2-Oxoglutaric acid|2-Oksoglutarik asit|C₅H₆O₅|2-Oxoglutaric acid;C5H6O5|organic|Molecular|S|0|0|Crystals|0|146.098|1.2|||||||||||||||||F4F4F2|1|||C5H6O5|0|0|1200||Ld|328-50-7
 c_328847|0|3,4-Dichlorobenzotrifluoride|3,4-Diklorobenzotriflorür|C₇H₃Cl₂F₃|3,4-Dichlorobenzotrifluoride;C7H3Cl2F3|organic|Molecular|S|0|0|Crystals|0|214.996|1.47293|||||||||||||||||F4F4F2|1|||C7H3Cl2F3|0|0|1200||L|328-84-7
 c_329715|0|2,5-Dinitrophenol|2,5-Dinitrofenol|C₆H₄N₂O₅|2,5-Dinitrophenol;C6H4N2O5|organic|Molecular|S|0|0|Crystals|0|184.107|1.2|||||||||||||||||F4F4F2|1|||C6H4N2O5|0|0|1200||Ld|329-71-5
-c_329986|0|Benzenemethanesulfonyl fluoride|Benzenemetanesülfonil florür|C₇H₇FO₂S|Benzenemethanesulfonyl fluoride;C7H7FO2S|organic|Molecular|S|0|0|Crystals|0|174.189|1.2|||||||||||||||||F4F4F2|1|||C7H7FO2S|0|0|1200||Ld|329-98-6
+c_329986|0|Benzenemethanesulfonyl fluoride|Benzenmetanesülfonil florür|C₇H₇FO₂S|Benzenemethanesulfonyl fluoride;C7H7FO2S|organic|Molecular|S|0|0|Crystals|0|174.189|1.2|||||||||||||||||F4F4F2|1|||C7H7FO2S|0|0|1200||Ld|329-98-6
 c_330541|0|Diuron|Diuron|C₉H₁₀Cl₂N₂O|Diuron;C9H10Cl2N2O|organic|Molecular|S|0|0|Crystals|0|233.092|1.2|||||||||||||||||F4F4F2|1|||C9H10Cl2N2O|0|0|1200||Ld|330-54-1
 c_330552|0|Linuron|Linuron|C₉H₁₀Cl₂N₂O₂|Linuron;C9H10Cl2N2O2|organic|Molecular|S|0|0|Crystals|0|249.091|1.2|||||||||||||||||F4F4F2|1|||C9H10Cl2N2O2|0|0|1200||Ld|330-55-2
 c_332774|0|2,5-Dihydro-2,5-dimethoxyfuran|2,5-Dihidro-2,5-dimetoksifuran|C₆H₁₀O₃|2,5-Dihydro-2,5-dimethoxyfuran;C6H10O3|organic|Molecular|L|0|0|Powder|0|130.143|1.07325|161||||||||||||||||E8F2FA|0.18|||C6H10O3|0|0|2000|293563|L|332-77-4
@@ -3904,7 +3904,7 @@ c_335762|0|Nonadecafluorodecanoic acid|Nonadekaflorodekanoik asit|C₁₀HF₁�
 c_336594|0|Heptafluorobutanoic anhydride|Heptaflorobütanoik anhidrit|C₈F₁₄O₃|Heptafluorobutanoic anhydride;C8F14O3|organic|Molecular|L|0|0|Powder|0|410.063|1.6652|106.5||||||||||||||||E8F2FA|0.18|||C8F14O3|0|0|2000|81473.4|L|336-59-4
 c_338658|0|1-Chloro-2,2-difluoroethane|1-Kloro-2,2-difloroetan|C₂H₃ClF₂|1-Chloro-2,2-difluoroethane;C2H3ClF2|organic|Molecular|L|0|0|Powder|0|100.493|1|35||||||||||||||||E8F2FA|0.18|||C2H3ClF2|0|0|2000|269842|Ld|338-65-8
 c_338830|0|Tris(perfluoropropyl)amine|Tris(perfloropropil)amin|C₉F₂₁N|Tris(perfluoropropyl)amine;C9F21N|organic|Molecular|S|0|0|Crystals|0|521.072|1.8224|||||||||||||||||F4F4F2|1|||C9F21N|0|0|1200||L|338-83-0
-c_339435|0|4-Amino-N-[(butylamino)carbonyl]benzenesulfonamide|4-Amino-N-[(bütilamino)karbonil]benzenesülfonamit|C₁₁H₁₇N₃O₃S|4-Amino-N-[(butylamino)carbonyl]benzenesulfonamide;C11H17N3O3S|organic|Molecular|S|0|0|Crystals|0|271.335|1.2|||||||||||||||||F4F4F2|1|||C11H17N3O3S|0|0|1200||Ld|339-43-5
+c_339435|0|4-Amino-N-[(butylamino)carbonyl]benzenesulfonamide|4-Amino-N-[(bütilamino)karbonil]benzensülfonamit|C₁₁H₁₇N₃O₃S|4-Amino-N-[(butylamino)carbonyl]benzenesulfonamide;C11H17N3O3S|organic|Molecular|S|0|0|Crystals|0|271.335|1.2|||||||||||||||||F4F4F2|1|||C11H17N3O3S|0|0|1200||Ld|339-43-5
 c_344047|0|Bromopentafluorobenzene|Bromopentaflorobenzen|C₆BrF₅|Bromopentafluorobenzene;C6BrF5|organic|Molecular|L|0|0|Powder|0|246.962|1.98125|133||||||||||||||||E8F2FA|0.18|||C6BrF5|0|0|2000|144723|L|344-04-7
 c_344070|0|Chloropentafluorobenzene|Kloropentaflorobenzen|C₆ClF₅|Chloropentafluorobenzene;C6ClF5|organic|Molecular|S|0|0|Crystals|0|202.508|1.56825|||||||||||||||||F4F4F2|1|||C6ClF5|0|0|1200||L|344-07-0
 c_345357|0|1-(Chloromethyl)-2-fluorobenzene|1-(Klorometil)-2-florobenzen|C₇H₆ClF|1-(Chloromethyl)-2-fluorobenzene;C7H6ClF|organic|Molecular|L|0|0|Powder|0|144.573|1.21625|172||||||||||||||||E8F2FA|0.18|||C7H6ClF|0|0|2000|270957|L|345-35-7
@@ -3912,7 +3912,7 @@ c_346189|0|Polythiazide|Politiazit|C₁₁H₁₃ClF₃N₃O₄S₃|Polythiazide
 c_348516|0|1-Chloro-2-fluorobenzene|1-Kloro-2-florobenzen|C₆H₄ClF|1-Chloro-2-fluorobenzene;C6H4ClF|organic|Molecular|L|0|0|Powder|0|130.546|1.22333|137.6||||||||||||||||E8F2FA|0.18|||C6H4ClF|0|0|2000|276882|L|348-51-6
 c_348527|0|1-Fluoro-2-iodobenzene|1-Floro-2-iodobenzen|C₆H₄FI|1-Fluoro-2-iodobenzene;C6H4FI|organic|Molecular|L|0|0|Powder|0|222.001|1|188.6||||||||||||||||E8F2FA|0.18|||C6H4FI|0|0|2000|183035|Ld|348-52-7
 c_348549|0|2-Fluoroaniline|2-Floroanilin|C₆H₆FN|2-Fluoroaniline;C6H6FN|organic|Molecular|L|0|0|Powder|0|111.119|1.15132|175||||||||||||||||E8F2FA|0.18|||C6H6FN|0|0|2000|354908|L|348-54-9
-c_349882|0|4-Fluorobenzenesulfonyl chloride|4-Florobenzenesülfonil klorür|C₆H₄ClFO₂S|4-Fluorobenzenesulfonyl chloride;C6H4ClFO2S|organic|Molecular|S|0|0|Crystals|0|194.604|1.2|||||||||||||||||F4F4F2|1|||C6H4ClFO2S|0|0|1200||Ld|349-88-2
+c_349882|0|4-Fluorobenzenesulfonyl chloride|4-Florobenzensülfonil klorür|C₆H₄ClFO₂S|4-Fluorobenzenesulfonyl chloride;C6H4ClFO2S|organic|Molecular|S|0|0|Crystals|0|194.604|1.2|||||||||||||||||F4F4F2|1|||C6H4ClFO2S|0|0|1200||Ld|349-88-2
 c_350038|0|1-(3-Pyridinyl)ethanone|1-(3-Piridinil)etanon|C₇H₇NO|1-(3-Pyridinyl)ethanone;C7H7NO|organic|Molecular|L|0|0|Powder|0|121.139|1|225||||||||||||||||E8F2FA|0.18|||C7H7NO|0|0|2000|361875|Ld|350-03-8
 c_350301|0|2-Chloro-1-fluoro-4-nitrobenzene|2-Kloro-1-floro-4-nitrobenzen|C₆H₃ClFNO₂|2-Chloro-1-fluoro-4-nitrobenzene;C6H3ClFNO2|organic|Molecular|S|0|0|Crystals|0|175.543|1.2|||||||||||||||||F4F4F2|1|||C6H3ClFNO2|0|0|1200||Ld|350-30-1
 c_350469|0|1-Fluoro-4-nitrobenzene|1-Floro-4-nitrobenzen|C₆H₄FNO₂|1-Fluoro-4-nitrobenzene;C6H4FNO2|organic|Molecular|S|0|0|Crystals|0|141.101|1.33002|||||||||||||||||F4F4F2|1|||C6H4FNO2|0|0|1200||L|350-46-9
@@ -3975,7 +3975,7 @@ c_367259|0|2,4-Difluoroaniline|2,4-Difloroanilin|C₆H₅F₂N|2,4-Difluoroanili
 c_367577|0|1,1,1-Trifluoro-2,4-pentanedione|1,1,1-Trifloro-2,4-pentanedion|C₅H₅F₃O₂|1,1,1-Trifluoro-2,4-pentanedione;C5H5F3O2|organic|Molecular|L|0|0|Powder|0|154.088|1|107||||||||||||||||E8F2FA|0.18|||C5H5F3O2|0|0|2000|217104|Ld|367-57-7
 c_367646|0|Butyl trifluoroacetate|Bütil trifloroasetat|C₆H₉F₃O₂|Butyl trifluoroacetate;C6H9F3O2|organic|Molecular|L|0|0|Powder|0|170.131|1.02682|104.5||||||||||||||||E8F2FA|0.18|||C6H9F3O2|0|0|2000|195339|L|367-64-6
 c_368161|0|L-3-Methylhistidine|L-3-metilhistidin|C₇H₁₁N₃O₂|L-3-Methylhistidine;C7H11N3O2|organic|Molecular|S|0|0|Crystals|0|169.184|1.2|||||||||||||||||F4F4F2|1|||C7H11N3O2|0|0|1200||Ld|368-16-1
-c_368434|0|Benzenesulfonyl fluoride|Benzenesülfonil florür|C₆H₅FO₂S|Benzenesulfonyl fluoride;C6H5FO2S|organic|Molecular|L|0|0|Powder|0|160.162|1.32862|203.5||||||||||||||||E8F2FA|0.18|||C6H5FO2S|0|0|2000|261892|L|368-43-4
+c_368434|0|Benzenesulfonyl fluoride|Benzensülfonil florür|C₆H₅FO₂S|Benzenesulfonyl fluoride;C6H5FO2S|organic|Molecular|L|0|0|Powder|0|160.162|1.32862|203.5||||||||||||||||E8F2FA|0.18|||C6H5FO2S|0|0|2000|261892|L|368-43-4
 c_368478|0|Trifluorophenylsilane|Triflorofenilsilan|C₆H₅F₃Si|Trifluorophenylsilane;C6H5F3Si|organic|Molecular|L|0|0|Powder|0|162.186|1.21692|101.5||||||||||||||||E8F2FA|0.18|||C6H5F3Si|0|0|2000|203280|L|368-47-8
 c_368774|0|3-(Trifluoromethyl)benzonitrile|3-(Triflorometil)benzonitril|C₈H₄F₃N|3-(Trifluoromethyl)benzonitrile;C8H4F3N|organic|Molecular|L|0|0|Powder|0|171.122|1.28132|189||||||||||||||||E8F2FA|0.18|||C8H4F3N|0|0|2000|237662|L|368-77-4
 c_370149|0|4-[2-(Methylamino)propyl]phenol|4-[2-(Metilamino)propil]fenol|C₁₀H₁₅NO|4-[2-(Methylamino)propyl]phenol;C10H15NO|organic|Molecular|S|0|0|Crystals|0|165.236|1.2|||||||||||||||||F4F4F2|1|||C10H15NO|0|0|1200||Ld|370-14-9
@@ -4028,7 +4028,7 @@ c_402675|0|1-Fluoro-3-nitrobenzene|1-Floro-3-nitrobenzen|C₆H₄FNO₂|1-Fluoro
 c_403429|0|1-(4-Fluorophenyl)ethanone|1-(4-Florofenil)etanon|C₈H₇FO|1-(4-Fluorophenyl)ethanone;C8H7FO|organic|Molecular|L|0|0|Powder|0|138.141|1.13822|196||||||||||||||||E8F2FA|0.18|||C8H7FO|0|0|2000|298862|L|403-42-9
 c_403430|0|4-Fluorobenzoyl chloride|4-Florobenzoil klorür|C₇H₄ClFO|4-Fluorobenzoyl chloride;C7H4ClFO|organic|Molecular|L|0|0|Powder|0|158.556|1.34225|||||||||||||||||E8F2FA|0.18|||C7H4ClFO|0|0|2000||L|403-43-0
 c_404728|0|1-Fluoro-3-isothiocyanatobenzene|1-Floro-3-izotiosianatobenzen|C₇H₄FNS|1-Fluoro-3-isothiocyanatobenzene;C7H4FNS|organic|Molecular|L|0|0|Powder|0|153.174|1.2725|227||||||||||||||||E8F2FA|0.18|||C7H4FNS|0|0|2000|287340|L|404-72-8
-c_405505|0|4-Fluorobenzeneacetic acid|4-Florobenzeneasetik asit|C₈H₇FO₂|4-Fluorobenzeneacetic acid;C8H7FO2|organic|Molecular|S|0|0|Crystals|0|154.14|1.2|||||||||||||||||F4F4F2|1|||C8H7FO2|0|0|1200||Ld|405-50-5
+c_405505|0|4-Fluorobenzeneacetic acid|4-Florobenzenasetik asit|C₈H₇FO₂|4-Fluorobenzeneacetic acid;C8H7FO2|organic|Molecular|S|0|0|Crystals|0|154.14|1.2|||||||||||||||||F4F4F2|1|||C8H7FO2|0|0|1200||Ld|405-50-5
 c_405992|0|1-Vinyl-4-fluorobenzene|1-Vinil-4-florobenzen|C₈H₇F|1-Vinyl-4-fluorobenzene;C8H7F|organic|Molecular|L|0|0|Powder|0|122.142|1.02202|||||||||||||||||E8F2FA|0.18|||C8H7F|0|0|2000||L|405-99-2
 c_407250|0|Trifluoroacetic acid anhydride|Trifloroasetik asit anhidrit|C₄F₆O₃|Trifluoroacetic acid anhydride;C4F6O3|organic|Molecular|L|0|0|Powder|0|210.031|1.49025|39.5||||||||||||||||E8F2FA|0.18|||C4F6O3|0|0|2000|130996|L|407-25-0
 c_420042|0|Cyanamide|Sianamit|CH₂N₂|Cyanamide;CH2N2|organic|Molecular|S|0|0|Crystals|0|42.041|1.2822|||||||||||||||||F4F4F2|1|||CH2N2|0|0|1200||L|420-04-2
@@ -4083,13 +4083,13 @@ c_447416|0|Nylidrin|Nilidrin|C₁₉H₂₅NO₂|Nylidrin;C19H25NO2|organic|Mole
 c_447530|0|1,2-Dihydronaphthalene|1,2-Dihidronaftalen|C₁₀H₁₀|1,2-Dihydronaphthalene;C10H10|organic|Molecular|L|0|0|Powder|0|130.19|0.99742|210.2||||||||||||||||E8F2FA|0.18|||C10H10|0|0|2000|326713|L|447-53-0
 c_448715|0|Etioporphyrin|Etioporfirin|C₃₂H₃₈N₄|Etioporphyrin;C32H38N4|organic|Molecular|S|0|0|Crystals|0|478.684|1.2|||||||||||||||||F4F4F2|1|||C32H38N4|0|0|1200||Ld|448-71-5
 c_450953|0|2-Fluoro-1-phenylethanone|2-Floro-1-feniletanon|C₈H₇FO|2-Fluoro-1-phenylethanone;C8H7FO|organic|Molecular|S|0|0|Crystals|0|138.141|1.1522|||||||||||||||||F4F4F2|1|||C8H7FO|0|0|1200||L|450-95-3
-c_451138|0|2,5-Dihydroxybenzeneacetic acid|2,5-Dihidroksibenzeneasetik asit|C₈H₈O₄|2,5-Dihydroxybenzeneacetic acid;C8H8O4|organic|Molecular|S|0|0|Crystals|0|168.148|1.2|||||||||||||||||F4F4F2|1|||C8H8O4|0|0|1200||Ld|451-13-8
+c_451138|0|2,5-Dihydroxybenzeneacetic acid|2,5-Dihidroksibenzenasetik asit|C₈H₈O₄|2,5-Dihydroxybenzeneacetic acid;C8H8O4|organic|Molecular|S|0|0|Crystals|0|168.148|1.2|||||||||||||||||F4F4F2|1|||C8H8O4|0|0|1200||Ld|451-13-8
 c_451401|0|2-Phenylacetophenone|2-Fenilasetofenon|C₁₄H₁₂O|2-Phenylacetophenone;C14H12O|organic|Molecular|S|0|0|Crystals|0|196.249|1.201|||||||||||||||||F4F4F2|1|||C14H12O|0|0|1200||L|451-40-1
 c_451467|0|Ethyl 4-fluorobenzoate|Etil 4-florobenzoat|C₉H₉FO₂|Ethyl 4-fluorobenzoate;C9H9FO2|organic|Molecular|S|0|0|Crystals|0|168.167|1.14625|||||||||||||||||F4F4F2|1|||C9H9FO2|0|0|1200||L|451-46-7
 c_452357|0|6-Ethoxy-2-benzothiazolesulfonamide|6-Etoksi-2-benzotiazolesülfonamit|C₉H₁₀N₂O₃S₂|6-Ethoxy-2-benzothiazolesulfonamide;C9H10N2O3S2|organic|Molecular|S|0|0|Crystals|0|258.31|1.2|||||||||||||||||F4F4F2|1|||C9H10N2O3S2|0|0|1200||Ld|452-35-7
 c_452584|0|2,3-Pyridinediamine|2,3-Piridinediamin|C₅H₇N₃|2,3-Pyridinediamine;C5H7N3|organic|Molecular|S|0|0|Crystals|0|109.132|1.2|||||||||||||||||F4F4F2|1|||C5H7N3|0|0|1200||Ld|452-58-4
 c_452711|0|4-Fluoro-2-methylaniline|4-Floro-2-metilanilin|C₇H₈FN|4-Fluoro-2-methylaniline;C7H8FN|organic|Molecular|L|0|0|Powder|0|125.146|1.12632|||||||||||||||||E8F2FA|0.18|||C7H8FN|0|0|2000||L|452-71-1
-c_452868|0|4-Methyl-1,2-benzenediol|4-Metil-1,2-benzenediol|C₇H₈O₂|4-Methyl-1,2-benzenediol;C7H8O2|organic|Molecular|S|0|0|Crystals|0|124.139|1.12877|||||||||||||||||F4F4F2|1|||C7H8O2|0|0|1200||L|452-86-8
+c_452868|0|4-Methyl-1,2-benzenediol|4-Metil-1,2-benzendiol|C₇H₈O₂|4-Methyl-1,2-benzenediol;C7H8O2|organic|Molecular|S|0|0|Crystals|0|124.139|1.12877|||||||||||||||||F4F4F2|1|||C7H8O2|0|0|1200||L|452-86-8
 c_453134|0|1,3-Difluoro-2-propanol|1,3-Difloro-2-propanol|C₃H₆F₂O|1,3-Difluoro-2-propanol;C3H6F2O|organic|Molecular|L|0|0|Powder|0|96.0768|1.2425|127||||||||||||||||E8F2FA|0.18|||C3H6F2O|0|0|2000|366511|L|453-13-4
 c_453203|0|Tetrahydro-3-furanol|Tetrahidro-3-furanol|C₄H₈O₂|Tetrahydro-3-furanol;C4H8O2|organic|Molecular|L|0|0|Powder|0|88.106|1.0925|181||||||||||||||||E8F2FA|0.18|||C4H8O2|0|0|2000|453604|L|453-20-3
 c_454319|0|Ethyl difluoroacetate|Etil difloroasetat|C₄H₆F₂O₂|Ethyl difluoroacetate;C4H6F2O2|organic|Molecular|L|0|0|Powder|0|124.087|1.17652|100||||||||||||||||E8F2FA|0.18|||C4H6F2O2|0|0|2000|264631|L|454-31-9
@@ -4104,8 +4104,8 @@ c_456597|0|Cyclandelate|Siklandelat|C₁₇H₂₄O₃|Cyclandelate;C17H24O3|org
 c_458355|0|4-(3-Hydroxy-1-propenyl)-2-methoxyphenol|4-(3-Hidroksi-1-propenil)-2-metoksifenol|C₁₀H₁₂O₃|4-(3-Hydroxy-1-propenyl)-2-methoxyphenol;C10H12O3|organic|Molecular|S|0|0|Crystals|0|180.203|1.2|||||||||||||||||F4F4F2|1|||C10H12O3|0|0|1200||Ld|458-35-5
 c_458366|0|3-(4-Hydroxy-3-methoxyphenyl)-2-propenal|3-(4-Hidroksi-3-metoksifenil)-2-propenal|C₁₀H₁₀O₃|3-(4-Hydroxy-3-methoxyphenyl)-2-propenal;C10H10O3|organic|Molecular|S|0|0|Crystals|0|178.187|1.15621|||||||||||||||||F4F4F2|1|||C10H10O3|0|0|1200||L|458-36-6
 c_458377|0|Curcumin|Kurkumin|C₂₁H₂₀O₆|Curcumin;C21H20O6|organic|Molecular|S|0|0|Crystals|0|368.385|1.2|||||||||||||||||F4F4F2|1|||C21H20O6|0|0|1200||Ld|458-37-7
-c_459223|0|4-Fluorobenzeneacetonitrile|4-Florobenzeneasetonitril|C₈H₆FN|4-Fluorobenzeneacetonitrile;C8H6FN|organic|Molecular|S|0|0|Crystals|0|135.141|1.13902|||||||||||||||||F4F4F2|1|||C8H6FN|0|0|1200||L|459-22-3
-c_459563|0|4-Fluorobenzenemethanol|4-Florobenzenemetanol|C₇H₇FO|4-Fluorobenzenemethanol;C7H7FO|organic|Molecular|L|0|0|Powder|0|126.13|1|210||||||||||||||||E8F2FA|0.18|||C7H7FO|0|0|2000|337089|Ld|459-56-3
+c_459223|0|4-Fluorobenzeneacetonitrile|4-Florobenzenasetonitril|C₈H₆FN|4-Fluorobenzeneacetonitrile;C8H6FN|organic|Molecular|S|0|0|Crystals|0|135.141|1.13902|||||||||||||||||F4F4F2|1|||C8H6FN|0|0|1200||L|459-22-3
+c_459563|0|4-Fluorobenzenemethanol|4-Florobenzenmetanol|C₇H₇FO|4-Fluorobenzenemethanol;C7H7FO|organic|Molecular|L|0|0|Powder|0|126.13|1|210||||||||||||||||E8F2FA|0.18|||C7H7FO|0|0|2000|337089|Ld|459-56-3
 c_459574|0|4-Fluorobenzaldehyde|4-Florobenzaldehit|C₇H₅FO|4-Fluorobenzaldehyde;C7H5FO|organic|Molecular|L|0|0|Powder|0|124.114|1.18102|181.5||||||||||||||||E8F2FA|0.18|||C7H5FO|0|0|2000|322357|L|459-57-4
 c_459609|0|1-Fluoro-4-methoxybenzene|1-Floro-4-metoksibenzen|C₇H₇FO|1-Fluoro-4-methoxybenzene;C7H7FO|organic|Molecular|L|0|0|Powder|0|126.13|1.17812|157||||||||||||||||E8F2FA|0.18|||C7H7FO|0|0|2000|300112|L|459-60-9
 c_459723|0|Ethyl fluoroacetate|Etil floroasetat|C₄H₇FO₂|Ethyl fluoroacetate;C4H7FO2|organic|Molecular|L|0|0|Powder|0|106.096|1.09122|120||||||||||||||||E8F2FA|0.18|||C4H7FO2|0|0|2000|326092|L|459-72-3
@@ -4148,8 +4148,8 @@ c_471250|0|2-Propynoic acid|2-Propinoik asit|C₃H₂O₂|2-Propynoic acid;C3H2O
 c_471465|0|Oxamide|Oksamit|C₂H₄N₂O₂|Oxamide;C2H4N2O2|organic|Molecular|S|0|0|Crystals|0|88.066|1.6672|||||||||||||||||F4F4F2|1|||C2H4N2O2|0|0|1200||L|471-46-5
 c_471476|0|Oxamic acid|Oksamik asit|C₂H₃NO₃|Oxamic acid;C2H3NO3|organic|Molecular|S|0|0|Crystals|0|89.05|1.2|||||||||||||||||F4F4F2|1|||C2H3NO3|0|0|1200||Ld|471-47-6
 c_471874|0|Stachydrine|Stakidrin|C₇H₁₃NO₂|Stachydrine;C7H13NO2|organic|Molecular|S|0|0|Crystals|0|143.186|1.2|||||||||||||||||F4F4F2|1|||C7H13NO2|0|0|1200||Ld|471-87-4
-c_473290|0|N,N-Dichlorobenzenesulfonamide|N,N-diklorobenzenesülfonamit|C₆H₅Cl₂NO₂S|N,N-Dichlorobenzenesulfonamide;C6H5Cl2NO2S|organic|Molecular|S|0|0|Crystals|0|226.071|1.2|||||||||||||||||F4F4F2|1|||C6H5Cl2NO2S|0|0|1200||Ld|473-29-0
-c_473347|0|N,N-Dichloro-4-methylbenzenesulfonamide|N,N-dikloro-4-metilbenzenesülfonamit|C₇H₇Cl₂NO₂S|N,N-Dichloro-4-methylbenzenesulfonamide;C7H7Cl2NO2S|organic|Molecular|S|0|0|Crystals|0|240.098|1.2|||||||||||||||||F4F4F2|1|||C7H7Cl2NO2S|0|0|1200||Ld|473-34-7
+c_473290|0|N,N-Dichlorobenzenesulfonamide|N,N-diklorobenzensülfonamit|C₆H₅Cl₂NO₂S|N,N-Dichlorobenzenesulfonamide;C6H5Cl2NO2S|organic|Molecular|S|0|0|Crystals|0|226.071|1.2|||||||||||||||||F4F4F2|1|||C6H5Cl2NO2S|0|0|1200||Ld|473-29-0
+c_473347|0|N,N-Dichloro-4-methylbenzenesulfonamide|N,N-dikloro-4-metilbenzensülfonamit|C₇H₇Cl₂NO₂S|N,N-Dichloro-4-methylbenzenesulfonamide;C7H7Cl2NO2S|organic|Molecular|S|0|0|Crystals|0|240.098|1.2|||||||||||||||||F4F4F2|1|||C7H7Cl2NO2S|0|0|1200||Ld|473-34-7
 c_473552|0|Pinane|Pinan|C₁₀H₁₈|Pinane;C10H18|organic|Molecular|L|0|0|Powder|0|138.254|0.846721|167||||||||||||||||E8F2FA|0.18|||C10H18|0|0|2000|280160|L|473-55-2
 c_474408|0|α1-Sitosterol|α1-Sitosterol|C₃₀H₅₀O|α1-Sitosterol;C30H50O|organic|Molecular|S|0|0|Crystals|0|426.729|1.2|||||||||||||||||F4F4F2|1|||C30H50O|0|0|1200||Ld|474-40-8
 c_474862|0|3-Hydroxyestra-1,3,5(10),7-tetraen-17-one|3-Hidroksiestra-1,3,5(10),7-tetren-17-on|C₁₈H₂₀O₂|3-Hydroxyestra-1,3,5(10),7-tetraen-17-one;C18H20O2|organic|Molecular|S|0|0|Crystals|0|268.356|1.2|||||||||||||||||F4F4F2|1|||C18H20O2|0|0|1200||Ld|474-86-2
@@ -4231,12 +4231,12 @@ c_487683|0|2,4,6-Trimethylbenzaldehyde|2,4,6-Trimetilbenzaldehit|C₁₀H₁₂O
 c_487898|0|1H-Indole-3-carboxaldehyde|1H-indol-3-karboksaldehit|C₉H₇NO|1H-Indole-3-carboxaldehyde;C9H7NO|organic|Molecular|S|0|0|Crystals|0|145.161|1.2|||||||||||||||||F4F4F2|1|||C9H7NO|0|0|1200||Ld|487-89-8
 c_487934|0|3-[2-(Dimethylamino)ethyl]-1H-indol-5-ol|3-[2-(Dimetilamino)etil]-1H-indol-5-ol|C₁₂H₁₆N₂O|3-[2-(Dimethylamino)ethyl]-1H-indol-5-ol;C12H16N2O|organic|Molecular|S|0|0|Crystals|0|204.273|1.2|||||||||||||||||F4F4F2|1|||C12H16N2O|0|0|1200||Ld|487-93-4
 c_488108|0|cis-3-Methyl-2-(2-pentenyl)-2-cyclopenten-1-one|Cis-3-metil-2-(2-pentenil)-2-siklopenten-1-on|C₁₁H₁₆O|cis-3-Methyl-2-(2-pentenyl)-2-cyclopenten-1-one;C11H16O|organic|Molecular|L|0|0|Powder|0|164.248|0.943722|258||||||||||||||||E8F2FA|0.18|||C11H16O|0|0|2000|284577|L|488-10-8
-c_488175|0|3-Methyl-1,2-benzenediol|3-Metil-1,2-benzenediol|C₇H₈O₂|3-Methyl-1,2-benzenediol;C7H8O2|organic|Molecular|S|0|0|Crystals|0|124.139|1.2|||||||||||||||||F4F4F2|1|||C7H8O2|0|0|1200||Ld|488-17-5
+c_488175|0|3-Methyl-1,2-benzenediol|3-Metil-1,2-benzendiol|C₇H₈O₂|3-Methyl-1,2-benzenediol;C7H8O2|organic|Molecular|S|0|0|Crystals|0|124.139|1.2|||||||||||||||||F4F4F2|1|||C7H8O2|0|0|1200||Ld|488-17-5
 c_488437|0|1-Amino-1-deoxy-D-glucitol|1-Amino-1-deoksi-D-glusitol|C₆H₁₅NO₅|1-Amino-1-deoxy-D-glucitol;C6H15NO5|organic|Molecular|S|0|0|Crystals|0|181.188|1.2|||||||||||||||||F4F4F2|1|||C6H15NO5|0|0|1200||Ld|488-43-7
 c_488700|0|2,3,4,5-Tetramethylphenol|2,3,4,5-Tetrametilfenol|C₁₀H₁₄O|2,3,4,5-Tetramethylphenol;C10H14O|organic|Molecular|S|0|0|Crystals|0|150.221|1.2|||||||||||||||||F4F4F2|1|||C10H14O|0|0|1200||Ld|488-70-0
 c_488733|0|2-Deoxy-D-chiro-inositol|2-Deoksi-D-kiro-inositol|C₆H₁₂O₅|2-Deoxy-D-chiro-inositol;C6H12O5|organic|Molecular|S|0|0|Crystals|0|164.157|1.58451|||||||||||||||||F4F4F2|1|||C6H12O5|0|0|1200||L|488-73-3
 c_488813|0|Ribitol|Ribitol|C₅H₁₂O₅|Ribitol;C5H12O5|organic|Molecular|S|0|0|Crystals|0|152.146|1.2|||||||||||||||||F4F4F2|1|||C5H12O5|0|0|1200||Ld|488-81-3
-c_488879|0|2,5-Dimethyl-1,3-benzenediol|2,5-Dimetil-1,3-benzenediol|C₈H₁₀O₂|2,5-Dimethyl-1,3-benzenediol;C8H10O2|organic|Molecular|S|0|0|Crystals|0|138.166|1.2|||||||||||||||||F4F4F2|1|||C8H10O2|0|0|1200||Ld|488-87-9
+c_488879|0|2,5-Dimethyl-1,3-benzenediol|2,5-Dimetil-1,3-benzendiol|C₈H₁₀O₂|2,5-Dimethyl-1,3-benzenediol;C8H10O2|organic|Molecular|S|0|0|Crystals|0|138.166|1.2|||||||||||||||||F4F4F2|1|||C8H10O2|0|0|1200||Ld|488-87-9
 c_488937|0|3-Furancarboxylic acid|3-Furankarboksilik asit|C₅H₄O₃|3-Furancarboxylic acid;C5H4O3|organic|Molecular|S|0|0|Crystals|0|112.084|1.2|||||||||||||||||F4F4F2|1|||C5H4O3|0|0|1200||Ld|488-93-7
 c_489725|0|17-Oxosparteine|17-Oksospartein|C₁₅H₂₄N₂O|17-Oxosparteine;C15H24N2O|organic|Molecular|S|0|0|Crystals|0|248.37|1.2|||||||||||||||||F4F4F2|1|||C15H24N2O|0|0|1200||Ld|489-72-5
 c_489849|0|1,4-Dimethyl-7-isopropylazulene|1,4-Dimetil-7-izopropilazulen|C₁₅H₁₈|1,4-Dimethyl-7-isopropylazulene;C15H18|organic|Molecular|S|0|0|Crystals|0|198.309|0.9732|||||||||||||||||F4F4F2|1|||C15H18|0|0|1200||L|489-84-9
@@ -4259,12 +4259,12 @@ c_491883|0|Isopilosine|İzopilosin|C₁₆H₁₈N₂O₃|Isopilosine;C16H18N2O3
 c_492171|0|[1,1'-Biphenyl]-2,4'-diamine|[1,1'-Bifenil]-2,4'-diamin|C₁₂H₁₂N₂|[1,1'-Biphenyl]-2,4'-diamine;C12H12N2|organic|Molecular|S|0|0|Crystals|0|184.242|1.2|||||||||||||||||F4F4F2|1|||C12H12N2|0|0|1200||Ld|492-17-1
 c_492228|0|9H-Thioxanthen-9-one|9H-tioksanten-9-on|C₁₃H₈OS|9H-Thioxanthen-9-one;C13H8OS|organic|Molecular|S|0|0|Crystals|0|212.266|1.2|||||||||||||||||F4F4F2|1|||C13H8OS|0|0|1200||Ld|492-22-8
 c_492273|0|4-Hydroxy-2-quinolinecarboxylic acid|4-Hidroksi-2-kinolinekarboksilik asit|C₁₀H₇NO₃|4-Hydroxy-2-quinolinecarboxylic acid;C10H7NO3|organic|Molecular|S|0|0|Crystals|0|189.17|1.2|||||||||||||||||F4F4F2|1|||C10H7NO3|0|0|1200||Ld|492-27-3
-c_492386|0|α-Methylenebenzeneacetic acid|α-Metilenebenzeneasetik asit|C₉H₈O₂|α-Methylenebenzeneacetic acid;C9H8O2|organic|Molecular|S|0|0|Crystals|0|148.161|1.2|||||||||||||||||F4F4F2|1|||C9H8O2|0|0|1200||Ld|492-38-6
+c_492386|0|α-Methylenebenzeneacetic acid|α-Metilenebenzenasetik asit|C₉H₈O₂|α-Methylenebenzeneacetic acid;C9H8O2|organic|Molecular|S|0|0|Crystals|0|148.161|1.2|||||||||||||||||F4F4F2|1|||C9H8O2|0|0|1200||Ld|492-38-6
 c_492615|0|β-D-Glucopyranose|β-D-glukopiranoz|C₆H₁₂O₆|β-D-Glucopyranose;C6H12O6|organic|Molecular|S|0|0|Crystals|0|180.156|1.2|||||||||||||||||F4F4F2|1|||C6H12O6|0|0|1200||Ld|492-61-5
 c_492808|0|4,4'-Dimethylaminobenzophenonimide|4,4'-Dimetilaminobenzofenonimit|C₁₇H₂₁N₃|4,4'-Dimethylaminobenzophenonimide;C17H21N3|organic|Molecular|S|0|0|Crystals|0|267.376|1.2|||||||||||||||||F4F4F2|1|||C17H21N3|0|0|1200||Ld|492-80-8
-c_492864|0|4-Chloro-α-hydroxybenzeneacetic acid|4-Kloro-α-hidroksibenzeneasetik asit|C₈H₇ClO₃|4-Chloro-α-hydroxybenzeneacetic acid;C8H7ClO3|organic|Molecular|S|0|0|Crystals|0|186.591|1.2|||||||||||||||||F4F4F2|1|||C8H7ClO3|0|0|1200||Ld|492-86-4
+c_492864|0|4-Chloro-α-hydroxybenzeneacetic acid|4-Kloro-α-hidroksibenzenasetik asit|C₈H₇ClO₃|4-Chloro-α-hydroxybenzeneacetic acid;C8H7ClO3|organic|Molecular|S|0|0|Crystals|0|186.591|1.2|||||||||||||||||F4F4F2|1|||C8H7ClO3|0|0|1200||Ld|492-86-4
 c_492886|0|3-Ethoxy-2-hydroxybenzaldehyde|3-Etoksi-2-hidroksibenzaldehit|C₉H₁₀O₃|3-Ethoxy-2-hydroxybenzaldehyde;C9H10O3|organic|Molecular|S|0|0|Crystals|0|166.176|1.2|||||||||||||||||F4F4F2|1|||C9H10O3|0|0|1200||Ld|492-88-6
-c_492897|0|3-Pentadecyl-1,2-benzenediol|3-Pentadesil-1,2-benzenediol|C₂₁H₃₆O₂|3-Pentadecyl-1,2-benzenediol;C21H36O2|organic|Molecular|S|0|0|Crystals|0|320.517|1.2|||||||||||||||||F4F4F2|1|||C21H36O2|0|0|1200||Ld|492-89-7
+c_492897|0|3-Pentadecyl-1,2-benzenediol|3-Pentadesil-1,2-benzendiol|C₂₁H₃₆O₂|3-Pentadecyl-1,2-benzenediol;C21H36O2|organic|Molecular|S|0|0|Crystals|0|320.517|1.2|||||||||||||||||F4F4F2|1|||C21H36O2|0|0|1200||Ld|492-89-7
 c_492944|0|Di-2-furanylethanedione|Di-2-furaniletanedion|C₁₀H₆O₄|Di-2-furanylethanedione;C10H6O4|organic|Molecular|S|0|0|Crystals|0|190.154|1.2|||||||||||||||||F4F4F2|1|||C10H6O4|0|0|1200||Ld|492-94-4
 c_492977|0|2,2'-Bithiophene|2,2'-Bitiofen|C₈H₆S₂|2,2'-Bithiophene;C8H6S2|organic|Molecular|S|0|0|Crystals|0|166.256|1.2|||||||||||||||||F4F4F2|1|||C8H6S2|0|0|1200||Ld|492-97-7
 c_492999|0|1,2-Cyclohexanedione dioxime|1,2-Siklohekzanedion dioksim|C₆H₁₀N₂O₂|1,2-Cyclohexanedione dioxime;C6H10N2O2|organic|Molecular|S|0|0|Crystals|0|142.158|1.2|||||||||||||||||F4F4F2|1|||C6H10N2O2|0|0|1200||Ld|492-99-9
@@ -4278,7 +4278,7 @@ c_494473|0|Hydrofuramide|Hidrofuramit|C₁₅H₁₂N₂O₃|Hydrofuramide;C15H1
 c_494553|0|Hydrohydrastinine|Hidrohidrastinin|C₁₁H₁₃NO₂|Hydrohydrastinine;C11H13NO2|organic|Molecular|S|0|0|Crystals|0|191.23|1.2|||||||||||||||||F4F4F2|1|||C11H13NO2|0|0|1200||Ld|494-55-3
 c_494906|0|4,5,6,7-Tetrahydro-3,6-dimethylbenzofuran|4,5,6,7-Tetrahidro-3,6-dimetilbenzofuran|C₁₀H₁₄O|4,5,6,7-Tetrahydro-3,6-dimethylbenzofuran;C10H14O|organic|Molecular|S|0|0|Crystals|0|150.221|0.97215|||||||||||||||||F4F4F2|1|||C10H14O|0|0|1200||L|494-90-6
 c_494995|0|1,2-Dimethoxy-4-methylbenzene|1,2-Dimetoksi-4-metilbenzen|C₉H₁₂O₂|1,2-Dimethoxy-4-methylbenzene;C9H12O2|organic|Molecular|L|0|0|Powder|0|152.193|1.05092|221||||||||||||||||E8F2FA|0.18|||C9H12O2|0|0|2000|285724|L|494-99-5
-c_495089|0|2-(Hydroxymethyl)-1,4-benzenediol|2-(Hidroksimetil)-1,4-benzenediol|C₇H₈O₃|2-(Hydroxymethyl)-1,4-benzenediol;C7H8O3|organic|Molecular|S|0|0|Crystals|0|140.138|1.2|||||||||||||||||F4F4F2|1|||C7H8O3|0|0|1200||Ld|495-08-9
+c_495089|0|2-(Hydroxymethyl)-1,4-benzenediol|2-(Hidroksimetil)-1,4-benzendiol|C₇H₈O₃|2-(Hydroxymethyl)-1,4-benzenediol;C7H8O3|organic|Molecular|S|0|0|Crystals|0|140.138|1.2|||||||||||||||||F4F4F2|1|||C7H8O3|0|0|1200||Ld|495-08-9
 c_495409|0|1-Phenyl-1-butanone|1-Fenil-1-bütanon|C₁₀H₁₂O|1-Phenyl-1-butanone;C10H12O|organic|Molecular|L|0|0|Powder|0|148.205|0.9882|228.5||||||||||||||||E8F2FA|0.18|||C10H12O|0|0|2000|297866|L|495-40-9
 c_495410|0|1-Phenyl-2-buten-1-one|1-Fenil-2-büten-1-on|C₁₀H₁₀O|1-Phenyl-2-buten-1-one;C10H10O|organic|Molecular|L|0|0|Powder|0|146.189|1.02515|||||||||||||||||E8F2FA|0.18|||C10H10O|0|0|2000||L|495-41-0
 c_495454|0|1,3-Diphenyl-2-buten-1-one|1,3-Difenil-2-büten-1-on|C₁₆H₁₄O|1,3-Diphenyl-2-buten-1-one;C16H14O|organic|Molecular|S|0|0|Crystals|0|222.287|1.10802|||||||||||||||||F4F4F2|1|||C16H14O|0|0|1200||L|495-45-4
@@ -4291,16 +4291,16 @@ c_496162|0|2,3-Dihydrobenzofuran|2,3-Dihidrobenzofuran|C₈H₈O|2,3-Dihydrobenz
 c_496413|0|2-Benzofurancarboxylic acid|2-Benzofurankarboksilik asit|C₉H₆O₃|2-Benzofurancarboxylic acid;C9H6O3|organic|Molecular|S|0|0|Crystals|0|162.144|1.2|||||||||||||||||F4F4F2|1|||C9H6O3|0|0|1200||Ld|496-41-3
 c_496468|0|Tetrahydroimidazo[4,5-d]imidazole-2,5(1H,3H)-dione|Tetrahidroimidazo[4,5-d]imidazol-2,5(1H,3H)-dion|C₄H₆N₄O₂|Tetrahydroimidazo[4,5-d]imidazole-2,5(1H,3H)-dione;C4H6N4O2|organic|Molecular|S|0|0|Crystals|0|142.118|1.2|||||||||||||||||F4F4F2|1|||C4H6N4O2|0|0|1200||Ld|496-46-8
 c_496673|0|N-(Aminocarbonyl)-2-bromo-3-methylbutanamide|N-(aminokarbonil)-2-bromo-3-metilbütanamit|C₆H₁₁BrN₂O₂|N-(Aminocarbonyl)-2-bromo-3-methylbutanamide;C6H11BrN2O2|organic|Molecular|S|0|0|Crystals|0|223.07|1.5615|||||||||||||||||F4F4F2|1|||C6H11BrN2O2|0|0|1200||L|496-67-3
-c_496720|0|4-Methyl-1,2-benzenediamine|4-Metil-1,2-benzenediamin|C₇H₁₀N₂|4-Methyl-1,2-benzenediamine;C7H10N2|organic|Molecular|S|0|0|Crystals|0|122.171|1.2|||||||||||||||||F4F4F2|1|||C7H10N2|0|0|1200||Ld|496-72-0
-c_496731|0|4-Methyl-1,3-benzenediol|4-Metil-1,3-benzenediol|C₇H₈O₂|4-Methyl-1,3-benzenediol;C7H8O2|organic|Molecular|S|0|0|Crystals|0|124.139|1.2|||||||||||||||||F4F4F2|1|||C7H8O2|0|0|1200||Ld|496-73-1
-c_496742|0|4-Methyl-1,2-benzenedithiol|4-Metil-1,2-benzeneditiol|C₇H₈S₂|4-Methyl-1,2-benzenedithiol;C7H8S2|organic|Molecular|S|0|0|Crystals|0|156.261|1.2|||||||||||||||||F4F4F2|1|||C7H8S2|0|0|1200||Ld|496-74-2
+c_496720|0|4-Methyl-1,2-benzenediamine|4-Metil-1,2-benzendiamin|C₇H₁₀N₂|4-Methyl-1,2-benzenediamine;C7H10N2|organic|Molecular|S|0|0|Crystals|0|122.171|1.2|||||||||||||||||F4F4F2|1|||C7H10N2|0|0|1200||Ld|496-72-0
+c_496731|0|4-Methyl-1,3-benzenediol|4-Metil-1,3-benzendiol|C₇H₈O₂|4-Methyl-1,3-benzenediol;C7H8O2|organic|Molecular|S|0|0|Crystals|0|124.139|1.2|||||||||||||||||F4F4F2|1|||C7H8O2|0|0|1200||Ld|496-73-1
+c_496742|0|4-Methyl-1,2-benzenedithiol|4-Metil-1,2-benzenditiol|C₇H₈S₂|4-Methyl-1,2-benzenedithiol;C7H8S2|organic|Molecular|S|0|0|Crystals|0|156.261|1.2|||||||||||||||||F4F4F2|1|||C7H8S2|0|0|1200||Ld|496-74-2
 c_496775|0|5-Hydroxy-4-octanone|5-Hidroksi-4-oktanon|C₈H₁₆O₂|5-Hydroxy-4-octanone;C8H16O2|organic|Molecular|L|0|0|Powder|0|144.214|0.910716|185||||||||||||||||E8F2FA|0.18|||C8H16O2|0|0|2000|279565|L|496-77-5
 c_496786|0|2,4,5-Trimethylphenol|2,4,5-Trimetilfenol|C₉H₁₂O|2,4,5-Trimethylphenol;C9H12O|organic|Molecular|S|0|0|Crystals|0|136.194|1.2|||||||||||||||||F4F4F2|1|||C9H12O|0|0|1200||Ld|496-78-6
 c_497030|0|trans-2-Methyl-2-butenal|Trans-2-metil-2-bütenal|C₅H₈O|trans-2-Methyl-2-butenal;C5H8O|organic|Molecular|L|0|0|Powder|0|84.118|0.87102|114||||||||||||||||E8F2FA|0.18|||C5H8O|0|0|2000|405017|L|497-03-0
 c_497187|0|Carbonic dihydrazide|Karbonik dihidrazit|CH₆N₄O|Carbonic dihydrazide;CH6N4O|organic|Molecular|S|0|0|Crystals|0|90.086|1.6162|||||||||||||||||F4F4F2|1|||CH6N4O|0|0|1200||L|497-18-7
 c_497392|0|2,4-Di-tert-butyl-5-methylphenol|2,4-Di-tert-bütil-5-metilfenol|C₁₅H₂₄O|2,4-Di-tert-butyl-5-methylphenol;C15H24O|organic|Molecular|S|0|0|Crystals|0|220.356|0.9128|||||||||||||||||F4F4F2|1|||C15H24O|0|0|1200||L|497-39-2
 c_497767|0|4-Hydroxyphenyl-β-D-glucopyranoside|4-Hidroksifenil-β-D-glukopiranosit|C₁₂H₁₆O₇|4-Hydroxyphenyl-β-D-glucopyranoside;C12H16O7|organic|Molecular|S|0|0|Crystals|0|272.253|1.2|||||||||||||||||F4F4F2|1|||C12H16O7|0|0|1200||Ld|497-76-7
-c_498000|0|4-Hydroxy-3-methoxybenzenemethanol|4-Hidroksi-3-metoksibenzenemetanol|C₈H₁₀O₃|4-Hydroxy-3-methoxybenzenemethanol;C8H10O3|organic|Molecular|S|0|0|Crystals|0|154.165|1.2|||||||||||||||||F4F4F2|1|||C8H10O3|0|0|1200||Ld|498-00-0
+c_498000|0|4-Hydroxy-3-methoxybenzenemethanol|4-Hidroksi-3-metoksibenzenmetanol|C₈H₁₀O₃|4-Hydroxy-3-methoxybenzenemethanol;C8H10O3|organic|Molecular|S|0|0|Crystals|0|154.165|1.2|||||||||||||||||F4F4F2|1|||C8H10O3|0|0|1200||Ld|498-00-0
 c_498248|0|trans-1-Propene-1,2-dicarboxylic acid|Trans-1-propen-1,2-dikarboksilik asit|C₅H₆O₄|trans-1-Propene-1,2-dicarboxylic acid;C5H6O4|organic|Molecular|S|0|0|Crystals|0|130.099|1.4662|||||||||||||||||F4F4F2|1|||C5H6O4|0|0|1200||L|498-24-8
 c_498602|0|3-Furancarboxaldehyde|3-Furankarboksaldehit|C₅H₄O₂|3-Furancarboxaldehyde;C5H4O2|organic|Molecular|L|0|0|Powder|0|96.085|1.1102|145||||||||||||||||E8F2FA|0.18|||C5H4O2|0|0|2000|382965|L|498-60-2
 c_498942|0|4-Piperidinecarboxylic acid|4-Piperidinekarboksilik asit|C₆H₁₁NO₂|4-Piperidinecarboxylic acid;C6H11NO2|organic|Molecular|S|0|0|Crystals|0|129.159|1.2|||||||||||||||||F4F4F2|1|||C6H11NO2|0|0|1200||Ld|498-94-2
@@ -4315,13 +4315,13 @@ c_500287|0|Chlorthion|Klortion|C₈H₉ClNO₅PS|Chlorthion;C8H9ClNO5PS|organic|
 c_500389|0|Nordihydroguaiaretic acid|Nordihidroguaiaretik asit|C₁₈H₂₂O₄|Nordihydroguaiaretic acid;C18H22O4|organic|Molecular|S|0|0|Crystals|0|302.37|1.2|||||||||||||||||F4F4F2|1|||C18H22O4|0|0|1200||Ld|500-38-9
 c_500550|0|Apoatropine|Apoatropin|C₁₇H₂₁NO₂|Apoatropine;C17H21NO2|organic|Molecular|S|0|0|Crystals|0|271.36|1.2|||||||||||||||||F4F4F2|1|||C17H21NO2|0|0|1200||Ld|500-55-0
 c_500992|0|3,5-Dimethoxyphenol|3,5-Dimetoksifenol|C₈H₁₀O₃|3,5-Dimethoxyphenol;C8H10O3|organic|Molecular|S|0|0|Crystals|0|154.165|1.2|||||||||||||||||F4F4F2|1|||C8H10O3|0|0|1200||Ld|500-99-2
-c_501155|0|4-[2-(Methylamino)ethyl]-1,2-benzenediol|4-[2-(Metilamino)etil]-1,2-benzenediol|C₉H₁₃NO₂|4-[2-(Methylamino)ethyl]-1,2-benzenediol;C9H13NO2|organic|Molecular|S|0|0|Crystals|0|167.208|1.2|||||||||||||||||F4F4F2|1|||C9H13NO2|0|0|1200||Ld|501-15-5
+c_501155|0|4-[2-(Methylamino)ethyl]-1,2-benzenediol|4-[2-(Metilamino)etil]-1,2-benzendiol|C₉H₁₃NO₂|4-[2-(Methylamino)ethyl]-1,2-benzenediol;C9H13NO2|organic|Molecular|S|0|0|Crystals|0|167.208|1.2|||||||||||||||||F4F4F2|1|||C9H13NO2|0|0|1200||Ld|501-15-5
 c_501246|0|3-Pentadecylphenol|3-Pentadesilfenol|C₂₁H₃₆O|3-Pentadecylphenol;C21H36O|organic|Molecular|S|0|0|Crystals|0|304.518|1.2|||||||||||||||||F4F4F2|1|||C21H36O|0|0|1200||Ld|501-24-6
 c_501304|0|5-Hydroxy-2-(hydroxymethyl)-4H-pyran-4-one|5-Hidroksi-2-(hidroksimetil)-4H-piran-4-on|C₆H₆O₄|5-Hydroxy-2-(hydroxymethyl)-4H-pyran-4-one;C6H6O4|organic|Molecular|S|0|0|Crystals|0|142.11|1.2|||||||||||||||||F4F4F2|1|||C6H6O4|0|0|1200||Ld|501-30-4
-c_501520|0|Benzenepropanoic acid|Benzenepropanoik asit|C₉H₁₀O₂|Benzenepropanoic acid;C9H10O2|organic|Molecular|S|0|0|Crystals|0|150.177|1.07125|||||||||||||||||F4F4F2|1|||C9H10O2|0|0|1200||L|501-52-0
+c_501520|0|Benzenepropanoic acid|Benzenpropanoik asit|C₉H₁₀O₂|Benzenepropanoic acid;C9H10O2|organic|Molecular|S|0|0|Crystals|0|150.177|1.07125|||||||||||||||||F4F4F2|1|||C9H10O2|0|0|1200||L|501-52-0
 c_501928|0|4-Allylphenol|4-Allilfenol|C₉H₁₀O|4-Allylphenol;C9H10O|organic|Molecular|L|0|0|Powder|0|134.178|1.02032|238||||||||||||||||E8F2FA|0.18|||C9H10O|0|0|2000|335235|L|501-92-8
-c_501940|0|4-Hydroxybenzeneethanol|4-Hidroksibenzeneetanol|C₈H₁₀O₂|4-Hydroxybenzeneethanol;C8H10O2|organic|Molecular|S|0|0|Crystals|0|138.166|1.2|||||||||||||||||F4F4F2|1|||C8H10O2|0|0|1200||Ld|501-94-0
-c_501973|0|4-Hydroxybenzenepropanoic acid|4-Hidroksibenzenepropanoik asit|C₉H₁₀O₃|4-Hydroxybenzenepropanoic acid;C9H10O3|organic|Molecular|S|0|0|Crystals|0|166.176|1.2|||||||||||||||||F4F4F2|1|||C9H10O3|0|0|1200||Ld|501-97-3
+c_501940|0|4-Hydroxybenzeneethanol|4-Hidroksibenzenetanol|C₈H₁₀O₂|4-Hydroxybenzeneethanol;C8H10O2|organic|Molecular|S|0|0|Crystals|0|138.166|1.2|||||||||||||||||F4F4F2|1|||C8H10O2|0|0|1200||Ld|501-94-0
+c_501973|0|4-Hydroxybenzenepropanoic acid|4-Hidroksibenzenpropanoik asit|C₉H₁₀O₃|4-Hydroxybenzenepropanoic acid;C9H10O3|organic|Molecular|S|0|0|Crystals|0|166.176|1.2|||||||||||||||||F4F4F2|1|||C9H10O3|0|0|1200||Ld|501-97-3
 c_502410|0|Cycloheptanol|Sikloheptanol|C₇H₁₄O|Cycloheptanol;C7H14O|organic|Molecular|L|0|0|Powder|0|114.188|0.95542|185||||||||||||||||E8F2FA|0.18|||C7H14O|0|0|2000|353077|L|502-41-0
 c_502421|0|Cycloheptanone|Sikloheptanon|C₇H₁₂O|Cycloheptanone;C7H12O|organic|Molecular|L|0|0|Powder|0|112.172|0.95082|180.4||||||||||||||||E8F2FA|0.18|||C7H12O|0|0|2000|355814|L|502-42-1
 c_502476|0|3,7-Dimethyl-6-octenoic acid|3,7-Dimetil-6-oktenoik asit|C₁₀H₁₈O₂|3,7-Dimethyl-6-octenoic acid;C10H18O2|organic|Molecular|L|0|0|Powder|0|170.252|0.923421|257||||||||||||||||E8F2FA|0.18|||C10H18O2|0|0|2000|274024|L|502-47-6
@@ -4337,7 +4337,7 @@ c_503935|0|2,6,6-Trimethyl-2,4-cycloheptadien-1-one|2,6,6-Trimetil-2,4-siklohept
 c_504029|0|1,3-Cyclohexanedione|1,3-Siklohekzanedion|C₆H₈O₂|1,3-Cyclohexanedione;C6H8O2|organic|Molecular|S|0|0|Crystals|0|112.128|1.08619|||||||||||||||||F4F4F2|1|||C6H8O2|0|0|1200||L|504-02-9
 c_504030|0|2,6-Dimethylpiperidine|2,6-Dimetilpiperidin|C₇H₁₅N|2,6-Dimethylpiperidine;C7H15N|organic|Molecular|L|0|0|Powder|0|113.204|0.815825|128||||||||||||||||E8F2FA|0.18|||C7H15N|0|0|2000|311837|L|504-03-0
 c_504074|0|Dihydro-2,4(1H,3H)-pyrimidinedione|Dihidro-2,4(1H,3H)-pirimidinedion|C₄H₆N₂O₂|Dihydro-2,4(1H,3H)-pyrimidinedione;C4H6N2O2|organic|Molecular|S|0|0|Crystals|0|114.104|1.2|||||||||||||||||F4F4F2|1|||C4H6N2O2|0|0|1200||Ld|504-07-4
-c_504154|0|5-Methyl-1,3-benzenediol|5-Metil-1,3-benzenediol|C₇H₈O₂|5-Methyl-1,3-benzenediol;C7H8O2|organic|Molecular|S|0|0|Crystals|0|124.139|1.2904|||||||||||||||||F4F4F2|1|||C7H8O2|0|0|1200||L|504-15-4
+c_504154|0|5-Methyl-1,3-benzenediol|5-Metil-1,3-benzendiol|C₇H₈O₂|5-Methyl-1,3-benzenediol;C7H8O2|organic|Molecular|S|0|0|Crystals|0|124.139|1.2904|||||||||||||||||F4F4F2|1|||C7H8O2|0|0|1200||L|504-15-4
 c_504201|0|Phorone|Foron|C₉H₁₄O|Phorone;C9H14O|organic|Molecular|S|0|0|Crystals|0|138.21|0.88502|||||||||||||||||F4F4F2|1|||C9H14O|0|0|1200||L|504-20-1
 c_504245|0|4-Pyridinamine|4-Piridinamin|C₅H₆N₂|4-Pyridinamine;C5H6N2|organic|Molecular|S|0|0|Crystals|0|94.117|1.2|||||||||||||||||F4F4F2|1|||C5H6N2|0|0|1200||Ld|504-24-5
 c_504290|0|2-Pyridinamine|2-Piridinamin|C₅H₆N₂|2-Pyridinamine;C5H6N2|organic|Molecular|S|0|0|Crystals|0|94.117|1.2|||||||||||||||||F4F4F2|1|||C5H6N2|0|0|1200||Ld|504-29-0
@@ -4403,8 +4403,8 @@ c_513928|0|Tetraiodoethene|Tetraiodoeten|C₂I₄|Tetraiodoethene;C2I4|organic|M
 c_513962|0|3,3,3-Trichloro-2-hydroxypropanenitrile|3,3,3-Trikloro-2-hidroksipropanenitril|C₃H₂Cl₃NO|3,3,3-Trichloro-2-hydroxypropanenitrile;C3H2Cl3NO|organic|Molecular|S|0|0|Crystals|0|174.405|1.2|||||||||||||||||F4F4F2|1|||C3H2Cl3NO|0|0|1200||Ld|513-96-2
 c_514125|0|α,α'-Dibromo-d-camphor|α,α'-Dibromo-d-kamfor|C₆H₁₂O₁₂P₂|α,α'-Dibromo-d-camphor;C6H12O12P2|organic|Molecular|S|0|0|Crystals|0|338.098|1.85421|||||||||||||||||F4F4F2|1|||C6H12O12P2|0|0|1200||L|514-12-5
 c_515402|0|(2-Chloro-1,1-dimethylethyl)benzene|(2-Kloro-1,1-dimetiletil)benzen|C₁₀H₁₃Cl|(2-Chloro-1,1-dimethylethyl)benzene;C10H13Cl|organic|Molecular|L|0|0|Powder|0|168.664|1.0472|227||||||||||||||||E8F2FA|0.18|||C10H13Cl|0|0|2000|260952|L|515-40-2
-c_515424|0|Sodium benzenesulfonate|Sodyum benzenesülfonat|C₆H₅NaO₃S|Sodium benzenesulfonate;C6H5NaO3S|organic|Molecular|S|0|0|Crystals|0|180.153|1.2|||||||||||||||||F4F4F2|1|||C6H5NaO3S|0|0|1200||Ld|515-42-4
-c_515491|0|Sulfathiourea|Sülfatiourea|C₇H₉N₃O₂S₂|Sulfathiourea;C7H9N3O2S2|organic|Molecular|S|0|0|Crystals|0|231.288|1.2|||||||||||||||||F4F4F2|1|||C7H9N3O2S2|0|0|1200||Ld|515-49-1
+c_515424|0|Sodium benzenesulfonate|Sodyum benzensülfonat|C₆H₅NaO₃S|Sodium benzenesulfonate;C6H5NaO3S|organic|Molecular|S|0|0|Crystals|0|180.153|1.2|||||||||||||||||F4F4F2|1|||C6H5NaO3S|0|0|1200||Ld|515-42-4
+c_515491|0|Sulfathiourea|Sülfatioüre|C₇H₉N₃O₂S₂|Sulfathiourea;C7H9N3O2S2|organic|Molecular|S|0|0|Crystals|0|231.288|1.2|||||||||||||||||F4F4F2|1|||C7H9N3O2S2|0|0|1200||Ld|515-49-1
 c_515593|0|Sulfamethylthiazole|Sülfametiltiazol|C₁₀H₁₁N₃O₂S₂|Sulfamethylthiazole;C10H11N3O2S2|organic|Molecular|S|0|0|Crystals|0|269.337|1.2|||||||||||||||||F4F4F2|1|||C10H11N3O2S2|0|0|1200||Ld|515-59-3
 c_515822|0|N-(2,2,2-Trichloro-1-hydroxyethyl)formamide|N-(2,2,2-trikloro-1-hidroksietil)formamit|C₃H₄Cl₃NO₂|N-(2,2,2-Trichloro-1-hydroxyethyl)formamide;C3H4Cl3NO2|organic|Molecular|S|0|0|Crystals|0|192.42|1.2|||||||||||||||||F4F4F2|1|||C3H4Cl3NO2|0|0|1200||Ld|515-82-2
 c_515833|0|2,2,2-Trichloro-1-ethoxyethanol|2,2,2-Trikloro-1-etoksietanol|C₄H₇Cl₃O₂|2,2,2-Trichloro-1-ethoxyethanol;C4H7Cl3O2|organic|Molecular|S|0|0|Crystals|0|193.448|1.1434|||||||||||||||||F4F4F2|1|||C4H7Cl3O2|0|0|1200||L|515-83-3
@@ -4431,9 +4431,9 @@ c_519051|0|6-Formyl-2,3-dimethoxybenzoic acid|6-Formil-2,3-dimetoksibenzoik asit
 c_519095|0|Benzoylecgonine|Benzoilekgonin|C₁₆H₁₉NO₄|Benzoylecgonine;C16H19NO4|organic|Molecular|S|0|0|Crystals|0|289.331|1.2|||||||||||||||||F4F4F2|1|||C16H19NO4|0|0|1200||Ld|519-09-5
 c_519346|0|Maclurin|Maklurin|C₁₃H₁₀O₆|Maclurin;C13H10O6|organic|Molecular|S|0|0|Crystals|0|262.217|1.2|||||||||||||||||F4F4F2|1|||C13H10O6|0|0|1200||Ld|519-34-6
 c_519379|0|Etofylline|Etofillin|C₉H₁₂N₄O₃|Etofylline;C9H12N4O3|organic|Molecular|S|0|0|Crystals|0|224.22|1.2|||||||||||||||||F4F4F2|1|||C9H12N4O3|0|0|1200||Ld|519-37-9
-c_519448|0|2,4-Dinitro-1,3-benzenediol|2,4-Dinitro-1,3-benzenediol|C₆H₄N₂O₆|2,4-Dinitro-1,3-benzenediol;C6H4N2O6|organic|Molecular|S|0|0|Crystals|0|200.106|1.2|||||||||||||||||F4F4F2|1|||C6H4N2O6|0|0|1200||Ld|519-44-8
+c_519448|0|2,4-Dinitro-1,3-benzenediol|2,4-Dinitro-1,3-benzendiol|C₆H₄N₂O₆|2,4-Dinitro-1,3-benzenediol;C6H4N2O6|organic|Molecular|S|0|0|Crystals|0|200.106|1.2|||||||||||||||||F4F4F2|1|||C6H4N2O6|0|0|1200||Ld|519-44-8
 c_519653|0|Dioxypyramidon|Dioksipiramidon|C₁₃H₁₇N₃O₃|Dioxypyramidon;C13H17N3O3|organic|Molecular|S|0|0|Crystals|0|263.297|1.2|||||||||||||||||F4F4F2|1|||C13H17N3O3|0|0|1200||Ld|519-65-3
-c_519722|0|N,N-Diethyl-α-phenylbenzenemethanamine|N,N-dietil-α-fenilbenzenemetanamin|C₁₇H₂₁N|N,N-Diethyl-α-phenylbenzenemethanamine;C17H21N|organic|Molecular|S|0|0|Crystals|0|239.362|1.2|||||||||||||||||F4F4F2|1|||C17H21N|0|0|1200||Ld|519-72-2
+c_519722|0|N,N-Diethyl-α-phenylbenzenemethanamine|N,N-dietil-α-fenilbenzenmetanamin|C₁₇H₂₁N|N,N-Diethyl-α-phenylbenzenemethanamine;C17H21N|organic|Molecular|S|0|0|Crystals|0|239.362|1.2|||||||||||||||||F4F4F2|1|||C17H21N|0|0|1200||Ld|519-72-2
 c_519879|0|N,N-Diphenylacetamide|N,N-difenilasetamit|C₁₄H₁₃NO|N,N-Diphenylacetamide;C14H13NO|organic|Molecular|S|0|0|Crystals|0|211.264|1.2|||||||||||||||||F4F4F2|1|||C14H13NO|0|0|1200||Ld|519-87-9
 c_520036|0|2-Phenyl-1H-isoindole-1,3(2H)-dione|2-Fenil-1H-izoindol-1,3(2H)-dion|C₁₄H₉NO₂|2-Phenyl-1H-isoindole-1,3(2H)-dione;C14H9NO2|organic|Molecular|S|0|0|Crystals|0|223.231|1.2|||||||||||||||||F4F4F2|1|||C14H9NO2|0|0|1200||Ld|520-03-6
 c_520183|0|Kaempferol|Kempferol|C₁₅H₁₀O₆|Kaempferol;C15H10O6|organic|Molecular|S|0|0|Crystals|0|286.239|1.2|||||||||||||||||F4F4F2|1|||C15H10O6|0|0|1200||Ld|520-18-3
@@ -4469,7 +4469,7 @@ c_526556|0|1H-Indole-3-ethanol|1H-indol-3-etanol|C₁₀H₁₁NO|1H-Indole-3-et
 c_526863|0|2,3-Dimethyl-2,5-cyclohexadiene-1,4-dione|2,3-Dimetil-2,5-siklohekzadien-1,4-dion|C₈H₈O₂|2,3-Dimethyl-2,5-cyclohexadiene-1,4-dione;C8H8O2|organic|Molecular|S|0|0|Crystals|0|136.15|1.2|||||||||||||||||F4F4F2|1|||C8H8O2|0|0|1200||Ld|526-86-3
 c_526954|0|D-Gluconic acid|D-glukonik asit|C₆H₁₂O₇|D-Gluconic acid;C6H12O7|organic|Molecular|S|0|0|Crystals|0|196.155|1.2|||||||||||||||||F4F4F2|1|||C6H12O7|0|0|1200||Ld|526-95-4
 c_527173|0|2,3,5,6-Tetramethyl-2,5-cyclohexadiene-1,4-dione|2,3,5,6-Tetrametil-2,5-siklohekzadien-1,4-dion|C₁₀H₁₂O₂|2,3,5,6-Tetramethyl-2,5-cyclohexadiene-1,4-dione;C10H12O2|organic|Molecular|S|0|0|Crystals|0|164.204|1.2|||||||||||||||||F4F4F2|1|||C10H12O2|0|0|1200||Ld|527-17-3
-c_527184|0|2,3,5,6-Tetramethyl-1,4-benzenediol|2,3,5,6-Tetrametil-1,4-benzenediol|C₁₀H₁₄O₂|2,3,5,6-Tetramethyl-1,4-benzenediol;C10H14O2|organic|Molecular|S|0|0|Crystals|0|166.22|1.2|||||||||||||||||F4F4F2|1|||C10H14O2|0|0|1200||Ld|527-18-4
+c_527184|0|2,3,5,6-Tetramethyl-1,4-benzenediol|2,3,5,6-Tetrametil-1,4-benzendiol|C₁₀H₁₄O₂|2,3,5,6-Tetramethyl-1,4-benzenediol;C10H14O2|organic|Molecular|S|0|0|Crystals|0|166.22|1.2|||||||||||||||||F4F4F2|1|||C10H14O2|0|0|1200||Ld|527-18-4
 c_527208|0|2,3,4,5,6-Pentachloroaniline|2,3,4,5,6-Pentakloroanilin|C₆H₂Cl₅N|2,3,4,5,6-Pentachloroaniline;C6H2Cl5N|organic|Molecular|S|0|0|Crystals|0|265.339|1.2|||||||||||||||||F4F4F2|1|||C6H2Cl5N|0|0|1200||Ld|527-20-8
 c_527355|0|2,3,5,6-Tetramethylphenol|2,3,5,6-Tetrametilfenol|C₁₀H₁₄O|2,3,5,6-Tetramethylphenol;C10H14O|organic|Molecular|S|0|0|Crystals|0|150.221|1.2|||||||||||||||||F4F4F2|1|||C10H14O|0|0|1200||Ld|527-35-5
 c_527548|0|3,4,5-Trimethylphenol|3,4,5-Trimetilfenol|C₉H₁₂O|3,4,5-Trimethylphenol;C9H12O|organic|Molecular|S|0|0|Crystals|0|136.194|1.2|||||||||||||||||F4F4F2|1|||C9H12O|0|0|1200||Ld|527-54-8
@@ -4479,7 +4479,7 @@ c_527628|0|2-Amino-4,6-dichlorophenol|2-Amino-4,6-diklorofenol|C₆H₅Cl₂NO|2
 c_527695|0|2-Furancarbonyl chloride|2-Furankarbonil klorür|C₅H₃ClO₂|2-Furancarbonyl chloride;C5H3ClO2|organic|Molecular|L|0|0|Powder|0|130.527|1.32425|173||||||||||||||||E8F2FA|0.18|||C5H3ClO2|0|0|2000|300790|L|527-69-5
 c_527720|0|2-Thiophenecarboxylic acid|2-Tiofenekarboksilik asit|C₅H₄O₂S|2-Thiophenecarboxylic acid;C5H4O2S|organic|Molecular|S|0|0|Crystals|0|128.145|1.2|||||||||||||||||F4F4F2|1|||C5H4O2S|0|0|1200||Ld|527-72-0
 c_527855|0|2-Methylbenzamide|2-Metilbenzamit|C₈H₉NO|2-Methylbenzamide;C8H9NO|organic|Molecular|S|0|0|Crystals|0|135.166|1.2|||||||||||||||||F4F4F2|1|||C8H9NO|0|0|1200||Ld|527-85-5
-c_527899|0|2-Hydroxybenzenecarbodithioic acid|2-Hidroksibenzenekarboditioik asit|C₇H₆OS₂|2-Hydroxybenzenecarbodithioic acid;C7H6OS2|organic|Molecular|S|0|0|Crystals|0|170.244|1.2|||||||||||||||||F4F4F2|1|||C7H6OS2|0|0|1200||Ld|527-89-9
+c_527899|0|2-Hydroxybenzenecarbodithioic acid|2-Hidroksibenzenkarboditioik asit|C₇H₆OS₂|2-Hydroxybenzenecarbodithioic acid;C7H6OS2|organic|Molecular|S|0|0|Crystals|0|170.244|1.2|||||||||||||||||F4F4F2|1|||C7H6OS2|0|0|1200||Ld|527-89-9
 c_527935|0|Diploicin|Diploisin|C₁₆H₁₀Cl₄O₅|Diploicin;C16H10Cl4O5|organic|Molecular|S|0|0|Crystals|0|424.051|1.2|||||||||||||||||F4F4F2|1|||C16H10Cl4O5|0|0|1200||Ld|527-93-5
 c_528212|0|1-(2,3,4-Trihydroxyphenyl)ethanone|1-(2,3,4-Trihidroksifenil)etanon|C₈H₈O₄|1-(2,3,4-Trihydroxyphenyl)ethanone;C8H8O4|organic|Molecular|S|0|0|Crystals|0|168.148|1.2|||||||||||||||||F4F4F2|1|||C8H8O4|0|0|1200||Ld|528-21-2
 c_528450|0|3,4-Dinitrobenzoic acid|3,4-Dinitrobenzoik asit|C₇H₄N₂O₆|3,4-Dinitrobenzoic acid;C7H4N2O6|organic|Molecular|S|0|0|Crystals|0|212.117|1.2|||||||||||||||||F4F4F2|1|||C7H4N2O6|0|0|1200||Ld|528-45-0
@@ -4487,7 +4487,7 @@ c_528483|0|Fisetin|Fisetin|C₁₅H₁₀O₆|Fisetin;C15H10O6|organic|Molecular
 c_528530|0|Delphinidin|Delfinidin|C₁₅H₁₁ClO₇|Delphinidin;C15H11ClO7|organic|Molecular|S|0|0|Crystals|0|338.696|1.2|||||||||||||||||F4F4F2|1|||C15H11ClO7|0|0|1200||Ld|528-53-0
 c_528712|0|1-Phenazinol|1-Fenazinol|C₁₂H₈N₂O|1-Phenazinol;C12H8N2O|organic|Molecular|S|0|0|Crystals|0|196.209|1.2|||||||||||||||||F4F4F2|1|||C12H8N2O|0|0|1200||Ld|528-71-2
 c_528756|0|2,4-Dinitrobenzaldehyde|2,4-Dinitrobenzaldehit|C₇H₄N₂O₅|2,4-Dinitrobenzaldehyde;C7H4N2O5|organic|Molecular|S|0|0|Crystals|0|196.118|1.2|||||||||||||||||F4F4F2|1|||C7H4N2O5|0|0|1200||Ld|528-75-6
-c_528767|0|2,4-Dinitrobenzenesulfenyl chloride|2,4-Dinitrobenzenesülfenil klorür|C₆H₃ClN₂O₄S|2,4-Dinitrobenzenesulfenyl chloride;C6H3ClN2O4S|organic|Molecular|S|0|0|Crystals|0|234.61|1.2|||||||||||||||||F4F4F2|1|||C6H3ClN2O4S|0|0|1200||Ld|528-76-7
+c_528767|0|2,4-Dinitrobenzenesulfenyl chloride|2,4-Dinitrobenzensülfenil klorür|C₆H₃ClN₂O₄S|2,4-Dinitrobenzenesulfenyl chloride;C6H3ClN2O4S|organic|Molecular|S|0|0|Crystals|0|234.61|1.2|||||||||||||||||F4F4F2|1|||C6H3ClN2O4S|0|0|1200||Ld|528-76-7
 c_528790|0|2-Isopropyl-5-methylphenyl acetate|2-İzopropil-5-metilfenil asetat|C₁₂H₁₆O₂|2-Isopropyl-5-methylphenyl acetate;C12H16O2|organic|Molecular|L|0|0|Powder|0|192.258|1.0099|245||||||||||||||||E8F2FA|0.18|||C12H16O2|0|0|2000|237167|L|528-79-0
 c_528814|0|6-Deoxy-L-ascorbic acid|6-Deoksi-L-askorbik asit|C₆H₈O₅|6-Deoxy-L-ascorbic acid;C6H8O5|organic|Molecular|S|0|0|Crystals|0|160.125|1.2|||||||||||||||||F4F4F2|1|||C6H8O5|0|0|1200||Ld|528-81-4
 c_529168|0|2,3-Dimethyl-2-norbornene|2,3-Dimetil-2-norbornen|C₉H₁₄|2,3-Dimethyl-2-norbornene;C9H14|organic|Molecular|L|0|0|Powder|0|122.211|0.869817|140.5||||||||||||||||E8F2FA|0.18|||C9H14|0|0|2000|297855|L|529-16-8
@@ -4526,11 +4526,11 @@ c_531953|0|Equol|Ekol|C₁₅H₁₄O₃|Equol;C15H14O3|organic|Molecular|S|0|0|
 c_532036|0|Methocarbamol|Metokarbamol|C₁₁H₁₅NO₅|Methocarbamol;C11H15NO5|organic|Molecular|S|0|0|Crystals|0|241.243|1.2|||||||||||||||||F4F4F2|1|||C11H15NO5|0|0|1200||Ld|532-03-6
 c_532183|0|N-2-Naphthyl-2-naphthalenamine|N-2-naftil-2-naftalenamin|C₂₀H₁₅N|N-2-Naphthyl-2-naphthalenamine;C20H15N|organic|Molecular|S|0|0|Crystals|0|269.347|1.2|||||||||||||||||F4F4F2|1|||C20H15N|0|0|1200||Ld|532-18-3
 c_532274|0|α-Chloroacetophenone|α-Kloroasetofenon|C₈H₇ClO|α-Chloroacetophenone;C8H7ClO|organic|Molecular|S|0|0|Crystals|0|154.593|1.32415|||||||||||||||||F4F4F2|1|||C8H7ClO|0|0|1200||L|532-27-4
-c_532285|0|α-Hydroxybenzeneacetonitrile|α-Hidroksibenzeneasetonitril|C₈H₇NO|α-Hydroxybenzeneacetonitrile;C8H7NO|organic|Molecular|L|0|0|Powder|0|133.15|1.12|||||||||||||||||E8F2FA|0.18|||C8H7NO|0|0|2000||L|532-28-5
+c_532285|0|α-Hydroxybenzeneacetonitrile|α-Hidroksibenzenasetonitril|C₈H₇NO|α-Hydroxybenzeneacetonitrile;C8H7NO|organic|Molecular|L|0|0|Powder|0|133.15|1.12|||||||||||||||||E8F2FA|0.18|||C8H7NO|0|0|2000||L|532-28-5
 c_532343|0|Indalone|İndalon|C₁₂H₁₈O₄|Indalone;C12H18O4|organic|Molecular|S|0|0|Crystals|0|226.272|1.0572|||||||||||||||||F4F4F2|1|||C12H18O4|0|0|1200||L|532-34-3
 c_532489|0|Euparin|Euparin|C₁₃H₁₂O₃|Euparin;C13H12O3|organic|Molecular|S|0|0|Crystals|0|216.236|1.2|||||||||||||||||F4F4F2|1|||C13H12O3|0|0|1200||Ld|532-48-9
-c_532547|0|α-Oxobenzeneacetaldehyde aldoxime|α-Oksobenzeneasetaldehit aldoksim|C₈H₇NO₂|α-Oxobenzeneacetaldehyde aldoxime;C8H7NO2|organic|Molecular|S|0|0|Crystals|0|149.149|1.2|||||||||||||||||F4F4F2|1|||C8H7NO2|0|0|1200||Ld|532-54-7
-c_532821|0|4-(Phenylazo)-1,3-benzenediamine monohydrochloride|4-(Fenilazo)-1,3-benzenediamin monohidroklorür|C₁₂H₁₃ClN₄|4-(Phenylazo)-1,3-benzenediamine monohydrochloride;C12H13ClN4|organic|Molecular|S|0|0|Crystals|0|248.714|1.2|||||||||||||||||F4F4F2|1|||C12H13ClN4|0|0|1200||Ld|532-82-1
+c_532547|0|α-Oxobenzeneacetaldehyde aldoxime|α-Oksobenzenasetaldehit aldoksim|C₈H₇NO₂|α-Oxobenzeneacetaldehyde aldoxime;C8H7NO2|organic|Molecular|S|0|0|Crystals|0|149.149|1.2|||||||||||||||||F4F4F2|1|||C8H7NO2|0|0|1200||Ld|532-54-7
+c_532821|0|4-(Phenylazo)-1,3-benzenediamine monohydrochloride|4-(Fenilazo)-1,3-benzendiamin monohidroklorür|C₁₂H₁₃ClN₄|4-(Phenylazo)-1,3-benzenediamine monohydrochloride;C12H13ClN4|organic|Molecular|S|0|0|Crystals|0|248.714|1.2|||||||||||||||||F4F4F2|1|||C12H13ClN4|0|0|1200||Ld|532-82-1
 c_532967|0|Benzo-2-phenylhydrazide|Benzo-2-fenilhidrazit|C₁₃H₁₂N₂O|Benzo-2-phenylhydrazide;C13H12N2O|organic|Molecular|S|0|0|Crystals|0|212.252|1.2|||||||||||||||||F4F4F2|1|||C13H12N2O|0|0|1200||Ld|532-96-7
 c_533175|0|N-(2-Chlorophenyl)acetamide|N-(2-klorofenil)asetamit|C₈H₈ClNO|N-(2-Chlorophenyl)acetamide;C8H8ClNO|organic|Molecular|S|0|0|Crystals|0|169.608|1.2|||||||||||||||||F4F4F2|1|||C8H8ClNO|0|0|1200||Ld|533-17-5
 c_533186|0|2-Methylphenyl acetate|2-Metilfenil asetat|C₉H₁₀O₂|2-Methylphenyl acetate;C9H10O2|organic|Molecular|L|0|0|Powder|0|150.177|1.05332|208||||||||||||||||E8F2FA|0.18|||C9H10O2|0|0|2000|281942|L|533-18-6
@@ -4541,17 +4541,17 @@ c_533584|0|2-Iodophenol|2-İodofenol|C₆H₅IO|2-Iodophenol;C6H5IO|organic|Mole
 c_533675|0|D-2-Deoxyribose|D-2-deoksiriboz|C₅H₁₀O₄|D-2-Deoxyribose;C5H10O4|organic|Molecular|S|0|0|Crystals|0|134.131|1.2|||||||||||||||||F4F4F2|1|||C5H10O4|0|0|1200||Ld|533-67-5
 c_533686|0|Ethyl 2-bromobutanoate|Etil 2-bromobütanoat|C₆H₁₁BrO₂|Ethyl 2-bromobutanoate;C6H11BrO2|organic|Molecular|L|0|0|Powder|0|195.056|1.32732|177||||||||||||||||E8F2FA|0.18|||C6H11BrO2|0|0|2000|203086|L|533-68-6
 c_533700|0|2,4-Diiodoaniline|2,4-Diiodoanilin|C₆H₅I₂N|2,4-Diiodoaniline;C6H5I2N|organic|Molecular|S|0|0|Crystals|0|344.922|2.74825|||||||||||||||||F4F4F2|1|||C6H5I2N|0|0|1200||L|533-70-0
-c_533733|0|1,2,4-Benzenetriol|1,2,4-Benzenetriol|C₆H₆O₃|1,2,4-Benzenetriol;C6H6O3|organic|Molecular|S|0|0|Crystals|0|126.111|1.2|||||||||||||||||F4F4F2|1|||C6H6O3|0|0|1200||Ld|533-73-3
+c_533733|0|1,2,4-Benzenetriol|1,2,4-Benzentriol|C₆H₆O₃|1,2,4-Benzenetriol;C6H6O3|organic|Molecular|S|0|0|Crystals|0|126.111|1.2|||||||||||||||||F4F4F2|1|||C6H6O3|0|0|1200||Ld|533-73-3
 c_533744|0|Dazomet|Dazomet|C₅H₁₀N₂S₂|Dazomet;C5H10N2S2|organic|Molecular|S|0|0|Crystals|0|162.269|1.2|||||||||||||||||F4F4F2|1|||C5H10N2S2|0|0|1200||Ld|533-74-4
 c_533755|0|2-Hydroxy-2,4,6-cycloheptatrien-1-one|2-Hidroksi-2,4,6-sikloheptatrien-1-on|C₇H₆O₂|2-Hydroxy-2,4,6-cycloheptatrien-1-one;C7H6O2|organic|Molecular|S|0|0|Crystals|0|122.123|1.2|||||||||||||||||F4F4F2|1|||C7H6O2|0|0|1200||Ld|533-75-5
 c_533982|0|1,2-Dibromobutane|1,2-Dibromobütan|C₄H₈Br₂|1,2-Dibromobutane;C4H8Br2|organic|Molecular|L|0|0|Powder|0|215.916|1.79152|161||||||||||||||||E8F2FA|0.18|||C4H8Br2|0|0|2000|176945|L|533-98-2
 c_534076|0|1,3-Dichloroacetone|1,3-Dikloroaseton|C₃H₄Cl₂O|1,3-Dichloroacetone;C3H4Cl2O|organic|Molecular|S|0|0|Crystals|0|126.964|1.38265|||||||||||||||||F4F4F2|1|||C3H4Cl2O|0|0|1200||L|534-07-6
-c_534134|0|N,N'-Dimethylthiourea|N,N'-dimetiltiourea|C₃H₈N₂S|N,N'-Dimethylthiourea;C3H8N2S|organic|Molecular|S|0|0|Crystals|0|104.171|1.2|||||||||||||||||F4F4F2|1|||C3H8N2S|0|0|1200||Ld|534-13-4
+c_534134|0|N,N'-Dimethylthiourea|N,N'-dimetiltioüre|C₃H₈N₂S|N,N'-Dimethylthiourea;C3H8N2S|organic|Molecular|S|0|0|Crystals|0|104.171|1.2|||||||||||||||||F4F4F2|1|||C3H8N2S|0|0|1200||Ld|534-13-4
 c_534225|0|2-Methylfuran|2-Metilfuran|C₅H₆O|2-Methylfuran;C5H6O|organic|Molecular|L|0|0|Powder|0|82.102|0.91322|63.9||||||||||||||||E8F2FA|0.18|||C5H6O|0|0|2000|361263|L|534-22-5
 c_534269|0|4,5-Dihydro-2-methyl-1H-imidazole|4,5-Dihidro-2-metil-1H-imidazol|C₄H₈N₂|4,5-Dihydro-2-methyl-1H-imidazole;C4H8N2|organic|Molecular|S|0|0|Crystals|0|84.122|1.2|||||||||||||||||F4F4F2|1|||C4H8N2|0|0|1200||Ld|534-26-9
 c_534521|0|2-Methyl-4,6-dinitrophenol|2-Metil-4,6-dinitrofenol|C₇H₆N₂O₅|2-Methyl-4,6-dinitrophenol;C7H6N2O5|organic|Molecular|S|0|0|Crystals|0|198.134|1.2|||||||||||||||||F4F4F2|1|||C7H6N2O5|0|0|1200||Ld|534-52-1
 c_534598|0|Butylpropanedioic acid|Bütilpropanedioik asit|C₇H₁₂O₄|Butylpropanedioic acid;C7H12O4|organic|Molecular|S|0|0|Crystals|0|160.169|1.2|||||||||||||||||F4F4F2|1|||C7H12O4|0|0|1200||Ld|534-59-8
-c_534850|0|N-Phenyl-1,2-benzenediamine|N-fenil-1,2-benzenediamin|C₁₂H₁₂N₂|N-Phenyl-1,2-benzenediamine;C12H12N2|organic|Molecular|S|0|0|Crystals|0|184.242|1.2|||||||||||||||||F4F4F2|1|||C12H12N2|0|0|1200||Ld|534-85-0
+c_534850|0|N-Phenyl-1,2-benzenediamine|N-fenil-1,2-benzendiamin|C₁₂H₁₂N₂|N-Phenyl-1,2-benzenediamine;C12H12N2|organic|Molecular|S|0|0|Crystals|0|184.242|1.2|||||||||||||||||F4F4F2|1|||C12H12N2|0|0|1200||Ld|534-85-0
 c_535115|0|Ethyl 2-bromopropanoate|Etil 2-bromopropanoat|C₅H₉BrO₂|Ethyl 2-bromopropanoate;C5H9BrO2|organic|Molecular|L|0|0|Powder|0|181.029|1.41352|152||||||||||||||||E8F2FA|0.18|||C5H9BrO2|0|0|2000|206670|L|535-11-5
 c_535137|0|Ethyl 2-chloropropanoate|Etil 2-kloropropanoat|C₅H₉ClO₂|Ethyl 2-chloropropanoate;C5H9ClO2|organic|Molecular|L|0|0|Powder|0|136.575|1.07932|147||||||||||||||||E8F2FA|0.18|||C5H9ClO2|0|0|2000|270717|L|535-13-7
 c_535159|0|Ethyl dichloroacetate|Etil dikloroasetat|C₄H₆Cl₂O₂|Ethyl dichloroacetate;C4H6Cl2O2|organic|Molecular|L|0|0|Powder|0|156.99|1.28272|155||||||||||||||||E8F2FA|0.18|||C4H6Cl2O2|0|0|2000|239997|L|535-15-9
@@ -4561,9 +4561,9 @@ c_535897|0|Crimidine|Krimidin|C₇H₁₀ClN₃|Crimidine;C7H10ClN3|organic|Mole
 c_536254|0|Methyl 3-amino-4-hydroxybenzoate|Metil 3-amino-4-hidroksibenzoat|C₈H₉NO₃|Methyl 3-amino-4-hydroxybenzoate;C8H9NO3|organic|Molecular|S|0|0|Crystals|0|167.164|1.2|||||||||||||||||F4F4F2|1|||C8H9NO3|0|0|1200||Ld|536-25-4
 c_536334|0|2-Ethyl-4-pyridinecarbothioamide|2-Etil-4-piridinekarbotioamit|C₈H₁₀N₂S|2-Ethyl-4-pyridinecarbothioamide;C8H10N2S|organic|Molecular|S|0|0|Crystals|0|166.242|1.2|||||||||||||||||F4F4F2|1|||C8H10N2S|0|0|1200||Ld|536-33-4
 c_536389|0|2-Bromo-1-(4-chlorophenyl)ethanone|2-Bromo-1-(4-klorofenil)etanon|C₈H₆BrClO|2-Bromo-1-(4-chlorophenyl)ethanone;C8H6BrClO|organic|Molecular|S|0|0|Crystals|0|233.489|1.2|||||||||||||||||F4F4F2|1|||C8H6BrClO|0|0|1200||Ld|536-38-9
-c_536572|0|4-Methylbenzenesulfinic acid|4-Metilbenzenesülfinik asit|C₇H₈O₂S|4-Methylbenzenesulfinic acid;C7H8O2S|organic|Molecular|S|0|0|Crystals|0|156.199|1.2|||||||||||||||||F4F4F2|1|||C7H8O2S|0|0|1200||Ld|536-57-2
+c_536572|0|4-Methylbenzenesulfinic acid|4-Metilbenzensülfinik asit|C₇H₈O₂S|4-Methylbenzenesulfinic acid;C7H8O2S|organic|Molecular|S|0|0|Crystals|0|156.199|1.2|||||||||||||||||F4F4F2|1|||C7H8O2S|0|0|1200||Ld|536-57-2
 c_536594|0|4-(1-Methylvinyl)-1-cyclohexene-1-methanol|4-(1-Metilvinil)-1-siklohekzen-1-metanol|C₁₀H₁₆O|4-(1-Methylvinyl)-1-cyclohexene-1-methanol;C10H16O|organic|Molecular|L|0|0|Powder|0|152.237|0.96902|244||||||||||||||||E8F2FA|0.18|||C10H16O|0|0|2000|298937|L|536-59-4
-c_536607|0|4-Isopropylbenzenemethanol|4-İzopropilbenzenemetanol|C₁₀H₁₄O|4-Isopropylbenzenemethanol;C10H14O|organic|Molecular|S|0|0|Crystals|0|150.221|0.98182|||||||||||||||||F4F4F2|1|||C10H14O|0|0|1200||L|536-60-7
+c_536607|0|4-Isopropylbenzenemethanol|4-İzopropilbenzenmetanol|C₁₀H₁₄O|4-Isopropylbenzenemethanol;C10H14O|organic|Molecular|S|0|0|Crystals|0|150.221|0.98182|||||||||||||||||F4F4F2|1|||C10H14O|0|0|1200||L|536-60-7
 c_536663|0|4-Isopropylbenzoic acid|4-İzopropilbenzoik asit|C₁₀H₁₂O₂|4-Isopropylbenzoic acid;C10H12O2|organic|Molecular|S|0|0|Crystals|0|164.204|1.1624|||||||||||||||||F4F4F2|1|||C10H12O2|0|0|1200||L|536-66-3
 c_536696|0|5-Butyl-2-pyridinecarboxylic acid|5-Bütil-2-piridinekarboksilik asit|C₁₀H₁₃NO₂|5-Butyl-2-pyridinecarboxylic acid;C10H13NO2|organic|Molecular|S|0|0|Crystals|0|179.219|1.2|||||||||||||||||F4F4F2|1|||C10H13NO2|0|0|1200||Ld|536-69-6
 c_536754|0|4-Ethylpyridine|4-Etilpiridin|C₇H₉N|4-Ethylpyridine;C7H9N|organic|Molecular|L|0|0|Powder|0|107.156|0.94172|168||||||||||||||||E8F2FA|0.18|||C7H9N|0|0|2000|362287|L|536-75-4
@@ -4579,11 +4579,11 @@ c_537462|0|Methamphetamine|Metamfetamin|C₁₀H₁₅N|Methamphetamine;C10H15N|
 c_537473|0|N-Phenylhydrazinecarboxamide|N-fenilhidrazinekarboksamit|C₇H₉N₃O|N-Phenylhydrazinecarboxamide;C7H9N3O|organic|Molecular|S|0|0|Crystals|0|151.169|1.2|||||||||||||||||F4F4F2|1|||C7H9N3O|0|0|1200||Ld|537-47-3
 c_537495|0|N-Methyl-L-tyrosine|N-metil-L-tirosin|C₁₀H₁₃NO₃|N-Methyl-L-tyrosine;C10H13NO3|organic|Molecular|S|0|0|Crystals|0|195.218|1.2|||||||||||||||||F4F4F2|1|||C10H13NO3|0|0|1200||Ld|537-49-5
 c_537553|0|N-Acetyl-L-tyrosine|N-asetil-L-tirosin|C₁₁H₁₃NO₄|N-Acetyl-L-tyrosine;C11H13NO4|organic|Molecular|S|0|0|Crystals|0|223.228|1.2|||||||||||||||||F4F4F2|1|||C11H13NO4|0|0|1200||Ld|537-55-3
-c_537655|0|N-(4-Aminophenyl)-1,4-benzenediamine|N-(4-aminofenil)-1,4-benzenediamin|C₁₂H₁₃N₃|N-(4-Aminophenyl)-1,4-benzenediamine;C12H13N3|organic|Molecular|S|0|0|Crystals|0|199.257|1.2|||||||||||||||||F4F4F2|1|||C12H13N3|0|0|1200||Ld|537-65-5
+c_537655|0|N-(4-Aminophenyl)-1,4-benzenediamine|N-(4-aminofenil)-1,4-benzendiamin|C₁₂H₁₃N₃|N-(4-Aminophenyl)-1,4-benzenediamine;C12H13N3|organic|Molecular|S|0|0|Crystals|0|199.257|1.2|||||||||||||||||F4F4F2|1|||C12H13N3|0|0|1200||Ld|537-65-5
 c_537917|0|Bis(3-nitrophenyl) disulfide|Bis(3-nitrofenil) disülfür|C₁₂H₈N₂O₄S₂|Bis(3-nitrophenyl) disulfide;C12H8N2O4S2|organic|Molecular|S|0|0|Crystals|0|308.326|1.2|||||||||||||||||F4F4F2|1|||C12H8N2O4S2|0|0|1200||Ld|537-91-7
 c_537928|0|N-(3-Methylphenyl)acetamide|N-(3-metilfenil)asetamit|C₉H₁₁NO|N-(3-Methylphenyl)acetamide;C9H11NO|organic|Molecular|S|0|0|Crystals|0|149.193|1.14115|||||||||||||||||F4F4F2|1|||C9H11NO|0|0|1200||L|537-92-8
 c_538078|0|2-Chloro-N-(2-chloroethyl)-N-ethylethanamine|2-Kloro-N-(2-kloroetil)-N-etiletanamin|C₆H₁₃Cl₂N|2-Chloro-N-(2-chloroethyl)-N-ethylethanamine;C6H13Cl2N|organic|Molecular|L|0|0|Powder|0|170.077|1.08612|||||||||||||||||E8F2FA|0.18|||C6H13Cl2N|0|0|2000||L|538-07-8
-c_538329|0|Benzylurea|Benzilurea|C₈H₁₀N₂O|Benzylurea;C8H10N2O|organic|Molecular|S|0|0|Crystals|0|150.181|1.2|||||||||||||||||F4F4F2|1|||C8H10N2O|0|0|1200||Ld|538-32-9
+c_538329|0|Benzylurea|Benzilüre|C₈H₁₀N₂O|Benzylurea;C8H10N2O|organic|Molecular|S|0|0|Crystals|0|150.181|1.2|||||||||||||||||F4F4F2|1|||C8H10N2O|0|0|1200||Ld|538-32-9
 c_538396|0|1,2-Di(p-tolyl)ethane|1,2-Di(p-tolil)etan|C₁₆H₁₈|1,2-Di(p-tolyl)ethane;C16H18|organic|Molecular|S|0|0|Crystals|0|210.32|1.2|||||||||||||||||F4F4F2|1|||C16H18|0|0|1200||Ld|538-39-6
 c_538410|0|4,4'-Diaminoazobenzene|4,4'-Diaminoazobenzen|C₁₂H₁₂N₄|4,4'-Diaminoazobenzene;C12H12N4|organic|Molecular|S|0|0|Crystals|0|212.256|1.2|||||||||||||||||F4F4F2|1|||C12H12N4|0|0|1200||Ld|538-41-0
 c_538432|0|3-Phenoxy-1,2-propanediol|3-Fenoksi-1,2-propanediol|C₉H₁₂O₃|3-Phenoxy-1,2-propanediol;C9H12O3|organic|Molecular|S|0|0|Crystals|0|168.192|1.2252|||||||||||||||||F4F4F2|1|||C9H12O3|0|0|1200||L|538-43-2
@@ -4703,7 +4703,7 @@ c_553264|0|4,4'-Bipyridine|4,4'-Bipiridin|C₁₀H₈N₂|4,4'-Bipyridine;C10H8N
 c_553275|0|N,N-Bis(2-chloroethyl)aniline|N,N-bis(2-kloroetil)anilin|C₁₀H₁₃Cl₂N|N,N-Bis(2-chloroethyl)aniline;C10H13Cl2N|organic|Molecular|S|0|0|Crystals|0|218.121|1.2|||||||||||||||||F4F4F2|1|||C10H13Cl2N|0|0|1200||Ld|553-27-5
 c_553399|0|6-Hydroxy-2-naphthalenepropanoic acid|6-Hidroksi-2-naftalenepropanoik asit|C₁₃H₁₂O₃|6-Hydroxy-2-naphthalenepropanoic acid;C13H12O3|organic|Molecular|S|0|0|Crystals|0|216.236|1.2|||||||||||||||||F4F4F2|1|||C13H12O3|0|0|1200||Ld|553-39-9
 c_553684|0|Butethamine hydrochloride|Bütetamin hidroklorür|C₁₃H₂₁ClN₂O₂|Butethamine hydrochloride;C13H21ClN2O2|organic|Molecular|S|0|0|Crystals|0|272.773|1.2|||||||||||||||||F4F4F2|1|||C13H21ClN2O2|0|0|1200||Ld|553-68-4
-c_553695|0|α-[(2-Pyridinylamino)methyl]benzenemethanol|α-[(2-Piridinilamino)metil]benzenemetanol|C₁₃H₁₄N₂O|α-[(2-Pyridinylamino)methyl]benzenemethanol;C13H14N2O|organic|Molecular|S|0|0|Crystals|0|214.268|1.2|||||||||||||||||F4F4F2|1|||C13H14N2O|0|0|1200||Ld|553-69-5
+c_553695|0|α-[(2-Pyridinylamino)methyl]benzenemethanol|α-[(2-Piridinilamino)metil]benzenmetanol|C₁₃H₁₄N₂O|α-[(2-Pyridinylamino)methyl]benzenemethanol;C13H14N2O|organic|Molecular|S|0|0|Crystals|0|214.268|1.2|||||||||||||||||F4F4F2|1|||C13H14N2O|0|0|1200||Ld|553-69-5
 c_553797|0|5-Nitro-2-propoxyaniline|5-Nitro-2-propoksianilin|C₉H₁₂N₂O₃|5-Nitro-2-propoxyaniline;C9H12N2O3|organic|Molecular|S|0|0|Crystals|0|196.206|1.2|||||||||||||||||F4F4F2|1|||C9H12N2O3|0|0|1200||Ld|553-79-7
 c_553822|0|2,4-Dichloro-1-methoxybenzene|2,4-Dikloro-1-metoksibenzen|C₇H₆Cl₂O|2,4-Dichloro-1-methoxybenzene;C7H6Cl2O|organic|Molecular|S|0|0|Crystals|0|177.024|1.2|||||||||||||||||F4F4F2|1|||C7H6Cl2O|0|0|1200||Ld|553-82-2
 c_553866|0|2(3H)-Benzofuranone|2(3H)-benzofuranon|C₈H₆O₂|2(3H)-Benzofuranone;C8H6O2|organic|Molecular|S|0|0|Crystals|0|134.134|1.22361|||||||||||||||||F4F4F2|1|||C8H6O2|0|0|1200||L|553-86-6
@@ -4716,10 +4716,10 @@ c_554701|0|Triethylphosphine|Trietilfosfin|C₆H₁₅P|Triethylphosphine;C6H15P
 c_554847|0|3-Nitrophenol|3-Nitrofenol|C₆H₅NO₃|3-Nitrophenol;C6H5NO3|organic|Molecular|S|0|0|Crystals|0|139.11|1.27971|||||||||||||||||F4F4F2|1|||C6H5NO3|0|0|1200||L|554-84-7
 c_554916|0|β-Gentiobiose|β-Gentiobioz|C₁₂H₂₂O₁₁|β-Gentiobiose;C12H22O11|organic|Molecular|S|0|0|Crystals|0|342.297|1.2|||||||||||||||||F4F4F2|1|||C12H22O11|0|0|1200||Ld|554-91-6
 c_554927|0|Trimethobenzamide hydrochloride|Trimetobenzamit hidroklorür|C₂₁H₂₉ClN₂O₅|Trimethobenzamide hydrochloride;C21H29ClN2O5|organic|Molecular|S|0|0|Crystals|0|424.922|1.2|||||||||||||||||F4F4F2|1|||C21H29ClN2O5|0|0|1200||Ld|554-92-7
-c_554950|0|1,3,5-Benzenetricarboxylic acid|1,3,5-Benzenetrikarboksilik asit|C₉H₆O₆|1,3,5-Benzenetricarboxylic acid;C9H6O6|organic|Molecular|S|0|0|Crystals|0|210.141|1.2|||||||||||||||||F4F4F2|1|||C9H6O6|0|0|1200||Ld|554-95-0
+c_554950|0|1,3,5-Benzenetricarboxylic acid|1,3,5-Benzentrikarboksilik asit|C₉H₆O₆|1,3,5-Benzenetricarboxylic acid;C9H6O6|organic|Molecular|S|0|0|Crystals|0|210.141|1.2|||||||||||||||||F4F4F2|1|||C9H6O6|0|0|1200||Ld|554-95-0
 c_555033|0|3-Nitroanisole|3-Nitroanizol|C₇H₇NO₃|3-Nitroanisole;C7H7NO3|organic|Molecular|S|0|0|Crystals|0|153.137|1.37318|||||||||||||||||F4F4F2|1|||C7H7NO3|0|0|1200||L|555-03-3
 c_555168|0|4-Nitrobenzaldehyde|4-Nitrobenzaldehit|C₇H₅NO₃|4-Nitrobenzaldehyde;C7H5NO3|organic|Molecular|S|0|0|Crystals|0|151.121|1.49625|||||||||||||||||F4F4F2|1|||C7H5NO3|0|0|1200||L|555-16-8
-c_555215|0|4-Nitrobenzeneacetonitrile|4-Nitrobenzeneasetonitril|C₈H₆N₂O₂|4-Nitrobenzeneacetonitrile;C8H6N2O2|organic|Molecular|S|0|0|Crystals|0|162.148|1.2|||||||||||||||||F4F4F2|1|||C8H6N2O2|0|0|1200||Ld|555-21-5
+c_555215|0|4-Nitrobenzeneacetonitrile|4-Nitrobenzenasetonitril|C₈H₆N₂O₂|4-Nitrobenzeneacetonitrile;C8H6N2O2|organic|Molecular|S|0|0|Crystals|0|162.148|1.2|||||||||||||||||F4F4F2|1|||C8H6N2O2|0|0|1200||Ld|555-21-5
 c_555771|0|2,2',2''-Trichlorotriethylamine|2,2',2''-Triklorotrietilamin|C₆H₁₂Cl₃N|2,2',2''-Trichlorotriethylamine;C6H12Cl3N|organic|Molecular|L|0|0|Powder|0|204.519|1|||||||||||||||||E8F2FA|0.18|||C6H12Cl3N|0|0|2000||Ld|555-77-1
 c_555895|0|Bis(4-chlorophenoxy)methane|Bis(4-klorofenoksi)metan|C₁₃H₁₀Cl₂O₂|Bis(4-chlorophenoxy)methane;C13H10Cl2O2|organic|Molecular|S|0|0|Crystals|0|269.121|1.2|||||||||||||||||F4F4F2|1|||C13H10Cl2O2|0|0|1200||Ld|555-89-5
 c_556081|0|4-(Acetylamino)benzoic acid|4-(Asetilamino)benzoik asit|C₉H₉NO₃|4-(Acetylamino)benzoic acid;C9H9NO3|organic|Molecular|S|0|0|Crystals|0|179.175|1.2|||||||||||||||||F4F4F2|1|||C9H9NO3|0|0|1200||Ld|556-08-1
@@ -4733,10 +4733,10 @@ c_556616|0|Methyl isothiocyanate|Metil izotiosianat|C₂H₃NS|Methyl isothiocya
 c_556649|0|Methyl thiocyanate|Metil tiosianat|C₂H₃NS|Methyl thiocyanate;C2H3NS|organic|Molecular|L|0|0|Powder|0|73.113|1.06783|132.9||||||||||||||||E8F2FA|0.18|||C2H3NS|0|0|2000|488728|L|556-64-9
 c_556821|0|3-Methyl-2-buten-1-ol|3-Metil-2-büten-1-ol|C₅H₁₀O|3-Methyl-2-buten-1-ol;C5H10O|organic|Molecular|L|0|0|Powder|0|86.134|0.84825|144||||||||||||||||E8F2FA|0.18|||C5H10O|0|0|2000|426187|L|556-82-1
 c_556887|0|Nitroguanidine|Nitroguanidin|CH₄N₄O₂|Nitroguanidine;CH4N4O2|organic|Molecular|S|0|0|Crystals|0|104.069|1.2|||||||||||||||||F4F4F2|1|||CH4N4O2|0|0|1200||Ld|556-88-7
-c_556898|0|Nitrourea|Nitrourea|CH₃N₃O₃|Nitrourea;CH3N3O3|organic|Molecular|S|0|0|Crystals|0|105.053|1.2|||||||||||||||||F4F4F2|1|||CH3N3O3|0|0|1200||Ld|556-89-8
+c_556898|0|Nitrourea|Nitroüre|CH₃N₃O₃|Nitrourea;CH3N3O3|organic|Molecular|S|0|0|Crystals|0|105.053|1.2|||||||||||||||||F4F4F2|1|||CH3N3O3|0|0|1200||Ld|556-89-8
 c_556967|0|1-Bromo-3,5-dimethylbenzene|1-Bromo-3,5-dimetilbenzen|C₈H₉Br|1-Bromo-3,5-dimethylbenzene;C8H9Br|organic|Molecular|L|0|0|Powder|0|185.064|1.3622|203||||||||||||||||E8F2FA|0.18|||C8H9Br|0|0|2000|226415|L|556-96-7
 c_557006|0|Propyl 3-methylbutanoate|Propil 3-metilbütanoat|C₈H₁₆O₂|Propyl 3-methylbutanoate;C8H16O2|organic|Molecular|L|0|0|Powder|0|144.214|0.86172|155||||||||||||||||E8F2FA|0.18|||C8H16O2|0|0|2000|261259|L|557-00-6
-c_557119|0|Allylurea|Allilurea|C₄H₈N₂O|Allylurea;C4H8N2O|organic|Molecular|S|0|0|Crystals|0|100.121|1.2|||||||||||||||||F4F4F2|1|||C4H8N2O|0|0|1200||Ld|557-11-9
+c_557119|0|Allylurea|Allilüre|C₄H₈N₂O|Allylurea;C4H8N2O|organic|Molecular|S|0|0|Crystals|0|100.121|1.2|||||||||||||||||F4F4F2|1|||C4H8N2O|0|0|1200||Ld|557-11-9
 c_557222|0|1,2-Dithiolane|1,2-Ditiolan|C₃H₆S₂|1,2-Dithiolane;C3H6S2|organic|Molecular|S|0|0|Crystals|0|106.201|1.2|||||||||||||||||F4F4F2|1|||C3H6S2|0|0|1200||Ld|557-22-2
 c_557244|0|cis-4-Amino-4-oxo-2-butenoic acid|Cis-4-amino-4-okso-2-bütenoik asit|C₄H₅NO₃|cis-4-Amino-4-oxo-2-butenoic acid;C4H5NO3|organic|Molecular|S|0|0|Crystals|0|115.088|1.2|||||||||||||||||F4F4F2|1|||C4H5NO3|0|0|1200||Ld|557-24-4
 c_557255|0|Glycerol 1-butanoate|Gliserol 1-bütanoat|C₇H₁₄O₄|Glycerol 1-butanoate;C7H14O4|organic|Molecular|L|0|0|Powder|0|162.185|1.12918|280||||||||||||||||E8F2FA|0.18|||C7H14O4|0|0|2000|300134|L|557-25-5
@@ -4774,7 +4774,7 @@ c_568025|0|5,6-Dihydroxynaphtho[2,3-f]quinoline-7,12-dione|5,6-Dihidroksinafto[2
 c_568218|0|Isothebaine|İzotebain|C₁₉H₂₁NO₃|Isothebaine;C19H21NO3|organic|Molecular|S|0|0|Crystals|0|311.381|1.2|||||||||||||||||F4F4F2|1|||C19H21NO3|0|0|1200||Ld|568-21-8
 c_569313|0|6,7-Dimethoxy-1(3H)-isobenzofuranone|6,7-Dimetoksi-1(3H)-izobenzofuranon|C₁₀H₁₀O₄|6,7-Dimethoxy-1(3H)-isobenzofuranone;C10H10O4|organic|Molecular|S|0|0|Crystals|0|194.186|1.2|||||||||||||||||F4F4F2|1|||C10H10O4|0|0|1200||Ld|569-31-3
 c_569415|0|1,8-Dimethylnaphthalene|1,8-Dimetilnaftalen|C₁₂H₁₂|1,8-Dimethylnaphthalene;C12H12|organic|Molecular|S|0|0|Crystals|0|156.228|1.0032|||||||||||||||||F4F4F2|1|||C12H12|0|0|1200||L|569-41-5
-c_569517|0|1,2,3-Benzenetricarboxylic acid|1,2,3-Benzenetrikarboksilik asit|C₉H₆O₆|1,2,3-Benzenetricarboxylic acid;C9H6O6|organic|Molecular|S|0|0|Crystals|0|210.141|1.5462|||||||||||||||||F4F4F2|1|||C9H6O6|0|0|1200||L|569-51-7
+c_569517|0|1,2,3-Benzenetricarboxylic acid|1,2,3-Benzentrikarboksilik asit|C₉H₆O₆|1,2,3-Benzenetricarboxylic acid;C9H6O6|organic|Molecular|S|0|0|Crystals|0|210.141|1.5462|||||||||||||||||F4F4F2|1|||C9H6O6|0|0|1200||L|569-51-7
 c_569573|0|Tris(4-methoxyphenyl)chloroethene|Tris(4-metoksifenil)kloroeten|C₂₃H₂₁ClO₃|Tris(4-methoxyphenyl)chloroethene;C23H21ClO3|organic|Molecular|S|0|0|Crystals|0|380.868|1.2|||||||||||||||||F4F4F2|1|||C23H21ClO3|0|0|1200||Ld|569-57-3
 c_569653|0|Meclizine|Meklizin|C₂₅H₂₇ClN₂|Meclizine;C25H27ClN2|organic|Molecular|S|0|0|Crystals|0|390.955|1.2|||||||||||||||||F4F4F2|1|||C25H27ClN2|0|0|1200||Ld|569-65-3
 c_570241|0|2-Methyl-6-nitroaniline|2-Metil-6-nitroanilin|C₇H₈N₂O₂|2-Methyl-6-nitroaniline;C7H8N2O2|organic|Molecular|S|0|0|Crystals|0|152.153|1.19001|||||||||||||||||F4F4F2|1|||C7H8N2O2|0|0|1200||L|570-24-1
@@ -4811,7 +4811,7 @@ c_577560|0|2-Acetylbenzoic acid|2-Asetilbenzoik asit|C₉H₈O₃|2-Acetylbenzoi
 c_577593|0|1-(2-Nitrophenyl)ethanone|1-(2-Nitrofenil)etanon|C₈H₇NO₃|1-(2-Nitrophenyl)ethanone;C8H7NO3|organic|Molecular|S|0|0|Crystals|0|165.148|1.23703|||||||||||||||||F4F4F2|1|||C8H7NO3|0|0|1200||L|577-59-3
 c_577719|0|3,4-Dinitrophenol|3,4-Dinitrofenol|C₆H₄N₂O₅|3,4-Dinitrophenol;C6H4N2O5|organic|Molecular|S|0|0|Crystals|0|184.107|1.67225|||||||||||||||||F4F4F2|1|||C6H4N2O5|0|0|1200||L|577-71-9
 c_577855|0|3-Hydroxy-2-phenyl-4H-1-benzopyran-4-one|3-Hidroksi-2-fenil-4H-1-benzopiran-4-on|C₁₅H₁₀O₃|3-Hydroxy-2-phenyl-4H-1-benzopyran-4-one;C15H10O3|organic|Molecular|S|0|0|Crystals|0|238.242|1.2|||||||||||||||||F4F4F2|1|||C15H10O3|0|0|1200||Ld|577-85-5
-c_577913|0|4-Hydroxy-3,5-diiodo-α-phenylbenzenepropanoic acid|4-Hidroksi-3,5-diiodo-α-fenilbenzenepropanoik asit|C₁₅H₁₂I₂O₃|4-Hydroxy-3,5-diiodo-α-phenylbenzenepropanoic acid;C15H12I2O3|organic|Molecular|S|0|0|Crystals|0|494.067|1.2|||||||||||||||||F4F4F2|1|||C15H12I2O3|0|0|1200||Ld|577-91-3
+c_577913|0|4-Hydroxy-3,5-diiodo-α-phenylbenzenepropanoic acid|4-Hidroksi-3,5-diiodo-α-fenilbenzenpropanoik asit|C₁₅H₁₂I₂O₃|4-Hydroxy-3,5-diiodo-α-phenylbenzenepropanoic acid;C15H12I2O3|organic|Molecular|S|0|0|Crystals|0|494.067|1.2|||||||||||||||||F4F4F2|1|||C15H12I2O3|0|0|1200||Ld|577-91-3
 c_578574|0|2-Bromoanisole|2-Bromoanizol|C₇H₇BrO|2-Bromoanisole;C7H7BrO|organic|Molecular|L|0|0|Powder|0|187.036|1.50182|216||||||||||||||||E8F2FA|0.18|||C7H7BrO|0|0|2000|230144|L|578-57-4
 c_578585|0|2-Methylanisole|2-Metilanizol|C₈H₁₀O|2-Methylanisole;C8H10O|organic|Molecular|L|0|0|Powder|0|122.167|0.98525|173||||||||||||||||E8F2FA|0.18|||C8H10O|0|0|2000|321373|L|578-58-5
 c_578665|0|8-Quinolinamine|8-Kinolinamin|C₉H₈N₂|8-Quinolinamine;C9H8N2|organic|Molecular|S|0|0|Crystals|0|144.177|1.2|||||||||||||||||F4F4F2|1|||C9H8N2|0|0|1200||Ld|578-66-5
@@ -4844,7 +4844,7 @@ c_581555|0|Benzylidene diacetate|Benziliden diasetat|C₁₁H₁₂O₄|Benzylid
 c_581895|0|2-Nitronaphthalene|2-Nitronaftalen|C₁₀H₇NO₂|2-Nitronaphthalene;C10H7NO2|organic|Molecular|S|0|0|Crystals|0|173.171|1.2|||||||||||||||||F4F4F2|1|||C10H7NO2|0|0|1200||Ld|581-89-5
 c_581964|0|2-Naphthaleneacetic acid|2-Naftaleneasetik asit|C₁₂H₁₀O₂|2-Naphthaleneacetic acid;C12H10O2|organic|Molecular|S|0|0|Crystals|0|186.21|1.2|||||||||||||||||F4F4F2|1|||C12H10O2|0|0|1200||Ld|581-96-4
 c_582172|0|2,7-Naphthalenediol|2,7-Naftalenediol|C₁₀H₈O₂|2,7-Naphthalenediol;C10H8O2|organic|Molecular|S|0|0|Crystals|0|160.172|1.2|||||||||||||||||F4F4F2|1|||C10H8O2|0|0|1200||Ld|582-17-2
-c_582229|0|β-Methylbenzeneethanamine|β-Metilbenzeneetanamin|C₉H₁₃N|β-Methylbenzeneethanamine;C9H13N|organic|Molecular|L|0|0|Powder|0|135.21|0.94334|210||||||||||||||||E8F2FA|0.18|||C9H13N|0|0|2000|314453|L|582-22-9
+c_582229|0|β-Methylbenzeneethanamine|β-Metilbenzenetanamin|C₉H₁₃N|β-Methylbenzeneethanamine;C9H13N|organic|Molecular|L|0|0|Powder|0|135.21|0.94334|210||||||||||||||||E8F2FA|0.18|||C9H13N|0|0|2000|314453|L|582-22-9
 c_582241|0|(Hydroxyacetyl)benzene|(Hidroksiasetil)benzen|C₈H₈O₂|(Hydroxyacetyl)benzene;C8H8O2|organic|Molecular|S|0|0|Crystals|0|136.15|1.0964|||||||||||||||||F4F4F2|1|||C8H8O2|0|0|1200||L|582-24-1
 c_582332|0|Ethyl 3-aminobenzoate|Etil 3-aminobenzoat|C₉H₁₁NO₂|Ethyl 3-aminobenzoate;C9H11NO2|organic|Molecular|L|0|0|Powder|0|165.192|1.1712|294||||||||||||||||E8F2FA|0.18|||C9H11NO2|0|0|2000|302128|L|582-33-2
 c_582605|0|5,6-Dimethyl-1H-benzimidazole|5,6-Dimetil-1H-benzimidazol|C₉H₁₀N₂|5,6-Dimethyl-1H-benzimidazole;C9H10N2|organic|Molecular|S|0|0|Crystals|0|146.193|1.2|||||||||||||||||F4F4F2|1|||C9H10N2|0|0|1200||Ld|582-60-5
@@ -4857,15 +4857,15 @@ c_583391|0|1,3-Dihydro-2H-benzimidazole-2-thione|1,3-Dihidro-2H-benzimidazol-2-t
 c_583539|0|o-Dibromobenzene|O-dibromobenzen|C₆H₄Br₂|o-Dibromobenzene;C6H4Br2|organic|Molecular|L|0|0|Powder|0|235.906|1.98432|220.4||||||||||||||||E8F2FA|0.18|||C6H4Br2|0|0|2000|184109|L|583-53-9
 c_583551|0|1-Bromo-2-iodobenzene|1-Bromo-2-iodobenzen|C₆H₄BrI|1-Bromo-2-iodobenzene;C6H4BrI|organic|Molecular|L|0|0|Powder|0|282.906|2.25703|257||||||||||||||||E8F2FA|0.18|||C6H4BrI|0|0|2000|164907|L|583-55-1
 c_583686|0|2-Bromo-4-methylaniline|2-Bromo-4-metilanilin|C₇H₈BrN|2-Bromo-4-methylaniline;C7H8BrN|organic|Molecular|S|0|0|Crystals|0|186.052|1.5102|||||||||||||||||F4F4F2|1|||C7H8BrN|0|0|1200||L|583-68-6
-c_583697|0|2-Bromo-1,4-benzenediol|2-Bromo-1,4-benzenediol|C₆H₅BrO₂|2-Bromo-1,4-benzenediol;C6H5BrO2|organic|Molecular|S|0|0|Crystals|0|189.008|1.2|||||||||||||||||F4F4F2|1|||C6H5BrO2|0|0|1200||Ld|583-69-7
+c_583697|0|2-Bromo-1,4-benzenediol|2-Bromo-1,4-benzendiol|C₆H₅BrO₂|2-Bromo-1,4-benzenediol;C6H5BrO2|organic|Molecular|S|0|0|Crystals|0|189.008|1.2|||||||||||||||||F4F4F2|1|||C6H5BrO2|0|0|1200||Ld|583-69-7
 c_583700|0|1-Bromo-2,4-dimethylbenzene|1-Bromo-2,4-dimetilbenzen|C₈H₉Br|1-Bromo-2,4-dimethylbenzene;C8H9Br|organic|Molecular|L|0|0|Powder|0|185.064|1.34192|204||||||||||||||||E8F2FA|0.18|||C8H9Br|0|0|2000|226890|L|583-70-0
 c_583711|0|4-Bromo-1,2-dimethylbenzene|4-Bromo-1,2-dimetilbenzen|C₈H₉Br|4-Bromo-1,2-dimethylbenzene;C8H9Br|organic|Molecular|L|0|0|Powder|0|185.064|1.37082|215||||||||||||||||E8F2FA|0.18|||C8H9Br|0|0|2000|232121|L|583-71-1
 c_583755|0|4-Bromo-2-methylaniline|4-Bromo-2-metilanilin|C₇H₈BrN|4-Bromo-2-methylaniline;C7H8BrN|organic|Molecular|S|0|0|Crystals|0|186.052|1.2|||||||||||||||||F4F4F2|1|||C7H8BrN|0|0|1200||Ld|583-75-5
 c_583788|0|2,5-Dichlorophenol|2,5-Diklorofenol|C₆H₄Cl₂O|2,5-Dichlorophenol;C6H4Cl2O|organic|Molecular|S|0|0|Crystals|0|162.997|1.2|||||||||||||||||F4F4F2|1|||C6H4Cl2O|0|0|1200||Ld|583-78-8
 c_584123|0|2-Bromofuran|2-Bromofuran|C₄H₃BrO|2-Bromofuran;C4H3BrO|organic|Molecular|L|0|0|Powder|0|146.971|1.65002|103||||||||||||||||E8F2FA|0.18|||C4H3BrO|0|0|2000|225223|L|584-12-3
 c_584485|0|1-Bromo-2,4-dinitrobenzene|1-Bromo-2,4-dinitrobenzen|C₆H₃BrN₂O₄|1-Bromo-2,4-dinitrobenzene;C6H3BrN2O4|organic|Molecular|S|0|0|Crystals|0|247.004|1.2|||||||||||||||||F4F4F2|1|||C6H3BrN2O4|0|0|1200||Ld|584-48-5
-c_585320|0|α,α-Dimethylbenzenemethanamine|α,α-Dimetilbenzenemetanamin|C₉H₁₃N|α,α-Dimethylbenzenemethanamine;C9H13N|organic|Molecular|L|0|0|Powder|0|135.21|0.94232|196.5||||||||||||||||E8F2FA|0.18|||C9H13N|0|0|2000|305667|L|585-32-0
-c_585477|0|1,3-Benzenedisulfonyl dichloride|1,3-Benzenedisülfonil diklorür|C₆H₄Cl₂O₄S₂|1,3-Benzenedisulfonyl dichloride;C6H4Cl2O4S2|organic|Molecular|S|0|0|Crystals|0|275.114|1.2|||||||||||||||||F4F4F2|1|||C6H4Cl2O4S2|0|0|1200||Ld|585-47-7
+c_585320|0|α,α-Dimethylbenzenemethanamine|α,α-Dimetilbenzenmetanamin|C₉H₁₃N|α,α-Dimethylbenzenemethanamine;C9H13N|organic|Molecular|L|0|0|Powder|0|135.21|0.94232|196.5||||||||||||||||E8F2FA|0.18|||C9H13N|0|0|2000|305667|L|585-32-0
+c_585477|0|1,3-Benzenedisulfonyl dichloride|1,3-Benzendisülfonil diklorür|C₆H₄Cl₂O₄S₂|1,3-Benzenedisulfonyl dichloride;C6H4Cl2O4S2|organic|Molecular|S|0|0|Crystals|0|275.114|1.2|||||||||||||||||F4F4F2|1|||C6H4Cl2O4S2|0|0|1200||Ld|585-47-7
 c_585717|0|(1-Bromoethyl)benzene|(1-Bromoetil)benzen|C₈H₉Br|(1-Bromoethyl)benzene;C8H9Br|organic|Molecular|L|0|0|Powder|0|185.064|1.35353|201||||||||||||||||E8F2FA|0.18|||C8H9Br|0|0|2000|225464|L|585-71-7
 c_585740|0|1-(3-Methylphenyl)ethanone|1-(3-Metilfenil)etanon|C₉H₁₀O|1-(3-Methylphenyl)ethanone;C9H10O|organic|Molecular|L|0|0|Powder|0|134.178|1.0165|224||||||||||||||||E8F2FA|0.18|||C9H10O|0|0|2000|326053|L|585-74-0
 c_585762|0|3-Bromobenzoic acid|3-Bromobenzoik asit|C₇H₅BrO₂|3-Bromobenzoic acid;C7H5BrO2|organic|Molecular|S|0|0|Crystals|0|201.019|1.8452|||||||||||||||||F4F4F2|1|||C7H5BrO2|0|0|1200||L|585-76-2
@@ -4893,14 +4893,14 @@ c_588523|0|4,4'-Diethoxyazobenzene|4,4'-Dietoksiazobenzen|C₁₆H₁₈N₂O₂
 c_588636|0|(3-Bromopropoxy)benzene|(3-Bromopropoksi)benzen|C₉H₁₁BrO|(3-Bromopropoxy)benzene;C9H11BrO|organic|Molecular|L|0|0|Powder|0|215.09|1.36416|||||||||||||||||E8F2FA|0.18|||C9H11BrO|0|0|2000||L|588-63-6
 c_588738|0|(cis-2-Bromovinyl)benzene|(Cis-2-bromovinil)benzen|C₈H₇Br|(cis-2-Bromovinyl)benzene;C8H7Br|organic|Molecular|L|0|0|Powder|0|183.048|1.43221|||||||||||||||||E8F2FA|0.18|||C8H7Br|0|0|2000||L|588-73-8
 c_588965|0|1-Bromo-4-ethoxybenzene|1-Bromo-4-etoksibenzen|C₈H₉BrO|1-Bromo-4-ethoxybenzene;C8H9BrO|organic|Molecular|L|0|0|Powder|0|201.063|1.40712|231||||||||||||||||E8F2FA|0.18|||C8H9BrO|0|0|2000|220653|L|588-96-5
-c_589082|0|N-Methylbenzeneethanamine|N-metilbenzeneetanamin|C₉H₁₃N|N-Methylbenzeneethanamine;C9H13N|organic|Molecular|L|0|0|Powder|0|135.21|0.9325|206||||||||||||||||E8F2FA|0.18|||C9H13N|0|0|2000|311850|L|589-08-2
+c_589082|0|N-Methylbenzeneethanamine|N-metilbenzenetanamin|C₉H₁₃N|N-Methylbenzeneethanamine;C9H13N|organic|Molecular|L|0|0|Powder|0|135.21|0.9325|206||||||||||||||||E8F2FA|0.18|||C9H13N|0|0|2000|311850|L|589-08-2
 c_589093|0|N-Allylaniline|N-allilanilin|C₉H₁₁N|N-Allylaniline;C9H11N|organic|Molecular|L|0|0|Powder|0|133.194|0.973625|219||||||||||||||||E8F2FA|0.18|||C9H11N|0|0|2000|325159|L|589-09-3
 c_589106|0|(2-Bromoethoxy)benzene|(2-Bromoetoksi)benzen|C₈H₉BrO|(2-Bromoethoxy)benzene;C8H9BrO|organic|Molecular|S|0|0|Crystals|0|201.063|1.35552|||||||||||||||||F4F4F2|1|||C8H9BrO|0|0|1200||L|589-10-6
 c_589151|0|1-Bromo-4-(bromomethyl)benzene|1-Bromo-4-(bromometil)benzen|C₇H₆Br₂|1-Bromo-4-(bromomethyl)benzene;C7H6Br2|organic|Molecular|S|0|0|Crystals|0|249.933|1.2|||||||||||||||||F4F4F2|1|||C7H6Br2|0|0|1200||Ld|589-15-1
 c_589162|0|4-Ethylaniline|4-Etilanilin|C₈H₁₁N|4-Ethylaniline;C8H11N|organic|Molecular|L|0|0|Powder|0|121.183|0.96792|217.2||||||||||||||||E8F2FA|0.18|||C8H11N|0|0|2000|356080|L|589-16-2
 c_589173|0|1-Bromo-4-(chloromethyl)benzene|1-Bromo-4-(klorometil)benzen|C₇H₆BrCl|1-Bromo-4-(chloromethyl)benzene;C7H6BrCl|organic|Molecular|S|0|0|Crystals|0|205.479|1.2|||||||||||||||||F4F4F2|1|||C7H6BrCl|0|0|1200||Ld|589-17-3
 c_589219|0|(4-Bromophenyl)hydrazine|(4-Bromofenil)hidrazin|C₆H₇BrN₂|(4-Bromophenyl)hydrazine;C6H7BrN2|organic|Molecular|S|0|0|Crystals|0|187.04|1.2|||||||||||||||||F4F4F2|1|||C6H7BrN2|0|0|1200||Ld|589-21-9
-c_589297|0|1,4-Benzenedimethanol|1,4-Benzenedimetanol|C₈H₁₀O₂|1,4-Benzenedimethanol;C8H10O2|organic|Molecular|S|0|0|Crystals|0|138.166|1.2|||||||||||||||||F4F4F2|1|||C8H10O2|0|0|1200||Ld|589-29-7
+c_589297|0|1,4-Benzenedimethanol|1,4-Benzendimetanol|C₈H₁₀O₂|1,4-Benzenedimethanol;C8H10O2|organic|Molecular|S|0|0|Crystals|0|138.166|1.2|||||||||||||||||F4F4F2|1|||C8H10O2|0|0|1200||Ld|589-29-7
 c_589446|0|3-Amino-4-hydroxybutanoic acid|3-Amino-4-hidroksibütanoik asit|C₄H₉NO₃|3-Amino-4-hydroxybutanoic acid;C4H9NO3|organic|Molecular|S|0|0|Crystals|0|119.12|1.2|||||||||||||||||F4F4F2|1|||C4H9NO3|0|0|1200||Ld|589-44-6
 c_589559|0|4-Heptanol|4-Heptanol|C₇H₁₆O|4-Heptanol;C7H16O|organic|Molecular|L|0|0|Powder|0|116.204|0.81832|161||||||||||||||||E8F2FA|0.18|||C7H16O|0|0|2000|328777|L|589-55-9
 c_589593|0|Isobutyl 3-methylbutanoate|İzobütil 3-metilbütanoat|C₉H₁₈O₂|Isobutyl 3-methylbutanoate;C9H18O2|organic|Molecular|L|0|0|Powder|0|158.241|0.8532|169||||||||||||||||E8F2FA|0.18|||C9H18O2|0|0|2000|245886|L|589-59-3
@@ -4939,7 +4939,7 @@ c_591811|0|4-Hydroxybutanoic acid|4-Hidroksibütanoik asit|C₄H₈O₃|4-Hydrox
 c_591822|0|Isobutyl isothiocyanate|İzobütil izotiosianat|C₅H₉NS|Isobutyl isothiocyanate;C5H9NS|organic|Molecular|L|0|0|Powder|0|115.194|0.963114|160||||||||||||||||E8F2FA|0.18|||C5H9NS|0|0|2000|330896|L|591-82-2
 c_591844|0|Isobutyl thiocyanate|İzobütil tiosianat|C₅H₉NS|Isobutyl thiocyanate;C5H9NS|organic|Molecular|L|0|0|Powder|0|115.194|1|175||||||||||||||||E8F2FA|0.18|||C5H9NS|0|0|2000|342355|Ld|591-84-4
 c_592201|0|1-(Acetyloxy)-2-propanone|1-(Asetiloksi)-2-propanon|C₅H₈O₃|1-(Acetyloxy)-2-propanone;C5H8O3|organic|Molecular|L|0|0|Powder|0|116.116|1.07572|171||||||||||||||||E8F2FA|0.18|||C5H8O3|0|0|2000|336605|L|592-20-1
-c_592314|0|Butylurea|Bütilurea|C₅H₁₂N₂O|Butylurea;C5H12N2O|organic|Molecular|S|0|0|Crystals|0|116.164|1.2|||||||||||||||||F4F4F2|1|||C5H12N2O|0|0|1200||Ld|592-31-4
+c_592314|0|Butylurea|Bütilüre|C₅H₁₂N₂O|Butylurea;C5H12N2O|organic|Molecular|S|0|0|Crystals|0|116.164|1.2|||||||||||||||||F4F4F2|1|||C5H12N2O|0|0|1200||Ld|592-31-4
 c_592347|0|Butyl chloroformate|Bütil kloroformat|C₅H₉ClO₂|Butyl chloroformate;C5H9ClO2|organic|Molecular|L|0|0|Powder|0|136.575|1.07425|142||||||||||||||||E8F2FA|0.18|||C5H9ClO2|0|0|2000|267496|L|592-34-7
 c_592358|0|Butyl carbamate|Bütil karbamat|C₅H₁₁NO₂|Butyl carbamate;C5H11NO2|organic|Molecular|S|0|0|Crystals|0|117.148|1.2|||||||||||||||||F4F4F2|1|||C5H11NO2|0|0|1200||Ld|592-35-8
 c_592507|0|1-Fluoropentane|1-Floropentan|C₅H₁₁F|1-Fluoropentane;C5H11F|organic|Molecular|L|0|0|Powder|0|90.1414|0.79072|63||||||||||||||||E8F2FA|0.18|||C5H11F|0|0|2000|328164|L|592-50-7
@@ -5009,7 +5009,7 @@ c_598323|0|3-Buten-2-ol|3-Büten-2-ol|C₄H₈O|3-Buten-2-ol;C4H8O|organic|Molec
 c_598389|0|2,2-Dichloroethanol|2,2-Dikloroetanol|C₂H₄Cl₂O|2,2-Dichloroethanol;C2H4Cl2O|organic|Molecular|L|0|0|Powder|0|114.953|1.40403|147||||||||||||||||E8F2FA|0.18|||C2H4Cl2O|0|0|2000|321638|L|598-38-9
 c_598414|0|2-Aminoacetamide|2-Aminoasetamit|C₂H₆N₂O|2-Aminoacetamide;C2H6N2O|organic|Molecular|S|0|0|Crystals|0|74.083|1.2|||||||||||||||||F4F4F2|1|||C2H6N2O|0|0|1200||Ld|598-41-4
 c_598458|0|2-Isocyanopropane|2-İzosianopropan|C₄H₇N|2-Isocyanopropane;C4H7N|organic|Molecular|L|0|0|Powder|0|69.107|0.759625|87||||||||||||||||E8F2FA|0.18|||C4H7N|0|0|2000|458611|L|598-45-8
-c_598527|0|Methylthiourea|Metiltiourea|C₂H₆N₂S|Methylthiourea;C2H6N2S|organic|Molecular|S|0|0|Crystals|0|90.144|1.2|||||||||||||||||F4F4F2|1|||C2H6N2S|0|0|1200||Ld|598-52-7
+c_598527|0|Methylthiourea|Metiltioüre|C₂H₆N₂S|Methylthiourea;C2H6N2S|organic|Molecular|S|0|0|Crystals|0|90.144|1.2|||||||||||||||||F4F4F2|1|||C2H6N2S|0|0|1200||Ld|598-52-7
 c_598550|0|Methyl carbamate|Metil karbamat|C₂H₅NO₂|Methyl carbamate;C2H5NO2|organic|Molecular|S|0|0|Crystals|0|75.067|1.13616|||||||||||||||||F4F4F2|1|||C2H5NO2|0|0|1200||L|598-55-0
 c_598561|0|Ethyldimethylamine|Etildimetilamin|C₄H₁₁N|Ethyldimethylamine;C4H11N|organic|Molecular|L|0|0|Powder|0|73.139|0.6752|36.5||||||||||||||||E8F2FA|0.18|||C4H11N|0|0|2000|372567|L|598-56-1
 c_598583|0|Methyl nitrate|Metil nitrat|CH₃NO₃|Methyl nitrate;CH3NO3|organic|Molecular|L|0|0|Powder|0|77.039|1.20752|65||||||||||||||||E8F2FA|0.18|||CH3NO3|0|0|2000|386262|L|598-58-3
@@ -5019,13 +5019,13 @@ c_598776|0|1,1,2-Trichloropropane|1,1,2-Trikloropropan|C₃H₅Cl₃|1,1,2-Trich
 c_598787|0|2-Chloropropanoic acid|2-Kloropropanoik asit|C₃H₅ClO₂|2-Chloropropanoic acid;C3H5ClO2|organic|Molecular|L|0|0|Powder|0|108.521|1.25852|185||||||||||||||||E8F2FA|0.18|||C3H5ClO2|0|0|2000|371515|L|598-78-7
 c_598798|0|2-Chloropropenoic acid|2-Kloropropenoik asit|C₃H₃ClO₂|2-Chloropropenoic acid;C3H3ClO2|organic|Molecular|S|0|0|Crystals|0|106.505|1.2|||||||||||||||||F4F4F2|1|||C3H3ClO2|0|0|1200||Ld|598-79-8
 c_598925|0|1-Chloro-1-nitroethane|1-Kloro-1-nitroetan|C₂H₄ClNO₂|1-Chloro-1-nitroethane;C2H4ClNO2|organic|Molecular|L|0|0|Powder|0|109.509|1.28372|124.5||||||||||||||||E8F2FA|0.18|||C2H4ClNO2|0|0|2000|319546|L|598-92-5
-c_598947|0|N,N-Dimethylurea|N,N-dimetilurea|C₃H₈N₂O|N,N-Dimethylurea;C3H8N2O|organic|Molecular|S|0|0|Crystals|0|88.11|1.25553|||||||||||||||||F4F4F2|1|||C3H8N2O|0|0|1200||L|598-94-7
+c_598947|0|N,N-Dimethylurea|N,N-dimetilüre|C₃H₈N₂O|N,N-Dimethylurea;C3H8N2O|organic|Molecular|S|0|0|Crystals|0|88.11|1.25553|||||||||||||||||F4F4F2|1|||C3H8N2O|0|0|1200||L|598-94-7
 c_598981|0|Methyl 2,2-dimethylpropanoate|Metil 2,2-dimetilpropanoat|C₆H₁₂O₂|Methyl 2,2-dimethylpropanoate;C6H12O2|organic|Molecular|L|0|0|Powder|0|116.16|0.891|102||||||||||||||||E8F2FA|0.18|||C6H12O2|0|0|2000|284205|L|598-98-1
 c_598992|0|Methyl trichloroacetate|Metil trikloroasetat|C₃H₃Cl₃O₂|Methyl trichloroacetate;C3H3Cl3O2|organic|Molecular|L|0|0|Powder|0|177.405|1.48742|152||||||||||||||||E8F2FA|0.18|||C3H3Cl3O2|0|0|2000|210891|L|598-99-2
 c_599042|0|Pantolactone|Pantolakton|C₆H₁₀O₃|Pantolactone;C6H10O3|organic|Molecular|S|0|0|Crystals|0|130.143|1.2|||||||||||||||||F4F4F2|1|||C6H10O3|0|0|1200||Ld|599-04-2
 c_599611|0|Bis(3-aminophenyl) sulfone|Bis(3-aminofenil) sülfon|C₁₂H₁₂N₂O₂S|Bis(3-aminophenyl) sulfone;C12H12N2O2S|organic|Molecular|S|0|0|Crystals|0|248.3|1.2|||||||||||||||||F4F4F2|1|||C12H12N2O2S|0|0|1200||Ld|599-61-1
 c_599666|0|Bis(4-methylphenyl) sulfone|Bis(4-metilfenil) sülfon|C₁₄H₁₄O₂S|Bis(4-methylphenyl) sulfone;C14H14O2S|organic|Molecular|S|0|0|Crystals|0|246.324|1.2|||||||||||||||||F4F4F2|1|||C14H14O2S|0|0|1200||Ld|599-66-6
-c_599677|0|α-Methyl-α-phenylbenzenemethanol|α-Metil-α-fenilbenzenemetanol|C₁₄H₁₄O|α-Methyl-α-phenylbenzenemethanol;C14H14O|organic|Molecular|L|0|0|Powder|0|198.265|1.10591|285||||||||||||||||E8F2FA|0.18|||C14H14O|0|0|2000|247735|L|599-67-7
+c_599677|0|α-Methyl-α-phenylbenzenemethanol|α-Metil-α-fenilbenzenmetanol|C₁₄H₁₄O|α-Methyl-α-phenylbenzenemethanol;C14H14O|organic|Molecular|L|0|0|Powder|0|198.265|1.10591|285||||||||||||||||E8F2FA|0.18|||C14H14O|0|0|2000|247735|L|599-67-7
 c_599702|0|Ethyl phenyl sulfone|Etil fenil sülfon|C₈H₁₀O₂S|Ethyl phenyl sulfone;C8H10O2S|organic|Molecular|S|0|0|Crystals|0|170.226|1.14102|||||||||||||||||F4F4F2|1|||C8H10O2S|0|0|1200||L|599-70-2
 c_599917|0|Propyl 4-toluenesulfonate|Propil 4-toluenesülfonat|C₁₀H₁₄O₃S|Propyl 4-toluenesulfonate;C10H14O3S|organic|Molecular|L|0|0|Powder|0|214.279|1.1442|||||||||||||||||E8F2FA|0.18|||C10H14O3S|0|0|2000||L|599-91-7
 c_600000|0|Ethyl 2-bromo-2-methylpropanoate|Etil 2-bromo-2-metilpropanoat|C₆H₁₁BrO₂|Ethyl 2-bromo-2-methylpropanoate;C6H11BrO2|organic|Molecular|L|0|0|Powder|0|195.056|1.32632|178||||||||||||||||E8F2FA|0.18|||C6H11BrO2|0|0|2000|203537|L|600-00-0
@@ -5050,7 +5050,7 @@ c_602608|0|9-Nitroanthracene|9-Nitroantrasen|C₁₄H₉NO₂|9-Nitroanthracene;
 c_602642|0|1,2,3-Trihydroxy-9,10-anthracenedione|1,2,3-Trihidroksi-9,10-antrasenedion|C₁₄H₈O₅|1,2,3-Trihydroxy-9,10-anthracenedione;C14H8O5|organic|Molecular|S|0|0|Crystals|0|256.213|1.2|||||||||||||||||F4F4F2|1|||C14H8O5|0|0|1200||Ld|602-64-2
 c_602879|0|1,2-Dihydro-5-nitroacenaphthylene|1,2-Dihidro-5-nitroasenaftilen|C₁₂H₉NO₂|1,2-Dihydro-5-nitroacenaphthylene;C12H9NO2|organic|Molecular|S|0|0|Crystals|0|199.209|1.2|||||||||||||||||F4F4F2|1|||C12H9NO2|0|0|1200||Ld|602-87-9
 c_602948|0|Pentafluorobenzoic acid|Pentaflorobenzoik asit|C₇HF₅O₂|Pentafluorobenzoic acid;C7HF5O2|organic|Molecular|S|0|0|Crystals|0|212.075|1.2|||||||||||||||||F4F4F2|1|||C7HF5O2|0|0|1200||Ld|602-94-8
-c_603112|0|3-Nitro-1,2-benzenedicarboxylic acid|3-Nitro-1,2-benzenedikarboksilik asit|C₈H₅NO₆|3-Nitro-1,2-benzenedicarboxylic acid;C8H5NO6|organic|Molecular|S|0|0|Crystals|0|211.129|1.2|||||||||||||||||F4F4F2|1|||C8H5NO6|0|0|1200||Ld|603-11-2
+c_603112|0|3-Nitro-1,2-benzenedicarboxylic acid|3-Nitro-1,2-benzendikarboksilik asit|C₈H₅NO₆|3-Nitro-1,2-benzenedicarboxylic acid;C8H5NO6|organic|Molecular|S|0|0|Crystals|0|211.129|1.2|||||||||||||||||F4F4F2|1|||C8H5NO6|0|0|1200||Ld|603-11-2
 c_603349|0|Triphenylamine|Trifenilamin|C₁₈H₁₅N|Triphenylamine;C18H15N|organic|Molecular|S|0|0|Crystals|0|245.325|1.1825|||||||||||||||||F4F4F2|1|||C18H15N|0|0|1200||L|603-34-9
 c_603485|0|Tris(4-dimethylaminophenyl)methane|Tris(4-dimetilaminofenil)metan|C₂₅H₃₁N₃|Tris(4-dimethylaminophenyl)methane;C25H31N3|organic|Molecular|S|0|0|Crystals|0|373.544|1.2|||||||||||||||||F4F4F2|1|||C25H31N3|0|0|1200||Ld|603-48-5
 c_603509|0|Bisacodyl|Bisakodil|C₂₂H₁₉NO₄|Bisacodyl;C22H19NO4|organic|Molecular|S|0|0|Crystals|0|361.397|1.2|||||||||||||||||F4F4F2|1|||C22H19NO4|0|0|1200||Ld|603-50-9
@@ -5080,13 +5080,13 @@ c_606371|0|1,3-Dinitronaphthalene|1,3-Dinitronaftalen|C₁₀H₆N₂O₄|1,3-Di
 c_606439|0|1-Methyl-2(1H)-quinolinone|1-Metil-2(1H)-kinolinon|C₁₀H₉NO|1-Methyl-2(1H)-quinolinone;C10H9NO|organic|Molecular|S|0|0|Crystals|0|159.188|1.2|||||||||||||||||F4F4F2|1|||C10H9NO|0|0|1200||Ld|606-43-9
 c_606451|0|Methyl 2-methoxybenzoate|Metil 2-metoksibenzoat|C₉H₁₀O₃|Methyl 2-methoxybenzoate;C9H10O3|organic|Molecular|L|0|0|Powder|0|166.176|1.15712|246.5||||||||||||||||E8F2FA|0.18|||C9H10O3|0|0|2000|275185|L|606-45-1
 c_606462|0|N,N-Diethyl-2-methylaniline|N,N-dietil-2-metilanilin|C₁₁H₁₇N|N,N-Diethyl-2-methylaniline;C11H17N|organic|Molecular|L|0|0|Powder|0|163.264|0.92862|209||||||||||||||||E8F2FA|0.18|||C11H17N|0|0|2000|259881|L|606-46-2
-c_606837|0|β-Phenylbenzenepropanoic acid|β-Fenilbenzenepropanoik asit|C₁₅H₁₄O₂|β-Phenylbenzenepropanoic acid;C15H14O2|organic|Molecular|S|0|0|Crystals|0|226.275|1.2|||||||||||||||||F4F4F2|1|||C15H14O2|0|0|1200||Ld|606-83-7
+c_606837|0|β-Phenylbenzenepropanoic acid|β-Fenilbenzenpropanoik asit|C₁₅H₁₄O₂|β-Phenylbenzenepropanoic acid;C15H14O2|organic|Molecular|S|0|0|Crystals|0|226.275|1.2|||||||||||||||||F4F4F2|1|||C15H14O2|0|0|1200||Ld|606-83-7
 c_607001|0|N,N-Diphenylformamide|N,N-difenilformamit|C₁₃H₁₁NO|N,N-Diphenylformamide;C13H11NO|organic|Molecular|S|0|0|Crystals|0|197.237|1.2|||||||||||||||||F4F4F2|1|||C13H11NO|0|0|1200||Ld|607-00-1
 c_607307|0|1-Naphthylhydroxylamine|1-Naftilhidroksilamin|C₁₀H₉NO|1-Naphthylhydroxylamine;C10H9NO|organic|Molecular|S|0|0|Crystals|0|159.188|1.2|||||||||||||||||F4F4F2|1|||C10H9NO|0|0|1200||Ld|607-30-7
 c_607341|0|5-Nitroquinoline|5-Nitrokinolin|C₉H₆N₂O₂|5-Nitroquinoline;C9H6N2O2|organic|Molecular|S|0|0|Crystals|0|174.159|1.2|||||||||||||||||F4F4F2|1|||C9H6N2O2|0|0|1200||Ld|607-34-1
 c_607352|0|8-Nitroquinoline|8-Nitrokinolin|C₉H₆N₂O₂|8-Nitroquinoline;C9H6N2O2|organic|Molecular|S|0|0|Crystals|0|174.159|1.2|||||||||||||||||F4F4F2|1|||C9H6N2O2|0|0|1200||Ld|607-35-2
 c_607421|0|1-Anthracenecarboxylic acid|1-Antrasenekarboksilik asit|C₁₅H₁₀O₂|1-Anthracenecarboxylic acid;C15H10O2|organic|Molecular|S|0|0|Crystals|0|222.243|1.2|||||||||||||||||F4F4F2|1|||C15H10O2|0|0|1200||Ld|607-42-1
-c_607567|0|N,N'-Di-1-naphthylurea|N,N'-di-1-naftilurea|C₂₁H₁₆N₂O|N,N'-Di-1-naphthylurea;C21H16N2O|organic|Molecular|S|0|0|Crystals|0|312.372|1.2|||||||||||||||||F4F4F2|1|||C21H16N2O|0|0|1200||Ld|607-56-7
+c_607567|0|N,N'-Di-1-naphthylurea|N,N'-di-1-naftilüre|C₂₁H₁₆N₂O|N,N'-Di-1-naphthylurea;C21H16N2O|organic|Molecular|S|0|0|Crystals|0|312.372|1.2|||||||||||||||||F4F4F2|1|||C21H16N2O|0|0|1200||Ld|607-56-7
 c_607578|0|2-Nitro-9H-fluorene|2-Nitro-9H-floren|C₁₃H₉NO₂|2-Nitro-9H-fluorene;C13H9NO2|organic|Molecular|S|0|0|Crystals|0|211.22|1.2|||||||||||||||||F4F4F2|1|||C13H9NO2|0|0|1200||Ld|607-57-8
 c_607818|0|Diethyl benzylmalonate|Dietil benzilmalonat|C₁₄H₁₈O₄|Diethyl benzylmalonate;C14H18O4|organic|Molecular|S|0|0|Crystals|0|250.294|1.07615|||||||||||||||||F4F4F2|1|||C14H18O4|0|0|1200||L|607-81-8
 c_607852|0|Isopropyl 2-hydroxybenzoate|İzopropil 2-hidroksibenzoat|C₁₀H₁₂O₃|Isopropyl 2-hydroxybenzoate;C10H12O3|organic|Molecular|L|0|0|Powder|0|180.203|1.07292|238||||||||||||||||E8F2FA|0.18|||C10H12O3|0|0|2000|249614|L|607-85-2
@@ -5095,7 +5095,7 @@ c_607910|0|Myristicin|Miristisin|C₁₁H₁₂O₃|Myristicin;C11H12O3|organic|
 c_607976|0|Ethyl 2-ethylacetoacetate|Etil 2-etilasetoasetat|C₈H₁₄O₃|Ethyl 2-ethylacetoacetate;C8H14O3|organic|Molecular|L|0|0|Powder|0|158.197|0.984716|197||||||||||||||||E8F2FA|0.18|||C8H14O3|0|0|2000|261530|L|607-97-6
 c_607998|0|1,3,5-Tribromo-2-methoxybenzene|1,3,5-Tribromo-2-metoksibenzen|C₇H₅Br₃O|1,3,5-Tribromo-2-methoxybenzene;C7H5Br3O|organic|Molecular|S|0|0|Crystals|0|344.828|2.49125|||||||||||||||||F4F4F2|1|||C7H5Br3O|0|0|1200||L|607-99-8
 c_608071|0|5-Methoxy-1H-indole-3-ethanamine|5-Metoksi-1H-indol-3-etanamin|C₁₁H₁₄N₂O|5-Methoxy-1H-indole-3-ethanamine;C11H14N2O|organic|Molecular|S|0|0|Crystals|0|190.246|1.2|||||||||||||||||F4F4F2|1|||C11H14N2O|0|0|1200||Ld|608-07-1
-c_608253|0|2-Methyl-1,3-benzenediol|2-Metil-1,3-benzenediol|C₇H₈O₂|2-Methyl-1,3-benzenediol;C7H8O2|organic|Molecular|S|0|0|Crystals|0|124.139|1.2|||||||||||||||||F4F4F2|1|||C7H8O2|0|0|1200||Ld|608-25-3
+c_608253|0|2-Methyl-1,3-benzenediol|2-Metil-1,3-benzendiol|C₇H₈O₂|2-Methyl-1,3-benzenediol;C7H8O2|organic|Molecular|S|0|0|Crystals|0|124.139|1.2|||||||||||||||||F4F4F2|1|||C7H8O2|0|0|1200||Ld|608-25-3
 c_608275|0|2,3-Dichloroaniline|2,3-Dikloroanilin|C₆H₅Cl₂N|2,3-Dichloroaniline;C6H5Cl2N|organic|Molecular|L|0|0|Powder|0|162.013|1|252||||||||||||||||E8F2FA|0.18|||C6H5Cl2N|0|0|2000|285244|Ld|608-27-5
 c_608286|0|2-Iodo-1,3-dimethylbenzene|2-İodo-1,3-dimetilbenzen|C₈H₉I|2-Iodo-1,3-dimethylbenzene;C8H9I|organic|Molecular|L|0|0|Powder|0|232.064|1.61582|228||||||||||||||||E8F2FA|0.18|||C8H9I|0|0|2000|190039|L|608-28-6
 c_608311|0|2,6-Dichloroaniline|2,6-Dikloroanilin|C₆H₅Cl₂N|2,6-Dichloroaniline;C6H5Cl2N|organic|Molecular|S|0|0|Crystals|0|162.013|1.2|||||||||||||||||F4F4F2|1|||C6H5Cl2N|0|0|1200||Ld|608-31-1
@@ -5113,7 +5113,7 @@ c_609110|0|Ethyl 2,3-dibromobutanoate|Etil 2,3-dibromobütanoat|C₆H₁₀Br₂
 c_609121|0|Ethyl 2-bromo-3-methylbutanoate|Etil 2-bromo-3-metilbütanoat|C₇H₁₃BrO₂|Ethyl 2-bromo-3-methylbutanoate;C7H13BrO2|organic|Molecular|S|0|0|Crystals|0|209.083|1.27602|||||||||||||||||F4F4F2|1|||C7H13BrO2|0|0|1200||L|609-12-1
 c_609143|0|Ethyl 2-methylacetoacetate|Etil 2-metilasetoasetat|C₇H₁₂O₃|Ethyl 2-methylacetoacetate;C7H12O3|organic|Molecular|L|0|0|Powder|0|144.17|0.99412|187||||||||||||||||E8F2FA|0.18|||C7H12O3|0|0|2000|280871|L|609-14-3
 c_609198|0|3,4,5-Trichlorophenol|3,4,5-Triklorofenol|C₆H₃Cl₃O|3,4,5-Trichlorophenol;C6H3Cl3O|organic|Molecular|S|0|0|Crystals|0|197.439|1.2|||||||||||||||||F4F4F2|1|||C6H3Cl3O|0|0|1200||Ld|609-19-8
-c_609201|0|2,6-Dichloro-1,4-benzenediamine|2,6-Dikloro-1,4-benzenediamin|C₆H₆Cl₂N₂|2,6-Dichloro-1,4-benzenediamine;C6H6Cl2N2|organic|Molecular|S|0|0|Crystals|0|177.028|1.2|||||||||||||||||F4F4F2|1|||C6H6Cl2N2|0|0|1200||Ld|609-20-1
+c_609201|0|2,6-Dichloro-1,4-benzenediamine|2,6-Dikloro-1,4-benzendiamin|C₆H₆Cl₂N₂|2,6-Dichloro-1,4-benzenediamine;C6H6Cl2N2|organic|Molecular|S|0|0|Crystals|0|177.028|1.2|||||||||||||||||F4F4F2|1|||C6H6Cl2N2|0|0|1200||Ld|609-20-1
 c_609223|0|2,4-Dibromo-6-methylphenol|2,4-Dibromo-6-metilfenol|C₇H₆Br₂O|2,4-Dibromo-6-methylphenol;C7H6Br2O|organic|Molecular|S|0|0|Crystals|0|265.932|1.2|||||||||||||||||F4F4F2|1|||C7H6Br2O|0|0|1200||Ld|609-22-3
 c_609234|0|2,4,6-Triiodophenol|2,4,6-Triiodofenol|C₆H₃I₃O|2,4,6-Triiodophenol;C6H3I3O|organic|Molecular|S|0|0|Crystals|0|471.802|1.2|||||||||||||||||F4F4F2|1|||C6H3I3O|0|0|1200||Ld|609-23-4
 c_609314|0|2-Nitro-1-butanol|2-Nitro-1-bütanol|C₄H₉NO₃|2-Nitro-1-butanol;C4H9NO3|organic|Molecular|L|0|0|Powder|0|119.12|1.13322|||||||||||||||||E8F2FA|0.18|||C4H9NO3|0|0|2000||L|609-31-4
@@ -5130,11 +5130,11 @@ c_610026|0|2,3,4-Trihydroxybenzoic acid|2,3,4-Trihidroksibenzoik asit|C₇H₆O�
 c_610140|0|2-Nitrobenzoyl chloride|2-Nitrobenzoil klorür|C₇H₄ClNO₃|2-Nitrobenzoyl chloride;C7H4ClNO3|organic|Molecular|L|0|0|Powder|0|185.563|1|||||||||||||||||E8F2FA|0.18|||C7H4ClNO3|0|0|2000||Ld|610-14-0
 c_610162|0|2-(Dimethylamino)benzoic acid|2-(Dimetilamino)benzoik asit|C₉H₁₁NO₂|2-(Dimethylamino)benzoic acid;C9H11NO2|organic|Molecular|S|0|0|Crystals|0|165.192|1.2|||||||||||||||||F4F4F2|1|||C9H11NO2|0|0|1200||Ld|610-16-2
 c_610173|0|N,N-Dimethyl-2-nitroaniline|N,N-dimetil-2-nitroanilin|C₈H₁₀N₂O₂|N,N-Dimethyl-2-nitroaniline;C8H10N2O2|organic|Molecular|L|0|0|Powder|0|166.18|1.17942|||||||||||||||||E8F2FA|0.18|||C8H10N2O2|0|0|2000||L|610-17-3
-c_610275|0|4-Nitro-1,2-benzenedicarboxylic acid|4-Nitro-1,2-benzenedikarboksilik asit|C₈H₅NO₆|4-Nitro-1,2-benzenedicarboxylic acid;C8H5NO6|organic|Molecular|S|0|0|Crystals|0|211.129|1.2|||||||||||||||||F4F4F2|1|||C8H5NO6|0|0|1200||Ld|610-27-5
+c_610275|0|4-Nitro-1,2-benzenedicarboxylic acid|4-Nitro-1,2-benzendikarboksilik asit|C₈H₅NO₆|4-Nitro-1,2-benzenedicarboxylic acid;C8H5NO6|organic|Molecular|S|0|0|Crystals|0|211.129|1.2|||||||||||||||||F4F4F2|1|||C8H5NO6|0|0|1200||Ld|610-27-5
 c_610300|0|2,4-Dinitrobenzoic acid|2,4-Dinitrobenzoik asit|C₇H₄N₂O₆|2,4-Dinitrobenzoic acid;C7H4N2O6|organic|Molecular|S|0|0|Crystals|0|212.117|1.6722|||||||||||||||||F4F4F2|1|||C7H4N2O6|0|0|1200||L|610-30-0
 c_610480|0|1-Methylanthracene|1-Metilantrasen|C₁₅H₁₂|1-Methylanthracene;C15H12|organic|Molecular|S|0|0|Crystals|0|192.261|1.0472|||||||||||||||||F4F4F2|1|||C15H12|0|0|1200||L|610-48-0
 c_610504|0|1-Anthracenol|1-Antrasenol|C₁₄H₁₀O|1-Anthracenol;C14H10O|organic|Molecular|S|0|0|Crystals|0|194.233|1.2|||||||||||||||||F4F4F2|1|||C14H10O|0|0|1200||Ld|610-50-4
-c_610662|0|2-Nitrobenzeneacetonitrile|2-Nitrobenzeneasetonitril|C₈H₆N₂O₂|2-Nitrobenzeneacetonitrile;C8H6N2O2|organic|Molecular|S|0|0|Crystals|0|162.148|1.2|||||||||||||||||F4F4F2|1|||C8H6N2O2|0|0|1200||Ld|610-66-2
+c_610662|0|2-Nitrobenzeneacetonitrile|2-Nitrobenzenasetonitril|C₈H₆N₂O₂|2-Nitrobenzeneacetonitrile;C8H6N2O2|organic|Molecular|S|0|0|Crystals|0|162.148|1.2|||||||||||||||||F4F4F2|1|||C8H6N2O2|0|0|1200||Ld|610-66-2
 c_610673|0|1-Ethoxy-2-nitrobenzene|1-Etoksi-2-nitrobenzen|C₈H₉NO₃|1-Ethoxy-2-nitrobenzene;C8H9NO3|organic|Molecular|L|0|0|Powder|0|167.164|1.19032|267||||||||||||||||E8F2FA|0.18|||C8H9NO3|0|0|2000|284351|L|610-67-3
 c_610695|0|2-Nitrophenyl acetate|2-Nitrofenil asetat|C₈H₇NO₄|2-Nitrophenyl acetate;C8H7NO4|organic|Molecular|S|0|0|Crystals|0|181.147|1.2|||||||||||||||||F4F4F2|1|||C8H7NO4|0|0|1200||Ld|610-69-5
 c_610720|0|2,5-Dimethylbenzoic acid|2,5-Dimetilbenzoik asit|C₉H₁₀O₂|2,5-Dimethylbenzoic acid;C9H10O2|organic|Molecular|S|0|0|Crystals|0|150.177|1.06921|||||||||||||||||F4F4F2|1|||C9H10O2|0|0|1200||L|610-72-0
@@ -5154,23 +5154,23 @@ c_611336|0|8-Chloroquinoline|8-Klorokinolin|C₉H₆ClN|8-Chloroquinoline;C9H6Cl
 c_611347|0|5-Quinolinamine|5-Kinolinamin|C₉H₈N₂|5-Quinolinamine;C9H8N2|organic|Molecular|S|0|0|Crystals|0|144.177|1.2|||||||||||||||||F4F4F2|1|||C9H8N2|0|0|1200||Ld|611-34-7
 c_611358|0|4-Chloroquinoline|4-Klorokinolin|C₉H₆ClN|4-Chloroquinoline;C9H6ClN|organic|Molecular|S|0|0|Crystals|0|163.604|1.25125|||||||||||||||||F4F4F2|1|||C9H6ClN|0|0|1200||L|611-35-8
 c_611369|0|4-Quinolinol|4-Kinolinol|C₉H₇NO|4-Quinolinol;C9H7NO|organic|Molecular|S|0|0|Crystals|0|145.161|1.2|||||||||||||||||F4F4F2|1|||C9H7NO|0|0|1200||Ld|611-36-9
-c_611698|0|α-Isopropylbenzenemethanol|α-İzopropilbenzenemetanol|C₁₀H₁₄O|α-Isopropylbenzenemethanol;C10H14O|organic|Molecular|L|0|0|Powder|0|150.221|0.986914|223||||||||||||||||E8F2FA|0.18|||C10H14O|0|0|2000|290646|L|611-69-8
+c_611698|0|α-Isopropylbenzenemethanol|α-İzopropilbenzenmetanol|C₁₀H₁₄O|α-Isopropylbenzenemethanol;C10H14O|organic|Molecular|L|0|0|Powder|0|150.221|0.986914|223||||||||||||||||E8F2FA|0.18|||C10H14O|0|0|2000|290646|L|611-69-8
 c_611701|0|2-Methyl-1-phenyl-1-propanone|2-Metil-1-fenil-1-propanon|C₁₀H₁₂O|2-Methyl-1-phenyl-1-propanone;C10H12O|organic|Molecular|L|0|0|Powder|0|148.205|0.986311|220||||||||||||||||E8F2FA|0.18|||C10H12O|0|0|2000|292819|L|611-70-1
-c_611734|0|α-Oxobenzeneacetic acid|α-Oksobenzeneasetik asit|C₈H₆O₃|α-Oxobenzeneacetic acid;C8H6O3|organic|Molecular|S|0|0|Crystals|0|150.133|1.2|||||||||||||||||F4F4F2|1|||C8H6O3|0|0|1200||Ld|611-73-4
+c_611734|0|α-Oxobenzeneacetic acid|α-Oksobenzenasetik asit|C₈H₆O₃|α-Oxobenzeneacetic acid;C8H6O3|organic|Molecular|S|0|0|Crystals|0|150.133|1.2|||||||||||||||||F4F4F2|1|||C8H6O3|0|0|1200||Ld|611-73-4
 c_611745|0|N,N-Dimethylbenzamide|N,N-dimetilbenzamit|C₉H₁₁NO|N,N-Dimethylbenzamide;C9H11NO|organic|Molecular|S|0|0|Crystals|0|149.193|1.2|||||||||||||||||F4F4F2|1|||C9H11NO|0|0|1200||Ld|611-74-5
-c_611927|0|N,N'-Dimethyl-N,N'-diphenylurea|N,N'-dimetil-N,N'-difenilurea|C₁₅H₁₆N₂O|N,N'-Dimethyl-N,N'-diphenylurea;C15H16N2O|organic|Molecular|S|0|0|Crystals|0|240.306|1.2|||||||||||||||||F4F4F2|1|||C15H16N2O|0|0|1200||Ld|611-92-7
+c_611927|0|N,N'-Dimethyl-N,N'-diphenylurea|N,N'-dimetil-N,N'-difenilüre|C₁₅H₁₆N₂O|N,N'-Dimethyl-N,N'-diphenylurea;C15H16N2O|organic|Molecular|S|0|0|Crystals|0|240.306|1.2|||||||||||||||||F4F4F2|1|||C15H16N2O|0|0|1200||Ld|611-92-7
 c_611949|0|(4-Methoxyphenyl)phenylmethanone|(4-Metoksifenil)fenilmetanon|C₁₄H₁₂O₂|(4-Methoxyphenyl)phenylmethanone;C14H12O2|organic|Molecular|S|0|0|Crystals|0|212.248|1.2|||||||||||||||||F4F4F2|1|||C14H12O2|0|0|1200||Ld|611-94-9
 c_611950|0|4-Benzoylbenzoic acid|4-Benzoilbenzoik asit|C₁₄H₁₀O₃|4-Benzoylbenzoic acid;C14H10O3|organic|Molecular|S|0|0|Crystals|0|226.231|1.2|||||||||||||||||F4F4F2|1|||C14H10O3|0|0|1200||Ld|611-95-0
 c_611972|0|4,4'-Dimethylbenzophenone|4,4'-Dimetilbenzofenon|C₁₅H₁₄O|4,4'-Dimethylbenzophenone;C15H14O|organic|Molecular|S|0|0|Crystals|0|210.276|1.2|||||||||||||||||F4F4F2|1|||C15H14O|0|0|1200||Ld|611-97-2
 c_611994|0|4,4'-Dihydroxybenzophenone|4,4'-Dihidroksibenzofenon|C₁₃H₁₀O₃|4,4'-Dihydroxybenzophenone;C13H10O3|organic|Molecular|S|0|0|Crystals|0|214.22|1.13313|||||||||||||||||F4F4F2|1|||C13H10O3|0|0|1200||L|611-99-4
 c_612124|0|1,2-Bis(chloromethyl)benzene|1,2-Bis(klorometil)benzen|C₈H₈Cl₂|1,2-Bis(chloromethyl)benzene;C8H8Cl2|organic|Molecular|S|0|0|Crystals|0|175.052|1.39325|||||||||||||||||F4F4F2|1|||C8H8Cl2|0|0|1200||L|612-12-4
-c_612146|0|1,2-Benzenedimethanol|1,2-Benzenedimetanol|C₈H₁₀O₂|1,2-Benzenedimethanol;C8H10O2|organic|Molecular|S|0|0|Crystals|0|138.166|1.2|||||||||||||||||F4F4F2|1|||C8H10O2|0|0|1200||Ld|612-14-6
+c_612146|0|1,2-Benzenedimethanol|1,2-Benzendimetanol|C₈H₁₀O₂|1,2-Benzenedimethanol;C8H10O2|organic|Molecular|S|0|0|Crystals|0|138.166|1.2|||||||||||||||||F4F4F2|1|||C8H10O2|0|0|1200||Ld|612-14-6
 c_612157|0|1-Vinyl-2-methoxybenzene|1-Vinil-2-metoksibenzen|C₉H₁₀O|1-Vinyl-2-methoxybenzene;C9H10O|organic|Molecular|S|0|0|Crystals|0|134.178|1.00492|||||||||||||||||F4F4F2|1|||C9H10O|0|0|1200||L|612-15-7
-c_612168|0|2-Methoxybenzenemethanol|2-Metoksibenzenemetanol|C₈H₁₀O₂|2-Methoxybenzenemethanol;C8H10O2|organic|Molecular|L|0|0|Powder|0|138.166|1.03862|249||||||||||||||||E8F2FA|0.18|||C8H10O2|0|0|2000|332565|L|612-16-8
+c_612168|0|2-Methoxybenzenemethanol|2-Metoksibenzenmetanol|C₈H₁₀O₂|2-Methoxybenzenemethanol;C8H10O2|organic|Molecular|L|0|0|Powder|0|138.166|1.03862|249||||||||||||||||E8F2FA|0.18|||C8H10O2|0|0|2000|332565|L|612-16-8
 c_612179|0|1,4-Dihydronaphthalene|1,4-Dihidronaftalen|C₁₀H₁₀|1,4-Dihydronaphthalene;C10H10|organic|Molecular|L|0|0|Powder|0|130.19|0.992833|210||||||||||||||||E8F2FA|0.18|||C10H10|0|0|2000|326578|L|612-17-9
 c_612226|0|1-Ethyl-2-nitrobenzene|1-Etil-2-nitrobenzen|C₈H₉NO₂|1-Ethyl-2-nitrobenzene;C8H9NO2|organic|Molecular|L|0|0|Powder|0|151.165|1.12072|232.5||||||||||||||||E8F2FA|0.18|||C8H9NO2|0|0|2000|294362|L|612-22-6
 c_612237|0|1-(Chloromethyl)-2-nitrobenzene|1-(Klorometil)-2-nitrobenzen|C₇H₆ClNO₂|1-(Chloromethyl)-2-nitrobenzene;C7H6ClNO2|organic|Molecular|S|0|0|Crystals|0|171.58|1.2|||||||||||||||||F4F4F2|1|||C7H6ClNO2|0|0|1200||Ld|612-23-7
-c_612259|0|2-Nitrobenzenemethanol|2-Nitrobenzenemetanol|C₇H₇NO₃|2-Nitrobenzenemethanol;C7H7NO3|organic|Molecular|S|0|0|Crystals|0|153.137|1.2|||||||||||||||||F4F4F2|1|||C7H7NO3|0|0|1200||Ld|612-25-9
+c_612259|0|2-Nitrobenzenemethanol|2-Nitrobenzenmetanol|C₇H₇NO₃|2-Nitrobenzenemethanol;C7H7NO3|organic|Molecular|S|0|0|Crystals|0|153.137|1.2|||||||||||||||||F4F4F2|1|||C7H7NO3|0|0|1200||Ld|612-25-9
 c_612282|0|N-Methyl-2-nitroaniline|N-metil-2-nitroanilin|C₇H₈N₂O₂|N-Methyl-2-nitroaniline;C7H8N2O2|organic|Molecular|S|0|0|Crystals|0|152.153|1.2|||||||||||||||||F4F4F2|1|||C7H8N2O2|0|0|1200||Ld|612-28-2
 c_612555|0|2-Iodonaphthalene|2-İodonaftalen|C₁₀H₇I|2-Iodonaphthalene;C10H7I|organic|Molecular|S|0|0|Crystals|0|254.07|1.632|||||||||||||||||F4F4F2|1|||C10H7I|0|0|1200||L|612-55-5
 c_612577|0|6-Chloroquinoline|6-Klorokinolin|C₉H₆ClN|6-Chloroquinoline;C9H6ClN|organic|Molecular|S|0|0|Crystals|0|163.604|1.2|||||||||||||||||F4F4F2|1|||C9H6ClN|0|0|1200||Ld|612-57-7
@@ -5181,7 +5181,7 @@ c_612759|0|3,3'-Dimethylbiphenyl|3,3'-Dimetilbifenil|C₁₄H₁₄|3,3'-Dimethy
 c_612782|0|2,2'-Binaphthalene|2,2'-Binaftalen|C₂₀H₁₄|2,2'-Binaphthalene;C20H14|organic|Molecular|S|0|0|Crystals|0|254.332|1.2|||||||||||||||||F4F4F2|1|||C20H14|0|0|1200||Ld|612-78-2
 c_612942|0|2-Phenylnaphthalene|2-Fenilnaftalen|C₁₆H₁₂|2-Phenylnaphthalene;C16H12|organic|Molecular|S|0|0|Crystals|0|204.272|1.21802|||||||||||||||||F4F4F2|1|||C16H12|0|0|1200||L|612-94-2
 c_612964|0|2-Phenylquinoline|2-Fenilkinolin|C₁₅H₁₁N|2-Phenylquinoline;C15H11N|organic|Molecular|S|0|0|Crystals|0|205.26|1.2|||||||||||||||||F4F4F2|1|||C15H11N|0|0|1200||Ld|612-96-4
-c_613036|0|1,2,4-Benzenetriol triacetate|1,2,4-Benzenetriol triasetat|C₁₂H₁₂O₆|1,2,4-Benzenetriol triacetate;C12H12O6|organic|Molecular|S|0|0|Crystals|0|252.222|1.2|||||||||||||||||F4F4F2|1|||C12H12O6|0|0|1200||Ld|613-03-6
+c_613036|0|1,2,4-Benzenetriol triacetate|1,2,4-Benzentriol triasetat|C₁₂H₁₂O₆|1,2,4-Benzenetriol triacetate;C12H12O6|organic|Molecular|S|0|0|Crystals|0|252.222|1.2|||||||||||||||||F4F4F2|1|||C12H12O6|0|0|1200||Ld|613-03-6
 c_613081|0|2-Anthracenecarboxylic acid|2-Antrasenekarboksilik asit|C₁₅H₁₀O₂|2-Anthracenecarboxylic acid;C15H10O2|organic|Molecular|S|0|0|Crystals|0|222.243|1.2|||||||||||||||||F4F4F2|1|||C15H10O2|0|0|1200||Ld|613-08-1
 c_613127|0|2-Methylanthracene|2-Metilantrasen|C₁₅H₁₂|2-Methylanthracene;C15H12|organic|Molecular|S|0|0|Crystals|0|192.261|1.8|||||||||||||||||F4F4F2|1|||C15H12|0|0|1200||L|613-12-7
 c_613138|0|2-Anthracenamine|2-Antrasenamin|C₁₄H₁₁N|2-Anthracenamine;C14H11N|organic|Molecular|S|0|0|Crystals|0|193.249|1.2|||||||||||||||||F4F4F2|1|||C14H11N|0|0|1200||Ld|613-13-8
@@ -5200,29 +5200,29 @@ c_613707|0|2-Methoxyphenyl acetate|2-Metoksifenil asetat|C₉H₁₀O₃|2-Metho
 c_613752|0|2-Furanmethanediol diacetate|2-Furanmetanediol diasetat|C₉H₁₀O₅|2-Furanmethanediol diacetate;C9H10O5|organic|Molecular|S|0|0|Crystals|0|198.174|1.2|||||||||||||||||F4F4F2|1|||C9H10O5|0|0|1200||Ld|613-75-2
 c_613843|0|2-Hydroxy-5-methylbenzaldehyde|2-Hidroksi-5-metilbenzaldehit|C₈H₈O₂|2-Hydroxy-5-methylbenzaldehyde;C8H8O2|organic|Molecular|S|0|0|Crystals|0|136.15|1.09136|||||||||||||||||F4F4F2|1|||C8H8O2|0|0|1200||L|613-84-3
 c_613898|0|2-Amino-1-phenylethanone|2-Amino-1-feniletanon|C₈H₉NO|2-Amino-1-phenylethanone;C8H9NO|organic|Molecular|L|0|0|Powder|0|135.166|1|251||||||||||||||||E8F2FA|0.18|||C8H9NO|0|0|2000|341249|Ld|613-89-8
-c_613901|0|α-Oxobenzeneacetonitrile|α-Oksobenzeneasetonitril|C₈H₅NO|α-Oxobenzeneacetonitrile;C8H5NO|organic|Molecular|S|0|0|Crystals|0|131.134|1.2|||||||||||||||||F4F4F2|1|||C8H5NO|0|0|1200||Ld|613-90-1
+c_613901|0|α-Oxobenzeneacetonitrile|α-Oksobenzenasetonitril|C₈H₅NO|α-Oxobenzeneacetonitrile;C8H5NO|organic|Molecular|S|0|0|Crystals|0|131.134|1.2|||||||||||||||||F4F4F2|1|||C8H5NO|0|0|1200||Ld|613-90-1
 c_613912|0|1-Phenylethanone oxime|1-Feniletanon oksim|C₈H₉NO|1-Phenylethanone oxime;C8H9NO|organic|Molecular|S|0|0|Crystals|0|135.166|1.05158|||||||||||||||||F4F4F2|1|||C8H9NO|0|0|1200||L|613-91-2
 c_613934|0|N-Methylbenzamide|N-metilbenzamit|C₈H₉NO|N-Methylbenzamide;C8H9NO|organic|Molecular|S|0|0|Crystals|0|135.166|1.2|||||||||||||||||F4F4F2|1|||C8H9NO|0|0|1200||Ld|613-93-4
 c_613945|0|Benzohydrazide|Benzohidrazit|C₇H₈N₂O|Benzohydrazide;C7H8N2O|organic|Molecular|S|0|0|Crystals|0|136.154|1.2|||||||||||||||||F4F4F2|1|||C7H8N2O|0|0|1200||Ld|613-94-5
 c_613978|0|N-Ethyl-N-methylaniline|N-etil-N-metilanilin|C₉H₁₃N|N-Ethyl-N-methylaniline;C9H13N|organic|Molecular|L|0|0|Powder|0|135.21|0.9255|204||||||||||||||||E8F2FA|0.18|||C9H13N|0|0|2000|310548|L|613-97-8
 c_614006|0|N-Methyl-N-nitrosoaniline|N-metil-N-nitrosoanilin|C₇H₈N₂O|N-Methyl-N-nitrosoaniline;C7H8N2O|organic|Molecular|L|0|0|Powder|0|136.154|1.12402|||||||||||||||||E8F2FA|0.18|||C7H8N2O|0|0|2000||L|614-00-6
-c_614164|0|β-Oxobenzenepropanenitrile|β-Oksobenzenepropanenitril|C₉H₇NO|β-Oxobenzenepropanenitrile;C9H7NO|organic|Molecular|S|0|0|Crystals|0|145.161|1.2|||||||||||||||||F4F4F2|1|||C9H7NO|0|0|1200||Ld|614-16-4
+c_614164|0|β-Oxobenzenepropanenitrile|β-Oksobenzenpropanenitril|C₉H₇NO|β-Oxobenzenepropanenitrile;C9H7NO|organic|Molecular|S|0|0|Crystals|0|145.161|1.2|||||||||||||||||F4F4F2|1|||C9H7NO|0|0|1200||Ld|614-16-4
 c_614175|0|N-Ethylbenzamide|N-etilbenzamit|C₉H₁₁NO|N-Ethylbenzamide;C9H11NO|organic|Molecular|S|0|0|Crystals|0|149.193|1.2|||||||||||||||||F4F4F2|1|||C9H11NO|0|0|1200||Ld|614-17-5
 c_614186|0|Ethyl 3-pyridinecarboxylate|Etil 3-piridinekarboksilat|C₈H₉NO₂|Ethyl 3-pyridinecarboxylate;C8H9NO2|organic|Molecular|L|0|0|Powder|0|151.165|1.10702|221||||||||||||||||E8F2FA|0.18|||C8H9NO2|0|0|2000|287667|L|614-18-6
 c_614211|0|2-Nitro-1-phenylethanone|2-Nitro-1-feniletanon|C₈H₇NO₃|2-Nitro-1-phenylethanone;C8H7NO3|organic|Molecular|S|0|0|Crystals|0|165.148|1.2|||||||||||||||||F4F4F2|1|||C8H7NO3|0|0|1200||Ld|614-21-1
 c_614266|0|4,4'-Dichloroazoxybenzene|4,4'-Dikloroazoksibenzen|C₁₂H₈Cl₂N₂O|4,4'-Dichloroazoxybenzene;C12H8Cl2N2O|organic|Molecular|S|0|0|Crystals|0|267.109|1.2|||||||||||||||||F4F4F2|1|||C12H8Cl2N2O|0|0|1200||Ld|614-26-6
-c_614299|0|α-Phenylbenzeneethanol|α-Fenilbenzeneetanol|C₁₄H₁₄O|α-Phenylbenzeneethanol;C14H14O|organic|Molecular|S|0|0|Crystals|0|198.265|1.03607|||||||||||||||||F4F4F2|1|||C14H14O|0|0|1200||L|614-29-9
+c_614299|0|α-Phenylbenzeneethanol|α-Fenilbenzenetanol|C₁₄H₁₄O|α-Phenylbenzeneethanol;C14H14O|organic|Molecular|S|0|0|Crystals|0|198.265|1.03607|||||||||||||||||F4F4F2|1|||C14H14O|0|0|1200||L|614-29-9
 c_614335|0|Glycerol tribenzoate|Gliserol tribenzoat|C₂₄H₂₀O₆|Glycerol tribenzoate;C24H20O6|organic|Molecular|S|0|0|Crystals|0|404.418|1.22812|||||||||||||||||F4F4F2|1|||C24H20O6|0|0|1200||L|614-33-5
 c_614346|0|4-Methylphenyl benzoate|4-Metilfenil benzoat|C₁₄H₁₂O₂|4-Methylphenyl benzoate;C14H12O2|organic|Molecular|S|0|0|Crystals|0|212.248|1.2|||||||||||||||||F4F4F2|1|||C14H12O2|0|0|1200||Ld|614-34-6
 c_614391|0|Procainamide hydrochloride|Prokainamit hidroklorür|C₁₃H₂₂ClN₃O|Procainamide hydrochloride;C13H22ClN3O|organic|Molecular|S|0|0|Crystals|0|271.789|1.2|||||||||||||||||F4F4F2|1|||C13H22ClN3O|0|0|1200||Ld|614-39-1
 c_614619|0|2-Chlorophenoxyacetic acid|2-Klorofenoksiasetik asit|C₈H₇ClO₃|2-Chlorophenoxyacetic acid;C8H7ClO3|organic|Molecular|S|0|0|Crystals|0|186.591|1.2|||||||||||||||||F4F4F2|1|||C8H7ClO3|0|0|1200||Ld|614-61-9
 c_614686|0|1-Isocyanato-2-methylbenzene|1-İzosianato-2-metilbenzen|C₈H₇NO|1-Isocyanato-2-methylbenzene;C8H7NO|organic|Molecular|L|0|0|Powder|0|133.15|1|185||||||||||||||||E8F2FA|0.18|||C8H7NO|0|0|2000|302795|Ld|614-68-6
-c_614755|0|2-Hydroxybenzeneacetic acid|2-Hidroksibenzeneasetik asit|C₈H₈O₃|2-Hydroxybenzeneacetic acid;C8H8O3|organic|Molecular|S|0|0|Crystals|0|152.149|1.2|||||||||||||||||F4F4F2|1|||C8H8O3|0|0|1200||Ld|614-75-5
-c_614788|0|(2-Methylphenyl)thiourea|(2-Metilfenil)tiourea|C₈H₁₀N₂S|(2-Methylphenyl)thiourea;C8H10N2S|organic|Molecular|S|0|0|Crystals|0|166.242|1.2|||||||||||||||||F4F4F2|1|||C8H10N2S|0|0|1200||Ld|614-78-8
+c_614755|0|2-Hydroxybenzeneacetic acid|2-Hidroksibenzenasetik asit|C₈H₈O₃|2-Hydroxybenzeneacetic acid;C8H8O3|organic|Molecular|S|0|0|Crystals|0|152.149|1.2|||||||||||||||||F4F4F2|1|||C8H8O3|0|0|1200||Ld|614-75-5
+c_614788|0|(2-Methylphenyl)thiourea|(2-Metilfenil)tioüre|C₈H₁₀N₂S|(2-Methylphenyl)thiourea;C8H10N2S|organic|Molecular|S|0|0|Crystals|0|166.242|1.2|||||||||||||||||F4F4F2|1|||C8H10N2S|0|0|1200||Ld|614-78-8
 c_614802|0|N-(2-Hydroxyphenyl)acetamide|N-(2-hidroksifenil)asetamit|C₈H₉NO₂|N-(2-Hydroxyphenyl)acetamide;C8H9NO2|organic|Molecular|S|0|0|Crystals|0|151.165|1.2|||||||||||||||||F4F4F2|1|||C8H9NO2|0|0|1200||Ld|614-80-2
 c_614960|0|5-Methyl-1H-indole|5-Metil-1H-indol|C₉H₉N|5-Methyl-1H-indole;C9H9N|organic|Molecular|S|0|0|Crystals|0|131.178|1.02028|||||||||||||||||F4F4F2|1|||C9H9N|0|0|1200||L|614-96-0
 c_614993|0|Ethyl 2-furancarboxylate|Etil 2-furankarboksilat|C₇H₈O₃|Ethyl 2-furancarboxylate;C7H8O3|organic|Molecular|S|0|0|Crystals|0|140.138|1.11742|||||||||||||||||F4F4F2|1|||C7H8O3|0|0|1200||L|614-99-3
-c_615054|0|4-Methoxy-1,3-benzenediamine|4-Metoksi-1,3-benzenediamin|C₇H₁₀N₂O|4-Methoxy-1,3-benzenediamine;C7H10N2O|organic|Molecular|S|0|0|Crystals|0|138.17|1.2|||||||||||||||||F4F4F2|1|||C7H10N2O|0|0|1200||Ld|615-05-4
+c_615054|0|4-Methoxy-1,3-benzenediamine|4-Metoksi-1,3-benzendiamin|C₇H₁₀N₂O|4-Methoxy-1,3-benzenediamine;C7H10N2O|organic|Molecular|S|0|0|Crystals|0|138.17|1.2|||||||||||||||||F4F4F2|1|||C7H10N2O|0|0|1200||Ld|615-05-4
 c_615134|0|1,3-Dihydro-2H-inden-2-one|1,3-Dihidro-2H-inden-2-on|C₉H₈O|1,3-Dihydro-2H-inden-2-one;C9H8O|organic|Molecular|S|0|0|Crystals|0|132.162|1.07127|||||||||||||||||F4F4F2|1|||C9H8O|0|0|1200||L|615-13-4
 c_615156|0|2-Methyl-1H-benzimidazole|2-Metil-1H-benzimidazol|C₈H₈N₂|2-Methyl-1H-benzimidazole;C8H8N2|organic|Molecular|S|0|0|Crystals|0|132.166|1.2|||||||||||||||||F4F4F2|1|||C8H8N2|0|0|1200||Ld|615-15-6
 c_615189|0|2-Chlorobenzoxazole|2-Klorobenzoksazol|C₇H₄ClNO|2-Chlorobenzoxazole;C7H4ClNO|organic|Molecular|L|0|0|Powder|0|153.565|1.34532|201.5||||||||||||||||E8F2FA|0.18|||C7H4ClNO|0|0|2000|271997|L|615-18-9
@@ -5239,8 +5239,8 @@ c_615587|0|2,4-Dibromophenol|2,4-Dibromofenol|C₆H₄Br₂O|2,4-Dibromophenol;C
 c_615598|0|1,4-Dibromo-2-methylbenzene|1,4-Dibromo-2-metilbenzen|C₇H₆Br₂|1,4-Dibromo-2-methylbenzene;C7H6Br2|organic|Molecular|L|0|0|Powder|0|249.933|1.81272|236||||||||||||||||E8F2FA|0.18|||C7H6Br2|0|0|2000|179269|L|615-59-8
 c_615623|0|3-Chloro-4-methylphenol|3-Kloro-4-metilfenol|C₇H₇ClO|3-Chloro-4-methylphenol;C7H7ClO|organic|Molecular|S|0|0|Crystals|0|142.582|1.2|||||||||||||||||F4F4F2|1|||C7H7ClO|0|0|1200||Ld|615-62-3
 c_615656|0|2-Chloro-4-methylaniline|2-Kloro-4-metilanilin|C₇H₈ClN|2-Chloro-4-methylaniline;C7H8ClN|organic|Molecular|L|0|0|Powder|0|141.598|1.1512|220||||||||||||||||E8F2FA|0.18|||C7H8ClN|0|0|2000|306482|L|615-65-6
-c_615667|0|2-Chloro-1,4-benzenediamine|2-Kloro-1,4-benzenediamin|C₆H₇ClN₂|2-Chloro-1,4-benzenediamine;C6H7ClN2|organic|Molecular|S|0|0|Crystals|0|142.586|1.2|||||||||||||||||F4F4F2|1|||C6H7ClN2|0|0|1200||Ld|615-66-7
-c_615678|0|2-Chloro-1,4-benzenediol|2-Kloro-1,4-benzenediol|C₆H₅ClO₂|2-Chloro-1,4-benzenediol;C6H5ClO2|organic|Molecular|S|0|0|Crystals|0|144.554|1.2|||||||||||||||||F4F4F2|1|||C6H5ClO2|0|0|1200||Ld|615-67-8
+c_615667|0|2-Chloro-1,4-benzenediamine|2-Kloro-1,4-benzendiamin|C₆H₇ClN₂|2-Chloro-1,4-benzenediamine;C6H7ClN2|organic|Molecular|S|0|0|Crystals|0|142.586|1.2|||||||||||||||||F4F4F2|1|||C6H7ClN2|0|0|1200||Ld|615-66-7
+c_615678|0|2-Chloro-1,4-benzenediol|2-Kloro-1,4-benzendiol|C₆H₅ClO₂|2-Chloro-1,4-benzenediol;C6H5ClO2|organic|Molecular|S|0|0|Crystals|0|144.554|1.2|||||||||||||||||F4F4F2|1|||C6H5ClO2|0|0|1200||Ld|615-67-8
 c_615747|0|2-Chloro-5-methylphenol|2-Kloro-5-metilfenol|C₇H₇ClO|2-Chloro-5-methylphenol;C7H7ClO|organic|Molecular|S|0|0|Crystals|0|142.582|1.21515|||||||||||||||||F4F4F2|1|||C7H7ClO|0|0|1200||L|615-74-7
 c_615792|0|Ethyl 2,4-dioxopentanoate|Etil 2,4-dioksopentanoat|C₇H₁₀O₄|Ethyl 2,4-dioxopentanoate;C7H10O4|organic|Molecular|L|0|0|Powder|0|158.153|1.12512|214||||||||||||||||E8F2FA|0.18|||C7H10O4|0|0|2000|271062|L|615-79-2
 c_615816|0|Diisopropyl oxalate|Diizopropil oksalat|C₈H₁₄O₄|Diisopropyl oxalate;C8H14O4|organic|Molecular|L|0|0|Powder|0|174.196|1.0022|189||||||||||||||||E8F2FA|0.18|||C8H14O4|0|0|2000|233468|L|615-81-6
@@ -5281,13 +5281,13 @@ c_618279|0|cis-4-Hydroxy-L-proline|Cis-4-hidroksi-L-prolin|C₅H₉NO₃|cis-4-H
 c_618326|0|Benzoyl bromide|Benzoil bromür|C₇H₅BrO|Benzoyl bromide;C7H5BrO|organic|Molecular|L|0|0|Powder|0|185.02|1.57015|220||||||||||||||||E8F2FA|0.18|||C7H5BrO|0|0|2000|234554|L|618-32-6
 c_618382|0|Benzoyl iodide|Benzoil iyodür|C₇H₅IO|Benzoyl iodide;C7H5IO|organic|Molecular|L|0|0|Powder|0|232.02|1.74618|||||||||||||||||E8F2FA|0.18|||C7H5IO|0|0|2000||L|618-38-2
 c_618406|0|1-Methyl-1-phenylhydrazine|1-Metil-1-fenilhidrazin|C₇H₁₀N₂|1-Methyl-1-phenylhydrazine;C7H10N2|organic|Molecular|L|0|0|Powder|0|122.171|1.04042|229||||||||||||||||E8F2FA|0.18|||C7H10N2|0|0|2000|361700|L|618-40-6
-c_618417|0|Benzenesulfinic acid|Benzenesülfinik asit|C₆H₆O₂S|Benzenesulfinic acid;C6H6O2S|organic|Molecular|S|0|0|Crystals|0|142.172|1.2|||||||||||||||||F4F4F2|1|||C6H6O2S|0|0|1200||Ld|618-41-7
+c_618417|0|Benzenesulfinic acid|Benzensülfinik asit|C₆H₆O₂S|Benzenesulfinic acid;C6H6O2S|organic|Molecular|S|0|0|Crystals|0|142.172|1.2|||||||||||||||||F4F4F2|1|||C6H6O2S|0|0|1200||Ld|618-41-7
 c_618428|0|1-Acetylpiperidine|1-Asetilpiperidin|C₇H₁₃NO|1-Acetylpiperidine;C7H13NO|organic|Molecular|L|0|0|Powder|0|127.187|1.0119|226.5||||||||||||||||E8F2FA|0.18|||C7H13NO|0|0|2000|345705|L|618-42-8
 c_618451|0|3-Isopropylphenol|3-İzopropilfenol|C₉H₁₂O|3-Isopropylphenol;C9H12O|organic|Molecular|S|0|0|Crystals|0|136.194|1.2|||||||||||||||||F4F4F2|1|||C9H12O|0|0|1200||Ld|618-45-1
 c_618519|0|3-Iodobenzoic acid|3-İodobenzoik asit|C₇H₅IO₂|3-Iodobenzoic acid;C7H5IO2|organic|Molecular|S|0|0|Crystals|0|248.019|1.2|||||||||||||||||F4F4F2|1|||C7H5IO2|0|0|1200||Ld|618-51-9
 c_618622|0|1,3-Dichloro-5-nitrobenzene|1,3-Dikloro-5-nitrobenzen|C₆H₃Cl₂NO₂|1,3-Dichloro-5-nitrobenzene;C6H3Cl2NO2|organic|Molecular|S|0|0|Crystals|0|191.995|1.40001|||||||||||||||||F4F4F2|1|||C6H3Cl2NO2|0|0|1200||L|618-62-2
 c_618655|0|2-(β-D-Glucopyranosyloxy)benzaldehyde|2-(β-D-glukopiranosiloksi)benzaldehit|C₁₃H₁₆O₇|2-(β-D-Glucopyranosyloxy)benzaldehyde;C13H16O7|organic|Molecular|S|0|0|Crystals|0|284.264|1.2|||||||||||||||||F4F4F2|1|||C13H16O7|0|0|1200||Ld|618-65-5
-c_618688|0|α-Benzylbenzenepropanoic acid|α-Benzilbenzenepropanoik asit|C₁₆H₁₆O₂|α-Benzylbenzenepropanoic acid;C16H16O2|organic|Molecular|S|0|0|Crystals|0|240.302|1.2|||||||||||||||||F4F4F2|1|||C16H16O2|0|0|1200||Ld|618-68-8
+c_618688|0|α-Benzylbenzenepropanoic acid|α-Benzilbenzenpropanoik asit|C₁₆H₁₆O₂|α-Benzylbenzenepropanoic acid;C16H16O2|organic|Molecular|S|0|0|Crystals|0|240.302|1.2|||||||||||||||||F4F4F2|1|||C16H16O2|0|0|1200||Ld|618-68-8
 c_618768|0|4-Hydroxy-3,5-diiodobenzoic acid|4-Hidroksi-3,5-diiodobenzoik asit|C₇H₄I₂O₃|4-Hydroxy-3,5-diiodobenzoic acid;C7H4I2O3|organic|Molecular|S|0|0|Crystals|0|389.915|1.2|||||||||||||||||F4F4F2|1|||C7H4I2O3|0|0|1200||Ld|618-76-8
 c_618871|0|3,5-Dinitroaniline|3,5-Dinitroanilin|C₆H₅N₃O₄|3,5-Dinitroaniline;C6H5N3O4|organic|Molecular|S|0|0|Crystals|0|183.123|1.6015|||||||||||||||||F4F4F2|1|||C6H5N3O4|0|0|1200||L|618-87-1
 c_618893|0|Methyl 3-bromobenzoate|Metil 3-bromobenzoat|C₈H₇BrO₂|Methyl 3-bromobenzoate;C8H7BrO2|organic|Molecular|S|0|0|Crystals|0|215.046|1.2|||||||||||||||||F4F4F2|1|||C8H7BrO2|0|0|1200||Ld|618-89-3
@@ -5301,7 +5301,7 @@ c_619181|0|2,5-Dinitroaniline|2,5-Dinitroanilin|C₆H₅N₃O₄|2,5-Dinitroanil
 c_619216|0|3-Formylbenzoic acid|3-Formilbenzoik asit|C₈H₆O₃|3-Formylbenzoic acid;C8H6O3|organic|Molecular|S|0|0|Crystals|0|150.133|1.2|||||||||||||||||F4F4F2|1|||C8H6O3|0|0|1200||Ld|619-21-6
 c_619238|0|1-(Chloromethyl)-3-nitrobenzene|1-(Klorometil)-3-nitrobenzen|C₇H₆ClNO₂|1-(Chloromethyl)-3-nitrobenzene;C7H6ClNO2|organic|Molecular|S|0|0|Crystals|0|171.58|1.2|||||||||||||||||F4F4F2|1|||C7H6ClNO2|0|0|1200||Ld|619-23-8
 c_619249|0|3-Nitrobenzonitrile|3-Nitrobenzonitril|C₇H₄N₂O₂|3-Nitrobenzonitrile;C7H4N2O2|organic|Molecular|S|0|0|Crystals|0|148.121|1.2|||||||||||||||||F4F4F2|1|||C7H4N2O2|0|0|1200||Ld|619-24-9
-c_619250|0|3-Nitrobenzenemethanol|3-Nitrobenzenemetanol|C₇H₇NO₃|3-Nitrobenzenemethanol;C7H7NO3|organic|Molecular|S|0|0|Crystals|0|153.137|1.29619|||||||||||||||||F4F4F2|1|||C7H7NO3|0|0|1200||L|619-25-0
+c_619250|0|3-Nitrobenzenemethanol|3-Nitrobenzenmetanol|C₇H₇NO₃|3-Nitrobenzenemethanol;C7H7NO3|organic|Molecular|S|0|0|Crystals|0|153.137|1.29619|||||||||||||||||F4F4F2|1|||C7H7NO3|0|0|1200||L|619-25-0
 c_619318|0|N,N-Dimethyl-3-nitroaniline|N,N-dimetil-3-nitroanilin|C₈H₁₀N₂O₂|N,N-Dimethyl-3-nitroaniline;C8H10N2O2|organic|Molecular|S|0|0|Crystals|0|166.18|1.31317|||||||||||||||||F4F4F2|1|||C8H10N2O2|0|0|1200||L|619-31-8
 c_619396|0|2-Octyldecanoic acid|2-Oktildekanoik asit|C₁₈H₃₆O₂|2-Octyldecanoic acid;C18H36O2|organic|Molecular|S|0|0|Crystals|0|284.484|0.84477|||||||||||||||||F4F4F2|1|||C18H36O2|0|0|1200||L|619-39-6
 c_619410|0|2-Bromo-1-(4-methylphenyl)ethanone|2-Bromo-1-(4-metilfenil)etanon|C₉H₉BrO|2-Bromo-1-(4-methylphenyl)ethanone;C9H9BrO|organic|Molecular|S|0|0|Crystals|0|213.074|1.2|||||||||||||||||F4F4F2|1|||C9H9BrO|0|0|1200||Ld|619-41-0
@@ -5314,7 +5314,7 @@ c_619589|0|4-Iodobenzoic acid|4-İodobenzoik asit|C₇H₅IO₂|4-Iodobenzoic ac
 c_619603|0|4-(Dimethylamino)phenol|4-(Dimetilamino)fenol|C₈H₁₁NO|4-(Dimethylamino)phenol;C8H11NO|organic|Molecular|S|0|0|Crystals|0|137.182|1.2|||||||||||||||||F4F4F2|1|||C8H11NO|0|0|1200||Ld|619-60-3
 c_619658|0|4-Cyanobenzoic acid|4-Sianobenzoik asit|C₈H₅NO₂|4-Cyanobenzoic acid;C8H5NO2|organic|Molecular|S|0|0|Crystals|0|147.133|1.2|||||||||||||||||F4F4F2|1|||C8H5NO2|0|0|1200||Ld|619-65-8
 c_619727|0|4-Nitrobenzonitrile|4-Nitrobenzonitril|C₇H₄N₂O₂|4-Nitrobenzonitrile;C7H4N2O2|organic|Molecular|S|0|0|Crystals|0|148.121|1.2|||||||||||||||||F4F4F2|1|||C7H4N2O2|0|0|1200||Ld|619-72-7
-c_619738|0|4-Nitrobenzenemethanol|4-Nitrobenzenemetanol|C₇H₇NO₃|4-Nitrobenzenemethanol;C7H7NO3|organic|Molecular|S|0|0|Crystals|0|153.137|1.2|||||||||||||||||F4F4F2|1|||C7H7NO3|0|0|1200||Ld|619-73-8
+c_619738|0|4-Nitrobenzenemethanol|4-Nitrobenzenmetanol|C₇H₇NO₃|4-Nitrobenzenemethanol;C7H7NO3|organic|Molecular|S|0|0|Crystals|0|153.137|1.2|||||||||||||||||F4F4F2|1|||C7H7NO3|0|0|1200||Ld|619-73-8
 c_619807|0|4-Nitrobenzamide|4-Nitrobenzamit|C₇H₆N₂O₃|4-Nitrobenzamide;C7H6N2O3|organic|Molecular|S|0|0|Crystals|0|166.136|1.2|||||||||||||||||F4F4F2|1|||C7H6N2O3|0|0|1200||Ld|619-80-7
 c_619841|0|4-(Dimethylamino)benzoic acid|4-(Dimetilamino)benzoik asit|C₉H₁₁NO₂|4-(Dimethylamino)benzoic acid;C9H11NO2|organic|Molecular|S|0|0|Crystals|0|165.192|1.2|||||||||||||||||F4F4F2|1|||C9H11NO2|0|0|1200||Ld|619-84-1
 c_619863|0|4-Ethoxybenzoic acid|4-Etoksibenzoik asit|C₉H₁₀O₃|4-Ethoxybenzoic acid;C9H10O3|organic|Molecular|S|0|0|Crystals|0|166.176|1.2|||||||||||||||||F4F4F2|1|||C9H10O3|0|0|1200||Ld|619-86-3
@@ -5325,7 +5325,7 @@ c_620166|0|1-Chloro-3-ethylbenzene|1-Kloro-3-etilbenzen|C₈H₉Cl|1-Chloro-3-et
 c_620199|0|1-(Chloromethyl)-3-methylbenzene|1-(Klorometil)-3-metilbenzen|C₈H₉Cl|1-(Chloromethyl)-3-methylbenzene;C8H9Cl|organic|Molecular|L|0|0|Powder|0|140.61|1.0642|195.5||||||||||||||||E8F2FA|0.18|||C8H9Cl|0|0|2000|293302|L|620-19-9
 c_620202|0|1-Chloro-3-(chloromethyl)benzene|1-Kloro-3-(klorometil)benzen|C₇H₆Cl₂|1-Chloro-3-(chloromethyl)benzene;C7H6Cl2|organic|Molecular|L|0|0|Powder|0|161.025|1.26952|216||||||||||||||||E8F2FA|0.18|||C7H6Cl2|0|0|2000|267320|L|620-20-2
 c_620224|0|3-Methylbenzonitrile|3-Metilbenzonitril|C₈H₇N|3-Methylbenzonitrile;C8H7N|organic|Molecular|L|0|0|Powder|0|117.151|1.03162|215||||||||||||||||E8F2FA|0.18|||C8H7N|0|0|2000|366682|L|620-22-4
-c_620246|0|3-Hydroxybenzenemethanol|3-Hidroksibenzenemetanol|C₇H₈O₂|3-Hydroxybenzenemethanol;C7H8O2|organic|Molecular|S|0|0|Crystals|0|124.139|1.16125|||||||||||||||||F4F4F2|1|||C7H8O2|0|0|1200||L|620-24-6
+c_620246|0|3-Hydroxybenzenemethanol|3-Hidroksibenzenmetanol|C₇H₈O₂|3-Hydroxybenzenemethanol;C7H8O2|organic|Molecular|S|0|0|Crystals|0|124.139|1.16125|||||||||||||||||F4F4F2|1|||C7H8O2|0|0|1200||L|620-24-6
 c_620326|0|Dibenzyl sulfone|Dibenzil sülfon|C₁₄H₁₄O₂S|Dibenzyl sulfone;C14H14O2S|organic|Molecular|S|0|0|Crystals|0|246.324|1.2|||||||||||||||||F4F4F2|1|||C14H14O2S|0|0|1200||Ld|620-32-6
 c_620406|0|Tribenzylamine|Tribenzilamin|C₂₁H₂₁N|Tribenzylamine;C21H21N|organic|Molecular|S|0|0|Crystals|0|287.406|0.991295|||||||||||||||||F4F4F2|1|||C21H21N|0|0|1200||L|620-40-6
 c_620428|0|Tris(p-tolyl) phosphite|Tris(p-tolil) fosfit|C₂₁H₂₁O₃P|Tris(p-tolyl) phosphite;C21H21O3P|organic|Molecular|S|0|0|Crystals|0|352.37|1.12803|||||||||||||||||F4F4F2|1|||C21H21O3P|0|0|1200||L|620-42-8
@@ -5341,7 +5341,7 @@ c_620939|0|4-Methyl-N-(4-methylphenyl)aniline|4-Metil-N-(4-metilfenil)anilin|C�
 c_620940|0|Bis(4-methylphenyl) sulfide|Bis(4-metilfenil) sülfür|C₁₄H₁₄S|Bis(4-methylphenyl) sulfide;C14H14S|organic|Molecular|S|0|0|Crystals|0|214.326|1.2|||||||||||||||||F4F4F2|1|||C14H14S|0|0|1200||Ld|620-94-0
 c_620995|0|N,N'-Bis(4-ethoxyphenyl)ethanimidamide monohydrochloride|N,N'-bis(4-etoksifenil)etanimidamit monohidroklorür|C₁₈H₂₃ClN₂O₂|N,N'-Bis(4-ethoxyphenyl)ethanimidamide monohydrochloride;C18H23ClN2O2|organic|Molecular|S|0|0|Crystals|0|334.844|1.2|||||||||||||||||F4F4F2|1|||C18H23ClN2O2|0|0|1200||Ld|620-99-5
 c_621034|0|2-Cyano-N-phenylacetamide|2-Siano-N-fenilasetamit|C₉H₈N₂O|2-Cyano-N-phenylacetamide;C9H8N2O|organic|Molecular|S|0|0|Crystals|0|160.176|1.2|||||||||||||||||F4F4F2|1|||C9H8N2O|0|0|1200||Ld|621-03-4
-c_621078|0|N-Hydroxy-N-(phenylmethyl)benzenemethanamine|N-hidroksi-N-(fenilmetil)benzenemetanamin|C₁₄H₁₅NO|N-Hydroxy-N-(phenylmethyl)benzenemethanamine;C14H15NO|organic|Molecular|S|0|0|Crystals|0|213.28|1.2|||||||||||||||||F4F4F2|1|||C14H15NO|0|0|1200||Ld|621-07-8
+c_621078|0|N-Hydroxy-N-(phenylmethyl)benzenemethanamine|N-hidroksi-N-(fenilmetil)benzenmetanamin|C₁₄H₁₅NO|N-Hydroxy-N-(phenylmethyl)benzenemethanamine;C14H15NO|organic|Molecular|S|0|0|Crystals|0|213.28|1.2|||||||||||||||||F4F4F2|1|||C14H15NO|0|0|1200||Ld|621-07-8
 c_621089|0|Dibenzyl sulfoxide|Dibenzil sülfoksit|C₁₄H₁₄OS|Dibenzyl sulfoxide;C14H14OS|organic|Molecular|S|0|0|Crystals|0|230.325|1.2|||||||||||||||||F4F4F2|1|||C14H14OS|0|0|1200||Ld|621-08-9
 c_621147|0|Diphenyl succinate|Difenil suksinat|C₁₆H₁₄O₄|Diphenyl succinate;C16H14O4|organic|Molecular|S|0|0|Crystals|0|270.284|1.2|||||||||||||||||F4F4F2|1|||C16H14O4|0|0|1200||Ld|621-14-7
 c_621238|0|1,3,5-Trimethoxybenzene|1,3,5-Trimetoksibenzen|C₉H₁₂O₃|1,3,5-Trimethoxybenzene;C9H12O3|organic|Molecular|S|0|0|Crystals|0|168.192|1.2|||||||||||||||||F4F4F2|1|||C9H12O3|0|0|1200||Ld|621-23-8
@@ -5349,8 +5349,8 @@ c_621294|0|1-Isocyanato-3-methylbenzene|1-İzosianato-3-metilbenzen|C₈H₇NO|1
 c_621329|0|1-Ethoxy-3-methylbenzene|1-Etoksi-3-metilbenzen|C₉H₁₂O|1-Ethoxy-3-methylbenzene;C9H12O|organic|Molecular|L|0|0|Powder|0|136.194|0.9492|192||||||||||||||||E8F2FA|0.18|||C9H12O|0|0|2000|300551|L|621-32-9
 c_621330|0|3-Ethoxyaniline|3-Etoksianilin|C₈H₁₁NO|3-Ethoxyaniline;C8H11NO|organic|Molecular|L|0|0|Powder|0|137.182|1|248||||||||||||||||E8F2FA|0.18|||C8H11NO|0|0|2000|334309|Ld|621-33-0
 c_621341|0|3-Ethoxyphenol|3-Etoksifenol|C₈H₁₀O₂|3-Ethoxyphenol;C8H10O2|organic|Molecular|L|0|0|Powder|0|138.166|1.10515|251||||||||||||||||E8F2FA|0.18|||C8H10O2|0|0|2000|333839|L|621-34-1
-c_621363|0|3-Methylbenzeneacetic acid|3-Metilbenzeneasetik asit|C₉H₁₀O₂|3-Methylbenzeneacetic acid;C9H10O2|organic|Molecular|S|0|0|Crystals|0|150.177|1.2|||||||||||||||||F4F4F2|1|||C9H10O2|0|0|1200||Ld|621-36-3
-c_621374|0|3-Hydroxybenzeneacetic acid|3-Hidroksibenzeneasetik asit|C₈H₈O₃|3-Hydroxybenzeneacetic acid;C8H8O3|organic|Molecular|S|0|0|Crystals|0|152.149|1.2|||||||||||||||||F4F4F2|1|||C8H8O3|0|0|1200||Ld|621-37-4
+c_621363|0|3-Methylbenzeneacetic acid|3-Metilbenzenasetik asit|C₉H₁₀O₂|3-Methylbenzeneacetic acid;C9H10O2|organic|Molecular|S|0|0|Crystals|0|150.177|1.2|||||||||||||||||F4F4F2|1|||C9H10O2|0|0|1200||Ld|621-36-3
+c_621374|0|3-Hydroxybenzeneacetic acid|3-Hidroksibenzenasetik asit|C₈H₈O₃|3-Hydroxybenzeneacetic acid;C8H8O3|organic|Molecular|S|0|0|Crystals|0|152.149|1.2|||||||||||||||||F4F4F2|1|||C8H8O3|0|0|1200||Ld|621-37-4
 c_621421|0|N-(3-Hydroxyphenyl)acetamide|N-(3-hidroksifenil)asetamit|C₈H₉NO₂|N-(3-Hydroxyphenyl)acetamide;C8H9NO2|organic|Molecular|S|0|0|Crystals|0|151.165|1.2|||||||||||||||||F4F4F2|1|||C8H9NO2|0|0|1200||Ld|621-42-1
 c_621590|0|3-Hydroxy-4-methoxybenzaldehyde|3-Hidroksi-4-metoksibenzaldehit|C₈H₈O₃|3-Hydroxy-4-methoxybenzaldehyde;C8H8O3|organic|Molecular|S|0|0|Crystals|0|152.149|1.19625|||||||||||||||||F4F4F2|1|||C8H8O3|0|0|1200||L|621-59-0
 c_621625|0|2-Chloro-1,1-diethoxyethane|2-Kloro-1,1-dietoksietan|C₆H₁₃ClO₂|2-Chloro-1,1-diethoxyethane;C6H13ClO2|organic|Molecular|L|0|0|Powder|0|152.618|1.01802|157||||||||||||||||E8F2FA|0.18|||C6H13ClO2|0|0|2000|248026|L|621-62-5
@@ -5371,7 +5371,7 @@ c_622388|0|(Ethylthio)benzene|(Etiltio)benzen|C₈H₁₀S|(Ethylthio)benzene;C8
 c_622399|0|2-Propylpyridine|2-Propilpiridin|C₈H₁₁N|2-Propylpyridine;C8H11N|organic|Molecular|L|0|0|Powder|0|121.183|0.91192|170||||||||||||||||E8F2FA|0.18|||C8H11N|0|0|2000|321804|L|622-39-9
 c_622424|0|(Nitromethyl)benzene|(Nitrometil)benzen|C₇H₇NO₂|(Nitromethyl)benzene;C7H7NO2|organic|Molecular|L|0|0|Powder|0|137.138|1.15962|236||||||||||||||||E8F2FA|0.18|||C7H7NO2|0|0|2000|326716|L|622-42-4
 c_622446|0|Phenylimidocarbonyl chloride|Fenilimidokarbonil klorür|C₇H₅Cl₂N|Phenylimidocarbonyl chloride;C7H5Cl2N|organic|Molecular|L|0|0|Powder|0|174.024|1.2815|210||||||||||||||||E8F2FA|0.18|||C7H5Cl2N|0|0|2000|244318|L|622-44-6
-c_622479|0|4-Methylbenzeneacetic acid|4-Metilbenzeneasetik asit|C₉H₁₀O₂|4-Methylbenzeneacetic acid;C9H10O2|organic|Molecular|S|0|0|Crystals|0|150.177|1.2|||||||||||||||||F4F4F2|1|||C9H10O2|0|0|1200||Ld|622-47-9
+c_622479|0|4-Methylbenzeneacetic acid|4-Metilbenzenasetik asit|C₉H₁₀O₂|4-Methylbenzeneacetic acid;C9H10O2|organic|Molecular|S|0|0|Crystals|0|150.177|1.2|||||||||||||||||F4F4F2|1|||C9H10O2|0|0|1200||Ld|622-47-9
 c_622571|0|N-Ethyl-4-methylaniline|N-etil-4-metilanilin|C₉H₁₃N|N-Ethyl-4-methylaniline;C9H13N|organic|Molecular|L|0|0|Powder|0|135.21|0.939116|217||||||||||||||||E8F2FA|0.18|||C9H13N|0|0|2000|319009|L|622-57-1
 c_622582|0|1-Isocyanato-4-methylbenzene|1-İzosianato-4-metilbenzen|C₈H₇NO|1-Isocyanato-4-methylbenzene;C8H7NO|organic|Molecular|L|0|0|Powder|0|133.15|1|187||||||||||||||||E8F2FA|0.18|||C8H7NO|0|0|2000|304117|Ld|622-58-2
 c_622606|0|1-Ethoxy-4-methylbenzene|1-Etoksi-4-metilbenzen|C₉H₁₂O|1-Ethoxy-4-methylbenzene;C9H12O|organic|Molecular|L|0|0|Powder|0|136.194|0.950918|195||||||||||||||||E8F2FA|0.18|||C9H12O|0|0|2000|302489|L|622-60-6
@@ -5386,7 +5386,7 @@ c_622935|0|3-(Diethylamino)-1-propanol|3-(Dietilamino)-1-propanol|C₇H₁₇NO|
 c_622980|0|1-Chloro-4-ethylbenzene|1-Kloro-4-etilbenzen|C₈H₉Cl|1-Chloro-4-ethylbenzene;C8H9Cl|organic|Molecular|L|0|0|Powder|0|140.61|1.04552|184.4||||||||||||||||E8F2FA|0.18|||C8H9Cl|0|0|2000|286355|L|622-98-0
 c_623007|0|4-Bromobenzonitrile|4-Bromobenzonitril|C₇H₄BrN|4-Bromobenzonitrile;C7H4BrN|organic|Molecular|S|0|0|Crystals|0|182.02|1.2|||||||||||||||||F4F4F2|1|||C7H4BrN|0|0|1200||Ld|623-00-7
 c_623030|0|4-Chlorobenzonitrile|4-Klorobenzonitril|C₇H₄ClN|4-Chlorobenzonitrile;C7H4ClN|organic|Molecular|S|0|0|Crystals|0|137.566|1.11332|||||||||||||||||F4F4F2|1|||C7H4ClN|0|0|1200||L|623-03-0
-c_623052|0|4-Hydroxybenzenemethanol|4-Hidroksibenzenemetanol|C₇H₈O₂|4-Hydroxybenzenemethanol;C7H8O2|organic|Molecular|S|0|0|Crystals|0|124.139|1.2|||||||||||||||||F4F4F2|1|||C7H8O2|0|0|1200||Ld|623-05-2
+c_623052|0|4-Hydroxybenzenemethanol|4-Hidroksibenzenmetanol|C₇H₈O₂|4-Hydroxybenzenemethanol;C7H8O2|organic|Molecular|S|0|0|Crystals|0|124.139|1.2|||||||||||||||||F4F4F2|1|||C7H8O2|0|0|1200||Ld|623-05-2
 c_623085|0|N,4-Dimethylaniline|N,4-dimetilanilin|C₈H₁₁N|N,4-Dimethylaniline;C8H11N|organic|Molecular|L|0|0|Powder|0|121.183|0.934855|215||||||||||||||||E8F2FA|0.18|||C8H11N|0|0|2000|354482|L|623-08-5
 c_623109|0|N-Hydroxy-4-methylaniline|N-hidroksi-4-metilanilin|C₇H₉NO|N-Hydroxy-4-methylaniline;C7H9NO|organic|Molecular|S|0|0|Crystals|0|123.155|1.2|||||||||||||||||F4F4F2|1|||C7H9NO|0|0|1200||Ld|623-10-9
 c_623121|0|4-Chloroanisole|4-Kloroanizol|C₇H₇ClO|4-Chloroanisole;C7H7ClO|organic|Molecular|L|0|0|Powder|0|142.582|1.2012|197.5||||||||||||||||E8F2FA|0.18|||C7H7ClO|0|0|2000|290480|L|623-12-1
@@ -5414,7 +5414,7 @@ c_623687|0|2-Butenoic anhydride|2-Bütenoik anhidrit|C₈H₁₀O₃|2-Butenoic 
 c_623701|0|Ethyl trans-2-butenoate|Etil trans-2-bütenoat|C₆H₁₀O₂|Ethyl trans-2-butenoate;C6H10O2|organic|Molecular|L|0|0|Powder|0|114.144|0.91752|140||||||||||||||||E8F2FA|0.18|||C6H10O2|0|0|2000|318520|L|623-70-1
 c_623712|0|Ethyl 3-chloropropanoate|Etil 3-kloropropanoat|C₅H₉ClO₂|Ethyl 3-chloropropanoate;C5H9ClO2|organic|Molecular|L|0|0|Powder|0|136.575|1.10862|162||||||||||||||||E8F2FA|0.18|||C5H9ClO2|0|0|2000|280382|L|623-71-2
 c_623734|0|Ethyl diazoacetate|Etil diazoasetat|C₄H₆N₂O₂|Ethyl diazoacetate;C4H6N2O2|organic|Molecular|L|0|0|Powder|0|114.104|1.08522|||||||||||||||||E8F2FA|0.18|||C4H6N2O2|0|0|2000||L|623-73-4
-c_623767|0|N,N'-Diethylurea|N,N'-dietilurea|C₅H₁₂N₂O|N,N'-Diethylurea;C5H12N2O|organic|Molecular|S|0|0|Crystals|0|116.164|1.04153|||||||||||||||||F4F4F2|1|||C5H12N2O|0|0|1200||L|623-76-7
+c_623767|0|N,N'-Diethylurea|N,N'-dietilüre|C₅H₁₂N₂O|N,N'-Diethylurea;C5H12N2O|organic|Molecular|S|0|0|Crystals|0|116.164|1.04153|||||||||||||||||F4F4F2|1|||C5H12N2O|0|0|1200||L|623-76-7
 c_623789|0|Ethyl ethylcarbamate|Etil etilkarbamat|C₅H₁₁NO₂|Ethyl ethylcarbamate;C5H11NO2|organic|Molecular|L|0|0|Powder|0|117.148|0.98132|176||||||||||||||||E8F2FA|0.18|||C5H11NO2|0|0|2000|337395|L|623-78-9
 c_623847|0|1,2-Propanediol diacetate|1,2-Propanediol diasetat|C₇H₁₂O₄|1,2-Propanediol diacetate;C7H12O4|organic|Molecular|L|0|0|Powder|0|160.169|1.0592|187||||||||||||||||E8F2FA|0.18|||C7H12O4|0|0|2000|252815|L|623-84-7
 c_623870|0|Glycerol 1,3-dinitrate|Gliserol 1,3-dinitrat|C₃H₆N₂O₇|Glycerol 1,3-dinitrate;C3H6N2O7|organic|Molecular|S|0|0|Crystals|0|182.088|1.5232|||||||||||||||||F4F4F2|1|||C3H6N2O7|0|0|1200||L|623-87-0
@@ -5456,7 +5456,7 @@ c_625365|0|3-Chloropropanoyl chloride|3-Kloropropanoil klorür|C₃H₄Cl₂O|3-
 c_625387|0|3-Butenoic acid|3-Bütenoik asit|C₄H₆O₂|3-Butenoic acid;C4H6O2|organic|Molecular|L|0|0|Powder|0|86.09|1.00912|169||||||||||||||||E8F2FA|0.18|||C4H6O2|0|0|2000|451960|L|625-38-7
 c_625489|0|2-Nitroethanol|2-Nitroetanol|C₂H₅NO₃|2-Nitroethanol;C2H5NO3|organic|Molecular|L|0|0|Powder|0|91.066|1.27015|195||||||||||||||||E8F2FA|0.18|||C2H5NO3|0|0|2000|452388|L|625-48-9
 c_625503|0|N-Ethylacetamide|N-etilasetamit|C₄H₉NO|N-Ethylacetamide;C4H9NO|organic|Molecular|L|0|0|Powder|0|87.122|0.9424|205||||||||||||||||E8F2FA|0.18|||C4H9NO|0|0|2000|482969|L|625-50-3
-c_625525|0|N-Ethylurea|N-etilurea|C₃H₈N₂O|N-Ethylurea;C3H8N2O|organic|Molecular|S|0|0|Crystals|0|88.11|1.21302|||||||||||||||||F4F4F2|1|||C3H8N2O|0|0|1200||L|625-52-5
+c_625525|0|N-Ethylurea|N-etilüre|C₃H₈N₂O|N-Ethylurea;C3H8N2O|organic|Molecular|S|0|0|Crystals|0|88.11|1.21302|||||||||||||||||F4F4F2|1|||C3H8N2O|0|0|1200||L|625-52-5
 c_625558|0|Isopropyl formate|İzopropil format|C₄H₈O₂|Isopropyl formate;C4H8O2|organic|Molecular|L|0|0|Powder|0|88.106|0.87282|68||||||||||||||||E8F2FA|0.18|||C4H8O2|0|0|2000|340740|L|625-55-8
 c_625569|0|Chloromethyl acetate|Klorometil asetat|C₃H₅ClO₂|Chloromethyl acetate;C3H5ClO2|organic|Molecular|L|0|0|Powder|0|108.521|1.1942|116||||||||||||||||E8F2FA|0.18|||C3H5ClO2|0|0|2000|315563|L|625-56-9
 c_625581|0|Ethyl nitrate|Etil nitrat|C₂H₅NO₃|Ethyl nitrate;C2H5NO3|organic|Molecular|L|0|0|Powder|0|91.066|1.10842|89||||||||||||||||E8F2FA|0.18|||C2H5NO3|0|0|2000|349957|L|625-58-1
@@ -5473,12 +5473,12 @@ c_625990|0|1-Chloro-3-iodobenzene|1-Kloro-3-iodobenzen|C₆H₄ClI|1-Chloro-3-io
 c_626006|0|m-Diiodobenzene|M-diiodobenzen|C₆H₄I₂|m-Diiodobenzene;C6H4I2|organic|Molecular|S|0|0|Crystals|0|329.907|2.4725|||||||||||||||||F4F4F2|1|||C6H4I2|0|0|1200||L|626-00-6
 c_626017|0|3-Iodoaniline|3-İodoanilin|C₆H₆IN|3-Iodoaniline;C6H6IN|organic|Molecular|S|0|0|Crystals|0|219.025|1.2|||||||||||||||||F4F4F2|1|||C6H6IN|0|0|1200||Ld|626-01-7
 c_626028|0|3-Iodophenol|3-İodofenol|C₆H₅IO|3-Iodophenol;C6H5IO|organic|Molecular|S|0|0|Crystals|0|220.009|1.2|||||||||||||||||F4F4F2|1|||C6H5IO|0|0|1200||Ld|626-02-8
-c_626040|0|1,3-Benzenedithiol|1,3-Benzeneditiol|C₆H₆S₂|1,3-Benzenedithiol;C6H6S2|organic|Molecular|S|0|0|Crystals|0|142.234|1.2|||||||||||||||||F4F4F2|1|||C6H6S2|0|0|1200||Ld|626-04-0
+c_626040|0|1,3-Benzenedithiol|1,3-Benzenditiol|C₆H₆S₂|1,3-Benzenedithiol;C6H6S2|organic|Molecular|S|0|0|Crystals|0|142.234|1.2|||||||||||||||||F4F4F2|1|||C6H6S2|0|0|1200||Ld|626-04-0
 c_626153|0|1,3-Bis(bromomethyl)benzene|1,3-Bis(bromometil)benzen|C₈H₈Br₂|1,3-Bis(bromomethyl)benzene;C8H8Br2|organic|Molecular|S|0|0|Crystals|0|263.96|1.95925|||||||||||||||||F4F4F2|1|||C8H8Br2|0|0|1200||L|626-15-3
 c_626164|0|1,3-Bis(chloromethyl)benzene|1,3-Bis(klorometil)benzen|C₈H₈Cl₂|1,3-Bis(chloromethyl)benzene;C8H8Cl2|organic|Molecular|S|0|0|Crystals|0|175.052|1.3022|||||||||||||||||F4F4F2|1|||C8H8Cl2|0|0|1200||L|626-16-4
 c_626175|0|m-Dicyanobenzene|M-disianobenzen|C₈H₄N₂|m-Dicyanobenzene;C8H4N2|organic|Molecular|S|0|0|Crystals|0|128.134|0.9924|||||||||||||||||F4F4F2|1|||C8H4N2|0|0|1200||L|626-17-5
-c_626186|0|1,3-Benzenedimethanol|1,3-Benzenedimetanol|C₈H₁₀O₂|1,3-Benzenedimethanol;C8H10O2|organic|Molecular|S|0|0|Crystals|0|138.166|1.16102|||||||||||||||||F4F4F2|1|||C8H10O2|0|0|1200||L|626-18-6
-c_626197|0|1,3-Benzenedicarboxaldehyde|1,3-Benzenedikarboksaldehit|C₈H₆O₂|1,3-Benzenedicarboxaldehyde;C8H6O2|organic|Molecular|S|0|0|Crystals|0|134.134|1.2|||||||||||||||||F4F4F2|1|||C8H6O2|0|0|1200||Ld|626-19-7
+c_626186|0|1,3-Benzenedimethanol|1,3-Benzendimetanol|C₈H₁₀O₂|1,3-Benzenedimethanol;C8H10O2|organic|Molecular|S|0|0|Crystals|0|138.166|1.16102|||||||||||||||||F4F4F2|1|||C8H10O2|0|0|1200||L|626-18-6
+c_626197|0|1,3-Benzenedicarboxaldehyde|1,3-Benzendikarboksaldehit|C₈H₆O₂|1,3-Benzenedicarboxaldehyde;C8H6O2|organic|Molecular|S|0|0|Crystals|0|134.134|1.2|||||||||||||||||F4F4F2|1|||C8H6O2|0|0|1200||Ld|626-19-7
 c_626233|0|Di-sec-butylamine|Di-sec-bütilamin|C₈H₁₉N|Di-sec-butylamine;C8H19N|organic|Molecular|L|0|0|Powder|0|129.247|0.75342|135||||||||||||||||E8F2FA|0.18|||C8H19N|0|0|2000|277896|L|626-23-3
 c_626266|0|Di-sec-butyl sulfide|Di-sec-bütil sülfür|C₈H₁₈S|Di-sec-butyl sulfide;C8H18S|organic|Molecular|L|0|0|Powder|0|146.292|0.83482|167||||||||||||||||E8F2FA|0.18|||C8H18S|0|0|2000|264766|L|626-26-6
 c_626277|0|Heptanoic anhydride|Heptanoik anhidrit|C₁₄H₂₆O₃|Heptanoic anhydride;C14H26O3|organic|Molecular|L|0|0|Powder|0|242.359|0.93212|269.5||||||||||||||||E8F2FA|0.18|||C14H26O3|0|0|2000|197035|L|626-27-7
@@ -5509,7 +5509,7 @@ c_626971|0|Pentanamide|Pentanamit|C₅H₁₁NO|Pentanamide;C5H11NO|organic|Mole
 c_627009|0|4-Chlorobutanoic acid|4-Klorobütanoik asit|C₄H₇ClO₂|4-Chlorobutanoic acid;C4H7ClO2|organic|Molecular|L|0|0|Powder|0|122.548|1.22362|||||||||||||||||E8F2FA|0.18|||C4H7ClO2|0|0|2000||L|627-00-9
 c_627032|0|Ethoxyacetic acid|Etoksiasetik asit|C₄H₈O₃|Ethoxyacetic acid;C4H8O3|organic|Molecular|L|0|0|Powder|0|104.105|1.10212|206.5||||||||||||||||E8F2FA|0.18|||C4H8O3|0|0|2000|405448|L|627-03-2
 c_627043|0|(Ethylthio)acetic acid|(Etiltio)asetik asit|C₄H₈O₂S|(Ethylthio)acetic acid;C4H8O2S|organic|Molecular|L|0|0|Powder|0|120.166|1.14972|||||||||||||||||E8F2FA|0.18|||C4H8O2S|0|0|2000||L|627-04-3
-c_627065|0|Propylurea|Propilurea|C₄H₁₀N₂O|Propylurea;C4H10N2O|organic|Molecular|S|0|0|Crystals|0|102.137|1.2|||||||||||||||||F4F4F2|1|||C4H10N2O|0|0|1200||Ld|627-06-5
+c_627065|0|Propylurea|Propilüre|C₄H₁₀N₂O|Propylurea;C4H10N2O|organic|Molecular|S|0|0|Crystals|0|102.137|1.2|||||||||||||||||F4F4F2|1|||C4H10N2O|0|0|1200||Ld|627-06-5
 c_627087|0|1-(1-Methylethoxy)propane|1-(1-Metiletoksi)propan|C₆H₁₄O|1-(1-Methylethoxy)propane;C6H14O|organic|Molecular|L|0|0|Powder|0|102.177|0.73702|82||||||||||||||||E8F2FA|0.18|||C6H14O|0|0|2000|305873|L|627-08-7
 c_627098|0|Propargyl acetate|Propargil asetat|C₅H₆O₂|Propargyl acetate;C5H6O2|organic|Molecular|L|0|0|Powder|0|98.101|0.99822|124||||||||||||||||E8F2FA|0.18|||C5H6O2|0|0|2000|356257|L|627-09-8
 c_627112|0|2-Chloroethyl chloroformate|2-Kloroetil kloroformat|C₃H₄Cl₂O₂|2-Chloroethyl chloroformate;C3H4Cl2O2|organic|Molecular|L|0|0|Powder|0|142.963|1.38472|155||||||||||||||||E8F2FA|0.18|||C3H4Cl2O2|0|0|2000|263545|L|627-11-2
@@ -5592,8 +5592,8 @@ c_631641|0|Dibromoacetic acid|Dibromoasetik asit|C₂H₂Br₂O₂|Dibromoacetic
 c_631652|0|2-Chloro-3-methylbutane|2-Kloro-3-metilbütan|C₅H₁₁Cl|2-Chloro-3-methylbutane;C5H11Cl|organic|Molecular|L|0|0|Powder|0|106.593|0.8782|92||||||||||||||||E8F2FA|0.18|||C5H11Cl|0|0|2000|301457|L|631-65-2
 c_631674|0|N,N-Dimethylthioacetamide|N,N-dimetiltioasetamit|C₄H₉NS|N,N-Dimethylthioacetamide;C4H9NS|organic|Molecular|S|0|0|Crystals|0|103.183|1.2|||||||||||||||||F4F4F2|1|||C4H9NS|0|0|1200||Ld|631-67-4
 c_632053|0|1,2,3-Tribromobutane|1,2,3-Tribromobütan|C₄H₇Br₃|1,2,3-Tribromobutane;C4H7Br3|organic|Molecular|L|0|0|Powder|0|294.812|2.19072|219||||||||||||||||E8F2FA|0.18|||C4H7Br3|0|0|2000|146904|L|632-05-3
-c_632144|0|Trimethylurea|Trimetilurea|C₄H₁₀N₂O|Trimethylurea;C4H10N2O|organic|Molecular|S|0|0|Crystals|0|102.137|1.19002|||||||||||||||||F4F4F2|1|||C4H10N2O|0|0|1200||L|632-14-4
-c_632224|0|Tetramethylurea|Tetrametilurea|C₅H₁₂N₂O|Tetramethylurea;C5H12N2O|organic|Molecular|L|0|0|Powder|0|116.164|0.96872|177.1||||||||||||||||E8F2FA|0.18|||C5H12N2O|0|0|2000|341087|L|632-22-4
+c_632144|0|Trimethylurea|Trimetilüre|C₄H₁₀N₂O|Trimethylurea;C4H10N2O|organic|Molecular|S|0|0|Crystals|0|102.137|1.19002|||||||||||||||||F4F4F2|1|||C4H10N2O|0|0|1200||L|632-14-4
+c_632224|0|Tetramethylurea|Tetrametilüre|C₅H₁₂N₂O|Tetramethylurea;C5H12N2O|organic|Molecular|L|0|0|Powder|0|116.164|0.96872|177.1||||||||||||||||E8F2FA|0.18|||C5H12N2O|0|0|2000|341087|L|632-22-4
 c_632257|0|2-Sulfobenzoic acid|2-Sülfobenzoik asit|C₇H₆O₅S|2-Sulfobenzoic acid;C7H6O5S|organic|Molecular|S|0|0|Crystals|0|202.18|1.2|||||||||||||||||F4F4F2|1|||C7H6O5S|0|0|1200||Ld|632-25-7
 c_632462|0|2,6-Dimethylbenzoic acid|2,6-Dimetilbenzoik asit|C₉H₁₀O₂|2,6-Dimethylbenzoic acid;C9H10O2|organic|Molecular|S|0|0|Crystals|0|150.177|1.2|||||||||||||||||F4F4F2|1|||C9H10O2|0|0|1200||Ld|632-46-2
 c_632791|0|4,5,6,7-Tetrabromo-1,3-isobenzofurandione|4,5,6,7-Tetrabromo-1,3-izobenzofurandion|C₈Br₄O₃|4,5,6,7-Tetrabromo-1,3-isobenzofurandione;C8Br4O3|organic|Molecular|S|0|0|Crystals|0|463.701|1.2|||||||||||||||||F4F4F2|1|||C8Br4O3|0|0|1200||Ld|632-79-1
@@ -5604,18 +5604,18 @@ c_634673|0|2,3,4-Trichloroaniline|2,3,4-Trikloroanilin|C₆H₄Cl₃N|2,3,4-Tric
 c_634902|0|1,2,3,5-Tetrachlorobenzene|1,2,3,5-Tetraklorobenzen|C₆H₂Cl₄|1,2,3,5-Tetrachlorobenzene;C6H2Cl4|organic|Molecular|S|0|0|Crystals|0|215.882|1.2|||||||||||||||||F4F4F2|1|||C6H2Cl4|0|0|1200||Ld|634-90-2
 c_634935|0|2,4,6-Trichloroaniline|2,4,6-Trikloroanilin|C₆H₄Cl₃N|2,4,6-Trichloroaniline;C6H4Cl3N|organic|Molecular|S|0|0|Crystals|0|196.455|1.2|||||||||||||||||F4F4F2|1|||C6H4Cl3N|0|0|1200||Ld|634-93-5
 c_634979|0|1H-Pyrrole-2-carboxylic acid|1H-pirrol-2-karboksilik asit|C₅H₅NO₂|1H-Pyrrole-2-carboxylic acid;C5H5NO2|organic|Molecular|S|0|0|Crystals|0|111.1|1.2|||||||||||||||||F4F4F2|1|||C5H5NO2|0|0|1200||Ld|634-97-9
-c_635109|0|Tetramethyl 1,2,4,5-benzenetetracarboxylate|Tetrametil 1,2,4,5-benzenetetrakarboksilat|C₁₄H₁₄O₈|Tetramethyl 1,2,4,5-benzenetetracarboxylate;C14H14O8|organic|Molecular|S|0|0|Crystals|0|310.258|1.2|||||||||||||||||F4F4F2|1|||C14H14O8|0|0|1200||Ld|635-10-9
+c_635109|0|Tetramethyl 1,2,4,5-benzenetetracarboxylate|Tetrametil 1,2,4,5-benzentetrakarboksilat|C₁₄H₁₄O₈|Tetramethyl 1,2,4,5-benzenetetracarboxylate;C14H14O8|organic|Molecular|S|0|0|Crystals|0|310.258|1.2|||||||||||||||||F4F4F2|1|||C14H14O8|0|0|1200||Ld|635-10-9
 c_635212|0|2-Amino-5-chlorobenzoic acid|2-Amino-5-klorobenzoik asit|C₇H₆ClNO₂|2-Amino-5-chlorobenzoic acid;C7H6ClNO2|organic|Molecular|S|0|0|Crystals|0|171.58|1.2|||||||||||||||||F4F4F2|1|||C7H6ClNO2|0|0|1200||Ld|635-21-2
 c_635223|0|4-Chloro-3-nitroaniline|4-Kloro-3-nitroanilin|C₆H₅ClN₂O₂|4-Chloro-3-nitroaniline;C6H5ClN2O2|organic|Molecular|S|0|0|Crystals|0|172.568|1.2|||||||||||||||||F4F4F2|1|||C6H5ClN2O2|0|0|1200||Ld|635-22-3
 c_635461|0|1,2,3,4-Tetrahydroquinoline|1,2,3,4-Tetrahidrokinolin|C₉H₁₁N|1,2,3,4-Tetrahydroquinoline;C9H11N|organic|Molecular|L|0|0|Powder|0|133.194|1.05882|250.5||||||||||||||||E8F2FA|0.18|||C9H11N|0|0|2000|345971|L|635-46-1
 c_635905|0|1-Phenyl-1H-pyrrole|1-Fenil-1H-pirrol|C₁₀H₉N|1-Phenyl-1H-pyrrole;C10H9N|organic|Molecular|S|0|0|Crystals|0|143.189|1.2|||||||||||||||||F4F4F2|1|||C10H9N|0|0|1200||Ld|635-90-5
 c_635938|0|5-Chloro-2-hydroxybenzaldehyde|5-Kloro-2-hidroksibenzaldehit|C₇H₅ClO₂|5-Chloro-2-hydroxybenzaldehyde;C7H5ClO2|organic|Molecular|S|0|0|Crystals|0|156.565|1.2|||||||||||||||||F4F4F2|1|||C7H5ClO2|0|0|1200||Ld|635-93-8
-c_636044|0|N-Phenylbenzenecarbothioamide|N-fenilbenzenekarbotioamit|C₁₃H₁₁NS|N-Phenylbenzenecarbothioamide;C13H11NS|organic|Molecular|S|0|0|Crystals|0|213.298|1.2|||||||||||||||||F4F4F2|1|||C13H11NS|0|0|1200||Ld|636-04-4
+c_636044|0|N-Phenylbenzenecarbothioamide|N-fenilbenzenkarbotioamit|C₁₃H₁₁NS|N-Phenylbenzenecarbothioamide;C13H11NS|organic|Molecular|S|0|0|Crystals|0|213.298|1.2|||||||||||||||||F4F4F2|1|||C13H11NS|0|0|1200||Ld|636-04-4
 c_636099|0|Diethyl terephthalate|Dietil tereftalat|C₁₂H₁₄O₄|Diethyl terephthalate;C12H14O4|organic|Molecular|S|0|0|Crystals|0|222.24|1.09894|||||||||||||||||F4F4F2|1|||C12H14O4|0|0|1200||L|636-09-9
 c_636282|0|1,2,4,5-Tetrabromobenzene|1,2,4,5-Tetrabromobenzen|C₆H₂Br₄|1,2,4,5-Tetrabromobenzene;C6H2Br4|organic|Molecular|S|0|0|Crystals|0|393.698|3.0722|||||||||||||||||F4F4F2|1|||C6H2Br4|0|0|1200||L|636-28-2
 c_636306|0|2,4,5-Trichloroaniline|2,4,5-Trikloroanilin|C₆H₄Cl₃N|2,4,5-Trichloroaniline;C6H4Cl3N|organic|Molecular|S|0|0|Crystals|0|196.455|1.2|||||||||||||||||F4F4F2|1|||C6H4Cl3N|0|0|1200||Ld|636-30-6
 c_636419|0|2-Methylpyrrole|2-Metilpirrol|C₅H₇N|2-Methylpyrrole;C5H7N|organic|Molecular|L|0|0|Powder|0|81.118|0.944615|148||||||||||||||||E8F2FA|0.18|||C5H7N|0|0|2000|456880|L|636-41-9
-c_636464|0|4-Hydroxy-1,3-benzenedicarboxylic acid|4-Hidroksi-1,3-benzenedikarboksilik asit|C₈H₆O₅|4-Hydroxy-1,3-benzenedicarboxylic acid;C8H6O5|organic|Molecular|S|0|0|Crystals|0|182.131|1.2|||||||||||||||||F4F4F2|1|||C8H6O5|0|0|1200||Ld|636-46-4
+c_636464|0|4-Hydroxy-1,3-benzenedicarboxylic acid|4-Hidroksi-1,3-benzendikarboksilik asit|C₈H₆O₅|4-Hydroxy-1,3-benzenedicarboxylic acid;C8H6O5|organic|Molecular|S|0|0|Crystals|0|182.131|1.2|||||||||||||||||F4F4F2|1|||C8H6O5|0|0|1200||Ld|636-46-4
 c_636533|0|Diethyl isophthalate|Dietil izoftalat|C₁₂H₁₄O₄|Diethyl isophthalate;C12H14O4|organic|Molecular|L|0|0|Powder|0|222.24|1.12392|298||||||||||||||||E8F2FA|0.18|||C12H14O4|0|0|2000|226157|L|636-53-3
 c_636726|0|2-Thiophenemethanol|2-Tiofenemetanol|C₅H₆OS|2-Thiophenemethanol;C5H6OS|organic|Molecular|L|0|0|Powder|0|114.162|1.20532|207||||||||||||||||E8F2FA|0.18|||C5H6OS|0|0|2000|370116|L|636-72-6
 c_636828|0|1-Cyclohexene-1-carboxylic acid|1-Siklohekzen-1-karboksilik asit|C₇H₁₀O₂|1-Cyclohexene-1-carboxylic acid;C7H10O2|organic|Molecular|S|0|0|Crystals|0|126.155|1.1092|||||||||||||||||F4F4F2|1|||C7H10O2|0|0|1200||L|636-82-8
@@ -5650,7 +5650,7 @@ c_638653|0|Octadecanenitrile|Oktadekanenitril|C₁₈H₃₅N|Octadecanenitrile;
 c_638664|0|Stearaldehyde|Stearaldehit|C₁₈H₃₆O|Stearaldehyde;C18H36O|organic|Molecular|S|0|0|Crystals|0|268.485|1.2|||||||||||||||||F4F4F2|1|||C18H36O|0|0|1200||Ld|638-66-4
 c_639996|0|1,3-Elemadien-11-ol|1,3-Elemadien-11-ol|C₁₅H₂₆O|1,3-Elemadien-11-ol;C15H26O|organic|Molecular|S|0|0|Crystals|0|222.372|0.934518|||||||||||||||||F4F4F2|1|||C15H26O|0|0|1200||L|639-99-6
 c_640197|0|2-Fluoroacetamide|2-Floroasetamit|C₂H₄FNO|2-Fluoroacetamide;C2H4FNO|organic|Molecular|S|0|0|Crystals|0|77.0584|1.2|||||||||||||||||F4F4F2|1|||C2H4FNO|0|0|1200||Ld|640-19-7
-c_640619|0|N,4-Dimethylbenzenesulfonamide|N,4-dimetilbenzenesülfonamit|C₈H₁₁NO₂S|N,4-Dimethylbenzenesulfonamide;C8H11NO2S|organic|Molecular|S|0|0|Crystals|0|185.241|1.34025|||||||||||||||||F4F4F2|1|||C8H11NO2S|0|0|1200||L|640-61-9
+c_640619|0|N,4-Dimethylbenzenesulfonamide|N,4-dimetilbenzensülfonamit|C₈H₁₁NO₂S|N,4-Dimethylbenzenesulfonamide;C8H11NO2S|organic|Molecular|S|0|0|Crystals|0|185.241|1.34025|||||||||||||||||F4F4F2|1|||C8H11NO2S|0|0|1200||L|640-61-9
 c_641065|0|Triacetamide|Triasetamit|C₆H₉NO₃|Triacetamide;C6H9NO3|organic|Molecular|S|0|0|Crystals|0|143.142|1.2|||||||||||||||||F4F4F2|1|||C6H9NO3|0|0|1200||Ld|641-06-5
 c_641361|0|Apocodeine|Apokodein|C₁₈H₁₉NO₂|Apocodeine;C18H19NO2|organic|Molecular|S|0|0|Crystals|0|281.355|1.2|||||||||||||||||F4F4F2|1|||C18H19NO2|0|0|1200||Ld|641-36-1
 c_641703|0|4-Nitro-1,3-isobenzofurandione|4-Nitro-1,3-izobenzofurandion|C₈H₃NO₅|4-Nitro-1,3-isobenzofurandione;C8H3NO5|organic|Molecular|S|0|0|Crystals|0|193.114|1.2|||||||||||||||||F4F4F2|1|||C8H3NO5|0|0|1200||Ld|641-70-3
@@ -5661,14 +5661,14 @@ c_643287|0|2-Isopropylaniline|2-İzopropilanilin|C₉H₁₃N|2-Isopropylaniline
 c_643583|0|2-Methylbiphenyl|2-Metilbifenil|C₁₃H₁₂|2-Methylbiphenyl;C13H12|organic|Molecular|L|0|0|Powder|0|168.239|1.01132|258||||||||||||||||E8F2FA|0.18|||C13H12|0|0|2000|277826|L|643-58-3
 c_643607|0|Anhalamine|Anhalamin|C₁₁H₁₅NO₃|Anhalamine;C11H15NO3|organic|Molecular|S|0|0|Crystals|0|209.245|1.2|||||||||||||||||F4F4F2|1|||C11H15NO3|0|0|1200||Ld|643-60-7
 c_643652|0|(3-Methylphenyl)phenylmethanone|(3-Metilfenil)fenilmetanon|C₁₄H₁₂O|(3-Methylphenyl)phenylmethanone;C14H12O|organic|Molecular|L|0|0|Powder|0|196.249|1.0952|317||||||||||||||||E8F2FA|0.18|||C14H12O|0|0|2000|264629|L|643-65-2
-c_643798|0|1,2-Benzenedicarboxaldehyde|1,2-Benzenedikarboksaldehit|C₈H₆O₂|1,2-Benzenedicarboxaldehyde;C8H6O2|organic|Molecular|S|0|0|Crystals|0|134.134|1.2|||||||||||||||||F4F4F2|1|||C8H6O2|0|0|1200||Ld|643-79-8
+c_643798|0|1,2-Benzenedicarboxaldehyde|1,2-Benzendikarboksaldehit|C₈H₆O₂|1,2-Benzenedicarboxaldehyde;C8H6O2|organic|Molecular|S|0|0|Crystals|0|134.134|1.2|||||||||||||||||F4F4F2|1|||C8H6O2|0|0|1200||Ld|643-79-8
 c_643845|0|Malvidin chloride|Malvidin klorür|C₁₇H₁₅ClO₇|Malvidin chloride;C17H15ClO7|organic|Molecular|S|0|0|Crystals|0|366.75|1.2|||||||||||||||||F4F4F2|1|||C17H15ClO7|0|0|1200||Ld|643-84-5
 c_643936|0|3-Methylbiphenyl|3-Metilbifenil|C₁₃H₁₂|3-Methylbiphenyl;C13H12|organic|Molecular|L|0|0|Powder|0|168.239|1.01822|274||||||||||||||||E8F2FA|0.18|||C13H12|0|0|2000|286195|L|643-93-6
 c_644086|0|4-Methylbiphenyl|4-Metilbifenil|C₁₃H₁₂|4-Methylbiphenyl;C13H12|organic|Molecular|S|0|0|Crystals|0|168.239|1.01527|||||||||||||||||F4F4F2|1|||C13H12|0|0|1200||L|644-08-6
 c_644315|0|Acetyl benzoylperoxide|Asetil benzoilperoksit|C₉H₈O₄|Acetyl benzoylperoxide;C9H8O4|organic|Molecular|S|0|0|Crystals|0|180.159|1.2|||||||||||||||||F4F4F2|1|||C9H8O4|0|0|1200||Ld|644-31-5
 c_644326|0|Dibenzoyl disulfide|Dibenzoil disülfür|C₁₄H₁₀O₂S₂|Dibenzoyl disulfide;C14H10O2S2|organic|Molecular|S|0|0|Crystals|0|274.352|1.2|||||||||||||||||F4F4F2|1|||C14H10O2S2|0|0|1200||Ld|644-32-6
 c_644359|0|2-Propylphenol|2-Propilfenol|C₉H₁₂O|2-Propylphenol;C9H12O|organic|Molecular|L|0|0|Powder|0|136.194|1.0152|221||||||||||||||||E8F2FA|0.18|||C9H12O|0|0|2000|319289|L|644-35-9
-c_644360|0|2-Methylbenzeneacetic acid|2-Metilbenzeneasetik asit|C₉H₁₀O₂|2-Methylbenzeneacetic acid;C9H10O2|organic|Molecular|S|0|0|Crystals|0|150.177|1.2|||||||||||||||||F4F4F2|1|||C9H10O2|0|0|1200||Ld|644-36-0
+c_644360|0|2-Methylbenzeneacetic acid|2-Metilbenzenasetik asit|C₉H₁₀O₂|2-Methylbenzeneacetic acid;C9H10O2|organic|Molecular|S|0|0|Crystals|0|150.177|1.2|||||||||||||||||F4F4F2|1|||C9H10O2|0|0|1200||Ld|644-36-0
 c_644644|0|Dimetilan|Dimetilan|C₁₀H₁₆N₄O₃|Dimetilan;C10H16N4O3|organic|Molecular|S|0|0|Crystals|0|240.263|1.2|||||||||||||||||F4F4F2|1|||C10H16N4O3|0|0|1200||Ld|644-64-4
 c_644973|0|Phenylphosphonous dichloride|Fenilfosfonous diklorür|C₆H₅Cl₂P|Phenylphosphonous dichloride;C6H5Cl2P|organic|Molecular|L|0|0|Powder|0|178.98|1.3562|236||||||||||||||||E8F2FA|0.18|||C6H5Cl2P|0|0|2000|250337|L|644-97-3
 c_645001|0|1-Iodo-3-nitrobenzene|1-İodo-3-nitrobenzen|C₆H₄INO₂|1-Iodo-3-nitrobenzene;C6H4INO2|organic|Molecular|S|0|0|Crystals|0|249.007|1.94775|||||||||||||||||F4F4F2|1|||C6H4INO2|0|0|1200||L|645-00-1
@@ -5678,7 +5678,7 @@ c_645136|0|1-(4-Isopropylphenyl)ethanone|1-(4-İzopropilfenil)etanon|C₁₁H₁
 c_645363|0|2,2-Diethoxyethanamine|2,2-Dietoksietanamin|C₆H₁₅NO₂|2,2-Diethoxyethanamine;C6H15NO2|organic|Molecular|L|0|0|Powder|0|133.191|0.915925|163||||||||||||||||E8F2FA|0.18|||C6H15NO2|0|0|2000|288167|L|645-36-3
 c_645410|0|Triisopentylamine|Triizopentilamin|C₁₅H₃₃N|Triisopentylamine;C15H33N|organic|Molecular|S|0|0|Crystals|0|227.436|0.78482|||||||||||||||||F4F4F2|1|||C15H33N|0|0|1200||L|645-41-0
 c_645567|0|4-Propylphenol|4-Propilfenol|C₉H₁₂O|4-Propylphenol;C9H12O|organic|Molecular|L|0|0|Powder|0|136.194|1.0092|232||||||||||||||||E8F2FA|0.18|||C9H12O|0|0|2000|326396|L|645-56-7
-c_645590|0|Benzenepropanenitrile|Benzenepropanenitril|C₉H₉N|Benzenepropanenitrile;C9H9N|organic|Molecular|L|0|0|Powder|0|131.178|1.00162|261||||||||||||||||E8F2FA|0.18|||C9H9N|0|0|2000|358331|L|645-59-0
+c_645590|0|Benzenepropanenitrile|Benzenpropanenitril|C₉H₉N|Benzenepropanenitrile;C9H9N|organic|Molecular|L|0|0|Powder|0|131.178|1.00162|261||||||||||||||||E8F2FA|0.18|||C9H9N|0|0|2000|358331|L|645-59-0
 c_645669|0|Dodecanoic anhydride|Dodekanoik anhidrit|C₂₄H₄₆O₃|Dodecanoic anhydride;C24H46O3|organic|Molecular|S|0|0|Crystals|0|382.629|0.85337|||||||||||||||||F4F4F2|1|||C24H46O3|0|0|1200||L|645-66-9
 c_646015|0|3-(Methylthio)propanoic acid|3-(Metiltio)propanoik asit|C₄H₈O₂S|3-(Methylthio)propanoic acid;C4H8O2S|organic|Molecular|L|0|0|Powder|0|120.166|1|||||||||||||||||E8F2FA|0.18|||C4H8O2S|0|0|2000||Ld|646-01-5
 c_646060|0|1,3-Dioxolane|1,3-Dioksolan|C₃H₆O₂|1,3-Dioxolane;C3H6O2|organic|Molecular|L|0|0|Powder|0|74.079|1.0602|75.3||||||||||||||||E8F2FA|0.18|||C3H6O2|0|0|2000|413931|L|646-06-0
@@ -5691,7 +5691,7 @@ c_646253|0|1,10-Decanediamine|1,10-Dekanediamin|C₁₀H₂₄N₂|1,10-Decanedi
 c_650511|0|Sodium trichloroacetate|Sodyum trikloroasetat|C₂Cl₃NaO₂|Sodium trichloroacetate;C2Cl3NaO2|organic|Molecular|S|0|0|Crystals|0|185.36|1.2|||||||||||||||||F4F4F2|1|||C2Cl3NaO2|0|0|1200||Ld|650-51-1
 c_650691|0|β-Citraurin|β-Sitraurin|C₃₀H₄₀O₂|β-Citraurin;C30H40O2|organic|Molecular|S|0|0|Crystals|0|432.648|1.2|||||||||||||||||F4F4F2|1|||C30H40O2|0|0|1200||Ld|650-69-1
 c_653372|0|Pentafluorobenzaldehyde|Pentaflorobenzaldehit|C₇HF₅O|Pentafluorobenzaldehyde;C7HF5O|organic|Molecular|L|0|0|Powder|0|196.076|1|167||||||||||||||||E8F2FA|0.18|||C7HF5O|0|0|2000|197542|Ld|653-37-2
-c_654422|0|2,6-Dimethyl-1,4-benzenediol|2,6-Dimetil-1,4-benzenediol|C₈H₁₀O₂|2,6-Dimethyl-1,4-benzenediol;C8H10O2|organic|Molecular|S|0|0|Crystals|0|138.166|1.2|||||||||||||||||F4F4F2|1|||C8H10O2|0|0|1200||Ld|654-42-2
+c_654422|0|2,6-Dimethyl-1,4-benzenediol|2,6-Dimetil-1,4-benzendiol|C₈H₁₀O₂|2,6-Dimethyl-1,4-benzenediol;C8H10O2|organic|Molecular|S|0|0|Crystals|0|138.166|1.2|||||||||||||||||F4F4F2|1|||C8H10O2|0|0|1200||Ld|654-42-2
 c_655867|0|2,3-Phenazinediamine|2,3-Fenazinediamin|C₁₂H₁₀N₄|2,3-Phenazinediamine;C12H10N4|organic|Molecular|S|0|0|Crystals|0|210.24|1.2|||||||||||||||||F4F4F2|1|||C12H10N4|0|0|1200||Ld|655-86-7
 c_660684|0|Diethylamine hydrochloride|Dietilamin hidroklorür|C₄H₁₂ClN|Diethylamine hydrochloride;C4H12ClN|organic|Molecular|S|0|0|Crystals|0|109.597|1.04772|||||||||||||||||F4F4F2|1|||C4H12ClN|0|0|1200||L|660-68-4
 c_661110|0|1-Fluoroheptane|1-Floroheptan|C₇H₁₅F|1-Fluoroheptane;C7H15F|organic|Molecular|L|0|0|Powder|0|118.195|0.80622|122||||||||||||||||E8F2FA|0.18|||C7H15F|0|0|2000|294201|L|661-11-0
@@ -5702,7 +5702,7 @@ c_670542|0|Tetracyanoethene|Tetrasianoeten|C₆N₄|Tetracyanoethene;C6N4|organi
 c_670962|0|2-Phenyl-1H-imidazole|2-Fenil-1H-imidazol|C₉H₈N₂|2-Phenyl-1H-imidazole;C9H8N2|organic|Molecular|S|0|0|Crystals|0|144.177|1.2|||||||||||||||||F4F4F2|1|||C9H8N2|0|0|1200||Ld|670-96-2
 c_672139|0|2-Hydroxy-5-methoxybenzaldehyde|2-Hidroksi-5-metoksibenzaldehit|C₈H₈O₃|2-Hydroxy-5-methoxybenzaldehyde;C8H8O3|organic|Molecular|L|0|0|Powder|0|152.149|1|247.5||||||||||||||||E8F2FA|0.18|||C8H8O3|0|0|2000|301134|Ld|672-13-9
 c_673223|0|2-Hydroxy-4-methoxybenzaldehyde|2-Hidroksi-4-metoksibenzaldehit|C₈H₈O₃|2-Hydroxy-4-methoxybenzaldehyde;C8H8O3|organic|Molecular|S|0|0|Crystals|0|152.149|1.2|||||||||||||||||F4F4F2|1|||C8H8O3|0|0|1200||Ld|673-22-3
-c_673314|0|Benzenepropanol carbamate|Benzenepropanol karbamat|C₁₀H₁₃NO₂|Benzenepropanol carbamate;C10H13NO2|organic|Molecular|S|0|0|Crystals|0|179.219|1.2|||||||||||||||||F4F4F2|1|||C10H13NO2|0|0|1200||Ld|673-31-4
+c_673314|0|Benzenepropanol carbamate|Benzenpropanol karbamat|C₁₀H₁₃NO₂|Benzenepropanol carbamate;C10H13NO2|organic|Molecular|S|0|0|Crystals|0|179.219|1.2|||||||||||||||||F4F4F2|1|||C10H13NO2|0|0|1200||Ld|673-31-4
 c_673325|0|1-Propynylbenzene|1-Propinilbenzen|C₉H₈|1-Propynylbenzene;C9H8|organic|Molecular|L|0|0|Powder|0|116.163|0.94215|186||||||||||||||||E8F2FA|0.18|||C9H8|0|0|2000|347832|L|673-32-5
 c_675092|0|4,6-Dimethyl-2H-pyran-2-one|4,6-Dimetil-2H-piran-2-on|C₇H₈O₂|4,6-Dimethyl-2H-pyran-2-one;C7H8O2|organic|Molecular|S|0|0|Crystals|0|124.139|1.2|||||||||||||||||F4F4F2|1|||C7H8O2|0|0|1200||Ld|675-09-2
 c_675149|0|Cyanuric fluoride|Sianurik florür|C₃F₃N₃|Cyanuric fluoride;C3F3N3|organic|Molecular|L|0|0|Powder|0|135.049|1|72.8||||||||||||||||E8F2FA|0.18|||C3F3N3|0|0|2000|225426|Ld|675-14-9
@@ -5719,7 +5719,7 @@ c_685734|0|D-Galacturonic acid|D-galakturonik asit|C₆H₁₀O₇|D-Galacturoni
 c_685870|0|Diethyl 2-bromomalonate|Dietil 2-bromomalonat|C₇H₁₁BrO₄|Diethyl 2-bromomalonate;C7H11BrO4|organic|Molecular|L|0|0|Powder|0|239.065|1.40222|231||||||||||||||||E8F2FA|0.18|||C7H11BrO4|0|0|2000|185578|L|685-87-0
 c_685916|0|N,N-Diethylacetamide|N,N-dietilasetamit|C₆H₁₃NO|N,N-Diethylacetamide;C6H13NO|organic|Molecular|L|0|0|Powder|0|115.176|0.913017|199||||||||||||||||E8F2FA|0.18|||C6H13NO|0|0|2000|360745|L|685-91-6
 c_688711|0|Tripropyl borate|Tripropil borat|C₉H₂₁BO₃|Tripropyl borate;C9H21BO3|organic|Molecular|L|0|0|Powder|0|188.074|0.85762|178.7||||||||||||||||E8F2FA|0.18|||C9H21BO3|0|0|2000|211421|L|688-71-1
-c_689112|0|sec-Butylurea|Sec-bütilurea|C₅H₁₂N₂O|sec-Butylurea;C5H12N2O|organic|Molecular|S|0|0|Crystals|0|116.164|1.2|||||||||||||||||F4F4F2|1|||C5H12N2O|0|0|1200||Ld|689-11-2
+c_689112|0|sec-Butylurea|Sec-bütilüre|C₅H₁₂N₂O|sec-Butylurea;C5H12N2O|organic|Molecular|S|0|0|Crystals|0|116.164|1.2|||||||||||||||||F4F4F2|1|||C5H12N2O|0|0|1200||Ld|689-11-2
 c_689894|0|Methyl trans,trans-2,4-hexadienoate|Metil trans,trans-2,4-hekzadienoat|C₇H₁₀O₂|Methyl trans,trans-2,4-hexadienoate;C7H10O2|organic|Molecular|L|0|0|Powder|0|126.155|0.97772|180||||||||||||||||E8F2FA|0.18|||C7H10O2|0|0|2000|316097|L|689-89-4
 c_690028|0|Dimethylperoxide|Dimetilperoksit|C₂H₆O₂|Dimethylperoxide;C2H6O2|organic|Molecular|A|1|0|Powder|256|62.068|1|||||||||||||||||F4F4F2|1|||C2H6O2|0|0|1200||L|690-02-8
 c_690379|0|2,4,4-Trimethyl-2-pentanol|2,4,4-Trimetil-2-pentanol|C₈H₁₈O|2,4,4-Trimethyl-2-pentanol;C8H18O|organic|Molecular|L|0|0|Powder|0|130.231|0.82252|146||||||||||||||||E8F2FA|0.18|||C8H18O|0|0|2000|283229|L|690-37-9
@@ -5751,7 +5751,7 @@ c_696300|0|4-Isopropylpyridine|4-İzopropilpiridin|C₈H₁₁N|4-Isopropylpyrid
 c_696446|0|N,3-Dimethylaniline|N,3-dimetilanilin|C₈H₁₁N|N,3-Dimethylaniline;C8H11N|organic|Molecular|L|0|0|Powder|0|121.183|0.96602|206.5||||||||||||||||E8F2FA|0.18|||C8H11N|0|0|2000|348310|L|696-44-6
 c_696593|0|Tetrahydro-2,5-dimethoxyfuran|Tetrahidro-2,5-dimetoksifuran|C₆H₁₂O₃|Tetrahydro-2,5-dimethoxyfuran;C6H12O3|organic|Molecular|L|0|0|Powder|0|132.159|1.0225|145.7||||||||||||||||E8F2FA|0.18|||C6H12O3|0|0|2000|278897|L|696-59-3
 c_696628|0|1-Iodo-4-methoxybenzene|1-İodo-4-metoksibenzen|C₇H₇IO|1-Iodo-4-methoxybenzene;C7H7IO|organic|Molecular|S|0|0|Crystals|0|234.036|1.2|||||||||||||||||F4F4F2|1|||C7H7IO|0|0|1200||Ld|696-62-8
-c_696639|0|4-Methoxybenzenethiol|4-Metoksibenzenetiol|C₇H₈OS|4-Methoxybenzenethiol;C7H8OS|organic|Molecular|L|0|0|Powder|0|140.2|1.13133|228||||||||||||||||E8F2FA|0.18|||C7H8OS|0|0|2000|314559|L|696-63-9
+c_696639|0|4-Methoxybenzenethiol|4-Metoksibenzentiol|C₇H₈OS|4-Methoxybenzenethiol;C7H8OS|organic|Molecular|L|0|0|Powder|0|140.2|1.13133|228||||||||||||||||E8F2FA|0.18|||C7H8OS|0|0|2000|314559|L|696-63-9
 c_696719|0|Cyclooctanol|Siklooktanol|C₈H₁₆O|Cyclooctanol;C8H16O|organic|Molecular|S|0|0|Crystals|0|128.215|0.97402|||||||||||||||||F4F4F2|1|||C8H16O|0|0|1200||L|696-71-9
 c_697110|0|Hexafluorocyclobutene|Hekzaflorosiklobüten|C₄F₆|Hexafluorocyclobutene;C4F6|organic|Molecular|A|1|0|Powder|256|162.034|1|||||||||||||||||F4F4F2|1|||C4F6|0|0|1200||Ld|697-11-0
 c_697825|0|2,3,5-Trimethylphenol|2,3,5-Trimetilfenol|C₉H₁₂O|2,3,5-Trimethylphenol;C9H12O|organic|Molecular|S|0|0|Crystals|0|136.194|1.2|||||||||||||||||F4F4F2|1|||C9H12O|0|0|1200||Ld|697-82-5
@@ -5760,20 +5760,20 @@ c_698011|0|2-Chloro-N,N-dimethylaniline|2-Kloro-N,N-dimetilanilin|C₈H₁₀ClN
 c_698635|0|5-Nitro-2-furancarboxaldehyde|5-Nitro-2-furankarboksaldehit|C₅H₃NO₄|5-Nitro-2-furancarboxaldehyde;C5H3NO4|organic|Molecular|S|0|0|Crystals|0|141.082|1.2|||||||||||||||||F4F4F2|1|||C5H3NO4|0|0|1200||Ld|698-63-5
 c_698691|0|4-Chloro-N,N-dimethylaniline|4-Kloro-N,N-dimetilanilin|C₈H₁₀ClN|4-Chloro-N,N-dimethylaniline;C8H10ClN|organic|Molecular|S|0|0|Crystals|0|155.625|1.04801|||||||||||||||||F4F4F2|1|||C8H10ClN|0|0|1200||L|698-69-1
 c_698760|0|Tetrahydro-6-propyl-2H-pyran-2-one|Tetrahidro-6-propil-2H-piran-2-on|C₈H₁₄O₂|Tetrahydro-6-propyl-2H-pyran-2-one;C8H14O2|organic|Molecular|L|0|0|Powder|0|142.198|1|||||||||||||||||E8F2FA|0.18|||C8H14O2|0|0|2000||Ld|698-76-0
-c_699025|0|4-Methylbenzeneethanol|4-Metilbenzeneetanol|C₉H₁₂O|4-Methylbenzeneethanol;C9H12O|organic|Molecular|L|0|0|Powder|0|136.194|1.00282|240||||||||||||||||E8F2FA|0.18|||C9H12O|0|0|2000|331565|L|699-02-5
+c_699025|0|4-Methylbenzeneethanol|4-Metilbenzenetanol|C₉H₁₂O|4-Methylbenzeneethanol;C9H12O|organic|Molecular|L|0|0|Powder|0|136.194|1.00282|240||||||||||||||||E8F2FA|0.18|||C9H12O|0|0|2000|331565|L|699-02-5
 c_699172|0|4-(2-Furanyl)-2-butanone|4-(2-Furanil)-2-bütanon|C₈H₁₀O₂|4-(2-Furanyl)-2-butanone;C8H10O2|organic|Molecular|L|0|0|Powder|0|138.166|1.03612|203||||||||||||||||E8F2FA|0.18|||C8H10O2|0|0|2000|303267|L|699-17-2
 c_699309|0|3,3,4,4-Tetrafluorodihydro-2,5-furandione|3,3,4,4-Tetraflorodihidro-2,5-furandion|C₄F₄O₃|3,3,4,4-Tetrafluorodihydro-2,5-furandione;C4F4O3|organic|Molecular|L|0|0|Powder|0|172.035|1.62092|54.5||||||||||||||||E8F2FA|0.18|||C4F4O3|0|0|2000|167601|L|699-30-9
 c_699989|0|2,3-Pyridinedicarboxylic acid anhydride|2,3-Piridinedikarboksilik asit anhidrit|C₇H₃NO₃|2,3-Pyridinedicarboxylic acid anhydride;C7H3NO3|organic|Molecular|S|0|0|Crystals|0|149.105|1.2|||||||||||||||||F4F4F2|1|||C7H3NO3|0|0|1200||Ld|699-98-9
-c_700130|0|2,3,5-Trimethyl-1,4-benzenediol|2,3,5-Trimetil-1,4-benzenediol|C₉H₁₂O₂|2,3,5-Trimethyl-1,4-benzenediol;C9H12O2|organic|Molecular|S|0|0|Crystals|0|152.193|1.2|||||||||||||||||F4F4F2|1|||C9H12O2|0|0|1200||Ld|700-13-0
+c_700130|0|2,3,5-Trimethyl-1,4-benzenediol|2,3,5-Trimetil-1,4-benzendiol|C₉H₁₂O₂|2,3,5-Trimethyl-1,4-benzenediol;C9H12O2|organic|Molecular|S|0|0|Crystals|0|152.193|1.2|||||||||||||||||F4F4F2|1|||C9H12O2|0|0|1200||Ld|700-13-0
 c_700163|0|Perfluoropyridine|Perfloropiridin|C₅F₅N|Perfluoropyridine;C5F5N|organic|Molecular|L|0|0|Powder|0|169.054|1|83||||||||||||||||E8F2FA|0.18|||C5F5N|0|0|2000|185392|Ld|700-16-3
 c_700889|0|Cyclopentylbenzene|Siklopentilbenzen|C₁₁H₁₄|Cyclopentylbenzene;C11H14|organic|Molecular|L|0|0|Powder|0|146.233|0.94622|223||||||||||||||||E8F2FA|0.18|||C11H14|0|0|2000|298573|L|700-88-9
 c_701575|0|4-Nitrothioanisole|4-Nitrotioanizol|C₇H₇NO₂S|4-Nitrothioanisole;C7H7NO2S|organic|Molecular|S|0|0|Crystals|0|169.198|1.23918|||||||||||||||||F4F4F2|1|||C7H7NO2S|0|0|1200||L|701-57-5
 c_701973|0|Cyclohexanepropanoic acid|Siklohekzanepropanoik asit|C₉H₁₆O₂|Cyclohexanepropanoic acid;C9H16O2|organic|Molecular|L|0|0|Powder|0|156.225|0.91225|276.5||||||||||||||||E8F2FA|0.18|||C9H16O2|0|0|2000|309612|L|701-97-3
 c_701995|0|Phenoxyacetyl chloride|Fenoksiasetil klorür|C₈H₇ClO₂|Phenoxyacetyl chloride;C8H7ClO2|organic|Molecular|L|0|0|Powder|0|170.592|1|225.5||||||||||||||||E8F2FA|0.18|||C8H7ClO2|0|0|2000|257229|Ld|701-99-5
-c_702238|0|4-Methoxybenzeneethanol|4-Metoksibenzeneetanol|C₉H₁₂O₂|4-Methoxybenzeneethanol;C9H12O2|organic|Molecular|S|0|0|Crystals|0|152.193|1.2|||||||||||||||||F4F4F2|1|||C9H12O2|0|0|1200||Ld|702-23-8
+c_702238|0|4-Methoxybenzeneethanol|4-Metoksibenzenetanol|C₉H₁₂O₂|4-Methoxybenzeneethanol;C9H12O2|organic|Molecular|S|0|0|Crystals|0|152.193|1.2|||||||||||||||||F4F4F2|1|||C9H12O2|0|0|1200||Ld|702-23-8
 c_702545|0|5,5-Diethyldihydro-2H-1,3-oxazine-2,4(3H)-dione|5,5-Dietildihidro-2H-1,3-oksazin-2,4(3H)-dion|C₈H₁₃NO₃|5,5-Diethyldihydro-2H-1,3-oxazine-2,4(3H)-dione;C8H13NO3|organic|Molecular|S|0|0|Crystals|0|171.196|1.2|||||||||||||||||F4F4F2|1|||C8H13NO3|0|0|1200||Ld|702-54-5
 c_703800|0|1-(1H-Indol-3-yl)ethanone|1-(1H-indol-3-il)etanon|C₁₀H₉NO|1-(1H-Indol-3-yl)ethanone;C10H9NO|organic|Molecular|S|0|0|Crystals|0|159.188|1.2|||||||||||||||||F4F4F2|1|||C10H9NO|0|0|1200||Ld|703-80-0
-c_704018|0|N,N,N',N'-Tetramethyl-1,2-benzenediamine|N,N,N',N'-tetrametil-1,2-benzenediamin|C₁₀H₁₆N₂|N,N,N',N'-Tetramethyl-1,2-benzenediamine;C10H16N2|organic|Molecular|L|0|0|Powder|0|164.252|0.95602|215.5||||||||||||||||E8F2FA|0.18|||C10H16N2|0|0|2000|261800|L|704-01-8
+c_704018|0|N,N,N',N'-Tetramethyl-1,2-benzenediamine|N,N,N',N'-tetrametil-1,2-benzendiamin|C₁₀H₁₆N₂|N,N,N',N'-Tetramethyl-1,2-benzenediamine;C10H16N2|organic|Molecular|L|0|0|Powder|0|164.252|0.95602|215.5||||||||||||||||E8F2FA|0.18|||C10H16N2|0|0|2000|261800|L|704-01-8
 c_705862|0|Tetrahydro-6-pentyl-2H-pyran-2-one|Tetrahidro-6-pentil-2H-piran-2-on|C₁₀H₁₈O₂|Tetrahydro-6-pentyl-2H-pyran-2-one;C10H18O2|organic|Molecular|L|0|0|Powder|0|170.252|1|||||||||||||||||E8F2FA|0.18|||C10H18O2|0|0|2000||Ld|705-86-2
 c_706149|0|4-Hydroxydecanoic acid γ-lactone|4-Hidroksidekanoik asit γ-lakton|C₁₀H₁₈O₂|4-Hydroxydecanoic acid γ-lactone;C10H18O2|organic|Molecular|L|0|0|Powder|0|170.252|1|301||||||||||||||||E8F2FA|0.18|||C10H18O2|0|0|2000|296767|Ld|706-14-9
 c_706785|0|Octachlorocyclopentene|Oktaklorosiklopenten|C₅Cl₈|Octachlorocyclopentene;C5Cl8|organic|Molecular|S|0|0|Crystals|0|343.655|1.82005|||||||||||||||||F4F4F2|1|||C5Cl8|0|0|1200||L|706-78-5
@@ -5866,7 +5866,7 @@ c_768525|0|N-Isopropylaniline|N-izopropilanilin|C₉H₁₃N|N-Isopropylaniline;
 c_768569|0|3-Butenylbenzene|3-Bütenilbenzen|C₁₀H₁₂|3-Butenylbenzene;C10H12|organic|Molecular|L|0|0|Powder|0|132.206|0.88312|183||||||||||||||||E8F2FA|0.18|||C10H12|0|0|2000|303626|L|768-56-9
 c_768661|0|2,2,6,6-Tetramethylpiperidine|2,2,6,6-Tetrametilpiperidin|C₉H₁₉N|2,2,6,6-Tetramethylpiperidine;C9H19N|organic|Molecular|S|0|0|Crystals|0|141.258|0.836716|||||||||||||||||F4F4F2|1|||C9H19N|0|0|1200||L|768-66-1
 c_769062|0|N,N,2,6-Tetramethylaniline|N,N,2,6-tetrametilanilin|C₁₀H₁₅N|N,N,2,6-Tetramethylaniline;C10H15N|organic|Molecular|L|0|0|Powder|0|149.237|0.91472|196||||||||||||||||E8F2FA|0.18|||C10H15N|0|0|2000|276642|L|769-06-2
-c_769686|0|α-Ethylbenzeneacetonitrile|α-Etilbenzeneasetonitril|C₁₀H₁₁N|α-Ethylbenzeneacetonitrile;C10H11N|organic|Molecular|L|0|0|Powder|0|145.205|0.97714|241||||||||||||||||E8F2FA|0.18|||C10H11N|0|0|2000|311595|L|769-68-6
+c_769686|0|α-Ethylbenzeneacetonitrile|α-Etilbenzenasetonitril|C₁₀H₁₁N|α-Ethylbenzeneacetonitrile;C10H11N|organic|Molecular|L|0|0|Powder|0|145.205|0.97714|241||||||||||||||||E8F2FA|0.18|||C10H11N|0|0|2000|311595|L|769-68-6
 c_769926|0|4-tert-Butylaniline|4-Tert-bütilanilin|C₁₀H₁₅N|4-tert-Butylaniline;C10H15N|organic|Molecular|L|0|0|Powder|0|149.237|0.952515|241||||||||||||||||E8F2FA|0.18|||C10H15N|0|0|2000|303177|L|769-92-6
 c_770092|0|Trimethylbenzylsilane|Trimetilbenzilsilan|C₁₀H₁₆Si|Trimethylbenzylsilane;C10H16Si|organic|Molecular|L|0|0|Powder|0|164.323|0.89332|190.5||||||||||||||||E8F2FA|0.18|||C10H16Si|0|0|2000|248299|L|770-09-2
 c_770127|0|Phenyl phosphorodichloridate|Fenil fosforodikloridat|C₆H₅Cl₂O₂P|Phenyl phosphorodichloridate;C6H5Cl2O2P|organic|Molecular|S|0|0|Crystals|0|210.978|1.4122|||||||||||||||||F4F4F2|1|||C6H5Cl2O2P|0|0|1200||L|770-12-7
@@ -5874,7 +5874,7 @@ c_770354|0|1-Phenoxy-2-propanol|1-Fenoksi-2-propanol|C₉H₁₂O₂|1-Phenoxy-2
 c_771517|0|1H-Indole-3-acetonitrile|1H-indol-3-asetonitril|C₁₀H₈N₂|1H-Indole-3-acetonitrile;C10H8N2|organic|Molecular|S|0|0|Crystals|0|156.188|1.2|||||||||||||||||F4F4F2|1|||C10H8N2|0|0|1200||Ld|771-51-7
 c_771562|0|2,3,4,5,6-Pentafluorotoluene|2,3,4,5,6-Pentaflorotoluen|C₇H₃F₅|2,3,4,5,6-Pentafluorotoluene;C7H3F5|organic|Molecular|L|0|0|Powder|0|182.093|1.4402|117||||||||||||||||E8F2FA|0.18|||C7H3F5|0|0|2000|188548|L|771-56-2
 c_771608|0|2,3,4,5,6-Pentafluoroaniline|2,3,4,5,6-Pentafloroanilin|C₆H₂F₅N|2,3,4,5,6-Pentafluoroaniline;C6H2F5N|organic|Molecular|S|0|0|Crystals|0|183.081|1.2|||||||||||||||||F4F4F2|1|||C6H2F5N|0|0|1200||Ld|771-60-8
-c_771620|0|Pentafluorobenzenethiol|Pentaflorobenzenetiol|C₆HF₅S|Pentafluorobenzenethiol;C6HF5S|organic|Molecular|L|0|0|Powder|0|200.126|1.50125|143||||||||||||||||E8F2FA|0.18|||C6HF5S|0|0|2000|182991|L|771-62-0
+c_771620|0|Pentafluorobenzenethiol|Pentaflorobenzentiol|C₆HF₅S|Pentafluorobenzenethiol;C6HF5S|organic|Molecular|L|0|0|Powder|0|200.126|1.50125|143||||||||||||||||E8F2FA|0.18|||C6HF5S|0|0|2000|182991|L|771-62-0
 c_771971|0|2,3-Naphthalenediamine|2,3-Naftalenediamin|C₁₀H₁₀N₂|2,3-Naphthalenediamine;C10H10N2|organic|Molecular|S|0|0|Crystals|0|158.204|1.09683|||||||||||||||||F4F4F2|1|||C10H10N2|0|0|1200||L|771-97-1
 c_771982|0|1-Cyclohexen-1-ylbenzene|1-Siklohekzen-1-ilbenzen|C₁₂H₁₄|1-Cyclohexen-1-ylbenzene;C12H14|organic|Molecular|L|0|0|Powder|0|158.244|0.99392|268||||||||||||||||E8F2FA|0.18|||C12H14|0|0|2000|300935|L|771-98-2
 c_771993|0|4-Phenylpiperidine|4-Fenilpiperidin|C₁₁H₁₅N|4-Phenylpiperidine;C11H15N|organic|Molecular|S|0|0|Crystals|0|161.248|0.999616|||||||||||||||||F4F4F2|1|||C11H15N|0|0|1200||L|771-99-3
@@ -5899,7 +5899,7 @@ c_781431|0|9,10-Dimethylanthracene|9,10-Dimetilantrasen|C₁₆H₁₄|9,10-Dime
 c_782741|0|1,2-Bis(2-chlorophenyl)-hydrazine|1,2-Bis(2-klorofenil)-hidrazin|C₁₂H₁₀Cl₂N₂|1,2-Bis(2-chlorophenyl)-hydrazine;C12H10Cl2N2|organic|Molecular|S|0|0|Crystals|0|253.126|1.2|||||||||||||||||F4F4F2|1|||C12H10Cl2N2|0|0|1200||Ld|782-74-1
 c_790692|0|Loflucarban|Loflukarban|C₁₃H₉Cl₂FN₂S|Loflucarban;C13H9Cl2FN2S|organic|Molecular|S|0|0|Crystals|0|315.187|1.2|||||||||||||||||F4F4F2|1|||C13H9Cl2FN2S|0|0|1200||Ld|790-69-2
 c_791311|0|Triphenylsilanol|Trifenilsilanol|C₁₈H₁₆OSi|Triphenylsilanol;C18H16OSi|organic|Molecular|S|0|0|Crystals|0|276.41|1.17772|||||||||||||||||F4F4F2|1|||C18H16OSi|0|0|1200||L|791-31-1
-c_793248|0|N-(1,3-Dimethylbutyl)-N'-phenyl-1,4-benzenediamine|N-(1,3-dimetilbütil)-N'-fenil-1,4-benzenediamin|C₁₈H₂₄N₂|N-(1,3-Dimethylbutyl)-N'-phenyl-1,4-benzenediamine;C18H24N2|organic|Molecular|S|0|0|Crystals|0|268.404|1.2|||||||||||||||||F4F4F2|1|||C18H24N2|0|0|1200||Ld|793-24-8
+c_793248|0|N-(1,3-Dimethylbutyl)-N'-phenyl-1,4-benzenediamine|N-(1,3-dimetilbütil)-N'-fenil-1,4-benzendiamin|C₁₈H₂₄N₂|N-(1,3-Dimethylbutyl)-N'-phenyl-1,4-benzenediamine;C18H24N2|organic|Molecular|S|0|0|Crystals|0|268.404|1.2|||||||||||||||||F4F4F2|1|||C18H24N2|0|0|1200||Ld|793-24-8
 c_797637|0|Norplant|Norplant|C₂₁H₂₈O₂|Norplant;C21H28O2|organic|Molecular|S|0|0|Crystals|0|312.453|1.2|||||||||||||||||F4F4F2|1|||C21H28O2|0|0|1200||Ld|797-63-7
 c_811938|0|2-Methyl-1,2-propanediamine|2-Metil-1,2-propanediamin|C₄H₁₂N₂|2-Methyl-1,2-propanediamine;C4H12N2|organic|Molecular|L|0|0|Powder|0|88.154|0.84125|131||||||||||||||||E8F2FA|0.18|||C4H12N2|0|0|2000|403444|L|811-93-8
 c_811950|0|1,1,2-Trichloro-1-fluoroethane|1,1,2-Trikloro-1-floroetan|C₂H₂Cl₃F|1,1,2-Trichloro-1-fluoroethane;C2H2Cl3F|organic|Molecular|L|0|0|Powder|0|151.386|1.4922|88||||||||||||||||E8F2FA|0.18|||C2H2Cl3F|0|0|2000|209934|L|811-95-0
@@ -5932,7 +5932,7 @@ c_822673|0|2-Cyclohexen-1-ol|2-Siklohekzen-1-ol|C₆H₁₀O|2-Cyclohexen-1-ol;C
 c_822877|0|2-Chlorocyclohexanone|2-Klorosiklohekzanon|C₆H₉ClO|2-Chlorocyclohexanone;C6H9ClO|organic|Molecular|L|0|0|Powder|0|132.587|1.1602|||||||||||||||||E8F2FA|0.18|||C6H9ClO|0|0|2000||L|822-87-7
 c_823789|0|1-Bromo-3-(bromomethyl)benzene|1-Bromo-3-(bromometil)benzen|C₇H₆Br₂|1-Bromo-3-(bromomethyl)benzene;C7H6Br2|organic|Molecular|S|0|0|Crystals|0|249.933|1.2|||||||||||||||||F4F4F2|1|||C7H6Br2|0|0|1200||Ld|823-78-9
 c_824555|0|1-(Chloromethyl)-2,4-dimethylbenzene|1-(Klorometil)-2,4-dimetilbenzen|C₉H₁₁Cl|1-(Chloromethyl)-2,4-dimethylbenzene;C9H11Cl|organic|Molecular|L|0|0|Powder|0|154.637|1.05802|233||||||||||||||||E8F2FA|0.18|||C9H11Cl|0|0|2000|288037|L|824-55-5
-c_824691|0|2,5-Dichloro-1,4-benzenediol|2,5-Dikloro-1,4-benzenediol|C₆H₄Cl₂O₂|2,5-Dichloro-1,4-benzenediol;C6H4Cl2O2|organic|Molecular|S|0|0|Crystals|0|178.996|1.81502|||||||||||||||||F4F4F2|1|||C6H4Cl2O2|0|0|1200||L|824-69-1
+c_824691|0|2,5-Dichloro-1,4-benzenediol|2,5-Dikloro-1,4-benzendiol|C₆H₄Cl₂O₂|2,5-Dichloro-1,4-benzenediol;C6H4Cl2O2|organic|Molecular|S|0|0|Crystals|0|178.996|1.81502|||||||||||||||||F4F4F2|1|||C6H4Cl2O2|0|0|1200||L|824-69-1
 c_824726|0|Phenylphosphonic dichloride|Fenilfosfonik diklorür|C₆H₅Cl₂OP|Phenylphosphonic dichloride;C6H5Cl2OP|organic|Molecular|L|0|0|Powder|0|194.979|1.19725|258||||||||||||||||E8F2FA|0.18|||C6H5Cl2OP|0|0|2000|239725|L|824-72-6
 c_824942|0|1-(Chloromethyl)-4-methoxybenzene|1-(Klorometil)-4-metoksibenzen|C₈H₉ClO|1-(Chloromethyl)-4-methoxybenzene;C8H9ClO|organic|Molecular|L|0|0|Powder|0|156.609|1.2612|262.5||||||||||||||||E8F2FA|0.18|||C8H9ClO|0|0|2000|300987|L|824-94-2
 c_825945|0|Trichloro(4-chlorophenyl)silane|Trikloro(4-klorofenil)silan|C₆H₄Cl₄Si|Trichloro(4-chlorophenyl)silane;C6H4Cl4Si|organic|Molecular|S|0|0|Crystals|0|245.983|1.40622|||||||||||||||||F4F4F2|1|||C6H4Cl4Si|0|0|1200||L|825-94-5
@@ -5977,11 +5977,11 @@ c_872366|0|1,3-Dioxol-2-one|1,3-Dioksol-2-on|C₃H₂O₃|1,3-Dioxol-2-one;C3H2O
 c_872537|0|Cyclopentanecarboxaldehyde|Siklopentanekarboksaldehit|C₆H₁₀O|Cyclopentanecarboxaldehyde;C6H10O|organic|Molecular|L|0|0|Powder|0|98.145|0.93712|133.5||||||||||||||||E8F2FA|0.18|||C6H10O|0|0|2000|364616|L|872-53-7
 c_873325|0|2-Chlorobenzonitrile|2-Klorobenzonitril|C₇H₄ClN|2-Chlorobenzonitrile;C7H4ClN|organic|Molecular|S|0|0|Crystals|0|137.566|1.2|||||||||||||||||F4F4F2|1|||C7H4ClN|0|0|1200||Ld|873-32-5
 c_873494|0|Cyclopropylbenzene|Siklopropilbenzen|C₉H₁₀|Cyclopropylbenzene;C9H10|organic|Molecular|L|0|0|Powder|0|118.179|0.93172|172||||||||||||||||E8F2FA|0.18|||C9H10|0|0|2000|331473|L|873-49-4
-c_873552|0|Sodium benzenesulfinate|Sodyum benzenesülfinat|C₆H₅NaO₂S|Sodium benzenesulfinate;C6H5NaO2S|organic|Molecular|S|0|0|Crystals|0|164.154|1.2|||||||||||||||||F4F4F2|1|||C6H5NaO2S|0|0|1200||Ld|873-55-2
+c_873552|0|Sodium benzenesulfinate|Sodyum benzensülfinat|C₆H₅NaO₂S|Sodium benzenesulfinate;C6H5NaO2S|organic|Molecular|S|0|0|Crystals|0|164.154|1.2|||||||||||||||||F4F4F2|1|||C6H5NaO2S|0|0|1200||Ld|873-55-2
 c_873621|0|3-Hydroxybenzonitrile|3-Hidroksibenzonitril|C₇H₅NO|3-Hydroxybenzonitrile;C7H5NO|organic|Molecular|S|0|0|Crystals|0|119.123|1.2|||||||||||||||||F4F4F2|1|||C7H5NO|0|0|1200||Ld|873-62-1
 c_873698|0|2-Pyridinecarboxaldehyde oxime|2-Piridinekarboksaldehit oksim|C₆H₆N₂O|2-Pyridinecarboxaldehyde oxime;C6H6N2O|organic|Molecular|S|0|0|Crystals|0|122.127|1.2|||||||||||||||||F4F4F2|1|||C6H6N2O|0|0|1200||Ld|873-69-8
 c_873745|0|4-Aminobenzonitrile|4-Aminobenzonitril|C₇H₆N₂|4-Aminobenzonitrile;C7H6N2|organic|Molecular|S|0|0|Crystals|0|118.139|1.2|||||||||||||||||F4F4F2|1|||C7H6N2|0|0|1200||Ld|873-74-5
-c_873767|0|4-Chlorobenzenemethanol|4-Klorobenzenemetanol|C₇H₇ClO|4-Chlorobenzenemethanol;C7H7ClO|organic|Molecular|S|0|0|Crystals|0|142.582|1.2|||||||||||||||||F4F4F2|1|||C7H7ClO|0|0|1200||Ld|873-76-7
+c_873767|0|4-Chlorobenzenemethanol|4-Klorobenzenmetanol|C₇H₇ClO|4-Chlorobenzenemethanol;C7H7ClO|organic|Molecular|S|0|0|Crystals|0|142.582|1.2|||||||||||||||||F4F4F2|1|||C7H7ClO|0|0|1200||Ld|873-76-7
 c_873949|0|3,3,5-Trimethylcyclohexanone|3,3,5-Trimetilsiklohekzanon|C₉H₁₆O|3,3,5-Trimethylcyclohexanone;C9H16O|organic|Molecular|L|0|0|Powder|0|140.226|0.891919|189||||||||||||||||E8F2FA|0.18|||C9H16O|0|0|2000|290026|L|873-94-9
 c_874146|0|1,3-Dimethyl-2,4(1H,3H)-pyrimidinedione|1,3-Dimetil-2,4(1H,3H)-pirimidinedion|C₆H₈N₂O₂|1,3-Dimethyl-2,4(1H,3H)-pyrimidinedione;C6H8N2O2|organic|Molecular|S|0|0|Crystals|0|140.142|1.2|||||||||||||||||F4F4F2|1|||C6H8N2O2|0|0|1200||Ld|874-14-6
 c_874237|0|2-Acetylcyclohexanone|2-Asetilsiklohekzanon|C₈H₁₂O₂|2-Acetylcyclohexanone;C8H12O2|organic|Molecular|L|0|0|Powder|0|140.182|1.07822|||||||||||||||||E8F2FA|0.18|||C8H12O2|0|0|2000||L|874-23-7
@@ -5996,7 +5996,7 @@ c_877087|0|1,2,3,4-Tetrachloro-5,6-dimethylbenzene|1,2,3,4-Tetrakloro-5,6-dimeti
 c_877098|0|1,2,3,5-Tetrachloro-4,6-dimethylbenzene|1,2,3,5-Tetrakloro-4,6-dimetilbenzen|C₈H₆Cl₄|1,2,3,5-Tetrachloro-4,6-dimethylbenzene;C8H6Cl4|organic|Molecular|S|0|0|Crystals|0|243.936|1.70325|||||||||||||||||F4F4F2|1|||C8H6Cl4|0|0|1200||L|877-09-8
 c_877112|0|2,3,4,5,6-Pentachlorotoluene|2,3,4,5,6-Pentaklorotoluen|C₇H₃Cl₅|2,3,4,5,6-Pentachlorotoluene;C7H3Cl5|organic|Molecular|S|0|0|Crystals|0|264.351|1.2|||||||||||||||||F4F4F2|1|||C7H3Cl5|0|0|1200||Ld|877-11-2
 c_877430|0|2,6-Dimethylquinoline|2,6-Dimetilkinolin|C₁₁H₁₁N|2,6-Dimethylquinoline;C11H11N|organic|Molecular|S|0|0|Crystals|0|157.216|1.2|||||||||||||||||F4F4F2|1|||C11H11N|0|0|1200||Ld|877-43-0
-c_877656|0|4-tert-Butylbenzenemethanol|4-Tert-bütilbenzenemetanol|C₁₁H₁₆O|4-tert-Butylbenzenemethanol;C11H16O|organic|Molecular|L|0|0|Powder|0|164.248|0.92825|236||||||||||||||||E8F2FA|0.18|||C11H16O|0|0|2000|272790|L|877-65-6
+c_877656|0|4-tert-Butylbenzenemethanol|4-Tert-bütilbenzenmetanol|C₁₁H₁₆O|4-tert-Butylbenzenemethanol;C11H16O|organic|Molecular|L|0|0|Powder|0|164.248|0.92825|236||||||||||||||||E8F2FA|0.18|||C11H16O|0|0|2000|272790|L|877-65-6
 c_879185|0|1-Naphthalenecarbonyl chloride|1-Naftalenekarbonil klorür|C₁₁H₇ClO|1-Naphthalenecarbonyl chloride;C11H7ClO|organic|Molecular|L|0|0|Powder|0|190.626|1|297.5||||||||||||||||E8F2FA|0.18|||C11H7ClO|0|0|2000|263433|Ld|879-18-5
 c_879390|0|1,2,3,4-Tetrachloro-5-nitrobenzene|1,2,3,4-Tetrakloro-5-nitrobenzen|C₆HCl₄NO₂|1,2,3,4-Tetrachloro-5-nitrobenzene;C6HCl4NO2|organic|Molecular|S|0|0|Crystals|0|260.879|1.2|||||||||||||||||F4F4F2|1|||C6HCl4NO2|0|0|1200||Ld|879-39-0
 c_879970|0|4-tert-Butyl-2,6-dimethylphenol|4-Tert-bütil-2,6-dimetilfenol|C₁₂H₁₈O|4-tert-Butyl-2,6-dimethylphenol;C12H18O|organic|Molecular|S|0|0|Crystals|0|178.275|0.9168|||||||||||||||||F4F4F2|1|||C12H18O|0|0|1200||L|879-97-0
@@ -6073,16 +6073,16 @@ c_933675|0|7-Methyl-1H-indole|7-Metil-1H-indol|C₉H₉N|7-Methyl-1H-indole;C9H9
 c_933755|0|2,3,6-Trichlorophenol|2,3,6-Triklorofenol|C₆H₃Cl₃O|2,3,6-Trichlorophenol;C6H3Cl3O|organic|Molecular|S|0|0|Crystals|0|197.439|1.2|||||||||||||||||F4F4F2|1|||C6H3Cl3O|0|0|1200||Ld|933-75-5
 c_933788|0|2,3,5-Trichlorophenol|2,3,5-Triklorofenol|C₆H₃Cl₃O|2,3,5-Trichlorophenol;C6H3Cl3O|organic|Molecular|S|0|0|Crystals|0|197.439|1.2|||||||||||||||||F4F4F2|1|||C6H3Cl3O|0|0|1200||Ld|933-78-8
 c_933880|0|2-Methylbenzoyl chloride|2-Metilbenzoil klorür|C₈H₇ClO|2-Methylbenzoyl chloride;C8H7ClO|organic|Molecular|L|0|0|Powder|0|154.593|1|213.5||||||||||||||||E8F2FA|0.18|||C8H7ClO|0|0|2000|277019|Ld|933-88-0
-c_934009|0|3-Methoxy-1,2-benzenediol|3-Metoksi-1,2-benzenediol|C₇H₈O₃|3-Methoxy-1,2-benzenediol;C7H8O3|organic|Molecular|S|0|0|Crystals|0|140.138|1.2|||||||||||||||||F4F4F2|1|||C7H8O3|0|0|1200||Ld|934-00-9
+c_934009|0|3-Methoxy-1,2-benzenediol|3-Metoksi-1,2-benzendiol|C₇H₈O₃|3-Methoxy-1,2-benzenediol;C7H8O3|organic|Molecular|S|0|0|Crystals|0|140.138|1.2|||||||||||||||||F4F4F2|1|||C7H8O3|0|0|1200||Ld|934-00-9
 c_934327|0|1H-Benzimidazol-2-amine|1H-benzimidazol-2-amin|C₇H₇N₃|1H-Benzimidazol-2-amine;C7H7N3|organic|Molecular|S|0|0|Crystals|0|133.154|1.2|||||||||||||||||F4F4F2|1|||C7H7N3|0|0|1200||Ld|934-32-7
 c_934349|0|2(3H)-Benzothiazolone|2(3H)-benzotiazolon|C₇H₅NOS|2(3H)-Benzothiazolone;C7H5NOS|organic|Molecular|S|0|0|Crystals|0|151.183|1.2|||||||||||||||||F4F4F2|1|||C7H5NOS|0|0|1200||Ld|934-34-9
 c_935079|0|Acetaldehyde phenylhydrazone|Asetaldehit fenilhidrazon|C₈H₁₀N₂|Acetaldehyde phenylhydrazone;C8H10N2|organic|Molecular|S|0|0|Crystals|0|134.182|1.2|||||||||||||||||F4F4F2|1|||C8H10N2|0|0|1200||Ld|935-07-9
 c_935795|0|cis-3a,4,7,7a-Tetrahydro-1,3-isobenzofurandione|Cis-3a,4,7,7a-tetrahidro-1,3-izobenzofurandion|C₈H₈O₃|cis-3a,4,7,7a-Tetrahydro-1,3-isobenzofurandione;C8H8O3|organic|Molecular|S|0|0|Crystals|0|152.149|1.2|||||||||||||||||F4F4F2|1|||C8H8O3|0|0|1200||Ld|935-79-5
 c_935955|0|2,3,5,6-Tetrachlorophenol|2,3,5,6-Tetraklorofenol|C₆H₂Cl₄O|2,3,5,6-Tetrachlorophenol;C6H2Cl4O|organic|Molecular|S|0|0|Crystals|0|231.881|1.2|||||||||||||||||F4F4F2|1|||C6H2Cl4O|0|0|1200||Ld|935-95-5
-c_936583|0|α-Allylbenzenemethanol|α-Allilbenzenemetanol|C₁₀H₁₂O|α-Allylbenzenemethanol;C10H12O|organic|Molecular|L|0|0|Powder|0|148.205|1.00418|228.5||||||||||||||||E8F2FA|0.18|||C10H12O|0|0|2000|297866|L|936-58-3
+c_936583|0|α-Allylbenzenemethanol|α-Allilbenzenmetanol|C₁₀H₁₂O|α-Allylbenzenemethanol;C10H12O|organic|Molecular|L|0|0|Powder|0|148.205|1.00418|228.5||||||||||||||||E8F2FA|0.18|||C10H12O|0|0|2000|297866|L|936-58-3
 c_936594|0|3-Chloro-1-phenyl-1-propanone|3-Kloro-1-fenil-1-propanon|C₉H₉ClO|3-Chloro-1-phenyl-1-propanone;C9H9ClO|organic|Molecular|S|0|0|Crystals|0|168.62|1.2|||||||||||||||||F4F4F2|1|||C9H9ClO|0|0|1200||Ld|936-59-4
 c_937202|0|2-Chloro-1-(4-chlorophenyl)ethanone|2-Kloro-1-(4-klorofenil)etanon|C₈H₆Cl₂O|2-Chloro-1-(4-chlorophenyl)ethanone;C8H6Cl2O|organic|Molecular|S|0|0|Crystals|0|189.035|1.2|||||||||||||||||F4F4F2|1|||C8H6Cl2O|0|0|1200||Ld|937-20-2
-c_937326|0|4-Nitrobenzenesulfenyl chloride|4-Nitrobenzenesülfenil klorür|C₆H₄ClNO₂S|4-Nitrobenzenesulfenyl chloride;C6H4ClNO2S|organic|Molecular|S|0|0|Crystals|0|189.613|1.2|||||||||||||||||F4F4F2|1|||C6H4ClNO2S|0|0|1200||Ld|937-32-6
+c_937326|0|4-Nitrobenzenesulfenyl chloride|4-Nitrobenzensülfenil klorür|C₆H₄ClNO₂S|4-Nitrobenzenesulfenyl chloride;C6H4ClNO2S|organic|Molecular|S|0|0|Crystals|0|189.613|1.2|||||||||||||||||F4F4F2|1|||C6H4ClNO2S|0|0|1200||Ld|937-32-6
 c_937337|0|N-tert-Butylaniline|N-tert-bütilanilin|C₁₀H₁₅N|N-tert-Butylaniline;C10H15N|organic|Molecular|L|0|0|Powder|0|149.237|1|215||||||||||||||||E8F2FA|0.18|||C10H15N|0|0|2000|287846|Ld|937-33-7
 c_938169|0|2,2-Dimethyl-1-phenyl-1-propanone|2,2-Dimetil-1-fenil-1-propanon|C₁₁H₁₄O|2,2-Dimethyl-1-phenyl-1-propanone;C11H14O|organic|Molecular|L|0|0|Powder|0|162.232|0.96326|220||||||||||||||||E8F2FA|0.18|||C11H14O|0|0|2000|267501|L|938-16-9
 c_938454|0|1-(2-Hydroxy-5-methylphenyl)-1-propanone|1-(2-Hidroksi-5-metilfenil)-1-propanon|C₁₀H₁₂O₂|1-(2-Hydroxy-5-methylphenyl)-1-propanone;C10H12O2|organic|Molecular|L|0|0|Powder|0|164.204|1.08411|||||||||||||||||E8F2FA|0.18|||C10H12O2|0|0|2000||L|938-45-4
@@ -6165,7 +6165,7 @@ c_1009616|0|1,4-Diacetylbenzene|1,4-Diasetilbenzen|C₁₀H₁₀O₂|1,4-Diacet
 c_1009934|0|2,2,4,4,6,6-Hexamethylcyclotrisilazane|2,2,4,4,6,6-Hekzametilsiklotrisilazan|C₆H₂₁N₃Si₃|2,2,4,4,6,6-Hexamethylcyclotrisilazane;C6H21N3Si3|organic|Molecular|L|0|0|Powder|0|219.51|0.91962|187||||||||||||||||E8F2FA|0.18|||C6H21N3Si3|0|0|2000|184471|L|1009-93-4
 c_1011127|0|2-Cyclohexylidenecyclohexanone|2-Siklohekzilidenesiklohekzanon|C₁₂H₁₈O|2-Cyclohexylidenecyclohexanone;C12H18O|organic|Molecular|S|0|0|Crystals|0|178.275|1.2|||||||||||||||||F4F4F2|1|||C12H18O|0|0|1200||Ld|1011-12-7
 c_1013087|0|1,2,3,4-Tetrahydrophenanthrene|1,2,3,4-Tetrahidrofenantren|C₁₄H₁₄|1,2,3,4-Tetrahydrophenanthrene;C14H14|organic|Molecular|S|0|0|Crystals|0|182.266|1.06014|||||||||||||||||F4F4F2|1|||C14H14|0|0|1200||L|1013-08-7
-c_1013883|0|α-Phenylbenzenemethanimine|α-Fenilbenzenemetanimin|C₁₃H₁₁N|α-Phenylbenzenemethanimine;C13H11N|organic|Molecular|L|0|0|Powder|0|181.238|1.08472|282||||||||||||||||E8F2FA|0.18|||C13H11N|0|0|2000|269553|L|1013-88-3
+c_1013883|0|α-Phenylbenzenemethanimine|α-Fenilbenzenmetanimin|C₁₃H₁₁N|α-Phenylbenzenemethanimine;C13H11N|organic|Molecular|L|0|0|Powder|0|181.238|1.08472|282||||||||||||||||E8F2FA|0.18|||C13H11N|0|0|2000|269553|L|1013-88-3
 c_1014693|0|Desmetryne|Desmetrin|C₈H₁₅N₅S|Desmetryne;C8H15N5S|organic|Molecular|S|0|0|Crystals|0|213.303|1.2|||||||||||||||||F4F4F2|1|||C8H15N5S|0|0|1200||Ld|1014-69-3
 c_1017567|0|N,N',N''-Tris(hydroxymethyl)melamine|N,N',N''-tris(hidroksimetil)melamin|C₆H₁₂N₆O₃|N,N',N''-Tris(hydroxymethyl)melamine;C6H12N6O3|organic|Molecular|S|0|0|Crystals|0|216.201|1.2|||||||||||||||||F4F4F2|1|||C6H12N6O3|0|0|1200||Ld|1017-56-7
 c_1020844|0|2,2,4,4,6,6,8,8-Octamethylcyclotetrasilazane|2,2,4,4,6,6,8,8-Oktametilsiklotetrasilazan|C₈H₂₈N₄Si₄|2,2,4,4,6,6,8,8-Octamethylcyclotetrasilazane;C8H28N4Si4|organic|Molecular|S|0|0|Crystals|0|292.68|1.2|||||||||||||||||F4F4F2|1|||C8H28N4Si4|0|0|1200||Ld|1020-84-4
@@ -6244,7 +6244,7 @@ c_1117551|0|Hexyl octanoate|Hekzil oktanoat|C₁₄H₂₈O₂|Hexyl octanoate;C
 c_1117595|0|Hexyl pentanoate|Hekzil pentanoat|C₁₁H₂₂O₂|Hexyl pentanoate;C11H22O2|organic|Molecular|L|0|0|Powder|0|186.295|0.86352|225||||||||||||||||E8F2FA|0.18|||C11H22O2|0|0|2000|235311|L|1117-59-5
 c_1117868|0|1,2-Octanediol|1,2-Oktanediol|C₈H₁₈O₂|1,2-Octanediol;C8H18O2|organic|Molecular|S|0|0|Crystals|0|146.23|1.2|||||||||||||||||F4F4F2|1|||C8H18O2|0|0|1200||Ld|1117-86-8
 c_1117971|0|N-Methoxymethylamine|N-metoksimetilamin|C₂H₇NO|N-Methoxymethylamine;C2H7NO|organic|Molecular|L|0|0|Powder|0|61.084|1|42.4||||||||||||||||E8F2FA|0.18|||C2H7NO|0|0|2000|454594|Ld|1117-97-1
-c_1118123|0|tert-Butylurea|Tert-bütilurea|C₅H₁₂N₂O|tert-Butylurea;C5H12N2O|organic|Molecular|S|0|0|Crystals|0|116.164|1.2|||||||||||||||||F4F4F2|1|||C5H12N2O|0|0|1200||Ld|1118-12-3
+c_1118123|0|tert-Butylurea|Tert-bütilüre|C₅H₁₂N₂O|tert-Butylurea;C5H12N2O|organic|Molecular|S|0|0|Crystals|0|116.164|1.2|||||||||||||||||F4F4F2|1|||C5H12N2O|0|0|1200||Ld|1118-12-3
 c_1118156|0|1,1,3,3-Tetramethyl-1,3-disiloxanediol|1,1,3,3-Tetrametil-1,3-disiloksanediol|C₄H₁₄O₃Si₂|1,1,3,3-Tetramethyl-1,3-disiloxanediol;C4H14O3Si2|organic|Molecular|S|0|0|Crystals|0|166.323|1.09525|||||||||||||||||F4F4F2|1|||C4H14O3Si2|0|0|1200||L|1118-15-6
 c_1118689|0|N,N-Dimethylglycine|N,N-dimetilglisin|C₄H₉NO₂|N,N-Dimethylglycine;C4H9NO2|organic|Molecular|S|0|0|Crystals|0|103.121|1.2|||||||||||||||||F4F4F2|1|||C4H9NO2|0|0|1200||Ld|1118-68-9
 c_1118849|0|Allyl acetoacetate|Allil asetoasetat|C₇H₁₀O₃|Allyl acetoacetate;C7H10O3|organic|Molecular|L|0|0|Powder|0|142.154|1.03662|198||||||||||||||||E8F2FA|0.18|||C7H10O3|0|0|2000|291664|L|1118-84-9
@@ -6342,7 +6342,7 @@ c_1184607|0|2-Fluoropropene|2-Floropropen|C₃H₅F|2-Fluoropropene;C3H5F|organi
 c_1184787|0|Trimethylamine oxide|Trimetilamin oksit|C₃H₉NO|Trimethylamine oxide;C3H9NO|organic|Molecular|S|0|0|Crystals|0|75.111|1.2|||||||||||||||||F4F4F2|1|||C3H9NO|0|0|1200||Ld|1184-78-7
 c_1185337|0|2,2-Dimethyl-1-butanol|2,2-Dimetil-1-bütanol|C₆H₁₄O|2,2-Dimethyl-1-butanol;C6H14O|organic|Molecular|L|0|0|Powder|0|102.177|0.82832|137||||||||||||||||E8F2FA|0.18|||C6H14O|0|0|2000|353242|L|1185-33-7
 c_1185553|0|Trimethoxymethylsilane|Trimetoksimetilsilan|C₄H₁₂O₃Si|Trimethoxymethylsilane;C4H12O3Si|organic|Molecular|L|0|0|Powder|0|136.222|0.95482|102.5||||||||||||||||E8F2FA|0.18|||C4H12O3Si|0|0|2000|242672|L|1185-55-3
-c_1187037|0|Tetraethylurea|Tetretilurea|C₉H₂₀N₂O|Tetraethylurea;C9H20N2O|organic|Molecular|L|0|0|Powder|0|172.272|0.9192|208||||||||||||||||E8F2FA|0.18|||C9H20N2O|0|0|2000|245781|L|1187-03-7
+c_1187037|0|Tetraethylurea|Tetretilüre|C₉H₂₀N₂O|Tetraethylurea;C9H20N2O|organic|Molecular|L|0|0|Powder|0|172.272|0.9192|208||||||||||||||||E8F2FA|0.18|||C9H20N2O|0|0|2000|245781|L|1187-03-7
 c_1187424|0|cis-2,3-Diamino-2-butenedinitrile|Cis-2,3-diamino-2-bütenedinitril|C₄H₄N₄|cis-2,3-Diamino-2-butenedinitrile;C4H4N4|organic|Molecular|S|0|0|Crystals|0|108.104|1.412|||||||||||||||||F4F4F2|1|||C4H4N4|0|0|1200||L|1187-42-4
 c_1187582|0|N-Methylpropanamide|N-metilpropanamit|C₄H₉NO|N-Methylpropanamide;C4H9NO|organic|Molecular|L|0|0|Powder|0|87.122|0.930525|207||||||||||||||||E8F2FA|0.18|||C4H9NO|0|0|2000|484989|L|1187-58-2
 c_1188336|0|1,1-Diethoxy-N,N-dimethylmethanamine|1,1-Dietoksi-N,N-dimetilmetanamin|C₇H₁₇NO₂|1,1-Diethoxy-N,N-dimethylmethanamine;C7H17NO2|organic|Molecular|L|0|0|Powder|0|147.218|0.85925|129||||||||||||||||E8F2FA|0.18|||C7H17NO2|0|0|2000|240386|L|1188-33-6
@@ -6362,7 +6362,7 @@ c_1192285|0|Cyclopentanone oxime|Siklopentanon oksim|C₅H₉NO|Cyclopentanone o
 c_1192309|0|2-(Bromomethyl)tetrahydrofuran|2-(Bromometil)tetrahidrofuran|C₅H₉BrO|2-(Bromomethyl)tetrahydrofuran;C5H9BrO|organic|Molecular|L|0|0|Powder|0|165.03|1.46792|170||||||||||||||||E8F2FA|0.18|||C5H9BrO|0|0|2000|236304|L|1192-30-9
 c_1192376|0|Methylenecyclohexane|Metilenesiklohekzan|C₇H₁₂|Methylenecyclohexane;C7H12|organic|Molecular|L|0|0|Powder|0|96.173|0.80742|103||||||||||||||||E8F2FA|0.18|||C7H12|0|0|2000|344184|L|1192-37-6
 c_1192627|0|1-(2-Furanyl)ethanone|1-(2-Furanil)etanon|C₆H₆O₂|1-(2-Furanyl)ethanone;C6H6O2|organic|Molecular|S|0|0|Crystals|0|110.112|1.0982|||||||||||||||||F4F4F2|1|||C6H6O2|0|0|1200||L|1192-62-7
-c_1193028|0|4-Aminobenzenethiol|4-Aminobenzenetiol|C₆H₇NS|4-Aminobenzenethiol;C6H7NS|organic|Molecular|S|0|0|Crystals|0|125.189|1.2|||||||||||||||||F4F4F2|1|||C6H7NS|0|0|1200||Ld|1193-02-8
+c_1193028|0|4-Aminobenzenethiol|4-Aminobenzentiol|C₆H₇NS|4-Aminobenzenethiol;C6H7NS|organic|Molecular|S|0|0|Crystals|0|125.189|1.2|||||||||||||||||F4F4F2|1|||C6H7NS|0|0|1200||Ld|1193-02-8
 c_1193186|0|3-Methyl-2-cyclohexen-1-one|3-Metil-2-siklohekzen-1-on|C₇H₁₀O|3-Methyl-2-cyclohexen-1-one;C7H10O|organic|Molecular|L|0|0|Powder|0|110.156|0.96932|201||||||||||||||||E8F2FA|0.18|||C7H10O|0|0|2000|378783|L|1193-18-6
 c_1193471|0|2,2-Dimethylcyclohexanone|2,2-Dimetilsiklohekzanon|C₈H₁₄O|2,2-Dimethylcyclohexanone;C8H14O|organic|Molecular|L|0|0|Powder|0|126.199|0.91452|172||||||||||||||||E8F2FA|0.18|||C8H14O|0|0|2000|310408|L|1193-47-1
 c_1193813|0|α-Methylcyclohexanemethanol|α-Metilsiklohekzanemetanol|C₈H₁₆O|α-Methylcyclohexanemethanol;C8H16O|organic|Molecular|L|0|0|Powder|0|128.215|0.92825|189||||||||||||||||E8F2FA|0.18|||C8H16O|0|0|2000|317195|L|1193-81-3
@@ -6373,10 +6373,10 @@ c_1194985|0|2,5-Dihydroxybenzaldehyde|2,5-Dihidroksibenzaldehit|C₇H₆O₃|2,5
 c_1195320|0|1-Methyl-4-(1-methylvinyl)benzene|1-Metil-4-(1-metilvinil)benzen|C₁₀H₁₂|1-Methyl-4-(1-methylvinyl)benzene;C10H12|organic|Molecular|L|0|0|Powder|0|132.206|0.893623|186||||||||||||||||E8F2FA|0.18|||C10H12|0|0|2000|305623|L|1195-32-0
 c_1196572|0|2(1H)-Quinoxalinone|2(1H)-kinoksalinon|C₈H₆N₂O|2(1H)-Quinoxalinone;C8H6N2O|organic|Molecular|S|0|0|Crystals|0|146.149|1.2|||||||||||||||||F4F4F2|1|||C8H6N2O|0|0|1200||Ld|1196-57-2
 c_1197188|0|trans-4-(Aminomethyl)cyclohexanecarboxylic acid|Trans-4-(aminometil)siklohekzanekarboksilik asit|C₈H₁₅NO₂|trans-4-(Aminomethyl)cyclohexanecarboxylic acid;C8H15NO2|organic|Molecular|S|0|0|Crystals|0|157.213|1.2|||||||||||||||||F4F4F2|1|||C8H15NO2|0|0|1200||Ld|1197-18-8
-c_1197371|0|4-Ethoxy-1,2-benzenediamine|4-Etoksi-1,2-benzenediamin|C₈H₁₂N₂O|4-Ethoxy-1,2-benzenediamine;C8H12N2O|organic|Molecular|S|0|0|Crystals|0|152.197|1.2|||||||||||||||||F4F4F2|1|||C8H12N2O|0|0|1200||Ld|1197-37-1
-c_1197553|0|4-Aminobenzeneacetic acid|4-Aminobenzeneasetik asit|C₈H₉NO₂|4-Aminobenzeneacetic acid;C8H9NO2|organic|Molecular|S|0|0|Crystals|0|151.165|1.2|||||||||||||||||F4F4F2|1|||C8H9NO2|0|0|1200||Ld|1197-55-3
+c_1197371|0|4-Ethoxy-1,2-benzenediamine|4-Etoksi-1,2-benzendiamin|C₈H₁₂N₂O|4-Ethoxy-1,2-benzenediamine;C8H12N2O|organic|Molecular|S|0|0|Crystals|0|152.197|1.2|||||||||||||||||F4F4F2|1|||C8H12N2O|0|0|1200||Ld|1197-37-1
+c_1197553|0|4-Aminobenzeneacetic acid|4-Aminobenzenasetik asit|C₈H₉NO₂|4-Aminobenzeneacetic acid;C8H9NO2|organic|Molecular|S|0|0|Crystals|0|151.165|1.2|||||||||||||||||F4F4F2|1|||C8H9NO2|0|0|1200||Ld|1197-55-3
 c_1198374|0|2,4-Dimethylquinoline|2,4-Dimetilkinolin|C₁₁H₁₁N|2,4-Dimethylquinoline;C11H11N|organic|Molecular|L|0|0|Powder|0|157.216|1.06112|267||||||||||||||||E8F2FA|0.18|||C11H11N|0|0|2000|302343|L|1198-37-4
-c_1198556|0|3,4,5,6-Tetrachloro-1,2-benzenediol|3,4,5,6-Tetrakloro-1,2-benzenediol|C₆H₂Cl₄O₂|3,4,5,6-Tetrachloro-1,2-benzenediol;C6H2Cl4O2|organic|Molecular|S|0|0|Crystals|0|247.88|1.2|||||||||||||||||F4F4F2|1|||C6H2Cl4O2|0|0|1200||Ld|1198-55-6
+c_1198556|0|3,4,5,6-Tetrachloro-1,2-benzenediol|3,4,5,6-Tetrakloro-1,2-benzendiol|C₆H₂Cl₄O₂|3,4,5,6-Tetrachloro-1,2-benzenediol;C6H2Cl4O2|organic|Molecular|S|0|0|Crystals|0|247.88|1.2|||||||||||||||||F4F4F2|1|||C6H2Cl4O2|0|0|1200||Ld|1198-55-6
 c_1198590|0|1,2-Dichloro-3,4,5,6-tetrafluorobenzene|1,2-Dikloro-3,4,5,6-tetraflorobenzen|C₆Cl₂F₄|1,2-Dichloro-3,4,5,6-tetrafluorobenzene;C6Cl2F4|organic|Molecular|S|0|0|Crystals|0|218.96|1.2|||||||||||||||||F4F4F2|1|||C6Cl2F4|0|0|1200||Ld|1198-59-0
 c_1200039|0|(4-Bromobutoxy)benzene|(4-Bromobütoksi)benzen|C₁₀H₁₃BrO|(4-Bromobutoxy)benzene;C10H13BrO|organic|Molecular|S|0|0|Crystals|0|229.117|1.2|||||||||||||||||F4F4F2|1|||C10H13BrO|0|0|1200||Ld|1200-03-9
 c_1201269|0|1-(1H-Indol-3-yl)-2-propanone|1-(1H-indol-3-il)-2-propanon|C₁₁H₁₁NO|1-(1H-Indol-3-yl)-2-propanone;C11H11NO|organic|Molecular|S|0|0|Crystals|0|173.215|1.2|||||||||||||||||F4F4F2|1|||C11H11NO|0|0|1200||Ld|1201-26-9
@@ -6390,7 +6390,7 @@ c_1208522|0|2,4'-Methylenedianiline|2,4'-Metilenedianilin|C₁₃H₁₄N₂|2,4
 c_1210124|0|9-Anthracenecarbonitrile|9-Antrasenekarbonitril|C₁₅H₉N|9-Anthracenecarbonitrile;C15H9N|organic|Molecular|S|0|0|Crystals|0|203.244|1.30002|||||||||||||||||F4F4F2|1|||C15H9N|0|0|1200||L|1210-12-4
 c_1210351|0|10,11-Dihydro-5H-dibenzo[a,d]cyclohepten-5-one|10,11-Dihidro-5H-dibenzo[a,d]siklohepten-5-on|C₁₅H₁₂O|10,11-Dihydro-5H-dibenzo[a,d]cyclohepten-5-one;C15H12O|organic|Molecular|S|0|0|Crystals|0|208.26|1.16352|||||||||||||||||F4F4F2|1|||C15H12O|0|0|1200||L|1210-35-1
 c_1210395|0|3,3-Diphenyl-2-propenal|3,3-Difenil-2-propenal|C₁₅H₁₂O|3,3-Diphenyl-2-propenal;C15H12O|organic|Molecular|S|0|0|Crystals|0|208.26|1.2|||||||||||||||||F4F4F2|1|||C15H12O|0|0|1200||Ld|1210-39-5
-c_1212299|0|N,N'-Dicyclohexylthiourea|N,N'-disiklohekziltiourea|C₁₃H₂₄N₂S|N,N'-Dicyclohexylthiourea;C13H24N2S|organic|Molecular|S|0|0|Crystals|0|240.409|1.2|||||||||||||||||F4F4F2|1|||C13H24N2S|0|0|1200||Ld|1212-29-9
+c_1212299|0|N,N'-Dicyclohexylthiourea|N,N'-disiklohekziltioüre|C₁₃H₂₄N₂S|N,N'-Dicyclohexylthiourea;C13H24N2S|organic|Molecular|S|0|0|Crystals|0|240.409|1.2|||||||||||||||||F4F4F2|1|||C13H24N2S|0|0|1200||Ld|1212-29-9
 c_1214397|0|N-(Phenylmethyl)-1H-purin-6-amine|N-(fenilmetil)-1H-purin-6-amin|C₁₂H₁₁N₅|N-(Phenylmethyl)-1H-purin-6-amine;C12H11N5|organic|Molecular|S|0|0|Crystals|0|225.255|1.2|||||||||||||||||F4F4F2|1|||C12H11N5|0|0|1200||Ld|1214-39-7
 c_1214477|0|1-(2-Hydroxyphenyl)-3-phenyl-2-propen-1-one|1-(2-Hidroksifenil)-3-fenil-2-propen-1-on|C₁₅H₁₂O₂|1-(2-Hydroxyphenyl)-3-phenyl-2-propen-1-one;C15H12O2|organic|Molecular|S|0|0|Crystals|0|224.259|1.2|||||||||||||||||F4F4F2|1|||C15H12O2|0|0|1200||Ld|1214-47-7
 c_1218344|0|N-Acetyl-L-tryptophan|N-asetil-L-triptofan|C₁₃H₁₄N₂O₃|N-Acetyl-L-tryptophan;C13H14N2O3|organic|Molecular|S|0|0|Crystals|0|246.266|1.2|||||||||||||||||F4F4F2|1|||C13H14N2O3|0|0|1200||Ld|1218-34-4
@@ -6425,14 +6425,14 @@ c_1458986|0|3-Bromo-2-methylpropene|3-Bromo-2-metilpropen|C₄H₇Br|3-Bromo-2-m
 c_1462039|0|1-Methylcyclopentanol|1-Metilsiklopentanol|C₆H₁₂O|1-Methylcyclopentanol;C6H12O|organic|Molecular|S|0|0|Crystals|0|100.161|0.904423|||||||||||||||||F4F4F2|1|||C6H12O|0|0|1200||L|1462-03-9
 c_1462846|0|2,3,6-Trimethylpyridine|2,3,6-Trimetilpiridin|C₈H₁₁N|2,3,6-Trimethylpyridine;C8H11N|organic|Molecular|L|0|0|Powder|0|121.183|0.922025|170||||||||||||||||E8F2FA|0.18|||C8H11N|0|0|2000|321804|L|1462-84-6
 c_1464535|0|2,2'-Bioxirane|2,2'-Bioksiran|C₄H₆O₂|2,2'-Bioxirane;C4H6O2|organic|Molecular|L|0|0|Powder|0|86.09|1.1132|144||||||||||||||||E8F2FA|0.18|||C4H6O2|0|0|2000|426405|L|1464-53-5
-c_1466677|0|N,N'-Dibenzylurea|N,N'-dibenzilurea|C₁₅H₁₆N₂O|N,N'-Dibenzylurea;C15H16N2O|organic|Molecular|S|0|0|Crystals|0|240.306|1.2|||||||||||||||||F4F4F2|1|||C15H16N2O|0|0|1200||Ld|1466-67-7
+c_1466677|0|N,N'-Dibenzylurea|N,N'-dibenzilüre|C₁₅H₁₆N₂O|N,N'-Dibenzylurea;C15H16N2O|organic|Molecular|S|0|0|Crystals|0|240.306|1.2|||||||||||||||||F4F4F2|1|||C15H16N2O|0|0|1200||Ld|1466-67-7
 c_1467794|0|Dimethylcyanamide|Dimetilsianamit|C₃H₆N₂|Dimethylcyanamide;C3H6N2|organic|Molecular|L|0|0|Powder|0|70.095|1|162||||||||||||||||E8F2FA|0.18|||C3H6N2|0|0|2000|546304|Ld|1467-79-4
 c_1468399|0|3-Methylbutanoic anhydride|3-Metilbütanoik anhidrit|C₁₀H₁₈O₃|3-Methylbutanoic anhydride;C10H18O3|organic|Molecular|L|0|0|Powder|0|186.251|0.93272|215||||||||||||||||E8F2FA|0.18|||C10H18O3|0|0|2000|230641|L|1468-39-9
 c_1468957|0|9-Anthracenemethanol|9-Antrasenemetanol|C₁₅H₁₂O|9-Anthracenemethanol;C15H12O|organic|Molecular|S|0|0|Crystals|0|208.26|1.2|||||||||||||||||F4F4F2|1|||C15H12O|0|0|1200||Ld|1468-95-7
 c_1470946|0|2,3-Dihydro-1H-inden-5-ol|2,3-Dihidro-1H-inden-5-ol|C₉H₁₀O|2,3-Dihydro-1H-inden-5-ol;C9H10O|organic|Molecular|S|0|0|Crystals|0|134.178|1.2|||||||||||||||||F4F4F2|1|||C9H10O|0|0|1200||Ld|1470-94-6
 c_1471030|0|3-Propoxy-1-propene|3-Propoksi-1-propen|C₆H₁₂O|3-Propoxy-1-propene;C6H12O|organic|Molecular|L|0|0|Powder|0|100.161|0.77642|91||||||||||||||||E8F2FA|0.18|||C6H12O|0|0|2000|319937|L|1471-03-0
 c_1476239|0|Allyl isocyanate|Allil izosianat|C₄H₅NO|Allyl isocyanate;C4H5NO|organic|Molecular|L|0|0|Powder|0|83.09|1|88||||||||||||||||E8F2FA|0.18|||C4H5NO|0|0|2000|382491|Ld|1476-23-9
-c_1477550|0|1,3-Benzenedimethanamine|1,3-Benzenedimetanamin|C₈H₁₂N₂|1,3-Benzenedimethanamine;C8H12N2|organic|Molecular|L|0|0|Powder|0|136.198|1.0522|247||||||||||||||||E8F2FA|0.18|||C8H12N2|0|0|2000|336078|L|1477-55-0
+c_1477550|0|1,3-Benzenedimethanamine|1,3-Benzendimetanamin|C₈H₁₂N₂|1,3-Benzenedimethanamine;C8H12N2|organic|Molecular|L|0|0|Powder|0|136.198|1.0522|247||||||||||||||||E8F2FA|0.18|||C8H12N2|0|0|2000|336078|L|1477-55-0
 c_1482913|0|1,3,5,7-Octatetraene|1,3,5,7-Oktatetren|C₈H₁₀|1,3,5,7-Octatetraene;C8H10|organic|Molecular|S|0|0|Crystals|0|106.168|1.2|||||||||||||||||F4F4F2|1|||C8H10|0|0|1200||Ld|1482-91-3
 c_1484124|0|9-Methyl-9H-carbazole|9-Metil-9H-karbazol|C₁₃H₁₁N|9-Methyl-9H-carbazole;C13H11N|organic|Molecular|S|0|0|Crystals|0|181.238|1.2|||||||||||||||||F4F4F2|1|||C13H11N|0|0|1200||Ld|1484-12-4
 c_1484135|0|9-Vinyl-9H-carbazole|9-Vinil-9H-karbazol|C₁₄H₁₁N|9-Vinyl-9H-carbazole;C14H11N|organic|Molecular|S|0|0|Crystals|0|193.249|1.2|||||||||||||||||F4F4F2|1|||C14H11N|0|0|1200||Ld|1484-13-5
@@ -6451,7 +6451,7 @@ c_1502063|0|Cyclodecanone|Siklodekanon|C₁₀H₁₈O|Cyclodecanone;C10H18O|org
 c_1503533|0|2-(Acetyloxy)-5-bromobenzoic acid|2-(Asetiloksi)-5-bromobenzoik asit|C₉H₇BrO₄|2-(Acetyloxy)-5-bromobenzoic acid;C9H7BrO4|organic|Molecular|S|0|0|Crystals|0|259.055|1.2|||||||||||||||||F4F4F2|1|||C9H7BrO4|0|0|1200||Ld|1503-53-3
 c_1515953|0|1-Ethyl-4-methoxybenzene|1-Etil-4-metoksibenzen|C₉H₁₂O|1-Ethyl-4-methoxybenzene;C9H12O|organic|Molecular|L|0|0|Powder|0|136.194|0.962415|196||||||||||||||||E8F2FA|0.18|||C9H12O|0|0|2000|303135|L|1515-95-3
 c_1516809|0|Ethoxytriphenylsilane|Etoksitrifenilsilan|C₂₀H₂₀OSi|Ethoxytriphenylsilane;C20H20OSi|organic|Molecular|S|0|0|Crystals|0|304.464|1.2|||||||||||||||||F4F4F2|1|||C20H20OSi|0|0|1200||Ld|1516-80-9
-c_1517631|0|4-Methyl-α-phenylbenzenemethanol|4-Metil-α-fenilbenzenemetanol|C₁₄H₁₄O|4-Methyl-α-phenylbenzenemethanol;C14H14O|organic|Molecular|S|0|0|Crystals|0|198.265|1.2|||||||||||||||||F4F4F2|1|||C14H14O|0|0|1200||Ld|1517-63-1
+c_1517631|0|4-Methyl-α-phenylbenzenemethanol|4-Metil-α-fenilbenzenmetanol|C₁₄H₁₄O|4-Methyl-α-phenylbenzenemethanol;C14H14O|organic|Molecular|S|0|0|Crystals|0|198.265|1.2|||||||||||||||||F4F4F2|1|||C14H14O|0|0|1200||Ld|1517-63-1
 c_1519364|0|1,4-Dimethyl-9,10-anthracenedione|1,4-Dimetil-9,10-antrasenedion|C₁₆H₁₂O₂|1,4-Dimethyl-9,10-anthracenedione;C16H12O2|organic|Molecular|S|0|0|Crystals|0|236.27|1.2|||||||||||||||||F4F4F2|1|||C16H12O2|0|0|1200||Ld|1519-36-4
 c_1520214|0|4-Vinylaniline|4-Vinilanilin|C₈H₉N|4-Vinylaniline;C8H9N|organic|Molecular|L|0|0|Powder|0|119.167|1.0102|||||||||||||||||E8F2FA|0.18|||C8H9N|0|0|2000||L|1520-21-4
 c_1522221|0|Hexafluoroacetylacetone|Hekzafloroasetilaseton|C₅H₂F₆O₂|Hexafluoroacetylacetone;C5H2F6O2|organic|Molecular|S|0|0|Crystals|0|208.059|1.4852|||||||||||||||||F4F4F2|1|||C5H2F6O2|0|0|1200||L|1522-22-1
@@ -6459,7 +6459,7 @@ c_1522469|0|Ethyl 2-acetyl-3-methylbutanoate|Etil 2-asetil-3-metilbütanoat|C₉
 c_1528309|0|Methylenecyclopentane|Metilenesiklopentan|C₆H₁₀|Methylenecyclopentane;C6H10|organic|Molecular|L|0|0|Powder|0|82.146|0.77872|75||||||||||||||||E8F2FA|0.18|||C6H10|0|0|2000|372960|L|1528-30-9
 c_1528741|0|4,4'-Dinitro-1,1'-biphenyl|4,4'-Dinitro-1,1'-bifenil|C₁₂H₈N₂O₄|4,4'-Dinitro-1,1'-biphenyl;C12H8N2O4|organic|Molecular|S|0|0|Crystals|0|244.206|1.2|||||||||||||||||F4F4F2|1|||C12H8N2O4|0|0|1200||Ld|1528-74-1
 c_1529175|0|Trimethylphenoxysilane|Trimetilfenoksisilan|C₉H₁₄OSi|Trimethylphenoxysilane;C9H14OSi|organic|Molecular|L|0|0|Powder|0|166.295|0.86812|119||||||||||||||||E8F2FA|0.18|||C9H14OSi|0|0|2000|207518|L|1529-17-5
-c_1529415|0|3-Chlorobenzeneacetonitrile|3-Klorobenzeneasetonitril|C₈H₆ClN|3-Chlorobenzeneacetonitrile;C8H6ClN|organic|Molecular|L|0|0|Powder|0|151.593|1.18063|261||||||||||||||||E8F2FA|0.18|||C8H6ClN|0|0|2000|310075|L|1529-41-5
+c_1529415|0|3-Chlorobenzeneacetonitrile|3-Klorobenzenasetonitril|C₈H₆ClN|3-Chlorobenzeneacetonitrile;C8H6ClN|organic|Molecular|L|0|0|Powder|0|151.593|1.18063|261||||||||||||||||E8F2FA|0.18|||C8H6ClN|0|0|2000|310075|L|1529-41-5
 c_1532849|0|1-Isoquinolinamine|1-İzokinolinamin|C₉H₈N₂|1-Isoquinolinamine;C9H8N2|organic|Molecular|S|0|0|Crystals|0|144.177|1.2|||||||||||||||||F4F4F2|1|||C9H8N2|0|0|1200||Ld|1532-84-9
 c_1532974|0|4-Bromoisoquinoline|4-Bromoizokinolin|C₉H₆BrN|4-Bromoisoquinoline;C9H6BrN|organic|Molecular|S|0|0|Crystals|0|208.058|1.2|||||||||||||||||F4F4F2|1|||C9H6BrN|0|0|1200||Ld|1532-97-4
 c_1540289|0|Ethyl 2-acetylpentanoate|Etil 2-asetilpentanoat|C₉H₁₆O₃|Ethyl 2-acetylpentanoate;C9H16O3|organic|Molecular|L|0|0|Powder|0|172.224|0.96612|224||||||||||||||||E8F2FA|0.18|||C9H16O3|0|0|2000|254025|L|1540-28-9
@@ -6467,7 +6467,7 @@ c_1540290|0|Ethyl 2-acetylhexanoate|Etil 2-asetilhekzanoat|C₁₀H₁₈O₃|Et
 c_1540347|0|3-Ethyl-2,4-pentanedione|3-Etil-2,4-pentanedion|C₇H₁₂O₂|3-Ethyl-2,4-pentanedione;C7H12O2|organic|Molecular|L|0|0|Powder|0|128.171|0.953119|179||||||||||||||||E8F2FA|0.18|||C7H12O2|0|0|2000|310438|L|1540-34-7
 c_1544689|0|1-Fluoro-4-isothiocyanatobenzene|1-Floro-4-izotiosianatobenzen|C₇H₄FNS|1-Fluoro-4-isothiocyanatobenzene;C7H4FNS|organic|Molecular|S|0|0|Crystals|0|153.174|1.2|||||||||||||||||F4F4F2|1|||C7H4FNS|0|0|1200||Ld|1544-68-9
 c_1551446|0|Cyclohexyl butanoate|Siklohekzil bütanoat|C₁₀H₁₈O₂|Cyclohexyl butanoate;C10H18O2|organic|Molecular|L|0|0|Powder|0|170.252|0.9572|213||||||||||||||||E8F2FA|0.18|||C10H18O2|0|0|2000|251282|L|1551-44-6
-c_1555802|0|Benzeneacetic anhydride|Benzeneasetik anhidrit|C₁₆H₁₄O₃|Benzeneacetic anhydride;C16H14O3|organic|Molecular|S|0|0|Crystals|0|254.285|1.2|||||||||||||||||F4F4F2|1|||C16H14O3|0|0|1200||Ld|1555-80-2
+c_1555802|0|Benzeneacetic anhydride|Benzenasetik anhidrit|C₁₆H₁₄O₃|Benzeneacetic anhydride;C16H14O3|organic|Molecular|S|0|0|Crystals|0|254.285|1.2|||||||||||||||||F4F4F2|1|||C16H14O3|0|0|1200||Ld|1555-80-2
 c_1556189|0|Iodocyclopentane|İodosiklopentan|C₅H₉I|Iodocyclopentane;C5H9I|organic|Molecular|L|0|0|Powder|0|196.031|1.70962|166.5||||||||||||||||E8F2FA|0.18|||C5H9I|0|0|2000|197362|L|1556-18-9
 c_1558174|0|4,6-Dimethylpyrimidine|4,6-Dimetilpirimidin|C₆H₈N₂|4,6-Dimethylpyrimidine;C6H8N2|organic|Molecular|L|0|0|Powder|0|108.144|1|159||||||||||||||||E8F2FA|0.18|||C6H8N2|0|0|2000|351653|Ld|1558-17-4
 c_1558243|0|Trichloro(dichloromethyl)silane|Trikloro(diklorometil)silan|CHCl₅Si|Trichloro(dichloromethyl)silane;CHCl5Si|organic|Molecular|S|0|0|Crystals|0|218.354|1.55182|||||||||||||||||F4F4F2|1|||CHCl5Si|0|0|1200||L|1558-24-3
@@ -6570,7 +6570,7 @@ c_1689732|0|4-[(Phenylimino)methyl]phenol|4-[(Fenilimino)metil]fenol|C₁₃H₁
 c_1689823|0|4-(Phenylazo)phenol|4-(Fenilazo)fenol|C₁₂H₁₀N₂O|4-(Phenylazo)phenol;C12H10N2O|organic|Molecular|S|0|0|Crystals|0|198.225|1.2|||||||||||||||||F4F4F2|1|||C12H10N2O|0|0|1200||Ld|1689-82-3
 c_1689834|0|4-Hydroxy-3,5-diiodobenzonitrile|4-Hidroksi-3,5-diiodobenzonitril|C₇H₃I₂NO|4-Hydroxy-3,5-diiodobenzonitrile;C7H3I2NO|organic|Molecular|S|0|0|Crystals|0|370.916|1.2|||||||||||||||||F4F4F2|1|||C7H3I2NO|0|0|1200||Ld|1689-83-4
 c_1689845|0|3,5-Dibromo-4-hydroxybenzonitrile|3,5-Dibromo-4-hidroksibenzonitril|C₇H₃Br₂NO|3,5-Dibromo-4-hydroxybenzonitrile;C7H3Br2NO|organic|Molecular|S|0|0|Crystals|0|276.915|1.2|||||||||||||||||F4F4F2|1|||C7H3Br2NO|0|0|1200||Ld|1689-84-5
-c_1694924|0|2-Nitrobenzenesulfonyl chloride|2-Nitrobenzenesülfonil klorür|C₆H₄ClNO₄S|2-Nitrobenzenesulfonyl chloride;C6H4ClNO4S|organic|Molecular|S|0|0|Crystals|0|221.611|1.2|||||||||||||||||F4F4F2|1|||C6H4ClNO4S|0|0|1200||Ld|1694-92-4
+c_1694924|0|2-Nitrobenzenesulfonyl chloride|2-Nitrobenzensülfonil klorür|C₆H₄ClNO₄S|2-Nitrobenzenesulfonyl chloride;C6H4ClNO4S|organic|Molecular|S|0|0|Crystals|0|221.611|1.2|||||||||||||||||F4F4F2|1|||C6H4ClNO4S|0|0|1200||Ld|1694-92-4
 c_1696204|0|4-Acetylmorpholine|4-Asetilmorfolin|C₆H₁₁NO₂|4-Acetylmorpholine;C6H11NO2|organic|Molecular|L|0|0|Powder|0|129.159|1.11452|||||||||||||||||E8F2FA|0.18|||C6H11NO2|0|0|2000||L|1696-20-4
 c_1698608|0|Chloridazon|Kloridazon|C₁₀H₈ClN₃O|Chloridazon;C10H8ClN3O|organic|Molecular|S|0|0|Crystals|0|221.644|1.2|||||||||||||||||F4F4F2|1|||C10H8ClN3O|0|0|1200||Ld|1698-60-8
 c_1702176|0|Clopyralid|Klopiralid|C₆H₃Cl₂NO₂|Clopyralid;C6H3Cl2NO2|organic|Molecular|S|0|0|Crystals|0|191.995|1.2|||||||||||||||||F4F4F2|1|||C6H3Cl2NO2|0|0|1200||Ld|1702-17-6
@@ -6618,7 +6618,7 @@ c_1761564|0|2-[[(2-Hydroxyphenyl)imino]methyl]phenol|2-[[(2-Hidroksifenil)imino]
 c_1761611|0|5-Bromo-2-hydroxybenzaldehyde|5-Bromo-2-hidroksibenzaldehit|C₇H₅BrO₂|5-Bromo-2-hydroxybenzaldehyde;C7H5BrO2|organic|Molecular|S|0|0|Crystals|0|201.019|1.2|||||||||||||||||F4F4F2|1|||C7H5BrO2|0|0|1200||Ld|1761-61-1
 c_1761713|0|Bis(4-aminocyclohexyl)methane|Bis(4-aminosiklohekzil)metan|C₁₃H₂₆N₂|Bis(4-aminocyclohexyl)methane;C13H26N2|organic|Molecular|L|0|0|Powder|0|210.365|0.9275|320||||||||||||||||E8F2FA|0.18|||C13H26N2|0|0|2000|248127|L|1761-71-3
 c_1768349|0|Methyl cyanate|Metil sianat|C₂H₃NO|Methyl cyanate;C2H3NO|organic|Molecular|L|0|0|Powder|0|57.052|1|||||||||||||||||E8F2FA|0.18|||C2H3NO|0|0|2000||Ld|1768-34-9
-c_1777828|0|2,4-Dichlorobenzenemethanol|2,4-Diklorobenzenemetanol|C₇H₆Cl₂O|2,4-Dichlorobenzenemethanol;C7H6Cl2O|organic|Molecular|S|0|0|Crystals|0|177.024|1.2|||||||||||||||||F4F4F2|1|||C7H6Cl2O|0|0|1200||Ld|1777-82-8
+c_1777828|0|2,4-Dichlorobenzenemethanol|2,4-Diklorobenzenmetanol|C₇H₆Cl₂O|2,4-Dichlorobenzenemethanol;C7H6Cl2O|organic|Molecular|S|0|0|Crystals|0|177.024|1.2|||||||||||||||||F4F4F2|1|||C7H6Cl2O|0|0|1200||Ld|1777-82-8
 c_1777840|0|N-(4-Ethoxy-3-nitrophenyl)acetamide|N-(4-etoksi-3-nitrofenil)asetamit|C₁₀H₁₂N₂O₄|N-(4-Ethoxy-3-nitrophenyl)acetamide;C10H12N2O4|organic|Molecular|S|0|0|Crystals|0|224.216|1.2|||||||||||||||||F4F4F2|1|||C10H12N2O4|0|0|1200||Ld|1777-84-0
 c_1778092|0|4-Acetylthioanisole|4-Asetiltioanizol|C₉H₁₀OS|4-Acetylthioanisole;C9H10OS|organic|Molecular|S|0|0|Crystals|0|166.238|1.2|||||||||||||||||F4F4F2|1|||C9H10OS|0|0|1200||Ld|1778-09-2
 c_1779813|0|4,5-Dihydro-2-thiazolamine|4,5-Dihidro-2-tiazolamin|C₃H₆N₂S|4,5-Dihydro-2-thiazolamine;C3H6N2S|organic|Molecular|S|0|0|Crystals|0|102.155|1.2|||||||||||||||||F4F4F2|1|||C3H6N2S|0|0|1200||Ld|1779-81-3
@@ -6640,10 +6640,10 @@ c_1817578|0|4-Phenyl-3-butyn-2-one|4-Fenil-3-bütin-2-on|C₁₀H₈O|4-Phenyl-3
 c_1817738|0|2-Bromo-4,6-dinitroaniline|2-Bromo-4,6-dinitroanilin|C₆H₄BrN₃O₄|2-Bromo-4,6-dinitroaniline;C6H4BrN3O4|organic|Molecular|S|0|0|Crystals|0|262.019|1.2|||||||||||||||||F4F4F2|1|||C6H4BrN3O4|0|0|1200||Ld|1817-73-8
 c_1818071|0|Octyl phenyl ether|Oktil fenil eter|C₁₄H₂₂O|Octyl phenyl ether;C14H22O|organic|Molecular|L|0|0|Powder|0|206.329|0.913115|284||||||||||||||||E8F2FA|0.18|||C14H22O|0|0|2000|237626|L|1818-07-1
 c_1821029|0|2-Oxopentanoic acid|2-Oksopentanoik asit|C₅H₈O₃|2-Oxopentanoic acid;C5H8O3|organic|Molecular|L|0|0|Powder|0|116.116|1.09701|179||||||||||||||||E8F2FA|0.18|||C5H8O3|0|0|2000|342668|L|1821-02-9
-c_1821121|0|Benzenebutanoic acid|Benzenebütanoik asit|C₁₀H₁₂O₂|Benzenebutanoic acid;C10H12O2|organic|Molecular|S|0|0|Crystals|0|164.204|1.2|||||||||||||||||F4F4F2|1|||C10H12O2|0|0|1200||Ld|1821-12-1
+c_1821121|0|Benzenebutanoic acid|Benzenbütanoik asit|C₁₀H₁₂O₂|Benzenebutanoic acid;C10H12O2|organic|Molecular|S|0|0|Crystals|0|164.204|1.2|||||||||||||||||F4F4F2|1|||C10H12O2|0|0|1200||Ld|1821-12-1
 c_1821369|0|N-Cyclohexylaniline|N-siklohekzilanilin|C₁₂H₁₇N|N-Cyclohexylaniline;C12H17N|organic|Molecular|L|0|0|Powder|0|175.275|1.01552|279||||||||||||||||E8F2FA|0.18|||C12H17N|0|0|2000|277217|L|1821-36-9
 c_1822748|0|(Methylthio)ethene|(Metiltio)eten|C₃H₆S|(Methylthio)ethene;C3H6S|organic|Molecular|L|0|0|Powder|0|74.141|0.90262|69||||||||||||||||E8F2FA|0.18|||C3H6S|0|0|2000|406107|L|1822-74-8
-c_1823912|0|α-Methylbenzeneacetonitrile|α-Metilbenzeneasetonitril|C₉H₉N|α-Methylbenzeneacetonitrile;C9H9N|organic|Molecular|L|0|0|Powder|0|131.178|0.98542|231||||||||||||||||E8F2FA|0.18|||C9H9N|0|0|2000|338206|L|1823-91-2
+c_1823912|0|α-Methylbenzeneacetonitrile|α-Metilbenzenasetonitril|C₉H₉N|α-Methylbenzeneacetonitrile;C9H9N|organic|Molecular|L|0|0|Powder|0|131.178|0.98542|231||||||||||||||||E8F2FA|0.18|||C9H9N|0|0|2000|338206|L|1823-91-2
 c_1824813|0|6-Methyl-2-pyridinamine|6-Metil-2-piridinamin|C₆H₈N₂|6-Methyl-2-pyridinamine;C6H8N2|organic|Molecular|S|0|0|Crystals|0|108.144|1.2|||||||||||||||||F4F4F2|1|||C6H8N2|0|0|1200||Ld|1824-81-3
 c_1825214|0|2,3,4,5,6-Pentachloroanisole|2,3,4,5,6-Pentakloroanizol|C₇H₃Cl₅O|2,3,4,5,6-Pentachloroanisole;C7H3Cl5O|organic|Molecular|S|0|0|Crystals|0|280.35|1.2|||||||||||||||||F4F4F2|1|||C7H3Cl5O|0|0|1200||Ld|1825-21-4
 c_1825305|0|1,5-Dichloronaphthalene|1,5-Dikloronaftalen|C₁₀H₆Cl₂|1,5-Dichloronaphthalene;C10H6Cl2|organic|Molecular|S|0|0|Crystals|0|197.058|1.49002|||||||||||||||||F4F4F2|1|||C10H6Cl2|0|0|1200||L|1825-30-5
@@ -6668,17 +6668,17 @@ c_1866393|0|trans-p-Methylcinnamic acid|Trans-p-metilsinnamik asit|C₁₀H₁�
 c_1868537|0|Dibromofluoromethane|Dibromoflorometan|CHBr₂F|Dibromofluoromethane;CHBr2F|organic|Molecular|L|0|0|Powder|0|191.825|2.4212|64.9||||||||||||||||E8F2FA|0.18|||CHBr2F|0|0|2000|155081|L|1868-53-7
 c_1871529|0|1,3,5-Cyclooctatriene|1,3,5-Siklooktatrien|C₈H₁₀|1,3,5-Cyclooctatriene;C8H10|organic|Molecular|L|0|0|Powder|0|106.168|0.897125|144||||||||||||||||E8F2FA|0.18|||C8H10|0|0|2000|345765|L|1871-52-9
 c_1871574|0|3-Chloro-2-(chloromethyl)-1-propene|3-Kloro-2-(klorometil)-1-propen|C₄H₆Cl₂|3-Chloro-2-(chloromethyl)-1-propene;C4H6Cl2|organic|Molecular|L|0|0|Powder|0|124.992|1.17822|138||||||||||||||||E8F2FA|0.18|||C4H6Cl2|0|0|2000|289468|L|1871-57-4
-c_1871767|0|α-Phenylbenzeneacetyl chloride|α-Fenilbenzeneasetil klorür|C₁₄H₁₁ClO|α-Phenylbenzeneacetyl chloride;C14H11ClO|organic|Molecular|S|0|0|Crystals|0|230.691|1.2|||||||||||||||||F4F4F2|1|||C14H11ClO|0|0|1200||Ld|1871-76-7
+c_1871767|0|α-Phenylbenzeneacetyl chloride|α-Fenilbenzenasetil klorür|C₁₄H₁₁ClO|α-Phenylbenzeneacetyl chloride;C14H11ClO|organic|Molecular|S|0|0|Crystals|0|230.691|1.2|||||||||||||||||F4F4F2|1|||C14H11ClO|0|0|1200||Ld|1871-76-7
 c_1871961|0|Decanedinitrile|Dekanedinitril|C₁₀H₁₆N₂|Decanedinitrile;C10H16N2|organic|Molecular|L|0|0|Powder|0|164.252|0.9132|||||||||||||||||E8F2FA|0.18|||C10H16N2|0|0|2000||L|1871-96-1
 c_1873252|0|1-Chloro-2-butanol|1-Kloro-2-bütanol|C₄H₉ClO|1-Chloro-2-butanol;C4H9ClO|organic|Molecular|L|0|0|Powder|0|108.565|1.06825|141||||||||||||||||E8F2FA|0.18|||C4H9ClO|0|0|2000|335699|L|1873-25-2
 c_1873296|0|Isobutyl isocyanate|İzobütil izosianat|C₅H₉NO|Isobutyl isocyanate;C5H9NO|organic|Molecular|L|0|0|Powder|0|99.133|1|106||||||||||||||||E8F2FA|0.18|||C5H9NO|0|0|2000|336570|Ld|1873-29-6
 c_1873887|0|1,1,1,3,5,5,5-Heptamethyltrisiloxane|1,1,1,3,5,5,5-Heptametiltrisiloksan|C₇H₂₁O₂Si₃|1,1,1,3,5,5,5-Heptamethyltrisiloxane;C7H21O2Si3|organic|Molecular|S|0|0|Crystals|0|221.498|0.81942|||||||||||||||||F4F4F2|1|||C7H21O2Si3|0|0|1200||L|1873-88-7
 c_1873923|0|Allylmethyldichlorosilane|Allilmetildiklorosilan|C₄H₈Cl₂Si|Allylmethyldichlorosilane;C4H8Cl2Si|organic|Molecular|L|0|0|Powder|0|155.093|1.07582|119.5||||||||||||||||E8F2FA|0.18|||C4H8Cl2Si|0|0|2000|222790|L|1873-92-3
 c_1877721|0|3-Cyanobenzoic acid|3-Sianobenzoik asit|C₈H₅NO₂|3-Cyanobenzoic acid;C8H5NO2|organic|Molecular|S|0|0|Crystals|0|147.133|1.2|||||||||||||||||F4F4F2|1|||C8H5NO2|0|0|1200||Ld|1877-72-1
-c_1877732|0|3-Nitrobenzeneacetic acid|3-Nitrobenzeneasetik asit|C₈H₇NO₄|3-Nitrobenzeneacetic acid;C8H7NO4|organic|Molecular|S|0|0|Crystals|0|181.147|1.2|||||||||||||||||F4F4F2|1|||C8H7NO4|0|0|1200||Ld|1877-73-2
-c_1878655|0|3-Chlorobenzeneacetic acid|3-Klorobenzeneasetik asit|C₈H₇ClO₂|3-Chlorobenzeneacetic acid;C8H7ClO2|organic|Molecular|S|0|0|Crystals|0|170.592|1.2|||||||||||||||||F4F4F2|1|||C8H7ClO2|0|0|1200||Ld|1878-65-5
-c_1878666|0|4-Chlorobenzeneacetic acid|4-Klorobenzeneasetik asit|C₈H₇ClO₂|4-Chlorobenzeneacetic acid;C8H7ClO2|organic|Molecular|S|0|0|Crystals|0|170.592|1.2|||||||||||||||||F4F4F2|1|||C8H7ClO2|0|0|1200||Ld|1878-66-6
-c_1878688|0|4-Bromobenzeneacetic acid|4-Bromobenzeneasetik asit|C₈H₇BrO₂|4-Bromobenzeneacetic acid;C8H7BrO2|organic|Molecular|S|0|0|Crystals|0|215.046|1.2|||||||||||||||||F4F4F2|1|||C8H7BrO2|0|0|1200||Ld|1878-68-8
+c_1877732|0|3-Nitrobenzeneacetic acid|3-Nitrobenzenasetik asit|C₈H₇NO₄|3-Nitrobenzeneacetic acid;C8H7NO4|organic|Molecular|S|0|0|Crystals|0|181.147|1.2|||||||||||||||||F4F4F2|1|||C8H7NO4|0|0|1200||Ld|1877-73-2
+c_1878655|0|3-Chlorobenzeneacetic acid|3-Klorobenzenasetik asit|C₈H₇ClO₂|3-Chlorobenzeneacetic acid;C8H7ClO2|organic|Molecular|S|0|0|Crystals|0|170.592|1.2|||||||||||||||||F4F4F2|1|||C8H7ClO2|0|0|1200||Ld|1878-65-5
+c_1878666|0|4-Chlorobenzeneacetic acid|4-Klorobenzenasetik asit|C₈H₇ClO₂|4-Chlorobenzeneacetic acid;C8H7ClO2|organic|Molecular|S|0|0|Crystals|0|170.592|1.2|||||||||||||||||F4F4F2|1|||C8H7ClO2|0|0|1200||Ld|1878-66-6
+c_1878688|0|4-Bromobenzeneacetic acid|4-Bromobenzenasetik asit|C₈H₇BrO₂|4-Bromobenzeneacetic acid;C8H7BrO2|organic|Molecular|S|0|0|Crystals|0|215.046|1.2|||||||||||||||||F4F4F2|1|||C8H7BrO2|0|0|1200||Ld|1878-68-8
 c_1878826|0|(4-Cyanophenoxy)acetic acid|(4-Sianofenoksi)asetik asit|C₉H₇NO₃|(4-Cyanophenoxy)acetic acid;C9H7NO3|organic|Molecular|S|0|0|Crystals|0|177.159|1.2|||||||||||||||||F4F4F2|1|||C9H7NO3|0|0|1200||Ld|1878-82-6
 c_1879090|0|2-tert-Butyl-4,6-dimethylphenol|2-Tert-bütil-4,6-dimetilfenol|C₁₂H₁₈O|2-tert-Butyl-4,6-dimethylphenol;C12H18O|organic|Molecular|L|0|0|Powder|0|178.275|0.9178|247||||||||||||||||E8F2FA|0.18|||C12H18O|0|0|2000|256756|L|1879-09-0
 c_1885296|0|2-Aminobenzonitrile|2-Aminobenzonitril|C₇H₆N₂|2-Aminobenzonitrile;C7H6N2|organic|Molecular|S|0|0|Crystals|0|118.139|1.2|||||||||||||||||F4F4F2|1|||C7H6N2|0|0|1200||Ld|1885-29-6
@@ -6701,7 +6701,7 @@ c_1928387|0|Methyl (2,4-dichlorophenoxy)acetate|Metil (2,4-diklorofenoksi)asetat
 c_1929824|0|Nitrapyrin|Nitrapirin|C₆H₃Cl₄N|Nitrapyrin;C6H3Cl4N|organic|Molecular|S|0|0|Crystals|0|230.897|1.2|||||||||||||||||F4F4F2|1|||C6H3Cl4N|0|0|1200||Ld|1929-82-4
 c_1932043|0|1,2-Dipiperidinoethane|1,2-Dipiperidinoetan|C₁₂H₂₄N₂|1,2-Dipiperidinoethane;C12H24N2|organic|Molecular|L|0|0|Powder|0|196.338|0.916025|265||||||||||||||||E8F2FA|0.18|||C12H24N2|0|0|2000|241202|L|1932-04-3
 c_1937628|0|Methyl trans-9-octadecenoate|Metil trans-9-oktadesenoat|C₁₉H₃₆O₂|Methyl trans-9-octadecenoate;C19H36O2|organic|Molecular|L|0|0|Powder|0|296.495|0.87302|||||||||||||||||E8F2FA|0.18|||C19H36O2|0|0|2000||L|1937-62-8
-c_1939997|0|Benzenemethanesulfonyl chloride|Benzenemetanesülfonil klorür|C₇H₇ClO₂S|Benzenemethanesulfonyl chloride;C7H7ClO2S|organic|Molecular|S|0|0|Crystals|0|190.641|1.2|||||||||||||||||F4F4F2|1|||C7H7ClO2S|0|0|1200||Ld|1939-99-7
+c_1939997|0|Benzenemethanesulfonyl chloride|Benzenmetanesülfonil klorür|C₇H₇ClO₂S|Benzenemethanesulfonyl chloride;C7H7ClO2S|organic|Molecular|S|0|0|Crystals|0|190.641|1.2|||||||||||||||||F4F4F2|1|||C7H7ClO2S|0|0|1200||Ld|1939-99-7
 c_1940427|0|4-Bromo-2,5-dichlorophenol|4-Bromo-2,5-diklorofenol|C₆H₃BrCl₂O|4-Bromo-2,5-dichlorophenol;C6H3BrCl2O|organic|Molecular|S|0|0|Crystals|0|241.893|1.2|||||||||||||||||F4F4F2|1|||C6H3BrCl2O|0|0|1200||Ld|1940-42-7
 c_1941306|0|Tetrapropylammonium bromide|Tetrapropilammoniyum bromür|C₁₂H₂₈BrN|Tetrapropylammonium bromide;C12H28BrN|organic|Molecular|S|0|0|Crystals|0|266.267|1.2|||||||||||||||||F4F4F2|1|||C12H28BrN|0|0|1200||Ld|1941-30-6
 c_1942456|0|4-Octyne|4-Oktin|C₈H₁₄|4-Octyne;C8H14|organic|Molecular|L|0|0|Powder|0|110.2|0.75092|133.5||||||||||||||||E8F2FA|0.18|||C8H14|0|0|2000|324730|L|1942-45-6
@@ -6736,7 +6736,7 @@ c_2032599|0|Aminocarb|Aminokarb|C₁₁H₁₆N₂O₂|Aminocarb;C11H16N2O2|orga
 c_2032657|0|Methiocarb|Metiokarb|C₁₁H₁₅NO₂S|Methiocarb;C11H15NO2S|organic|Molecular|S|0|0|Crystals|0|225.306|1.2|||||||||||||||||F4F4F2|1|||C11H15NO2S|0|0|1200||Ld|2032-65-7
 c_2033241|0|2,2-Dimethyl-1,3-dioxane-4,6-dione|2,2-Dimetil-1,3-dioksan-4,6-dion|C₆H₈O₄|2,2-Dimethyl-1,3-dioxane-4,6-dione;C6H8O4|organic|Molecular|S|0|0|Crystals|0|144.126|1.2|||||||||||||||||F4F4F2|1|||C6H8O4|0|0|1200||Ld|2033-24-1
 c_2036411|0|5-Methylpyrimidine|5-Metilpirimidin|C₅H₆N₂|5-Methylpyrimidine;C5H6N2|organic|Molecular|S|0|0|Crystals|0|94.117|1.2|||||||||||||||||F4F4F2|1|||C5H6N2|0|0|1200||Ld|2036-41-1
-c_2037312|0|3-Chlorobenzenethiol|3-Klorobenzenetiol|C₆H₅ClS|3-Chlorobenzenethiol;C6H5ClS|organic|Molecular|L|0|0|Powder|0|144.616|1.26371|206||||||||||||||||E8F2FA|0.18|||C6H5ClS|0|0|2000|291567|L|2037-31-2
+c_2037312|0|3-Chlorobenzenethiol|3-Klorobenzentiol|C₆H₅ClS|3-Chlorobenzenethiol;C6H5ClS|organic|Molecular|L|0|0|Powder|0|144.616|1.26371|206||||||||||||||||E8F2FA|0.18|||C6H5ClS|0|0|2000|291567|L|2037-31-2
 c_2039829|0|1-Bromo-4-vinylbenzene|1-Bromo-4-vinilbenzen|C₈H₇Br|1-Bromo-4-vinylbenzene;C8H7Br|organic|Molecular|L|0|0|Powder|0|183.048|1.39842|213||||||||||||||||E8F2FA|0.18|||C8H7Br|0|0|2000|233716|L|2039-82-9
 c_2039874|0|2-Chlorostyrene|2-Klorostiren|C₈H₇Cl|2-Chlorostyrene;C8H7Cl|organic|Molecular|L|0|0|Powder|0|138.594|1.10002|188.6||||||||||||||||E8F2FA|0.18|||C8H7Cl|0|0|2000|293187|L|2039-87-4
 c_2039885|0|1-Bromo-2-vinylbenzene|1-Bromo-2-vinilbenzen|C₈H₇Br|1-Bromo-2-vinylbenzene;C8H7Br|organic|Molecular|L|0|0|Powder|0|183.048|1.41602|215||||||||||||||||E8F2FA|0.18|||C8H7Br|0|0|2000|234677|L|2039-88-5
@@ -6774,9 +6774,9 @@ c_2051607|0|2-Chlorobiphenyl|2-Klorobifenil|C₁₂H₉Cl|2-Chlorobiphenyl;C12H9
 c_2051618|0|3-Chlorobiphenyl|3-Klorobifenil|C₁₂H₉Cl|3-Chlorobiphenyl;C12H9Cl|organic|Molecular|L|0|0|Powder|0|188.654|1.15792|284.5||||||||||||||||E8F2FA|0.18|||C12H9Cl|0|0|2000|260123|L|2051-61-8
 c_2051629|0|4-Chlorobiphenyl|4-Klorobifenil|C₁₂H₉Cl|4-Chlorobiphenyl;C12H9Cl|organic|Molecular|S|0|0|Crystals|0|188.654|1.2|||||||||||||||||F4F4F2|1|||C12H9Cl|0|0|1200||Ld|2051-62-9
 c_2051787|0|Allyl butanoate|Allil bütanoat|C₇H₁₂O₂|Allyl butanoate;C7H12O2|organic|Molecular|L|0|0|Powder|0|128.171|0.90172|142||||||||||||||||E8F2FA|0.18|||C7H12O2|0|0|2000|285035|L|2051-78-7
-c_2051856|0|4-(Phenylazo)-1,3-benzenediol|4-(Fenilazo)-1,3-benzenediol|C₁₂H₁₀N₂O₂|4-(Phenylazo)-1,3-benzenediol;C12H10N2O2|organic|Molecular|S|0|0|Crystals|0|214.224|1.2|||||||||||||||||F4F4F2|1|||C12H10N2O2|0|0|1200||Ld|2051-85-6
+c_2051856|0|4-(Phenylazo)-1,3-benzenediol|4-(Fenilazo)-1,3-benzendiol|C₁₂H₁₀N₂O₂|4-(Phenylazo)-1,3-benzenediol;C12H10N2O2|organic|Molecular|S|0|0|Crystals|0|214.224|1.2|||||||||||||||||F4F4F2|1|||C12H10N2O2|0|0|1200||Ld|2051-85-6
 c_2051903|0|Dichlorodiphenylmethane|Diklorodifenilmetan|C₁₃H₁₀Cl₂|Dichlorodiphenylmethane;C13H10Cl2|organic|Molecular|S|0|0|Crystals|0|237.123|1.23518|||||||||||||||||F4F4F2|1|||C13H10Cl2|0|0|1200||L|2051-90-3
-c_2051958|0|γ-Oxobenzenebutanoic acid|γ-Oksobenzenebütanoik asit|C₁₀H₁₀O₃|γ-Oxobenzenebutanoic acid;C10H10O3|organic|Molecular|S|0|0|Crystals|0|178.187|1.2|||||||||||||||||F4F4F2|1|||C10H10O3|0|0|1200||Ld|2051-95-8
+c_2051958|0|γ-Oxobenzenebutanoic acid|γ-Oksobenzenbütanoik asit|C₁₀H₁₀O₃|γ-Oxobenzenebutanoic acid;C10H10O3|organic|Molecular|S|0|0|Crystals|0|178.187|1.2|||||||||||||||||F4F4F2|1|||C10H10O3|0|0|1200||Ld|2051-95-8
 c_2051970|0|1-Benzyl-1H-pyrrole|1-Benzil-1H-pirrol|C₁₁H₁₁N|1-Benzyl-1H-pyrrole;C11H11N|organic|Molecular|L|0|0|Powder|0|157.216|1.01832|247||||||||||||||||E8F2FA|0.18|||C11H11N|0|0|2000|291148|L|2051-97-0
 c_2052019|0|2-Bromo-2-methylpropanoic acid|2-Bromo-2-metilpropanoik asit|C₄H₇BrO₂|2-Bromo-2-methylpropanoic acid;C4H7BrO2|organic|Molecular|S|0|0|Crystals|0|167.002|1.49696|||||||||||||||||F4F4F2|1|||C4H7BrO2|0|0|1200||L|2052-01-9
 c_2052064|0|4-Bromo-N,N-diethylaniline|4-Bromo-N,N-dietilanilin|C₁₀H₁₄BrN|4-Bromo-N,N-diethylaniline;C10H14BrN|organic|Molecular|S|0|0|Crystals|0|228.133|1.2|||||||||||||||||F4F4F2|1|||C10H14BrN|0|0|1200||Ld|2052-06-4
@@ -6802,7 +6802,7 @@ c_2097190|0|1-Phenylsilatrane|1-Fenilsilatran|C₁₂H₁₇NO₃Si|1-Phenylsila
 c_2100176|0|4-Pentenal|4-Pentenal|C₅H₈O|4-Pentenal;C5H8O|organic|Molecular|L|0|0|Powder|0|84.118|0.8522|104||||||||||||||||E8F2FA|0.18|||C5H8O|0|0|2000|394555|L|2100-17-6
 c_2101862|0|1-Azido-4-methylbenzene|1-Azido-4-metilbenzen|C₇H₇N₃|1-Azido-4-methylbenzene;C7H7N3|organic|Molecular|L|0|0|Powder|0|133.154|1.05272|||||||||||||||||E8F2FA|0.18|||C7H7N3|0|0|2000||L|2101-86-2
 c_2103642|0|Gallein|Gallein|C₂₀H₁₂O₇|Gallein;C20H12O7|organic|Molecular|S|0|0|Crystals|0|364.309|1.2|||||||||||||||||F4F4F2|1|||C20H12O7|0|0|1200||Ld|2103-64-2
-c_2104645|0|O-Ethyl O-p-nitrophenyl benzenethiophosphonate|O-etil O-p-nitrofenil benzenetiofosfonat|C₁₄H₁₄NO₄PS|O-Ethyl O-p-nitrophenyl benzenethiophosphonate;C14H14NO4PS|organic|Molecular|S|0|0|Crystals|0|323.303|1.2725|||||||||||||||||F4F4F2|1|||C14H14NO4PS|0|0|1200||L|2104-64-5
+c_2104645|0|O-Ethyl O-p-nitrophenyl benzenethiophosphonate|O-etil O-p-nitrofenil benzentiofosfonat|C₁₄H₁₄NO₄PS|O-Ethyl O-p-nitrophenyl benzenethiophosphonate;C14H14NO4PS|organic|Molecular|S|0|0|Crystals|0|323.303|1.2725|||||||||||||||||F4F4F2|1|||C14H14NO4PS|0|0|1200||L|2104-64-5
 c_2104963|0|Bromophos|Bromofoz|C₈H₈BrCl₂O₃PS|Bromophos;C8H8BrCl2O3PS|organic|Molecular|S|0|0|Crystals|0|365.987|1.2|||||||||||||||||F4F4F2|1|||C8H8BrCl2O3PS|0|0|1200||Ld|2104-96-3
 c_2107699|0|5,6-Dimethoxy-1-indanone|5,6-Dimetoksi-1-indanon|C₁₁H₁₂O₃|5,6-Dimethoxy-1-indanone;C11H12O3|organic|Molecular|S|0|0|Crystals|0|192.214|1.2|||||||||||||||||F4F4F2|1|||C11H12O3|0|0|1200||Ld|2107-69-9
 c_2107768|0|5,7-Dihydroxy-4-methyl-2H-1-benzopyran-2-one|5,7-Dihidroksi-4-metil-2H-1-benzopiran-2-on|C₁₀H₈O₄|5,7-Dihydroxy-4-methyl-2H-1-benzopyran-2-one;C10H8O4|organic|Molecular|S|0|0|Crystals|0|192.17|1.2|||||||||||||||||F4F4F2|1|||C10H8O4|0|0|1200||Ld|2107-76-8
@@ -6820,7 +6820,7 @@ c_2131557|0|1-Chloro-4-isothiocyanatobenzene|1-Kloro-4-izotiosianatobenzen|C₇H
 c_2132801|0|4,4'-Dimethoxy-1,1'-biphenyl|4,4'-Dimetoksi-1,1'-bifenil|C₁₄H₁₄O₂|4,4'-Dimethoxy-1,1'-biphenyl;C14H14O2|organic|Molecular|S|0|0|Crystals|0|214.264|1.2|||||||||||||||||F4F4F2|1|||C14H14O2|0|0|1200||Ld|2132-80-1
 c_2136892|0|1-Chloro-2-(trichloromethyl)benzene|1-Kloro-2-(triklorometil)benzen|C₇H₄Cl₄|1-Chloro-2-(trichloromethyl)benzene;C7H4Cl4|organic|Molecular|S|0|0|Crystals|0|229.909|1.51872|||||||||||||||||F4F4F2|1|||C7H4Cl4|0|0|1200||L|2136-89-2
 c_2136994|0|2,2',3,3',5,5',6,6'-Octachlorobiphenyl|2,2',3,3',5,5',6,6'-Oktaklorobifenil|C₁₂H₂Cl₈|2,2',3,3',5,5',6,6'-Octachlorobiphenyl;C12H2Cl8|organic|Molecular|S|0|0|Crystals|0|429.748|1.2|||||||||||||||||F4F4F2|1|||C12H2Cl8|0|0|1200||Ld|2136-99-4
-c_2138229|0|4-Chloro-1,2-benzenediol|4-Kloro-1,2-benzenediol|C₆H₅ClO₂|4-Chloro-1,2-benzenediol;C6H5ClO2|organic|Molecular|S|0|0|Crystals|0|144.554|1.2|||||||||||||||||F4F4F2|1|||C6H5ClO2|0|0|1200||Ld|2138-22-9
+c_2138229|0|4-Chloro-1,2-benzenediol|4-Kloro-1,2-benzendiol|C₆H₅ClO₂|4-Chloro-1,2-benzenediol;C6H5ClO2|organic|Molecular|S|0|0|Crystals|0|144.554|1.2|||||||||||||||||F4F4F2|1|||C6H5ClO2|0|0|1200||Ld|2138-22-9
 c_2141620|0|3-Ethoxypropanenitrile|3-Etoksipropanenitril|C₅H₉NO|3-Ethoxypropanenitrile;C5H9NO|organic|Molecular|L|0|0|Powder|0|99.133|0.928515|171||||||||||||||||E8F2FA|0.18|||C5H9NO|0|0|2000|394270|L|2141-62-0
 c_2142010|0|2-Benzyl-1H-isoindole-1,3(2H)-dione|2-Benzil-1H-izoindol-1,3(2H)-dion|C₁₅H₁₁NO₂|2-Benzyl-1H-isoindole-1,3(2H)-dione;C15H11NO2|organic|Molecular|S|0|0|Crystals|0|237.258|1.34318|||||||||||||||||F4F4F2|1|||C15H11NO2|0|0|1200||L|2142-01-0
 c_2142634|0|1-(3-Bromophenyl)ethanone|1-(3-Bromofenil)etanon|C₈H₇BrO|1-(3-Bromophenyl)ethanone;C8H7BrO|organic|Molecular|L|0|0|Powder|0|199.047|1|||||||||||||||||E8F2FA|0.18|||C8H7BrO|0|0|2000||Ld|2142-63-4
@@ -6882,7 +6882,7 @@ c_2217074|0|N,N-Dipropylaniline|N,N-dipropilanilin|C₁₂H₁₉N|N,N-Dipropyla
 c_2217416|0|5,6,7,8-Tetrahydro-1-naphthalenamine|5,6,7,8-Tetrahidro-1-naftalenamin|C₁₀H₁₃N|5,6,7,8-Tetrahydro-1-naphthalenamine;C10H13N|organic|Molecular|S|0|0|Crystals|0|147.221|1.06252|||||||||||||||||F4F4F2|1|||C10H13N|0|0|1200||L|2217-41-6
 c_2219821|0|2-tert-Butyl-6-methylphenol|2-Tert-bütil-6-metilfenol|C₁₁H₁₆O|2-tert-Butyl-6-methylphenol;C11H16O|organic|Molecular|S|0|0|Crystals|0|164.248|0.92408|||||||||||||||||F4F4F2|1|||C11H16O|0|0|1200||L|2219-82-1
 c_2227170|0|Pentac|Pentak|C₁₀Cl₁₀|Pentac;C10Cl10|organic|Molecular|S|0|0|Crystals|0|474.61|1.2|||||||||||||||||F4F4F2|1|||C10Cl10|0|0|1200||Ld|2227-17-0
-c_2227794|0|Benzenecarbothioamide|Benzenekarbotioamit|C₇H₇NS|Benzenecarbothioamide;C7H7NS|organic|Molecular|S|0|0|Crystals|0|137.2|1.2|||||||||||||||||F4F4F2|1|||C7H7NS|0|0|1200||Ld|2227-79-4
+c_2227794|0|Benzenecarbothioamide|Benzenkarbotioamit|C₇H₇NS|Benzenecarbothioamide;C7H7NS|organic|Molecular|S|0|0|Crystals|0|137.2|1.2|||||||||||||||||F4F4F2|1|||C7H7NS|0|0|1200||Ld|2227-79-4
 c_2230708|0|2,4,4-Trimethylcyclohexanone|2,4,4-Trimetilsiklohekzanon|C₉H₁₆O|2,4,4-Trimethylcyclohexanone;C9H16O|organic|Molecular|L|0|0|Powder|0|140.226|0.9022|190||||||||||||||||E8F2FA|0.18|||C9H16O|0|0|2000|290654|L|2230-70-8
 c_2233003|0|3,3,3-Trichloro-1-propene|3,3,3-Trikloro-1-propen|C₃H₃Cl₃|3,3,3-Trichloro-1-propene;C3H3Cl3|organic|Molecular|L|0|0|Powder|0|145.407|1.3672|112||||||||||||||||E8F2FA|0.18|||C3H3Cl3|0|0|2000|233092|L|2233-00-3
 c_2234131|0|Octachloronaphthalene|Oktakloronaftalen|C₁₀Cl₈|Octachloronaphthalene;C10Cl8|organic|Molecular|S|0|0|Crystals|0|403.71|1.2|||||||||||||||||F4F4F2|1|||C10Cl8|0|0|1200||Ld|2234-13-1
@@ -6904,7 +6904,7 @@ c_2254946|0|3-Methyl-2(3H)-benzothiazolethione|3-Metil-2(3H)-benzotiazoletion|C�
 c_2257525|0|Isopropylhydrazine|İzopropilhidrazin|C₃H₁₀N₂|Isopropylhydrazine;C3H10N2|organic|Molecular|L|0|0|Powder|0|74.127|1|107||||||||||||||||E8F2FA|0.18|||C3H10N2|0|0|2000|451296|Ld|2257-52-5
 c_2259963|0|Cyclothiazide|Siklotiazit|C₁₄H₁₆ClN₃O₄S₂|Cyclothiazide;C14H16ClN3O4S2|organic|Molecular|S|0|0|Crystals|0|389.869|1.2|||||||||||||||||F4F4F2|1|||C14H16ClN3O4S2|0|0|1200||Ld|2259-96-3
 c_2260506|0|Acetylcholine iodide|Asetilkolin iyodür|C₇H₁₆INO₂|Acetylcholine iodide;C7H16INO2|organic|Molecular|S|0|0|Crystals|0|273.114|1.2|||||||||||||||||F4F4F2|1|||C7H16INO2|0|0|1200||Ld|2260-50-6
-c_2270204|0|Benzenepentanoic acid|Benzenepentanoik asit|C₁₁H₁₄O₂|Benzenepentanoic acid;C11H14O2|organic|Molecular|S|0|0|Crystals|0|178.231|1.2|||||||||||||||||F4F4F2|1|||C11H14O2|0|0|1200||Ld|2270-20-4
+c_2270204|0|Benzenepentanoic acid|Benzenpentanoik asit|C₁₁H₁₄O₂|Benzenepentanoic acid;C11H14O2|organic|Molecular|S|0|0|Crystals|0|178.231|1.2|||||||||||||||||F4F4F2|1|||C11H14O2|0|0|1200||Ld|2270-20-4
 c_2272459|0|4-Methyl-N-(phenylmethylene)aniline|4-Metil-N-(fenilmetilen)anilin|C₁₄H₁₃N|4-Methyl-N-(phenylmethylene)aniline;C14H13N|organic|Molecular|S|0|0|Crystals|0|195.265|1.2|||||||||||||||||F4F4F2|1|||C14H13N|0|0|1200||Ld|2272-45-9
 c_2275185|0|Trimethoate|Trimetoat|C₉H₂₀NO₃PS₂|Trimethoate;C9H20NO3PS2|organic|Molecular|S|0|0|Crystals|0|285.357|1.2|||||||||||||||||F4F4F2|1|||C9H20NO3PS2|0|0|1200||Ld|2275-18-5
 c_2283081|0|2-Hydroxy-1-naphthalenecarboxylic acid|2-Hidroksi-1-naftalenekarboksilik asit|C₁₁H₈O₃|2-Hydroxy-1-naphthalenecarboxylic acid;C11H8O3|organic|Molecular|S|0|0|Crystals|0|188.182|1.2|||||||||||||||||F4F4F2|1|||C11H8O3|0|0|1200||Ld|2283-08-1
@@ -6912,17 +6912,17 @@ c_2294715|0|Methyl 2-phenylbutanoate|Metil 2-fenilbütanoat|C₁₁H₁₄O₂|M
 c_2295310|0|2,4-Thiazolidinedione|2,4-Tiazolidinedion|C₃H₃NO₂S|2,4-Thiazolidinedione;C3H3NO2S|organic|Molecular|S|0|0|Crystals|0|117.122|1.2|||||||||||||||||F4F4F2|1|||C3H3NO2S|0|0|1200||Ld|2295-31-0
 c_2295581|0|1-(2,4,6-Trihydroxyphenyl)-1-propanone|1-(2,4,6-Trihidroksifenil)-1-propanon|C₉H₁₀O₄|1-(2,4,6-Trihydroxyphenyl)-1-propanone;C9H10O4|organic|Molecular|S|0|0|Crystals|0|182.175|1.2|||||||||||||||||F4F4F2|1|||C9H10O4|0|0|1200||Ld|2295-58-1
 c_2303175|0|Triallate|Triallat|C₁₀H₁₆Cl₃NOS|Triallate;C10H16Cl3NOS|organic|Molecular|S|0|0|Crystals|0|304.654|1.27325|||||||||||||||||F4F4F2|1|||C10H16Cl3NOS|0|0|1200||L|2303-17-5
-c_2305137|0|4-Hydroxy-3-methoxybenzenepropanol|4-Hidroksi-3-metoksibenzenepropanol|C₁₀H₁₄O₃|4-Hydroxy-3-methoxybenzenepropanol;C10H14O3|organic|Molecular|S|0|0|Crystals|0|182.219|1.2|||||||||||||||||F4F4F2|1|||C10H14O3|0|0|1200||Ld|2305-13-7
+c_2305137|0|4-Hydroxy-3-methoxybenzenepropanol|4-Hidroksi-3-metoksibenzenpropanol|C₁₀H₁₄O₃|4-Hydroxy-3-methoxybenzenepropanol;C10H14O3|organic|Molecular|S|0|0|Crystals|0|182.219|1.2|||||||||||||||||F4F4F2|1|||C10H14O3|0|0|1200||Ld|2305-13-7
 c_2306889|0|Octyl octanoate|Oktil oktanoat|C₁₆H₃₂O₂|Octyl octanoate;C16H32O2|organic|Molecular|L|0|0|Powder|0|256.43|0.85542|306.8||||||||||||||||E8F2FA|0.18|||C16H32O2|0|0|2000|199024|L|2306-88-9
 c_2307100|0|S-Propyl thioacetate|S-propil tioasetat|C₅H₁₀OS|S-Propyl thioacetate;C5H10OS|organic|Molecular|L|0|0|Powder|0|118.194|0.953525|138||||||||||||||||E8F2FA|0.18|||C5H10OS|0|0|2000|306117|L|2307-10-0
 c_2310170|0|Phosalone|Fosalon|C₁₂H₁₅ClNO₄PS₂|Phosalone;C12H15ClNO4PS2|organic|Molecular|S|0|0|Crystals|0|367.799|1.2|||||||||||||||||F4F4F2|1|||C12H15ClNO4PS2|0|0|1200||Ld|2310-17-0
 c_2310987|0|2-Bromo-2-chloropropane|2-Bromo-2-kloropropan|C₃H₆BrCl|2-Bromo-2-chloropropane;C3H6BrCl|organic|Molecular|L|0|0|Powder|0|157.435|1.4952|95||||||||||||||||E8F2FA|0.18|||C3H6BrCl|0|0|2000|205781|L|2310-98-7
 c_2313657|0|3-Methyl-2-hexanol|3-Metil-2-hekzanol|C₇H₁₆O|3-Methyl-2-hexanol;C7H16O|organic|Molecular|L|0|0|Powder|0|116.204|0.822025|153||||||||||||||||E8F2FA|0.18|||C7H16O|0|0|2000|322719|L|2313-65-7
-c_2316645|0|5-Bromo-2-hydroxybenzenemethanol|5-Bromo-2-hidroksibenzenemetanol|C₇H₇BrO₂|5-Bromo-2-hydroxybenzenemethanol;C7H7BrO2|organic|Molecular|S|0|0|Crystals|0|203.035|1.2|||||||||||||||||F4F4F2|1|||C7H7BrO2|0|0|1200||Ld|2316-64-5
+c_2316645|0|5-Bromo-2-hydroxybenzenemethanol|5-Bromo-2-hidroksibenzenmetanol|C₇H₇BrO₂|5-Bromo-2-hydroxybenzenemethanol;C7H7BrO2|organic|Molecular|S|0|0|Crystals|0|203.035|1.2|||||||||||||||||F4F4F2|1|||C7H7BrO2|0|0|1200||Ld|2316-64-5
 c_2318185|0|Senkirkin|Senkirkin|C₁₉H₂₇NO₆|Senkirkin;C19H27NO6|organic|Molecular|S|0|0|Crystals|0|365.426|1.2|||||||||||||||||F4F4F2|1|||C19H27NO6|0|0|1200||Ld|2318-18-5
 c_2338127|0|5-Nitro-1H-benzotriazole|5-Nitro-1H-benzotriazol|C₆H₄N₄O₂|5-Nitro-1H-benzotriazole;C6H4N4O2|organic|Molecular|S|0|0|Crystals|0|164.124|1.2|||||||||||||||||F4F4F2|1|||C6H4N4O2|0|0|1200||Ld|2338-12-7
 c_2338376|0|L-Propoxyphene|L-propoksifen|C₂₂H₂₉NO₂|L-Propoxyphene;C22H29NO2|organic|Molecular|S|0|0|Crystals|0|339.479|1.2|||||||||||||||||F4F4F2|1|||C22H29NO2|0|0|1200||Ld|2338-37-6
-c_2344709|0|α-Methylbenzenepropanol|α-Metilbenzenepropanol|C₁₀H₁₄O|α-Methylbenzenepropanol;C10H14O|organic|Molecular|L|0|0|Powder|0|150.221|0.989916|239||||||||||||||||E8F2FA|0.18|||C10H14O|0|0|2000|300019|L|2344-70-9
+c_2344709|0|α-Methylbenzenepropanol|α-Metilbenzenpropanol|C₁₀H₁₄O|α-Methylbenzenepropanol;C10H14O|organic|Molecular|L|0|0|Powder|0|150.221|0.989916|239||||||||||||||||E8F2FA|0.18|||C10H14O|0|0|2000|300019|L|2344-70-9
 c_2344801|0|(Chloromethyl)trimethylsilane|(Klorometil)trimetilsilan|C₄H₁₁ClSi|(Chloromethyl)trimethylsilane;C4H11ClSi|organic|Molecular|L|0|0|Powder|0|122.667|0.87925|98.5||||||||||||||||E8F2FA|0.18|||C4H11ClSi|0|0|2000|266618|L|2344-80-1
 c_2344834|0|(3-Chloropropyl)trimethylsilane|(3-Kloropropil)trimetilsilan|C₆H₁₅ClSi|(3-Chloropropyl)trimethylsilane;C6H15ClSi|organic|Molecular|L|0|0|Powder|0|150.721|0.87892|151||||||||||||||||E8F2FA|0.18|||C6H15ClSi|0|0|2000|247644|L|2344-83-4
 c_2345279|0|2-Tetradecanone|2-Tetradekanon|C₁₄H₂₈O|2-Tetradecanone;C14H28O|organic|Molecular|S|0|0|Crystals|0|212.377|1.2|||||||||||||||||F4F4F2|1|||C14H28O|0|0|1200||Ld|2345-27-9
@@ -6950,9 +6950,9 @@ c_2381319|0|8-Methylbenz[a]anthracene|8-Metilbenz[a]antrasen|C₁₉H₁₄|8-Me
 c_2382436|0|(2-Hydroxypropyl)trimethylammonium chloride|(2-Hidroksipropil)trimetilammoniyum klorür|C₆H₁₆ClNO|(2-Hydroxypropyl)trimethylammonium chloride;C6H16ClNO|organic|Molecular|S|0|0|Crystals|0|153.65|1.2|||||||||||||||||F4F4F2|1|||C6H16ClNO|0|0|1200||Ld|2382-43-6
 c_2382969|0|2(3H)-Benzoxazolethione|2(3H)-benzoksazoletion|C₇H₅NOS|2(3H)-Benzoxazolethione;C7H5NOS|organic|Molecular|S|0|0|Crystals|0|151.183|1.2|||||||||||||||||F4F4F2|1|||C7H5NOS|0|0|1200||Ld|2382-96-9
 c_2385811|0|Furethidine|Furetidin|C₂₁H₃₁NO₄|Furethidine;C21H31NO4|organic|Molecular|S|0|0|Crystals|0|361.482|1.2|||||||||||||||||F4F4F2|1|||C21H31NO4|0|0|1200||Ld|2385-81-1
-c_2387237|0|N,N'-Dicyclohexylurea|N,N'-disiklohekzilurea|C₁₃H₂₄N₂O|N,N'-Dicyclohexylurea;C13H24N2O|organic|Molecular|S|0|0|Crystals|0|224.348|1.2|||||||||||||||||F4F4F2|1|||C13H24N2O|0|0|1200||Ld|2387-23-7
+c_2387237|0|N,N'-Dicyclohexylurea|N,N'-disiklohekzilüre|C₁₃H₂₄N₂O|N,N'-Dicyclohexylurea;C13H24N2O|organic|Molecular|S|0|0|Crystals|0|224.348|1.2|||||||||||||||||F4F4F2|1|||C13H24N2O|0|0|1200||Ld|2387-23-7
 c_2388149|0|p-Isopropenylisopropylbenzene|P-izopropenilizopropilbenzen|C₁₂H₁₆|p-Isopropenylisopropylbenzene;C12H16|organic|Molecular|L|0|0|Powder|0|160.26|0.89362|222||||||||||||||||E8F2FA|0.18|||C12H16|0|0|2000|271891|L|2388-14-9
-c_2393239|0|4-Methoxybenzenemethanamine|4-Metoksibenzenemetanamin|C₈H₁₁NO|4-Methoxybenzenemethanamine;C8H11NO|organic|Molecular|L|0|0|Powder|0|137.182|1.05015|236.5||||||||||||||||E8F2FA|0.18|||C8H11NO|0|0|2000|326932|L|2393-23-9
+c_2393239|0|4-Methoxybenzenemethanamine|4-Metoksibenzenmetanamin|C₈H₁₁NO|4-Methoxybenzenemethanamine;C8H11NO|organic|Molecular|L|0|0|Powder|0|137.182|1.05015|236.5||||||||||||||||E8F2FA|0.18|||C8H11NO|0|0|2000|326932|L|2393-23-9
 c_2396603|0|(4-Methoxyphenyl)phenyldiazene|(4-Metoksifenil)fenildiazen|C₁₃H₁₂N₂O|(4-Methoxyphenyl)phenyldiazene;C13H12N2O|organic|Molecular|S|0|0|Crystals|0|212.252|1.1275|||||||||||||||||F4F4F2|1|||C13H12N2O|0|0|1200||L|2396-60-3
 c_2396636|0|1,6-Heptadiyne|1,6-Heptadiin|C₇H₈|1,6-Heptadiyne;C7H8|organic|Molecular|L|0|0|Powder|0|92.141|0.816417|111||||||||||||||||E8F2FA|0.18|||C7H8|0|0|2000|366886|L|2396-63-6
 c_2396658|0|1,8-Nonadiyne|1,8-Nonadiin|C₉H₁₂|1,8-Nonadiyne;C9H12|organic|Molecular|L|0|0|Powder|0|120.195|0.81582|165||||||||||||||||E8F2FA|0.18|||C9H12|0|0|2000|320789|L|2396-65-8
@@ -6994,11 +6994,11 @@ c_2436853|0|N,N-Dimethyl-2-naphthylamine|N,N-dimetil-2-naftilamin|C₁₂H₁₃
 c_2436966|0|2,2'-Dinitro-1,1'-biphenyl|2,2'-Dinitro-1,1'-bifenil|C₁₂H₈N₂O₄|2,2'-Dinitro-1,1'-biphenyl;C12H8N2O4|organic|Molecular|S|0|0|Crystals|0|244.206|1.4525|||||||||||||||||F4F4F2|1|||C12H8N2O4|0|0|1200||L|2436-96-6
 c_2437254|0|Dodecanenitrile|Dodekanenitril|C₁₂H₂₃N|Dodecanenitrile;C12H23N|organic|Molecular|L|0|0|Powder|0|181.323|0.82402|276.1||||||||||||||||E8F2FA|0.18|||C12H23N|0|0|2000|266563|L|2437-25-4
 c_2437889|0|1,3,5-Triethoxybenzene|1,3,5-Trietoksibenzen|C₁₂H₁₈O₃|1,3,5-Triethoxybenzene;C12H18O3|organic|Molecular|S|0|0|Crystals|0|210.273|1.2|||||||||||||||||F4F4F2|1|||C12H18O3|0|0|1200||Ld|2437-88-9
-c_2438724|0|4-Butoxy-N-hydroxybenzeneacetamide|4-Bütoksi-N-hidroksibenzeneasetamit|C₁₂H₁₇NO₃|4-Butoxy-N-hydroxybenzeneacetamide;C12H17NO3|organic|Molecular|S|0|0|Crystals|0|223.272|1.2|||||||||||||||||F4F4F2|1|||C12H17NO3|0|0|1200||Ld|2438-72-4
+c_2438724|0|4-Butoxy-N-hydroxybenzeneacetamide|4-Bütoksi-N-hidroksibenzenasetamit|C₁₂H₁₇NO₃|4-Butoxy-N-hydroxybenzeneacetamide;C12H17NO3|organic|Molecular|S|0|0|Crystals|0|223.272|1.2|||||||||||||||||F4F4F2|1|||C12H17NO3|0|0|1200||Ld|2438-72-4
 c_2439012|0|Chinomethionat|Kinometionat|C₁₀H₆N₂OS₂|Chinomethionat;C10H6N2OS2|organic|Molecular|S|0|0|Crystals|0|234.291|1.2|||||||||||||||||F4F4F2|1|||C10H6N2OS2|0|0|1200||Ld|2439-01-2
 c_2439103|0|Dodine|Dodin|C₁₅H₃₃N₃O₂|Dodine;C15H33N3O2|organic|Molecular|S|0|0|Crystals|0|287.448|1.2|||||||||||||||||F4F4F2|1|||C15H33N3O2|0|0|1200||Ld|2439-10-3
 c_2439352|0|2-(Dimethylamino)ethyl acrylate|2-(Dimetilamino)etil akrilat|C₇H₁₃NO₂|2-(Dimethylamino)ethyl acrylate;C7H13NO2|organic|Molecular|L|0|0|Powder|0|143.186|0.9382|||||||||||||||||E8F2FA|0.18|||C7H13NO2|0|0|2000||L|2439-35-2
-c_2444362|0|2-Chlorobenzeneacetic acid|2-Klorobenzeneasetik asit|C₈H₇ClO₂|2-Chlorobenzeneacetic acid;C8H7ClO2|organic|Molecular|S|0|0|Crystals|0|170.592|1.2|||||||||||||||||F4F4F2|1|||C8H7ClO2|0|0|1200||Ld|2444-36-2
+c_2444362|0|2-Chlorobenzeneacetic acid|2-Klorobenzenasetik asit|C₈H₇ClO₂|2-Chlorobenzeneacetic acid;C8H7ClO2|organic|Molecular|S|0|0|Crystals|0|170.592|1.2|||||||||||||||||F4F4F2|1|||C8H7ClO2|0|0|1200||Ld|2444-36-2
 c_2444373|0|(Methylthio)acetic acid|(Metiltio)asetik asit|C₃H₆O₂S|(Methylthio)acetic acid;C3H6O2S|organic|Molecular|L|0|0|Powder|0|106.139|1.2212|||||||||||||||||E8F2FA|0.18|||C3H6O2S|0|0|2000||L|2444-37-3
 c_2445763|0|Hexyl propanoate|Hekzil propanoat|C₉H₁₈O₂|Hexyl propanoate;C9H18O2|organic|Molecular|L|0|0|Powder|0|158.241|0.86982|188||||||||||||||||E8F2FA|0.18|||C9H18O2|0|0|2000|256452|L|2445-76-3
 c_2445832|0|7-Methyl-2H-1-benzopyran-2-one|7-Metil-2H-1-benzopiran-2-on|C₁₀H₈O₂|7-Methyl-2H-1-benzopyran-2-one;C10H8O2|organic|Molecular|S|0|0|Crystals|0|160.172|1.2|||||||||||||||||F4F4F2|1|||C10H8O2|0|0|1200||Ld|2445-83-2
@@ -7019,7 +7019,7 @@ c_2467029|0|2,2'-Dihydroxydiphenylmethane|2,2'-Dihidroksidifenilmetan|C₁₃H�
 c_2470680|0|Diheptylamine|Diheptilamin|C₁₄H₃₁N|Diheptylamine;C14H31N|organic|Molecular|S|0|0|Crystals|0|213.409|0.795621|||||||||||||||||F4F4F2|1|||C14H31N|0|0|1200||L|2470-68-0
 c_2473010|0|1-Chlorononane|1-Klorononan|C₉H₁₉Cl|1-Chlorononane;C9H19Cl|organic|Molecular|L|0|0|Powder|0|162.701|0.867425|204||||||||||||||||E8F2FA|0.18|||C9H19Cl|0|0|2000|258076|L|2473-01-0
 c_2476371|0|1-(2,5-Dichlorophenyl)ethanone|1-(2,5-Diklorofenil)etanon|C₈H₆Cl₂O|1-(2,5-Dichlorophenyl)ethanone;C8H6Cl2O|organic|Molecular|L|0|0|Powder|0|189.035|1.3213|||||||||||||||||E8F2FA|0.18|||C8H6Cl2O|0|0|2000||L|2476-37-1
-c_2489772|0|Trimethylthiourea|Trimetiltiourea|C₄H₁₀N₂S|Trimethylthiourea;C4H10N2S|organic|Molecular|S|0|0|Crystals|0|118.198|1.2|||||||||||||||||F4F4F2|1|||C4H10N2S|0|0|1200||Ld|2489-77-2
+c_2489772|0|Trimethylthiourea|Trimetiltioüre|C₄H₁₀N₂S|Trimethylthiourea;C4H10N2S|organic|Molecular|S|0|0|Crystals|0|118.198|1.2|||||||||||||||||F4F4F2|1|||C4H10N2S|0|0|1200||Ld|2489-77-2
 c_2493029|0|1-Bromo-4-isocyanatobenzene|1-Bromo-4-izosianatobenzen|C₇H₄BrNO|1-Bromo-4-isocyanatobenzene;C7H4BrNO|organic|Molecular|L|0|0|Powder|0|198.019|1|226||||||||||||||||E8F2FA|0.18|||C7H4BrNO|0|0|2000|221823|Ld|2493-02-9
 c_2495354|0|Benzyl acrylate|Benzil akrilat|C₁₀H₁₀O₂|Benzyl acrylate;C10H10O2|organic|Molecular|L|0|0|Powder|0|162.188|1.05732|228||||||||||||||||E8F2FA|0.18|||C10H10O2|0|0|2000|271914|L|2495-35-4
 c_2497214|0|4-Hexen-3-one|4-Hekzen-3-on|C₆H₁₀O|4-Hexen-3-one;C6H10O|organic|Molecular|L|0|0|Powder|0|98.145|0.85592|138||||||||||||||||E8F2FA|0.18|||C6H10O|0|0|2000|368650|L|2497-21-4
@@ -7085,7 +7085,7 @@ c_2655143|0|3,5-Xylyl methylcarbamate|3,5-Ksilil metilkarbamat|C₁₀H₁₃NO�
 c_2664633|0|4,4'-Dihydroxydiphenyl sulfide|4,4'-Dihidroksidifenil sülfür|C₁₂H₁₀O₂S|4,4'-Dihydroxydiphenyl sulfide;C12H10O2S|organic|Molecular|S|0|0|Crystals|0|218.27|1.2|||||||||||||||||F4F4F2|1|||C12H10O2S|0|0|1200||Ld|2664-63-3
 c_2675776|0|Chloroneb|Kloroneb|C₈H₈Cl₂O₂|Chloroneb;C8H8Cl2O2|organic|Molecular|S|0|0|Crystals|0|207.05|1.2|||||||||||||||||F4F4F2|1|||C8H8Cl2O2|0|0|1200||Ld|2675-77-6
 c_2679870|0|sec-Butyl ethyl ether|Sec-bütil etil eter|C₆H₁₄O|sec-Butyl ethyl ether;C6H14O|organic|Molecular|L|0|0|Powder|0|102.177|0.75032|81||||||||||||||||E8F2FA|0.18|||C6H14O|0|0|2000|305012|L|2679-87-0
-c_2687254|0|3-Methyl-1,2-benzenediamine|3-Metil-1,2-benzenediamin|C₇H₁₀N₂|3-Methyl-1,2-benzenediamine;C7H10N2|organic|Molecular|S|0|0|Crystals|0|122.171|1.2|||||||||||||||||F4F4F2|1|||C7H10N2|0|0|1200||Ld|2687-25-4
+c_2687254|0|3-Methyl-1,2-benzenediamine|3-Metil-1,2-benzendiamin|C₇H₁₀N₂|3-Methyl-1,2-benzenediamine;C7H10N2|organic|Molecular|S|0|0|Crystals|0|122.171|1.2|||||||||||||||||F4F4F2|1|||C7H10N2|0|0|1200||Ld|2687-25-4
 c_2688779|0|Laudanosine|Laudanosin|C₂₁H₂₇NO₄|Laudanosine;C21H27NO4|organic|Molecular|S|0|0|Crystals|0|357.45|1.2|||||||||||||||||F4F4F2|1|||C21H27NO4|0|0|1200||Ld|2688-77-9
 c_2688848|0|2-Phenoxyaniline|2-Fenoksianilin|C₁₂H₁₁NO|2-Phenoxyaniline;C12H11NO|organic|Molecular|S|0|0|Crystals|0|185.226|1.2|||||||||||||||||F4F4F2|1|||C12H11NO|0|0|1200||Ld|2688-84-8
 c_2696846|0|4-Propylaniline|4-Propilanilin|C₉H₁₃N|4-Propylaniline;C9H13N|organic|Molecular|L|0|0|Powder|0|135.21|1|229||||||||||||||||E8F2FA|0.18|||C9H13N|0|0|2000|326819|Ld|2696-84-6
@@ -7093,7 +7093,7 @@ c_2698411|0|o-Chlorobenzylidene malononitrile|O-klorobenziliden malononitril|C�
 c_2706561|0|2-Pyridineethanamine|2-Piridineetanamin|C₇H₁₀N₂|2-Pyridineethanamine;C7H10N2|organic|Molecular|L|0|0|Powder|0|122.171|1.02202|213||||||||||||||||E8F2FA|0.18|||C7H10N2|0|0|2000|350175|L|2706-56-1
 c_2718254|0|Rheadine|Rheadin|C₂₁H₂₁NO₆|Rheadine;C21H21NO6|organic|Molecular|S|0|0|Crystals|0|383.4|1.2|||||||||||||||||F4F4F2|1|||C21H21NO6|0|0|1200||Ld|2718-25-4
 c_2719279|0|Cyclohexanecarbonyl chloride|Siklohekzanekarbonil klorür|C₇H₁₁ClO|Cyclohexanecarbonyl chloride;C7H11ClO|organic|Molecular|L|0|0|Powder|0|146.614|1.09621|183||||||||||||||||E8F2FA|0.18|||C7H11ClO|0|0|2000|273788|L|2719-27-9
-c_2724698|0|N-Methyl-N'-phenylthiourea|N-metil-N'-feniltiourea|C₈H₁₀N₂S|N-Methyl-N'-phenylthiourea;C8H10N2S|organic|Molecular|S|0|0|Crystals|0|166.242|1.2|||||||||||||||||F4F4F2|1|||C8H10N2S|0|0|1200||Ld|2724-69-8
+c_2724698|0|N-Methyl-N'-phenylthiourea|N-metil-N'-feniltioüre|C₈H₁₀N₂S|N-Methyl-N'-phenylthiourea;C8H10N2S|organic|Molecular|S|0|0|Crystals|0|166.242|1.2|||||||||||||||||F4F4F2|1|||C8H10N2S|0|0|1200||Ld|2724-69-8
 c_2725828|0|1-Bromo-3-ethylbenzene|1-Bromo-3-etilbenzen|C₈H₉Br|1-Bromo-3-ethylbenzene;C8H9Br|organic|Molecular|L|0|0|Powder|0|185.064|1.34932|203||||||||||||||||E8F2FA|0.18|||C8H9Br|0|0|2000|226415|L|2725-82-8
 c_2735048|0|2,4-Dimethoxyaniline|2,4-Dimetoksianilin|C₈H₁₁NO₂|2,4-Dimethoxyaniline;C8H11NO2|organic|Molecular|S|0|0|Crystals|0|153.181|1.2|||||||||||||||||F4F4F2|1|||C8H11NO2|0|0|1200||Ld|2735-04-8
 c_2736405|0|2-Ethylbutanoyl chloride|2-Etilbütanoil klorür|C₆H₁₁ClO|2-Ethylbutanoyl chloride;C6H11ClO|organic|Molecular|L|0|0|Powder|0|134.603|0.98252|140||||||||||||||||E8F2FA|0.18|||C6H11ClO|0|0|2000|270107|L|2736-40-5
@@ -7108,7 +7108,7 @@ c_2769644|0|Butyl isocyanide|Bütil izosiyanür|C₅H₉N|Butyl isocyanide;C5H9N
 c_2781002|0|1,4-Bis(α-(tert-butyldioxy)isopropyl)benzene|1,4-Bis(α-(tert-bütildioksi)izopropil)benzen|C₂₀H₃₄O₄|1,4-Bis(α-(tert-butyldioxy)isopropyl)benzene;C20H34O4|organic|Molecular|S|0|0|Crystals|0|338.488|1.2|||||||||||||||||F4F4F2|1|||C20H34O4|0|0|1200||Ld|2781-00-2
 c_2781853|0|Cyclopropene|Siklopropen|C₃H₄|Cyclopropene;C3H4|organic|Molecular|A|1|0|Powder|256|40.065|1|||||||||||||||||F4F4F2|1|||C3H4|0|0|1200||Ld|2781-85-3
 c_2782572|0|1,3-Dichloro-1,3,5-triazine-2,4,6(1H,3H,5H)-trione|1,3-Dikloro-1,3,5-triazin-2,4,6(1H,3H,5H)-trion|C₃HCl₂N₃O₃|1,3-Dichloro-1,3,5-triazine-2,4,6(1H,3H,5H)-trione;C3HCl2N3O3|organic|Molecular|S|0|0|Crystals|0|197.959|1.2|||||||||||||||||F4F4F2|1|||C3HCl2N3O3|0|0|1200||Ld|2782-57-2
-c_2782914|0|Tetramethylthiourea|Tetrametiltiourea|C₅H₁₂N₂S|Tetramethylthiourea;C5H12N2S|organic|Molecular|S|0|0|Crystals|0|132.225|1.2|||||||||||||||||F4F4F2|1|||C5H12N2S|0|0|1200||Ld|2782-91-4
+c_2782914|0|Tetramethylthiourea|Tetrametiltioüre|C₅H₁₂N₂S|Tetramethylthiourea;C5H12N2S|organic|Molecular|S|0|0|Crystals|0|132.225|1.2|||||||||||||||||F4F4F2|1|||C5H12N2S|0|0|1200||Ld|2782-91-4
 c_2783177|0|1,12-Dodecanediamine|1,12-Dodekanediamin|C₁₂H₂₈N₂|1,12-Dodecanediamine;C12H28N2|organic|Molecular|S|0|0|Crystals|0|200.37|1.2|||||||||||||||||F4F4F2|1|||C12H28N2|0|0|1200||Ld|2783-17-7
 c_2783940|0|Sunset Yellow FCF|Sunset iellov fkf|C₁₆H₁₀N₂Na₂O₇S₂|Sunset Yellow FCF;C16H10N2Na2O7S2|organic|Molecular|S|0|0|Crystals|0|452.363|1.2|||||||||||||||||F4F4F2|1|||C16H10N2Na2O7S2|0|0|1200||Ld|2783-94-0
 c_2785899|0|4-Ethyl-2-methoxyphenol|4-Etil-2-metoksifenol|C₉H₁₂O₂|4-Ethyl-2-methoxyphenol;C9H12O2|organic|Molecular|L|0|0|Powder|0|152.193|1.09312|236.5||||||||||||||||E8F2FA|0.18|||C9H12O2|0|0|2000|294686|L|2785-89-9
@@ -7129,11 +7129,11 @@ c_2835394|0|Allyl 3-methylbutanoate|Allil 3-metilbütanoat|C₈H₁₄O₂|Allyl
 c_2835689|0|4-Aminobenzamide|4-Aminobenzamit|C₇H₈N₂O|4-Aminobenzamide;C7H8N2O|organic|Molecular|S|0|0|Crystals|0|136.154|1.2|||||||||||||||||F4F4F2|1|||C7H8N2O|0|0|1200||Ld|2835-68-9
 c_2835963|0|4-Amino-2-methylphenol|4-Amino-2-metilfenol|C₇H₉NO|4-Amino-2-methylphenol;C7H9NO|organic|Molecular|S|0|0|Crystals|0|123.155|1.2|||||||||||||||||F4F4F2|1|||C7H9NO|0|0|1200||Ld|2835-96-3
 c_2835996|0|4-Amino-3-methylphenol|4-Amino-3-metilfenol|C₇H₉NO|4-Amino-3-methylphenol;C7H9NO|organic|Molecular|S|0|0|Crystals|0|123.155|1.2|||||||||||||||||F4F4F2|1|||C7H9NO|0|0|1200||Ld|2835-99-6
-c_2836035|0|N,N-Dimethyl-1,2-benzenediamine|N,N-dimetil-1,2-benzenediamin|C₈H₁₂N₂|N,N-Dimethyl-1,2-benzenediamine;C8H12N2|organic|Molecular|L|0|0|Powder|0|136.198|0.99522|218||||||||||||||||E8F2FA|0.18|||C8H12N2|0|0|2000|317341|L|2836-03-5
-c_2836046|0|N,N-Dimethyl-1,3-benzenediamine|N,N-dimetil-1,3-benzenediamin|C₈H₁₂N₂|N,N-Dimethyl-1,3-benzenediamine;C8H12N2|organic|Molecular|L|0|0|Powder|0|136.198|0.99525|270||||||||||||||||E8F2FA|0.18|||C8H12N2|0|0|2000|350939|L|2836-04-6
+c_2836035|0|N,N-Dimethyl-1,2-benzenediamine|N,N-dimetil-1,2-benzendiamin|C₈H₁₂N₂|N,N-Dimethyl-1,2-benzenediamine;C8H12N2|organic|Molecular|L|0|0|Powder|0|136.198|0.99522|218||||||||||||||||E8F2FA|0.18|||C8H12N2|0|0|2000|317341|L|2836-03-5
+c_2836046|0|N,N-Dimethyl-1,3-benzenediamine|N,N-dimetil-1,3-benzendiamin|C₈H₁₂N₂|N,N-Dimethyl-1,3-benzenediamine;C8H12N2|organic|Molecular|L|0|0|Powder|0|136.198|0.99525|270||||||||||||||||E8F2FA|0.18|||C8H12N2|0|0|2000|350939|L|2836-04-6
 c_2845898|0|3-Chloroanisole|3-Kloroanizol|C₇H₇ClO|3-Chloroanisole;C7H7ClO|organic|Molecular|L|0|0|Powder|0|142.582|1.17591|193.5||||||||||||||||E8F2FA|0.18|||C7H7ClO|0|0|2000|288011|L|2845-89-8
 c_2847725|0|4-Methyldecane|4-Metildekan|C₁₁H₂₄|4-Methyldecane;C11H24|organic|Molecular|L|0|0|Powder|0|156.313|1|188||||||||||||||||E8F2FA|0.18|||C11H24|0|0|2000|259615|Ld|2847-72-5
-c_2856635|0|2-Chlorobenzeneacetonitrile|2-Klorobenzeneasetonitril|C₈H₆ClN|2-Chlorobenzeneacetonitrile;C8H6ClN|organic|Molecular|L|0|0|Powder|0|151.593|1.17372|251||||||||||||||||E8F2FA|0.18|||C8H6ClN|0|0|2000|304270|L|2856-63-5
+c_2856635|0|2-Chlorobenzeneacetonitrile|2-Klorobenzenasetonitril|C₈H₆ClN|2-Chlorobenzeneacetonitrile;C8H6ClN|organic|Molecular|L|0|0|Powder|0|151.593|1.17372|251||||||||||||||||E8F2FA|0.18|||C8H6ClN|0|0|2000|304270|L|2856-63-5
 c_2859678|0|3-Pyridinepropanol|3-Piridinepropanol|C₈H₁₁NO|3-Pyridinepropanol;C8H11NO|organic|Molecular|L|0|0|Powder|0|137.182|1.06325|284||||||||||||||||E8F2FA|0.18|||C8H11NO|0|0|2000|357403|L|2859-67-8
 c_2859689|0|2-Pyridinepropanol|2-Piridinepropanol|C₈H₁₁NO|2-Pyridinepropanol;C8H11NO|organic|Molecular|S|0|0|Crystals|0|137.182|1.06025|||||||||||||||||F4F4F2|1|||C8H11NO|0|0|1200||L|2859-68-9
 c_2859781|0|4-Bromo-1,2-dimethoxybenzene|4-Bromo-1,2-dimetoksibenzen|C₈H₉BrO₂|4-Bromo-1,2-dimethoxybenzene;C8H9BrO2|organic|Molecular|S|0|0|Crystals|0|217.062|1.70225|||||||||||||||||F4F4F2|1|||C8H9BrO2|0|0|1200||L|2859-78-1
@@ -7145,7 +7145,7 @@ c_2882986|0|Nonylcyclopentane|Nonilsiklopentan|C₁₄H₂₈|Nonylcyclopentane;
 c_2883025|0|Nonylcyclohexane|Nonilsiklohekzan|C₁₅H₃₀|Nonylcyclohexane;C15H30|organic|Molecular|L|0|0|Powder|0|210.405|0.81632|281||||||||||||||||E8F2FA|0.18|||C15H30|0|0|2000|231768|L|2883-02-5
 c_2885009|0|1-Octadecanethiol|1-Oktadekanetiol|C₁₈H₃₈S|1-Octadecanethiol;C18H38S|organic|Molecular|S|0|0|Crystals|0|286.562|0.84752|||||||||||||||||F4F4F2|1|||C18H38S|0|0|1200||L|2885-00-9
 c_2892184|0|5-Methyl-1-phenyl-1-hexen-3-one|5-Metil-1-fenil-1-hekzen-3-on|C₁₃H₁₆O|5-Methyl-1-phenyl-1-hexen-3-one;C13H16O|organic|Molecular|S|0|0|Crystals|0|188.27|0.950946|||||||||||||||||F4F4F2|1|||C13H16O|0|0|1200||L|2892-18-4
-c_2896608|0|4-Ethyl-1,3-benzenediol|4-Etil-1,3-benzenediol|C₈H₁₀O₂|4-Ethyl-1,3-benzenediol;C8H10O2|organic|Molecular|S|0|0|Crystals|0|138.166|1.2|||||||||||||||||F4F4F2|1|||C8H10O2|0|0|1200||Ld|2896-60-8
+c_2896608|0|4-Ethyl-1,3-benzenediol|4-Etil-1,3-benzendiol|C₈H₁₀O₂|4-Ethyl-1,3-benzenediol;C8H10O2|organic|Molecular|S|0|0|Crystals|0|138.166|1.2|||||||||||||||||F4F4F2|1|||C8H10O2|0|0|1200||Ld|2896-60-8
 c_2905568|0|1-Benzylpiperidine|1-Benzilpiperidin|C₁₂H₁₇N|1-Benzylpiperidine;C12H17N|organic|Molecular|L|0|0|Powder|0|175.275|0.962516|245||||||||||||||||E8F2FA|0.18|||C12H17N|0|0|2000|260147|L|2905-56-8
 c_2905659|0|Methyl 3-chlorobenzoate|Metil 3-klorobenzoat|C₈H₇ClO₂|Methyl 3-chlorobenzoate;C8H7ClO2|organic|Molecular|L|0|0|Powder|0|170.592|1|229||||||||||||||||E8F2FA|0.18|||C8H7ClO2|0|0|2000|259034|Ld|2905-65-9
 c_2905693|0|Methyl 2,5-dichlorobenzoate|Metil 2,5-diklorobenzoat|C₈H₆Cl₂O₂|Methyl 2,5-dichlorobenzoate;C8H6Cl2O2|organic|Molecular|S|0|0|Crystals|0|205.034|1.2|||||||||||||||||F4F4F2|1|||C8H6Cl2O2|0|0|1200||Ld|2905-69-3
@@ -7159,7 +7159,7 @@ c_2922512|0|2-Heptadecanone|2-Heptadekanon|C₁₇H₃₄O|2-Heptadecanone;C17H3
 c_2935446|0|2,5-Hexanediol|2,5-Hekzanediol|C₆H₁₄O₂|2,5-Hexanediol;C6H14O2|organic|Molecular|S|0|0|Crystals|0|118.176|0.96102|||||||||||||||||F4F4F2|1|||C6H14O2|0|0|1200||L|2935-44-6
 c_2937500|0|Allyl chloroformate|Allil kloroformat|C₄H₅ClO₂|Allyl chloroformate;C4H5ClO2|organic|Molecular|L|0|0|Powder|0|120.532|1.136|109.5||||||||||||||||E8F2FA|0.18|||C4H5ClO2|0|0|2000|279371|L|2937-50-0
 c_2941642|0|S-Ethyl chlorothioformate|S-etil klorotioformat|C₃H₅ClOS|S-Ethyl chlorothioformate;C3H5ClOS|organic|Molecular|L|0|0|Powder|0|124.582|1.1952|136||||||||||||||||E8F2FA|0.18|||C3H5ClOS|0|0|2000|289008|L|2941-64-2
-c_2947617|0|4-Methylbenzeneacetonitrile|4-Metilbenzeneasetonitril|C₉H₉N|4-Methylbenzeneacetonitrile;C9H9N|organic|Molecular|L|0|0|Powder|0|131.178|0.99225|242.5||||||||||||||||E8F2FA|0.18|||C9H9N|0|0|2000|345921|L|2947-61-7
+c_2947617|0|4-Methylbenzeneacetonitrile|4-Metilbenzenasetonitril|C₉H₉N|4-Methylbenzeneacetonitrile;C9H9N|organic|Molecular|L|0|0|Powder|0|131.178|0.99225|242.5||||||||||||||||E8F2FA|0.18|||C9H9N|0|0|2000|345921|L|2947-61-7
 c_2955886|0|1-Pyrrolidineethanol|1-Pirrolidineetanol|C₆H₁₃NO|1-Pyrrolidineethanol;C6H13NO|organic|Molecular|L|0|0|Powder|0|115.176|0.97502|187||||||||||||||||E8F2FA|0.18|||C6H13NO|0|0|2000|351577|L|2955-88-6
 c_2958363|0|2-Amino-2',5-dichlorobenzophenone|2-Amino-2',5-diklorobenzofenon|C₁₃H₉Cl₂NO|2-Amino-2',5-dichlorobenzophenone;C13H9Cl2NO|organic|Molecular|S|0|0|Crystals|0|266.121|1.2|||||||||||||||||F4F4F2|1|||C13H9Cl2NO|0|0|1200||Ld|2958-36-3
 c_2961479|0|4-(1-Butylpentyl)pyridine|4-(1-Bütilpentil)piridin|C₁₄H₂₃N|4-(1-Butylpentyl)pyridine;C14H23N|organic|Molecular|S|0|0|Crystals|0|205.345|0.887825|||||||||||||||||F4F4F2|1|||C14H23N|0|0|1200||L|2961-47-9
@@ -7175,7 +7175,7 @@ c_3002242|0|2,4-Hexanedione|2,4-Hekzanedion|C₆H₁₀O₂|2,4-Hexanedione;C6H1
 c_3007316|0|Didodecylamine|Didodesilamin|C₂₄H₅₁N|Didodecylamine;C24H51N|organic|Molecular|S|0|0|Crystals|0|353.679|1.2|||||||||||||||||F4F4F2|1|||C24H51N|0|0|1200||Ld|3007-31-6
 c_3008397|0|1,2-Cycloheptanedione|1,2-Sikloheptanedion|C₇H₁₀O₂|1,2-Cycloheptanedione;C7H10O2|organic|Molecular|L|0|0|Powder|0|126.155|1.05832|||||||||||||||||E8F2FA|0.18|||C7H10O2|0|0|2000||L|3008-39-7
 c_3010024|0|(Diethylamino)acetonitrile|(Dietilamino)asetonitril|C₆H₁₂N₂|(Diethylamino)acetonitrile;C6H12N2|organic|Molecular|L|0|0|Powder|0|112.176|0.86602|169||||||||||||||||E8F2FA|0.18|||C6H12N2|0|0|2000|346859|L|3010-02-4
-c_3010820|0|1,4-Benzenedicarboxamide|1,4-Benzenedikarboksamit|C₈H₈N₂O₂|1,4-Benzenedicarboxamide;C8H8N2O2|organic|Molecular|S|0|0|Crystals|0|164.164|1.2|||||||||||||||||F4F4F2|1|||C8H8N2O2|0|0|1200||Ld|3010-82-0
+c_3010820|0|1,4-Benzenedicarboxamide|1,4-Benzendikarboksamit|C₈H₈N₂O₂|1,4-Benzenedicarboxamide;C8H8N2O2|organic|Molecular|S|0|0|Crystals|0|164.164|1.2|||||||||||||||||F4F4F2|1|||C8H8N2O2|0|0|1200||Ld|3010-82-0
 c_3012371|0|Benzyl thiocyanate|Benzil tiosianat|C₈H₇NS|Benzyl thiocyanate;C8H7NS|organic|Molecular|S|0|0|Crystals|0|149.211|1.2|||||||||||||||||F4F4F2|1|||C8H7NS|0|0|1200||Ld|3012-37-1
 c_3016191|0|trans,trans-2,6-Dimethyl-2,4,6-octatriene|Trans,trans-2,6-dimetil-2,4,6-oktatrien|C₁₀H₁₆|trans,trans-2,6-Dimethyl-2,4,6-octatriene;C10H16|organic|Molecular|L|0|0|Powder|0|136.238|0.81182|188||||||||||||||||E8F2FA|0.18|||C10H16|0|0|2000|297870|L|3016-19-1
 c_3017694|0|1-Bromo-2-methylpropene|1-Bromo-2-metilpropen|C₄H₇Br|1-Bromo-2-methylpropene;C4H7Br|organic|Molecular|L|0|0|Powder|0|135.004|1.3362|91||||||||||||||||E8F2FA|0.18|||C4H7Br|0|0|2000|237365|L|3017-69-4
@@ -7223,7 +7223,7 @@ c_3153364|0|Ethyl 4-chlorobutanoate|Etil 4-klorobütanoat|C₆H₁₁ClO₂|Ethy
 c_3153375|0|Methyl 4-chlorobutanoate|Metil 4-klorobütanoat|C₅H₉ClO₂|Methyl 4-chlorobutanoate;C5H9ClO2|organic|Molecular|L|0|0|Powder|0|136.575|1.12932|161||||||||||||||||E8F2FA|0.18|||C5H9ClO2|0|0|2000|279738|L|3153-37-5
 c_3163277|0|1-(Bromomethyl)naphthalene|1-(Bromometil)naftalen|C₁₁H₉Br|1-(Bromomethyl)naphthalene;C11H9Br|organic|Molecular|S|0|0|Crystals|0|221.097|1.2|||||||||||||||||F4F4F2|1|||C11H9Br|0|0|1200||Ld|3163-27-7
 c_3167495|0|6-Amino-3-pyridinecarboxylic acid|6-Amino-3-piridinekarboksilik asit|C₆H₆N₂O₂|6-Amino-3-pyridinecarboxylic acid;C6H6N2O2|organic|Molecular|S|0|0|Crystals|0|138.126|1.2|||||||||||||||||F4F4F2|1|||C6H6N2O2|0|0|1200||Ld|3167-49-5
-c_3171457|0|4,5-Dimethyl-1,2-benzenediamine|4,5-Dimetil-1,2-benzenediamin|C₈H₁₂N₂|4,5-Dimethyl-1,2-benzenediamine;C8H12N2|organic|Molecular|S|0|0|Crystals|0|136.198|1.2|||||||||||||||||F4F4F2|1|||C8H12N2|0|0|1200||Ld|3171-45-7
+c_3171457|0|4,5-Dimethyl-1,2-benzenediamine|4,5-Dimetil-1,2-benzendiamin|C₈H₁₂N₂|4,5-Dimethyl-1,2-benzenediamine;C8H12N2|organic|Molecular|S|0|0|Crystals|0|136.198|1.2|||||||||||||||||F4F4F2|1|||C8H12N2|0|0|1200||Ld|3171-45-7
 c_3172529|0|2,5-Dichlorothiophene|2,5-Diklorotiofen|C₄H₂Cl₂S|2,5-Dichlorothiophene;C4H2Cl2S|organic|Molecular|L|0|0|Powder|0|153.02|1.44222|165||||||||||||||||E8F2FA|0.18|||C4H2Cl2S|0|0|2000|251975|L|3172-52-9
 c_3174741|0|3,6-Dihydro-2H-pyran|3,6-Dihidro-2H-piran|C₅H₈O|3,6-Dihydro-2H-pyran;C5H8O|organic|Molecular|L|0|0|Powder|0|84.118|0.9419|95||||||||||||||||E8F2FA|0.18|||C5H8O|0|0|2000|385140|L|3174-74-1
 c_3175233|0|1,2,2-Trichloropropane|1,2,2-Trikloropropan|C₃H₅Cl₃|1,2,2-Trichloropropane;C3H5Cl3|organic|Molecular|L|0|0|Powder|0|147.423|1.31825|123||||||||||||||||E8F2FA|0.18|||C3H5Cl3|0|0|2000|236471|L|3175-23-3
@@ -7253,7 +7253,7 @@ c_3288048|0|2-Methoxyphenyl isothiocyanate|2-Metoksifenil izotiosianat|C₈H₇N
 c_3289289|0|Ethyl cyclohexanecarboxylate|Etil siklohekzanekarboksilat|C₉H₁₆O₂|Ethyl cyclohexanecarboxylate;C9H16O2|organic|Molecular|L|0|0|Powder|0|156.225|0.93622|196||||||||||||||||E8F2FA|0.18|||C9H16O2|0|0|2000|264268|L|3289-28-9
 c_3296057|0|1-Azido-4-chlorobenzene|1-Azido-4-klorobenzen|C₆H₄ClN₃|1-Azido-4-chlorobenzene;C6H4ClN3|organic|Molecular|L|0|0|Powder|0|153.569|1.26343|||||||||||||||||E8F2FA|0.18|||C6H4ClN3|0|0|2000||L|3296-05-7
 c_3296900|0|2,2-Bis(bromomethyl)-1,3-propanediol|2,2-Bis(bromometil)-1,3-propanediol|C₅H₁₀Br₂O₂|2,2-Bis(bromomethyl)-1,3-propanediol;C5H10Br2O2|organic|Molecular|S|0|0|Crystals|0|261.941|1.2|||||||||||||||||F4F4F2|1|||C5H10Br2O2|0|0|1200||Ld|3296-90-0
-c_3319151|0|4-Methoxy-α-methylbenzenemethanol|4-Metoksi-α-metilbenzenemetanol|C₉H₁₂O₂|4-Methoxy-α-methylbenzenemethanol;C9H12O2|organic|Molecular|L|0|0|Powder|0|152.193|1.07942|257||||||||||||||||E8F2FA|0.18|||C9H12O2|0|0|2000|306540|L|3319-15-1
+c_3319151|0|4-Methoxy-α-methylbenzenemethanol|4-Metoksi-α-metilbenzenmetanol|C₉H₁₂O₂|4-Methoxy-α-methylbenzenemethanol;C9H12O2|organic|Molecular|L|0|0|Powder|0|152.193|1.07942|257||||||||||||||||E8F2FA|0.18|||C9H12O2|0|0|2000|306540|L|3319-15-1
 c_3320830|0|1-Chloro-2-isocyanatobenzene|1-Kloro-2-izosianatobenzen|C₇H₄ClNO|1-Chloro-2-isocyanatobenzene;C7H4ClNO|organic|Molecular|S|0|0|Crystals|0|153.565|1.2|||||||||||||||||F4F4F2|1|||C7H4ClNO|0|0|1200||Ld|3320-83-0
 c_3320863|0|1-Isocyanato-2-nitrobenzene|1-İzosianato-2-nitrobenzen|C₇H₄N₂O₃|1-Isocyanato-2-nitrobenzene;C7H4N2O3|organic|Molecular|S|0|0|Crystals|0|164.12|1.2|||||||||||||||||F4F4F2|1|||C7H4N2O3|0|0|1200||Ld|3320-86-3
 c_3320874|0|1-Isocyanato-3-nitrobenzene|1-İzosianato-3-nitrobenzen|C₇H₄N₂O₃|1-Isocyanato-3-nitrobenzene;C7H4N2O3|organic|Molecular|S|0|0|Crystals|0|164.12|1.2|||||||||||||||||F4F4F2|1|||C7H4N2O3|0|0|1200||Ld|3320-87-4
@@ -7267,7 +7267,7 @@ c_3347226|0|Dithianone|Ditianon|C₁₄H₄N₂O₂S₂|Dithianone;C14H4N2O2S2|o
 c_3350309|0|Cyclononanone|Siklononanon|C₉H₁₆O|Cyclononanone;C9H16O|organic|Molecular|S|0|0|Crystals|0|140.226|0.95602|||||||||||||||||F4F4F2|1|||C9H16O|0|0|1200||L|3350-30-9
 c_3350785|0|3-Methyl-2-butenoyl chloride|3-Metil-2-bütenoil klorür|C₅H₇ClO|3-Methyl-2-butenoyl chloride;C5H7ClO|organic|Molecular|L|0|0|Powder|0|118.56|1.06525|146||||||||||||||||E8F2FA|0.18|||C5H7ClO|0|0|2000|311110|L|3350-78-5
 c_3351313|0|3-Methylchrysene|3-Metilkrisen|C₁₉H₁₄|3-Methylchrysene;C19H14|organic|Molecular|S|0|0|Crystals|0|242.321|1.2|||||||||||||||||F4F4F2|1|||C19H14|0|0|1200||Ld|3351-31-3
-c_3360416|0|Benzenebutanol|Benzenebütanol|C₁₀H₁₄O|Benzenebutanol;C10H14O|organic|Molecular|L|0|0|Powder|0|150.221|1|264||||||||||||||||E8F2FA|0.18|||C10H14O|0|0|2000|314664|Ld|3360-41-6
+c_3360416|0|Benzenebutanol|Benzenbütanol|C₁₀H₁₄O|Benzenebutanol;C10H14O|organic|Molecular|L|0|0|Powder|0|150.221|1|264||||||||||||||||E8F2FA|0.18|||C10H14O|0|0|2000|314664|Ld|3360-41-6
 c_3373533|0|6-Amino-1,3-dihydro-2H-purin-2-one|6-Amino-1,3-dihidro-2H-purin-2-on|C₅H₅N₅O|6-Amino-1,3-dihydro-2H-purin-2-one;C5H5N5O|organic|Molecular|S|0|0|Crystals|0|151.129|1.2|||||||||||||||||F4F4F2|1|||C5H5N5O|0|0|1200||Ld|3373-53-3
 c_3377864|0|2-Bromohexane|2-Bromohekzan|C₆H₁₃Br|2-Bromohexane;C6H13Br|organic|Molecular|L|0|0|Powder|0|165.074|1.16582|139||||||||||||||||E8F2FA|0.18|||C6H13Br|0|0|2000|219715|L|3377-86-4
 c_3377875|0|3-Bromohexane|3-Bromohekzan|C₆H₁₃Br|3-Bromohexane;C6H13Br|organic|Molecular|L|0|0|Powder|0|165.074|1.17992|143||||||||||||||||E8F2FA|0.18|||C6H13Br|0|0|2000|221847|L|3377-87-5
@@ -7285,7 +7285,7 @@ c_3404782|0|2,5-Dimethyl-2-hexene|2,5-Dimetil-2-hekzen|C₈H₁₆|2,5-Dimethyl-
 c_3411958|0|2-(2-Benzothiazolyl)phenol|2-(2-Benzotiazolil)fenol|C₁₃H₉NOS|2-(2-Benzothiazolyl)phenol;C13H9NOS|organic|Molecular|S|0|0|Crystals|0|227.281|1.2|||||||||||||||||F4F4F2|1|||C13H9NOS|0|0|1200||Ld|3411-95-8
 c_3424939|0|4-Methoxybenzamide|4-Metoksibenzamit|C₈H₉NO₂|4-Methoxybenzamide;C8H9NO2|organic|Molecular|S|0|0|Crystals|0|151.165|1.2|||||||||||||||||F4F4F2|1|||C8H9NO2|0|0|1200||Ld|3424-93-9
 c_3426015|0|1,4-Diphenyl-3,5-pyrazolidinedione|1,4-Difenil-3,5-pirazolidinedion|C₁₅H₁₂N₂O₂|1,4-Diphenyl-3,5-pyrazolidinedione;C15H12N2O2|organic|Molecular|S|0|0|Crystals|0|252.273|1.2|||||||||||||||||F4F4F2|1|||C15H12N2O2|0|0|1200||Ld|3426-01-5
-c_3428248|0|4,5-Dichloro-1,2-benzenediol|4,5-Dikloro-1,2-benzenediol|C₆H₄Cl₂O₂|4,5-Dichloro-1,2-benzenediol;C6H4Cl2O2|organic|Molecular|S|0|0|Crystals|0|178.996|1.2|||||||||||||||||F4F4F2|1|||C6H4Cl2O2|0|0|1200||Ld|3428-24-8
+c_3428248|0|4,5-Dichloro-1,2-benzenediol|4,5-Dikloro-1,2-benzendiol|C₆H₄Cl₂O₂|4,5-Dichloro-1,2-benzenediol;C6H4Cl2O2|organic|Molecular|S|0|0|Crystals|0|178.996|1.2|||||||||||||||||F4F4F2|1|||C6H4Cl2O2|0|0|1200||Ld|3428-24-8
 c_3433372|0|2-Piperidinemethanol|2-Piperidinemetanol|C₆H₁₃NO|2-Piperidinemethanol;C6H13NO|organic|Molecular|S|0|0|Crystals|0|115.176|1.2|||||||||||||||||F4F4F2|1|||C6H13NO|0|0|1200||Ld|3433-37-2
 c_3433805|0|1-Bromo-2-(bromomethyl)benzene|1-Bromo-2-(bromometil)benzen|C₇H₆Br₂|1-Bromo-2-(bromomethyl)benzene;C7H6Br2|organic|Molecular|S|0|0|Crystals|0|249.933|1.2|||||||||||||||||F4F4F2|1|||C7H6Br2|0|0|1200||Ld|3433-80-5
 c_3437954|0|2-Iodothiophene|2-İodotiofen|C₄H₃IS|2-Iodothiophene;C4H3IS|organic|Molecular|L|0|0|Powder|0|210.032|2.05953|167||||||||||||||||E8F2FA|0.18|||C4H3IS|0|0|2000|184415|L|3437-95-4
@@ -7304,7 +7304,7 @@ c_3524752|0|Allylcyclopentane|Allilsiklopentan|C₈H₁₄|Allylcyclopentane;C8H
 c_3528174|0|2,3-Dihydro-4H-1-benzothiopyran-4-one|2,3-Dihidro-4H-1-benzotiopiran-4-on|C₉H₈OS|2,3-Dihydro-4H-1-benzothiopyran-4-one;C9H8OS|organic|Molecular|S|0|0|Crystals|0|164.222|1.24871|||||||||||||||||F4F4F2|1|||C9H8OS|0|0|1200||L|3528-17-4
 c_3531199|0|2-Chloro-4,6-dinitroaniline|2-Kloro-4,6-dinitroanilin|C₆H₄ClN₃O₄|2-Chloro-4,6-dinitroaniline;C6H4ClN3O4|organic|Molecular|S|0|0|Crystals|0|217.565|1.2|||||||||||||||||F4F4F2|1|||C6H4ClN3O4|0|0|1200||Ld|3531-19-9
 c_3540952|0|1-(3,3-Diphenylpropyl)piperidine|1-(3,3-Difenilpropil)piperidin|C₂₀H₂₅N|1-(3,3-Diphenylpropyl)piperidine;C20H25N|organic|Molecular|S|0|0|Crystals|0|279.427|1.2|||||||||||||||||F4F4F2|1|||C20H25N|0|0|1200||Ld|3540-95-2
-c_3567382|0|α-Ethynylbenzenemethanol carbamate|α-Etinilbenzenemetanol karbamat|C₁₀H₉NO₂|α-Ethynylbenzenemethanol carbamate;C10H9NO2|organic|Molecular|S|0|0|Crystals|0|175.187|1.2|||||||||||||||||F4F4F2|1|||C10H9NO2|0|0|1200||Ld|3567-38-2
+c_3567382|0|α-Ethynylbenzenemethanol carbamate|α-Etinilbenzenmetanol karbamat|C₁₀H₉NO₂|α-Ethynylbenzenemethanol carbamate;C10H9NO2|organic|Molecular|S|0|0|Crystals|0|175.187|1.2|||||||||||||||||F4F4F2|1|||C10H9NO2|0|0|1200||Ld|3567-38-2
 c_3570556|0|Bis(2-mercaptoethyl) sulfide|Bis(2-merkaptoetil) sülfür|C₄H₁₀S₃|Bis(2-mercaptoethyl) sulfide;C4H10S3|organic|Molecular|L|0|0|Powder|0|154.304|1.18325|||||||||||||||||E8F2FA|0.18|||C4H10S3|0|0|2000||L|3570-55-6
 c_3581871|0|2-Methylthiazole|2-Metiltiazol|C₄H₅NS|2-Methylthiazole;C4H5NS|organic|Molecular|L|0|0|Powder|0|99.151|1|128.77||||||||||||||||E8F2FA|0.18|||C4H5NS|0|0|2000|356718|Ld|3581-87-1
 c_3581917|0|4,5-Dimethylthiazole|4,5-Dimetiltiazol|C₅H₇NS|4,5-Dimethylthiazole;C5H7NS|organic|Molecular|S|0|0|Crystals|0|113.178|1.06992|||||||||||||||||F4F4F2|1|||C5H7NS|0|0|1200||L|3581-91-7
@@ -7327,7 +7327,7 @@ c_3675692|0|1,2,2-Tribromobutane|1,2,2-Tribromobütan|C₄H₇Br₃|1,2,2-Tribro
 c_3682357|0|2,4,6-Tris(2-pyridinyl)-1,3,5-triazine|2,4,6-Tris(2-piridinil)-1,3,5-triazin|C₁₈H₁₂N₆|2,4,6-Tris(2-pyridinyl)-1,3,5-triazine;C18H12N6|organic|Molecular|S|0|0|Crystals|0|312.336|1.2|||||||||||||||||F4F4F2|1|||C18H12N6|0|0|1200||Ld|3682-35-7
 c_3683225|0|trans-4-Methyl-2-hexene|Trans-4-metil-2-hekzen|C₇H₁₄|trans-4-Methyl-2-hexene;C7H14|organic|Molecular|L|0|0|Powder|0|98.189|0.692525|88||||||||||||||||E8F2FA|0.18|||C7H14|0|0|2000|323674|L|3683-22-5
 c_3690048|0|Aminopropylon|Aminopropilon|C₁₆H₂₂N₄O₂|Aminopropylon;C16H22N4O2|organic|Molecular|S|0|0|Crystals|0|302.378|1.2|||||||||||||||||F4F4F2|1|||C16H22N4O2|0|0|1200||Ld|3690-04-8
-c_3695770|0|α,α-Diphenylbenzenemethanethiol|α,α-Difenilbenzenemetanetiol|C₁₉H₁₆S|α,α-Diphenylbenzenemethanethiol;C19H16S|organic|Molecular|S|0|0|Crystals|0|276.397|1.2|||||||||||||||||F4F4F2|1|||C19H16S|0|0|1200||Ld|3695-77-0
+c_3695770|0|α,α-Diphenylbenzenemethanethiol|α,α-Difenilbenzenmetanetiol|C₁₉H₁₆S|α,α-Diphenylbenzenemethanethiol;C19H16S|organic|Molecular|S|0|0|Crystals|0|276.397|1.2|||||||||||||||||F4F4F2|1|||C19H16S|0|0|1200||Ld|3695-77-0
 c_3697243|0|5-Methylchrysene|5-Metilkrisen|C₁₉H₁₄|5-Methylchrysene;C19H14|organic|Molecular|S|0|0|Crystals|0|242.321|1.2|||||||||||||||||F4F4F2|1|||C19H14|0|0|1200||Ld|3697-24-3
 c_3699012|0|1-Methyl-4-(phenylthio)benzene|1-Metil-4-(feniltio)benzen|C₁₃H₁₂S|1-Methyl-4-(phenylthio)benzene;C13H12S|organic|Molecular|L|0|0|Powder|0|200.299|1.09862|317||||||||||||||||E8F2FA|0.18|||C13H12S|0|0|2000|259278|L|3699-01-2
 c_3710303|0|1,7-Octadiene|1,7-Oktadien|C₈H₁₄|1,7-Octadiene;C8H14|organic|Molecular|L|0|0|Powder|0|110.2|0.7342|117.1||||||||||||||||E8F2FA|0.18|||C8H14|0|0|2000|311633|L|3710-30-3
@@ -7339,7 +7339,7 @@ c_3731531|0|4-Pyridinemethanamine|4-Piridinemetanamin|C₆H₈N₂|4-Pyridinemet
 c_3734483|0|Chlordene|Klorden|C₁₀H₆Cl₆|Chlordene;C10H6Cl6|organic|Molecular|S|0|0|Crystals|0|338.858|1.2|||||||||||||||||F4F4F2|1|||C10H6Cl6|0|0|1200||Ld|3734-48-3
 c_3735908|0|Phencarbamide|Fenkarbamit|C₁₉H₂₄N₂OS|Phencarbamide;C19H24N2OS|organic|Molecular|S|0|0|Crystals|0|328.474|1.2|||||||||||||||||F4F4F2|1|||C19H24N2OS|0|0|1200||Ld|3735-90-8
 c_3739386|0|3-Phenoxybenzoic acid|3-Fenoksibenzoik asit|C₁₃H₁₀O₃|3-Phenoxybenzoic acid;C13H10O3|organic|Molecular|S|0|0|Crystals|0|214.22|1.2|||||||||||||||||F4F4F2|1|||C13H10O3|0|0|1200||Ld|3739-38-6
-c_3740521|0|2-Nitrobenzeneacetic acid|2-Nitrobenzeneasetik asit|C₈H₇NO₄|2-Nitrobenzeneacetic acid;C8H7NO4|organic|Molecular|S|0|0|Crystals|0|181.147|1.2|||||||||||||||||F4F4F2|1|||C8H7NO4|0|0|1200||Ld|3740-52-1
+c_3740521|0|2-Nitrobenzeneacetic acid|2-Nitrobenzenasetik asit|C₈H₇NO₄|2-Nitrobenzeneacetic acid;C8H7NO4|organic|Molecular|S|0|0|Crystals|0|181.147|1.2|||||||||||||||||F4F4F2|1|||C8H7NO4|0|0|1200||Ld|3740-52-1
 c_3741002|0|Pentylcyclopentane|Pentilsiklopentan|C₁₀H₂₀|Pentylcyclopentane;C10H20|organic|Molecular|L|0|0|Powder|0|140.27|0.79122|180||||||||||||||||E8F2FA|0.18|||C10H20|0|0|2000|284289|L|3741-00-2
 c_3742345|0|Vinylcyclopentane|Vinilsiklopentan|C₇H₁₂|Vinylcyclopentane;C7H12|organic|Molecular|L|0|0|Powder|0|96.173|0.78342|99||||||||||||||||E8F2FA|0.18|||C7H12|0|0|2000|340524|L|3742-34-5
 c_3744023|0|4-Methyl-4-penten-2-one|4-Metil-4-penten-2-on|C₆H₁₀O|4-Methyl-4-penten-2-one;C6H10O|organic|Molecular|L|0|0|Powder|0|98.145|0.84112|124.2||||||||||||||||E8F2FA|0.18|||C6H10O|0|0|2000|356277|L|3744-02-3
@@ -7351,7 +7351,7 @@ c_3779291|0|Diethyl 1,1-cyclobutanedicarboxylate|Dietil 1,1-siklobütanedikarbok
 c_3785215|0|Butanilicaine|Bütanilikain|C₁₃H₁₉ClN₂O|Butanilicaine;C13H19ClN2O|organic|Molecular|S|0|0|Crystals|0|254.758|1.2|||||||||||||||||F4F4F2|1|||C13H19ClN2O|0|0|1200||Ld|3785-21-5
 c_3788327|0|Isobutylcyclopentane|İzobütilsiklopentan|C₉H₁₈|Isobutylcyclopentane;C9H18|organic|Molecular|L|0|0|Powder|0|126.243|0.776925|148||||||||||||||||E8F2FA|0.18|||C9H18|0|0|2000|293570|L|3788-32-7
 c_3810262|0|3-Phenyl-2-cyclopenten-1-one|3-Fenil-2-siklopenten-1-on|C₁₁H₁₀O|3-Phenyl-2-cyclopenten-1-one;C11H10O|organic|Molecular|L|0|0|Powder|0|158.2|0.97112|234.2||||||||||||||||E8F2FA|0.18|||C11H10O|0|0|2000|282217|L|3810-26-2
-c_3840311|0|3,4,5-Trimethoxybenzenemethanol|3,4,5-Trimetoksibenzenemetanol|C₁₀H₁₄O₄|3,4,5-Trimethoxybenzenemethanol;C10H14O4|organic|Molecular|L|0|0|Powder|0|198.218|1.14272|||||||||||||||||E8F2FA|0.18|||C10H14O4|0|0|2000||L|3840-31-1
+c_3840311|0|3,4,5-Trimethoxybenzenemethanol|3,4,5-Trimetoksibenzenmetanol|C₁₀H₁₄O₄|3,4,5-Trimethoxybenzenemethanol;C10H14O4|organic|Molecular|L|0|0|Powder|0|198.218|1.14272|||||||||||||||||E8F2FA|0.18|||C10H14O4|0|0|2000||L|3840-31-1
 c_3848246|0|2,3-Hexanedione|2,3-Hekzanedion|C₆H₁₀O₂|2,3-Hexanedione;C6H10O2|organic|Molecular|L|0|0|Powder|0|114.144|0.93419|128||||||||||||||||E8F2FA|0.18|||C6H10O2|0|0|2000|309269|L|3848-24-6
 c_3849330|0|1,1,1,2,3,3,3-Heptachloropropane|1,1,1,2,3,3,3-Heptakloropropan|C₃HCl₇|1,1,1,2,3,3,3-Heptachloropropane;C3HCl7|organic|Molecular|L|0|0|Powder|0|285.191|1.79213|249||||||||||||||||E8F2FA|0.18|||C3HCl7|0|0|2000|161117|L|3849-33-0
 c_3850304|0|3,3-Dimethyl-2-butanamine|3,3-Dimetil-2-bütanamin|C₆H₁₅N|3,3-Dimethyl-2-butanamine;C6H15N|organic|Molecular|L|0|0|Powder|0|101.193|0.76682|101||||||||||||||||E8F2FA|0.18|||C6H15N|0|0|2000|325370|L|3850-30-4
@@ -7382,7 +7382,7 @@ c_3988032|0|4,4'-Dibromobenzophenone|4,4'-Dibromobenzofenon|C₁₃H₈Br₂O|4,
 c_4008484|0|5-Nitro-8-quinolinol|5-Nitro-8-kinolinol|C₉H₆N₂O₃|5-Nitro-8-quinolinol;C9H6N2O3|organic|Molecular|S|0|0|Crystals|0|190.158|1.2|||||||||||||||||F4F4F2|1|||C9H6N2O3|0|0|1200||Ld|4008-48-4
 c_4016119|0|(Ethoxymethyl)oxirane|(Etoksimetil)oksiran|C₅H₁₀O₂|(Ethoxymethyl)oxirane;C5H10O2|organic|Molecular|L|0|0|Powder|0|102.133|0.97002|126||||||||||||||||E8F2FA|0.18|||C5H10O2|0|0|2000|343916|L|4016-11-9
 c_4016142|0|Isopropyl glycidyl ether|İzopropil glisidil eter|C₆H₁₂O₂|Isopropyl glycidyl ether;C6H12O2|organic|Molecular|L|0|0|Powder|0|116.16|0.91862|138||||||||||||||||E8F2FA|0.18|||C6H12O2|0|0|2000|311477|L|4016-14-2
-c_4018659|0|3-Chloro-1,2-benzenediol|3-Kloro-1,2-benzenediol|C₆H₅ClO₂|3-Chloro-1,2-benzenediol;C6H5ClO2|organic|Molecular|S|0|0|Crystals|0|144.554|1.2|||||||||||||||||F4F4F2|1|||C6H5ClO2|0|0|1200||Ld|4018-65-9
+c_4018659|0|3-Chloro-1,2-benzenediol|3-Kloro-1,2-benzendiol|C₆H₅ClO₂|3-Chloro-1,2-benzenediol;C6H5ClO2|organic|Molecular|S|0|0|Crystals|0|144.554|1.2|||||||||||||||||F4F4F2|1|||C6H5ClO2|0|0|1200||Ld|4018-65-9
 c_4023341|0|Cyclopropanecarbonyl chloride|Siklopropanekarbonil klorür|C₄H₅ClO|Cyclopropanecarbonyl chloride;C4H5ClO|organic|Molecular|L|0|0|Powder|0|104.533|1.15162|119||||||||||||||||E8F2FA|0.18|||C4H5ClO|0|0|2000|330127|L|4023-34-1
 c_4023658|0|trans-1-Propene-1,2,3-tricarboxylic acid|Trans-1-propen-1,2,3-trikarboksilik asit|C₆H₆O₆|trans-1-Propene-1,2,3-tricarboxylic acid;C6H6O6|organic|Molecular|S|0|0|Crystals|0|174.108|1.2|||||||||||||||||F4F4F2|1|||C6H6O6|0|0|1200||Ld|4023-65-8
 c_4028233|0|Allylchlorodimethylsilane|Allilklorodimetilsilan|C₅H₁₁ClSi|Allylchlorodimethylsilane;C5H11ClSi|organic|Molecular|L|0|0|Powder|0|134.678|0.89642|111||||||||||||||||E8F2FA|0.18|||C5H11ClSi|0|0|2000|251008|L|4028-23-3
@@ -7418,7 +7418,7 @@ c_4164287|0|N-Methyl-N-nitromethanamine|N-metil-N-nitrometanamin|C₂H₆N₂O�
 c_4169044|0|2-Phenoxy-1-propanol|2-Fenoksi-1-propanol|C₉H₁₂O₂|2-Phenoxy-1-propanol;C9H12O2|organic|Molecular|L|0|0|Powder|0|152.193|0.980125|244||||||||||||||||E8F2FA|0.18|||C9H12O2|0|0|2000|299023|L|4169-04-4
 c_4179195|0|1,3-Dimethoxy-5-methylbenzene|1,3-Dimetoksi-5-metilbenzen|C₉H₁₂O₂|1,3-Dimethoxy-5-methylbenzene;C9H12O2|organic|Molecular|L|0|0|Powder|0|152.193|1.04782|244||||||||||||||||E8F2FA|0.18|||C9H12O2|0|0|2000|299023|L|4179-19-5
 c_4180238|0|trans-1-Methoxy-4-(1-propenyl)benzene|Trans-1-metoksi-4-(1-propenil)benzen|C₁₀H₁₂O|trans-1-Methoxy-4-(1-propenyl)benzene;C10H12O|organic|Molecular|L|0|0|Powder|0|148.205|0.98822|236||||||||||||||||E8F2FA|0.18|||C10H12O|0|0|2000|302319|L|4180-23-8
-c_4187875|0|α-Ethynylbenzenemethanol|α-Etinilbenzenemetanol|C₉H₈O|α-Ethynylbenzenemethanol;C9H8O|organic|Molecular|L|0|0|Powder|0|132.162|1.06552|||||||||||||||||E8F2FA|0.18|||C9H8O|0|0|2000||L|4187-87-5
+c_4187875|0|α-Ethynylbenzenemethanol|α-Etinilbenzenmetanol|C₉H₈O|α-Ethynylbenzenemethanol;C9H8O|organic|Molecular|L|0|0|Powder|0|132.162|1.06552|||||||||||||||||E8F2FA|0.18|||C9H8O|0|0|2000||L|4187-87-5
 c_4199886|0|5-Nitro-1,10-phenanthroline|5-Nitro-1,10-fenantrolin|C₁₂H₇N₃O₂|5-Nitro-1,10-phenanthroline;C12H7N3O2|organic|Molecular|S|0|0|Crystals|0|225.207|1.2|||||||||||||||||F4F4F2|1|||C12H7N3O2|0|0|1200||Ld|4199-88-6
 c_4200957|0|1-Heptadecanamine|1-Heptadekanamin|C₁₇H₃₇N|1-Heptadecanamine;C17H37N|organic|Molecular|S|0|0|Crystals|0|255.49|0.85102|||||||||||||||||F4F4F2|1|||C17H37N|0|0|1200||L|4200-95-7
 c_4205907|0|Clonidine|Klonidin|C₉H₉Cl₂N₃|Clonidine;C9H9Cl2N3|organic|Molecular|S|0|0|Crystals|0|230.092|1.2|||||||||||||||||F4F4F2|1|||C9H9Cl2N3|0|0|1200||Ld|4205-90-7
@@ -7460,14 +7460,14 @@ c_4358592|0|Methyl cis-2-butenoate|Metil cis-2-bütenoat|C₅H₈O₂|Methyl cis
 c_4363933|0|4-Quinolinecarboxaldehyde|4-Kinolinekarboksaldehit|C₁₀H₇NO|4-Quinolinecarboxaldehyde;C10H7NO|organic|Molecular|S|0|0|Crystals|0|157.172|1.2|||||||||||||||||F4F4F2|1|||C10H7NO|0|0|1200||Ld|4363-93-3
 c_4392249|0|(3-Bromo-1-propenyl)benzene|(3-Bromo-1-propenil)benzen|C₉H₉Br|(3-Bromo-1-propenyl)benzene;C9H9Br|organic|Molecular|S|0|0|Crystals|0|197.075|1.34283|||||||||||||||||F4F4F2|1|||C9H9Br|0|0|1200||L|4392-24-9
 c_4397539|0|4-(Phenylmethoxy)benzaldehyde|4-(Fenilmetoksi)benzaldehit|C₁₄H₁₂O₂|4-(Phenylmethoxy)benzaldehyde;C14H12O2|organic|Molecular|S|0|0|Crystals|0|212.248|1.2|||||||||||||||||F4F4F2|1|||C14H12O2|0|0|1200||Ld|4397-53-9
-c_4403694|0|2-Aminobenzenemethanamine|2-Aminobenzenemetanamin|C₇H₁₀N₂|2-Aminobenzenemethanamine;C7H10N2|organic|Molecular|S|0|0|Crystals|0|122.171|1.2|||||||||||||||||F4F4F2|1|||C7H10N2|0|0|1200||Ld|4403-69-4
+c_4403694|0|2-Aminobenzenemethanamine|2-Aminobenzenmetanamin|C₇H₁₀N₂|2-Aminobenzenemethanamine;C7H10N2|organic|Molecular|S|0|0|Crystals|0|122.171|1.2|||||||||||||||||F4F4F2|1|||C7H10N2|0|0|1200||Ld|4403-69-4
 c_4408644|0|N-Methyliminodiacetic acid|N-metiliminodiasetik asit|C₅H₉NO₄|N-Methyliminodiacetic acid;C5H9NO4|organic|Molecular|S|0|0|Crystals|0|147.13|1.2|||||||||||||||||F4F4F2|1|||C5H9NO4|0|0|1200||Ld|4408-64-4
 c_4414884|0|1H-Benzimidazole-2-acetonitrile|1H-benzimidazol-2-asetonitril|C₉H₇N₃|1H-Benzimidazole-2-acetonitrile;C9H7N3|organic|Molecular|S|0|0|Crystals|0|157.176|1.2|||||||||||||||||F4F4F2|1|||C9H7N3|0|0|1200||Ld|4414-88-4
 c_4418615|0|1H-Tetrazol-5-amine|1H-tetrazol-5-amin|CH₃N₅|1H-Tetrazol-5-amine;CH3N5|organic|Molecular|S|0|0|Crystals|0|85.07|1.2|||||||||||||||||F4F4F2|1|||CH3N5|0|0|1200||Ld|4418-61-5
-c_4422951|0|1,3,5-Benzenetricarbonyl trichloride|1,3,5-Benzenetrikarbonil triklorür|C₉H₃Cl₃O₃|1,3,5-Benzenetricarbonyl trichloride;C9H3Cl3O3|organic|Molecular|S|0|0|Crystals|0|265.47|1.2|||||||||||||||||F4F4F2|1|||C9H3Cl3O3|0|0|1200||Ld|4422-95-1
+c_4422951|0|1,3,5-Benzenetricarbonyl trichloride|1,3,5-Benzentrikarbonil triklorür|C₉H₃Cl₃O₃|1,3,5-Benzenetricarbonyl trichloride;C9H3Cl3O3|organic|Molecular|S|0|0|Crystals|0|265.47|1.2|||||||||||||||||F4F4F2|1|||C9H3Cl3O3|0|0|1200||Ld|4422-95-1
 c_4426113|0|Cyclobutanecarbonitrile|Siklobütanekarbonitril|C₅H₇N|Cyclobutanecarbonitrile;C5H7N|organic|Molecular|L|0|0|Powder|0|81.118|1|148||||||||||||||||E8F2FA|0.18|||C5H7N|0|0|2000|456880|Ld|4426-11-3
 c_4427569|0|2-Isopropyl-4-methylphenol|2-İzopropil-4-metilfenol|C₁₀H₁₄O|2-Isopropyl-4-methylphenol;C10H14O|organic|Molecular|S|0|0|Crystals|0|150.221|0.99102|||||||||||||||||F4F4F2|1|||C10H14O|0|0|1200||L|4427-56-9
-c_4428131|0|α,α-Diphenylbenzeneethanol|α,α-Difenilbenzeneetanol|C₂₀H₁₈O|α,α-Diphenylbenzeneethanol;C20H18O|organic|Molecular|S|0|0|Crystals|0|274.363|1.2|||||||||||||||||F4F4F2|1|||C20H18O|0|0|1200||Ld|4428-13-1
+c_4428131|0|α,α-Diphenylbenzeneethanol|α,α-Difenilbenzenetanol|C₂₀H₁₈O|α,α-Diphenylbenzeneethanol;C20H18O|organic|Molecular|S|0|0|Crystals|0|274.363|1.2|||||||||||||||||F4F4F2|1|||C20H18O|0|0|1200||Ld|4428-13-1
 c_4430200|0|Chlorophenol Red|Klorofenol red|C₁₉H₁₂Cl₂O₅S|Chlorophenol Red;C19H12Cl2O5S|organic|Molecular|S|0|0|Crystals|0|423.26|1.2|||||||||||||||||F4F4F2|1|||C19H12Cl2O5S|0|0|1200||Ld|4430-20-0
 c_4433798|0|N-(4-Chloro-2,5-dimethoxyphenyl)-3-oxobutanamide|N-(4-kloro-2,5-dimetoksifenil)-3-oksobütanamit|C₁₂H₁₄ClNO₄|N-(4-Chloro-2,5-dimethoxyphenyl)-3-oxobutanamide;C12H14ClNO4|organic|Molecular|S|0|0|Crystals|0|271.697|1.2|||||||||||||||||F4F4F2|1|||C12H14ClNO4|0|0|1200||Ld|4433-79-8
 c_4437201|0|Difurfuryl disulfide|Difurfuril disülfür|C₁₀H₁₀O₂S₂|Difurfuryl disulfide;C10H10O2S2|organic|Molecular|L|0|0|Powder|0|226.308|1|||||||||||||||||E8F2FA|0.18|||C10H10O2S2|0|0|2000||Ld|4437-20-1
@@ -7558,7 +7558,7 @@ c_4930987|0|2(1H)-Pyridinone hydrazone|2(1H)-piridinon hidrazon|C₅H₇N₃|2(1
 c_4945475|0|1-Methyl-N-phenyl-N-benzyl-4-piperidinamine|1-Metil-N-fenil-N-benzil-4-piperidinamin|C₁₉H₂₄N₂|1-Methyl-N-phenyl-N-benzyl-4-piperidinamine;C19H24N2|organic|Molecular|S|0|0|Crystals|0|280.415|1.2|||||||||||||||||F4F4F2|1|||C19H24N2|0|0|1200||Ld|4945-47-5
 c_4945486|0|N-Butylpiperidine|N-bütilpiperidin|C₉H₁₉N|N-Butylpiperidine;C9H19N|organic|Molecular|L|0|0|Powder|0|141.258|0.82452|174||||||||||||||||E8F2FA|0.18|||C9H19N|0|0|2000|278563|L|4945-48-6
 c_4949444|0|Ethyl 3-oxopentanoate|Etil 3-oksopentanoat|C₇H₁₂O₃|Ethyl 3-oxopentanoate;C7H12O3|organic|Molecular|L|0|0|Powder|0|144.17|1.01202|191||||||||||||||||E8F2FA|0.18|||C7H12O3|0|0|2000|283313|L|4949-44-4
-c_4972296|0|Benzenesulfinyl chloride|Benzenesülfinil klorür|C₆H₅ClOS|Benzenesulfinyl chloride;C6H5ClOS|organic|Molecular|S|0|0|Crystals|0|160.615|1.34692|||||||||||||||||F4F4F2|1|||C6H5ClOS|0|0|1200||L|4972-29-6
+c_4972296|0|Benzenesulfinyl chloride|Benzensülfinil klorür|C₆H₅ClOS|Benzenesulfinyl chloride;C6H5ClOS|organic|Molecular|S|0|0|Crystals|0|160.615|1.34692|||||||||||||||||F4F4F2|1|||C6H5ClOS|0|0|1200||L|4972-29-6
 c_4981662|0|9,10-Anthracenediol|9,10-Antrasenediol|C₁₄H₁₀O₂|9,10-Anthracenediol;C14H10O2|organic|Molecular|S|0|0|Crystals|0|210.232|1.2|||||||||||||||||F4F4F2|1|||C14H10O2|0|0|1200||Ld|4981-66-2
 c_4984014|0|3,7-Dimethyl-1-octene|3,7-Dimetil-1-okten|C₁₀H₂₀|3,7-Dimethyl-1-octene;C10H20|organic|Molecular|L|0|0|Powder|0|140.27|0.73962|155||||||||||||||||E8F2FA|0.18|||C10H20|0|0|2000|268605|L|4984-01-4
 c_4985460|0|Tyrosineamide|Tirosineamit|C₉H₁₂N₂O₂|Tyrosineamide;C9H12N2O2|organic|Molecular|S|0|0|Crystals|0|180.207|1.2|||||||||||||||||F4F4F2|1|||C9H12N2O2|0|0|1200||Ld|4985-46-0
@@ -7568,18 +7568,18 @@ c_5003714|0|3-Bromopropylamine hydrobromide|3-Bromopropilamin hidrobromür|C₃H
 c_5008526|0|Luciculine|Lusikulin|C₂₂H₃₃NO₃|Luciculine;C22H33NO3|organic|Molecular|S|0|0|Crystals|0|359.51|1.2|||||||||||||||||F4F4F2|1|||C22H33NO3|0|0|1200||Ld|5008-52-6
 c_5008731|0|Isopropyl propyl sulfide|İzopropil propil sülfür|C₆H₁₄S|Isopropyl propyl sulfide;C6H14S|organic|Molecular|L|0|0|Powder|0|118.238|0.82692|132||||||||||||||||E8F2FA|0.18|||C6H14S|0|0|2000|301538|L|5008-73-1
 c_5022297|0|N-Ethyl-1H-isoindole-1,3(2H)-dione|N-etil-1H-izoindol-1,3(2H)-dion|C₁₀H₉NO₂|N-Ethyl-1H-isoindole-1,3(2H)-dione;C10H9NO2|organic|Molecular|S|0|0|Crystals|0|175.187|1.2|||||||||||||||||F4F4F2|1|||C10H9NO2|0|0|1200||Ld|5022-29-7
-c_5042557|0|5-Nitro-1,3-benzenediamine|5-Nitro-1,3-benzenediamin|C₆H₇N₃O₂|5-Nitro-1,3-benzenediamine;C6H7N3O2|organic|Molecular|S|0|0|Crystals|0|153.141|1.2|||||||||||||||||F4F4F2|1|||C6H7N3O2|0|0|1200||Ld|5042-55-7
+c_5042557|0|5-Nitro-1,3-benzenediamine|5-Nitro-1,3-benzendiamin|C₆H₇N₃O₂|5-Nitro-1,3-benzenediamine;C6H7N3O2|organic|Molecular|S|0|0|Crystals|0|153.141|1.2|||||||||||||||||F4F4F2|1|||C6H7N3O2|0|0|1200||Ld|5042-55-7
 c_5053430|0|2-Methylpyrimidine|2-Metilpirimidin|C₅H₆N₂|2-Methylpyrimidine;C5H6N2|organic|Molecular|L|0|0|Powder|0|94.117|1|138||||||||||||||||E8F2FA|0.18|||C5H6N2|0|0|2000|384428|Ld|5053-43-0
 c_5057987|0|cis-1,2-Cyclopentanediol|Cis-1,2-siklopentanediol|C₅H₁₀O₂|cis-1,2-Cyclopentanediol;C5H10O2|organic|Molecular|S|0|0|Crystals|0|102.133|1.2|||||||||||||||||F4F4F2|1|||C5H10O2|0|0|1200||Ld|5057-98-7
 c_5057998|0|trans-1,2-Cyclopentanediol|Trans-1,2-siklopentanediol|C₅H₁₀O₂|trans-1,2-Cyclopentanediol;C5H10O2|organic|Molecular|S|0|0|Crystals|0|102.133|1.2|||||||||||||||||F4F4F2|1|||C5H10O2|0|0|1200||Ld|5057-99-8
 c_5076200|0|Tetramethyloxirane|Tetrametiloksiran|C₆H₁₂O|Tetramethyloxirane;C6H12O|organic|Molecular|L|0|0|Powder|0|100.161|0.815616|90.4||||||||||||||||E8F2FA|0.18|||C6H12O|0|0|2000|319410|L|5076-20-0
 c_5077678|0|1-Hydroxy-2-butanone|1-Hidroksi-2-bütanon|C₄H₈O₂|1-Hydroxy-2-butanone;C4H8O2|organic|Molecular|L|0|0|Powder|0|88.106|1.02722|160||||||||||||||||E8F2FA|0.18|||C4H8O2|0|0|2000|432629|L|5077-67-8
 c_5089703|0|Triethoxy(3-chloropropyl)silane|Trietoksi(3-kloropropil)silan|C₉H₂₁ClO₃Si|Triethoxy(3-chloropropyl)silane;C9H21ClO3Si|organic|Molecular|A|1|0|Powder|256|240.799|1|||||||||||||||||F4F4F2|1|||C9H21ClO3Si|0|0|1200||Ld|5089-70-3
-c_5131588|0|4-Nitro-1,3-benzenediamine|4-Nitro-1,3-benzenediamin|C₆H₇N₃O₂|4-Nitro-1,3-benzenediamine;C6H7N3O2|organic|Molecular|S|0|0|Crystals|0|153.141|1.2|||||||||||||||||F4F4F2|1|||C6H7N3O2|0|0|1200||Ld|5131-58-8
-c_5131602|0|4-Chloro-1,3-benzenediamine|4-Kloro-1,3-benzenediamin|C₆H₇ClN₂|4-Chloro-1,3-benzenediamine;C6H7ClN2|organic|Molecular|S|0|0|Crystals|0|142.586|1.2|||||||||||||||||F4F4F2|1|||C6H7ClN2|0|0|1200||Ld|5131-60-2
+c_5131588|0|4-Nitro-1,3-benzenediamine|4-Nitro-1,3-benzendiamin|C₆H₇N₃O₂|4-Nitro-1,3-benzenediamine;C6H7N3O2|organic|Molecular|S|0|0|Crystals|0|153.141|1.2|||||||||||||||||F4F4F2|1|||C6H7N3O2|0|0|1200||Ld|5131-58-8
+c_5131602|0|4-Chloro-1,3-benzenediamine|4-Kloro-1,3-benzendiamin|C₆H₇ClN₂|4-Chloro-1,3-benzenediamine;C6H7ClN2|organic|Molecular|S|0|0|Crystals|0|142.586|1.2|||||||||||||||||F4F4F2|1|||C6H7ClN2|0|0|1200||Ld|5131-60-2
 c_5145993|0|Ethyl isopropyl sulfide|Etil izopropil sülfür|C₅H₁₂S|Ethyl isopropyl sulfide;C5H12S|organic|Molecular|L|0|0|Powder|0|104.211|0.82462|107.3||||||||||||||||E8F2FA|0.18|||C5H12S|0|0|2000|321267|L|5145-99-3
 c_5150936|0|Butyl hydrogen succinate|Bütil hidrojen suksinat|C₈H₁₄O₄|Butyl hydrogen succinate;C8H14O4|organic|Molecular|L|0|0|Powder|0|174.196|1.07322|||||||||||||||||E8F2FA|0.18|||C8H14O4|0|0|2000||L|5150-93-6
-c_5159411|0|2-Iodobenzenemethanol|2-İodobenzenemetanol|C₇H₇IO|2-Iodobenzenemethanol;C7H7IO|organic|Molecular|S|0|0|Crystals|0|234.036|1.2|||||||||||||||||F4F4F2|1|||C7H7IO|0|0|1200||Ld|5159-41-1
+c_5159411|0|2-Iodobenzenemethanol|2-İodobenzenmetanol|C₇H₇IO|2-Iodobenzenemethanol;C7H7IO|organic|Molecular|S|0|0|Crystals|0|234.036|1.2|||||||||||||||||F4F4F2|1|||C7H7IO|0|0|1200||Ld|5159-41-1
 c_5161137|0|cis-Tetrahydro-2,5-dimethylthiophene|Cis-tetrahidro-2,5-dimetiltiofen|C₆H₁₂S|cis-Tetrahydro-2,5-dimethylthiophene;C6H12S|organic|Molecular|L|0|0|Powder|0|116.222|0.92222|142.5||||||||||||||||E8F2FA|0.18|||C6H12S|0|0|2000|314718|L|5161-13-7
 c_5162038|0|2-Chlorobenzophenone|2-Klorobenzofenon|C₁₃H₉ClO|2-Chlorobenzophenone;C13H9ClO|organic|Molecular|S|0|0|Crystals|0|216.664|1.2|||||||||||||||||F4F4F2|1|||C13H9ClO|0|0|1200||Ld|5162-03-8
 c_5162447|0|4-Bromo-1-butene|4-Bromo-1-büten|C₄H₇Br|4-Bromo-1-butene;C4H7Br|organic|Molecular|L|0|0|Powder|0|135.004|1.32302|98.5||||||||||||||||E8F2FA|0.18|||C4H7Br|0|0|2000|242254|L|5162-44-7
@@ -7602,8 +7602,8 @@ c_5284662|0|1-Propanesulfonic acid|1-Propanesülfonik asit|C₃H₈O₃S|1-Propa
 c_5285870|0|Phenyl thiocyanate|Fenil tiosianat|C₇H₅NS|Phenyl thiocyanate;C7H5NS|organic|Molecular|L|0|0|Powder|0|135.184|1.15318|232.5||||||||||||||||E8F2FA|0.18|||C7H5NS|0|0|2000|329160|L|5285-87-0
 c_5292217|0|Cyclohexaneacetic acid|Siklohekzaneasetik asit|C₈H₁₄O₂|Cyclohexaneacetic acid;C8H14O2|organic|Molecular|S|0|0|Crystals|0|142.198|1.04232|||||||||||||||||F4F4F2|1|||C8H14O2|0|0|1200||L|5292-21-7
 c_5292535|0|Diethyl benzylidenemalonate|Dietil benzilidenemalonat|C₁₄H₁₆O₄|Diethyl benzylidenemalonate;C14H16O4|organic|Molecular|S|0|0|Crystals|0|248.278|1.10452|||||||||||||||||F4F4F2|1|||C14H16O4|0|0|1200||L|5292-53-5
-c_5307028|0|2-Methoxy-1,4-benzenediamine|2-Metoksi-1,4-benzenediamin|C₇H₁₀N₂O|2-Methoxy-1,4-benzenediamine;C7H10N2O|organic|Molecular|S|0|0|Crystals|0|138.17|1.2|||||||||||||||||F4F4F2|1|||C7H10N2O|0|0|1200||Ld|5307-02-8
-c_5307142|0|2-Nitro-1,4-benzenediamine|2-Nitro-1,4-benzenediamin|C₆H₇N₃O₂|2-Nitro-1,4-benzenediamine;C6H7N3O2|organic|Molecular|S|0|0|Crystals|0|153.141|1.2|||||||||||||||||F4F4F2|1|||C6H7N3O2|0|0|1200||Ld|5307-14-2
+c_5307028|0|2-Methoxy-1,4-benzenediamine|2-Metoksi-1,4-benzendiamin|C₇H₁₀N₂O|2-Methoxy-1,4-benzenediamine;C7H10N2O|organic|Molecular|S|0|0|Crystals|0|138.17|1.2|||||||||||||||||F4F4F2|1|||C7H10N2O|0|0|1200||Ld|5307-02-8
+c_5307142|0|2-Nitro-1,4-benzenediamine|2-Nitro-1,4-benzendiamin|C₆H₇N₃O₂|2-Nitro-1,4-benzenediamine;C6H7N3O2|organic|Molecular|S|0|0|Crystals|0|153.141|1.2|||||||||||||||||F4F4F2|1|||C6H7N3O2|0|0|1200||Ld|5307-14-2
 c_5314374|0|[1,1'-Biphenyl]-4,4'-disulfonic acid|[1,1'-Bifenil]-4,4'-disülfonik asit|C₁₂H₁₀O₆S₂|[1,1'-Biphenyl]-4,4'-disulfonic acid;C12H10O6S2|organic|Molecular|S|0|0|Crystals|0|314.326|1.2|||||||||||||||||F4F4F2|1|||C12H10O6S2|0|0|1200||Ld|5314-37-4
 c_5314556|0|Ethyltrimethoxysilane|Etiltrimetoksisilan|C₅H₁₄O₃Si|Ethyltrimethoxysilane;C5H14O3Si|organic|Molecular|L|0|0|Powder|0|150.249|0.94882|122.9||||||||||||||||E8F2FA|0.18|||C5H14O3Si|0|0|2000|231964|L|5314-55-6
 c_5325973|0|1,2,3,4,5,6,7,8-Octahydrophenanthrene|1,2,3,4,5,6,7,8-Oktahidrofenantren|C₁₄H₁₈|1,2,3,4,5,6,7,8-Octahydrophenanthrene;C14H18|organic|Molecular|L|0|0|Powder|0|186.298|1.0262|295||||||||||||||||E8F2FA|0.18|||C14H18|0|0|2000|268372|L|5325-97-3
@@ -7617,8 +7617,8 @@ c_5332252|0|6-Bromoquinoline|6-Bromokinolin|C₉H₆BrN|6-Bromoquinoline;C9H6BrN
 c_5332263|0|N-(Bromomethyl)phthalimide|N-(bromometil)ftalimit|C₉H₆BrNO₂|N-(Bromomethyl)phthalimide;C9H6BrNO2|organic|Molecular|S|0|0|Crystals|0|240.056|1.2|||||||||||||||||F4F4F2|1|||C9H6BrNO2|0|0|1200||Ld|5332-26-3
 c_5332730|0|3-Methoxy-1-propanamine|3-Metoksi-1-propanamin|C₄H₁₁NO|3-Methoxy-1-propanamine;C4H11NO|organic|Molecular|L|0|0|Powder|0|89.138|0.87272|113||||||||||||||||E8F2FA|0.18|||C4H11NO|0|0|2000|381220|L|5332-73-0
 c_5337939|0|1-(4-Methylphenyl)-1-propanone|1-(4-Metilfenil)-1-propanon|C₁₀H₁₂O|1-(4-Methylphenyl)-1-propanone;C10H12O|organic|Molecular|L|0|0|Powder|0|148.205|0.99262|236||||||||||||||||E8F2FA|0.18|||C10H12O|0|0|2000|302319|L|5337-93-9
-c_5344821|0|(2-Chlorophenyl)thiourea|(2-Klorofenil)tiourea|C₇H₇ClN₂S|(2-Chlorophenyl)thiourea;C7H7ClN2S|organic|Molecular|S|0|0|Crystals|0|186.657|1.2|||||||||||||||||F4F4F2|1|||C7H7ClN2S|0|0|1200||Ld|5344-82-1
-c_5344901|0|2-Aminobenzenemethanol|2-Aminobenzenemetanol|C₇H₉NO|2-Aminobenzenemethanol;C7H9NO|organic|Molecular|S|0|0|Crystals|0|123.155|1.2|||||||||||||||||F4F4F2|1|||C7H9NO|0|0|1200||Ld|5344-90-1
+c_5344821|0|(2-Chlorophenyl)thiourea|(2-Klorofenil)tioüre|C₇H₇ClN₂S|(2-Chlorophenyl)thiourea;C7H7ClN2S|organic|Molecular|S|0|0|Crystals|0|186.657|1.2|||||||||||||||||F4F4F2|1|||C7H7ClN2S|0|0|1200||Ld|5344-82-1
+c_5344901|0|2-Aminobenzenemethanol|2-Aminobenzenmetanol|C₇H₉NO|2-Aminobenzenemethanol;C7H9NO|organic|Molecular|S|0|0|Crystals|0|123.155|1.2|||||||||||||||||F4F4F2|1|||C7H9NO|0|0|1200||Ld|5344-90-1
 c_5350572|0|Benzophenone hydrazone|Benzofenon hidrazon|C₁₃H₁₂N₂|Benzophenone hydrazone;C13H12N2|organic|Molecular|S|0|0|Crystals|0|196.253|1.2|||||||||||||||||F4F4F2|1|||C13H12N2|0|0|1200||Ld|5350-57-2
 c_5356832|0|Vinylethoxydimethylsilane|Viniletoksidimetilsilan|C₆H₁₄OSi|Vinylethoxydimethylsilane;C6H14OSi|organic|Molecular|L|0|0|Powder|0|130.262|0.7902|99||||||||||||||||E8F2FA|0.18|||C6H14OSi|0|0|2000|251410|L|5356-83-2
 c_5368810|0|Methyl 3-methoxybenzoate|Metil 3-metoksibenzoat|C₉H₁₀O₃|Methyl 3-methoxybenzoate;C9H10O3|organic|Molecular|L|0|0|Powder|0|166.176|1.13102|248||||||||||||||||E8F2FA|0.18|||C9H10O3|0|0|2000|275980|L|5368-81-0
@@ -7628,7 +7628,7 @@ c_5390045|0|4-Pentyn-1-ol|4-Pentin-1-ol|C₅H₈O|4-Pentyn-1-ol;C5H8O|organic|Mo
 c_5396247|0|Propyl chloroacetate|Propil kloroasetat|C₅H₉ClO₂|Propyl chloroacetate;C5H9ClO2|organic|Molecular|L|0|0|Powder|0|136.575|1.1042|160||||||||||||||||E8F2FA|0.18|||C5H9ClO2|0|0|2000|279094|L|5396-24-7
 c_5396383|0|1-tert-Butyl-4-methoxybenzene|1-Tert-bütil-4-metoksibenzen|C₁₁H₁₆O|1-tert-Butyl-4-methoxybenzene;C11H16O|organic|Molecular|L|0|0|Powder|0|164.248|0.93832|223||||||||||||||||E8F2FA|0.18|||C11H16O|0|0|2000|265825|L|5396-38-3
 c_5399020|0|Heptadecanenitrile|Heptadekanenitril|C₁₇H₃₃N|Heptadecanenitrile;C17H33N|organic|Molecular|S|0|0|Crystals|0|251.458|0.83152|||||||||||||||||F4F4F2|1|||C17H33N|0|0|1200||L|5399-02-0
-c_5406122|0|4-Methylbenzenepropanal|4-Metilbenzenepropanal|C₁₀H₁₂O|4-Methylbenzenepropanal;C10H12O|organic|Molecular|L|0|0|Powder|0|148.205|0.99914|223||||||||||||||||E8F2FA|0.18|||C10H12O|0|0|2000|294600|L|5406-12-2
+c_5406122|0|4-Methylbenzenepropanal|4-Metilbenzenpropanal|C₁₀H₁₂O|4-Methylbenzenepropanal;C10H12O|organic|Molecular|L|0|0|Powder|0|148.205|0.99914|223||||||||||||||||E8F2FA|0.18|||C10H12O|0|0|2000|294600|L|5406-12-2
 c_5407874|0|4,6-Dimethyl-2-pyridinamine|4,6-Dimetil-2-piridinamin|C₇H₁₀N₂|4,6-Dimethyl-2-pyridinamine;C7H10N2|organic|Molecular|S|0|0|Crystals|0|122.171|1.2|||||||||||||||||F4F4F2|1|||C7H10N2|0|0|1200||Ld|5407-87-4
 c_5408866|0|2,3-Dibromobutane|2,3-Dibromobütan|C₄H₈Br₂|2,3-Dibromobutane;C4H8Br2|organic|Molecular|L|0|0|Powder|0|215.916|1.78932|158||||||||||||||||E8F2FA|0.18|||C4H8Br2|0|0|2000|175722|L|5408-86-6
 c_5419556|0|Triisopropyl borate|Triizopropil borat|C₉H₂₁BO₃|Triisopropyl borate;C9H21BO3|organic|Molecular|L|0|0|Powder|0|188.074|0.82512|139.6||||||||||||||||E8F2FA|0.18|||C9H21BO3|0|0|2000|193126|L|5419-55-6
@@ -7662,7 +7662,7 @@ c_5675514|0|1,12-Dodecanediol|1,12-Dodekanediol|C₁₂H₂₆O₂|1,12-Dodecane
 c_5676584|0|2,5-Dimethylbenzoxazole|2,5-Dimetilbenzoksazol|C₉H₉NO|2,5-Dimethylbenzoxazole;C9H9NO|organic|Molecular|L|0|0|Powder|0|147.177|1.08802|218.5||||||||||||||||E8F2FA|0.18|||C9H9NO|0|0|2000|293967|L|5676-58-4
 c_5683330|0|N,N-Dimethyl-2-pyridinamine|N,N-dimetil-2-piridinamin|C₇H₁₀N₂|N,N-Dimethyl-2-pyridinamine;C7H10N2|organic|Molecular|S|0|0|Crystals|0|122.171|1.01491|||||||||||||||||F4F4F2|1|||C7H10N2|0|0|1200||L|5683-33-0
 c_5687923|0|Thietane 1,1-dioxide|Tietan 1,1-dioksit|C₃H₆O₂S|Thietane 1,1-dioxide;C3H6O2S|organic|Molecular|S|0|0|Crystals|0|106.139|1.2|||||||||||||||||F4F4F2|1|||C3H6O2S|0|0|1200||Ld|5687-92-3
-c_5703264|0|4-Methoxybenzeneacetaldehyde|4-Metoksibenzeneasetaldehit|C₉H₁₀O₂|4-Methoxybenzeneacetaldehyde;C9H10O2|organic|Molecular|L|0|0|Powder|0|150.177|1.0962|255.5||||||||||||||||E8F2FA|0.18|||C9H10O2|0|0|2000|309776|L|5703-26-4
+c_5703264|0|4-Methoxybenzeneacetaldehyde|4-Metoksibenzenasetaldehit|C₉H₁₀O₂|4-Methoxybenzeneacetaldehyde;C9H10O2|organic|Molecular|L|0|0|Powder|0|150.177|1.0962|255.5||||||||||||||||E8F2FA|0.18|||C9H10O2|0|0|2000|309776|L|5703-26-4
 c_5728529|0|[1,1'-Biphenyl]-4-acetic acid|[1,1'-Bifenil]-4-asetik asit|C₁₄H₁₂O₂|[1,1'-Biphenyl]-4-acetic acid;C14H12O2|organic|Molecular|S|0|0|Crystals|0|212.248|1.2|||||||||||||||||F4F4F2|1|||C14H12O2|0|0|1200||Ld|5728-52-9
 c_5743975|0|Tetradecahydrophenanthrene|Tetradekahidrofenantren|C₁₄H₂₄|Tetradecahydrophenanthrene;C14H24|organic|Molecular|L|0|0|Powder|0|192.346|0.9442|284||||||||||||||||E8F2FA|0.18|||C14H24|0|0|2000|254901|L|5743-97-5
 c_5765446|0|5-Methylisoxazole|5-Metilizoksazol|C₄H₅NO|5-Methylisoxazole;C4H5NO|organic|Molecular|L|0|0|Powder|0|83.09|1.0232|123||||||||||||||||E8F2FA|0.18|||C4H5NO|0|0|2000|419560|L|5765-44-6
@@ -7672,7 +7672,7 @@ c_5781533|0|Methyl chlorooxoacetate|Metil klorooksoasetat|C₃H₃ClO₃|Methyl 
 c_5786210|0|Clozapine|Klozapin|C₁₈H₁₉ClN₄|Clozapine;C18H19ClN4|organic|Molecular|S|0|0|Crystals|0|326.828|1.2|||||||||||||||||F4F4F2|1|||C18H19ClN4|0|0|1200||Ld|5786-21-0
 c_5794887|0|2-Amino-5-bromobenzoic acid|2-Amino-5-bromobenzoik asit|C₇H₆BrNO₂|2-Amino-5-bromobenzoic acid;C7H6BrNO2|organic|Molecular|S|0|0|Crystals|0|216.034|1.2|||||||||||||||||F4F4F2|1|||C7H6BrNO2|0|0|1200||Ld|5794-88-7
 c_5798754|0|Ethyl 4-bromobenzoate|Etil 4-bromobenzoat|C₉H₉BrO₂|Ethyl 4-bromobenzoate;C9H9BrO2|organic|Molecular|L|0|0|Powder|0|229.073|1.43322|263||||||||||||||||E8F2FA|0.18|||C9H9BrO2|0|0|2000|205966|L|5798-75-4
-c_5798798|0|α-Bromobenzeneacetonitrile|α-Bromobenzeneasetonitril|C₈H₆BrN|α-Bromobenzeneacetonitrile;C8H6BrN|organic|Molecular|S|0|0|Crystals|0|196.047|1.53929|||||||||||||||||F4F4F2|1|||C8H6BrN|0|0|1200||L|5798-79-8
+c_5798798|0|α-Bromobenzeneacetonitrile|α-Bromobenzenasetonitril|C₈H₆BrN|α-Bromobenzeneacetonitrile;C8H6BrN|organic|Molecular|S|0|0|Crystals|0|196.047|1.53929|||||||||||||||||F4F4F2|1|||C8H6BrN|0|0|1200||L|5798-79-8
 c_5798889|0|3-Bromo-3-methylbutanoic acid|3-Bromo-3-metilbütanoik asit|C₅H₉BrO₂|3-Bromo-3-methylbutanoic acid;C5H9BrO2|organic|Molecular|S|0|0|Crystals|0|181.029|1.2|||||||||||||||||F4F4F2|1|||C5H9BrO2|0|0|1200||Ld|5798-88-9
 c_5805765|0|1-Ethyl-2-methyl-1H-benzimidazole|1-Etil-2-metil-1H-benzimidazol|C₁₀H₁₂N₂|1-Ethyl-2-methyl-1H-benzimidazole;C10H12N2|organic|Molecular|S|0|0|Crystals|0|160.22|1.07325|||||||||||||||||F4F4F2|1|||C10H12N2|0|0|1200||L|5805-76-5
 c_5813649|0|2,2-Dimethylpropylamine|2,2-Dimetilpropilamin|C₅H₁₃N|2,2-Dimethylpropylamine;C5H13N|organic|Molecular|L|0|0|Powder|0|87.166|0.74552|82||||||||||||||||E8F2FA|0.18|||C5H13N|0|0|2000|358548|L|5813-64-9
@@ -7681,7 +7681,7 @@ c_5837785|0|Ethyl trans-2-methyl-2-butenoate|Etil trans-2-metil-2-bütenoat|C₇
 c_5857363|0|2,2,4-Trimethyl-3-pentanone|2,2,4-Trimetil-3-pentanon|C₈H₁₆O|2,2,4-Trimethyl-3-pentanone;C8H16O|organic|Molecular|L|0|0|Powder|0|128.215|0.80652|146||||||||||||||||E8F2FA|0.18|||C8H16O|0|0|2000|287682|L|5857-36-3
 c_5870939|0|Heptyl butanoate|Heptil bütanoat|C₁₁H₂₂O₂|Heptyl butanoate;C11H22O2|organic|Molecular|L|0|0|Powder|0|186.295|0.86372|225.2||||||||||||||||E8F2FA|0.18|||C11H22O2|0|0|2000|235405|L|5870-93-9
 c_5881174|0|3-Ethyloctane|3-Etiloktan|C₁₀H₂₂|3-Ethyloctane;C10H22|organic|Molecular|L|0|0|Powder|0|142.286|0.735925|165||||||||||||||||E8F2FA|0.18|||C10H22|0|0|2000|270984|L|5881-17-4
-c_5897767|0|α-(1-Aminopropyl)benzenemethanol|α-(1-Aminopropil)benzenemetanol|C₁₀H₁₅NO|α-(1-Aminopropyl)benzenemethanol;C10H15NO|organic|Molecular|S|0|0|Crystals|0|165.236|1.2|||||||||||||||||F4F4F2|1|||C10H15NO|0|0|1200||Ld|5897-76-7
+c_5897767|0|α-(1-Aminopropyl)benzenemethanol|α-(1-Aminopropil)benzenmetanol|C₁₀H₁₅NO|α-(1-Aminopropyl)benzenemethanol;C10H15NO|organic|Molecular|S|0|0|Crystals|0|165.236|1.2|||||||||||||||||F4F4F2|1|||C10H15NO|0|0|1200||Ld|5897-76-7
 c_5902512|0|Terbacil|Terbasil|C₉H₁₃ClN₂O₂|Terbacil;C9H13ClN2O2|organic|Molecular|S|0|0|Crystals|0|216.665|1.3425|||||||||||||||||F4F4F2|1|||C9H13ClN2O2|0|0|1200||L|5902-51-2
 c_5910894|0|2,3-Dimethylpyrazine|2,3-Dimetilpirazin|C₆H₈N₂|2,3-Dimethylpyrazine;C6H8N2|organic|Molecular|L|0|0|Powder|0|108.144|1.0281|161||||||||||||||||E8F2FA|0.18|||C6H8N2|0|0|2000|353281|L|5910-89-4
 c_5911080|0|(Chloromethyl)cyclopropane|(Klorometil)siklopropan|C₄H₇Cl|(Chloromethyl)cyclopropane;C4H7Cl|organic|Molecular|L|0|0|Powder|0|90.55|0.9825|87||||||||||||||||E8F2FA|0.18|||C4H7Cl|0|0|2000|350008|L|5911-08-0
@@ -7724,7 +7724,7 @@ c_6223785|0|2,5-Dichloro-2,5-dimethylhexane|2,5-Dikloro-2,5-dimetilhekzan|C₈H�
 c_6224631|0|Tris(3-methylphenyl)phosphine|Tris(3-metilfenil)fosfin|C₂₁H₂₁P|Tris(3-methylphenyl)phosphine;C21H21P|organic|Molecular|S|0|0|Crystals|0|304.373|1.2|||||||||||||||||F4F4F2|1|||C21H21P|0|0|1200||Ld|6224-63-1
 c_6225065|0|N,N-Dimethylpentanamide|N,N-dimetilpentanamit|C₇H₁₅NO|N,N-Dimethylpentanamide;C7H15NO|organic|Molecular|L|0|0|Powder|0|129.203|0.896225|||||||||||||||||E8F2FA|0.18|||C7H15NO|0|0|2000||L|6225-06-5
 c_6232888|0|4-(Bromomethyl)benzoic acid|4-(Bromometil)benzoik asit|C₈H₇BrO₂|4-(Bromomethyl)benzoic acid;C8H7BrO2|organic|Molecular|S|0|0|Crystals|0|215.046|1.2|||||||||||||||||F4F4F2|1|||C8H7BrO2|0|0|1200||Ld|6232-88-8
-c_6258668|0|4-Chlorobenzenemethanethiol|4-Klorobenzenemetanetiol|C₇H₇ClS|4-Chlorobenzenemethanethiol;C7H7ClS|organic|Molecular|L|0|0|Powder|0|158.643|1.20225|||||||||||||||||E8F2FA|0.18|||C7H7ClS|0|0|2000||L|6258-66-8
+c_6258668|0|4-Chlorobenzenemethanethiol|4-Klorobenzenmetanetiol|C₇H₇ClS|4-Chlorobenzenemethanethiol;C7H7ClS|organic|Molecular|L|0|0|Powder|0|158.643|1.20225|||||||||||||||||E8F2FA|0.18|||C7H7ClS|0|0|2000||L|6258-66-8
 c_6261229|0|2-Pentyn-1-ol|2-Pentin-1-ol|C₅H₈O|2-Pentyn-1-ol;C5H8O|organic|Molecular|L|0|0|Powder|0|84.118|0.9092|150||||||||||||||||E8F2FA|0.18|||C5H8O|0|0|2000|442678|L|6261-22-9
 c_6270344|0|Isopropyl 2-furancarboxylate|İzopropil 2-furankarboksilat|C₈H₁₀O₃|Isopropyl 2-furancarboxylate;C8H10O3|organic|Molecular|L|0|0|Powder|0|154.165|1.06552|198.5||||||||||||||||E8F2FA|0.18|||C8H10O3|0|0|2000|269226|L|6270-34-4
 c_6283256|0|2-Chloro-5-nitroaniline|2-Kloro-5-nitroanilin|C₆H₅ClN₂O₂|2-Chloro-5-nitroaniline;C6H5ClN2O2|organic|Molecular|S|0|0|Crystals|0|172.568|1.2|||||||||||||||||F4F4F2|1|||C6H5ClN2O2|0|0|1200||Ld|6283-25-6
@@ -7737,8 +7737,8 @@ c_6294899|0|Methyl hydrazinecarboxylate|Metil hidrazinekarboksilat|C₂H₆N₂O
 c_6314289|0|Benzo[b]thiophene-2-carboxylic acid|Benzo[b]tiofen-2-karboksilik asit|C₉H₆O₂S|Benzo[b]thiophene-2-carboxylic acid;C9H6O2S|organic|Molecular|S|0|0|Crystals|0|178.205|1.2|||||||||||||||||F4F4F2|1|||C9H6O2S|0|0|1200||Ld|6314-28-9
 c_6315895|0|3,4-Dimethoxyaniline|3,4-Dimetoksianilin|C₈H₁₁NO₂|3,4-Dimethoxyaniline;C8H11NO2|organic|Molecular|S|0|0|Crystals|0|153.181|1.2|||||||||||||||||F4F4F2|1|||C8H11NO2|0|0|1200||Ld|6315-89-5
 c_6317186|0|Methylene thiocyanate|Metilen tiosianat|C₃H₂N₂S₂|Methylene thiocyanate;C3H2N2S2|organic|Molecular|S|0|0|Crystals|0|130.183|1.2|||||||||||||||||F4F4F2|1|||C3H2N2S2|0|0|1200||Ld|6317-18-6
-c_6320032|0|2-Chlorobenzenethiol|2-Klorobenzenetiol|C₆H₅ClS|2-Chlorobenzenethiol;C6H5ClS|organic|Molecular|L|0|0|Powder|0|144.616|1.27521|205.5||||||||||||||||E8F2FA|0.18|||C6H5ClS|0|0|2000|291262|L|6320-03-2
-c_6325935|0|4-Nitrobenzenesulfonamide|4-Nitrobenzenesülfonamit|C₆H₆N₂O₄S|4-Nitrobenzenesulfonamide;C6H6N2O4S|organic|Molecular|L|0|0|Powder|0|202.184|1|||||||||||||||||E8F2FA|0.18|||C6H6N2O4S|0|0|2000||Ld|6325-93-5
+c_6320032|0|2-Chlorobenzenethiol|2-Klorobenzentiol|C₆H₅ClS|2-Chlorobenzenethiol;C6H5ClS|organic|Molecular|L|0|0|Powder|0|144.616|1.27521|205.5||||||||||||||||E8F2FA|0.18|||C6H5ClS|0|0|2000|291262|L|6320-03-2
+c_6325935|0|4-Nitrobenzenesulfonamide|4-Nitrobenzensülfonamit|C₆H₆N₂O₄S|4-Nitrobenzenesulfonamide;C6H6N2O4S|organic|Molecular|L|0|0|Powder|0|202.184|1|||||||||||||||||E8F2FA|0.18|||C6H6N2O4S|0|0|2000||Ld|6325-93-5
 c_6334185|0|2,3-Dichlorobenzaldehyde|2,3-Diklorobenzaldehit|C₇H₄Cl₂O|2,3-Dichlorobenzaldehyde;C7H4Cl2O|organic|Molecular|S|0|0|Crystals|0|175.008|1.2|||||||||||||||||F4F4F2|1|||C7H4Cl2O|0|0|1200||Ld|6334-18-5
 c_6346094|0|4,4-Diethoxy-1-butanamine|4,4-Dietoksi-1-bütanamin|C₈H₁₉NO₂|4,4-Diethoxy-1-butanamine;C8H19NO2|organic|Molecular|L|0|0|Powder|0|161.245|0.93325|196||||||||||||||||E8F2FA|0.18|||C8H19NO2|0|0|2000|256040|L|6346-09-4
 c_6351106|0|2,3-Dihydro-1H-inden-1-ol|2,3-Dihidro-1H-inden-1-ol|C₉H₁₀O|2,3-Dihydro-1H-inden-1-ol;C9H10O|organic|Molecular|S|0|0|Crystals|0|134.178|1.2|||||||||||||||||F4F4F2|1|||C9H10O|0|0|1200||Ld|6351-10-6
@@ -7776,7 +7776,7 @@ c_6802751|0|Diethyl isopropylidenemalonate|Dietil izopropilidenemalonat|C₁₀H
 c_6843669|0|Dimethoxydiphenylsilane|Dimetoksidifenilsilan|C₁₄H₁₆O₂Si|Dimethoxydiphenylsilane;C14H16O2Si|organic|Molecular|S|0|0|Crystals|0|244.365|1.07712|||||||||||||||||F4F4F2|1|||C14H16O2Si|0|0|1200||L|6843-66-9
 c_6846113|0|3-Methyl-5-phenyl-2,4-imidazolidinedione|3-Metil-5-fenil-2,4-imidazolidinedion|C₁₀H₁₀N₂O₂|3-Methyl-5-phenyl-2,4-imidazolidinedione;C10H10N2O2|organic|Molecular|S|0|0|Crystals|0|190.202|1.2|||||||||||||||||F4F4F2|1|||C10H10N2O2|0|0|1200||Ld|6846-11-3
 c_6848131|0|3-Chloro-N,N-dimethylaniline|3-Kloro-N,N-dimetilanilin|C₈H₁₀ClN|3-Chloro-N,N-dimethylaniline;C8H10ClN|organic|Molecular|L|0|0|Powder|0|155.625|1|232||||||||||||||||E8F2FA|0.18|||C8H10ClN|0|0|2000|285643|Ld|6848-13-1
-c_6850573|0|2-Methoxybenzenemethanamine|2-Metoksibenzenemetanamin|C₈H₁₁NO|2-Methoxybenzenemethanamine;C8H11NO|organic|Molecular|L|0|0|Powder|0|137.182|1.05125|228||||||||||||||||E8F2FA|0.18|||C8H11NO|0|0|2000|321479|L|6850-57-3
+c_6850573|0|2-Methoxybenzenemethanamine|2-Metoksibenzenmetanamin|C₈H₁₁NO|2-Methoxybenzenemethanamine;C8H11NO|organic|Molecular|L|0|0|Powder|0|137.182|1.05125|228||||||||||||||||E8F2FA|0.18|||C8H11NO|0|0|2000|321479|L|6850-57-3
 c_6852546|0|N-(Phenylmethylene)ethanamine|N-(fenilmetilen)etanamin|C₉H₁₁N|N-(Phenylmethylene)ethanamine;C9H11N|organic|Molecular|L|0|0|Powder|0|133.194|0.9372|195||||||||||||||||E8F2FA|0.18|||C9H11N|0|0|2000|309302|L|6852-54-6
 c_6870673|0|Jacobine|Jakobin|C₁₈H₂₅NO₆|Jacobine;C18H25NO6|organic|Molecular|S|0|0|Crystals|0|351.399|1.2|||||||||||||||||F4F4F2|1|||C18H25NO6|0|0|1200||Ld|6870-67-3
 c_6873150|0|2-Benzyl-1-methyl-4(1H)-quinazolinone|2-Benzil-1-metil-4(1H)-kinazolinon|C₁₆H₁₄N₂O|2-Benzyl-1-methyl-4(1H)-quinazolinone;C16H14N2O|organic|Molecular|S|0|0|Crystals|0|250.301|1.2|||||||||||||||||F4F4F2|1|||C16H14N2O|0|0|1200||Ld|6873-15-0
@@ -7790,9 +7790,9 @@ c_6940789|0|1-Bromo-4-chlorobutane|1-Bromo-4-klorobütan|C₄H₈BrCl|1-Bromo-4-
 c_6946298|0|4-Amino-2-hydroxybenzohydrazide|4-Amino-2-hidroksibenzohidrazit|C₇H₉N₃O₂|4-Amino-2-hydroxybenzohydrazide;C7H9N3O2|organic|Molecular|S|0|0|Crystals|0|167.168|1.2|||||||||||||||||F4F4F2|1|||C7H9N3O2|0|0|1200||Ld|6946-29-8
 c_6951082|0|Ethyl 1,3-benzodioxole-5-carboxylate|Etil 1,3-benzodioksol-5-karboksilat|C₁₀H₁₀O₄|Ethyl 1,3-benzodioxole-5-carboxylate;C10H10O4|organic|Molecular|L|0|0|Powder|0|194.186|1|285.5||||||||||||||||E8F2FA|0.18|||C10H10O4|0|0|2000|253166|Ld|6951-08-2
 c_6952596|0|3-Bromobenzonitrile|3-Bromobenzonitril|C₇H₄BrN|3-Bromobenzonitrile;C7H4BrN|organic|Molecular|S|0|0|Crystals|0|182.02|1.2|||||||||||||||||F4F4F2|1|||C7H4BrN|0|0|1200||Ld|6952-59-6
-c_6961826|0|2-Chlorobenzenesulfonamide|2-Klorobenzenesülfonamit|C₆H₆ClNO₂S|2-Chlorobenzenesulfonamide;C6H6ClNO2S|organic|Molecular|S|0|0|Crystals|0|191.629|1.2|||||||||||||||||F4F4F2|1|||C6H6ClNO2S|0|0|1200||Ld|6961-82-6
+c_6961826|0|2-Chlorobenzenesulfonamide|2-Klorobenzensülfonamit|C₆H₆ClNO₂S|2-Chlorobenzenesulfonamide;C6H6ClNO2S|organic|Molecular|S|0|0|Crystals|0|191.629|1.2|||||||||||||||||F4F4F2|1|||C6H6ClNO2S|0|0|1200||Ld|6961-82-6
 c_6963446|0|1,5-Pentanediol diacetate|1,5-Pentanediol diasetat|C₉H₁₆O₄|1,5-Pentanediol diacetate;C9H16O4|organic|Molecular|L|0|0|Powder|0|188.223|1.02962|244||||||||||||||||E8F2FA|0.18|||C9H16O4|0|0|2000|241783|L|6963-44-6
-c_6971513|0|3-Methoxybenzenemethanol|3-Metoksibenzenemetanol|C₈H₁₀O₂|3-Methoxybenzenemethanol;C8H10O2|organic|Molecular|S|0|0|Crystals|0|138.166|1.11225|||||||||||||||||F4F4F2|1|||C8H10O2|0|0|1200||L|6971-51-3
+c_6971513|0|3-Methoxybenzenemethanol|3-Metoksibenzenmetanol|C₈H₁₀O₂|3-Methoxybenzenemethanol;C8H10O2|organic|Molecular|S|0|0|Crystals|0|138.166|1.11225|||||||||||||||||F4F4F2|1|||C8H10O2|0|0|1200||L|6971-51-3
 c_6972470|0|2,4,6-Trichloro-3,5-dimethylphenol|2,4,6-Trikloro-3,5-dimetilfenol|C₈H₇Cl₃O|2,4,6-Trichloro-3,5-dimethylphenol;C8H7Cl3O|organic|Molecular|S|0|0|Crystals|0|225.493|1.2|||||||||||||||||F4F4F2|1|||C8H7Cl3O|0|0|1200||Ld|6972-47-0
 c_6975606|0|1-(2-Furanyl)-2-propanone|1-(2-Furanil)-2-propanon|C₇H₈O₂|1-(2-Furanyl)-2-propanone;C7H8O2|organic|Molecular|S|0|0|Crystals|0|124.139|1.1042|||||||||||||||||F4F4F2|1|||C7H8O2|0|0|1200||L|6975-60-6
 c_6975991|0|6-Dodecyne|6-Dodesin|C₁₂H₂₂|6-Dodecyne;C12H22|organic|Molecular|L|0|0|Powder|0|166.308|0.7852|213||||||||||||||||E8F2FA|0.18|||C12H22|0|0|2000|257241|L|6975-99-1
@@ -7856,7 +7856,7 @@ c_7521804|0|Butyltrichlorosilane|Bütiltriklorosilan|C₄H₉Cl₃Si|Butyltrichl
 c_7526263|0|Diphenyl methylphosphonate|Difenil metilfosfonat|C₁₃H₁₃O₃P|Diphenyl methylphosphonate;C13H13O3P|organic|Molecular|S|0|0|Crystals|0|248.218|1.20512|||||||||||||||||F4F4F2|1|||C13H13O3P|0|0|1200||L|7526-26-3
 c_7554123|0|Diethyl malate|Dietil malat|C₈H₁₄O₅|Diethyl malate;C8H14O5|organic|Molecular|L|0|0|Powder|0|190.195|1.12902|253||||||||||||||||E8F2FA|0.18|||C8H14O5|0|0|2000|243441|L|7554-12-3
 c_7554656|0|4-Methyl-1H-pyrazole|4-Metil-1H-pirazol|C₄H₆N₂|4-Methyl-1H-pyrazole;C4H6N2|organic|Molecular|L|0|0|Powder|0|82.106|1.0152|206||||||||||||||||E8F2FA|0.18|||C4H6N2|0|0|2000|513546|L|7554-65-6
-c_7568936|0|α-(Aminomethyl)benzenemethanol|α-(Aminometil)benzenemetanol|C₈H₁₁NO|α-(Aminomethyl)benzenemethanol;C8H11NO|organic|Molecular|S|0|0|Crystals|0|137.182|1.2|||||||||||||||||F4F4F2|1|||C8H11NO|0|0|1200||Ld|7568-93-6
+c_7568936|0|α-(Aminomethyl)benzenemethanol|α-(Aminometil)benzenmetanol|C₈H₁₁NO|α-(Aminomethyl)benzenemethanol;C8H11NO|organic|Molecular|S|0|0|Crystals|0|137.182|1.2|||||||||||||||||F4F4F2|1|||C8H11NO|0|0|1200||Ld|7568-93-6
 c_7570265|0|1,2-Dinitroethane|1,2-Dinitroetan|C₂H₄N₂O₄|1,2-Dinitroethane;C2H4N2O4|organic|Molecular|S|0|0|Crystals|0|120.064|1.45972|||||||||||||||||F4F4F2|1|||C2H4N2O4|0|0|1200||L|7570-26-5
 c_7572294|0|Dichloroacetylene|Dikloroasetilen|C₂Cl₂|Dichloroacetylene;C2Cl2|organic|Molecular|L|0|0|Powder|0|94.922|1.2612|33||||||||||||||||E8F2FA|0.18|||C2Cl2|0|0|2000|283825|L|7572-29-4
 c_7616220|0|γ-Tocopherol|γ-Tokoferol|C₂₈H₄₈O₂|γ-Tocopherol;C28H48O2|organic|Molecular|L|0|0|Powder|0|416.69|1|||||||||||||||||E8F2FA|0.18|||C28H48O2|0|0|2000||Ld|7616-22-0
@@ -7865,7 +7865,7 @@ c_7651834|0|7-Isoquinolinol|7-İzokinolinol|C₉H₇NO|7-Isoquinolinol;C9H7NO|or
 c_7658084|0|Quinovose|Kinovoz|C₆H₁₂O₅|Quinovose;C6H12O5|organic|Molecular|S|0|0|Crystals|0|164.157|1.2|||||||||||||||||F4F4F2|1|||C6H12O5|0|0|1200||Ld|7658-08-4
 c_7661554|0|5-Methylquinoline|5-Metilkinolin|C₁₀H₉N|5-Methylquinoline;C10H9N|organic|Molecular|L|0|0|Powder|0|143.189|1.08322|257||||||||||||||||E8F2FA|0.18|||C10H9N|0|0|2000|325816|L|7661-55-4
 c_7665727|0|[(1,1-Dimethylethoxy)methyl]oxirane|[(1,1-Dimetiletoksi)metil]oksiran|C₇H₁₄O₂|[(1,1-Dimethylethoxy)methyl]oxirane;C7H14O2|organic|Molecular|L|0|0|Powder|0|130.187|0.8982|152||||||||||||||||E8F2FA|0.18|||C7H14O2|0|0|2000|287380|L|7665-72-7
-c_7669547|0|2-Nitrobenzenesulfenyl chloride|2-Nitrobenzenesülfenil klorür|C₆H₄ClNO₂S|2-Nitrobenzenesulfenyl chloride;C6H4ClNO2S|organic|Molecular|S|0|0|Crystals|0|189.613|1.2|||||||||||||||||F4F4F2|1|||C6H4ClNO2S|0|0|1200||Ld|7669-54-7
+c_7669547|0|2-Nitrobenzenesulfenyl chloride|2-Nitrobenzensülfenil klorür|C₆H₄ClNO₂S|2-Nitrobenzenesulfenyl chloride;C6H4ClNO2S|organic|Molecular|S|0|0|Crystals|0|189.613|1.2|||||||||||||||||F4F4F2|1|||C6H4ClNO2S|0|0|1200||Ld|7669-54-7
 c_7683592|0|Isoproterenol|İzoproterenol|C₁₁H₁₇NO₃|Isoproterenol;C11H17NO3|organic|Molecular|S|0|0|Crystals|0|211.261|1.2|||||||||||||||||F4F4F2|1|||C11H17NO3|0|0|1200||Ld|7683-59-2
 c_7696120|0|Tetramethrin|Tetrametrin|C₁₉H₂₅NO₄|Tetramethrin;C19H25NO4|organic|Molecular|S|0|0|Crystals|0|331.412|1.1082|||||||||||||||||F4F4F2|1|||C19H25NO4|0|0|1200||L|7696-12-0
 c_7764503|0|p-Menth-8-en-2-one|P-ment-8-en-2-on|C₁₀H₁₆O|p-Menth-8-en-2-one;C10H16O|organic|Molecular|L|0|0|Powder|0|152.237|1|223||||||||||||||||E8F2FA|0.18|||C10H16O|0|0|2000|286798|Ld|7764-50-3
@@ -7881,7 +7881,7 @@ c_10088956|0|Radicinin|Radisinin|C₁₂H₁₂O₅|Radicinin;C12H12O5|organic|M
 c_10143609|0|Bis(2-ethylhexyl) ether|Bis(2-etilhekzil) eter|C₁₆H₃₄O|Bis(2-ethylhexyl) ether;C16H34O|organic|Molecular|S|0|0|Crystals|0|242.447|1.2|||||||||||||||||F4F4F2|1|||C16H34O|0|0|1200||Ld|10143-60-9
 c_10152768|0|3-(Methylthio)-1-propene|3-(Metiltio)-1-propen|C₄H₈S|3-(Methylthio)-1-propene;C4H8S|organic|Molecular|L|0|0|Powder|0|88.168|0.87672|94||||||||||||||||E8F2FA|0.18|||C4H8S|0|0|2000|366450|L|10152-76-8
 c_10160879|0|3,3-Diethoxy-1-propyne|3,3-Dietoksi-1-propin|C₇H₁₂O₂|3,3-Diethoxy-1-propyne;C7H12O2|organic|Molecular|L|0|0|Powder|0|128.171|0.894222|139||||||||||||||||E8F2FA|0.18|||C7H12O2|0|0|2000|282975|L|10160-87-9
-c_10166082|0|2-Methylbenzeneacetaldehyde|2-Metilbenzeneasetaldehit|C₉H₁₀O|2-Methylbenzeneacetaldehyde;C9H10O|organic|Molecular|L|0|0|Powder|0|134.178|1.02411|221||||||||||||||||E8F2FA|0.18|||C9H10O|0|0|2000|324086|L|10166-08-2
+c_10166082|0|2-Methylbenzeneacetaldehyde|2-Metilbenzenasetaldehit|C₉H₁₀O|2-Methylbenzeneacetaldehyde;C9H10O|organic|Molecular|L|0|0|Powder|0|134.178|1.02411|221||||||||||||||||E8F2FA|0.18|||C9H10O|0|0|2000|324086|L|10166-08-2
 c_10203084|0|3,5-Dichlorobenzaldehyde|3,5-Diklorobenzaldehit|C₇H₄Cl₂O|3,5-Dichlorobenzaldehyde;C7H4Cl2O|organic|Molecular|S|0|0|Crystals|0|175.008|1.2|||||||||||||||||F4F4F2|1|||C7H4Cl2O|0|0|1200||Ld|10203-08-4
 c_10203288|0|2-Dodecanol|2-Dodekanol|C₁₂H₂₆O|2-Dodecanol;C12H26O|organic|Molecular|L|0|0|Powder|0|186.339|0.82862|249||||||||||||||||E8F2FA|0.18|||C12H26O|0|0|2000|246589|L|10203-28-8
 c_10222012|0|2,2-Dibromo-2-cyanoacetamide|2,2-Dibromo-2-sianoasetamit|C₃H₂Br₂N₂O|2,2-Dibromo-2-cyanoacetamide;C3H2Br2N2O|organic|Molecular|S|0|0|Crystals|0|241.87|1.2|||||||||||||||||F4F4F2|1|||C3H2Br2N2O|0|0|1200||Ld|10222-01-2
@@ -7897,7 +7897,7 @@ c_10326417|0|D-Lactic acid|D-laktik asit|C₃H₆O₃|D-Lactic acid;C3H6O3|organ
 c_10328924|0|1-Methyl-2H-3,1-benzoxazine-2,4(1H)-dione|1-Metil-2H-3,1-benzoksazin-2,4(1H)-dion|C₉H₇NO₃|1-Methyl-2H-3,1-benzoxazine-2,4(1H)-dione;C9H7NO3|organic|Molecular|S|0|0|Crystals|0|177.159|1.2|||||||||||||||||F4F4F2|1|||C9H7NO3|0|0|1200||Ld|10328-92-4
 c_10418038|0|Stanozolol|Stanozolol|C₂₁H₃₂N₂O|Stanozolol;C21H32N2O|organic|Molecular|S|0|0|Crystals|0|328.5|1.2|||||||||||||||||F4F4F2|1|||C21H32N2O|0|0|1200||Ld|10418-03-8
 c_10436392|0|1,1,2,3-Tetrachloro-1-propene|1,1,2,3-Tetrakloro-1-propen|C₃H₂Cl₄|1,1,2,3-Tetrachloro-1-propene;C3H2Cl4|organic|Molecular|L|0|0|Powder|0|179.849|1.552|167.2||||||||||||||||E8F2FA|0.18|||C3H2Cl4|0|0|2000|215463|L|10436-39-2
-c_10439233|0|4-Methylbenzenesulfinyl chloride|4-Metilbenzenesülfinil klorür|C₇H₇ClOS|4-Methylbenzenesulfinyl chloride;C7H7ClOS|organic|Molecular|S|0|0|Crystals|0|174.642|1.2|||||||||||||||||F4F4F2|1|||C7H7ClOS|0|0|1200||Ld|10439-23-3
+c_10439233|0|4-Methylbenzenesulfinyl chloride|4-Metilbenzensülfinil klorür|C₇H₇ClOS|4-Methylbenzenesulfinyl chloride;C7H7ClOS|organic|Molecular|S|0|0|Crystals|0|174.642|1.2|||||||||||||||||F4F4F2|1|||C7H7ClOS|0|0|1200||Ld|10439-23-3
 c_10473140|0|3-Methyl-3-buten-2-ol|3-Metil-3-büten-2-ol|C₅H₁₀O|3-Methyl-3-buten-2-ol;C5H10O|organic|Molecular|L|0|0|Powder|0|86.134|0.853117|114||||||||||||||||E8F2FA|0.18|||C5H10O|0|0|2000|395537|L|10473-14-0
 c_10476956|0|2-Methyl-2-propene-1,1-diol diacetate|2-Metil-2-propen-1,1-diol diasetat|C₈H₁₂O₄|2-Methyl-2-propene-1,1-diol diacetate;C8H12O4|organic|Molecular|L|0|0|Powder|0|172.18|1|191||||||||||||||||E8F2FA|0.18|||C8H12O4|0|0|2000|237224|Ld|10476-95-6
 c_10487715|0|2-Butenoyl chloride|2-Bütenoil klorür|C₄H₅ClO|2-Butenoyl chloride;C4H5ClO|organic|Molecular|L|0|0|Powder|0|104.533|1.09052|121||||||||||||||||E8F2FA|0.18|||C4H5ClO|0|0|2000|331811|L|10487-71-5
@@ -7911,7 +7911,7 @@ c_10541830|0|4-(Methylamino)benzoic acid|4-(Metilamino)benzoik asit|C₈H₉NO�
 c_10574364|0|cis-3-Methyl-2-hexene|Cis-3-metil-2-hekzen|C₇H₁₄|cis-3-Methyl-2-hexene;C7H14|organic|Molecular|L|0|0|Powder|0|98.189|0.7122|97||||||||||||||||E8F2FA|0.18|||C7H14|0|0|2000|331740|L|10574-36-4
 c_10574375|0|2,3-Dimethyl-2-pentene|2,3-Dimetil-2-penten|C₇H₁₄|2,3-Dimethyl-2-pentene;C7H14|organic|Molecular|L|0|0|Powder|0|98.189|0.72772|96||||||||||||||||E8F2FA|0.18|||C7H14|0|0|2000|330844|L|10574-37-5
 c_10588100|0|Isobutyl pentanoate|İzobütil pentanoat|C₉H₁₈O₂|Isobutyl pentanoate;C9H18O2|organic|Molecular|L|0|0|Powder|0|158.241|0.862525|183||||||||||||||||E8F2FA|0.18|||C9H18O2|0|0|2000|253671|L|10588-10-0
-c_13010474|0|1-(2-Chloroethyl)-3-cyclohexyl-1-nitrosourea|1-(2-Kloroetil)-3-siklohekzil-1-nitrosourea|C₉H₁₆ClN₃O₂|1-(2-Chloroethyl)-3-cyclohexyl-1-nitrosourea;C9H16ClN3O2|organic|Molecular|S|0|0|Crystals|0|233.696|1.2|||||||||||||||||F4F4F2|1|||C9H16ClN3O2|0|0|1200||Ld|13010-47-4
+c_13010474|0|1-(2-Chloroethyl)-3-cyclohexyl-1-nitrosourea|1-(2-Kloroetil)-3-siklohekzil-1-nitrosoüre|C₉H₁₆ClN₃O₂|1-(2-Chloroethyl)-3-cyclohexyl-1-nitrosourea;C9H16ClN3O2|organic|Molecular|S|0|0|Crystals|0|233.696|1.2|||||||||||||||||F4F4F2|1|||C9H16ClN3O2|0|0|1200||Ld|13010-47-4
 c_13014249|0|1,2-Dichloro-4-(trichloromethyl)benzene|1,2-Dikloro-4-(triklorometil)benzen|C₇H₃Cl₅|1,2-Dichloro-4-(trichloromethyl)benzene;C7H3Cl5|organic|Molecular|S|0|0|Crystals|0|264.351|1.59132|||||||||||||||||F4F4F2|1|||C7H3Cl5|0|0|1200||L|13014-24-9
 c_13019222|0|9-Decen-1-ol|9-Desen-1-ol|C₁₀H₂₀O|9-Decen-1-ol;C10H20O|organic|Molecular|L|0|0|Powder|0|156.269|0.87625|236||||||||||||||||E8F2FA|0.18|||C10H20O|0|0|2000|286718|L|13019-22-2
 c_13057175|0|Bromomethoxymethane|Bromometoksimetan|C₂H₅BrO|Bromomethoxymethane;C2H5BrO|organic|Molecular|L|0|0|Powder|0|124.965|1.59762|87||||||||||||||||E8F2FA|0.18|||C2H5BrO|0|0|2000|253617|L|13057-17-5
@@ -7941,7 +7941,7 @@ c_13491797|0|2-tert-Butylcyclohexanol|2-Tert-bütilsiklohekzanol|C₁₀H₂₀O
 c_13511381|0|3-Chloro-2,2-dimethylpropanoic acid|3-Kloro-2,2-dimetilpropanoik asit|C₅H₉ClO₂|3-Chloro-2,2-dimethylpropanoic acid;C5H9ClO2|organic|Molecular|S|0|0|Crystals|0|136.575|1.2|||||||||||||||||F4F4F2|1|||C5H9ClO2|0|0|1200||Ld|13511-38-1
 c_13523869|0|Pindolol|Pindolol|C₁₄H₂₀N₂O₂|Pindolol;C14H20N2O2|organic|Molecular|S|0|0|Crystals|0|248.326|1.2|||||||||||||||||F4F4F2|1|||C14H20N2O2|0|0|1200||Ld|13523-86-9
 c_13529276|0|2-(Diethoxymethyl)furan|2-(Dietoksimetil)furan|C₉H₁₄O₃|2-(Diethoxymethyl)furan;C9H14O3|organic|Molecular|L|0|0|Powder|0|170.208|0.99762|191.5||||||||||||||||E8F2FA|0.18|||C9H14O3|0|0|2000|240231|L|13529-27-6
-c_13673922|0|3,5-Dichloro-1,2-benzenediol|3,5-Dikloro-1,2-benzenediol|C₆H₄Cl₂O₂|3,5-Dichloro-1,2-benzenediol;C6H4Cl2O2|organic|Molecular|S|0|0|Crystals|0|178.996|1.2|||||||||||||||||F4F4F2|1|||C6H4Cl2O2|0|0|1200||Ld|13673-92-2
+c_13673922|0|3,5-Dichloro-1,2-benzenediol|3,5-Dikloro-1,2-benzendiol|C₆H₄Cl₂O₂|3,5-Dichloro-1,2-benzenediol;C6H4Cl2O2|organic|Molecular|S|0|0|Crystals|0|178.996|1.2|||||||||||||||||F4F4F2|1|||C6H4Cl2O2|0|0|1200||Ld|13673-92-2
 c_13679464|0|2-(Methoxymethyl)furan|2-(Metoksimetil)furan|C₆H₈O₂|2-(Methoxymethyl)furan;C6H8O2|organic|Molecular|L|0|0|Powder|0|112.128|1.01632|132||||||||||||||||E8F2FA|0.18|||C6H8O2|0|0|2000|317969|L|13679-46-4
 c_13684565|0|Desmedipham|Desmedifam|C₁₆H₁₆N₂O₄|Desmedipham;C16H16N2O4|organic|Molecular|S|0|0|Crystals|0|300.314|1.2|||||||||||||||||F4F4F2|1|||C16H16N2O4|0|0|1200||Ld|13684-56-5
 c_13684634|0|Phenmedipham|Fenmedifam|C₁₆H₁₆N₂O₄|Phenmedipham;C16H16N2O4|organic|Molecular|S|0|0|Crystals|0|300.314|1.2|||||||||||||||||F4F4F2|1|||C16H16N2O4|0|0|1200||Ld|13684-63-4
@@ -7980,7 +7980,7 @@ c_14938353|0|4-Pentylphenol|4-Pentilfenol|C₁₁H₁₆O|4-Pentylphenol;C11H16O
 c_14976579|0|Clemastine fumarate|Klemastin fumarat|C₂₅H₃₀ClNO₅|Clemastine fumarate;C25H30ClNO5|organic|Molecular|S|0|0|Crystals|0|459.967|1.2|||||||||||||||||F4F4F2|1|||C25H30ClNO5|0|0|1200||Ld|14976-57-9
 c_14979396|0|4-Methyl-3-heptanol|4-Metil-3-heptanol|C₈H₁₈O|4-Methyl-3-heptanol;C8H18O|organic|Molecular|L|0|0|Powder|0|130.231|0.82725|157||||||||||||||||E8F2FA|0.18|||C8H18O|0|0|2000|290662|L|14979-39-6
 c_15111565|0|Ethyl 3-cyclohexene-1-carboxylate|Etil 3-siklohekzen-1-karboksilat|C₉H₁₄O₂|Ethyl 3-cyclohexene-1-carboxylate;C9H14O2|organic|Molecular|L|0|0|Powder|0|154.209|0.96882|194.5||||||||||||||||E8F2FA|0.18|||C9H14O2|0|0|2000|266866|L|15111-56-5
-c_15121843|0|2-Nitrobenzeneethanol|2-Nitrobenzeneetanol|C₈H₉NO₃|2-Nitrobenzeneethanol;C8H9NO3|organic|Molecular|L|0|0|Powder|0|167.164|1.1925|267||||||||||||||||E8F2FA|0.18|||C8H9NO3|0|0|2000|284351|L|15121-84-3
+c_15121843|0|2-Nitrobenzeneethanol|2-Nitrobenzenetanol|C₈H₉NO₃|2-Nitrobenzeneethanol;C8H9NO3|organic|Molecular|L|0|0|Powder|0|167.164|1.1925|267||||||||||||||||E8F2FA|0.18|||C8H9NO3|0|0|2000|284351|L|15121-84-3
 c_15164440|0|4-Iodobenzaldehyde|4-İodobenzaldehit|C₇H₅IO|4-Iodobenzaldehyde;C7H5IO|organic|Molecular|S|0|0|Crystals|0|232.02|1.2|||||||||||||||||F4F4F2|1|||C7H5IO|0|0|1200||Ld|15164-44-0
 c_15232765|0|3-Octyne|3-Oktin|C₈H₁₄|3-Octyne;C8H14|organic|Molecular|L|0|0|Powder|0|110.2|0.75292|135.6||||||||||||||||E8F2FA|0.18|||C8H14|0|0|2000|326407|L|15232-76-5
 c_15299997|0|Napropamide|Napropamit|C₁₇H₂₁NO₂|Napropamide;C17H21NO2|organic|Molecular|S|0|0|Crystals|0|271.36|1.2|||||||||||||||||F4F4F2|1|||C17H21NO2|0|0|1200||Ld|15299-99-7
@@ -7990,7 +7990,7 @@ c_15501334|0|1-Iodo-2,2-dimethylpropane|1-İodo-2,2-dimetilpropan|C₅H₁₁I|1
 c_15503863|0|Isatidine|İsatidin|C₁₈H₂₅NO₇|Isatidine;C18H25NO7|organic|Molecular|S|0|0|Crystals|0|367.398|1.2|||||||||||||||||F4F4F2|1|||C18H25NO7|0|0|1200||Ld|15503-86-3
 c_15521183|0|2-(Dimethylamino)-1-propanol|2-(Dimetilamino)-1-propanol|C₅H₁₃NO|2-(Dimethylamino)-1-propanol;C5H13NO|organic|Molecular|L|0|0|Powder|0|103.165|0.882026|150.3||||||||||||||||E8F2FA|0.18|||C5H13NO|0|0|2000|361204|L|15521-18-3
 c_15545489|0|Chlortoluron|Klortoluron|C₁₀H₁₃ClN₂O|Chlortoluron;C10H13ClN2O|organic|Molecular|S|0|0|Crystals|0|212.677|1.2|||||||||||||||||F4F4F2|1|||C10H13ClN2O|0|0|1200||Ld|15545-48-9
-c_15570124|0|3-Methoxybenzenethiol|3-Metoksibenzenetiol|C₇H₈OS|3-Methoxybenzenethiol;C7H8OS|organic|Molecular|L|0|0|Powder|0|140.2|1|224.5||||||||||||||||E8F2FA|0.18|||C7H8OS|0|0|2000|312362|Ld|15570-12-4
+c_15570124|0|3-Methoxybenzenethiol|3-Metoksibenzentiol|C₇H₈OS|3-Methoxybenzenethiol;C7H8OS|organic|Molecular|L|0|0|Powder|0|140.2|1|224.5||||||||||||||||E8F2FA|0.18|||C7H8OS|0|0|2000|312362|Ld|15570-12-4
 c_15572562|0|Isopropylamine hydrochloride|İzopropilamin hidroklorür|C₃H₁₀ClN|Isopropylamine hydrochloride;C3H10ClN|organic|Molecular|S|0|0|Crystals|0|95.57|1.2|||||||||||||||||F4F4F2|1|||C3H10ClN|0|0|1200||Ld|15572-56-2
 c_15647117|0|3-(Aminomethyl)-3,5,5-trimethylcyclohexanol|3-(Aminometil)-3,5,5-trimetilsiklohekzanol|C₁₀H₂₁NO|3-(Aminomethyl)-3,5,5-trimethylcyclohexanol;C10H21NO|organic|Molecular|S|0|0|Crystals|0|171.284|0.96925|||||||||||||||||F4F4F2|1|||C10H21NO|0|0|1200||L|15647-11-7
 c_15679240|0|2,7-Dimethylpyrene|2,7-Dimetilpiren|C₁₈H₁₄|2,7-Dimethylpyrene;C18H14|organic|Molecular|S|0|0|Crystals|0|230.31|1.2|||||||||||||||||F4F4F2|1|||C18H14|0|0|1200||Ld|15679-24-0
@@ -8017,7 +8017,7 @@ c_16420136|0|Dimethylcarbamothioic chloride|Dimetilkarbamotioik klorür|C₃H₆
 c_16491159|0|1,5-Dimethylcyclopentene|1,5-Dimetilsiklopenten|C₇H₁₂|1,5-Dimethylcyclopentene;C7H12|organic|Molecular|L|0|0|Powder|0|96.173|0.7802|99||||||||||||||||E8F2FA|0.18|||C7H12|0|0|2000|340524|L|16491-15-9
 c_16520620|0|3-Butynylbenzene|3-Bütinilbenzen|C₁₀H₁₀|3-Butynylbenzene;C10H10|organic|Molecular|L|0|0|Powder|0|130.19|0.92582|177||||||||||||||||E8F2FA|0.18|||C10H10|0|0|2000|304272|L|16520-62-0
 c_16532028|0|(Bromomethyl)chlorodimethylsilane|(Bromometil)klorodimetilsilan|C₃H₈BrClSi|(Bromomethyl)chlorodimethylsilane;C3H8BrClSi|organic|Molecular|L|0|0|Powder|0|187.536|1.37525|131||||||||||||||||E8F2FA|0.18|||C3H8BrClSi|0|0|2000|189645|L|16532-02-8
-c_16532799|0|4-Bromobenzeneacetonitrile|4-Bromobenzeneasetonitril|C₈H₆BrN|4-Bromobenzeneacetonitrile;C8H6BrN|organic|Molecular|S|0|0|Crystals|0|196.047|1.2|||||||||||||||||F4F4F2|1|||C8H6BrN|0|0|1200||Ld|16532-79-9
+c_16532799|0|4-Bromobenzeneacetonitrile|4-Bromobenzenasetonitril|C₈H₆BrN|4-Bromobenzeneacetonitrile;C8H6BrN|organic|Molecular|S|0|0|Crystals|0|196.047|1.2|||||||||||||||||F4F4F2|1|||C8H6BrN|0|0|1200||Ld|16532-79-9
 c_16587716|0|4-(1,1-Dimethylpropyl)cyclohexanone|4-(1,1-Dimetilpropil)siklohekzanon|C₁₁H₂₀O|4-(1,1-Dimethylpropyl)cyclohexanone;C11H20O|organic|Molecular|S|0|0|Crystals|0|168.28|0.92025|||||||||||||||||F4F4F2|1|||C11H20O|0|0|1200||L|16587-71-6
 c_16588344|0|4-Chloro-3-nitrobenzaldehyde|4-Kloro-3-nitrobenzaldehit|C₇H₄ClNO₃|4-Chloro-3-nitrobenzaldehyde;C7H4ClNO3|organic|Molecular|S|0|0|Crystals|0|185.563|1.2|||||||||||||||||F4F4F2|1|||C7H4ClNO3|0|0|1200||Ld|16588-34-4
 c_16590413|0|Naltrexone|Naltrekson|C₂₀H₂₃NO₄|Naltrexone;C20H23NO4|organic|Molecular|S|0|0|Crystals|0|341.407|1.2|||||||||||||||||F4F4F2|1|||C20H23NO4|0|0|1200||Ld|16590-41-3
@@ -8050,7 +8050,7 @@ c_17348593|0|tert-Butyl isopropyl ether|Tert-bütil izopropil eter|C₇H₁₆O|
 c_17356193|0|1-Ethynylcyclopentanol|1-Etinilsiklopentanol|C₇H₁₀O|1-Ethynylcyclopentanol;C7H10O|organic|Molecular|S|0|0|Crystals|0|110.156|0.96225|||||||||||||||||F4F4F2|1|||C7H10O|0|0|1200||L|17356-19-3
 c_17397896|0|Cerulenin|Serulenin|C₁₂H₁₇NO₃|Cerulenin;C12H17NO3|organic|Molecular|S|0|0|Crystals|0|223.272|1.2|||||||||||||||||F4F4F2|1|||C12H17NO3|0|0|1200||Ld|17397-89-6
 c_17420303|0|2-Amino-5-nitrobenzonitrile|2-Amino-5-nitrobenzonitril|C₇H₅N₃O₂|2-Amino-5-nitrobenzonitrile;C7H5N3O2|organic|Molecular|S|0|0|Crystals|0|163.136|1.2|||||||||||||||||F4F4F2|1|||C7H5N3O2|0|0|1200||Ld|17420-30-3
-c_17534155|0|1,2-Benzenedithiol|1,2-Benzeneditiol|C₆H₆S₂|1,2-Benzenedithiol;C6H6S2|organic|Molecular|S|0|0|Crystals|0|142.234|1.2|||||||||||||||||F4F4F2|1|||C6H6S2|0|0|1200||Ld|17534-15-5
+c_17534155|0|1,2-Benzenedithiol|1,2-Benzenditiol|C₆H₆S₂|1,2-Benzenedithiol;C6H6S2|organic|Molecular|S|0|0|Crystals|0|142.234|1.2|||||||||||||||||F4F4F2|1|||C6H6S2|0|0|1200||Ld|17534-15-5
 c_17560519|0|Metolazone|Metolazon|C₁₆H₁₆ClN₃O₃S|Metolazone;C16H16ClN3O3S|organic|Molecular|S|0|0|Crystals|0|365.832|1.2|||||||||||||||||F4F4F2|1|||C16H16ClN3O3S|0|0|1200||Ld|17560-51-9
 c_17564646|0|N-Chloromethylphthalimide|N-klorometilftalimit|C₉H₆ClNO₂|N-Chloromethylphthalimide;C9H6ClNO2|organic|Molecular|S|0|0|Crystals|0|195.602|1.2|||||||||||||||||F4F4F2|1|||C9H6ClNO2|0|0|1200||Ld|17564-64-6
 c_17587223|0|6,6,7,7,8,8,8-Heptafluoro-2,2-dimethyl-3,5-octanedione|6,6,7,7,8,8,8-Heptafloro-2,2-dimetil-3,5-oktanedion|C₁₀H₁₁F₇O₂|6,6,7,7,8,8,8-Heptafluoro-2,2-dimethyl-3,5-octanedione;C10H11F7O2|organic|Molecular|S|0|0|Crystals|0|296.185|1.27325|||||||||||||||||F4F4F2|1|||C10H11F7O2|0|0|1200||L|17587-22-3
@@ -8063,7 +8063,7 @@ c_17696116|0|8-Bromooctanoic acid|8-Bromooktanoik asit|C₈H₁₅BrO₂|8-Bromo
 c_17696376|0|4-tert-Butyl-2,5-dimethylphenol|4-Tert-bütil-2,5-dimetilfenol|C₁₂H₁₈O|4-tert-Butyl-2,5-dimethylphenol;C12H18O|organic|Molecular|S|0|0|Crystals|0|178.275|0.9398|||||||||||||||||F4F4F2|1|||C12H18O|0|0|1200||L|17696-37-6
 c_17754904|0|4-(Diethylamino)-2-hydroxybenzaldehyde|4-(Dietilamino)-2-hidroksibenzaldehit|C₁₁H₁₅NO₂|4-(Diethylamino)-2-hydroxybenzaldehyde;C11H15NO2|organic|Molecular|S|0|0|Crystals|0|193.246|1.2|||||||||||||||||F4F4F2|1|||C11H15NO2|0|0|1200||Ld|17754-90-4
 c_17788000|0|2,4-Dichloro-3-methylphenol|2,4-Dikloro-3-metilfenol|C₇H₆Cl₂O|2,4-Dichloro-3-methylphenol;C7H6Cl2O|organic|Molecular|S|0|0|Crystals|0|177.024|1.2|||||||||||||||||F4F4F2|1|||C7H6Cl2O|0|0|1200||Ld|17788-00-0
-c_17849386|0|2-Chlorobenzenemethanol|2-Klorobenzenemetanol|C₇H₇ClO|2-Chlorobenzenemethanol;C7H7ClO|organic|Molecular|S|0|0|Crystals|0|142.582|1.2|||||||||||||||||F4F4F2|1|||C7H7ClO|0|0|1200||Ld|17849-38-6
+c_17849386|0|2-Chlorobenzenemethanol|2-Klorobenzenmetanol|C₇H₇ClO|2-Chlorobenzenemethanol;C7H7ClO|organic|Molecular|S|0|0|Crystals|0|142.582|1.2|||||||||||||||||F4F4F2|1|||C7H7ClO|0|0|1200||Ld|17849-38-6
 c_17924924|0|Zearalenone|Zearalenon|C₁₈H₂₂O₅|Zearalenone;C18H22O5|organic|Molecular|S|0|0|Crystals|0|318.369|1.2|||||||||||||||||F4F4F2|1|||C18H22O5|0|0|1200||Ld|17924-92-4
 c_17952113|0|Ethyl pentyl ether|Etil pentil eter|C₇H₁₆O|Ethyl pentyl ether;C7H16O|organic|Molecular|L|0|0|Powder|0|116.204|0.76222|118||||||||||||||||E8F2FA|0.18|||C7H16O|0|0|2000|296214|L|17952-11-3
 c_18023331|0|Triisopropoxyvinylsilane|Triizopropoksivinilsilan|C₁₁H₂₄O₃Si|Triisopropoxyvinylsilane;C11H24O3Si|organic|Molecular|S|0|0|Crystals|0|232.395|0.862725|||||||||||||||||F4F4F2|1|||C11H24O3Si|0|0|1200||L|18023-33-1
@@ -8112,13 +8112,13 @@ c_19752557|0|1-Bromo-3,5-dichlorobenzene|1-Bromo-3,5-diklorobenzen|C₆H₃BrCl�
 c_19780111|0|2-Dodecenylsuccinic anhydride|2-Dodesenilsuksinik anhidrit|C₁₆H₂₆O₃|2-Dodecenylsuccinic anhydride;C16H26O3|organic|Molecular|S|0|0|Crystals|0|266.381|1.2|||||||||||||||||F4F4F2|1|||C16H26O3|0|0|1200||Ld|19780-11-1
 c_19780666|0|3-Ethyl-2-methyl-1-pentene|3-Etil-2-metil-1-penten|C₈H₁₆|3-Ethyl-2-methyl-1-pentene;C8H16|organic|Molecular|L|0|0|Powder|0|112.216|0.72622|109.2||||||||||||||||E8F2FA|0.18|||C8H16|0|0|2000|299840|L|19780-66-6
 c_19812647|0|1,14-Tetradecanediol|1,14-Tetradekanediol|C₁₄H₃₀O₂|1,14-Tetradecanediol;C14H30O2|organic|Molecular|S|0|0|Crystals|0|230.392|1.2|||||||||||||||||F4F4F2|1|||C14H30O2|0|0|1200||Ld|19812-64-7
-c_19819988|0|2-Methylbenzeneethanol|2-Metilbenzeneetanol|C₉H₁₂O|2-Methylbenzeneethanol;C9H12O|organic|Molecular|L|0|0|Powder|0|136.194|1.01625|243.5||||||||||||||||E8F2FA|0.18|||C9H12O|0|0|2000|333827|L|19819-98-8
+c_19819988|0|2-Methylbenzeneethanol|2-Metilbenzenetanol|C₉H₁₂O|2-Methylbenzeneethanol;C9H12O|organic|Molecular|L|0|0|Powder|0|136.194|1.01625|243.5||||||||||||||||E8F2FA|0.18|||C9H12O|0|0|2000|333827|L|19819-98-8
 c_19838085|0|3-Methylpyrazinamine|3-Metilpirazinamin|C₅H₇N₃|3-Methylpyrazinamine;C5H7N3|organic|Molecular|S|0|0|Crystals|0|109.132|1.2|||||||||||||||||F4F4F2|1|||C5H7N3|0|0|1200||Ld|19838-08-5
 c_19889373|0|2-Ethyl-2-methylbutanoic acid|2-Etil-2-metilbütanoik asit|C₇H₁₄O₂|2-Ethyl-2-methylbutanoic acid;C7H14O2|organic|Molecular|L|0|0|Powder|0|130.187|1|207||||||||||||||||E8F2FA|0.18|||C7H14O2|0|0|2000|324558|Ld|19889-37-3
 c_19952477|0|4-Chloro-2-benzothiazolamine|4-Kloro-2-benzotiazolamin|C₇H₅ClN₂S|4-Chloro-2-benzothiazolamine;C7H5ClN2S|organic|Molecular|S|0|0|Crystals|0|184.641|1.2|||||||||||||||||F4F4F2|1|||C7H5ClN2S|0|0|1200||Ld|19952-47-7
 c_19961274|0|Ethylisopropylamine|Etilizopropilamin|C₅H₁₃N|Ethylisopropylamine;C5H13N|organic|Molecular|L|0|0|Powder|0|87.166|1|68||||||||||||||||E8F2FA|0.18|||C5H13N|0|0|2000|344414|Ld|19961-27-4
 c_20020024|0|1,2,3,4-Tetrachloronaphthalene|1,2,3,4-Tetrakloronaftalen|C₁₀H₄Cl₄|1,2,3,4-Tetrachloronaphthalene;C10H4Cl4|organic|Molecular|S|0|0|Crystals|0|265.942|1.2|||||||||||||||||F4F4F2|1|||C10H4Cl4|0|0|1200||Ld|20020-02-4
-c_20103097|0|2,5-Dichloro-1,4-benzenediamine|2,5-Dikloro-1,4-benzenediamin|C₆H₆Cl₂N₂|2,5-Dichloro-1,4-benzenediamine;C6H6Cl2N2|organic|Molecular|S|0|0|Crystals|0|177.028|1.2|||||||||||||||||F4F4F2|1|||C6H6Cl2N2|0|0|1200||Ld|20103-09-7
+c_20103097|0|2,5-Dichloro-1,4-benzenediamine|2,5-Dikloro-1,4-benzendiamin|C₆H₆Cl₂N₂|2,5-Dichloro-1,4-benzenediamine;C6H6Cl2N2|organic|Molecular|S|0|0|Crystals|0|177.028|1.2|||||||||||||||||F4F4F2|1|||C6H6Cl2N2|0|0|1200||Ld|20103-09-7
 c_20193208|0|N-Ethyl-1-propanamine|N-etil-1-propanamin|C₅H₁₃N|N-Ethyl-1-propanamine;C5H13N|organic|Molecular|L|0|0|Powder|0|87.166|0.720417|85||||||||||||||||E8F2FA|0.18|||C5H13N|0|0|2000|361577|L|20193-20-8
 c_20278891|0|3,4,5-Trimethylheptane|3,4,5-Trimetilheptan|C₁₀H₂₂|3,4,5-Trimethylheptane;C10H22|organic|Molecular|L|0|0|Powder|0|142.286|0.751925|162.5||||||||||||||||E8F2FA|0.18|||C10H22|0|0|2000|269438|L|20278-89-1
 c_20324338|0|Tripropylene glycol monomethyl ether|Tripropilen glikol monometil eter|C₁₀H₂₂O₄|Tripropylene glycol monomethyl ether;C10H22O4|organic|Molecular|S|0|0|Crystals|0|206.282|1.2|||||||||||||||||F4F4F2|1|||C10H22O4|0|0|1200||Ld|20324-33-8
@@ -8153,13 +8153,13 @@ c_21968172|0|Isopropylpropylamine|İzopropilpropilamin|C₆H₁₅N|Isopropylpro
 c_22037281|0|3-Bromofuran|3-Bromofuran|C₄H₃BrO|3-Bromofuran;C4H3BrO|organic|Molecular|L|0|0|Powder|0|146.971|1.66062|106||||||||||||||||E8F2FA|0.18|||C4H3BrO|0|0|2000|227019|L|22037-28-1
 c_22052819|0|Perfluoroethyl ethyl ether|Perfloroetil etil eter|C₄H₅F₅O|Perfluoroethyl ethyl ether;C4H5F5O|organic|Molecular|L|0|0|Powder|0|164.075|1|28||||||||||||||||E8F2FA|0.18|||C4H5F5O|0|0|2000|161519|Ld|22052-81-9
 c_22052842|0|Perfluoroisopropyl methyl ether|Perfloroizopropil metil eter|C₄H₃F₇O|Perfluoroisopropyl methyl ether;C4H3F7O|organic|Molecular|S|0|0|Crystals|0|200.056|1.42052|||||||||||||||||F4F4F2|1|||C4H3F7O|0|0|1200||L|22052-84-2
-c_22139771|0|trans-5-(2-Phenylvinyl)-1,3-benzenediol|Trans-5-(2-fenilvinil)-1,3-benzenediol|C₁₄H₁₂O₂|trans-5-(2-Phenylvinyl)-1,3-benzenediol;C14H12O2|organic|Molecular|S|0|0|Crystals|0|212.248|1.2|||||||||||||||||F4F4F2|1|||C14H12O2|0|0|1200||Ld|22139-77-1
+c_22139771|0|trans-5-(2-Phenylvinyl)-1,3-benzenediol|Trans-5-(2-fenilvinil)-1,3-benzendiol|C₁₄H₁₂O₂|trans-5-(2-Phenylvinyl)-1,3-benzenediol;C14H12O2|organic|Molecular|S|0|0|Crystals|0|212.248|1.2|||||||||||||||||F4F4F2|1|||C14H12O2|0|0|1200||Ld|22139-77-1
 c_22144770|0|Cytochalasin D|Sitokalasin D|C₃₀H₃₇NO₆|Cytochalasin D;C30H37NO6|organic|Molecular|S|0|0|Crystals|0|507.627|1.2|||||||||||||||||F4F4F2|1|||C30H37NO6|0|0|1200||Ld|22144-77-0
 c_22204531|0|Naproxen|Naproksen|C₁₄H₁₄O₃|Naproxen;C14H14O3|organic|Molecular|S|0|0|Crystals|0|230.263|1.2|||||||||||||||||F4F4F2|1|||C14H14O3|0|0|1200||Ld|22204-53-1
 c_22224926|0|Fenamiphos|Fenamifoz|C₁₃H₂₂NO₃PS|Fenamiphos;C13H22NO3PS|organic|Molecular|S|0|0|Crystals|0|303.357|1.152|||||||||||||||||F4F4F2|1|||C13H22NO3PS|0|0|1200||L|22224-92-6
 c_22232548|0|Carbimazole|Karbimazol|C₇H₁₀N₂O₂S|Carbimazole;C7H10N2O2S|organic|Molecular|S|0|0|Crystals|0|186.229|1.2|||||||||||||||||F4F4F2|1|||C7H10N2O2S|0|0|1200||Ld|22232-54-8
 c_22232719|0|Mazindol|Mazindol|C₁₆H₁₃ClN₂O|Mazindol;C16H13ClN2O|organic|Molecular|S|0|0|Crystals|0|284.743|1.2|||||||||||||||||F4F4F2|1|||C16H13ClN2O|0|0|1200||Ld|22232-71-9
-c_22374896|0|α-Methylbenzenepropanamine|α-Metilbenzenepropanamin|C₁₀H₁₅N|α-Methylbenzenepropanamine;C10H15N|organic|Molecular|S|0|0|Crystals|0|149.237|0.928915|||||||||||||||||F4F4F2|1|||C10H15N|0|0|1200||L|22374-89-6
+c_22374896|0|α-Methylbenzenepropanamine|α-Metilbenzenpropanamin|C₁₀H₁₅N|α-Methylbenzenepropanamine;C10H15N|organic|Molecular|S|0|0|Crystals|0|149.237|0.928915|||||||||||||||||F4F4F2|1|||C10H15N|0|0|1200||L|22374-89-6
 c_22483096|0|2,2-Dimethoxyethanamine|2,2-Dimetoksietanamin|C₄H₁₁NO₂|2,2-Dimethoxyethanamine;C4H11NO2|organic|Molecular|L|0|0|Powder|0|105.137|0.96625|||||||||||||||||E8F2FA|0.18|||C4H11NO2|0|0|2000||L|22483-09-6
 c_22509746|0|N-Carbethoxyphthalimide|N-karbetoksiftalimit|C₁₁H₉NO₄|N-Carbethoxyphthalimide;C11H9NO4|organic|Molecular|S|0|0|Crystals|0|219.196|1.2|||||||||||||||||F4F4F2|1|||C11H9NO4|0|0|1200||Ld|22509-74-6
 c_22717573|0|Methyl 2-hydroxy-5-methylbenzoate|Metil 2-hidroksi-5-metilbenzoat|C₉H₁₀O₃|Methyl 2-hydroxy-5-methylbenzoate;C9H10O3|organic|Molecular|L|0|0|Powder|0|166.176|1.16732|244.5||||||||||||||||E8F2FA|0.18|||C9H10O3|0|0|2000|274126|L|22717-57-3
@@ -8205,7 +8205,7 @@ c_25395226|0|[2-(Aminocarbonyl)phenoxy]acetic acid|[2-(Aminokarbonil)fenoksi]ase
 c_25414226|0|2-Methoxyfuran|2-Metoksifuran|C₅H₆O₂|2-Methoxyfuran;C5H6O2|organic|Molecular|L|0|0|Powder|0|98.101|1.06462|110.5||||||||||||||||E8F2FA|0.18|||C5H6O2|0|0|2000|344147|L|25414-22-6
 c_25415672|0|Ethyl 4-methylpentanoate|Etil 4-metilpentanoat|C₈H₁₆O₂|Ethyl 4-methylpentanoate;C8H16O2|organic|Molecular|L|0|0|Powder|0|144.214|0.87052|163||||||||||||||||E8F2FA|0.18|||C8H16O2|0|0|2000|266141|L|25415-67-2
 c_25542625|0|Ethyl 6-bromohexanoate|Etil 6-bromohekzanoat|C₈H₁₅BrO₂|Ethyl 6-bromohexanoate;C8H15BrO2|organic|Molecular|S|0|0|Crystals|0|223.11|1.23823|||||||||||||||||F4F4F2|1|||C8H15BrO2|0|0|1200||L|25542-62-5
-c_25611783|0|α-Phenylbenzeneethanamine|α-Fenilbenzeneetanamin|C₁₄H₁₅N|α-Phenylbenzeneethanamine;C14H15N|organic|Molecular|L|0|0|Powder|0|197.281|1.03115|311||||||||||||||||E8F2FA|0.18|||C14H15N|0|0|2000|260568|L|25611-78-3
+c_25611783|0|α-Phenylbenzeneethanamine|α-Fenilbenzenetanamin|C₁₄H₁₅N|α-Phenylbenzeneethanamine;C14H15N|organic|Molecular|L|0|0|Powder|0|197.281|1.03115|311||||||||||||||||E8F2FA|0.18|||C14H15N|0|0|2000|260568|L|25611-78-3
 c_25790550|0|4-Chloro-1,2-butadiene|4-Kloro-1,2-bütadien|C₄H₅Cl|4-Chloro-1,2-butadiene;C4H5Cl|organic|Molecular|L|0|0|Powder|0|88.534|0.98912|88||||||||||||||||E8F2FA|0.18|||C4H5Cl|0|0|2000|358972|L|25790-55-0
 c_25812300|0|5-(2,5-Dimethylphenoxy)-2,2-dimethylpentanoic acid|5-(2,5-Dimetilfenoksi)-2,2-dimetilpentanoik asit|C₁₅H₂₂O₃|5-(2,5-Dimethylphenoxy)-2,2-dimethylpentanoic acid;C15H22O3|organic|Molecular|S|0|0|Crystals|0|250.338|1.2|||||||||||||||||F4F4F2|1|||C15H22O3|0|0|1200||Ld|25812-30-0
 c_26186027|0|1-Tridecyne|1-Tridesin|C₁₃H₂₄|1-Tridecyne;C13H24|organic|Molecular|L|0|0|Powder|0|180.335|0.78422|234||||||||||||||||E8F2FA|0.18|||C13H24|0|0|2000|247479|L|26186-02-7
@@ -8310,7 +8310,7 @@ c_41464408|0|2,2',4',5-Tetrachlorobiphenyl|2,2',4',5-Tetraklorobifenil|C₁₂H�
 c_41814782|0|Tricyclazole|Trisiklazol|C₉H₇N₃S|Tricyclazole;C9H7N3S|organic|Molecular|S|0|0|Crystals|0|189.236|1.2|||||||||||||||||F4F4F2|1|||C9H7N3S|0|0|1200||Ld|41814-78-2
 c_42027236|0|2,3-Pentanediol|2,3-Pentanediol|C₅H₁₂O₂|2,3-Pentanediol;C5H12O2|organic|Molecular|L|0|0|Powder|0|104.149|0.979819|187.5||||||||||||||||E8F2FA|0.18|||C5H12O2|0|0|2000|389223|L|42027-23-6
 c_42200339|0|Nadolol|Nadolol|C₁₇H₂₇NO₄|Nadolol;C17H27NO4|organic|Molecular|S|0|0|Crystals|0|309.406|1.2|||||||||||||||||F4F4F2|1|||C17H27NO4|0|0|1200||Ld|42200-33-9
-c_42389300|0|5-Chloro-3-nitro-1,2-benzenediamine|5-Kloro-3-nitro-1,2-benzenediamin|C₆H₆ClN₃O₂|5-Chloro-3-nitro-1,2-benzenediamine;C6H6ClN3O2|organic|Molecular|S|0|0|Crystals|0|187.583|1.2|||||||||||||||||F4F4F2|1|||C6H6ClN3O2|0|0|1200||Ld|42389-30-0
+c_42389300|0|5-Chloro-3-nitro-1,2-benzenediamine|5-Kloro-3-nitro-1,2-benzendiamin|C₆H₆ClN₃O₂|5-Chloro-3-nitro-1,2-benzenediamine;C6H6ClN3O2|organic|Molecular|S|0|0|Crystals|0|187.583|1.2|||||||||||||||||F4F4F2|1|||C6H6ClN3O2|0|0|1200||Ld|42389-30-0
 c_42397648|0|1,6-Dinitropyrene|1,6-Dinitropiren|C₁₆H₈N₂O₄|1,6-Dinitropyrene;C16H8N2O4|organic|Molecular|S|0|0|Crystals|0|292.25|1.2|||||||||||||||||F4F4F2|1|||C16H8N2O4|0|0|1200||Ld|42397-64-8
 c_42397659|0|1,8-Dinitropyrene|1,8-Dinitropiren|C₁₆H₈N₂O₄|1,8-Dinitropyrene;C16H8N2O4|organic|Molecular|S|0|0|Crystals|0|292.25|1.2|||||||||||||||||F4F4F2|1|||C16H8N2O4|0|0|1200||Ld|42397-65-9
 c_42474215|0|1,2-Dibromoheptane|1,2-Dibromoheptan|C₇H₁₄Br₂|1,2-Dibromoheptane;C7H14Br2|organic|Molecular|S|0|0|Crystals|0|257.997|1.50862|||||||||||||||||F4F4F2|1|||C7H14Br2|0|0|1200||L|42474-21-5
@@ -8358,7 +8358,7 @@ c_55944702|0|7-Chloro-1-heptanol|7-Kloro-1-heptanol|C₇H₁₅ClO|7-Chloro-1-he
 c_56073100|0|Brodifacoum|Brodifakoum|C₃₁H₂₃BrO₃|Brodifacoum;C31H23BrO3|organic|Molecular|S|0|0|Crystals|0|523.426|1.2|||||||||||||||||F4F4F2|1|||C31H23BrO3|0|0|1200||Ld|56073-10-0
 c_56103674|0|4-Methyl-2,6-di-tert-pentylphenol|4-Metil-2,6-di-tert-pentilfenol|C₁₇H₂₈O|4-Methyl-2,6-di-tert-pentylphenol;C17H28O|organic|Molecular|S|0|0|Crystals|0|248.41|0.93125|||||||||||||||||F4F4F2|1|||C17H28O|0|0|1200||L|56103-67-4
 c_56298909|0|4-Methyl-2-heptanol|4-Metil-2-heptanol|C₈H₁₈O|4-Methyl-2-heptanol;C8H18O|organic|Molecular|L|0|0|Powder|0|130.231|0.80272|171||||||||||||||||E8F2FA|0.18|||C8H18O|0|0|2000|300122|L|56298-90-9
-c_56961207|0|3,4,5-Trichloro-1,2-benzenediol|3,4,5-Trikloro-1,2-benzenediol|C₆H₃Cl₃O₂|3,4,5-Trichloro-1,2-benzenediol;C6H3Cl3O2|organic|Molecular|S|0|0|Crystals|0|213.438|1.2|||||||||||||||||F4F4F2|1|||C6H3Cl3O2|0|0|1200||Ld|56961-20-7
+c_56961207|0|3,4,5-Trichloro-1,2-benzenediol|3,4,5-Trikloro-1,2-benzendiol|C₆H₃Cl₃O₂|3,4,5-Trichloro-1,2-benzenediol;C6H3Cl3O2|organic|Molecular|S|0|0|Crystals|0|213.438|1.2|||||||||||||||||F4F4F2|1|||C6H3Cl3O2|0|0|1200||Ld|56961-20-7
 c_56961843|0|1,2-Dichloro-4-(dichloromethyl)benzene|1,2-Dikloro-4-(diklorometil)benzen|C₇H₄Cl₄|1,2-Dichloro-4-(dichloromethyl)benzene;C7H4Cl4|organic|Molecular|S|0|0|Crystals|0|229.909|1.51522|||||||||||||||||F4F4F2|1|||C7H4Cl4|0|0|1200||L|56961-84-3
 c_57041675|0|1,2,2,2-Tetrafluoroethyl difluoromethyl ether|1,2,2,2-Tetrafloroetil diflorometil eter|C₃H₂F₆O|1,2,2,2-Tetrafluoroethyl difluoromethyl ether;C3H2F6O|organic|Molecular|A|1|0|Powder|256|168.038|1|||||||||||||||||F4F4F2|1|||C3H2F6O|0|0|1200||L|57041-67-5
 c_57392559|0|Isopentyl trichloroacetate|İzopentil trikloroasetat|C₇H₁₁Cl₃O₂|Isopentyl trichloroacetate;C7H11Cl3O2|organic|Molecular|S|0|0|Crystals|0|233.513|1.23142|||||||||||||||||F4F4F2|1|||C7H11Cl3O2|0|0|1200||L|57392-55-9

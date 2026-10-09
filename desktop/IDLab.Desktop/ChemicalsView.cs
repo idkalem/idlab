@@ -107,6 +107,7 @@ namespace IDLab.Desktop
                 };
                 var keys = new List<string> { Normalize(e.Name), Normalize(s.Name ?? "") };
                 keys.AddRange(s.Aliases.Select(Normalize));
+                if (!string.IsNullOrEmpty(s.Cas)) keys.Add(Normalize(s.Cas));
                 e.Keys = keys.Where(k => k.Length > 0).Distinct().ToArray();
                 _entries.Add(e);
                 foreach (var el in e.Elements) _elementUse[el] = _elementUse.TryGetValue(el, out int n) ? n + 1 : 1;
@@ -657,6 +658,11 @@ namespace IDLab.Desktop
                 y += 66 * s;
                 y += Ui.Wrapped(string.Join(" · ", hz.Select(Tr.Hazard)), x, y, w, 14, Theme.Warning, true, 1.3f) + 6 * s;
             }
+            else if (sub.DataLimited)
+            {
+                y += Ui.Wrapped("Bu kayıtta tehlike verisi yok (CRC el kitabı: yalnızca formül ve fiziksel sabitler). Bilinmeyen maddeye tehlikeliymiş gibi davranın.",
+                    x, y, w, 14, Theme.Warning, false, 1.3f) + 6 * s;
+            }
             else
             {
                 Ui.Text("GHS tehlike işareti yok (yine de dikkatli çalışın).", x, y, 14, Theme.Success);
@@ -667,7 +673,7 @@ namespace IDLab.Desktop
             {
                 ("Mol kütlesi", string.Format(ci, "{0:0.##} g/mol", sub.MolarMass)),
                 ("25 °C'de hâli", PhaseName(sub)),
-                ("Suda", sub.Phase == SubstancePhase.Liquid ? (sub.Id == SubstanceIds.Water ? "—" : sub.Soluble || sub.Ions.Count > 0 ? "karışır / çözünür" : "çözünmez")
+                ("Suda", sub.DataLimited ? "bilinmiyor (kayıtta veri yok)" : sub.Phase == SubstancePhase.Liquid ? (sub.Id == SubstanceIds.Water ? "—" : sub.Soluble || sub.Ions.Count > 0 ? "karışır / çözünür" : "çözünmez")
                     : sub.Phase == SubstancePhase.Aqueous && !sub.IsGas ? "çözünmüş hâlde" : sub.Soluble ? "çözünür" : "çözünmez"),
                 ("Türü", KindName(sub)),
                 ("Kategori", CategoryName(_selected.Category)),
@@ -678,7 +684,7 @@ namespace IDLab.Desktop
             }
 
             if (!double.IsNaN(sub.BoilingPointC) && sub.Phase == SubstancePhase.Liquid) facts.Add(("Kaynama noktası", string.Format(ci, "{0:0.#} °C", sub.BoilingPointC)));
-            if (sub.Phase == SubstancePhase.Liquid || (sub.Category != "ionic" && sub.Phase == SubstancePhase.Solid))
+            if (!sub.DensityEstimated && (sub.Phase == SubstancePhase.Liquid || (sub.Category != "ionic" && sub.Phase == SubstancePhase.Solid)))
             {
                 facts.Add(("Yoğunluk", string.Format(ci, "{0:0.###} g/mL", sub.Density)));
             }
@@ -688,6 +694,8 @@ namespace IDLab.Desktop
                 var el = Elements.All.FirstOrDefault(e => e.Symbol == sub.ElementSymbol);
                 if (el != null) facts.Add(("Atom numarası", el.Z.ToString(CultureInfo.InvariantCulture)));
             }
+
+            if (!string.IsNullOrEmpty(sub.Cas)) facts.Add(("CAS numarası", sub.Cas));
 
             foreach (var (k, v) in facts)
             {
@@ -794,8 +802,7 @@ namespace IDLab.Desktop
             if (!catalog.Contains(id)) catalog.Register(create());
             var def = catalog.Get(id);
             Thumbnails.Ensure(def);
-            var rng = new Random();
-            var item = _lab.Spawn(id, new Vector3((float)(rng.NextDouble() * 0.36 - 0.18), 0.12f, (float)(rng.NextDouble() * 0.16 - 0.14)));
+            var item = _lab.Spawn(id, _lab.FreeSpot() + new Vector3(0, 0.03f, 0));
             _lab.Selected = item;
             _hud.Tab = HudTab.Lab;
             _keyboard = false;

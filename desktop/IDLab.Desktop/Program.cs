@@ -265,16 +265,11 @@ namespace IDLab.Desktop
                 {
                     lab.LoadExperiment("chem.titration");
                     var burette = lab.Items.First(i => i.Tap != null);
-                    var flask = lab.Items.First(i => i.Def.Id == EquipmentIds.Erlenmeyer);
-                    var m = new Mixture(lab.World.Substances);
-                    ReagentPreset.Solution("", 20, SubstanceIds.HydrochloricAcid, 0.1).FillInto(m);
-                    ReagentPreset.Solution("", 2, SubstanceIds.Phenolphthalein, 0.003).FillInto(m);
-                    flask.Container.ReceiveLiquid(m);
-                    flask.Position = burette.Position + new Vector3(0, 0.02f, -0.005f);
+                    var flask = lab.Items.First(i => i.Def.Id == EquipmentIds.TitrationFlask);
                     var probe = lab.Items.First(i => i.Probe != null);
                     SnapOnto(lab, probe, flask.Position + new Vector3(0.012f, 0.16f, -0.01f));
-                    burette.Tap.Valve = 0.8;
-                    hud.SetSpeed(2);
+                    burette.Tap.Dispense(24);
+                    hud.SetSpeed(3);
                     lab.Selected = burette;
                     break;
                 }

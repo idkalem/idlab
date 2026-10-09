@@ -15,6 +15,7 @@ namespace IDLab.Desktop
             [EquipmentIds.Beaker250Water] = ("Beher + 150 mL su", "Oda sıcaklığında 150 mL su."),
             [EquipmentIds.Beaker600] = ("Beher 600 mL", "Büyük beher; su banyosu için."),
             [EquipmentIds.Erlenmeyer] = ("Erlenmayer 250 mL", "Konik şişe; çalkalarken taşırmaz, titrasyonda kullanılır."),
+            [EquipmentIds.TitrationFlask] = ("Erlenmayer: HCl (bilinmeyen)", "20 mL derişimi bilinmeyen HCl + fenolftalein. Büretin tabanına oturur."),
             [EquipmentIds.RoundFlask] = ("Balon joje 250 mL", "Yuvarlak dipli; düzgün ısınır, mantar halka üstünde durur."),
             [EquipmentIds.GraduatedCylinder] = ("Dereceli silindir 100 mL", "Sıvı hacmini hassas ölçer."),
             [EquipmentIds.TestTube] = ("Deney tüpü", "Küçük ölçekli tepkimeler için; tüplüğe yerleştirin."),
@@ -102,9 +103,9 @@ namespace IDLab.Desktop
                 }),
                 ["chem.titration"] = ("Asit–Baz Titrasyonu", "Büretteki 0,1 M NaOH ile erlenmayerdeki HCl'nin derişimini bul. Fenolftalein pembeleşince dur.", new[]
                 {
-                    "Erlenmayere 20 mL HCl ve 2–3 damla fenolftalein koy; büretin altına yerleştir.",
-                    "Musluğu açıp NaOH'ı damla damla ekle; pembe renk kalıcı olunca kapat.",
-                    "M₁·V₁ = M₂·V₂ ile asidin derişimini hesapla.",
+                    "Büreti seç; \"1 mL\" ile hızlı, dönüm noktasına yaklaşınca \"1 damla\" ile ekle.",
+                    "Pembe renk kalıcı olunca dur; sağdaki titrasyon eğrisinde dönüm noktasını bul.",
+                    "M₁·V₁ = M₂·V₂ ile asidin derişimini hesapla (eğri de hesaplar).",
                 }),
                 ["chem.gases"] = ("Gaz Çıkışı Tepkimeleri", "Metal + asit (H₂), karbonat + asit (CO₂), H₂O₂ + KI (O₂). Hangisi daha hızlı köpürüyor?", new[]
                 {

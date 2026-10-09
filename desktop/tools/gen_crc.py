@@ -43,7 +43,7 @@ SUFFIX_TR = [("hydrochloride", "hidroklorür"), ("chloride", "klorür"), ("bromi
 def _translit(word):
     """English chemical word → Turkish spelling (IUPAC-style transliteration used in Turkish textbooks)."""
     w = word
-    for a, b in (("iso", "izo"), ("sulph", "sülf"), ("sulf", "sülf"), ("fluor", "flor"), ("hex", "hekz"), ("but", "büt"), ("ph", "f"), ("th", "t"),
+    for a, b in (("urea", "üre"), ("benzene", "benzen"), ("iso", "izo"), ("sulph", "sülf"), ("sulf", "sülf"), ("fluor", "flor"), ("hex", "hekz"), ("but", "büt"), ("ph", "f"), ("th", "t"),
                  ("ch", "k"), ("qu", "k"), ("x", "ks"), ("w", "v"), ("ae", "e")):
         w = w.replace(a, b)
     w = re.sub(r"c(?=[eiy])", "s", w)
