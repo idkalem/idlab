@@ -41,5 +41,6 @@
     <EmbeddedResource Include="Assets/DejaVuSans.ttf" LogicalName="font.regular" />
     <EmbeddedResource Include="Assets/DejaVuSans-Bold.ttf" LogicalName="font.bold" />
     <EmbeddedResource Include="Assets/idlab-512.png" LogicalName="icon.png" />
+    <EmbeddedResource Include="Assets/ghs/ghs0*.png" LogicalName="%(Filename)%(Extension)" />
   </ItemGroup>
 </Project>

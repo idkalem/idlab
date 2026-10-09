@@ -258,13 +258,15 @@ namespace IDLab.Desktop
             var db = _lab.World.Substances;
             var info = new (Hazard h, string meaning)[]
             {
+                (Hazard.Explosive, "Isı, darbe ya da sürtünmeyle patlayabilir (ör. TNT, nitrogliserin)."),
+                (Hazard.Flammable, "Alev, kıvılcım ya da sıcak yüzeyle kolayca tutuşur; suyla yanıcı gaz çıkaranlar da bu simgeyi taşır (ör. sodyum)."),
+                (Hazard.Oxidizer, "Oksijen verir; yanmayı şiddetlendirir. Yanıcı maddelerden uzak tutulur."),
+                (Hazard.CompressedGas, "Basınç altında gaz içerir; ısınınca patlayabilir, soğuk gaz yakabilir."),
                 (Hazard.Corrosive, "Deriyi yakar, gözde kalıcı hasar bırakabilir, metalleri aşındırır."),
                 (Hazard.Toxic, "Az miktarı bile yutulduğunda, solunduğunda ya da deriye değdiğinde zehirler."),
-                (Hazard.Flammable, "Alev, kıvılcım ya da sıcak yüzeyle kolayca tutuşur. Aleve yaklaştırmayın."),
-                (Hazard.Oxidizer, "Oksijen verir; yanmayı şiddetlendirir. Yanıcı maddelerden uzak tutulur."),
-                (Hazard.Irritant, "Deriyi, gözü veya solunum yolunu tahriş eder; alerji yapabilir."),
+                (Hazard.Irritant, "Deriyi, gözü veya solunum yolunu tahriş eder; alerji yapabilir ya da zararlıdır."),
+                (Hazard.HealthHazard, "Uzun sürede kansere, genetik hasara ya da solunum hassasiyetine yol açabilir."),
                 (Hazard.Environment, "Su canlıları için zararlıdır. Lavaboya dökülmez, atık kabına konur."),
-                (Hazard.WaterReactive, "Suyla temas edince yanıcı gaz (ör. hidrojen) çıkarır. Kuru saklanır."),
             };
 
             int columns = _w > 900 * s ? 2 : 1;
@@ -278,8 +280,11 @@ namespace IDLab.Desktop
                 DrawTexturePro(pic, new Rectangle(0, 0, pic.Width, pic.Height), new Rectangle(r.X + 14 * s, r.Y + 15 * s, 120 * s, 120 * s), Vector2.Zero, 0, Color.White);
                 float tx = r.X + 150 * s, tw = r.Width - 166 * s;
                 Ui.Text(Tr.Hazard(h), tx, r.Y + 14 * s, 20, Theme.Text, true);
+                string code = "GHS0" + Textures.GhsNumber(h).ToString(CultureInfo.InvariantCulture);
+                Ui.Text(code, r.Right() - Ui.Measure(code, 14, true).X - 16 * s, r.Y + 17 * s, 14, Theme.Muted, true);
                 float ty = r.Y + 44 * s + Ui.Wrapped(meaning, tx, r.Y + 44 * s, tw, 15, Theme.Text, false, 1.3f);
-                var examples = db.All.Where(x => (x.Hazards & h) != 0).Select(Tr.Substance).Distinct().Take(5).ToList();
+                var mask = h == Hazard.Flammable ? Hazard.Flammable | Hazard.WaterReactive : h;
+                var examples = db.All.Where(x => !x.Hidden && (x.Hazards & mask) != 0).OrderBy(x => x.Name.Length).Select(Tr.Substance).Distinct().Take(5).ToList();
                 if (examples.Count > 0)
                 {
                     Ui.Wrapped("Bu laboratuvarda: " + string.Join(", ", examples), tx, ty + 4 * s, tw, 14, Theme.Muted, false, 1.25f);

@@ -65,6 +65,17 @@ namespace IDLab.Core.Chemistry
                 }
             }
 
+            // Salts that are weak acids themselves: hydrated metal cations (Fe³⁺, Al³⁺ …) and acid anions (HSO₄⁻, H₂PO₄⁻).
+            foreach (var kv in mixture.Components)
+            {
+                var s = mixture.Database.Get(kv.Key);
+                if (s.SaltAcidKa > 0 && s.IsDissolved(true))
+                {
+                    PairFor(acids, "salt-acid:" + s.SaltAcidKa.ToString("R", System.Globalization.CultureInfo.InvariantCulture), s.SaltAcidKa).Weak +=
+                        kv.Value * s.SaltAcidCount;
+                }
+            }
+
             double net = (strongH - strongOH) / v;
             if (net > Tiny)
             {

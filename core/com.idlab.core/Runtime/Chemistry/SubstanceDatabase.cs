@@ -94,7 +94,37 @@ namespace IDLab.Core.Chemistry
 
         public IEnumerable<Substance> All => _byId.Values;
 
-        public void Register(Substance substance) => _byId[substance.Id] = substance;
+        private readonly Dictionary<(string, string), Substance> _ionic = new Dictionary<(string, string), Substance>();
+        private readonly Dictionary<string, Substance> _elements = new Dictionary<string, Substance>();
+
+        public int Count => _byId.Count;
+
+        public void Register(Substance substance)
+        {
+            _byId[substance.Id] = substance;
+            Index(substance);
+        }
+
+        /// <summary>Re-indexes a substance after its ionic/element metadata changed.</summary>
+        public void Index(Substance substance)
+        {
+            if (substance.IsIonic && !_ionic.ContainsKey((substance.CationKey, substance.AnionKey)))
+            {
+                _ionic[(substance.CationKey, substance.AnionKey)] = substance;
+            }
+
+            if (substance.ElementSymbol != null && !_elements.ContainsKey(substance.ElementSymbol))
+            {
+                _elements[substance.ElementSymbol] = substance;
+            }
+        }
+
+        /// <summary>The compound made of a cation and an anion (e.g. ("Ag", "Cl") → AgCl), or null.</summary>
+        public Substance FindIonic(string cationKey, string anionKey) =>
+            _ionic.TryGetValue((cationKey, anionKey), out var s) ? s : null;
+
+        /// <summary>The pure element substance for a symbol (e.g. "Cu"), or null.</summary>
+        public Substance FindElement(string symbol) => _elements.TryGetValue(symbol, out var s) ? s : null;
 
         public Substance Get(string id)
         {
@@ -310,6 +340,7 @@ namespace IDLab.Core.Chemistry
                 Color = new ColorRGBA(0.97f, 0.97f, 0.97f, 0.15f), Hazards = Hazard.Irritant,
             });
 
+            ChemicalLibrary.Register(db);
             return db;
         }
     }

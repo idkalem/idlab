@@ -164,7 +164,7 @@ namespace IDLab.Desktop
             float rx = _top.Width - 14 * s;
             Rectangle Next(float width) { rx -= width; var r = new Rectangle(rx, y, width, bh); rx -= 8 * s; return r; }
 
-            if (Ui.Button("quit", Next(96 * s), _quitArmed > 0 ? "Emin mi?" : "Kapat", _quitArmed > 0 ? Theme.Danger : (Color?)null))
+            if (Ui.Button("quit", Next(_quitArmed > 0 ? 140 * s : 96 * s), _quitArmed > 0 ? "Emin misiniz?" : "Kapat", _quitArmed > 0 ? Theme.Danger : (Color?)null))
             {
                 if (_quitArmed > 0) QuitRequested = true;
                 else _quitArmed = 3f;
@@ -631,9 +631,8 @@ namespace IDLab.Desktop
 
             // Hazard pictograms (top-right).
             float px = r.Right() - 16 * s;
-            foreach (var h in Textures.AllHazards)
+            foreach (var h in Textures.PictogramsFor(hazards))
             {
-                if ((hazards & h) == 0) continue;
                 px -= 44 * s;
                 var pic = Textures.Pictogram(h);
                 DrawTexturePro(pic, new Rectangle(0, 0, pic.Width, pic.Height), new Rectangle(px, r.Y + 8 * s, 42 * s, 42 * s), Vector2.Zero, 0, Color.White);

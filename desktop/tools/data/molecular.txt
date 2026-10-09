@@ -1,0 +1,280 @@
+# formula|Türkçe ad|English name|eş adlar (;)|hâl g/l/s|yoğunluk g/mL|kaynama °C|suda çözünür 1/0|tür m/sa/wa/wb|Ka/Kb|asidik H|anyon|tehlike (C T F O I E H X W)|renk|kategori
+H2O|Su|Water|Saf su;Damıtık su|l|1.0|100|1|m||||||inorganic
+H2O2|Hidrojen peroksit|Hydrogen peroxide|Oksijenli su|l|1.45|150|1|m||||OCI||inorganic
+N2H4|Hidrazin|Hydrazine||l|1.02|114|1|wb|1.3e-6|||TCFHE||inorganic
+NO|Azot monoksit|Nitric oxide|Nitrik oksit|g||||m||||TO||inorganic
+NO2|Azot dioksit|Nitrogen dioxide||g|||1|m||||TO|A5432A|inorganic
+N2O|Diazot monoksit|Nitrous oxide|Güldürücü gaz|g|||1|m||||O||inorganic
+N2O4|Diazot tetroksit|Dinitrogen tetroxide||g|||1|m||||TO|C8783A|inorganic
+N2O5|Diazot pentoksit|Dinitrogen pentoxide||s|1.64||1|m||||OC||inorganic
+CO|Karbon monoksit|Carbon monoxide|Zehirli gaz|g||||m||||TFH||inorganic
+CO2|Karbon dioksit|Carbon dioxide|Karbonik gaz;Kuru buz|g|||1|m||||||inorganic
+O3|Ozon|Ozone||g||||m||||OT||inorganic
+SO2|Kükürt dioksit|Sulfur dioxide||g|||1|m||||TC||inorganic
+SO3|Kükürt trioksit|Sulfur trioxide||l|1.92|45|1|m||||C||inorganic
+PCl3|Fosfor triklorür|Phosphorus trichloride||l|1.574|76|0|m||||TCW||inorganic
+PCl5|Fosfor pentaklorür|Phosphorus pentachloride||s|2.1||0|m||||CTW||inorganic
+POCl3|Fosforil klorür|Phosphoryl chloride|Fosfor oksiklorür|l|1.645|106|0|m||||CTW||inorganic
+PH3|Fosfin|Phosphine||g||||m||||TF||inorganic
+SiCl4|Silisyum tetraklorür|Silicon tetrachloride||l|1.48|57.6|0|m||||CW||inorganic
+SiO2|Silisyum dioksit|Silicon dioxide|Kum;Kuvars;Silika|s|2.65||0|m||||||inorganic
+SiH4|Silan|Silane||g||||m||||F||inorganic
+SiC|Silisyum karbür|Silicon carbide|Karborundum|s|3.21||0|m||||||inorganic
+BF3|Bor triflorür|Boron trifluoride||g||||m||||TC||inorganic
+BCl3|Bor triklorür|Boron trichloride||g||||m||||TCW||inorganic
+B2O3|Bor trioksit|Boron trioxide|Bor oksit|s|2.46||1|m||||H||inorganic
+CS2|Karbon disülfür|Carbon disulfide||l|1.26|46|0|m||||FTH||inorganic
+COCl2|Fosgen|Phosgene|Karbonil klorür|g||||m||||T||inorganic
+ClO2|Klor dioksit|Chlorine dioxide||g|||1|m||||OTC|E8D84A|inorganic
+SF6|Kükürt hekzaflorür|Sulfur hexafluoride||g||||m||||||inorganic
+SOCl2|Tiyonil klorür|Thionyl chloride||l|1.64|75|0|m||||CTW||inorganic
+XeF2|Ksenon diflorür|Xenon difluoride||s|4.32||0|m||||OTC||inorganic
+P4O10|Tetrafosfor dekaoksit|Phosphorus pentoxide|Fosfor pentoksit|s|2.39||1|m||||C||inorganic
+As2O3|Arsenik trioksit|Arsenic trioxide|Arsenik|s|3.74||1|m||||THE||inorganic
+TiO2|Titanyum dioksit|Titanium dioxide|Titan beyazı;Rutil|s|4.23||0|m||||||inorganic
+TiCl4|Titanyum tetraklorür|Titanium tetrachloride||l|1.73|136|0|m||||CW||inorganic
+ICl|İyot monoklorür|Iodine monochloride||s|3.1||0|m||||C|8A2A0A|inorganic
+CaC2|Kalsiyum karbür|Calcium carbide|Karpit|s|2.22||0|m||||W|5A5A5A|inorganic
+NH4OH|Amonyum hidroksit|Ammonium hydroxide|Amonyak çözeltisi|g|||1|wb|1.8e-5|||CIE||inorganic
+HF|Hidroflorik asit|Hydrofluoric acid|Hidrojen florür|g|||1|wa|6.8e-4|1|F|TC||acid
+HCl|Hidroklorik asit|Hydrochloric acid|Tuz ruhu;Hidrojen klorür|g|||1|sa||1|Cl|CI||acid
+HBr|Hidrobromik asit|Hydrobromic acid|Hidrojen bromür|g|||1|sa||1|Br|CI||acid
+HI|Hidroiyodik asit|Hydroiodic acid|Hidrojen iyodür|g|||1|sa||1|I|C||acid
+HNO3|Nitrik asit|Nitric acid|Kezzap|l|1.51|83|1|sa||1|NO3|CO||acid
+HNO2|Nitröz asit|Nitrous acid||g|||1|wa|4.5e-4|1|NO2|T||acid
+H2SO4|Sülfürik asit|Sulfuric acid|Zaç yağı|l|1.83|337|1|sa||2|SO4|C||acid
+H2SO3|Sülfüröz asit|Sulfurous acid||g|||1|wa|1.5e-2|2|SO3|C||acid
+H3PO4|Fosforik asit|Phosphoric acid|Ortofosforik asit|s|1.83||1|wa|7.5e-3|3|PO4|C||acid
+H3PO3|Fosforöz asit|Phosphorous acid||s|1.65||1|wa|5.0e-2|2||C||acid
+H2CO3|Karbonik asit|Carbonic acid|Gazoz asidi|g|||1|wa|4.3e-7|2|CO3|||acid
+HClO|Hipokloröz asit|Hypochlorous acid||g|||1|wa|3.0e-8|1|ClO|C||acid
+HClO2|Kloröz asit|Chlorous acid||g|||1|wa|1.1e-2|1||CO||acid
+HClO3|Klorik asit|Chloric acid||g|||1|sa||1|ClO3|CO||acid
+HClO4|Perklorik asit|Perchloric acid||l|1.77|203|1|sa||1|ClO4|CO||acid
+HBrO3|Bromik asit|Bromic acid||g|||1|sa||1|BrO3|CO||acid
+HIO3|İyodik asit|Iodic acid||s|4.63||1|wa|0.17|1|IO3|CO||acid
+H2S|Hidrojen sülfür|Hydrogen sulfide|Çürük yumurta gazı;Sülfidrik asit|g|||1|wa|1.0e-7|2|S|TFE||acid
+HCN|Hidrosiyanik asit|Hydrocyanic acid|Hidrojen siyanür;Prusik asit|l|0.69|26|1|wa|6.2e-10|1|CN|TFE||acid
+HSCN|Tiyosiyanik asit|Thiocyanic acid||g|||1|sa||1|SCN|T||acid
+H2CrO4|Kromik asit|Chromic acid||g|||1|wa|0.18|2|CrO4|CTHO|F2C21E|acid
+H3BO3|Borik asit|Boric acid|Bor asidi|s|1.44||1|wa|5.8e-10|1||H||acid
+H2SiO3|Silisik asit|Silicic acid||s|1.8||0|wa|1.6e-10|2|SiO3|||acid
+H2C2O4|Oksalik asit|Oxalic acid|Etandioik asit|s|1.9||1|wa|5.9e-2|2|C2O4|TC||organic
+HCOOH|Formik asit|Formic acid|Metanoik asit;Karınca asidi|l|1.22|100.8|1|wa|1.8e-4|1|HCOO|CF||organic
+CH3COOH|Asetik asit|Acetic acid|Etanoik asit;Sirke asidi|l|1.05|118|1|wa|1.8e-5|1|CH3COO|CF||organic
+C2H5COOH|Propanoik asit|Propanoic acid|Propiyonik asit|l|0.99|141|1|wa|1.3e-5|1||C||organic
+C3H7COOH|Bütanoik asit|Butanoic acid|Bütirik asit;Tereyağı asidi|l|0.96|164|1|wa|1.5e-5|1||C||organic
+C6H8O7|Sitrik asit|Citric acid|Limon asidi;Limon tuzu|s|1.66||1|wa|7.4e-4|3|C6H5O7|I||organic
+C3H6O3|Laktik asit|Lactic acid|Süt asidi|l|1.21||1|wa|1.4e-4|1|C3H5O3|C||organic
+C6H5COOH|Benzoik asit|Benzoic acid|E210|s|1.27||0|wa|6.3e-5|1|C6H5COO|IH||organic
+C7H6O3|Salisilik asit|Salicylic acid||s|1.44||0|wa|1.1e-3|1||IT||organic
+C4H6O6|Tartarik asit|Tartaric acid|Şarap asidi|s|1.79||1|wa|9.2e-4|2||I||organic
+C4H6O5|Malik asit|Malic acid|Elma asidi|s|1.61||1|wa|4.0e-4|2||I||organic
+C6H8O6|Askorbik asit|Ascorbic acid|C vitamini|s|1.65||1|wa|8.0e-5|1||||biochem
+C17H35COOH|Stearik asit|Stearic acid|Oktadekanoik asit|s|0.94||0|wa|1.3e-5|1|C17H35COO|||organic
+C17H33COOH|Oleik asit|Oleic acid|Zeytinyağı asidi|l|0.895|360|0|wa|1.3e-5|1||||organic
+C15H31COOH|Palmitik asit|Palmitic acid|Hekzadekanoik asit|s|0.85||0|wa|1.3e-5|1||||organic
+C2H3COOH|Akrilik asit|Acrylic acid|Propenoik asit|l|1.05|141|1|wa|5.6e-5|1||CFE||organic
+C4H4O4|Maleik asit|Maleic acid|cis-Bütendioik asit|s|1.59||1|wa|1.2e-2|2||CI||organic
+C4H4O4|Fumarik asit|Fumaric acid|trans-Bütendioik asit|s|1.64||0|wa|9.3e-4|2||I||organic
+C6H10O4|Adipik asit|Adipic acid|Hekzandioik asit|s|1.36||0|wa|3.7e-5|2||I||organic
+C8H6O4|Tereftalik asit|Terephthalic acid||s|1.52||0|wa|2.9e-4|2||||organic
+C2H4O3|Glikolik asit|Glycolic acid|Hidroksiasetik asit|s|1.49||1|wa|1.5e-4|1||C||organic
+C3H4O4|Malonik asit|Malonic acid|Propandioik asit|s|1.62||1|wa|1.5e-3|2||I||organic
+CCl3COOH|Trikloroasetik asit|Trichloroacetic acid||s|1.63||1|wa|0.3|1||CE||organic
+CH2ClCOOH|Kloroasetik asit|Chloroacetic acid||s|1.58||1|wa|1.4e-3|1||TCE||organic
+C9H8O4|Aspirin|Aspirin|Asetilsalisilik asit|s|1.4||0|wa|3.0e-4|1||I||drug
+C6H5OH|Fenol|Phenol|Hidroksibenzen;Karbolik asit|s|1.07||1|wa|1.0e-10|1||TCH||organic
+NH3|Amonyak|Ammonia|Amonyak gazı;Amonyak suyu|g|||1|wb|1.8e-5|||CIE||inorganic
+CH3NH2|Metilamin|Methylamine||g|||1|wb|4.4e-4|||FCI||organic
+(CH3)2NH|Dimetilamin|Dimethylamine||g|||1|wb|5.4e-4|||FC||organic
+(CH3)3N|Trimetilamin|Trimethylamine|Balık kokusu|g|||1|wb|6.3e-5|||FC||organic
+C2H5NH2|Etilamin|Ethylamine||g|||1|wb|4.5e-4|||FC||organic
+(C2H5)2NH|Dietilamin|Diethylamine||l|0.707|55.5|1|wb|6.9e-4|||FC||organic
+(C2H5)3N|Trietilamin|Triethylamine||l|0.726|89|1|wb|5.6e-4|||FCT||organic
+C6H5NH2|Anilin|Aniline|Aminobenzen;Fenilamin|l|1.02|184|1|wb|4.3e-10|||THE||organic
+C5H5N|Piridin|Pyridine||l|0.98|115|1|wb|1.7e-9|||FIT||organic
+C2H8N2|Etilendiamin|Ethylenediamine|1,2-Diaminoetan|l|0.9|116|1|wb|8.5e-5|||CF||organic
+CH4|Metan|Methane|Doğal gaz;Bataklık gazı|g||||m||||F||organic
+C2H6|Etan|Ethane||g||||m||||F||organic
+C3H8|Propan|Propane|LPG|g||||m||||F||organic
+C4H10|Bütan|Butane|n-Bütan;Çakmak gazı|g||||m||||F||organic
+C4H10|İzobütan|Isobutane|2-Metilpropan|g||||m||||F||organic
+C5H12|Pentan|Pentane|n-Pentan|l|0.626|36|0|m||||FIE||organic
+C5H12|İzopentan|Isopentane|2-Metilbütan|l|0.616|28|0|m||||FIE||organic
+C5H12|Neopentan|Neopentane|2,2-Dimetilpropan|g||||m||||F||organic
+C6H14|Hekzan|Hexane|n-Hekzan|l|0.655|69|0|m||||FIHE||organic
+C7H16|Heptan|Heptane|n-Heptan|l|0.684|98|0|m||||FIE||organic
+C8H18|Oktan|Octane|n-Oktan|l|0.703|125.6|0|m||||FIE||organic
+C8H18|İzooktan|Isooctane|2,2,4-Trimetilpentan;Benzin bileşeni|l|0.692|99|0|m||||FIE||organic
+C9H20|Nonan|Nonane||l|0.718|151|0|m||||FI||organic
+C10H22|Dekan|Decane||l|0.73|174|0|m||||FI||organic
+C11H24|Undekan|Undecane||l|0.74|196|0|m||||F||organic
+C12H26|Dodekan|Dodecane|Gazyağı bileşeni|l|0.75|216|0|m||||H||organic
+C3H6|Siklopropan|Cyclopropane||g||||m||||F||organic
+C4H8|Siklobütan|Cyclobutane||g||||m||||F||organic
+C5H10|Siklopentan|Cyclopentane||l|0.751|49|0|m||||FE||organic
+C6H12|Siklohekzan|Cyclohexane||l|0.779|81|0|m||||FIE||organic
+C2H4|Eten|Ethene|Etilen|g||||m||||F||organic
+C3H6|Propen|Propene|Propilen|g||||m||||F||organic
+C4H8|1-Büten|1-Butene||g||||m||||F||organic
+C4H8|2-Büten|2-Butene||g||||m||||F||organic
+C4H8|İzobüten|Isobutene|2-Metilpropen|g||||m||||F||organic
+C4H6|1,3-Bütadien|1,3-Butadiene|Bütadien|g||||m||||FH||organic
+C5H8|İzopren|Isoprene|2-Metil-1,3-bütadien|l|0.681|34|0|m||||FH||organic
+C6H10|Siklohekzen|Cyclohexene||l|0.811|83|0|m||||FE||organic
+C8H8|Stiren|Styrene|Vinilbenzen;Feniletilen|l|0.906|145|0|m||||FIH||organic
+C2H2|Etin|Ethyne|Asetilen|g||||m||||F||organic
+C3H4|Propin|Propyne|Metilasetilen|g||||m||||F||organic
+C4H6|1-Bütin|1-Butyne|Etilasetilen|g||||m||||F||organic
+C6H6|Benzen|Benzene||l|0.876|80|0|m||||FTH||organic
+C7H8|Toluen|Toluene|Metilbenzen|l|0.867|111|0|m||||FIH||organic
+C8H10|o-Ksilen|o-Xylene|1,2-Dimetilbenzen|l|0.88|144|0|m||||FI||organic
+C8H10|m-Ksilen|m-Xylene|1,3-Dimetilbenzen|l|0.86|139|0|m||||FI||organic
+C8H10|p-Ksilen|p-Xylene|1,4-Dimetilbenzen|l|0.861|138|0|m||||FI||organic
+C8H10|Etilbenzen|Ethylbenzene||l|0.867|136|0|m||||FH||organic
+C9H12|Kümen|Cumene|İzopropilbenzen|l|0.862|152|0|m||||FIE||organic
+C10H8|Naftalin|Naphthalene|Naftalen;Güve ilacı|s|1.14||0|m||||FHE||organic
+C14H10|Antrasen|Anthracene||s|1.28||0|m||||IE||organic
+C6H5NO2|Nitrobenzen|Nitrobenzene||l|1.2|211|0|m||||THE||organic
+C6H5Cl|Klorobenzen|Chlorobenzene||l|1.11|131|0|m||||FIE||organic
+C6H5CHO|Benzaldehit|Benzaldehyde|Badem esansı|l|1.04|179|0|m||||I||organic
+C6H5CH2OH|Benzil alkol|Benzyl alcohol|Fenilmetanol|l|1.04|205|1|m||||I||organic
+C6H5COCH3|Asetofenon|Acetophenone||l|1.03|202|0|m||||I||organic
+C4H4O|Furan|Furan||l|0.936|31|0|m||||FH||organic
+C4H4S|Tiyofen|Thiophene||l|1.05|84|0|m||||FI||organic
+C7H5N3O6|Trinitrotoluen|Trinitrotoluene|TNT|s|1.65||0|m||||XTHE|F2E6A0|organic
+C6H4(OH)2|Hidrokinon|Hydroquinone|1,4-Dihidroksibenzen|s|1.3||1|m||||THE||organic
+C6H6O2|Katekol|Catechol|Pirokatekol;1,2-Dihidroksibenzen|s|1.34||1|m||||TI||organic
+C6H6O3|Pirogallol|Pyrogallol|1,2,3-Trihidroksibenzen|s|1.45||1|m||||TH||organic
+CH3OH|Metanol|Methanol|Metil alkol;Odun ispirtosu|l|0.792|64.7|1|m||||FTH||organic
+C2H5OH|Etanol|Ethanol|Etil alkol;Alkol;İspirto|l|0.789|78.4|1|m||||FI||organic
+C3H7OH|1-Propanol|1-Propanol|Propil alkol|l|0.803|97|1|m||||FI||organic
+(CH3)2CHOH|2-Propanol|2-Propanol|İzopropil alkol;İzopropanol|l|0.786|82.6|1|m||||FI||organic
+C4H9OH|1-Bütanol|1-Butanol|Bütil alkol|l|0.81|117.7|1|m||||FI||organic
+C2H5CH(OH)CH3|2-Bütanol|2-Butanol|sek-Bütil alkol|l|0.808|99.5|1|m||||FI||organic
+(CH3)3COH|tert-Bütanol|tert-Butanol|tert-Bütil alkol|l|0.775|82|1|m||||FI||organic
+C5H11OH|1-Pentanol|1-Pentanol|Amil alkol|l|0.811|138|0|m||||FI||organic
+C6H11OH|Siklohekzanol|Cyclohexanol||l|0.96|161|0|m||||I||organic
+C2H4(OH)2|Etilen glikol|Ethylene glycol|Etandiol;Antifriz|l|1.11|197|1|m||||IH||organic
+C3H6(OH)2|Propilen glikol|Propylene glycol|1,2-Propandiol|l|1.036|188|1|m||||||organic
+C3H5(OH)3|Gliserol|Glycerol|Gliserin;Propantriol|l|1.26|290|1|m||||||organic
+C6H14O6|Sorbitol|Sorbitol|Glusitol;E420|s|1.49||1|m||||||biochem
+C10H20O|Mentol|Menthol|Nane özü|s|0.89||0|m||||I||organic
+C27H46O|Kolesterol|Cholesterol||s|1.05||0|m||||||biochem
+(C2H5)2O|Dietil eter|Diethyl ether|Eter;Etoksietan|l|0.713|34.6|1|m||||FI||organic
+(CH3)2O|Dimetil eter|Dimethyl ether|Metoksimetan|g||||m||||F||organic
+C4H8O|Tetrahidrofuran|Tetrahydrofuran|THF|l|0.889|66|1|m||||FIH||organic
+C4H8O2|1,4-Dioksan|1,4-Dioxane|Dioksan|l|1.03|101|1|m||||FIH||organic
+CH3OC(CH3)3|Metil tert-bütil eter|Methyl tert-butyl ether|MTBE|l|0.74|55|1|m||||FI||organic
+C6H5OCH3|Anisol|Anisole|Metoksibenzen|l|0.995|154|0|m||||F||organic
+HCHO|Formaldehit|Formaldehyde|Metanal;Formol;Formalin|g|||1|m||||THC||organic
+CH3CHO|Asetaldehit|Acetaldehyde|Etanal|g|||1|m||||FHI||organic
+C2H5CHO|Propanal|Propanal|Propiyonaldehit|l|0.81|48|1|m||||FI||organic
+C3H7CHO|Bütanal|Butanal|Bütiraldehit|l|0.8|75|1|m||||FI||organic
+C2H2O2|Glioksal|Glyoxal|Etandial|l|1.27|51|1|m||||IH||organic
+C8H8O3|Vanilin|Vanillin|Vanilya özü|s|1.06||0|m||||I||organic
+C9H8O|Sinnamaldehit|Cinnamaldehyde|Tarçın aldehiti;Tarçın esansı|l|1.05|248|0|m||||I||organic
+(CH3)2CO|Aseton|Acetone|Propanon;Dimetil keton;Oje çıkarıcı|l|0.784|56|1|m||||FI||organic
+C2H5COCH3|Bütanon|Butanone|Metil etil keton;MEK|l|0.805|79.6|1|m||||FI||organic
+C6H10O|Siklohekzanon|Cyclohexanone||l|0.948|155.6|1|m||||FI||organic
+(C6H5)2CO|Benzofenon|Benzophenone|Difenil keton|s|1.11||0|m||||H||organic
+CH3COOC2H5|Etil asetat|Ethyl acetate|Etil etanoat;Aseton (oje) çözücü|l|0.902|77|1|m||||FI||organic
+CH3COOCH3|Metil asetat|Methyl acetate|Metil etanoat|l|0.932|57|1|m||||FI||organic
+CH3COOC4H9|Bütil asetat|Butyl acetate|Bütil etanoat|l|0.88|126|0|m||||F||organic
+CH3COOC5H11|İzoamil asetat|Isoamyl acetate|Muz esansı;Muz kokusu|l|0.876|142|0|m||||F||organic
+C3H7COOC2H5|Etil bütanoat|Ethyl butanoate|Ananas esansı|l|0.879|121|0|m||||F||organic
+C6H4(OH)COOCH3|Metil salisilat|Methyl salicylate|Keklik yağı;Kış yeşili yağı|l|1.17|222|0|m||||T||organic
+HCOOC2H5|Etil format|Ethyl formate|Etil metanoat;Rom esansı|l|0.917|54|1|m||||FI||organic
+HCOOCH3|Metil format|Methyl formate|Metil metanoat|l|0.97|32|1|m||||FI||organic
+CH3COOC8H17|Oktil asetat|Octyl acetate|Portakal esansı|l|0.87|211|0|m||||||organic
+C57H110O6|Tristearin|Tristearin|Stearin;Katı yağ (trigliserit)|s|0.86||0|m||||||biochem
+CO(NH2)2|Üre|Urea|Karbamit|s|1.32||1|m||||||organic
+CH3CONH2|Asetamit|Acetamide|Etanamit|s|1.16||1|m||||H||organic
+HCONH2|Formamit|Formamide|Metanamit|l|1.13|210|1|m||||H||organic
+HCON(CH3)2|Dimetilformamit|Dimethylformamide|DMF|l|0.944|153|1|m||||FHI||organic
+CS(NH2)2|Tiyoüre|Thiourea||s|1.4||1|m||||THE||organic
+C6H12N4|Heksametilentetramin|Hexamethylenetetramine|Hekzamin;Urotropin;Katı yakıt|s|1.33||1|m||||F||organic
+C8H10N4O2|Kafein|Caffeine|Kahve özü|s|1.23||1|m||||I||drug
+C10H14N2|Nikotin|Nicotine|Tütün alkaloidi|l|1.01|247|1|m||||TE||drug
+CH3Cl|Klorometan|Chloromethane|Metil klorür|g||||m||||FH||organic
+CH2Cl2|Diklorometan|Dichloromethane|Metilen klorür|l|1.33|39.6|0|m||||H||organic
+CHCl3|Kloroform|Chloroform|Triklorometan|l|1.49|61.2|0|m||||TH||organic
+CCl4|Karbon tetraklorür|Carbon tetrachloride|Tetraklorometan;Tetra|l|1.59|76.7|0|m||||THE||organic
+C2H5Cl|Kloroetan|Chloroethane|Etil klorür|g||||m||||F||organic
+C2H4Cl2|1,2-Dikloroetan|1,2-Dichloroethane|Etilen diklorür|l|1.25|83.5|0|m||||FTH||organic
+C2H3Cl|Vinil klorür|Vinyl chloride|Kloroeten|g||||m||||FH||organic
+C2H5Br|Bromoetan|Bromoethane|Etil bromür|l|1.46|38.4|0|m||||FH||organic
+CH3I|İyodometan|Iodomethane|Metil iyodür|l|2.28|42.4|0|m||||TH||organic
+CCl2F2|Diklorodiflorometan|Dichlorodifluoromethane|Freon-12;CFC-12|g||||m||||E||organic
+CH2FCF3|1,1,1,2-Tetrafloroetan|1,1,1,2-Tetrafluoroethane|R-134a;Soğutucu gaz|g||||m||||||organic
+C2HBrClF3|Halotan|Halothane|Narkoz gazı|l|1.87|50|0|m||||H||drug
+C2Cl4|Tetrakloroeten|Tetrachloroethene|Perkloretilen;Kuru temizleme sıvısı|l|1.62|121|0|m||||HE||organic
+C2HCl3|Trikloroeten|Trichloroethene|Trikloretilen|l|1.46|87|0|m||||HI||organic
+CHBr3|Bromoform|Bromoform|Tribromometan|l|2.89|149|0|m||||TE||organic
+C6H5CH2Cl|Benzil klorür|Benzyl chloride||l|1.1|179|0|m||||THC||organic
+CH3CN|Asetonitril|Acetonitrile|Metil siyanür|l|0.786|82|1|m||||FI||organic
+CH3NO2|Nitrometan|Nitromethane||l|1.14|101|1|m||||FH||organic
+(CH3)2SO|Dimetil sülfoksit|Dimethyl sulfoxide|DMSO|l|1.1|189|1|m||||||organic
+C2H3CN|Akrilonitril|Acrylonitrile|Propennitril|l|0.81|77|1|m||||FTHE||organic
+(CH3CO)2O|Asetik anhidrit|Acetic anhydride|Etanoik anhidrit|l|1.08|140|0|m||||FCT||organic
+CH3COCl|Asetil klorür|Acetyl chloride|Etanoil klorür|l|1.1|52|0|m||||FCW||organic
+C8H4O3|Ftalik anhidrit|Phthalic anhydride||s|1.53||0|m||||CIH||organic
+CCl3CH(OH)2|Kloral hidrat|Chloral hydrate||s|1.9||1|m||||T||drug
+C10H16O|Kafur|Camphor|Kâfur|s|0.99||0|m||||FI||organic
+C10H16|Limonen|Limonene|Portakal yağı;Limon kabuğu yağı|l|0.841|176|0|m||||FIE||organic
+C10H16O|Sitral|Citral|Limon otu yağı|l|0.89|229|0|m||||I||organic
+C10H12O2|Öjenol|Eugenol|Karanfil yağı|l|1.06|254|0|m||||I||organic
+C18H27NO3|Kapsaisin|Capsaicin|Acı biber özü|s|1.1||0|m||||TI||organic
+C10H16N2O8|EDTA|Ethylenediaminetetraacetic acid|Etilendiamintetraasetik asit|s|0.86||0|m||||I||organic
+C2H5SH|Etantiyol|Ethanethiol|Etil merkaptan;Doğal gaz koku maddesi|l|0.839|35|0|m||||FE||organic
+C6H12O6|Glikoz|Glucose|Üzüm şekeri;Dekstroz;Kan şekeri|s|1.54||1|m||||||biochem
+C6H12O6|Fruktoz|Fructose|Meyve şekeri;Früktoz|s|1.69||1|m||||||biochem
+C6H12O6|Galaktoz|Galactose||s|1.5||1|m||||||biochem
+C5H10O5|Riboz|Ribose||s|1.2||1|m||||||biochem
+C5H10O4|Deoksiriboz|Deoxyribose|2-Deoksiriboz|s|1.2||1|m||||||biochem
+C12H22O11|Sükroz|Sucrose|Çay şekeri;Sakaroz;Şeker|s|1.59||1|m||||||biochem
+C12H22O11|Laktoz|Lactose|Süt şekeri|s|1.53||1|m||||||biochem
+C12H22O11|Maltoz|Maltose|Malt şekeri|s|1.54||1|m||||||biochem
+C2H5NO2|Glisin|Glycine|Aminoasetik asit|s|1.61||1|m||||||biochem
+C3H7NO2|Alanin|Alanine||s|1.42||1|m||||||biochem
+C5H11NO2|Valin|Valine||s|1.32||1|m||||||biochem
+C6H13NO2|Lösin|Leucine||s|1.29||1|m||||||biochem
+C6H13NO2|İzolösin|Isoleucine||s|1.2||1|m||||||biochem
+C5H9NO2|Prolin|Proline||s|1.35||1|m||||||biochem
+C9H11NO2|Fenilalanin|Phenylalanine||s|1.29||1|m||||||biochem
+C11H12N2O2|Triptofan|Tryptophan||s|1.36||1|m||||||biochem
+C5H11NO2S|Metiyonin|Methionine||s|1.34||1|m||||||biochem
+C3H7NO3|Serin|Serine||s|1.6||1|m||||||biochem
+C4H9NO3|Treonin|Threonine||s|1.3||1|m||||||biochem
+C3H7NO2S|Sistein|Cysteine||s|1.33||1|m||||||biochem
+C9H11NO3|Tirozin|Tyrosine||s|1.46||0|m||||||biochem
+C4H8N2O3|Asparagin|Asparagine||s|1.54||1|m||||||biochem
+C5H10N2O3|Glutamin|Glutamine||s|1.47||1|m||||||biochem
+C4H7NO4|Aspartik asit|Aspartic acid|Asparajik asit|s|1.66||0|m||||||biochem
+C5H9NO4|Glutamik asit|Glutamic acid||s|1.46||0|m||||||biochem
+C6H14N2O2|Lizin|Lysine||s|1.1||1|m||||||biochem
+C6H14N4O2|Arjinin|Arginine||s|1.1||1|m||||||biochem
+C6H9N3O2|Histidin|Histidine||s|1.3||1|m||||||biochem
+C5H5N5|Adenin|Adenine||s|1.6||0|m||||||biochem
+C5H5N5O|Guanin|Guanine||s|2.2||0|m||||||biochem
+C4H5N3O|Sitozin|Cytosine||s|1.55||0|m||||||biochem
+C5H6N2O2|Timin|Thymine||s|1.23||0|m||||||biochem
+C4H4N2O2|Urasil|Uracil||s|1.32||0|m||||||biochem
+C8H9NO2|Parasetamol|Paracetamol|Asetaminofen|s|1.26||0|m||||I||drug
+C13H18O2|İbuprofen|Ibuprofen||s|1.03||0|m||||I||drug
+C6H6N2O|Nikotinamit|Nicotinamide|B3 vitamini|s|1.4||1|m||||||biochem
+C40H56|Beta-karoten|Beta-carotene|Havuç pigmenti;Provitamin A|s|1.0||0|m|||||F28A1E|biochem
+C17H20N4O6|Riboflavin|Riboflavin|B2 vitamini|s|1.65||0|m|||||F2C531|biochem
+C7H5NO3S|Sakarin|Saccharin|Tatlandırıcı|s|0.83||0|m||||||drug
+C14H18N2O5|Aspartam|Aspartame|E951|s|1.35||0|m||||||drug
+C20H14O4|Fenolftalein|Phenolphthalein|Fenolftalin|s|1.28||0|m||||I||indicator
+C14H14N3NaO3S|Metil oranj|Methyl orange|Metil turuncusu|s|1.28||1|m||||T|F2A03A|indicator
+C27H28Br2O5S|Bromtimol mavisi|Bromothymol blue|BTB|s|1.25||0|m||||I|3A6AC8|indicator
+C15H15N3O2|Metil kırmızısı|Methyl red||s|1.2||0|m||||I|D9301E|indicator
+C27H30O5S|Timol mavisi|Thymol blue||s|1.2||0|m||||I|4A6AB8|indicator
+C32H22N6Na2O6S2|Kongo kırmızısı|Congo red||s|1.4||1|m||||H|C8201E|indicator
+C16H18ClN3S|Metilen mavisi|Methylene blue||s|1.0||1|m||||I|1E50C8|indicator
+C25H30ClN3|Kristal viyole|Crystal violet|Gentiyan moru|s|1.19||1|m||||THE|6A1E9A|indicator
+C14H8O4|Alizarin|Alizarin|Kök boya|s|1.54||0|m||||I|E05A1E|indicator
+C21H14Br4O5S|Bromkrezol yeşili|Bromocresol green||s|1.2||0|m||||I|3A9A6A|indicator

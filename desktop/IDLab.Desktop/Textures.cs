@@ -22,8 +22,19 @@ namespace IDLab.Desktop
 
         public static readonly Hazard[] AllHazards =
         {
-            Hazard.Corrosive, Hazard.Toxic, Hazard.Flammable, Hazard.Oxidizer, Hazard.Irritant, Hazard.Environment, Hazard.WaterReactive,
+            Hazard.Explosive, Hazard.Flammable, Hazard.WaterReactive, Hazard.Oxidizer, Hazard.CompressedGas, Hazard.Corrosive,
+            Hazard.Toxic, Hazard.Irritant, Hazard.HealthHazard, Hazard.Environment,
         };
+
+        /// <summary>Hazards drawn as pictograms, one per GHS symbol (water-reactive shares the flame).</summary>
+        public static IEnumerable<Hazard> PictogramsFor(Hazard flags)
+        {
+            var seen = new HashSet<int>();
+            foreach (var h in AllHazards)
+            {
+                if ((flags & h) != 0 && seen.Add(GhsNumber(h))) yield return h;
+            }
+        }
 
         public static void Init()
         {
@@ -38,7 +49,7 @@ namespace IDLab.Desktop
             Extinguisher = Upload(Sign(new Color(200, 30, 30, 255), "YANGIN TÜPÜ", "Yangın anında kullanın"), false);
             Exit = Upload(Sign(new Color(0, 140, 70, 255), "ACİL ÇIKIŞ", "→"), false);
             Window = Upload(WindowImage(), false);
-            foreach (var h in AllHazards) PictogramTextures[h] = Upload(Pictogram(h, 128), false);
+            foreach (var h in AllHazards) PictogramTextures[h] = Upload(Pictogram(h, 256), false);
         }
 
         public static Texture2D Pictogram(Hazard h) => PictogramTextures[h];
@@ -215,71 +226,33 @@ namespace IDLab.Desktop
 
         // ------------------------------------------------------------------ GHS pictograms
 
-        public static Image Pictogram(Hazard h, int size)
+        /// <summary>The official GHS pictogram (GHS01–GHS09) used for a hazard flag.</summary>
+        public static int GhsNumber(Hazard h)
         {
-            var img = GenImageColor(size, size, new Color(0, 0, 0, 0));
-            float s = size / 128f;
-            Vector2 P(float x, float y) => new Vector2(x * s, y * s);
-            var red = new Color(220, 20, 30, 255);
-            var black = new Color(15, 15, 15, 255);
-            ImageDrawTriangle(ref img, P(64, 2), P(2, 64), P(126, 64), red);
-            ImageDrawTriangle(ref img, P(2, 64), P(64, 126), P(126, 64), red);
-            ImageDrawTriangle(ref img, P(64, 12), P(12, 64), P(116, 64), Color.White);
-            ImageDrawTriangle(ref img, P(12, 64), P(64, 116), P(116, 64), Color.White);
-            int R(float r) => Math.Max(1, (int)(r * s));
             switch (h)
             {
+                case Hazard.Explosive: return 1;
                 case Hazard.Flammable:
-                    ImageDrawCircle(ref img, R(64), R(78), R(17), black);
-                    ImageDrawTriangle(ref img, P(64, 34), P(47, 74), P(81, 74), black);
-                    ImageDrawTriangle(ref img, P(74, 46), P(66, 70), P(84, 70), black);
-                    ImageDrawRectangle(ref img, R(42), R(98), R(44), R(6), black);
-                    break;
-                case Hazard.Corrosive:
-                    ImageDrawLineEx(ref img, P(40, 36), P(56, 58), R(7), black);
-                    ImageDrawLineEx(ref img, P(88, 36), P(72, 58), R(7), black);
-                    ImageDrawCircle(ref img, R(58), R(70), R(5), black);
-                    ImageDrawCircle(ref img, R(70), R(70), R(5), black);
-                    ImageDrawRectangle(ref img, R(36), R(86), R(56), R(12), black);
-                    ImageDrawRectangle(ref img, R(44), R(80), R(10), R(8), Color.White);
-                    break;
-                case Hazard.Toxic:
-                    ImageDrawCircle(ref img, R(64), R(56), R(20), black);
-                    ImageDrawRectangle(ref img, R(54), R(68), R(20), R(12), black);
-                    ImageDrawCircle(ref img, R(56), R(54), R(6), Color.White);
-                    ImageDrawCircle(ref img, R(72), R(54), R(6), Color.White);
-                    ImageDrawLineEx(ref img, P(40, 88), P(88, 104), R(6), black);
-                    ImageDrawLineEx(ref img, P(40, 104), P(88, 88), R(6), black);
-                    break;
-                case Hazard.Oxidizer:
-                    ImageDrawCircle(ref img, R(64), R(80), R(16), black);
-                    ImageDrawCircle(ref img, R(64), R(80), R(9), Color.White);
-                    ImageDrawTriangle(ref img, P(64, 30), P(50, 66), P(78, 66), black);
-                    ImageDrawRectangle(ref img, R(42), R(100), R(44), R(6), black);
-                    break;
-                case Hazard.Irritant:
-                    ImageDrawRectangle(ref img, R(58), R(34), R(12), R(44), black);
-                    ImageDrawCircle(ref img, R(64), R(92), R(7), black);
-                    break;
-                case Hazard.Environment:
-                    ImageDrawLineEx(ref img, P(50, 40), P(50, 98), R(5), black);
-                    ImageDrawLineEx(ref img, P(50, 60), P(36, 46), R(4), black);
-                    ImageDrawLineEx(ref img, P(50, 70), P(66, 54), R(4), black);
-                    ImageDrawCircle(ref img, R(80), R(90), R(10), black);
-                    ImageDrawTriangle(ref img, P(90, 90), P(100, 82), P(100, 98), black);
-                    ImageDrawRectangle(ref img, R(30), R(100), R(70), R(4), black);
-                    break;
-                case Hazard.WaterReactive:
-                    ImageDrawTriangle(ref img, P(64, 30), P(48, 70), P(80, 70), black);
-                    ImageDrawCircle(ref img, R(64), R(72), R(13), black);
-                    for (int i = 0; i < 2; i++)
-                    {
-                        ImageDrawLineEx(ref img, P(38, 92 + i * 9), P(90, 92 + i * 9), R(4), black);
-                    }
-
-                    break;
+                case Hazard.WaterReactive: return 2; // "in contact with water emits flammable gas" uses the flame
+                case Hazard.Oxidizer: return 3;
+                case Hazard.CompressedGas: return 4;
+                case Hazard.Corrosive: return 5;
+                case Hazard.Toxic: return 6;
+                case Hazard.Irritant: return 7;
+                case Hazard.HealthHazard: return 8;
+                case Hazard.Environment: return 9;
+                default: return 7;
             }
+        }
 
+        /// <summary>Official UNECE GHS pictogram artwork (embedded PNGs), scaled to <paramref name="size"/> pixels.</summary>
+        public static Image Pictogram(Hazard h, int size)
+        {
+            using var stream = typeof(Textures).Assembly.GetManifestResourceStream($"ghs0{GhsNumber(h)}.png");
+            using var ms = new System.IO.MemoryStream();
+            stream.CopyTo(ms);
+            var img = LoadImageFromMemory(".png", ms.ToArray());
+            ImageResize(ref img, size, size);
             return img;
         }
 
@@ -300,7 +273,7 @@ namespace IDLab.Desktop
             ImageDrawRectangle(ref img, (int)(cx - half), 14, (int)(half * 2), 56, accent);
             Fit(ref img, title, cx, 22, 34, Color.White, half * 2 - 20, true);
             Fit(ref img, formula, cx, 82, 64, new Color(20, 20, 26, 255), half * 2 - 20, true);
-            var hazards = main == null ? new List<Hazard>() : AllHazards.Where(x => (main.Hazards & x) != 0).Take(3).ToList();
+            var hazards = main == null ? new List<Hazard>() : PictogramsFor(main.Hazards).Take(3).ToList();
             float px = cx - hazards.Count * 34;
             foreach (var hz in hazards)
             {

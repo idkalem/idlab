@@ -55,6 +55,11 @@ namespace IDLab.Core.Chemistry
         Irritant = 1 << 4,
         Environment = 1 << 5,
         WaterReactive = 1 << 6,
+        Explosive = 1 << 7,
+        CompressedGas = 1 << 8,
+
+        /// <summary>GHS08: carcinogen, mutagen, respiratory sensitiser.</summary>
+        HealthHazard = 1 << 9,
     }
 
     /// <summary>A particle species shown in the micro view when a substance dissolves (e.g. Na⁺, Cl⁻).</summary>
@@ -117,6 +122,47 @@ namespace IDLab.Core.Chemistry
 
         /// <summary>How strongly a dissolved substance tints a solution, per mol/L (0 = colourless).</summary>
         public double TintStrength { get; set; }
+
+        // ------------------------------------------------------------------ catalogue / search metadata
+
+        /// <summary>Turkish name (front-ends may localise further).</summary>
+        public string NameTr { get; set; }
+
+        /// <summary>Extra search names (common and trade names, IUPAC alternatives).</summary>
+        public List<string> Aliases { get; } = new List<string>();
+
+        /// <summary>Catalogue group: "ionic", "acid", "element", "organic", "inorganic", "biochem", "indicator", "drug".</summary>
+        public string Category { get; set; } = "inorganic";
+
+        /// <summary>Internal helper species (e.g. the HCO₃⁻ ion used for carbonate hydrolysis) — not listed in catalogues.</summary>
+        public bool Hidden { get; set; }
+
+        /// <summary>A gas at 25 °C; only usable in the lab dissolved in water (if soluble).</summary>
+        public bool IsGas { get; set; }
+
+        /// <summary>For pure elements: the element symbol.</summary>
+        public string ElementSymbol { get; set; }
+
+        // ------------------------------------------------------------------ ionic composition (for generic reactions)
+
+        /// <summary>Cation key ("Na", "Fe3", "NH4", "H" for acids) — null for molecular substances.</summary>
+        public string CationKey { get; set; }
+        public int CationCharge { get; set; }
+        public int CationCount { get; set; }
+
+        /// <summary>Anion key ("Cl", "SO4", "OH", "O" …).</summary>
+        public string AnionKey { get; set; }
+        public int AnionCharge { get; set; }
+        public int AnionCount { get; set; }
+
+        public bool IsIonic => CationKey != null && AnionKey != null;
+
+        /// <summary>Soluble but strongly coloured complex that forms from its ions on mixing (Fe(SCN)₃).</summary>
+        public bool FormsComplex { get; set; }
+
+        /// <summary>Weak-acid behaviour of the salt itself: hydrated metal cations (Fe³⁺, Al³⁺) or acid anions (HSO₄⁻).</summary>
+        public double SaltAcidKa { get; set; }
+        public int SaltAcidCount { get; set; } = 1;
 
         public bool IsVolatile => !double.IsNaN(BoilingPointC) && LatentHeatVaporization > 0;
         public bool IsAcid => Kind == SubstanceKind.StrongAcid || Kind == SubstanceKind.WeakAcid;

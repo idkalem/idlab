@@ -167,6 +167,9 @@ namespace IDLab.Desktop
                 case IDLab.Core.Chemistry.Hazard.Irritant: return "Tahriş edici";
                 case IDLab.Core.Chemistry.Hazard.Environment: return "Çevreye zararlı";
                 case IDLab.Core.Chemistry.Hazard.WaterReactive: return "Suyla tepkimeli";
+                case IDLab.Core.Chemistry.Hazard.Explosive: return "Patlayıcı";
+                case IDLab.Core.Chemistry.Hazard.CompressedGas: return "Basınçlı gaz";
+                case IDLab.Core.Chemistry.Hazard.HealthHazard: return "Ciddi sağlık tehlikesi";
                 default: return "";
             }
         }

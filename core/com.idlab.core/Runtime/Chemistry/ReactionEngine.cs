@@ -81,7 +81,7 @@ namespace IDLab.Core.Chemistry
                     if (rule.TryApply(mixture, outcome, dt))
                     {
                         if (!outcome.AppliedRules.Contains(rule.Id)) outcome.AppliedRules.Add(rule.Id);
-                        if (rule is ReactionRule r && r.RateConstant > 0) appliedKinetic.Add(rule);
+                        if ((rule is ReactionRule r && r.RateConstant > 0) || rule is IOncePerTickRule) appliedKinetic.Add(rule);
                         changed = true;
                     }
                 }
@@ -314,6 +314,27 @@ namespace IDLab.Core.Chemistry
                 SeverityScale = 0.01,
             });
 
+            // ---------------------------------------------------------- generic, ion-based rules for the whole catalogue
+            // Pairs already covered by a hand-tuned rule above are skipped so they are not counted twice.
+            var handled = new HashSet<(string, string)>();
+            foreach (var rule in e.Rules)
+            {
+                if (!(rule is ReactionRule rr)) continue;
+                foreach (var (a, _) in rr.Reactants)
+                {
+                    foreach (var (b, _) in rr.Reactants)
+                    {
+                        if (a != b) handled.Add((a, b));
+                    }
+                }
+            }
+
+            e.AddRule(new GenericMetalWaterRule());
+            e.AddRule(new GenericOxideWaterRule());
+            e.AddRule(new GenericAcidBaseRule(handled));
+            e.AddRule(new GenericPrecipitationRule(handled));
+            e.AddRule(new GenericMetalAcidRule(handled));
+            e.AddRule(new GenericDisplacementRule(handled));
             return e;
         }
     }
