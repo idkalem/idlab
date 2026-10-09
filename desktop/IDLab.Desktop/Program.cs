@@ -62,7 +62,7 @@ namespace IDLab.Desktop
             if (o.Quality != null) Settings.Override("grafik", o.Quality);
             Theme.Apply(o.Light ? false : Settings.Get("tema", "koyu") != "acik");
             SetConfigFlags((Quality.WantsMsaa ? ConfigFlags.Msaa4xHint : 0) | ConfigFlags.ResizableWindow | (o.Demo == null ? ConfigFlags.VSyncHint : 0));
-            InitWindow(o.Width, o.Height, "ID Lab — 3D Fen Laboratuvarı");
+            InitWindow(o.Width, o.Height, "ID Lab");
             SetExitKey(KeyboardKey.Null); // Esc must not close the app in class
             SetWindowMinSize(960, 600);
             using (var iconStream = typeof(Program).Assembly.GetManifestResourceStream("icon.png"))
@@ -86,19 +86,39 @@ namespace IDLab.Desktop
             Quality.Load();
             Gfx.Init();
             Ui.Init();
+            // Start-up screen with the logo while the lab is being built.
+            bool splash = o.Demo == null || o.Demo == "about";
+            string splashShot = Environment.GetEnvironmentVariable("IDLAB_SPLASH_SHOT");
+            void Step(float p, string what)
+            {
+                if (!splash) return;
+                Brand.Splash(p, what);
+                if (splashShot != null && p > 0.3f && p < 0.4f)
+                {
+                    Brand.Splash(p, what);
+                    TakeScreenshot(splashShot);
+                }
+            }
+            Step(0.05f, "Laboratuvar hazırlanıyor…");
             Textures.Init();
+            Step(0.2f, "Laboratuvar odası kuruluyor…");
             Room.Build();
+            Step(0.35f, "Kimyasal kataloğu yükleniyor (40 000+ kimyasal)…");
             Thumbnails.Build();
+            Step(0.7f, "Malzemeler hazırlanıyor…");
             var lab = new Lab();
             LabInstance = lab;
             var micro = new MicroView();
             micro.Init();
+            Step(0.82f, "Periyodik tablo hazırlanıyor…");
             var periodic = new PeriodicView();
             periodic.Init();
             var info = new InfoView(lab);
             info.Select(o.Topic);
             var hud = new Hud(lab, micro);
             var chemicals = new ChemicalsView(lab, hud);
+            hud.ExperimentCount = lab.Experiments.All.Count(e => e.Status == IDLab.Core.Model.ExperimentStatus.Playable);
+            Step(1f, "Hazır!");
             hud.ChemicalCount = chemicals.Count;
             if (o.Profile) Console.WriteLine($"startup: {startup.ElapsedMilliseconds} ms after the window opened");
             if (o.Demo != null && o.Demo.StartsWith("chem:", StringComparison.Ordinal))
@@ -127,12 +147,13 @@ namespace IDLab.Desktop
 
                 var sw = System.Diagnostics.Stopwatch.StartNew();
                 Ui.BeginFrame();
+                Ui.Suspended = hud.ModalOpen;
                 hud.Layout();
                 bool labTab = hud.Tab == HudTab.Lab;
                 lab.KeysEnabled = labTab;
 
                 // The experiment keeps running while another tab is open; only pointer input is withheld.
-                lab.Update(dt, pointerFree: labTab && !Ui.Captured, overInventory: hud.IsOverInventory(Ui.Mouse));
+                lab.Update(dt, pointerFree: labTab && !Ui.Captured && !hud.ModalOpen, overInventory: hud.IsOverInventory(Ui.Mouse));
                 if (o.Demo != null) Demo.Step(o.Demo, lab, hud, frame);
                 Scene.Update(lab, dt);
                 if (labTab)
@@ -148,7 +169,7 @@ namespace IDLab.Desktop
                 }
                 else if (hud.Tab == HudTab.Periodic)
                 {
-                    periodic.Update(dt, hud.ContentArea, pointerFree: !Ui.Captured);
+                    periodic.Update(dt, hud.ContentArea, pointerFree: !Ui.Captured && !hud.ModalOpen);
                 }
                 else if (hud.Tab == HudTab.Chemicals)
                 {
@@ -161,6 +182,7 @@ namespace IDLab.Desktop
 
                 double tUpdate = sw.Elapsed.TotalMilliseconds;
                 if (o.Demo == null || o.Quality != null) Quality.Update(GetFrameTime());
+                if (labTab) Props.UpdateDisplays();
                 bool offscreen = labTab && Quality.BeginScene(Theme.Scene);
                 if (offscreen)
                 {
@@ -440,8 +462,34 @@ namespace IDLab.Desktop
                     break;
                 }
 
+                case "gallery":
+                case "gallery2":
+                {
+                    // Close-up line-up of the equipment (for checking how the models look).
+                    lab.LoadExperiment(IDLab.Core.Model.ExperimentCatalog.SandboxId);
+                    foreach (var it in lab.Items.ToList()) lab.Remove(it);
+                    var ids = name == "gallery"
+                        ? new[] { EquipmentIds.Beaker250Water, EquipmentIds.Erlenmeyer, EquipmentIds.RoundFlask, EquipmentIds.GraduatedCylinder, EquipmentIds.HclBottle, EquipmentIds.Cuso4Jar, EquipmentIds.PhenolphthaleinBottle }
+                        : new[] { EquipmentIds.BunsenBurner, EquipmentIds.HotPlate, EquipmentIds.Balance, EquipmentIds.TubeRack, EquipmentIds.Thermometer, EquipmentIds.PetriDish, EquipmentIds.Burette };
+                    float x = 0.33f;
+                    foreach (var id in ids)
+                    {
+                        var it = lab.Spawn(id, new Vector3(x, 0, 0));
+                        x -= Math.Max(0.11f, it.Size.X + 0.03f);
+                    }
+
+                    lab.Distance = 0.95f;
+                    lab.Pitch = 14;
+                    hud.SetSpeed(1);
+                    break;
+                }
+
                 case "chemicals":
                     hud.Tab = HudTab.Chemicals;
+                    break;
+
+                case "about":
+                    hud.OpenAbout();
                     break;
 
                 case "pour":

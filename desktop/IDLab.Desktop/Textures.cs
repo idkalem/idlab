@@ -61,6 +61,7 @@ namespace IDLab.Desktop
             UnloadImage(img);
             GenTextureMipmaps(ref tex);
             SetTextureFilter(tex, TextureFilter.Trilinear);
+            SetTextureFilter(tex, TextureFilter.Anisotropic16X); // labels stay sharp when seen at a glancing angle
             SetTextureWrap(tex, repeat ? TextureWrap.Repeat : TextureWrap.Clamp);
             return tex;
         }
@@ -288,33 +289,45 @@ namespace IDLab.Desktop
         public static Texture2D LabelFor(Item item)
         {
             if (Labels.TryGetValue(item.Def.Id, out var tex)) return tex;
-            const int w = 1024, h = 256;
+            const int k = 2; // printed at 2048×512: crisp on 4K boards and in close-ups
+            const int w = 1024 * k, h = 256 * k;
             var img = GenImageColor(w, h, new Color(250, 248, 240, 255));
             var accent = Gfx.FromCore(item.Def.AccentColor);
             accent.A = 255;
             var main = MainSubstance(item.Container);
             string formula = main != null ? main.Formula : "";
             string title = Tr.Name(item.Def);
-            const float cx = w * 0.25f, half = 230;
-            ImageDrawRectangle(ref img, (int)(cx - half), 14, (int)(half * 2), 56, accent);
-            Fit(ref img, title, cx, 22, 34, Color.White, half * 2 - 20, true);
-            Fit(ref img, formula, cx, 82, 64, new Color(20, 20, 26, 255), half * 2 - 20, true);
+            const float cx = w * 0.25f, half = 230 * k;
+            ImageDrawRectangle(ref img, (int)(cx - half), 14 * k, (int)(half * 2), 56 * k, accent);
+            Fit(ref img, title, cx, 22 * k, 34 * k, Color.White, half * 2 - 20 * k, true);
+            Fit(ref img, formula, cx, 82 * k, 64 * k, new Color(20, 20, 26, 255), half * 2 - 20 * k, true);
             var hazards = main == null ? new List<Hazard>() : PictogramsFor(main.Hazards).Take(3).ToList();
-            float px = cx - hazards.Count * 34;
+            float px = cx - hazards.Count * 34 * k;
             foreach (var hz in hazards)
             {
-                var pict = Pictogram(hz, 64);
-                ImageDraw(ref img, pict, new Rectangle(0, 0, 64, 64), new Rectangle(px, 166, 64, 64), Color.White);
+                var pict = Pictogram(hz, 64 * k);
+                ImageDraw(ref img, pict, new Rectangle(0, 0, 64 * k, 64 * k), new Rectangle(px, 166 * k, 64 * k, 64 * k), Color.White);
                 UnloadImage(pict);
-                px += 68;
+                px += 68 * k;
             }
 
             if (hazards.Count == 0)
             {
-                Fit(ref img, "ID LAB · Laboratuvar", cx, 180, 26, new Color(110, 110, 120, 255), half * 2 - 20);
+                // The ID Lab mark in place of hazard symbols.
+                using (var stream = typeof(Textures).Assembly.GetManifestResourceStream("icon.png"))
+                using (var ms = new System.IO.MemoryStream())
+                {
+                    stream.CopyTo(ms);
+                    var logo = LoadImageFromMemory(".png", ms.ToArray());
+                    ImageResize(ref logo, 56 * k, 56 * k);
+                    float lw = 56 * k + 12 * k + TextWidth("ID Lab", 30 * k, true);
+                    ImageDraw(ref img, logo, new Rectangle(0, 0, 56 * k, 56 * k), new Rectangle(cx - lw / 2, 172 * k, 56 * k, 56 * k), Color.White);
+                    UnloadImage(logo);
+                    Text(ref img, "ID Lab", cx - lw / 2 + 68 * k, 184 * k, 30 * k, new Color(90, 60, 170, 255), true);
+                }
             }
 
-            ImageDrawRectangle(ref img, 0, h - 8, w, 8, accent);
+            ImageDrawRectangle(ref img, 0, h - 8 * k, w, 8 * k, accent);
             ImageFlipHorizontal(ref img); // u grows to the viewer's left on the lathe band
             ImageFlipVertical(ref img);
             tex = Upload(img, false);

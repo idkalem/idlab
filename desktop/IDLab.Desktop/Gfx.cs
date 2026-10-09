@@ -256,7 +256,7 @@ void main() {
             return m;
         }
 
-        public static Mesh CachedLathe(string key, Vector2[] profile, int segments = 32)
+        public static Mesh CachedLathe(string key, Vector2[] profile, int segments = 64)
         {
             if (!Cache.TryGetValue(key, out var m))
             {
@@ -265,6 +265,86 @@ void main() {
             }
 
             return m;
+        }
+
+        /// <summary>
+        /// A box with rounded edges and corners, centred on the origin (moulded plastic / enamelled housings). Each cube
+        /// face is a grid that is denser near its edges; grid points are pulled onto the rounded shell
+        /// p = core + r·normalize(q − core), so neighbouring faces meet exactly at 45° along every edge.
+        /// </summary>
+        public static Mesh RoundedBox(Vector3 size, float radius, int bevelSteps = 4)
+        {
+            string key = $"rbox{size.X}:{size.Y}:{size.Z}:{radius}:{bevelSteps}";
+            if (Cache.TryGetValue(key, out var cached)) return cached;
+            var half = size / 2;
+            radius = Math.Min(radius, Math.Min(half.X, Math.Min(half.Y, half.Z)) * 0.999f);
+            var core = half - new Vector3(radius);
+            float[] Coords(float h, float c)
+            {
+                var list = new List<float> { -h };
+                for (int i = 1; i < bevelSteps; i++) list.Add(-h + (h - c) * i / bevelSteps);
+                list.Add(-c);
+                if (c > 1e-6f) list.Add(c);
+                for (int i = bevelSteps - 1; i >= 1; i--) list.Add(h - (h - c) * i / bevelSteps);
+                list.Add(h);
+                return list.ToArray();
+            }
+
+            var verts = new List<Vector3>();
+            var normals = new List<Vector3>();
+            var uvs = new List<Vector2>();
+            var tris = new List<ushort>();
+            // Each face: normal axis n, tangent axes a and b (right-handed so the winding faces outwards).
+            var faces = new (Vector3 n, Vector3 a, Vector3 b)[]
+            {
+                (Vector3.UnitX, Vector3.UnitY, Vector3.UnitZ), (-Vector3.UnitX, Vector3.UnitZ, Vector3.UnitY),
+                (Vector3.UnitY, Vector3.UnitZ, Vector3.UnitX), (-Vector3.UnitY, Vector3.UnitX, Vector3.UnitZ),
+                (Vector3.UnitZ, Vector3.UnitX, Vector3.UnitY), (-Vector3.UnitZ, Vector3.UnitY, Vector3.UnitX),
+            };
+            float Comp(Vector3 v, Vector3 axis) => Math.Abs(Vector3.Dot(v, axis));
+            foreach (var (n, a, b) in faces)
+            {
+                var ua = Coords(Comp(half, a), Comp(core, a));
+                var ub = Coords(Comp(half, b), Comp(core, b));
+                int start = verts.Count;
+                foreach (float u in ua)
+                {
+                    foreach (float w in ub)
+                    {
+                        var q = n * Comp(half, n) + a * u + b * w;
+                        var c = Vector3.Clamp(q, -core, core);
+                        var d = q - c;
+                        var nn = d.LengthSquared() > 1e-12f ? Vector3.Normalize(d) : n;
+                        verts.Add(c + nn * radius);
+                        normals.Add(nn);
+                        uvs.Add(new Vector2((u / Comp(half, a) + 1) / 2, (w / Comp(half, b) + 1) / 2));
+                    }
+                }
+
+                int cols = ub.Length;
+                for (int i = 0; i + 1 < ua.Length; i++)
+                {
+                    for (int j = 0; j + 1 < cols; j++)
+                    {
+                        int i0 = start + i * cols + j, i1 = i0 + cols;
+                        tris.Add((ushort)i0); tris.Add((ushort)i1); tris.Add((ushort)(i0 + 1));
+                        tris.Add((ushort)(i0 + 1)); tris.Add((ushort)i1); tris.Add((ushort)(i1 + 1));
+                    }
+                }
+            }
+
+            var mesh = new Mesh(verts.Count, tris.Count / 3);
+            mesh.AllocVertices();
+            mesh.AllocNormals();
+            mesh.AllocTexCoords();
+            mesh.AllocIndices();
+            verts.ToArray().CopyTo(mesh.VerticesAs<Vector3>());
+            normals.ToArray().CopyTo(mesh.NormalsAs<Vector3>());
+            uvs.ToArray().CopyTo(mesh.TexCoordsAs<Vector2>());
+            tris.ToArray().CopyTo(mesh.IndicesAs<ushort>());
+            UploadMesh(ref mesh, false);
+            Cache[key] = mesh;
+            return mesh;
         }
 
         /// <summary>Revolves a profile (x = radius, y = height) about +Y. Outward normals for bottom→top outside profiles.</summary>

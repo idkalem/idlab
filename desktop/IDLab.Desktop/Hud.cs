@@ -52,6 +52,15 @@ namespace IDLab.Desktop
         };
 
         public bool QuitRequested { get; private set; }
+
+        /// <summary>Number of ready-to-play experiments (shown in the about card).</summary>
+        public int ExperimentCount { get; set; }
+
+        private bool _aboutOpen;
+
+        public bool ModalOpen => _aboutOpen;
+
+        public void OpenAbout() => _aboutOpen = true;
         public HudTab Tab { get; set; } = HudTab.Lab;
 
         /// <summary>Number of chemicals in the catalogue (shown on the inventory button).</summary>
@@ -141,6 +150,11 @@ namespace IDLab.Desktop
 
             DrawTopBar();
             DrawToasts(dt);
+            if (_aboutOpen)
+            {
+                Ui.Suspended = false;
+                _aboutOpen = Brand.DrawAbout(ChemicalCount, ExperimentCount);
+            }
             _quitArmed = Math.Max(0, _quitArmed - dt);
         }
 
@@ -151,9 +165,18 @@ namespace IDLab.Desktop
             DrawRectangle(0, (int)_top.Height - 1, (int)_top.Width, Math.Max(1, (int)s), Theme.Border);
             Ui.Block(_top);
             float y = 11 * s, bh = 44 * s, x = 18 * s;
-            Ui.Text("ID", x, 16 * s, 28, Theme.Accent, true);
-            Ui.Text("LAB", x + Ui.Measure("ID ", 28, true).X, 16 * s, 28, Theme.Text, true);
-            x += 118 * s;
+            // Logo + name; tapping it opens the about card.
+            var logoRect = new Rectangle(x - 4 * s, 9 * s, 48 * s, 48 * s);
+            Brand.DrawLogo(logoRect);
+            Ui.Text("ID Lab", x + 52 * s, 18 * s, 25, Theme.Text, true);
+            if (Ui.Button("about", new Rectangle(x - 6 * s, 6 * s, 150 * s, 54 * s), "", new Color(0, 0, 0, 0), 1))
+            {
+                _aboutOpen = true;
+            }
+
+            Brand.DrawLogo(logoRect);
+            Ui.Text("ID Lab", x + 52 * s, 18 * s, 25, Theme.Text, true);
+            x += 156 * s;
 
             // Tabs.
             foreach (var (tab, label) in Tabs)

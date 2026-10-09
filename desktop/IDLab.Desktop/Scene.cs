@@ -289,23 +289,26 @@ namespace IDLab.Desktop
         private static void EmitFoam(Lab lab, Item item, LiquidContainer c, float dt)
         {
             if (c.GasFormula != "O₂" || c.GasRateMolPerS < 4e-4 || c.Contents.Moles(SubstanceIds.Detergent) < 1e-5) return;
-            float strength = (float)Math.Clamp(c.GasRateMolPerS / 0.012, 0.0, 1.6);
-            _foamAccumulator += dt * (45f + 170f * strength);
-            var tint = Gfx.FromCore(c.LiquidColor);
-            var foam = Gfx.Lerp(new Color(250, 250, 246, 255), new Color(tint.R, tint.G, tint.B, (byte)255), Math.Clamp((tint.A / 255f - 0.3f) * 1.3f, 0f, 0.7f));
-            var mouth = c.MouthPosition;
+            // The foam holds (nearly) all the oxygen: volume per second ÷ mouth area = how fast the column comes out.
             float r = (float)c.MouthRadiusM;
+            double litresPerS = c.GasRateMolPerS * 24.5 * 1.1;
+            float speed = Math.Clamp((float)(litresPerS / 1000.0 / (Math.PI * r * r)), 0.012f, 1.3f);
+            var tint = Gfx.FromCore(c.LiquidColor);
+            // Bubbles scatter light: foam is much paler than the liquid it is made of.
+            var foam = Gfx.Lerp(new Color(250, 250, 246, 255), new Color(tint.R, tint.G, tint.B, (byte)255), Math.Clamp((tint.A / 255f - 0.3f) * 1.1f, 0f, 0.5f));
+            lab.Effects.Foam.Extrude(item, speed, foam);
+
+            // A vigorous reaction also spits small lumps of foam from the top of the column.
+            if (speed < 0.35f) return;
+            _foamAccumulator += dt * 14f * (speed - 0.3f);
+            var mouth = c.MouthPosition;
             while (_foamAccumulator >= 1)
             {
                 _foamAccumulator -= 1;
                 float a = (float)(Rng.NextDouble() * Math.PI * 2);
-                float off = (float)Rng.NextDouble() * r * 0.55f;
-                var start = mouth + new Vector3(MathF.Cos(a) * off, 0.004f, MathF.Sin(a) * off);
-                float side = 0.015f + (float)Rng.NextDouble() * (0.04f + 0.09f * strength);
-                var v = new Vector3(MathF.Cos(a) * side, 0.22f + (0.5f + (float)Rng.NextDouble() * 0.2f) * strength, MathF.Sin(a) * side);
-                float size = (float)(r * (0.26f + Rng.NextDouble() * 0.22f));
-                var shade = Gfx.Lerp(foam, Color.White, (float)Rng.NextDouble() * 0.2f);
-                lab.Effects.FoamBlob(start, v, shade, Math.Max(0.006f, size));
+                float side = 0.05f + (float)Rng.NextDouble() * 0.15f;
+                var v = new Vector3(MathF.Cos(a) * side, speed * (0.7f + 0.4f * (float)Rng.NextDouble()), MathF.Sin(a) * side);
+                lab.Effects.FoamBlob(mouth + new Vector3(0, r * 2, 0), v, Gfx.Lerp(foam, Color.White, 0.1f), r * (0.25f + 0.2f * (float)Rng.NextDouble()));
             }
         }
 

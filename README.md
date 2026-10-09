@@ -15,7 +15,7 @@ module roadmap.
 ## Akıllı tahta sürümü (Windows .exe) — Unity gerekmez
 
 `desktop/IDLab.Desktop`, aynı simülasyon çekirdeğini kullanan, Unity'siz, yerel bir Windows uygulamasıdır.
-Tek bir `IDLab.exe` dosyasıdır (yaklaşık 13 MB): .NET çalışma ortamı, grafik kütüphanesi (raylib) ve Türkçe font içine
+Sürüm **1.0**. Tek bir `IDLab.exe` dosyasıdır (yaklaşık 13 MB): .NET çalışma ortamı, grafik kütüphanesi (raylib) ve Türkçe font içine
 gömülüdür. **Kurulum gerekmez.**
 
 * **Çalıştırma:** `IDLab.exe` dosyasını tahtanın bilgisayarına kopyalayın ve çift tıklayın. Uygulama tam
@@ -23,6 +23,9 @@ gömülüdür. **Kurulum gerekmez.**
   **Ek bilgi → Yine de çalıştır** ile açın.
 * **Gereksinim:** Windows 10/11 (64 bit) ve OpenGL 3.3 destekleyen ekran kartı. Akıllı tahtalardaki
   Intel/AMD tümleşik grafik kartları yeterlidir.
+* **Kimlik:** mor–pembe ID Lab logosu uygulama simgesi, açılış ekranı (yükleme çubuğuyla) ve üst çubukta yer alır;
+  renk teması logodan türetilmiştir. Üst çubuktaki logoya dokunmak "Hakkında" kartını açar (sürüm, kimyasal ve deney
+  sayısı, kısa kullanım, veri kaynakları).
 * **Sekmeler:** üst çubukta dört sekme vardır.
   * **Laboratuvar:** gerçekçi bir laboratuvar odasında 3D deney tezgâhı.
   * **Kimyasallar (kimyasal dolabı):** 40 000'den fazla kimyasal: iyonik bileşikler, hidratlar ve mineraller, asitler,
@@ -68,13 +71,21 @@ gömülüdür. **Kurulum gerekmez.**
 * **Fil diş macunu:** "Fil Diş Macunu" deneyinde %12 H₂O₂, bulaşık deterjanı, kuru maya (katalaz enzimi), kırmızı gıda boyası
   ve KI vardır. Maya H₂O₂'yi parçalar (ılıkta hızlı, soğukta yavaş, 60–75 °C'de enzim bozulur); deterjan varsa çıkan oksijen
   kaptan fışkıran renkli bir köpük kulesi olur ve tezgâha yayılır. Tepkime ısı verir (termometreyle izlenebilir).
+  Köpük tek parça, yumuşak bir gövde olarak simüle edilir: önce kabı sıvı yüzeyinden doldurur, ağızdan oksijen hacmi ÷
+  ağız alanı hızıyla çıkan bir sütun olur, kendi ağırlığıyla eğilip devrilir, camın dışından sarkar ve tezgâhta kıvrılarak
+  yığılır (kabarcık dokulu yüzey, kendine ve diğer malzemelere çarpar, zamanla söner). Hızlı tepkimede tepeden köpük
+  parçaları sıçrar.
+* **Ekipmanlar:** ısıtıcı tabla (emaye gövde, cam-seramik üst yüzey, kızaran rezistans, tırtıklı düğmeler) ve hassas
+  terazi (eğik ön panel, tuşlar) yenilendi; ikisinin de üzerinde gerçek LCD ekran vardır (°C / OFF, "0,00 g").
+  Gövdeler yuvarlatılmış kenarlı modellerdir, cam kaplar 96 dilimle çizilir; şişe/kavanoz etiketleri 2048×512, tüm dokular
+  anizotropik süzmeyle keskindir.
 * **Dökme:** otomatik dökmede eğim dökme modelinden hesaplanır; kap hedefin yanında sabit durur, akış eşit hızda sürer ve
   sonunda yavaşça kesilir (titreme yok).
 * **Dokunmatik:** Windows'un dokunmatik "bas-bırak" mesajları doğrudan yakalanır; her şey tek dokunuşla çalışır.
   Sürüklenen nesnenin tabanı parmağın ucunu izler; yalnızca üst yüzeylere (bek tel kafesi, terazi, beher ağzı) oturur,
   uygun bir yer yoksa tezgâhta boş bir yere bırakılır. İnce nesneler (termometre, prob) için dokunma alanı geniştir.
 * **Tema ve kalite:** üst çubukta açık/koyu tema (☀/☾) ve "Kalite" düğmesi vardır. Otomatik kalite 3D sahneyi en fazla
-  1080 satırda çizer (4K tahtada 4 kat daha az piksel), kare süresi uzarsa çözünürlüğü kendiliğinden düşürür ve kenarları
+  1440 satırda çizer (4K tahtada ~2,3 kat daha az piksel), kare süresi uzarsa çözünürlüğü kendiliğinden düşürür ve kenarları
   FXAA ile yumuşatır; MSAA yalnızca "Yüksek" modda açılır. Ayarlar `%LOCALAPPDATA%\IDLab\ayarlar.txt` dosyasında saklanır.
 * **Kolay dökme:** bir şişeyi sürükleyip başka bir kabın üstüne bırakın: 25 mL döker ve yerine döner.
   Ya da şişeyi seçip "Dök → [kap]" düğmesine, sonra tezgâhta dökülecek kaba dokunun ve miktarı seçin.
@@ -100,7 +111,7 @@ gömülüdür. **Kurulum gerekmez.**
 * **Derleme:** `dotnet publish desktop/IDLab.Desktop -c Release -r win-x64 -o dist` komutu `dist/IDLab.exe`
   dosyasını üretir. Linux'tan da derlenebilir, CI her push'ta derler.
 * **Test seçenekleri:** `--windowed 1920x1080`,
-  `--demo heating|acid|safety|titration|precip|metals|pour|cabinet|hotplate|burn|toothpaste|chemicals|chem:<arama>|periodic|info`, `--quality otomatik|yuksek|dengeli|hizli`, `--light`, `--profile`, `--topic N`, `--frames N`,
+  `--demo about|gallery|gallery2|heating|acid|safety|titration|precip|metals|pour|cabinet|hotplate|burn|toothpaste|chemicals|chem:<arama>|periodic|info`, `--quality otomatik|yuksek|dengeli|hizli`, `--light`, `--profile`, `--topic N`, `--frames N`,
   `--screenshot dosya.png`, `--trace`, `--camera yaw,pitch,mesafe`.
 
 ## What the prototype does

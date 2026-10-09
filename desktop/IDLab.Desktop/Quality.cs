@@ -113,8 +113,8 @@ void main()
             _sinceDrop = 0;
         }
 
-        /// <summary>Auto never renders the 3D scene above 1080 lines (a 4K board gets a 2× upscale, ~4× cheaper).</summary>
-        private static float MaxAutoScale() => Math.Min(1f, 1080f / Math.Max(1, GetScreenHeight()));
+        /// <summary>Auto renders the 3D scene at up to 1440 lines (sharp on a 4K board, still ~2× cheaper than native) and drops lower if frames run late.</summary>
+        private static float MaxAutoScale() => Math.Min(1f, 1440f / Math.Max(1, GetScreenHeight()));
 
         /// <summary>Updates the render scale from this frame's duration (seconds).</summary>
         public static void Update(float frameSeconds)

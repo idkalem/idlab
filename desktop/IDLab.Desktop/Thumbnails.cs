@@ -11,7 +11,7 @@ namespace IDLab.Desktop
     /// <summary>Renders a small 3D picture of every piece of equipment once at start-up (inventory + info pages).</summary>
     internal static class Thumbnails
     {
-        private const int Size = 160;
+        private const int Size = 256;
 
         /// <summary>Light card colour baked behind each picture so clear glassware stays visible on the dark UI.</summary>
         public static readonly Color Background = Gfx.Rgba(0xC6D0DC);

@@ -41,8 +41,12 @@ namespace IDLab.Desktop
         /// <summary>Current flash light colour (added to ambient light by the renderer).</summary>
         public Vector3 Flash { get; private set; }
 
+        /// <summary>Elephant-toothpaste foam bodies.</summary>
+        public readonly Foam Foam = new Foam();
+
         public void Clear()
         {
+            Foam.Clear();
             _fireballs.Clear();
             _shockwaves.Clear();
             ScreenFlash = 0;
@@ -286,6 +290,7 @@ namespace IDLab.Desktop
         public void Update(float dt, Lab lab)
         {
             _time += dt;
+            Foam.Update(dt, lab);
             for (int i = _emitters.Count - 1; i >= 0; i--)
             {
                 var e = _emitters[i];
@@ -373,6 +378,7 @@ namespace IDLab.Desktop
         /// <summary>Solid pieces are lit like any other object (opaque pass).</summary>
         public void DrawSolids()
         {
+            Foam.Draw();
             _foamCount = 0;
             foreach (var p in _particles)
             {
@@ -383,7 +389,7 @@ namespace IDLab.Desktop
                     float left = p.Life - p.Age;
                     float size = p.Size * Math.Min(p.Growth, 1f + p.Age * 1.5f) * Math.Clamp(left / 2.5f, 0.15f, 1f);
                     var squash = p.Gravity == 0 ? new Vector3(size * 1.15f, size * 0.7f, size * 1.15f) : new Vector3(size);
-                    Gfx.Draw(Gfx.Sphere, Gfx.Mul(Gfx.Scale(squash.X, squash.Y, squash.Z), Gfx.Translate(p.Position)), p.Color, new Vector3(0.08f));
+                    Gfx.Draw(Gfx.Sphere, Gfx.Mul(Gfx.Scale(squash.X, squash.Y, squash.Z), Gfx.Translate(p.Position)), p.Color, new Vector3(0.08f), Foam.Texture, 0.22f);
                     continue;
                 }
 

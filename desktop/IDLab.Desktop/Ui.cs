@@ -20,43 +20,44 @@ namespace IDLab.Desktop
         public static void Apply(bool dark)
         {
             Dark = dark;
+            // Palette taken from the ID Lab logo: violet tile, pink glow, orange liquid.
             if (dark)
             {
-                Scene = Gfx.Rgba(0x0B0F17);
-                Panel = Gfx.Rgba(0x111827, 236);
-                Raised = Gfx.Rgba(0x1A2333, 245);
-                Border = Gfx.Rgba(0x2A3A52);
-                TopBar = Gfx.Rgba(0x0D131E, 248);
-                Text = Gfx.Rgba(0xE6EDF7);
-                Muted = Gfx.Rgba(0x8A9BB4);
-                Accent = Gfx.Rgba(0x35C4FF);
-                AccentDim = Gfx.Rgba(0x1C4E6B);
-                Button = Gfx.Rgba(0x1F2A3C);
-                ButtonHot = Gfx.Rgba(0x2A3A52);
-                Danger = Gfx.Rgba(0xFF5A4F);
-                Warning = Gfx.Rgba(0xFFB347);
-                Success = Gfx.Rgba(0x4FE07A);
-                Grid = Gfx.Rgba(0x26324A);
-                Series = new[] { Gfx.Rgba(0xFF7A45), Gfx.Rgba(0x35C4FF), Gfx.Rgba(0x4FE07A), Gfx.Rgba(0xC07BFF), Gfx.Rgba(0xFFD24F) };
+                Scene = Gfx.Rgba(0x0D0A1A);
+                Panel = Gfx.Rgba(0x15112A, 238);
+                Raised = Gfx.Rgba(0x1F1939, 246);
+                Border = Gfx.Rgba(0x3A2F66);
+                TopBar = Gfx.Rgba(0x120E24, 250);
+                Text = Gfx.Rgba(0xF2EFFB);
+                Muted = Gfx.Rgba(0xA49CC6);
+                Accent = Gfx.Rgba(0xA078FF);
+                AccentDim = Gfx.Rgba(0x40287E);
+                Button = Gfx.Rgba(0x261F47);
+                ButtonHot = Gfx.Rgba(0x342A5E);
+                Danger = Gfx.Rgba(0xFF5A5F);
+                Warning = Gfx.Rgba(0xFFA51F);
+                Success = Gfx.Rgba(0x43D68A);
+                Grid = Gfx.Rgba(0x2D2650);
+                Series = new[] { Gfx.Rgba(0xFFA51F), Gfx.Rgba(0xA078FF), Gfx.Rgba(0x43D68A), Gfx.Rgba(0xEE8ADB), Gfx.Rgba(0x4FC3F7) };
             }
             else
             {
-                Scene = Gfx.Rgba(0xE8EDF4);
-                Panel = Gfx.Rgba(0xFBFCFE, 242);
-                Raised = Gfx.Rgba(0xEEF2F7, 250);
-                Border = Gfx.Rgba(0xC5CFDC);
+                Scene = Gfx.Rgba(0xF1EEF8);
+                Panel = Gfx.Rgba(0xFDFCFF, 244);
+                Raised = Gfx.Rgba(0xF3EFFC, 250);
+                Border = Gfx.Rgba(0xD2C8EE);
                 TopBar = Gfx.Rgba(0xFFFFFF, 250);
-                Text = Gfx.Rgba(0x111827);
-                Muted = Gfx.Rgba(0x56657A);
-                Accent = Gfx.Rgba(0x0A7BC0);
-                AccentDim = Gfx.Rgba(0xBFE2F6);
-                Button = Gfx.Rgba(0xE1E7EF);
-                ButtonHot = Gfx.Rgba(0xD2DBE6);
+                Text = Gfx.Rgba(0x1B1436);
+                Muted = Gfx.Rgba(0x5F5783);
+                Accent = Gfx.Rgba(0x6D2EE0);
+                AccentDim = Gfx.Rgba(0xE3D7FC);
+                Button = Gfx.Rgba(0xE9E3F7);
+                ButtonHot = Gfx.Rgba(0xDCD3F1);
                 Danger = Gfx.Rgba(0xE0453A);
-                Warning = Gfx.Rgba(0xCC7414);
-                Success = Gfx.Rgba(0x1E9A48);
-                Grid = Gfx.Rgba(0xD6DEE8);
-                Series = new[] { Gfx.Rgba(0xE8622A), Gfx.Rgba(0x0A7BC0), Gfx.Rgba(0x1E9A48), Gfx.Rgba(0x8B4FD8), Gfx.Rgba(0xB88700) };
+                Warning = Gfx.Rgba(0xD9820F);
+                Success = Gfx.Rgba(0x1E9A55);
+                Grid = Gfx.Rgba(0xE2DBF3);
+                Series = new[] { Gfx.Rgba(0xE8860C), Gfx.Rgba(0x6D2EE0), Gfx.Rgba(0x1E9A55), Gfx.Rgba(0xD45CB8), Gfx.Rgba(0x0A86C4) };
             }
         }
     }
@@ -171,7 +172,10 @@ namespace IDLab.Desktop
         /// <summary>Registers an area that swallows presses before the 3D scene sees them (next frame).</summary>
         public static void Block(Rectangle r) => Blockers.Add(r);
 
-        public static bool IsOver(Rectangle r) => CheckCollisionPointRec(Mouse, r);
+        /// <summary>While set (a modal card is open), everything except the modal ignores the pointer.</summary>
+        public static bool Suspended { get; set; }
+
+        public static bool IsOver(Rectangle r) => !Suspended && CheckCollisionPointRec(Mouse, r);
 
         public static void SetActive(string id) => _active = id;
 

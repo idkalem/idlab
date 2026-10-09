@@ -58,7 +58,7 @@ namespace IDLab.Desktop
             {
                 case "burner": DrawBurner(item, pose); break;
                 case "hotplate": DrawHotPlate(item, pose); break;
-                case "balance": DrawBalance(pose); break;
+                case "balance": DrawBalance(item, pose); break;
                 case "burette": DrawBuretteStand(item, pose); break;
                 case "rack": DrawRack(pose); break;
                 case "thermometer": DrawProbe(item, pose, false); break;
@@ -281,54 +281,85 @@ namespace IDLab.Desktop
         {
             float power = (float)item.Heat.GasValve;
             float heat = item.Heat.IsLit ? power : 0f;
-            var body = new Color(236, 238, 242, 255);
-            var panel = new Color(46, 50, 58, 255);
-            // Rubber feet, a two-step enamelled body and the sloping control panel at the front.
+            var enamel = new Color(238, 240, 245, 255);
+            var panel = Gfx.Rgba(0x2A2D35);
+            Gfx.SetMaterialEnv(enamel, 0.22f);
             foreach (var (fx, fz) in new[] { (-0.07f, -0.08f), (0.07f, -0.08f), (-0.07f, 0.08f), (0.07f, 0.08f) })
             {
-                Gfx.Draw(Gfx.Cylinder, Gfx.Part(Gfx.Mul(Gfx.Scale(0.008f, 0.004f, 0.008f), Gfx.Translate(fx, 0, fz)), pose), DarkPlastic);
+                Gfx.Draw(Gfx.Cylinder, Gfx.Part(Gfx.Mul(Gfx.Scale(0.009f, 0.004f, 0.009f), Gfx.Translate(fx, 0, fz)), pose), DarkPlastic);
             }
 
-            Gfx.Draw(Gfx.Cube, Gfx.Part(Gfx.Mul(Gfx.Scale(0.17f, 0.046f, 0.19f), Gfx.Translate(0, 0.027f, 0)), pose), body);
-            Gfx.Draw(Gfx.Cube, Gfx.Part(Gfx.Mul(Gfx.Scale(0.162f, 0.008f, 0.182f), Gfx.Translate(0, 0.054f, 0)), pose), Gfx.Lerp(body, Color.White, 0.3f));
-            var slope = Quaternion.CreateFromAxisAngle(Vector3.UnitX, -0.42f);
-            Gfx.Draw(Gfx.Cube, Gfx.Part(Gfx.Mul(Gfx.Mul(Gfx.Scale(0.16f, 0.036f, 0.004f), Gfx.Rotate(slope)), Gfx.Translate(0, 0.028f, -0.0965f)), pose), panel);
+            // Moulded enamel housing with a soft top edge and a darker control fascia across the front.
+            Gfx.Draw(Gfx.RoundedBox(new Vector3(0.17f, 0.054f, 0.19f), 0.01f), Gfx.Part(Gfx.Translate(0, 0.031f, 0), pose), enamel);
+            Gfx.Draw(Gfx.RoundedBox(new Vector3(0.162f, 0.03f, 0.012f), 0.005f), Gfx.Part(Gfx.Translate(0, 0.026f, -0.091f), pose), panel);
 
-            // Round ceramic top plate in a steel bezel; its heating coil glows through when it is on.
-            var bezel = Gfx.CachedLathe("hotplateBezel", new[] { new Vector2(0.066f, 0), new Vector2(0.071f, 0), new Vector2(0.071f, 0.009f), new Vector2(0.066f, 0.009f) }, 48);
-            Gfx.Draw(bezel, Gfx.Part(Gfx.Translate(0, 0.058f, 0.01f), pose), Steel);
-            Gfx.Draw(Gfx.Cylinder, Gfx.Part(Gfx.Mul(Gfx.Scale(0.066f, 0.009f, 0.066f), Gfx.Translate(0, 0.0585f, 0.01f)), pose),
-                new Color(34, 36, 42, 255), new Vector3(0.55f, 0.1f, 0.02f) * heat * heat);
-            for (int k = 1; k <= 4; k++)
+            // Round glass-ceramic top in a brushed steel bezel; the heating coil glows through when it is on.
+            var bezel = Gfx.CachedLathe("hotplateBezel2", new[]
             {
-                float r = 0.012f * k + 0.004f;
-                var coil = Gfx.CachedLathe("hotplateCoil" + k, new[] { new Vector2(r - 0.0018f, 0), new Vector2(r + 0.0018f, 0), new Vector2(r + 0.0018f, 0.0006f), new Vector2(r - 0.0018f, 0.0006f) }, 40);
-                float flicker = 0.92f + 0.08f * MathF.Sin((float)GetTime() * 3f + k);
-                Gfx.Draw(coil, Gfx.Part(Gfx.Translate(0, 0.0676f, 0.01f), pose), heat > 0.01f ? new Color(120, 40, 20, 255) : new Color(48, 50, 56, 255),
+                new Vector2(0.064f, 0), new Vector2(0.071f, 0), new Vector2(0.0725f, 0.004f), new Vector2(0.071f, 0.0085f), new Vector2(0.065f, 0.0085f),
+            }, 72);
+            Gfx.Draw(bezel, Gfx.Part(Gfx.Translate(0, 0.058f, 0.008f), pose), Steel);
+            Gfx.Env = 0.35f;
+            Gfx.Draw(Gfx.Cylinder, Gfx.Part(Gfx.Mul(Gfx.Scale(0.065f, 0.0085f, 0.065f), Gfx.Translate(0, 0.0585f, 0.008f)), pose),
+                new Color(26, 27, 33, 255), new Vector3(0.6f, 0.12f, 0.03f) * heat * heat);
+            Gfx.Env = -1f;
+            for (int k = 1; k <= 5; k++)
+            {
+                float r = 0.0105f * k + 0.003f;
+                var coil = Gfx.CachedLathe("hotplateCoil2_" + k, new[] { new Vector2(r - 0.0016f, 0), new Vector2(r + 0.0016f, 0), new Vector2(r + 0.0016f, 0.0005f), new Vector2(r - 0.0016f, 0.0005f) }, 64);
+                float flicker = 0.93f + 0.07f * MathF.Sin((float)GetTime() * 3f + k);
+                Gfx.Draw(coil, Gfx.Part(Gfx.Translate(0, 0.0672f, 0.008f), pose), heat > 0.01f ? new Color(120, 40, 20, 255) : new Color(44, 46, 52, 255),
                     new Vector3(1.6f, 0.45f, 0.08f) * heat * flicker);
             }
 
-            // Heat and stirrer knobs, the power LED and a small display window.
-            Knob(pose, new Vector3(-0.045f, 0.026f, -0.1f), power, new Color(240, 120, 40, 255));
-            Knob(pose, new Vector3(0.0f, 0.026f, -0.1f), 0f, new Color(60, 130, 230, 255));
-            Gfx.Draw(Gfx.Cube, Gfx.Part(Gfx.Mul(Gfx.Mul(Gfx.Scale(0.04f, 0.014f, 0.002f), Gfx.Rotate(slope)), Gfx.Translate(0.05f, 0.03f, -0.099f)), pose),
-                heat > 0.01f ? new Color(30, 60, 40, 255) : new Color(20, 24, 22, 255), heat > 0.01f ? new Vector3(0.15f, 0.5f, 0.2f) : default);
-            Gfx.Draw(Gfx.Sphere, Gfx.Part(Gfx.Mul(Gfx.Scale(0.0035f), Gfx.Translate(0.05f, 0.016f, -0.101f)), pose),
+            // Knurled heat and stirrer knobs, the power lamp and the temperature display.
+            Knob(pose, new Vector3(-0.05f, 0.026f, -0.098f), power, new Color(240, 120, 40, 255));
+            Knob(pose, new Vector3(-0.015f, 0.026f, -0.098f), 0f, new Color(70, 130, 230, 255));
+            Gfx.Draw(Gfx.Sphere, Gfx.Part(Gfx.Mul(Gfx.Scale(0.0032f), Gfx.Translate(0.068f, 0.026f, -0.0975f)), pose),
                 power > 0.01f ? new Color(255, 60, 40, 255) : new Color(80, 30, 30, 255), power > 0.01f ? new Vector3(1.2f, 0.2f, 0.1f) : default);
+            float surface = item.Heat.IsLit ? 20 + 300 * power : 20;
+            Display(item, pose, new Vector3(0.03f, 0.026f, -0.0975f), 0.05f, 0.018f,
+                item.Heat.IsLit ? string.Format(CultureInfo.InvariantCulture, "{0:0}°C", surface) : "OFF", item.Heat.IsLit);
         }
 
-        private static void DrawBalance(Matrix4x4 pose)
+        private static void DrawBalance(Item item, Matrix4x4 pose)
         {
-            Gfx.Draw(Gfx.Cube, Gfx.Part(Gfx.Mul(Gfx.Scale(0.17f, 0.05f, 0.2f), Gfx.Translate(0, 0.025f, 0)), pose), new Color(230, 233, 238, 255));
-            Gfx.Draw(Gfx.Cube, Gfx.Part(Gfx.Mul(Gfx.Scale(0.16f, 0.03f, 0.035f), Gfx.Translate(0, 0.035f, -0.085f)), pose), new Color(70, 76, 86, 255));
-            Gfx.Draw(Gfx.Cube, Gfx.Part(Gfx.Mul(Gfx.Scale(0.08f, 0.018f, 0.004f), Gfx.Translate(0.02f, 0.038f, -0.103f)), pose), new Color(150, 190, 140, 255), new Vector3(0.2f, 0.3f, 0.2f));
-            Gfx.Draw(Gfx.Cylinder, Gfx.Part(Gfx.Mul(Gfx.Scale(0.004f, 0.009f, 0.004f), Gfx.Translate(0, 0.05f, 0.01f)), pose), Steel);
-            Gfx.Draw(Gfx.Cylinder, Gfx.Part(Gfx.Mul(Gfx.Scale(0.068f, 0.006f, 0.068f), Gfx.Translate(0, 0.059f, 0.01f)), pose), new Color(196, 202, 210, 255));
+            var body = new Color(232, 235, 240, 255);
+            Gfx.SetMaterialEnv(body, 0.2f);
+            foreach (var (fx, fz) in new[] { (-0.07f, -0.085f), (0.07f, -0.085f), (-0.07f, 0.085f), (0.07f, 0.085f) })
+            {
+                Gfx.Draw(Gfx.Cylinder, Gfx.Part(Gfx.Mul(Gfx.Scale(0.007f, 0.005f, 0.007f), Gfx.Translate(fx, 0, fz)), pose), DarkPlastic);
+            }
+
+            // Body, a sloping control strip at the front with the display and two keys, the stainless weighing pan.
+            Gfx.Draw(Gfx.RoundedBox(new Vector3(0.17f, 0.046f, 0.2f), 0.012f), Gfx.Part(Gfx.Translate(0, 0.028f, 0), pose), body);
+            var slope = Quaternion.CreateFromAxisAngle(Vector3.UnitX, 0.35f); // the front strip leans back towards the pan
+            var stripCentre = new Vector3(0, 0.034f, -0.104f);
+            var strip = Gfx.Mul(Gfx.Rotate(slope), Gfx.Translate(stripCentre));
+            Gfx.Draw(Gfx.RoundedBox(new Vector3(0.16f, 0.034f, 0.014f), 0.006f), Gfx.Part(strip, pose), Gfx.Rgba(0x30343C));
+            // Keys and display sit on the strip's sloping front face.
+            Vector3 OnStrip(float x, float out_) => stripCentre + Vector3.Transform(new Vector3(x, 0, -0.007f - out_), slope);
+            foreach (var (kx, col) in new[] { (0.052f, Gfx.Rgba(0x3E8E5A)), (0.07f, Gfx.Rgba(0x4A505C)) })
+            {
+                var key = Gfx.Mul(Gfx.Rotate(slope), Gfx.Translate(OnStrip(kx, 0.0012f)));
+                Gfx.Draw(Gfx.RoundedBox(new Vector3(0.013f, 0.009f, 0.004f), 0.0018f), Gfx.Part(key, pose), col);
+            }
+
+            var bal = item.Inst.Get<Balance>();
+            Display(item, pose, OnStrip(-0.012f, 0.0006f), 0.08f, 0.021f,
+                string.Format(CultureInfo.InvariantCulture, "{0:0.00} g", bal?.ReadingGrams ?? 0), true, slope);
+            Gfx.Draw(Gfx.Cylinder, Gfx.Part(Gfx.Mul(Gfx.Scale(0.006f, 0.01f, 0.006f), Gfx.Translate(0, 0.05f, 0.01f)), pose), Steel);
+            var pan = Gfx.CachedLathe("balancePan2", new[]
+            {
+                new Vector2(0, 0), new Vector2(0.064f, 0), new Vector2(0.069f, 0.002f), new Vector2(0.07f, 0.006f), new Vector2(0.066f, 0.006f),
+                new Vector2(0.064f, 0.004f), new Vector2(0, 0.004f),
+            }, 72);
+            Gfx.Draw(pan, Gfx.Part(Gfx.Translate(0, 0.058f, 0.01f), pose), Steel);
         }
 
         private static void DrawBuretteStand(Item item, Matrix4x4 pose)
         {
-            Gfx.Draw(Gfx.Cube, Gfx.Part(Gfx.Mul(Gfx.Scale(0.12f, 0.012f, 0.15f), Gfx.Translate(0, 0.006f, 0.02f)), pose), new Color(40, 44, 52, 255));
+            Gfx.Draw(Gfx.RoundedBox(new Vector3(0.12f, 0.012f, 0.15f), 0.005f), Gfx.Part(Gfx.Translate(0, 0.006f, 0.02f), pose), new Color(40, 44, 52, 255));
             Gfx.Draw(Gfx.Cylinder, Gfx.Part(Gfx.Mul(Gfx.Scale(0.006f, 0.66f, 0.006f), Gfx.Translate(0, 0, 0.07f)), pose), Steel);
             foreach (float y in new[] { 0.5f, 0.33f })
             {
@@ -354,19 +385,21 @@ namespace IDLab.Desktop
 
         private static void DrawRack(Matrix4x4 pose)
         {
-            Gfx.Draw(Gfx.Cube, Gfx.Part(Gfx.Mul(Gfx.Scale(0.18f, 0.008f, 0.05f), Gfx.Translate(0, 0.004f, 0)), pose), Wood);
+            // White moulded rack: a base, two end posts, and a top shelf with four dark holes.
+            var plastic = new Color(240, 242, 246, 255);
+            Gfx.SetMaterialEnv(plastic, 0.18f);
+            Gfx.Draw(Gfx.RoundedBox(new Vector3(0.18f, 0.008f, 0.05f), 0.0035f), Gfx.Part(Gfx.Translate(0, 0.004f, 0), pose), plastic);
             foreach (float x in new[] { -0.086f, 0.086f })
             {
-                Gfx.Draw(Gfx.Cube, Gfx.Part(Gfx.Mul(Gfx.Scale(0.008f, 0.075f, 0.05f), Gfx.Translate(x, 0.0375f, 0)), pose), Wood);
+                Gfx.Draw(Gfx.RoundedBox(new Vector3(0.008f, 0.07f, 0.05f), 0.0035f), Gfx.Part(Gfx.Translate(x, 0.039f, 0), pose), plastic);
             }
 
-            // Top plate with four holes: strips front/back + bridges between holes.
-            Gfx.Draw(Gfx.Cube, Gfx.Part(Gfx.Mul(Gfx.Scale(0.18f, 0.008f, 0.012f), Gfx.Translate(0, 0.066f, -0.019f)), pose), Wood);
-            Gfx.Draw(Gfx.Cube, Gfx.Part(Gfx.Mul(Gfx.Scale(0.18f, 0.008f, 0.012f), Gfx.Translate(0, 0.066f, 0.019f)), pose), Wood);
-            for (int i = 0; i < 5; i++)
+            Gfx.Draw(Gfx.RoundedBox(new Vector3(0.18f, 0.008f, 0.05f), 0.0035f), Gfx.Part(Gfx.Translate(0, 0.066f, 0), pose), plastic);
+            for (int i = 0; i < 4; i++)
             {
-                float x = -0.08f + i * 0.04f;
-                Gfx.Draw(Gfx.Cube, Gfx.Part(Gfx.Mul(Gfx.Scale(i == 0 || i == 4 ? 0.02f : 0.018f, 0.008f, 0.026f), Gfx.Translate(x, 0.066f, 0)), pose), Wood);
+                float x = -0.06f + i * 0.04f;
+                Gfx.Draw(Gfx.Cylinder, Gfx.Part(Gfx.Mul(Gfx.Scale(0.0095f, 0.0012f, 0.0095f), Gfx.Translate(x, 0.0697f, 0)), pose), Gfx.Rgba(0x2A2D35));
+                Gfx.Draw(Gfx.Cylinder, Gfx.Part(Gfx.Mul(Gfx.Scale(0.008f, 0.0012f, 0.008f), Gfx.Translate(x, 0.0082f, 0)), pose), Gfx.Rgba(0xC9CDD6));
             }
         }
 
@@ -381,11 +414,79 @@ namespace IDLab.Desktop
 
         private static void Knob(Matrix4x4 pose, Vector3 at, float value, Color color)
         {
+            // A knurled knob facing the user, with a white pointer showing its setting.
             var knobRot = Quaternion.CreateFromAxisAngle(Vector3.UnitX, -MathF.PI / 2);
-            Gfx.Draw(Gfx.Cylinder, Gfx.Part(Gfx.Mul(Gfx.Mul(Gfx.Scale(0.011f, 0.01f, 0.011f), Gfx.Rotate(knobRot)), Gfx.Translate(at)), pose), color);
-            var spin = Quaternion.CreateFromAxisAngle(Vector3.UnitZ, -value * MathF.PI / 2);
-            var pointer = Gfx.Mul(Gfx.Mul(Gfx.Mul(Gfx.Translate(0, 0.5f, 0), Gfx.Scale(0.0016f, 0.009f, 0.0016f)), Gfx.Rotate(spin)), Gfx.Translate(at + new Vector3(0, 0, -0.0105f)));
+            Gfx.Draw(_ribbedCap, Gfx.Part(Gfx.Mul(Gfx.Mul(Gfx.Scale(0.0115f, 0.009f, 0.0115f), Gfx.Rotate(knobRot)), Gfx.Translate(at)), pose), color);
+            Gfx.Draw(Gfx.Cylinder, Gfx.Part(Gfx.Mul(Gfx.Mul(Gfx.Scale(0.0098f, 0.0105f, 0.0098f), Gfx.Rotate(knobRot)), Gfx.Translate(at)), pose), Gfx.Lerp(color, Color.White, 0.12f));
+            var spin = Quaternion.CreateFromAxisAngle(Vector3.UnitZ, -value * MathF.PI * 0.75f + MathF.PI * 0.375f);
+            var pointer = Gfx.Mul(Gfx.Mul(Gfx.Mul(Gfx.Translate(0, 0.5f, 0), Gfx.Scale(0.0014f, 0.0075f, 0.0012f)), Gfx.Rotate(spin)), Gfx.Translate(at + new Vector3(0, 0, -0.0108f)));
             Gfx.Draw(Gfx.Cube, Gfx.Part(pointer, pose), Color.White, new Vector3(0.6f));
+        }
+
+        // ------------------------------------------------------------------ digital displays
+
+        private sealed class LcdScreen
+        {
+            public RenderTexture2D Target;
+            public string Text = "";
+            public bool On;
+        }
+
+        private static readonly Dictionary<int, LcdScreen> Displays = new Dictionary<int, LcdScreen>();
+        private static readonly List<(LcdScreen lcd, string text, bool on)> Pending = new List<(LcdScreen, string, bool)>();
+        private static Mesh _screenQuad;
+        private static bool _screenQuadMade;
+
+        /// <summary>
+        /// A small seven-segment-style display on the device itself (the digits are drawn into a texture once they
+        /// change; see <see cref="UpdateDisplays"/>), instead of a label floating in front of it.
+        /// </summary>
+        private static void Display(Item item, Matrix4x4 pose, Vector3 at, float width, float height, string text, bool on, Quaternion? tilt = null)
+        {
+            if (!Displays.TryGetValue(item.Inst.Id, out var lcd))
+            {
+                lcd = new LcdScreen { Target = LoadRenderTexture(256, 72) };
+                SetTextureFilter(lcd.Target.Texture, TextureFilter.Bilinear);
+                SetTextureWrap(lcd.Target.Texture, TextureWrap.Repeat);
+                Displays[item.Inst.Id] = lcd;
+                Pending.Add((lcd, text, on));
+            }
+            else if (lcd.Text != text || lcd.On != on)
+            {
+                Pending.Add((lcd, text, on));
+            }
+
+            if (!_screenQuadMade)
+            {
+                _screenQuadMade = true;
+                _screenQuad = Gfx.Quad(1, 1, -1, 1, flipV: true); // u runs backwards: the texture reads correctly from the front
+            }
+
+            // The quad lies in XZ (normal +Y): stand it up to face the front (−Z), then follow the panel's slope.
+            var face = Quaternion.CreateFromAxisAngle(Vector3.UnitX, -MathF.PI / 2);
+            if (tilt.HasValue) face = Quaternion.Concatenate(face, tilt.Value);
+            var local = Gfx.Mul(Gfx.Mul(Gfx.Scale(width, 1, height), Gfx.Rotate(face)), Gfx.Translate(at));
+            Gfx.Env = 0.25f;
+            Gfx.DrawTextured(_screenQuad, Gfx.Part(local, pose), lcd.Target.Texture, Color.White, on ? new Vector3(0.3f) : new Vector3(0.05f), 0.8f);
+            Gfx.Env = -1f;
+        }
+
+        /// <summary>Redraws the displays whose reading changed (call outside any 3D / texture mode).</summary>
+        public static void UpdateDisplays()
+        {
+            foreach (var (lcd, text, on) in Pending)
+            {
+                lcd.Text = text;
+                lcd.On = on;
+                BeginTextureMode(lcd.Target);
+                ClearBackground(on ? new Color(10, 30, 20, 255) : new Color(10, 13, 12, 255));
+                var font = Ui.BoldFont;
+                var m = MeasureTextEx(font, text, 52, 0);
+                DrawTextEx(font, text, new Vector2(256 - m.X - 16, (72 - m.Y) / 2 + 2), 52, 0, on ? new Color(130, 255, 160, 255) : new Color(60, 80, 64, 255));
+                EndTextureMode();
+            }
+
+            Pending.Clear();
         }
 
         private static void Rod(Matrix4x4 pose, Vector3 from, Vector3 to, float radius, Color color)
@@ -472,17 +573,6 @@ namespace IDLab.Desktop
                         : (double.IsNaN(item.Probe.Reading) ? "pH --" : string.Format(ci, "pH {0:0.00}", item.Probe.Reading));
                     Pill(text, top, Gfx.FromCore(item.Def.AccentColor), 20);
                 }
-                else if (item.Def.VisualKey == "balance")
-                {
-                    var bal = item.Inst.Get<Balance>();
-                    var at = GetWorldToScreen(item.Inst.Pose.TransformPoint(new Vector3(0.02f, 0.06f, -0.105f)), lab.Camera);
-                    Lcd(string.Format(ci, "{0:0.00} g", bal.ReadingGrams), at);
-                }
-                else if (item.Def.VisualKey == "hotplate" && item.Heat.IsLit)
-                {
-                    var at = GetWorldToScreen(item.Inst.Pose.TransformPoint(new Vector3(0, 0.08f, -0.1f)), lab.Camera);
-                    Lcd(string.Format(ci, "%{0:0}", item.Heat.GasValve * 100), at);
-                }
                 else if (item.Def.VisualKey == "burette")
                 {
                     var stop = item.Inst.Get<Stopcock>();
@@ -510,13 +600,5 @@ namespace IDLab.Desktop
             Ui.Text(text, r.X + pad, r.Y + pad / 2, size, Theme.Text, true);
         }
 
-        private static void Lcd(string text, Vector2 at)
-        {
-            var m = Ui.Measure(text, 18, true);
-            float pad = 6 * Ui.S;
-            var r = new Rectangle(at.X - m.X / 2 - pad, at.Y - m.Y / 2 - pad / 2, m.X + pad * 2, m.Y + pad);
-            DrawRectangleRounded(r, 0.2f, 6, new Color(20, 40, 28, 235));
-            Ui.Text(text, r.X + pad, r.Y + pad / 2, 18, new Color(120, 255, 150, 255), true);
-        }
     }
 }
