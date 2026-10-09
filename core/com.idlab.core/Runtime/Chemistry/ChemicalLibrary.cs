@@ -11,7 +11,7 @@ namespace IDLab.Core.Chemistry
     /// </summary>
     public static class ChemicalLibrary
     {
-        private const int Fields = 40;
+        private const int Fields = 42;
 
         public static void Register(SubstanceDatabase db)
         {
@@ -76,6 +76,12 @@ namespace IDLab.Core.Chemistry
                 }
 
                 s.ElementSymbol = S(28) ?? s.ElementSymbol;
+                if (!patch)
+                {
+                    s.DataLimited = f[40].Contains("L");
+                    s.DensityEstimated = f[40].Contains("d");
+                    s.Cas = S(41);
+                }
                 if (s.SaltAcidKa <= 0 && D(29) > 0)
                 {
                     s.SaltAcidKa = D(29);

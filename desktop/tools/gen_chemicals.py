@@ -451,8 +451,9 @@ def row(**k):
         k.get("element", "") or "", fmt(k.get("saltKa", 0)), str(k.get("saltCount", "") or ""),
         k.get("color", "") or "", fmt(k.get("alpha", 0)), fmt(k.get("tint", 0)), " ".join(k.get("ions", [])), k.get("molecular", "") or "",
         "1" if k.get("hidden") else "0", "1" if k.get("complex") else "0", fmt(k.get("cp", 0)), fmt(k.get("latent", 0)),
+        k.get("flags", ""), k.get("cas", ""),
     ]
-    assert len(fields) == 40
+    assert len(fields) == 42
     for f in fields:
         assert "|" not in f and "\n" not in f, fields
     if not k.get("patch"):
@@ -758,6 +759,8 @@ for sym, e in sorted(ELEMENTS.items(), key=lambda kv: kv[1]["z"]):
         hazards=h, M=M, density=dens, bp=bp, color=color, alpha=0.9 if phase == "L" else 1.0, molecular=sym, cp=500, latent=latent, **names)
     element_count += 1
 
+exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "gen_crc.py"), encoding="utf-8").read())
+
 # ----------------------------------------------------------------------------------------------- output
 
 visible = len([r for r in ROWS if r.split("|")[36] == "0"])
@@ -767,7 +770,7 @@ with open(OUT, "w", encoding="utf-8") as f:
     f.write("namespace IDLab.Core.Chemistry\n{\n")
     f.write("    /// <summary>Chemical catalogue rows: id|patch|en|tr|formula|aliases|category|kind|phase|gas|soluble|form|hazards|M|density|bp|"
             "protons|hydroxides|ka|kb|conj|conjCount|cat|catCharge|catCount|an|anCharge|anCount|element|saltKa|saltCount|color|alpha|tint|ions|"
-            "molecular|hidden|complex|cp|latent</summary>\n")
+            "molecular|hidden|complex|cp|latent|flags|cas</summary>\n")
     f.write("    internal static class ChemicalData\n    {\n")
     f.write(f"        public const int Count = {visible};\n\n")
     f.write("        public const string Rows = @\"\n")

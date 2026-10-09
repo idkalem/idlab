@@ -96,11 +96,11 @@ namespace IDLab.Core.Model
             };
             titration.Equipment.AddRange(new[]
             {
-                EquipmentIds.Burette, EquipmentIds.Erlenmeyer, EquipmentIds.Beaker100, EquipmentIds.HclBottle, EquipmentIds.PhenolphthaleinBottle,
+                EquipmentIds.Burette, EquipmentIds.TitrationFlask, EquipmentIds.Erlenmeyer, EquipmentIds.Beaker100, EquipmentIds.HclBottle, EquipmentIds.PhenolphthaleinBottle,
                 EquipmentIds.IndicatorBottle, EquipmentIds.PhProbe, EquipmentIds.GraduatedCylinder, EquipmentIds.WaterBottle,
             });
             titration.InitialLayout.Add((EquipmentIds.Burette, 0.0f, 0.06f));
-            titration.InitialLayout.Add((EquipmentIds.Erlenmeyer, -0.17f, 0.0f));
+            titration.InitialLayout.Add((EquipmentIds.TitrationFlask, 0.0f, 0.06f)); // stands under the burette tip
             titration.InitialLayout.Add((EquipmentIds.PhenolphthaleinBottle, 0.16f, -0.04f));
             titration.InitialLayout.Add((EquipmentIds.HclBottle, -0.3f, 0.05f));
             titration.InitialLayout.Add((EquipmentIds.PhProbe, 0.24f, 0.06f));

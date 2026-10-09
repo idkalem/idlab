@@ -43,6 +43,7 @@ namespace IDLab.Core.Model
         ScalePan,        // pan of an electronic balance
         TubeBase,        // rounded bottom of a test tube
         TubeSlot,        // hole in a test-tube rack
+        StandBase,       // spot on a burette stand's base, right under the burette tip
     }
 
     public enum ExperimentStatus

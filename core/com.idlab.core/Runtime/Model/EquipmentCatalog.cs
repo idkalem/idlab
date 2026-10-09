@@ -13,6 +13,7 @@ namespace IDLab.Core.Model
         public const string Beaker250Water = "beaker.250.water";
         public const string Beaker600 = "beaker.600";
         public const string Erlenmeyer = "flask.erlenmeyer.250";
+        public const string TitrationFlask = "flask.erlenmeyer.titration";
         public const string RoundFlask = "flask.round.250";
         public const string GraduatedCylinder = "cylinder.100";
         public const string TestTube = "tube.test";
@@ -109,6 +110,12 @@ namespace IDLab.Core.Model
             c.Register(Vessel(EquipmentIds.Beaker600, "Beaker 600 mL", "beaker", 0.090, 0.125, 0.18, null, "Large beaker for water baths."));
             c.Register(Vessel(EquipmentIds.Erlenmeyer, "Erlenmeyer flask 250 mL", "erlenmeyer", 0.051, 0.13, 0.12, null,
                 "Conical flask: swirl without spilling; used for titrations.", mouth: 0.030, probeY: 0.01f));
+            // Titration practice: 20 mL of hydrochloric acid of "unknown" concentration (0.11 M) with two drops of phenolphthalein.
+            var titrationAcid = ReagentPreset.Solution("20 mL HCl (unknown concentration) + phenolphthalein", 20, SubstanceIds.HydrochloricAcid, 0.11);
+            var titrationParts = new System.Collections.Generic.List<ReagentPart>(titrationAcid.Parts) { new ReagentPart(SubstanceIds.Phenolphthalein, 3e-6) };
+            c.Register(Vessel(EquipmentIds.TitrationFlask, "Erlenmeyer: 20 mL HCl (unknown) + phenolphthalein", "erlenmeyer", 0.051, 0.13, 0.12,
+                new ReagentPreset(titrationAcid.Label, titrationParts),
+                "20 mL hydrochloric acid of unknown concentration with phenolphthalein, ready to titrate.", mouth: 0.030, probeY: 0.01f));
             c.Register(Vessel(EquipmentIds.RoundFlask, "Round-bottom flask 250 mL", "round_flask", 0.0535, 0.12, 0.11, null,
                 "Heats evenly; stands on a cork ring.", mouth: 0.026, probeY: 0.01f));
             c.Register(Vessel(EquipmentIds.GraduatedCylinder, "Graduated cylinder 100 mL", "cylinder", 0.026, 0.19, 0.15, null,
@@ -161,6 +168,8 @@ namespace IDLab.Core.Model
                 InitialContents = ReagentPreset.Solution("0.1 M sodium hydroxide", 25, SubstanceIds.SodiumHydroxide, 0.1),
             });
             burette.Components.Add(new StopcockSpec { MaxFlowLitersPerSecond = 0.0015, OutletLocal = new Vector3(0, 0.215f, 0) });
+            // A flask dropped near the stand snaps onto the base, centred under the tip.
+            burette.SnapPoints.Add(new SnapPointDefinition("flask", SnapKind.StandBase, new Vector3(0, 0.012f, 0)));
             c.Register(burette);
 
             // ------------------------------------------------------------------ liquid reagents

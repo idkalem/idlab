@@ -40,19 +40,36 @@ namespace IDLab.Core.Components
 
         public void ResetCounter() => DeliveredMilliliters = 0;
 
+        /// <summary>Volume still to be let out by <see cref="Dispense"/> (mL); the tap opens and closes by itself.</summary>
+        public double PendingMilliliters { get; private set; }
+
+        /// <summary>Lets out exactly <paramref name="milliliters"/> (one drop ≈ 0.05 mL) at a slow, drop-wise rate.</summary>
+        public void Dispense(double milliliters) => PendingMilliliters += Math.Max(0, milliliters);
+
+        public void CancelDispense() => PendingMilliliters = 0;
+
         public override void Step(double dt)
         {
             IsFlowing = false;
             FlowLitersPerSecond = 0;
             Target = null;
             var container = Owner.Get<LiquidContainer>();
-            if (container == null || _valve < 0.01 || !container.Contents.HasLiquid)
+            bool dispensing = PendingMilliliters > 1e-6;
+            if (container == null || (_valve < 0.01 && !dispensing) || !container.Contents.HasLiquid)
             {
+                if (container == null || !container.Contents.HasLiquid) PendingMilliliters = 0;
                 return;
             }
 
-            double rate = MaxFlowLitersPerSecond * _valve * _valve;
+            // A metered dose runs at about 0.4 mL/s (drop-wise); otherwise the tap position sets the flow.
+            double rate = dispensing ? Math.Max(MaxFlowLitersPerSecond * _valve * _valve, 0.0004) : MaxFlowLitersPerSecond * _valve * _valve;
             double volume = Math.Min(rate * dt, container.Contents.LiquidVolumeLiters);
+            if (dispensing && _valve < 0.01)
+            {
+                volume = Math.Min(volume, PendingMilliliters / 1000.0);
+            }
+
+            if (dispensing) PendingMilliliters = Math.Max(0, PendingMilliliters - volume * 1000.0);
             var portion = container.Contents.TakeLiquid(volume);
             Target = PourTargets.Find(World, Owner, OutletPosition);
             Target?.Get<LiquidContainer>()?.ReceiveLiquid(portion);

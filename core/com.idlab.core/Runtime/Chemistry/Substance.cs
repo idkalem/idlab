@@ -137,6 +137,15 @@ namespace IDLab.Core.Chemistry
         /// <summary>Internal helper species (e.g. the HCO₃⁻ ion used for carbonate hydrolysis) — not listed in catalogues.</summary>
         public bool Hidden { get; set; }
 
+        /// <summary>Only handbook data (formula, melting/boiling point, density) is known: no hazard or solubility data.</summary>
+        public bool DataLimited { get; set; }
+
+        /// <summary>The density is an estimate (not shown to users).</summary>
+        public bool DensityEstimated { get; set; }
+
+        /// <summary>CAS registry number, when known.</summary>
+        public string Cas { get; set; }
+
         /// <summary>A gas at 25 °C; only usable in the lab dissolved in water (if soluble).</summary>
         public bool IsGas { get; set; }
 

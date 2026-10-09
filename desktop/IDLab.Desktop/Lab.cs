@@ -142,9 +142,69 @@ namespace IDLab.Desktop
             World.Reset();
             Effects.Clear();
             Experiment = Experiments.Get(id);
+            var spawned = new List<Item>();
             foreach (var (eid, x, z) in Experiment.InitialLayout)
             {
-                Spawn(eid, new Vector3(x, 0, z));
+                spawned.Add(Spawn(eid, new Vector3(x, 0, z)));
+            }
+
+            // Items laid out on a snap spot (a flask under the burette) start attached to it.
+            foreach (var item in spawned)
+            {
+                if (item.Host == null && Snaps.TryFindDropSnap(item.Inst, new Pose3(item.Position + new Vector3(0, 0.03f, 0), Quaternion.Identity), 0.03f, 0.4f, out var c))
+                {
+                    Snap(item, c);
+                }
+            }
+
+            Titrations.Clear();
+        }
+
+        // ------------------------------------------------------------------ titration curve (pH vs added titrant)
+
+        internal sealed class TitrationCurve
+        {
+            public readonly List<(double ml, double ph)> Points = new List<(double, double)>();
+            public double AcidMl, TitrantMolarity;
+            public EquipmentInstance Flask;
+        }
+
+        /// <summary>Per burette (instance id): pH of the flask below it against the volume delivered.</summary>
+        public Dictionary<int, TitrationCurve> Titrations { get; } = new Dictionary<int, TitrationCurve>();
+
+        private void RecordTitrations()
+        {
+            foreach (var item in _items.Values)
+            {
+                var tap = item.Tap;
+                if (tap == null) continue;
+                if (!Titrations.TryGetValue(item.Inst.Id, out var curve))
+                {
+                    curve = new TitrationCurve();
+                    Titrations[item.Inst.Id] = curve;
+                }
+
+                if (tap.Target != null) curve.Flask = tap.Target;
+                var flask = curve.Flask?.Get<LiquidContainer>();
+                if (flask == null || !_items.ContainsKey(curve.Flask.Id) || double.IsNaN(flask.PH)) continue;
+                double ml = tap.DeliveredMilliliters;
+                if (curve.Points.Count > 0 && ml < curve.Points[curve.Points.Count - 1].ml - 0.01)
+                {
+                    curve.Points.Clear(); // counter was reset / burette refilled: start a new curve
+                }
+
+                if (curve.Points.Count == 0)
+                {
+                    curve.AcidMl = Math.Max(0, flask.LiquidVolumeMilliliters - ml);
+                    var b = item.Container;
+                    double naoh = b.Contents.Moles(IDLab.Core.Chemistry.SubstanceIds.SodiumHydroxide);
+                    curve.TitrantMolarity = b.LiquidVolumeMilliliters > 0.5 ? naoh / (b.LiquidVolumeMilliliters / 1000.0) : 0.1;
+                    curve.Points.Add((ml, flask.PH));
+                }
+                else if (ml - curve.Points[curve.Points.Count - 1].ml >= 0.04)
+                {
+                    curve.Points.Add((ml, flask.PH));
+                }
             }
         }
 
@@ -195,6 +255,7 @@ namespace IDLab.Desktop
             }
 
             World.Advance(dt);
+            RecordTitrations();
             Effects.Update(dt, this);
         }
 
@@ -309,6 +370,38 @@ namespace IDLab.Desktop
                 child.Rotation = item.Rotation * child.LocalRotation;
                 UpdateKinematics(child, dt);
             }
+        }
+
+        /// <summary>While set, the next tap on a container pours <see cref="PourPickAmount"/> from this item into it.</summary>
+        public Item PourPickSource { get; set; }
+        public double PourPickAmount { get; set; }
+
+        /// <summary>Raised when a pour starts from a drop or a tap (source, target, mL).</summary>
+        public event Action<Item, Item, double> AutoPourStarted;
+
+        /// <summary>A container whose mouth is right below a dragged item that holds something pourable.</summary>
+        private Item DropPourTarget(Item item)
+        {
+            var c = item.Container;
+            if (c == null || !item.CanTilt || c.Contents.IsEmpty) return null;
+            var box = WorldBox(item);
+            var center = new Vector2((box.Min.X + box.Max.X) / 2, (box.Min.Z + box.Max.Z) / 2);
+            Item best = null;
+            float bestD = float.MaxValue;
+            foreach (var other in _items.Values)
+            {
+                if (other == item || other.Container == null || IsDescendantOf(other, item) || IsDescendantOf(item, other)) continue;
+                if (other.Tap != null) continue;
+                var mouth = other.Container.MouthPosition;
+                float d = Vector2.Distance(center, new Vector2(mouth.X, mouth.Z));
+                if (d < (float)other.Container.MouthRadiusM + 0.045f && box.Min.Y > mouth.Y - 0.02f && d < bestD)
+                {
+                    bestD = d;
+                    best = other;
+                }
+            }
+
+            return best;
         }
 
         /// <summary>Starts an animated pour of <paramref name="milliliters"/> (∞ = everything) into the nearest container.</summary>
@@ -561,8 +654,24 @@ namespace IDLab.Desktop
                 case Mode.Pending:
                     if (!Ui.Down)
                     {
-                        Selected = _pending;
                         _mode = Mode.Idle;
+                        if (PourPickSource != null)
+                        {
+                            // "Pour into…": the tap chooses the receiving container.
+                            var source = PourPickSource;
+                            PourPickSource = null;
+                            if (_pending != null && _pending != source && _pending.Container != null && !IsDescendantOf(_pending, source))
+                            {
+                                source.PourInto = _pending;
+                                source.Home = null;
+                                StartAutoPour(source, PourPickAmount);
+                                AutoPourStarted?.Invoke(source, _pending, PourPickAmount);
+                                Selected = source;
+                                break;
+                            }
+                        }
+
+                        Selected = _pending;
                     }
                     else if (Vector2.Distance(Ui.Mouse, _pressPos) > 10 * Ui.S)
                     {
@@ -795,6 +904,16 @@ namespace IDLab.Desktop
             if (item.Tilt < 0.5f && Snaps.TryFindDropSnap(item.Inst, item.Inst.Pose, SnapRadius, SnapMaxDrop, out var c))
             {
                 Snap(item, c);
+            }
+            else if (item.Tilt < 0.5f && DropPourTarget(item) is Item into)
+            {
+                // Dropped on top of another container: pour into it (25 mL, or some of a solid), then go back.
+                var cont = item.Container;
+                double amount = cont.Contents.HasLiquid ? 25 : Math.Max(0.3, (cont.LiquidVolumeMilliliters + cont.SolidVolumeMilliliters) * 0.3);
+                item.Home = new Vector3(_dragStart.X, 0, _dragStart.Z);
+                item.PourInto = into;
+                StartAutoPour(item, amount);
+                AutoPourStarted?.Invoke(item, into, amount);
             }
             else if (item.Tilt >= 0.5f)
             {
