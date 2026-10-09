@@ -9,7 +9,7 @@ namespace IDLab.Core.Tests
     /// <summary>The generated 1000+ chemical catalogue and the generic, ion-based reaction rules.</summary>
     public class CatalogueTests
     {
-        private readonly SubstanceDatabase _db = SubstanceDatabase.CreateDefault();
+        private readonly SubstanceDatabase _db = SubstanceDatabase.Shared;
         private readonly ReactionEngine _engine = ReactionLibrary.Create();
 
         private Mixture Water(double ml)

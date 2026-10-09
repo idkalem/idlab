@@ -2,7 +2,7 @@
 
 * ionic compounds: every sensible cation × anion pair (Turkish + English systematic names, formula, molar mass,
   water solubility from the solubility rules, colour, GHS hazards, hydrolysis data for pH),
-* pure elements (Z ≤ 83, no radioactive ones) from desktop/IDLab.Desktop/Elements.g.cs,
+* all 118 pure elements from desktop/IDLab.Desktop/Elements.g.cs (radioactive / synthetic ones flagged),
 * molecular / organic compounds and acids from desktop/tools/data/molecular.txt,
 * hidden helper ions used for carbonate/phosphate hydrolysis.
 
@@ -34,7 +34,7 @@ EN_NAMES = dict(H="Hydrogen", He="Helium", Li="Lithium", Be="Beryllium", B="Boro
     In="Indium", Sn="Tin", Sb="Antimony", Te="Tellurium", I="Iodine", Xe="Xenon", Cs="Caesium", Ba="Barium", La="Lanthanum", Ce="Cerium",
     Pr="Praseodymium", Nd="Neodymium", Sm="Samarium", Eu="Europium", Gd="Gadolinium", Tb="Terbium", Dy="Dysprosium", Ho="Holmium",
     Er="Erbium", Tm="Thulium", Yb="Ytterbium", Lu="Lutetium", Hf="Hafnium", Ta="Tantalum", W="Tungsten", Re="Rhenium", Os="Osmium",
-    Ir="Iridium", Pt="Platinum", Au="Gold", Hg="Mercury", Tl="Thallium", Pb="Lead", Bi="Bismuth")
+    Ir="Iridium", Pt="Platinum", Au="Gold", Hg="Mercury", Tl="Thallium", Pb="Lead", Bi="Bismuth", Tc="Technetium", Pm="Promethium", Po="Polonium", At="Astatine", Rn="Radon", Fr="Francium", Ra="Radium", Ac="Actinium", Th="Thorium", Pa="Protactinium", U="Uranium", Np="Neptunium", Pu="Plutonium", Am="Americium", Cm="Curium", Bk="Berkelium", Cf="Californium", Es="Einsteinium", Fm="Fermium", Md="Mendelevium", No="Nobelium", Lr="Lawrencium", Rf="Rutherfordium", Db="Dubnium", Sg="Seaborgium", Bh="Bohrium", Hs="Hassium", Mt="Meitnerium", Ds="Darmstadtium", Rg="Roentgenium", Cn="Copernicium", Nh="Nihonium", Fl="Flerovium", Mc="Moscovium", Lv="Livermorium", Ts="Tennessine", Og="Oganesson")
 
 
 def parse_formula(formula):
@@ -733,8 +733,10 @@ EL_ALIASES = {
 METAL_CATS = {"AlkaliMetal", "AlkalineEarth", "Transition", "PostTransition", "Lanthanide", "Actinide"}
 element_count = 0
 for sym, e in sorted(ELEMENTS.items(), key=lambda kv: kv[1]["z"]):
-    if e["z"] > 83 or e["z"] in (43, 61):
-        continue
+    # Radioactive elements (Tc, Pm and Z ≥ 84) are listed too, flagged "R"; those made only a few atoms at a time
+    # (Z ≥ 100) are also flagged "X". The app shows them but does not put them on the bench (except U and Th).
+    radioactive = e["z"] > 83 or e["z"] in (43, 61)
+    flags = ("R" if radioactive else "") + ("X" if e["z"] >= 100 else "")
     formula = sym + ("2" if sym in DIATOMIC else "")
     names = dict(en=EN_NAMES[sym], tr=e["tr"], aliases=EL_ALIASES.get(sym, []) + [sym], category="element", element=sym)
     if sym in EXISTING_ELEMENTS:
@@ -743,7 +745,7 @@ for sym, e in sorted(ELEMENTS.items(), key=lambda kv: kv[1]["z"]):
         continue
     phase = {"Gas": "A", "Liquid": "L"}.get(e["phase"], "S")
     gas = e["phase"] == "Gas"
-    h = EL_HZ.get(sym, 0) | (HZ["gas"] if gas else 0)
+    h = EL_HZ.get(sym, 0) | (HZ["gas"] if gas else 0) | (hz("toxic", "health") if radioactive else 0)
     kind = "Metal" if e["cat"] in METAL_CATS else "Molecular"
     if e["cat"] == "AlkaliMetal":
         kind = "ReactiveMetal"
@@ -756,10 +758,12 @@ for sym, e in sorted(ELEMENTS.items(), key=lambda kv: kv[1]["z"]):
         bp = e["bpK"] - 273.15
         latent = 88.0 * e["bpK"] / (M / 1000.0)
     row(id="e_" + sym.lower(), formula=pretty(formula), kind=kind, phase=phase, gas=gas, soluble=False, form=EL_FORM.get(sym, "Granules"),
-        hazards=h, M=M, density=dens, bp=bp, color=color, alpha=0.9 if phase == "L" else 1.0, molecular=sym, cp=500, latent=latent, **names)
+        hazards=h, M=M, density=dens, bp=bp, color=color, alpha=0.9 if phase == "L" else 1.0, molecular=sym, cp=500, latent=latent,
+        flags=flags + ("" if dens else "d"), **names)
     element_count += 1
 
 exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "gen_crc.py"), encoding="utf-8").read())
+exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "gen_pubchem.py"), encoding="utf-8").read())
 
 # ----------------------------------------------------------------------------------------------- CAS numbers
 
@@ -809,3 +813,22 @@ with open(OUT, "w", encoding="utf-8") as f:
         f.write(r.replace('"', '""') + "\n")
     f.write("\";\n    }\n}\n")
 print(f"ionic {ionic_count}, elements {element_count}, molecular {len(mol)}, rows {len(ROWS)}, catalogue entries {visible} (new {new_rows})")
+
+# The PubChem extension is large: it is stored deflate-compressed and base64-encoded in string chunks
+# (ChemicalDataExt.g.cs), which keeps the assembly's string heap small; ChemicalLibrary inflates it at start-up.
+import base64, zlib
+_raw = "\n".join(EXT_ROWS).encode("utf-8")
+_co = zlib.compressobj(9, zlib.DEFLATED, -15)
+_packed = base64.b64encode(_co.compress(_raw) + _co.flush()).decode("ascii")
+_chunks = [_packed[i:i + 60000] for i in range(0, len(_packed), 60000)]
+with open(OUT.replace("ChemicalData.g.cs", "ChemicalDataExt.g.cs"), "w", encoding="utf-8") as f:
+    f.write("// <auto-generated> by desktop/tools/gen_chemicals.py (gen_pubchem.py). Do not edit by hand. </auto-generated>\n")
+    f.write("namespace IDLab.Core.Chemistry\n{\n")
+    f.write("    /// <summary>Further catalogue rows (same format as ChemicalData.Rows), raw-deflate compressed and base64 encoded.</summary>\n")
+    f.write("    internal static class ChemicalDataExt\n    {\n")
+    f.write(f"        public const int Count = {len(EXT_ROWS)};\n\n")
+    f.write("        public static readonly string[] Chunks =\n        {\n")
+    for c in _chunks:
+        f.write(f'            "{c}",\n')
+    f.write("        };\n    }\n}\n")
+print(f"extension rows {len(EXT_ROWS)}: {len(_raw) // 1024} KB raw, {len(_packed) // 1024} KB packed")

@@ -102,6 +102,7 @@ namespace IDLab.Core.Chemistry
         public void Register(Substance substance)
         {
             _byId[substance.Id] = substance;
+            _byFormula = null;
             Index(substance);
         }
 
@@ -122,6 +123,24 @@ namespace IDLab.Core.Chemistry
         /// <summary>The compound made of a cation and an anion (e.g. ("Ag", "Cl") → AgCl), or null.</summary>
         public Substance FindIonic(string cationKey, string anionKey) =>
             _ionic.TryGetValue((cationKey, anionKey), out var s) ? s : null;
+
+        private Dictionary<string, Substance> _byFormula;
+
+        /// <summary>A visible substance with exactly this (pretty) formula, e.g. "Fe₃O₄", or null.</summary>
+        public Substance FindByFormula(string formula)
+        {
+            if (_byFormula == null || _byFormula.Count == 0)
+            {
+                _byFormula = new Dictionary<string, Substance>();
+                foreach (var s in _byId.Values)
+                {
+                    if (s.Hidden || string.IsNullOrEmpty(s.Formula)) continue;
+                    if (!_byFormula.ContainsKey(s.Formula)) _byFormula[s.Formula] = s;
+                }
+            }
+
+            return _byFormula.TryGetValue(formula, out var found) ? found : null;
+        }
 
         /// <summary>The pure element substance for a symbol (e.g. "Cu"), or null.</summary>
         public Substance FindElement(string symbol) => _elements.TryGetValue(symbol, out var s) ? s : null;
@@ -178,6 +197,24 @@ namespace IDLab.Core.Chemistry
                 Form = form, MolarMass = molarMass, Density = density, SpecificHeat = 450, Color = color, Hazards = hazards,
                 MolecularSpeciesId = formula,
             });
+
+        private static SubstanceDatabase _shared;
+        private static readonly object SharedLock = new object();
+
+        /// <summary>
+        /// The default catalogue, built once and shared by every <see cref="Simulation.LabWorld"/> (it holds tens of
+        /// thousands of substances, which are read-only once registered).
+        /// </summary>
+        public static SubstanceDatabase Shared
+        {
+            get
+            {
+                lock (SharedLock)
+                {
+                    return _shared ?? (_shared = CreateDefault());
+                }
+            }
+        }
 
         public static SubstanceDatabase CreateDefault()
         {

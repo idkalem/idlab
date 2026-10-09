@@ -27,6 +27,7 @@ namespace IDLab.Desktop
             public string Name, Formula, FormulaKey, Category;
             public string[] Keys;
             public HashSet<string> Elements;
+            public string SortKey;
         }
 
         private static readonly (string key, string label)[] Categories =
@@ -90,15 +91,36 @@ namespace IDLab.Desktop
         private float _time, _listContent, _detailContent;
         private Rectangle _left, _right, _list, _detail, _keyboardRect;
 
-        public int Count => _entries.Count;
+        public int Count => _count;
+
+        /// <summary>Searches for <paramref name="query"/> and opens the best match (used by demos and tests).</summary>
+        public void Preselect(string query)
+        {
+            EnsureReady();
+            _query = query;
+            Refilter();
+            _selected = _results.FirstOrDefault();
+        }
 
         public ChemicalsView(Lab lab, Hud hud)
         {
             _lab = lab;
             _hud = hud;
             _symbols = new HashSet<string>(Elements.All.Select(e => e.Symbol));
-            var tr = new CultureInfo("tr-TR");
-            foreach (var s in lab.World.Substances.All.Where(x => !x.Hidden))
+            var substances = lab.World.Substances.All.Where(x => !x.Hidden).ToList();
+            _count = substances.Count;
+            // Indexing ~40 000 names takes a moment: do it in the background so the lab opens at once.
+            _build = System.Threading.Tasks.Task.Run(() => BuildEntries(substances));
+        }
+
+        private readonly int _count;
+        private readonly System.Threading.Tasks.Task _build;
+        private volatile bool _ready;
+
+        private void BuildEntries(List<Substance> substances)
+        {
+            var entries = new List<Entry>(substances.Count);
+            foreach (var s in substances)
             {
                 var e = new Entry
                 {
@@ -109,24 +131,39 @@ namespace IDLab.Desktop
                 keys.AddRange(s.Aliases.Select(Normalize));
                 if (!string.IsNullOrEmpty(s.Cas)) keys.Add(Normalize(s.Cas));
                 e.Keys = keys.Where(k => k.Length > 0).Distinct().ToArray();
-                _entries.Add(e);
+                e.SortKey = Normalize(SortKey(e.Name));
+                entries.Add(e);
                 foreach (var el in e.Elements) _elementUse[el] = _elementUse.TryGetValue(el, out int n) ? n + 1 : 1;
             }
 
-            // Alphabetical, ignoring locant prefixes such as "1-", "2,2-", "o-", "tert-".
-            static string SortKey(string n)
+            // Alphabetical on the folded key (ç → c, ı → i ...): an ordinal sort, much faster than a culture sort.
+            entries.Sort((a, b) =>
             {
-                int i = 0;
-                while (i < n.Length && (char.IsDigit(n[i]) || n[i] == ',' || n[i] == '-')) i++;
-                foreach (var p in new[] { "o-", "m-", "p-", "tert-", "sek-", "cis-", "trans-" })
-                {
-                    if (n.Length > i + p.Length && string.Compare(n, i, p, 0, p.Length, StringComparison.Ordinal) == 0) return n.Substring(i + p.Length);
-                }
+                int c = string.CompareOrdinal(a.SortKey, b.SortKey);
+                return c != 0 ? c : string.CompareOrdinal(a.Name, b.Name);
+            });
+            _entries.AddRange(entries);
+            _ready = true;
+        }
 
-                return n.Substring(i);
+        /// <summary>Alphabetical position ignoring locant prefixes such as "1-", "2,2-", "o-", "tert-".</summary>
+        private static string SortKey(string n)
+        {
+            int i = 0;
+            while (i < n.Length && (char.IsDigit(n[i]) || n[i] == ',' || n[i] == '-')) i++;
+            foreach (var p in new[] { "o-", "m-", "p-", "tert-", "sek-", "cis-", "trans-" })
+            {
+                if (n.Length > i + p.Length && string.Compare(n, i, p, 0, p.Length, StringComparison.Ordinal) == 0) return n.Substring(i + p.Length);
             }
 
-            _entries.Sort((a, b) => string.Compare(SortKey(a.Name), SortKey(b.Name), tr, CompareOptions.IgnoreCase));
+            return n.Substring(i);
+        }
+
+        /// <summary>Blocks until the background index is ready (demos and tests).</summary>
+        private void EnsureReady()
+        {
+            if (_ready) return;
+            _build.Wait();
             Refilter();
         }
 
@@ -198,6 +235,7 @@ namespace IDLab.Desktop
 
         private void Refilter()
         {
+            if (!_ready) return; // still indexing in the background
             string q = Normalize(_query);
             string cat = Categories[_category].key;
             string key = $"{q}|{cat}|{_mode}|{_exactElements}|{string.Join(",", _picked.OrderBy(x => x))}|{_cation}|{_anion}";
@@ -282,7 +320,7 @@ namespace IDLab.Desktop
             Ui.Panel(r, Theme.Panel);
             float x = r.X + 18 * s, y = r.Y + 16 * s, w = r.Width - 36 * s;
             Ui.Text("KİMYASAL DOLABI", x, y, 20, Theme.Text, true);
-            string count = string.Format(CultureInfo.CurrentCulture, "{0} kimyasal · {1} sonuç", _entries.Count, _results.Count);
+            string count = string.Format(CultureInfo.CurrentCulture, "{0} kimyasal · {1} sonuç", _count, _results.Count);
             Ui.Text(count, r.Right() - 18 * s - Ui.Measure(count, 15).X, y + 4 * s, 15, Theme.Muted);
             y += 38 * s;
 
@@ -511,7 +549,8 @@ namespace IDLab.Desktop
             _listContent = _results.Count * (rowH + gap);
             if (_results.Count == 0)
             {
-                Ui.Wrapped("Sonuç bulunamadı. Yazımı kontrol edin ya da formülü deneyin (ör. NaCl, H2SO4, C6H12O6).", r.X + 12 * s, r.Y + 10 * s, r.Width - 24 * s, 16, Theme.Muted);
+                Ui.Wrapped(_ready ? "Sonuç bulunamadı. Yazımı kontrol edin ya da formülü deneyin (ör. NaCl, H2SO4, C6H12O6)."
+                    : "Kimyasal listesi hazırlanıyor…", r.X + 12 * s, r.Y + 10 * s, r.Width - 24 * s, 16, Theme.Muted);
                 return;
             }
 
@@ -599,7 +638,7 @@ namespace IDLab.Desktop
                 case SubstanceKind.ReactiveMetal: return "Aktif metal";
                 case SubstanceKind.Solvent: return "Çözücü";
                 case SubstanceKind.Indicator: return "İndikatör";
-                case SubstanceKind.Oxidizer: return "Yükseltgen";
+                case SubstanceKind.Oxidizer: return "Oksitleyici";
                 default: return s.ElementSymbol != null ? "Ametal / soy gaz" : "Moleküler bileşik";
             }
         }
@@ -704,9 +743,154 @@ namespace IDLab.Desktop
                 y += Math.Max(26 * s, hgt + 6 * s);
             }
 
+            if (sub.Radioactive)
+            {
+                y += 6 * s;
+                y += Ui.Wrapped(sub.Synthetic
+                    ? "☢ Sentetik ve çok radyoaktif: parçacık hızlandırıcılarda yalnızca birkaç atom üretilmiştir, saniyeler içinde bozunur. Elle tutulabilecek bir miktarı yoktur."
+                    : sub.ElementSymbol == "U" || sub.ElementSymbol == "Th"
+                        ? "☢ Doğal radyoaktif element (zayıf ışınım). Okul laboratuvarında bulunmaz; simülasyonda gösterim amaçlı eklenebilir."
+                        : "☢ Radyoaktif element: güçlü ışınım yayar, yalnızca özel korumalı laboratuvarlarda çalışılır. Tezgâha eklenemez.",
+                    x, y, w, 15, Theme.Warning, true, 1.3f) + 6 * s;
+            }
+
+            y = DrawSynthesis(sub, x, y, w);
+
             _detailContent = y + _detailScroll.Offset - _detail.Y + 10 * s;
             EndScissorMode();
             DrawAddButtons(new Rectangle(r.X + 18 * s, r.Bottom() - 210 * s, r.Width - 36 * s, 196 * s), sub);
+        }
+
+        // ------------------------------------------------------------------ how to make it
+
+        private Substance _routesFor;
+        private List<SynthesisRoute> _routes = new List<SynthesisRoute>();
+
+        private static string RouteTitle(SynthesisKind kind)
+        {
+            switch (kind)
+            {
+                case SynthesisKind.Burn: return "Elementi havada yakarak";
+                case SynthesisKind.Combine: return "Elementleri birlikte ısıtarak (doğrudan birleşme)";
+                case SynthesisKind.MetalAcid: return "Metal + asit (hidrojen gazı çıkar)";
+                case SynthesisKind.Neutralise: return "Nötrleşme: baz + asit → tuz + su";
+                case SynthesisKind.OxideAcid: return "Metal oksit + asit → tuz + su";
+                case SynthesisKind.CarbonateAcid: return "Karbonat + asit (CO₂ köpürür)";
+                case SynthesisKind.Precipitate: return "Çöktürme: iki çözeltiyi karıştırarak";
+                case SynthesisKind.Displace: return "Yer değiştirme: aktif metal + bakır tuzu çözeltisi";
+                case SynthesisKind.MetalWater: return "Aktif metal + su (hidrojen çıkar)";
+                case SynthesisKind.OxideWater: return "Metal oksit + su → baz";
+                default: return kind.ToString();
+            }
+        }
+
+        private static readonly CultureInfo Turkish = new CultureInfo("tr-TR");
+
+        private static string Lower(Substance s)
+        {
+            // Only the first letter: "Demir(II) hidroksit" → "demir(II) hidroksit" (not "demir(ıı)").
+            string n = Tr.Substance(s);
+            return n.Length > 1 && char.IsUpper(n[0]) && !char.IsUpper(n[1]) ? char.ToLower(n[0], Turkish) + n.Substring(1) : n;
+        }
+
+        private static string RouteSteps(SynthesisRoute r)
+        {
+            string names = string.Join(" ve ", r.Reagents.Select(Lower));
+            if (names.Length > 0) names = char.ToUpper(names[0], Turkish) + names.Substring(1);
+            switch (r.Kind)
+            {
+                case SynthesisKind.Burn: return $"{names} tozunu boş behere koyup beherle birlikte Bunsen bekinin üstünde kuvvetle ısıtın.";
+                case SynthesisKind.Combine: return r.Heat ? $"{names} karışımını boş behere dökün ve bekin üstünde ısıtın; karışım kızarınca tepkime başlar." : $"{names} aynı behere konunca kendiliğinden birleşir.";
+                case SynthesisKind.Precipitate: return $"İki çözeltiyi aynı behere dökün; oluşan çökeleği gözleyin (süzerek ayrılır).";
+                case SynthesisKind.MetalWater: return $"{names} parçasını su dolu behere atın. Dikkat: şiddetli tepkime!";
+                case SynthesisKind.OxideWater: return $"{names} tozunu su dolu behere dökün; karışım ısınır.";
+                default: return $"Önce {Lower(r.Reagents[0])}, sonra {(r.Reagents.Count > 1 ? Lower(r.Reagents[1]) : "su")} aynı behere dökülür.";
+            }
+        }
+
+        private float DrawSynthesis(Substance sub, float x, float y, float w)
+        {
+            float s = Ui.S;
+            if (_routesFor != sub)
+            {
+                _routesFor = sub;
+                var db = _lab.World.Substances;
+                _routes = sub.ElementSymbol != null ? Synthesis.FromElement(db, sub) : Synthesis.RoutesTo(db, sub);
+            }
+
+            if (_routes.Count == 0) return y;
+            y += 10 * s;
+            DrawRectangle((int)x, (int)y, (int)w, Math.Max(1, (int)s), Theme.Border);
+            y += 12 * s;
+            Ui.Text(sub.ElementSymbol != null ? "BU ELEMENTTEN NELER YAPILIR?" : "NASIL ELDE EDİLİR?", x, y, 16, Theme.Text, true);
+            y += 30 * s;
+            for (int i = 0; i < _routes.Count; i++)
+            {
+                var route = _routes[i];
+                var card = new Rectangle(x, y, w, 0);
+                float cy = y + 10 * s;
+                string head = sub.ElementSymbol != null ? $"{Tr.Substance(route.Product)} ({route.Product.Formula})" : RouteTitle(route.Kind);
+                cy += Ui.Wrapped(head + (route.Heat ? "  · ısıtarak" : ""), x + 14 * s, cy, w - 28 * s, 16, Theme.Accent, true, 1.2f);
+                if (sub.ElementSymbol != null) cy += Ui.Wrapped(RouteTitle(route.Kind), x + 14 * s, cy, w - 28 * s, 14, Theme.Muted, false, 1.2f);
+                cy += 2 * s + Ui.Wrapped(route.Equation, x + 14 * s, cy + 2 * s, w - 28 * s, 19, Theme.Text, true, 1.2f);
+                cy += 2 * s + Ui.Wrapped(RouteSteps(route), x + 14 * s, cy + 2 * s, w - 28 * s, 14, Theme.Muted, false, 1.3f);
+                var btn = new Rectangle(x + w - 200 * s - 14 * s, cy + 8 * s, 200 * s, 44 * s);
+                card.Height = btn.Bottom() - y + 12 * s;
+                DrawRectangleRounded(card, Math.Min(0.2f, 20 * s / card.Height), 8, Theme.Raised);
+                // Redraw the text on top of the card background (immediate mode: background first is simpler to read).
+                cy = y + 10 * s;
+                cy += Ui.Wrapped(head + (route.Heat ? "  · ısıtarak" : ""), x + 14 * s, cy, w - 28 * s, 16, Theme.Accent, true, 1.2f);
+                if (sub.ElementSymbol != null) cy += Ui.Wrapped(RouteTitle(route.Kind), x + 14 * s, cy, w - 28 * s, 14, Theme.Muted, false, 1.2f);
+                cy += 2 * s + Ui.Wrapped(route.Equation, x + 14 * s, cy + 2 * s, w - 28 * s, 19, Theme.Text, true, 1.2f);
+                Ui.Wrapped(RouteSteps(route), x + 14 * s, cy + 4 * s, w - 28 * s, 14, Theme.Muted, false, 1.3f);
+                bool visible = btn.Y > _detail.Y && btn.Bottom() < _detail.Bottom();
+                if (Ui.Button("route" + i, btn, "Tezgâhta hazırla", Gfx.Lerp(Theme.Success, Theme.Button, 0.55f), 15) && visible && !_detailScroll.Dragging)
+                {
+                    PrepareRoute(route);
+                }
+
+                y += card.Height + 10 * s;
+            }
+
+            return y;
+        }
+
+        /// <summary>Puts everything a route needs on the bench: reagent bottles / jars, a beaker of water, an empty beaker (on a burner if it needs heat).</summary>
+        private void PrepareRoute(SynthesisRoute route)
+        {
+            foreach (var r in route.Reagents)
+            {
+                bool dissolved = r.Phase == SubstancePhase.Aqueous || (r.IsIonic && r.CationKey == "H");
+                if (dissolved || (r.Soluble && r.Phase != SubstancePhase.Liquid && route.Kind != SynthesisKind.Burn && route.Kind != SynthesisKind.Combine && r.ElementSymbol == null))
+                {
+                    AddSolution(r, r.IsIonic && r.CationKey == "H" ? 1.0 : 0.5, quiet: true);
+                }
+                else if (r.Phase == SubstancePhase.Liquid)
+                {
+                    AddLiquid(r, 25, quiet: true);
+                }
+                else
+                {
+                    AddJar(r, 10, quiet: true);
+                }
+            }
+
+            if (route.NeedsWater) _lab.Spawn(EquipmentIds.Beaker250Water, _lab.FreeSpot() + new Vector3(0, 0.03f, 0));
+            var vessel = _lab.Spawn(route.Heat ? EquipmentIds.Beaker100 : EquipmentIds.Beaker250, _lab.FreeSpot() + new Vector3(0, 0.03f, 0));
+            if (route.Heat)
+            {
+                var burner = _lab.Spawn(EquipmentIds.BunsenBurner, _lab.FreeSpot(0.14f));
+                if (_lab.Snaps.TryFindDropSnap(vessel.Inst, new IDLab.Core.Pose3(burner.Position + new Vector3(0, 0.25f, 0), Quaternion.Identity), 0.05f, 0.4f, out var c))
+                {
+                    _lab.Snap(vessel, c);
+                }
+            }
+
+            _lab.Selected = vessel;
+            _hud.Tab = HudTab.Lab;
+            _keyboard = false;
+            _focused = false;
+            _hud.Toast($"{Tr.Substance(route.Product)} için malzemeler tezgâhta: {route.Equation}", Theme.Success);
         }
 
         private void DrawAddButtons(Rectangle area, Substance sub)
@@ -716,6 +900,15 @@ namespace IDLab.Desktop
             Ui.Text("TEZGÂHA EKLE", area.X, area.Y + 12 * s, 15, Theme.Text, true);
             var options = new List<(string label, Action act)>();
             string f = sub.Formula;
+            if (sub.Radioactive && sub.ElementSymbol != "U" && sub.ElementSymbol != "Th")
+            {
+                Ui.Wrapped(sub.Synthetic
+                        ? "Bu element yalnızca birkaç atom olarak üretilebildiği için tezgâha eklenemez."
+                        : "Güvenlik: güçlü radyoaktif maddeler okul laboratuvarına (ve bu simülasyonda tezgâha) alınmaz.",
+                    area.X, area.Y + 44 * s, area.Width, 15, Theme.Warning, false, 1.3f);
+                return;
+            }
+
             bool soluble = sub.Soluble || sub.Phase == SubstancePhase.Aqueous;
             if (sub.IsGas)
             {
@@ -774,35 +967,36 @@ namespace IDLab.Desktop
         private static bool LightSensitive(Substance sub) =>
             sub.CationKey == "Ag" || sub.AnionKey == "MnO4" || sub.Id == SubstanceIds.HydrogenPeroxide || sub.Formula.StartsWith("HNO", StringComparison.Ordinal);
 
-        private void AddSolution(Substance sub, double molarity)
+        private void AddSolution(Substance sub, double molarity, bool quiet = false)
         {
             string conc = molarity.ToString("0.0#", CultureInfo.CurrentCulture);
             string id = $"custom.sol.{sub.Id}.{molarity.ToString("0.###", CultureInfo.InvariantCulture)}";
             Spawn(id, () => EquipmentCatalog.CreateBottle(id, $"{sub.Formula} {conc} M",
-                ReagentPreset.Solution($"{conc} M {Tr.Substance(sub)}", 250, sub.Id, molarity), Accent(sub), LightSensitive(sub)), Tr.Substance(sub) + " çözeltisi");
+                ReagentPreset.Solution($"{conc} M {Tr.Substance(sub)}", 250, sub.Id, molarity), Accent(sub), LightSensitive(sub)), Tr.Substance(sub) + " çözeltisi", quiet);
         }
 
-        private void AddLiquid(Substance sub, double ml)
+        private void AddLiquid(Substance sub, double ml, bool quiet = false)
         {
             string id = $"custom.liq.{sub.Id}.{ml:0}";
             Spawn(id, () => EquipmentCatalog.CreateBottle(id, $"{Tr.Substance(sub)} {ml:0} mL",
-                ReagentPreset.Liquid(Tr.Substance(sub), sub.Id, ml, sub.Density, sub.MolarMass), Accent(sub), LightSensitive(sub)), Tr.Substance(sub));
+                ReagentPreset.Liquid(Tr.Substance(sub), sub.Id, ml, sub.Density, sub.MolarMass), Accent(sub), LightSensitive(sub)), Tr.Substance(sub), quiet);
         }
 
-        private void AddJar(Substance sub, double grams)
+        private void AddJar(Substance sub, double grams, bool quiet = false)
         {
             string id = $"custom.jar.{sub.Id}.{grams:0}";
             Spawn(id, () => EquipmentCatalog.CreateJar(id, $"{Tr.Substance(sub)} {grams:0} g", sub.Id, grams, Accent(sub),
-                $"{Tr.Substance(sub)} ({sub.Formula}), {grams:0} g"), Tr.Substance(sub));
+                $"{Tr.Substance(sub)} ({sub.Formula}), {grams:0} g"), Tr.Substance(sub), quiet);
         }
 
-        private void Spawn(string id, Func<EquipmentDefinition> create, string what)
+        private void Spawn(string id, Func<EquipmentDefinition> create, string what, bool quiet = false)
         {
             var catalog = _lab.World.Catalog;
             if (!catalog.Contains(id)) catalog.Register(create());
             var def = catalog.Get(id);
             Thumbnails.Ensure(def);
             var item = _lab.Spawn(id, _lab.FreeSpot() + new Vector3(0, 0.03f, 0));
+            if (quiet) return;
             _lab.Selected = item;
             _hud.Tab = HudTab.Lab;
             _keyboard = false;

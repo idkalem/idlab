@@ -143,6 +143,12 @@ namespace IDLab.Core.Chemistry
         /// <summary>The density is an estimate (not shown to users).</summary>
         public bool DensityEstimated { get; set; }
 
+        /// <summary>A radioactive element (Tc, Pm, Po … Og).</summary>
+        public bool Radioactive { get; set; }
+
+        /// <summary>Made only a few atoms at a time in particle accelerators (Z ≥ 100): no bulk properties.</summary>
+        public bool Synthetic { get; set; }
+
         /// <summary>CAS registry number, when known.</summary>
         public string Cas { get; set; }
 

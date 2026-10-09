@@ -102,26 +102,43 @@ namespace IDLab.Desktop
             }
         }
 
-        /// <summary>Flames dancing above a burning liquid.</summary>
-        public void Fire(Vector3 mouth, float radius, float dt)
+        /// <summary>Flames dancing above a burning liquid (default colours), or a coloured flame for a burning element.</summary>
+        public void Fire(Vector3 mouth, float radius, float dt, Color? tint = null, bool dazzling = false, bool smoke = false)
         {
-            for (float n = 70 * dt; n > 0; n -= 1)
+            for (float n = (dazzling ? 110 : 70) * dt; n > 0; n -= 1)
             {
                 if (_rng.NextDouble() >= n) continue;
                 float a = (float)(_rng.NextDouble() * Math.PI * 2);
                 float r = (float)_rng.NextDouble() * radius;
-                bool blue = _rng.NextDouble() < 0.25;
+                Color color;
+                if (tint is Color t)
+                {
+                    color = _rng.NextDouble() < 0.35 ? Gfx.Lerp(t, Color.White, 0.55f) : t;
+                    color.A = 200;
+                }
+                else
+                {
+                    bool blue = _rng.NextDouble() < 0.25;
+                    color = blue ? Gfx.Rgba(0x5A8CFF, 170) : (_rng.NextDouble() < 0.5 ? Gfx.Rgba(0xFFB030, 200) : Gfx.Rgba(0xFF6A20, 190));
+                }
+
                 Add(new Particle
                 {
                     Position = mouth + new Vector3(MathF.Cos(a) * r, 0.003f, MathF.Sin(a) * r),
                     Velocity = new Vector3(Rand() * 0.02f, 0.18f + (float)_rng.NextDouble() * 0.12f, Rand() * 0.02f),
-                    Color = blue ? Gfx.Rgba(0x5A8CFF, 170) : (_rng.NextDouble() < 0.5 ? Gfx.Rgba(0xFFB030, 200) : Gfx.Rgba(0xFF6A20, 190)),
-                    Size = radius * 0.45f, Growth = 0.2f, Life = 0.45f, Gravity = -0.05f, Additive = true, LandY = float.NaN,
+                    Color = color, Size = radius * (dazzling ? 0.6f : 0.45f), Growth = 0.2f, Life = 0.45f, Gravity = -0.05f, Additive = true, LandY = float.NaN,
                 });
             }
 
-            _flashLevel = Math.Max(_flashLevel, 0.25f + 0.1f * (float)_rng.NextDouble());
-            _flashColor = new Vector3(1.0f, 0.55f, 0.2f);
+            if (smoke && _rng.NextDouble() < 12 * dt)
+            {
+                // White oxide smoke (MgO, P₄O₁₀) rising from the burning solid.
+                Emit(mouth + new Vector3(0, 0.03f, 0), Gfx.Rgba(0xF2F2F2, 120), 2, 0.4f, 0.01f, 0.05f, 3f, -0.02f, false);
+            }
+
+            var light = tint is Color c ? new Vector3(c.R, c.G, c.B) / 255f : new Vector3(1.0f, 0.55f, 0.2f);
+            _flashLevel = Math.Max(_flashLevel, (dazzling ? 0.9f : 0.25f) + 0.1f * (float)_rng.NextDouble());
+            _flashColor = dazzling ? Vector3.Lerp(light, Vector3.One, 0.6f) * 1.3f : light;
         }
 
         /// <summary>A falling drop that splashes where it lands.</summary>

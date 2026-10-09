@@ -31,7 +31,21 @@ namespace IDLab.Desktop
                     lab.Effects.Steam(c.MouthPosition, (float)c.MouthRadiusM * 0.8f, c.IsBoiling ? 30f : 5f, dt);
                 }
 
-                if (c.OnFire) lab.Effects.Fire(c.MouthPosition, (float)Math.Max(0.012, c.MouthRadiusM), dt);
+                if (c.OnFire)
+                {
+                    var fuel = c.BurningSubstance;
+                    if (fuel != null && fuel.Phase == IDLab.Core.Chemistry.SubstancePhase.Solid)
+                    {
+                        // A burning solid: the flame sits on the pile at the bottom and takes the element's colour.
+                        var (tint, dazzling, smoke) = FlameStyle(fuel.ElementSymbol);
+                        var pile = c.BasePosition + new Vector3(0, (float)Math.Max(0.004, c.SolidHeightM), 0);
+                        lab.Effects.Fire(pile, (float)Math.Max(0.008, c.RadiusM * 0.6), dt, tint, dazzling, smoke);
+                    }
+                    else
+                    {
+                        lab.Effects.Fire(c.MouthPosition, (float)Math.Max(0.012, c.MouthRadiusM), dt);
+                    }
+                }
 
                 if (c.IsPouring)
                 {
@@ -42,12 +56,18 @@ namespace IDLab.Desktop
                     {
                         var solid = c.Contents.Solids().OrderByDescending(kv => kv.Value).FirstOrDefault().Key;
                         var sc = solid != null ? Gfx.FromCore(solid.Color) : Color.Gray;
-                        float size = solid != null ? Math.Max(0.002f, VesselState.PieceStyle(solid.Form).size * 0.7f) : 0.003f;
-                        _chunkAccumulator += dt * 10f;
+                        float piece = solid != null ? VesselState.PieceStyle(solid.Form).size : 0;
+                        bool powder = piece <= 0.0026f;
+                        float size = powder ? 0.0021f : Math.Max(0.0025f, piece * 0.7f);
+                        // Powders run out as a dense trickle of grains; granules and chunks as fewer, larger pieces.
+                        float perSecond = powder ? (float)Math.Clamp(c.PourRateLitersPerSecond * 1000 * 35, 40, 110) : 12f;
+                        _chunkAccumulator += dt * perSecond;
                         while (_chunkAccumulator >= 1)
                         {
                             _chunkAccumulator -= 1;
-                            lab.Effects.Chunk(c.PourLipPosition, outward * 0.3f + new Vector3(Rand() * 0.03f, 0, Rand() * 0.03f), sc, size, landY);
+                            var grain = Gfx.Lerp(sc, Rand() > 0 ? Color.White : Color.Black, Math.Abs(Rand()) * 0.18f);
+                            lab.Effects.Chunk(c.PourLipPosition + new Vector3(Rand() * 0.004f, 0, Rand() * 0.004f),
+                                outward * 0.3f + new Vector3(Rand() * 0.03f, 0, Rand() * 0.03f), grain, size * (0.8f + Math.Abs(Rand()) * 0.5f), landY);
                         }
                     }
                     else if (c.PourRateLitersPerSecond < 0.0012)
@@ -198,12 +218,37 @@ namespace IDLab.Desktop
             {
                 if (item.Def.VisualKey != "burner" || !item.Heat.IsLit) continue;
                 float valve = (float)item.Heat.GasValve;
-                float noise = 0.88f + 0.24f * Noise(_time * 14f + item.Inst.Id * 3.1f);
-                var basePos = item.Inst.Pose.TransformPoint(new Vector3(0, 0.13f, 0));
-                float outer = (0.025f + 0.05f * valve) * noise;
-                DrawCylinderEx(basePos, basePos + new Vector3(0, outer, 0), 0.008f + valve * 0.004f, 0f, 20, new Color(60, 110, 255, 120));
-                DrawCylinderEx(basePos, basePos + new Vector3(0, outer * 0.45f, 0), 0.0055f, 0f, 20, new Color(140, 220, 255, 200));
-                DrawCylinderEx(basePos + new Vector3(0, outer * 0.7f, 0), basePos + new Vector3(0, outer * 1.15f, 0), 0.004f, 0f, 12, new Color(255, 150, 60, (int)(60 * valve)));
+                float id = item.Inst.Id * 3.1f;
+                var basePos = item.Inst.Pose.TransformPoint(new Vector3(0, 0.134f, 0));
+                // A roaring blue Bunsen flame: pale inner cone, blue-violet mantle that sways and licks upwards,
+                // and a faint orange tip when the gas is turned up (incomplete combustion at the top).
+                float height = (0.03f + 0.055f * valve) * (0.92f + 0.16f * Noise(_time * 13f + id));
+                float r0 = 0.0074f + valve * 0.0016f;
+                var sway = new Vector3(0.002f * MathF.Sin(_time * 9f + id), 0, 0.002f * MathF.Cos(_time * 7f + id)) * valve;
+                for (int layer = 0; layer < 4; layer++)
+                {
+                    float k = 1f - layer * 0.12f;
+                    float hl = height * k * (0.95f + 0.1f * Noise(_time * 17f + layer * 1.7f + id));
+                    DrawCylinderEx(basePos, basePos + new Vector3(0, hl, 0) + sway * (1 + layer), r0 * (1.05f - layer * 0.08f), 0f, 18,
+                        new Color(50 + layer * 10, 90 + layer * 15, 255, 46 + layer * 10));
+                }
+
+                for (int t = 0; t < 3; t++)
+                {
+                    float a = _time * (2.3f + t) + t * 2.1f + id;
+                    var off = new Vector3(MathF.Cos(a), 0, MathF.Sin(a)) * r0 * 0.45f;
+                    float th = height * (0.55f + 0.35f * Noise(_time * 21f + t * 4.3f + id));
+                    DrawCylinderEx(basePos + off * 0.5f, basePos + off + new Vector3(0, th, 0) + sway * 2, r0 * 0.42f, 0f, 10, new Color(90, 120, 255, 55));
+                }
+
+                float inner = height * (0.36f + 0.04f * Noise(_time * 25f + id));
+                DrawCylinderEx(basePos, basePos + new Vector3(0, inner, 0), r0 * 0.72f, 0f, 18, new Color(120, 230, 255, 170));
+                DrawCylinderEx(basePos, basePos + new Vector3(0, inner * 0.7f, 0), r0 * 0.45f, 0f, 14, new Color(210, 250, 255, 150));
+                if (valve > 0.55f)
+                {
+                    DrawCylinderEx(basePos + new Vector3(0, height * 0.72f, 0) + sway, basePos + new Vector3(0, height * 1.12f, 0) + sway * 3, r0 * 0.5f, 0f, 10,
+                        new Color(255, 150, 60, (int)(90 * (valve - 0.5f))));
+                }
             }
 
             EndBlendMode();
@@ -230,6 +275,28 @@ namespace IDLab.Desktop
         }
 
         public static void DrawLabels(Lab lab) => Props.DrawLabels(lab);
+
+        /// <summary>Flame colour of a burning element (flame-test colours), whether it is blinding, whether it smokes white.</summary>
+        private static (Color tint, bool dazzling, bool smoke) FlameStyle(string element)
+        {
+            switch (element)
+            {
+                case "Mg": return (new Color(255, 255, 255, 255), true, true);
+                case "Al": case "Ti": case "Zr": return (new Color(255, 250, 235, 255), true, true);
+                case "P": return (new Color(255, 236, 170, 255), true, true);
+                case "S": return (new Color(80, 110, 255, 255), false, false);
+                case "Na": return (new Color(255, 190, 40, 255), false, true);
+                case "K": case "Rb": case "Cs": return (new Color(200, 120, 255, 255), false, true);
+                case "Li": case "Sr": return (new Color(255, 40, 60, 255), false, true);
+                case "Ca": return (new Color(255, 110, 40, 255), false, true);
+                case "Ba": return (new Color(150, 255, 90, 255), false, true);
+                case "Cu": return (new Color(60, 255, 170, 255), false, false);
+                case "Zn": return (new Color(200, 230, 255, 255), true, true);
+                case "Fe": return (new Color(255, 170, 60, 255), false, false);
+                case null: return (new Color(255, 170, 50, 255), false, false); // organic solids: sooty yellow flame
+                default: return (new Color(255, 200, 120, 255), false, true);
+            }
+        }
 
         private static float Noise(float t) => 0.5f + 0.25f * MathF.Sin(t * 1.7f) + 0.15f * MathF.Sin(t * 3.9f + 1.3f) + 0.1f * MathF.Sin(t * 7.3f);
         private static float Rand() => (float)(Rng.NextDouble() * 2 - 1);

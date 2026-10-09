@@ -46,7 +46,6 @@ namespace IDLab.Desktop
             Add("Ayırma yöntemleri", "Karışımlar fiziksel yollarla nasıl ayrılır?", 0x3CC9A0, SeparationPage);
             Add("Periyodik özellikler", "Grup, periyot ve değişim eğilimleri.", 0xB57CFF, TrendsPage);
             Add("Fizik formülleri", "Hareket, kuvvet, enerji, elektrik.", 0x8BD17C, PhysicsPage);
-            Add("Mikroskop ve hücre", "Mikroskop kullanımı ve hücre organelleri.", 0xFF7EB6, BiologyPage);
         }
 
         public void Select(int index)
@@ -247,7 +246,7 @@ namespace IDLab.Desktop
             Heading("Acil durum donanımları");
             Bullets(
                 "Göz duşu ve acil duş: Laboratuvarın arka köşesinde. Kimyasal sıçradığında hemen kullanılır.",
-                "Yangın tüpü ve yangın battaniyesi: Sağ duvarda. Elektrik ve sıvı yangınlarında su kullanılmaz.",
+                "Yangın söndürme tüpü ve yangın battaniyesi: Sağ duvarda. Elektrik ve yanıcı sıvı yangınlarında su kullanılmaz.",
                 "İlk yardım dolabı ve acil çıkış: Yerlerini ilk derste öğrenin.");
         }
 
@@ -587,7 +586,7 @@ namespace IDLab.Desktop
                 new[] { "Dekantasyon (aktarma)", "Yoğunluk farkı, çökme", "Çökeleğin üstündeki sıvıyı başka kaba aktarmak" },
                 new[] { "Mıknatıs", "Manyetik özellik", "Demir tozu + kükürt" },
                 new[] { "Kromatografi", "Yüzeye tutunma farkı", "Mürekkepteki boyaları ayırmak" },
-                new[] { "Santrifüj", "Yoğunluk farkı (hızlı döndürme)", "Kan hücrelerini plazmadan ayırmak" });
+                new[] { "Santrifüj", "Yoğunluk farkı (hızlı döndürme)", "Bulanık sıvıdaki çökeleği hızla dibe toplamak" });
             Heading("Laboratuvar ipucu");
             Paragraph("Simülasyonda bir behere çökelek oluşturup (ör. AgNO₃ + NaCl) yavaşça eğdiğinizde önce berrak sıvı akar; katı dipte kalır. Bu, dekantasyondur.");
         }
@@ -664,28 +663,6 @@ namespace IDLab.Desktop
                 new[] { "Sıcaklık", "kelvin (K)", "T(K) = t(°C) + 273" },
                 new[] { "Basınç", "pascal (Pa)", "1 atm = 101 325 Pa = 76 cmHg" },
                 new[] { "Enerji", "joule (J)", "1 cal = 4,18 J" });
-        }
-
-        private void BiologyPage()
-        {
-            Heading("Mikroskop kullanımı");
-            Bullets(
-                "Mikroskobu iki elle, bir el kolunda bir el tabanında olacak şekilde taşıyın.",
-                "İncelemeye her zaman en küçük büyütmeli objektifle (4× ya da 10×) başlayın.",
-                "Preparatı tablaya koyup mandallarla sabitleyin; önce makro, sonra mikro vida ile netleyin.",
-                "Toplam büyütme = oküler büyütmesi × objektif büyütmesi (ör. 10× × 40× = 400×).",
-                "Büyük büyütmede yalnızca mikro vidayı kullanın; objektif preparata değmemelidir.");
-            Heading("Hücre organelleri");
-            Table(new[] { 1f, 2f, 0.9f, 0.9f }, new[] { "Organel", "Görevi", "Hayvan", "Bitki" },
-                new[] { "Hücre zarı", "Madde giriş-çıkışını denetler.", "Var", "Var" },
-                new[] { "Hücre duvarı", "Hücreye destek ve şekil verir (selüloz).", "Yok", "Var" },
-                new[] { "Çekirdek", "Kalıtım maddesini (DNA) taşır, hücreyi yönetir.", "Var", "Var" },
-                new[] { "Mitokondri", "Oksijenli solunumla enerji (ATP) üretir.", "Var", "Var" },
-                new[] { "Kloroplast", "Fotosentez yapar, klorofil içerir.", "Yok", "Var" },
-                new[] { "Ribozom", "Protein sentezler.", "Var", "Var" },
-                new[] { "Koful", "Su ve madde depolar; bitkide büyük ve merkezidir.", "Küçük", "Büyük" },
-                new[] { "Sentrozom", "Hücre bölünmesinde iğ ipliklerini oluşturur.", "Var", "Yok*" });
-            Paragraph("* Çoğu bitki hücresinde bulunmaz. Fizik ve biyoloji deney modülleri sonraki sürümlerde eklenecektir.", 14, Theme.Muted);
         }
     }
 }

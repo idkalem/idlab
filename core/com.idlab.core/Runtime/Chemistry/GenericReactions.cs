@@ -445,4 +445,57 @@ namespace IDLab.Core.Chemistry
             return changed;
         }
     }
+
+    /// <summary>
+    /// A metal heated with sulfur, iodine or bromine combines with it directly (Fe + S → FeS glows red;
+    /// Zn + S → ZnS; mercury and sulfur react even at room temperature, which is how spilt mercury is cleaned up).
+    /// </summary>
+    public sealed class GenericCombinationRule : IReactionRule, IOncePerTickRule
+    {
+        public string Id => "generic.combine";
+
+        public bool TryApply(Mixture m, ReactionOutcome outcome, double dt)
+        {
+            var db = m.Database;
+            Substance nonMetal = null;
+            var metals = new List<(Substance s, ActivitySeries.Entry e)>();
+            foreach (var kv in m.Components)
+            {
+                if (kv.Value <= 1e-10) continue;
+                var s = db.Get(kv.Key);
+                if (s.ElementSymbol == null) continue;
+                if (Synthesis.CombineWith.ContainsKey(s.ElementSymbol)) nonMetal = s;
+                else
+                {
+                    var e = ActivitySeries.Get(s.ElementSymbol);
+                    if (e != null) metals.Add((s, e));
+                }
+            }
+
+            if (nonMetal == null || metals.Count == 0) return false;
+            bool changed = false;
+            foreach (var (metal, e) in metals)
+            {
+                double needC = metal.ElementSymbol == "Hg" && nonMetal.ElementSymbol == "S" ? 0 : Synthesis.CombineWith[nonMetal.ElementSymbol];
+                if (m.TemperatureC < needC) continue;
+                var product = db.FindIonic(e.CationKey, nonMetal.ElementSymbol);
+                if (product == null) continue;
+                int atomsX = Combustion.AtomsOf(nonMetal.Formula, nonMetal.ElementSymbol);
+                double perProductX = (double)product.AnionCount / Math.Max(1, atomsX);
+                double max = Math.Min(m.Moles(metal.Id) / product.CationCount, m.Moles(nonMetal.Id) / perProductX);
+                if (max <= 1e-10) continue;
+                double xi = max * (1 - Math.Exp(-0.4 * Math.Max(dt, 1e-4)));
+                if (max - xi < 1e-9) xi = max;
+                m.Remove(metal.Id, product.CationCount * xi);
+                m.Remove(nonMetal.Id, perProductX * xi);
+                m.Add(product.Id, xi);
+                outcome.HeatReleasedJ += 100_000 * xi;
+                if (max - xi > 1e-9) outcome.Ongoing = true;
+                outcome.Effects.Add(new ReactionEffect(LabEventType.Reaction, Math.Min(1.0, max / 0.02), $"{product.Name} forms.", "make:" + product.Id, Id));
+                changed = true;
+            }
+
+            return changed;
+        }
+    }
 }

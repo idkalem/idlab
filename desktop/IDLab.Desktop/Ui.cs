@@ -7,25 +7,58 @@ using static Raylib_cs.Raylib;
 
 namespace IDLab.Desktop
 {
-    /// <summary>Dark lab theme tokens.</summary>
+    /// <summary>Theme tokens: a dark (default) and a light palette, switched from the top bar.</summary>
     internal static class Theme
     {
-        public static readonly Color Scene = Gfx.Rgba(0x0B0F17);
-        public static readonly Color Panel = Gfx.Rgba(0x111827, 236);
-        public static readonly Color Raised = Gfx.Rgba(0x1A2333, 245);
-        public static readonly Color Border = Gfx.Rgba(0x2A3A52);
-        public static readonly Color TopBar = Gfx.Rgba(0x0D131E, 248);
-        public static readonly Color Text = Gfx.Rgba(0xE6EDF7);
-        public static readonly Color Muted = Gfx.Rgba(0x8A9BB4);
-        public static readonly Color Accent = Gfx.Rgba(0x35C4FF);
-        public static readonly Color AccentDim = Gfx.Rgba(0x1C4E6B);
-        public static readonly Color Button = Gfx.Rgba(0x1F2A3C);
-        public static readonly Color ButtonHot = Gfx.Rgba(0x2A3A52);
-        public static readonly Color Danger = Gfx.Rgba(0xFF5A4F);
-        public static readonly Color Warning = Gfx.Rgba(0xFFB347);
-        public static readonly Color Success = Gfx.Rgba(0x4FE07A);
-        public static readonly Color Grid = Gfx.Rgba(0x26324A);
-        public static readonly Color[] Series = { Gfx.Rgba(0xFF7A45), Gfx.Rgba(0x35C4FF), Gfx.Rgba(0x4FE07A), Gfx.Rgba(0xC07BFF), Gfx.Rgba(0xFFD24F) };
+        public static Color Scene, Panel, Raised, Border, TopBar, Text, Muted, Accent, AccentDim, Button, ButtonHot, Danger, Warning, Success, Grid;
+        public static Color[] Series;
+
+        public static bool Dark { get; private set; }
+
+        static Theme() => Apply(true);
+
+        public static void Apply(bool dark)
+        {
+            Dark = dark;
+            if (dark)
+            {
+                Scene = Gfx.Rgba(0x0B0F17);
+                Panel = Gfx.Rgba(0x111827, 236);
+                Raised = Gfx.Rgba(0x1A2333, 245);
+                Border = Gfx.Rgba(0x2A3A52);
+                TopBar = Gfx.Rgba(0x0D131E, 248);
+                Text = Gfx.Rgba(0xE6EDF7);
+                Muted = Gfx.Rgba(0x8A9BB4);
+                Accent = Gfx.Rgba(0x35C4FF);
+                AccentDim = Gfx.Rgba(0x1C4E6B);
+                Button = Gfx.Rgba(0x1F2A3C);
+                ButtonHot = Gfx.Rgba(0x2A3A52);
+                Danger = Gfx.Rgba(0xFF5A4F);
+                Warning = Gfx.Rgba(0xFFB347);
+                Success = Gfx.Rgba(0x4FE07A);
+                Grid = Gfx.Rgba(0x26324A);
+                Series = new[] { Gfx.Rgba(0xFF7A45), Gfx.Rgba(0x35C4FF), Gfx.Rgba(0x4FE07A), Gfx.Rgba(0xC07BFF), Gfx.Rgba(0xFFD24F) };
+            }
+            else
+            {
+                Scene = Gfx.Rgba(0xE8EDF4);
+                Panel = Gfx.Rgba(0xFBFCFE, 242);
+                Raised = Gfx.Rgba(0xEEF2F7, 250);
+                Border = Gfx.Rgba(0xC5CFDC);
+                TopBar = Gfx.Rgba(0xFFFFFF, 250);
+                Text = Gfx.Rgba(0x111827);
+                Muted = Gfx.Rgba(0x56657A);
+                Accent = Gfx.Rgba(0x0A7BC0);
+                AccentDim = Gfx.Rgba(0xBFE2F6);
+                Button = Gfx.Rgba(0xE1E7EF);
+                ButtonHot = Gfx.Rgba(0xD2DBE6);
+                Danger = Gfx.Rgba(0xE0453A);
+                Warning = Gfx.Rgba(0xCC7414);
+                Success = Gfx.Rgba(0x1E9A48);
+                Grid = Gfx.Rgba(0xD6DEE8);
+                Series = new[] { Gfx.Rgba(0xE8622A), Gfx.Rgba(0x0A7BC0), Gfx.Rgba(0x1E9A48), Gfx.Rgba(0x8B4FD8), Gfx.Rgba(0xB88700) };
+            }
+        }
     }
 
     /// <summary>
@@ -47,6 +80,14 @@ namespace IDLab.Desktop
         public static bool Down { get; private set; }
         public static bool Released { get; private set; }
         public static string Active => _active;
+
+        /// <summary>Where the current (or last) press started.</summary>
+        public static Vector2 PressPosition { get; private set; }
+
+        /// <summary>How far a finger may wander before a tap counts as a drag (touch screens jitter a lot).</summary>
+        public static float TapSlop => 18 * S;
+
+        private static bool _synthRelease;
 
         /// <summary>True while the current press started on UI (the 3D scene must ignore it).</summary>
         public static bool Captured { get; private set; }
@@ -70,7 +111,7 @@ namespace IDLab.Desktop
             Range(0x2070, 0x209F);  // superscripts / subscripts (H₂O, H₃O⁺)
             Range(0x2190, 0x2199);  // arrows
             Range(0x0391, 0x03C9);  // Greek (Δ, ρ, λ, μ ...)
-            codepoints.AddRange(new[] { 0x2212, 0x2248, 0x2264, 0x2265, 0x25B2, 0x25B6, 0x25BC, 0x25C0, 0x25CF, 0x26A0, 0x2715, 0x21BA });
+            codepoints.AddRange(new[] { 0x2212, 0x2248, 0x2264, 0x2265, 0x25B2, 0x25B6, 0x25BC, 0x25C0, 0x25CF, 0x26A0, 0x2622, 0x2600, 0x263E, 0x2715, 0x21BA });
             var font = LoadFontFromMemory(".ttf", ms.ToArray(), 64, codepoints.ToArray(), codepoints.Count);
             GenTextureMipmaps(ref font.Texture);
             SetTextureFilter(font.Texture, TextureFilter.Trilinear);
@@ -84,6 +125,25 @@ namespace IDLab.Desktop
             Pressed = IsMouseButtonPressed(MouseButton.Left);
             Down = IsMouseButtonDown(MouseButton.Left);
             Released = IsMouseButtonReleased(MouseButton.Left);
+            bool tap = TouchInput.TakeTap();
+            if (_synthRelease)
+            {
+                // Second half of a recovered tap.
+                _synthRelease = false;
+                if (!Pressed && !Down)
+                {
+                    Released = true;
+                }
+            }
+            else if (tap && !Pressed && !Down && !Released)
+            {
+                // A touch tap whose down and up arrived in the same frame: replay it as press now, release next frame.
+                Pressed = true;
+                Down = true;
+                _synthRelease = true;
+            }
+
+            if (Pressed) PressPosition = Mouse;
             if (Pressed)
             {
                 Captured = false;
@@ -129,11 +189,15 @@ namespace IDLab.Desktop
             Text(text, r.X + (r.Width - m.X) / 2, r.Y + (r.Height - m.Y) / 2, size, color, bold);
         }
 
-        /// <summary>Word-wrapped text; returns the height used.</summary>
-        public static float Wrapped(string text, float x, float y, float width, float size, Color color, bool bold = false, float lineGap = 1.25f, bool draw = true)
+        private static readonly Dictionary<(string, float, bool, int), string[]> WrapCache = new Dictionary<(string, float, bool, int), string[]>();
+
+        /// <summary>Line breaks of a text at a width (measuring every word each frame is costly, so layouts are cached).</summary>
+        private static string[] WrapLines(string text, float width, float size, bool bold)
         {
-            float lineHeight = size * S * lineGap;
-            float cy = y;
+            var key = (text, size * S, bold, (int)width);
+            if (WrapCache.TryGetValue(key, out var cached)) return cached;
+            if (WrapCache.Count > 6000) WrapCache.Clear();
+            var lines = new List<string>();
             foreach (var paragraph in text.Split('\n'))
             {
                 string line = "";
@@ -142,8 +206,7 @@ namespace IDLab.Desktop
                     string candidate = line.Length == 0 ? word : line + " " + word;
                     if (Measure(candidate, size, bold).X > width && line.Length > 0)
                     {
-                        if (draw) Text(line, x, cy, size, color, bold);
-                        cy += lineHeight;
+                        lines.Add(line);
                         line = word;
                     }
                     else
@@ -152,11 +215,30 @@ namespace IDLab.Desktop
                     }
                 }
 
-                if (draw) Text(line, x, cy, size, color, bold);
-                cy += lineHeight;
+                lines.Add(line);
             }
 
-            return cy - y;
+            var result = lines.ToArray();
+            WrapCache[key] = result;
+            return result;
+        }
+
+        /// <summary>Word-wrapped text; returns the height used.</summary>
+        public static float Wrapped(string text, float x, float y, float width, float size, Color color, bool bold = false, float lineGap = 1.25f, bool draw = true)
+        {
+            float lineHeight = size * S * lineGap;
+            var lines = WrapLines(text, width, size, bold);
+            if (draw)
+            {
+                float cy = y;
+                foreach (var line in lines)
+                {
+                    Text(line, x, cy, size, color, bold);
+                    cy += lineHeight;
+                }
+            }
+
+            return lines.Length * lineHeight;
         }
 
         // ------------------------------------------------------------------ widgets

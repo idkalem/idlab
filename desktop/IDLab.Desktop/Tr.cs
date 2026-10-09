@@ -30,7 +30,7 @@ namespace IDLab.Desktop
             [EquipmentIds.WaterBottle] = ("Saf su (400 mL)", "Saf su şişesi."),
             [EquipmentIds.HclBottle] = ("HCl 1,0 M", "Hidroklorik asit (kuvvetli asit)."),
             [EquipmentIds.H2so4Bottle] = ("H₂SO₄ 0,5 M", "Sülfürik asit (kuvvetli, iki protonlu)."),
-            [EquipmentIds.Hno3Bottle] = ("HNO₃ 1,0 M", "Nitrik asit (kuvvetli asit, yükseltgen)."),
+            [EquipmentIds.Hno3Bottle] = ("HNO₃ 1,0 M", "Nitrik asit (kuvvetli asit, oksitleyici)."),
             [EquipmentIds.NaohBottle] = ("NaOH 1,0 M", "Sodyum hidroksit (kuvvetli baz)."),
             [EquipmentIds.KohBottle] = ("KOH 1,0 M", "Potasyum hidroksit (kuvvetli baz)."),
             [EquipmentIds.Nh3Bottle] = ("NH₃ 1,0 M", "Amonyak çözeltisi (zayıf baz)."),
@@ -161,12 +161,12 @@ namespace IDLab.Desktop
         {
             switch (h)
             {
-                case IDLab.Core.Chemistry.Hazard.Corrosive: return "Aşındırıcı";
-                case IDLab.Core.Chemistry.Hazard.Toxic: return "Zehirli";
+                case IDLab.Core.Chemistry.Hazard.Corrosive: return "Aşındırıcı (korozif)";
+                case IDLab.Core.Chemistry.Hazard.Toxic: return "Akut toksik (zehirli)";
                 case IDLab.Core.Chemistry.Hazard.Flammable: return "Yanıcı";
-                case IDLab.Core.Chemistry.Hazard.Oxidizer: return "Yükseltgen";
-                case IDLab.Core.Chemistry.Hazard.Irritant: return "Tahriş edici";
-                case IDLab.Core.Chemistry.Hazard.Environment: return "Çevreye zararlı";
+                case IDLab.Core.Chemistry.Hazard.Oxidizer: return "Oksitleyici";
+                case IDLab.Core.Chemistry.Hazard.Irritant: return "Tahriş edici / zararlı";
+                case IDLab.Core.Chemistry.Hazard.Environment: return "Çevre için tehlikeli";
                 case IDLab.Core.Chemistry.Hazard.WaterReactive: return "Suyla tepkimeli";
                 case IDLab.Core.Chemistry.Hazard.Explosive: return "Patlayıcı";
                 case IDLab.Core.Chemistry.Hazard.CompressedGas: return "Basınçlı gaz";
@@ -188,10 +188,93 @@ namespace IDLab.Desktop
             }
         }
 
+        private static string SubName(string id)
+        {
+            var db = Program.LabInstance?.World.Substances;
+            return db != null && db.TryGet(id, out var sub) ? Substance(sub) : id;
+        }
+
+        private static string SubFormula(string id)
+        {
+            var db = Program.LabInstance?.World.Substances;
+            return db != null && db.TryGet(id, out var sub) ? sub.Formula : id;
+        }
+
+        private static string ElementName(string symbol)
+        {
+            var el = Program.LabInstance?.World.Substances.FindElement(symbol);
+            return el != null ? Substance(el) : symbol;
+        }
+
+        /// <summary>Events whose code carries the substance ("fire.solid:mg", "precip:i_ag_cl", ...).</summary>
+        private static string EventWithArgument(LabEvent e, string ownerName)
+        {
+            string code = e.Code ?? "";
+            int colon = code.IndexOf(':');
+            if (colon < 0) return null;
+            string kind = code.Substring(0, colon), arg = code.Substring(colon + 1);
+            string who = string.IsNullOrEmpty(ownerName) ? "" : ownerName + ": ";
+            switch (kind)
+            {
+                case "fire.vapour": return $"YANGIN! {SubName(arg)} buharı alev aldı. 'Söndür' ile kabın ağzını kapatın; yanıcı sıvıları alevle ısıtmayın.";
+                case "fire.hotplate": return $"YANGIN! Isıtıcının kızgın yüzeyi {SubName(arg)} buharını tutuşturdu (düşük tutuşma sıcaklığı).";
+                case "fire.solid":
+                {
+                    var db = Program.LabInstance?.World.Substances;
+                    IDLab.Core.Chemistry.Substance sub = null;
+                    db?.TryGet(arg, out sub);
+                    switch (sub?.ElementSymbol)
+                    {
+                        case "Mg": return "Magnezyum göz kamaştırıcı beyaz ışıkla yanıyor: 2Mg + O₂ → 2MgO (beyaz duman). Alevin içine doğrudan bakmayın!";
+                        case "S": return "Kükürt mavi alevle yanıyor: S + O₂ → SO₂. Çıkan gaz zehirli ve keskin kokulu; çeker ocakta çalışın!";
+                        case "P": return "Fosfor parlak alevle yanıyor: P₄ + 5O₂ → P₄O₁₀ (yoğun beyaz duman).";
+                        case "Na": return "Sodyum sarı-turuncu alevle yanıyor: 2Na + O₂ → Na₂O₂.";
+                        case "K": return "Potasyum leylak renkli alevle yanıyor: K + O₂ → KO₂.";
+                        case "Fe": return "Demir tozu kıvılcımlar saçarak yanıyor: 3Fe + 2O₂ → Fe₃O₄.";
+                        case "C": return "Karbon kor hâlinde yanıyor: C + O₂ → CO₂.";
+                    }
+
+                    if (sub == null) return null;
+                    var (oxide, _) = IDLab.Core.Chemistry.Combustion.OxideOf(db, sub);
+                    return oxide != null ? $"{Substance(sub)} havada yanıyor ve {oxide.Formula} oluşuyor." : $"{Substance(sub)} alevde yanıyor (CO₂ ve su buharı çıkıyor).";
+                }
+
+                case "boom.vapour": return $"PATLAMA! {SubName(arg)} buharı havayla karışıp alevde patladı. Uçucu yanıcı sıvılar alevden uzak tutulur!";
+                case "boom.explosive": return $"PATLAMA! {SubName(arg)} ısınınca infilak etti. Patlayıcılar asla ısıtılmaz!";
+                case "tarnish":
+                {
+                    var parts = arg.Split(':');
+                    return parts.Length == 2 ? $"{SubName(parts[0])} ısınınca yüzeyi oksitleniyor: {SubFormula(parts[1])} oluşuyor (alev çıkmadan)." : null;
+                }
+
+                case "precip": return $"{who}{SubName(arg)} ({SubFormula(arg)}) çökeleği oluştu.";
+                case "complex": return $"{who}{SubName(arg)} ({SubFormula(arg)}) kompleksi oluştu; renk değişti.";
+                case "dissolve": return $"{who}{SubName(arg)} asitte çözünüyor.";
+                case "displace":
+                {
+                    var parts = arg.Split(':');
+                    return parts.Length == 2 ? $"{who}{ElementName(parts[1])} metalinin üzerinde {ElementName(parts[0])} birikiyor (yer değiştirme tepkimesi)." : null;
+                }
+
+                case "metal.water.boom": return $"PATLAMA! {ElementName(arg)} suyla şiddetle tepkimeye girdi, açığa çıkan hidrojen tutuştu.";
+                case "metal.water": return $"{who}{ElementName(arg)} suyla tepkimeye giriyor, hidrojen gazı çıkıyor.";
+                case "oxide.water": return $"{who}{SubName(arg)} suyla tepkimeye girip ısınıyor (baz oluşuyor).";
+                case "make": return $"{who}{SubName(arg)} ({SubFormula(arg)}) elde edildi!";
+            }
+
+            return null;
+        }
+
         public static string Event(LabEvent e, string ownerName)
         {
+            string withArgument = EventWithArgument(e, ownerName);
+            if (withArgument != null) return withArgument;
             switch (e.Code)
             {
+                case "boom.h2": return "Pat! Çıkan hidrojen gazı alevde patladı: 2H₂ + O₂ → 2H₂O.";
+                case "hazard.h2s": return "ZEHİRLİ H₂S GAZI (çürük yumurta kokusu)! Çeker ocakta çalışın.";
+                case "hazard.so2": return "ZEHİRLİ SO₂ GAZI çıkıyor! Çeker ocakta çalışın.";
+                case "hazard.hcn": return "ÇOK ZEHİRLİ HCN GAZI! Siyanürler asla asitle karıştırılmaz.";
                 case "hazard.sodium.explosion": return "PATLAMA! Sodyum suyla şiddetle tepkimeye girdi, hidrojen tutuştu.";
                 case "hazard.sodium.fizz": return "Sodyum suda köpürerek koşturuyor, hidrojen gazı çıkıyor.";
                 case "hazard.chlorine": return "ZEHİRLİ KLOR GAZI! Çamaşır suyu asitle asla karıştırılmamalı.";

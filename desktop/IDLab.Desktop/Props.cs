@@ -280,12 +280,40 @@ namespace IDLab.Desktop
         private static void DrawHotPlate(Item item, Matrix4x4 pose)
         {
             float power = (float)item.Heat.GasValve;
-            Gfx.Draw(Gfx.Cube, Gfx.Part(Gfx.Mul(Gfx.Scale(0.17f, 0.062f, 0.19f), Gfx.Translate(0, 0.031f, 0)), pose), new Color(236, 238, 242, 255));
-            Gfx.Draw(Gfx.Cube, Gfx.Part(Gfx.Mul(Gfx.Scale(0.15f, 0.008f, 0.15f), Gfx.Translate(0, 0.066f, 0.01f)), pose), new Color(40, 42, 48, 255),
-                new Vector3(1.0f, 0.18f, 0.05f) * power * power * 0.8f);
-            Gfx.Draw(Gfx.Cube, Gfx.Part(Gfx.Mul(Gfx.Scale(0.15f, 0.025f, 0.004f), Gfx.Translate(0, 0.03f, -0.0955f)), pose), new Color(50, 54, 62, 255));
-            Knob(pose, new Vector3(-0.04f, 0.03f, -0.096f), power, new Color(240, 120, 40, 255));
-            Gfx.Draw(Gfx.Sphere, Gfx.Part(Gfx.Mul(Gfx.Scale(0.004f), Gfx.Translate(0.05f, 0.03f, -0.098f)), pose),
+            float heat = item.Heat.IsLit ? power : 0f;
+            var body = new Color(236, 238, 242, 255);
+            var panel = new Color(46, 50, 58, 255);
+            // Rubber feet, a two-step enamelled body and the sloping control panel at the front.
+            foreach (var (fx, fz) in new[] { (-0.07f, -0.08f), (0.07f, -0.08f), (-0.07f, 0.08f), (0.07f, 0.08f) })
+            {
+                Gfx.Draw(Gfx.Cylinder, Gfx.Part(Gfx.Mul(Gfx.Scale(0.008f, 0.004f, 0.008f), Gfx.Translate(fx, 0, fz)), pose), DarkPlastic);
+            }
+
+            Gfx.Draw(Gfx.Cube, Gfx.Part(Gfx.Mul(Gfx.Scale(0.17f, 0.046f, 0.19f), Gfx.Translate(0, 0.027f, 0)), pose), body);
+            Gfx.Draw(Gfx.Cube, Gfx.Part(Gfx.Mul(Gfx.Scale(0.162f, 0.008f, 0.182f), Gfx.Translate(0, 0.054f, 0)), pose), Gfx.Lerp(body, Color.White, 0.3f));
+            var slope = Quaternion.CreateFromAxisAngle(Vector3.UnitX, -0.42f);
+            Gfx.Draw(Gfx.Cube, Gfx.Part(Gfx.Mul(Gfx.Mul(Gfx.Scale(0.16f, 0.036f, 0.004f), Gfx.Rotate(slope)), Gfx.Translate(0, 0.028f, -0.0965f)), pose), panel);
+
+            // Round ceramic top plate in a steel bezel; its heating coil glows through when it is on.
+            var bezel = Gfx.CachedLathe("hotplateBezel", new[] { new Vector2(0.066f, 0), new Vector2(0.071f, 0), new Vector2(0.071f, 0.009f), new Vector2(0.066f, 0.009f) }, 48);
+            Gfx.Draw(bezel, Gfx.Part(Gfx.Translate(0, 0.058f, 0.01f), pose), Steel);
+            Gfx.Draw(Gfx.Cylinder, Gfx.Part(Gfx.Mul(Gfx.Scale(0.066f, 0.009f, 0.066f), Gfx.Translate(0, 0.0585f, 0.01f)), pose),
+                new Color(34, 36, 42, 255), new Vector3(0.55f, 0.1f, 0.02f) * heat * heat);
+            for (int k = 1; k <= 4; k++)
+            {
+                float r = 0.012f * k + 0.004f;
+                var coil = Gfx.CachedLathe("hotplateCoil" + k, new[] { new Vector2(r - 0.0018f, 0), new Vector2(r + 0.0018f, 0), new Vector2(r + 0.0018f, 0.0006f), new Vector2(r - 0.0018f, 0.0006f) }, 40);
+                float flicker = 0.92f + 0.08f * MathF.Sin((float)GetTime() * 3f + k);
+                Gfx.Draw(coil, Gfx.Part(Gfx.Translate(0, 0.0676f, 0.01f), pose), heat > 0.01f ? new Color(120, 40, 20, 255) : new Color(48, 50, 56, 255),
+                    new Vector3(1.6f, 0.45f, 0.08f) * heat * flicker);
+            }
+
+            // Heat and stirrer knobs, the power LED and a small display window.
+            Knob(pose, new Vector3(-0.045f, 0.026f, -0.1f), power, new Color(240, 120, 40, 255));
+            Knob(pose, new Vector3(0.0f, 0.026f, -0.1f), 0f, new Color(60, 130, 230, 255));
+            Gfx.Draw(Gfx.Cube, Gfx.Part(Gfx.Mul(Gfx.Mul(Gfx.Scale(0.04f, 0.014f, 0.002f), Gfx.Rotate(slope)), Gfx.Translate(0.05f, 0.03f, -0.099f)), pose),
+                heat > 0.01f ? new Color(30, 60, 40, 255) : new Color(20, 24, 22, 255), heat > 0.01f ? new Vector3(0.15f, 0.5f, 0.2f) : default);
+            Gfx.Draw(Gfx.Sphere, Gfx.Part(Gfx.Mul(Gfx.Scale(0.0035f), Gfx.Translate(0.05f, 0.016f, -0.101f)), pose),
                 power > 0.01f ? new Color(255, 60, 40, 255) : new Color(80, 30, 30, 255), power > 0.01f ? new Vector3(1.2f, 0.2f, 0.1f) : default);
         }
 

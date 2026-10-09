@@ -43,7 +43,7 @@ namespace IDLab.Core
         public event Action<Connection> Disconnected;
 
         public LabWorld()
-            : this(SubstanceDatabase.CreateDefault(), EquipmentCatalog.CreateDefault())
+            : this(SubstanceDatabase.Shared, EquipmentCatalog.CreateDefault())
         {
         }
 

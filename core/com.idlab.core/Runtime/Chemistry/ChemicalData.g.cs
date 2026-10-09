@@ -4,7 +4,7 @@ namespace IDLab.Core.Chemistry
     /// <summary>Chemical catalogue rows: id|patch|en|tr|formula|aliases|category|kind|phase|gas|soluble|form|hazards|M|density|bp|protons|hydroxides|ka|kb|conj|conjCount|cat|catCharge|catCount|an|anCharge|anCount|element|saltKa|saltCount|color|alpha|tint|ions|molecular|hidden|complex|cp|latent|flags|cas</summary>
     internal static class ChemicalData
     {
-        public const int Count = 8419;
+        public const int Count = 8456;
 
         public const string Rows = @"
 h_hco3|0|Hydrogencarbonate ion|Hydrogencarbonate ion|HCO₃⁻||hidden|WeakAcid|A|0|1|Powder|0|60|||1||4.7e-11||||||||||||||||||1|0||||
@@ -1003,24 +1003,24 @@ x_camgco32|0|Dolomite|Dolomit|CaMg(CO₃)₂|Kalsiyum magnezyum karbonat|ionic|S
 x_cu2oh2co3|0|Basic copper carbonate|Bakır(II) karbonat hidroksit|Cu₂(OH)₂CO₃|Malakit;Bakır pası|ionic|Salt|S|0|0|Powder|48|221.114|3|||||||||||||||||3FA87A|1||||0|0|800|||12069-69-1
 x_na2sif6|0|Sodium hexafluorosilicate|Sodyum hekzaflorosilikat|Na₂SiF₆||ionic|Salt|S|0|0|Powder|2|188.055|3|||||||||||||||||F2F2F2|1||||0|0|800|||16893-85-9
 x_naalo2|0|Sodium aluminate|Sodyum alüminat|NaAlO₂||ionic|Salt|S|0|1|Crystals|1|81.9693|3|||||||||||||||||F2F2F2|1||||0|0|800|||11138-49-1
-e_h|0|Hydrogen|Hidrojen|H₂|H|element|Molecular|A|1|0|Granules|260|2.016|||||||||||||||H|||D8D8D8|1|||H|0|0|500|||1333-74-0
-e_he|0|Helium|Helyum|He|He|element|Molecular|A|1|0|Granules|256|4.0026|||||||||||||||He|||D8D8D8|1|||He|0|0|500|||7440-59-7
+e_h|0|Hydrogen|Hidrojen|H₂|H|element|Molecular|A|1|0|Granules|260|2.016|||||||||||||||H|||D8D8D8|1|||H|0|0|500||d|1333-74-0
+e_he|0|Helium|Helyum|He|He|element|Molecular|A|1|0|Granules|256|4.0026|||||||||||||||He|||D8D8D8|1|||He|0|0|500||d|7440-59-7
 e_li|0|Lithium|Lityum|Li|Li|element|ReactiveMetal|S|0|0|Chunks|69|6.94|0.534||||||||||||||Li|||B8BCC4|1|||Li|0|0|500|||7439-93-2
 e_be|0|Beryllium|Berilyum|Be|Be|element|Metal|S|0|0|Granules|514|9.01218|1.85||||||||||||||Be|||B8BCC4|1|||Be|0|0|500|||7440-41-7
 e_b|0|Boron|Bor|B|B|element|Molecular|S|0|0|Granules|0|10.81|2.34||||||||||||||B|||4A3A2A|1|||B|0|0|500|||7440-42-8
 e_c|0|Carbon|Karbon|C|Grafit;Kömür;C|element|Molecular|S|0|0|Powder|0|12.011|2.2||||||||||||||C|||2A2A2A|1|||C|0|0|500|||7440-44-0
-e_n|0|Nitrogen|Azot|N₂|N|element|Molecular|A|1|0|Granules|256|28.014|||||||||||||||N|||D8D8D8|1|||N|0|0|500|||7727-37-9
-e_o|0|Oxygen|Oksijen|O₂|O|element|Molecular|A|1|0|Granules|264|31.998|||||||||||||||O|||D8D8D8|1|||O|0|0|500|||7782-44-7
-e_f|0|Fluorine|Flor|F₂|F|element|Molecular|A|1|0|Granules|267|37.9968|||||||||||||||F|||D8D8D8|1|||F|0|0|500|||7782-41-4
-e_ne|0|Neon|Neon|Ne|Ne|element|Molecular|A|1|0|Granules|256|20.1797|||||||||||||||Ne|||D8D8D8|1|||Ne|0|0|500|||7440-01-9
+e_n|0|Nitrogen|Azot|N₂|N|element|Molecular|A|1|0|Granules|256|28.014|||||||||||||||N|||D8D8D8|1|||N|0|0|500||d|7727-37-9
+e_o|0|Oxygen|Oksijen|O₂|O|element|Molecular|A|1|0|Granules|264|31.998|||||||||||||||O|||D8D8D8|1|||O|0|0|500||d|7782-44-7
+e_f|0|Fluorine|Flor|F₂|F|element|Molecular|A|1|0|Granules|267|37.9968|||||||||||||||F|||D8D8D8|1|||F|0|0|500||d|7782-41-4
+e_ne|0|Neon|Neon|Ne|Ne|element|Molecular|A|1|0|Granules|256|20.1797|||||||||||||||Ne|||D8D8D8|1|||Ne|0|0|500||d|7440-01-9
 sodium|1|Sodium|Sodyum||Na|element|Molecular|S|0|0|Powder|0||||||||||||||||Na||||||||0|0||||7440-23-5
 mg|1|Magnesium|Magnezyum||Magnezyum şerit;Mg|element|Molecular|S|0|0|Powder|0||||||||||||||||Mg||||||||0|0||||7439-95-4
 e_al|0|Aluminium|Alüminyum|Al|Alüminyum tozu;Alüminyum folyo;Al|element|Metal|S|0|0|Powder|4|26.9815|2.7||||||||||||||Al|||B8BCC4|1|||Al|0|0|500|||7429-90-5
 e_si|0|Silicon|Silisyum|Si|Si|element|Molecular|S|0|0|Chunks|0|28.085|2.3296||||||||||||||Si|||6A6E78|1|||Si|0|0|500|||7440-21-3
 e_p|0|Phosphorus|Fosfor|P|Kırmızı fosfor;P|element|Molecular|S|0|0|Granules|38|30.9738|1.823||||||||||||||P|||B03A2A|1|||P|0|0|500|||7723-14-0
 e_s|0|Sulfur|Kükürt|S|Kükürt tozu;S|element|Molecular|S|0|0|Powder|16|32.06|2.07||||||||||||||S|||F2E03A|1|||S|0|0|500|||7704-34-9
-e_cl|0|Chlorine|Klor|Cl₂|Cl|element|Molecular|A|1|0|Granules|298|70.9|||||||||||||||Cl|||D8D8D8|1|||Cl|0|0|500|||7782-50-5
-e_ar|0|Argon|Argon|Ar|Ar|element|Molecular|A|1|0|Granules|256|39.948|||||||||||||||Ar|||D8D8D8|1|||Ar|0|0|500|||7440-37-1
+e_cl|0|Chlorine|Klor|Cl₂|Cl|element|Molecular|A|1|0|Granules|298|70.9|||||||||||||||Cl|||D8D8D8|1|||Cl|0|0|500||d|7782-50-5
+e_ar|0|Argon|Argon|Ar|Ar|element|Molecular|A|1|0|Granules|256|39.948|||||||||||||||Ar|||D8D8D8|1|||Ar|0|0|500||d|7440-37-1
 e_k|0|Potassium|Potasyum|K|K|element|ReactiveMetal|S|0|0|Chunks|69|39.0983|0.89||||||||||||||K|||B8BCC4|1|||K|0|0|500|||7440-09-7
 e_ca|0|Calcium|Kalsiyum|Ca|Ca|element|Metal|S|0|0|Chunks|64|40.078|1.54||||||||||||||Ca|||D8D8D0|1|||Ca|0|0|500|||7440-70-2
 e_sc|0|Scandium|Skandiyum|Sc|Sc|element|Metal|S|0|0|Granules|0|44.9559|2.99||||||||||||||Sc|||B8BCC4|1|||Sc|0|0|500|||7440-20-2
@@ -1038,13 +1038,14 @@ e_ge|0|Germanium|Germanyum|Ge|Ge|element|Molecular|S|0|0|Granules|0|72.63|5.3234
 e_as|0|Arsenic|Arsenik|As|As|element|Molecular|S|0|0|Granules|34|74.9216|5.75||||||||||||||As|||7A7A7A|1|||As|0|0|500|||7440-38-2
 e_se|0|Selenium|Selenyum|Se|Se|element|Molecular|S|0|0|Granules|2|78.971|4.809||||||||||||||Se|||5A2A2A|1|||Se|0|0|500|||7782-49-2
 e_br|0|Bromine|Brom|Br₂|Br|element|Molecular|L|0|0|Granules|35|159.808|3.1028|58.8|||||||||||||Br|||8A2A0A|0.9|||Br|0|0|500|182792||7726-95-6
-e_kr|0|Krypton|Kripton|Kr|Kr|element|Molecular|A|1|0|Granules|256|83.798|||||||||||||||Kr|||D8D8D8|1|||Kr|0|0|500|||7439-90-9
+e_kr|0|Krypton|Kripton|Kr|Kr|element|Molecular|A|1|0|Granules|256|83.798|||||||||||||||Kr|||D8D8D8|1|||Kr|0|0|500||d|7439-90-9
 e_rb|0|Rubidium|Rubidyum|Rb|Rb|element|ReactiveMetal|S|0|0|Chunks|69|85.4678|1.53||||||||||||||Rb|||B8BCC4|1|||Rb|0|0|500|||7440-17-7
 e_sr|0|Strontium|Stronsiyum|Sr|Sr|element|Metal|S|0|0|Chunks|64|87.62|2.64||||||||||||||Sr|||B8BCC4|1|||Sr|0|0|500|||7440-24-6
 e_y|0|Yttrium|İtriyum|Y|Y|element|Metal|S|0|0|Granules|0|88.9058|4.47||||||||||||||Y|||B8BCC4|1|||Y|0|0|500|||7440-65-5
 e_zr|0|Zirconium|Zirkonyum|Zr|Zr|element|Metal|S|0|0|Granules|0|91.224|6.52||||||||||||||Zr|||B8BCC4|1|||Zr|0|0|500|||7440-67-7
 e_nb|0|Niobium|Niyobyum|Nb|Nb|element|Metal|S|0|0|Granules|0|92.9064|8.57||||||||||||||Nb|||B8BCC4|1|||Nb|0|0|500|||7440-03-1
 e_mo|0|Molybdenum|Molibden|Mo|Mo|element|Metal|S|0|0|Granules|0|95.95|10.2||||||||||||||Mo|||B8BCC4|1|||Mo|0|0|500|||7439-98-7
+e_tc|0|Technetium|Teknesyum|Tc|Tc|element|Metal|S|0|0|Granules|514|97.9072|11||||||||||||||Tc|||B8BCC4|1|||Tc|0|0|500||R|7440-26-8
 e_ru|0|Ruthenium|Rutenyum|Ru|Ru|element|Metal|S|0|0|Granules|0|101.07|12.1||||||||||||||Ru|||B8BCC4|1|||Ru|0|0|500|||7440-18-8
 e_rh|0|Rhodium|Rodyum|Rh|Rh|element|Metal|S|0|0|Granules|0|102.906|12.4||||||||||||||Rh|||B8BCC4|1|||Rh|0|0|500|||7440-16-6
 e_pd|0|Palladium|Paladyum|Pd|Pd|element|Metal|S|0|0|Granules|0|106.42|12||||||||||||||Pd|||B8BCC4|1|||Pd|0|0|500|||7440-05-3
@@ -1055,13 +1056,14 @@ e_sn|0|Tin|Kalay|Sn|Sn|element|Metal|S|0|0|Granules|0|118.71|7.287||||||||||||||
 e_sb|0|Antimony|Antimon|Sb|Sb|element|Molecular|S|0|0|Granules|48|121.76|6.68||||||||||||||Sb|||D8D8D8|1|||Sb|0|0|500|||7440-36-0
 e_te|0|Tellurium|Tellür|Te|Te|element|Molecular|S|0|0|Granules|0|127.6|6.232||||||||||||||Te|||D8D8D8|1|||Te|0|0|500|||13494-80-9
 e_i|0|Iodine|İyot|I₂|I|element|Molecular|S|0|0|Crystals|48|253.809|4.933||||||||||||||I|||3A2A4A|1|||I|0|0|500|||7553-56-2
-e_xe|0|Xenon|Ksenon|Xe|Xe|element|Molecular|A|1|0|Granules|256|131.293|||||||||||||||Xe|||D8D8D8|1|||Xe|0|0|500|||7440-63-3
+e_xe|0|Xenon|Ksenon|Xe|Xe|element|Molecular|A|1|0|Granules|256|131.293|||||||||||||||Xe|||D8D8D8|1|||Xe|0|0|500||d|7440-63-3
 e_cs|0|Caesium|Sezyum|Cs|Cs|element|ReactiveMetal|S|0|0|Chunks|69|132.905|1.873||||||||||||||Cs|||E8D8A0|1|||Cs|0|0|500|||7440-46-2
 e_ba|0|Barium|Baryum|Ba|Ba|element|Metal|S|0|0|Chunks|80|137.327|3.62||||||||||||||Ba|||B8BCC4|1|||Ba|0|0|500|||7440-39-3
 e_la|0|Lanthanum|Lantan|La|La|element|Metal|S|0|0|Granules|0|138.905|6.15||||||||||||||La|||B8BCC4|1|||La|0|0|500|||7439-91-0
 e_ce|0|Cerium|Seryum|Ce|Ce|element|Metal|S|0|0|Granules|0|140.116|6.77||||||||||||||Ce|||B8BCC4|1|||Ce|0|0|500|||7440-45-1
 e_pr|0|Praseodymium|Praseodim|Pr|Pr|element|Metal|S|0|0|Granules|0|140.908|6.773||||||||||||||Pr|||B8BCC4|1|||Pr|0|0|500|||7440-10-0
 e_nd|0|Neodymium|Neodim|Nd|Nd|element|Metal|S|0|0|Granules|0|144.242|7.01||||||||||||||Nd|||B8BCC4|1|||Nd|0|0|500|||7440-00-8
+e_pm|0|Promethium|Prometyum|Pm|Pm|element|Metal|S|0|0|Granules|514|144.913|7.26||||||||||||||Pm|||B8BCC4|1|||Pm|0|0|500||R|7440-12-2
 e_sm|0|Samarium|Samaryum|Sm|Sm|element|Metal|S|0|0|Granules|0|150.36|7.52||||||||||||||Sm|||B8BCC4|1|||Sm|0|0|500|||7440-19-9
 e_eu|0|Europium|Evropiyum|Eu|Eu|element|Metal|S|0|0|Granules|0|151.964|5.24||||||||||||||Eu|||B8BCC4|1|||Eu|0|0|500|||7440-53-1
 e_gd|0|Gadolinium|Gadolinyum|Gd|Gd|element|Metal|S|0|0|Granules|0|157.25|7.9||||||||||||||Gd|||B8BCC4|1|||Gd|0|0|500|||7440-54-2
@@ -1084,6 +1086,41 @@ e_hg|0|Mercury|Cıva|Hg|Civa;Hg|element|Metal|L|0|0|Granules|546|200.592|13.5336
 e_tl|0|Thallium|Talyum|Tl|Tl|element|Metal|S|0|0|Granules|514|204.38|11.8||||||||||||||Tl|||B8BCC4|1|||Tl|0|0|500|||7440-28-0
 e_pb|0|Lead|Kurşun|Pb|Pb|element|Metal|S|0|0|Granules|546|207.2|11.3||||||||||||||Pb|||6E7278|1|||Pb|0|0|500|||7439-92-1
 e_bi|0|Bismuth|Bizmut|Bi|Bi|element|Metal|S|0|0|Chunks|0|208.98|9.79||||||||||||||Bi|||C8B8C8|1|||Bi|0|0|500|||7440-69-9
+e_po|0|Polonium|Polonyum|Po|Po|element|Molecular|S|0|0|Granules|514|209|9.2||||||||||||||Po|||D8D8D8|1|||Po|0|0|500||R|7440-08-6
+e_at|0|Astatine|Astatin|At|At|element|Molecular|S|0|0|Granules|514|210|7||||||||||||||At|||D8D8D8|1|||At|0|0|500||R|7440-68-8
+e_rn|0|Radon|Radon|Rn|Rn|element|Molecular|A|1|0|Granules|770|222|||||||||||||||Rn|||D8D8D8|1|||Rn|0|0|500||Rd|10043-92-2
+e_fr|0|Francium|Fransiyum|Fr|Fr|element|ReactiveMetal|S|0|0|Granules|514|223|1.87||||||||||||||Fr|||B8BCC4|1|||Fr|0|0|500||R|7440-73-5
+e_ra|0|Radium|Radyum|Ra|Ra|element|Metal|S|0|0|Granules|514|226|5||||||||||||||Ra|||B8BCC4|1|||Ra|0|0|500||R|7440-14-4
+e_ac|0|Actinium|Aktinyum|Ac|Ac|element|Metal|S|0|0|Granules|514|227|10||||||||||||||Ac|||B8BCC4|1|||Ac|0|0|500||R|7440-34-8
+e_th|0|Thorium|Toryum|Th|Th|element|Metal|S|0|0|Granules|514|232.038|11.7||||||||||||||Th|||B8BCC4|1|||Th|0|0|500||R|7440-29-1
+e_pa|0|Protactinium|Protaktinyum|Pa|Pa|element|Metal|S|0|0|Granules|514|231.036|15.4||||||||||||||Pa|||B8BCC4|1|||Pa|0|0|500||R|7440-13-3
+e_u|0|Uranium|Uranyum|U|U|element|Metal|S|0|0|Granules|514|238.029|19.1||||||||||||||U|||B8BCC4|1|||U|0|0|500||R|7440-61-1
+e_np|0|Neptunium|Neptünyum|Np|Np|element|Metal|S|0|0|Granules|514|237|20.2||||||||||||||Np|||B8BCC4|1|||Np|0|0|500||R|7439-99-8
+e_pu|0|Plutonium|Plütonyum|Pu|Pu|element|Metal|S|0|0|Granules|514|244|19.7||||||||||||||Pu|||B8BCC4|1|||Pu|0|0|500||R|7440-07-5
+e_am|0|Americium|Amerikyum|Am|Am|element|Metal|S|0|0|Granules|514|243|12||||||||||||||Am|||B8BCC4|1|||Am|0|0|500||R|7440-35-9
+e_cm|0|Curium|Küriyum|Cm|Cm|element|Metal|S|0|0|Granules|514|247|13.51||||||||||||||Cm|||B8BCC4|1|||Cm|0|0|500||R|7440-51-9
+e_bk|0|Berkelium|Berkelyum|Bk|Bk|element|Metal|S|0|0|Granules|514|247|14.78||||||||||||||Bk|||B8BCC4|1|||Bk|0|0|500||R|7440-40-6
+e_cf|0|Californium|Kaliforniyum|Cf|Cf|element|Metal|S|0|0|Granules|514|251|15.1||||||||||||||Cf|||B8BCC4|1|||Cf|0|0|500||R|7440-71-3
+e_es|0|Einsteinium|Aynştaynyum|Es|Es|element|Metal|S|0|0|Granules|514|252|8.84||||||||||||||Es|||B8BCC4|1|||Es|0|0|500||R|7429-92-7
+e_fm|0|Fermium|Fermiyum|Fm|Fm|element|Metal|S|0|0|Granules|514|257|9.7||||||||||||||Fm|||B8BCC4|1|||Fm|0|0|500||RX|7440-72-4
+e_md|0|Mendelevium|Mendelevyum|Md|Md|element|Metal|S|0|0|Granules|514|258|10.3||||||||||||||Md|||B8BCC4|1|||Md|0|0|500||RX|7440-11-1
+e_no|0|Nobelium|Nobelyum|No|No|element|Metal|S|0|0|Granules|514|259|9.9||||||||||||||No|||B8BCC4|1|||No|0|0|500||RX|10028-14-5
+e_lr|0|Lawrencium|Lavrensiyum|Lr|Lr|element|Metal|S|0|0|Granules|514|262|15.6||||||||||||||Lr|||B8BCC4|1|||Lr|0|0|500||RX|22537-19-5
+e_rf|0|Rutherfordium|Rutherfordiyum|Rf|Rf|element|Metal|S|0|0|Granules|514|267|23.3||||||||||||||Rf|||B8BCC4|1|||Rf|0|0|500||RX|
+e_db|0|Dubnium|Dubniyum|Db|Db|element|Metal|S|0|0|Granules|514|268|29.3||||||||||||||Db|||B8BCC4|1|||Db|0|0|500||RX|53850-35-4
+e_sg|0|Seaborgium|Seaborgiyum|Sg|Sg|element|Metal|S|0|0|Granules|514|271|35||||||||||||||Sg|||B8BCC4|1|||Sg|0|0|500||RX|54038-81-2
+e_bh|0|Bohrium|Bohriyum|Bh|Bh|element|Metal|S|0|0|Granules|514|274|37.1||||||||||||||Bh|||B8BCC4|1|||Bh|0|0|500||RX|
+e_hs|0|Hassium|Hassiyum|Hs|Hs|element|Metal|S|0|0|Granules|514|269|40.7||||||||||||||Hs|||B8BCC4|1|||Hs|0|0|500||RX|
+e_mt|0|Meitnerium|Meitneriyum|Mt|Mt|element|Metal|S|0|0|Granules|514|276|37.4||||||||||||||Mt|||B8BCC4|1|||Mt|0|0|500||RX|54038-01-6
+e_ds|0|Darmstadtium|Darmstadtiyum|Ds|Ds|element|Metal|S|0|0|Granules|514|281|34.8||||||||||||||Ds|||B8BCC4|1|||Ds|0|0|500||RX|54083-77-1
+e_rg|0|Roentgenium|Röntgenyum|Rg|Rg|element|Metal|S|0|0|Granules|514|281|28.7||||||||||||||Rg|||B8BCC4|1|||Rg|0|0|500||RX|
+e_cn|0|Copernicium|Kopernikyum|Cn|Cn|element|Metal|S|0|0|Granules|514|285|14||||||||||||||Cn|||B8BCC4|1|||Cn|0|0|500||RX|54084-26-3
+e_nh|0|Nihonium|Nihonyum|Nh|Nh|element|Metal|S|0|0|Granules|514|286|16||||||||||||||Nh|||B8BCC4|1|||Nh|0|0|500||RX|
+e_fl|0|Flerovium|Flerovyum|Fl|Fl|element|Metal|S|0|0|Granules|514|289|9.928||||||||||||||Fl|||B8BCC4|1|||Fl|0|0|500||RX|54085-16-4
+e_mc|0|Moscovium|Moskovyum|Mc|Mc|element|Metal|S|0|0|Granules|514|288|13.5||||||||||||||Mc|||B8BCC4|1|||Mc|0|0|500||RX|54085-64-2
+e_lv|0|Livermorium|Livermoryum|Lv|Lv|element|Metal|S|0|0|Granules|514|293|12.9||||||||||||||Lv|||B8BCC4|1|||Lv|0|0|500||RX|54100-71-9
+e_ts|0|Tennessine|Tennessin|Ts|Ts|element|Molecular|S|0|0|Granules|514|294|7.2||||||||||||||Ts|||D8D8D8|1|||Ts|0|0|500||RX|54101-14-3
+e_og|0|Oganesson|Oganesson|Og|Og|element|Molecular|S|0|0|Granules|514|294|7||||||||||||||Og|||D8D8D8|1|||Og|0|0|500||RX|54144-19-3
 c_506650|0|Gold(I) cyanide|Altın(I) siyanür|AuCN|Gold(I) cyanide|ionic|Salt|S|0|0|Powder|34|222.985|7.2||||||m_hcn|1|Au1|1|1|CN|1|1|||1|E6C24A|1||||0|0|800|||506-65-0
 c_527093|0|Copper(II) gluconate|Bakır(II) glukonat|Cu(C₆H₁₁O₇)₂|Copper(II) gluconate|ionic|Salt|S|0|1|Crystals|48|453.84|5.92582||||||acetic_acid|2|Cu2|2|1|C6H11O7|1|2||3e-08|1|1F6FE5|0.8|4|Cu^2+ C6H11O7-*2||0|0|800||d|527-09-3
 c_546678|0|Lead(IV) acetate|Kurşun(IV) asetat|(CH₃COO)₄Pb|Lead(IV) acetate|ionic|Salt|S|0|1|Crystals|546|443.376|2.23||||||acetic_acid|4|Pb4|4|1|CH3COO|1|4|||1|F2F2F2|1||Pb^4+ CH3COO-*4||0|0|800|||546-67-8

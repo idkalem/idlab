@@ -53,10 +53,9 @@ namespace IDLab.Core.Components
 
             DeliveredPowerW = FlamePowerW * Efficiency;
             target.AddHeat(DeliveredPowerW * dt);
-            if (OpenFlame && target.TemperatureC > 35)
-            {
-                target.Ignite(); // flammable vapour meets the flame
-            }
+            // A flame lights vapours and burns solids; a hot plate's surface (up to ~340 °C) can light only what
+            // auto-ignites below that.
+            target.ExposeToHeat(OpenFlame, OpenFlame ? 1000 : 60 + 280 * _gasValve);
         }
     }
 }

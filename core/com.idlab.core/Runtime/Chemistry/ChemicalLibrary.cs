@@ -1,5 +1,8 @@
 using System;
 using System.Globalization;
+using System.IO;
+using System.IO.Compression;
+using System.Text;
 
 namespace IDLab.Core.Chemistry
 {
@@ -15,8 +18,26 @@ namespace IDLab.Core.Chemistry
 
         public static void Register(SubstanceDatabase db)
         {
+            RegisterRows(db, ChemicalData.Rows);
+            RegisterRows(db, InflateExtension());
+        }
+
+        /// <summary>The PubChem extension rows (deflate-compressed, base64) as text.</summary>
+        private static string InflateExtension()
+        {
+            var packed = Convert.FromBase64String(string.Concat(ChemicalDataExt.Chunks));
+            using (var input = new MemoryStream(packed))
+            using (var inflate = new DeflateStream(input, CompressionMode.Decompress))
+            using (var reader = new StreamReader(inflate, Encoding.UTF8))
+            {
+                return reader.ReadToEnd();
+            }
+        }
+
+        private static void RegisterRows(SubstanceDatabase db, string rows)
+        {
             var ci = CultureInfo.InvariantCulture;
-            foreach (var raw in ChemicalData.Rows.Split('\n'))
+            foreach (var raw in rows.Split('\n'))
             {
                 var line = raw.TrimEnd('\r');
                 if (line.Length == 0 || line[0] == '#') continue;
@@ -80,6 +101,8 @@ namespace IDLab.Core.Chemistry
                 {
                     s.DataLimited = f[40].Contains("L");
                     s.DensityEstimated = f[40].Contains("d");
+                    s.Radioactive = f[40].Contains("R");
+                    s.Synthetic = f[40].Contains("X");
                 }
 
                 if (S(41) != null) s.Cas = S(41);

@@ -183,6 +183,22 @@ namespace IDLab.Desktop
                 ToggleBorderlessWindowed();
             }
 
+            if (Ui.Button("quality", Next(122 * s), Quality.ShortLabel, null, 15))
+            {
+                Quality.Cycle();
+                if (Quality.TakeMsaaNotice()) Toast("Yüksek kalitenin kenar yumuşatması (MSAA) uygulama yeniden açılınca devreye girer.", Theme.Warning);
+                Toast(Quality.Mode == QualityMode.Auto ? "Grafik kalitesi tahtanın hızına göre otomatik ayarlanır."
+                    : Quality.Mode == QualityMode.High ? "Yüksek kalite: en keskin görüntü (güçlü bilgisayarlar için)."
+                    : Quality.Mode == QualityMode.Balanced ? "Dengeli: 3B sahne biraz daha düşük çözünürlükte çizilir."
+                    : "Hızlı: yavaş tahtalarda en akıcı çalışma.", Theme.Accent);
+            }
+
+            if (Ui.Button("theme", Next(52 * s), Theme.Dark ? "☀" : "☾", null, 22))
+            {
+                Theme.Apply(!Theme.Dark);
+                Settings.Set("tema", Theme.Dark ? "koyu" : "acik");
+            }
+
             if (Tab != HudTab.Lab)
             {
                 string hint = Tab == HudTab.Periodic ? "Bir elemente dokunun · Döndürmek için sürükleyin"
@@ -195,9 +211,13 @@ namespace IDLab.Desktop
 
             rx -= 8 * s;
             if (Ui.Button("reset", Next(96 * s), "Sıfırla", Theme.AccentDim)) _lab.LoadExperiment(_lab.Experiment.Id);
-            var clockRect = Next(118 * s);
-            string clock = string.Format(CultureInfo.CurrentCulture, "t = {0:0.0} s", _lab.World.Time);
-            Ui.TextCentered(_lab.World.Clock.Paused ? clock + " ‖" : clock, clockRect, 17, Theme.Muted);
+            // The clock gives way to the experiment selector on narrow screens.
+            if (rx - x > 980 * s)
+            {
+                var clockRect = Next(118 * s);
+                string clock = string.Format(CultureInfo.CurrentCulture, "t = {0:0.0} s", _lab.World.Time);
+                Ui.TextCentered(_lab.World.Clock.Paused ? clock + " ‖" : clock, clockRect, 17, Theme.Muted);
+            }
             for (int i = Speeds.Length - 1; i >= 0; i--)
             {
                 if (Ui.Button("speed" + i, Next(i == 0 ? 92 * s : 60 * s), Speeds[i].label, null, 16, _speedIndex == i)) SetSpeed(i);

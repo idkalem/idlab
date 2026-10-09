@@ -26,11 +26,15 @@ namespace IDLab.Core.Components
         private readonly HashSet<string> _activeRules = new HashSet<string>();
         private double _pendingHeatJ;
         private int _lastReactedVersion = -1;
+        private int _lastReactBucket = int.MinValue;
         private bool _reacting;
         private int _lastPhVersion = -1;
         private double _ph = double.NaN;
         private double _lastSpillEventTime = double.NegativeInfinity;
         private double _fireCooldown;
+        private bool _flameBelow, _flameBelowNext;
+        private double _hotSurfaceC, _hotSurfaceNextC;
+        private double _popCooldown, _tarnishNoticeTime = double.NegativeInfinity;
 
         public double InnerDiameterM { get; }
         public double InnerHeightM { get; }
@@ -49,6 +53,9 @@ namespace IDLab.Core.Components
 
         public bool IsBoiling { get; private set; }
         public bool OnFire { get; private set; }
+
+        /// <summary>What is burning while <see cref="OnFire"/> (a liquid's vapour, or a solid such as Mg or S).</summary>
+        public Substance BurningSubstance { get; private set; }
 
         /// <summary>Gas leaving the mixture (mol/s, smoothed) and what it is — drives bubbles in the view.</summary>
         public double GasRateMolPerS { get; private set; }
@@ -139,29 +146,48 @@ namespace IDLab.Core.Components
         /// <summary>Directly adds a substance (used by spatulas, droppers, tests).</summary>
         public void AddSubstance(string substanceId, double moles) => Contents.Add(substanceId, moles);
 
-        /// <summary>Lights flammable vapour above the mouth (called by an open flame).</summary>
+        /// <summary>Lights flammable vapour above the mouth (an open flame next to warm flammable liquid).</summary>
         public void Ignite()
         {
-            if (OnFire || _fireCooldown > 0 || FlammableFuel() == null)
+            var fuel = FlammableFuel();
+            if (OnFire || _fireCooldown > 0 || fuel == null)
             {
                 return;
             }
 
             OnFire = true;
-            Publish(LabEventType.Fire, 0.7, "The alcohol vapour caught fire! Keep flammable liquids away from open flames.", MouthPosition, "hazard.fire.ethanol");
+            BurningSubstance = fuel;
+            Publish(LabEventType.Fire, 0.7, $"{fuel.Name} vapour caught fire! Keep flammable liquids away from open flames.", MouthPosition, "fire.vapour:" + fuel.Id);
+        }
+
+        /// <summary>
+        /// Called by a heat source every tick it heats this container: an open flame lights vapours and burns
+        /// solids; a hot plate only ignites what its glowing surface (<paramref name="surfaceC"/>) can light.
+        /// </summary>
+        public void ExposeToHeat(bool openFlame, double surfaceC)
+        {
+            _flameBelowNext |= openFlame;
+            _hotSurfaceNextC = Math.Max(_hotSurfaceNextC, surfaceC);
         }
 
         /// <summary>Puts the fire out (cover the mouth). It can re-ignite after a few seconds if still heated by a flame.</summary>
         public void Extinguish()
         {
             OnFire = false;
+            BurningSubstance = null;
             _fireCooldown = 4.0;
         }
 
         public override void Step(double dt)
         {
             _fireCooldown = Math.Max(0, _fireCooldown - dt);
+            _popCooldown = Math.Max(0, _popCooldown - dt);
+            _flameBelow = _flameBelowNext;
+            _hotSurfaceC = _hotSurfaceNextC;
+            _flameBelowNext = false;
+            _hotSurfaceNextC = 0;
             React(dt);
+            StepIgnition(dt);
             StepFire(dt);
             StepThermal(dt);
             StepPouring(dt);
@@ -170,7 +196,12 @@ namespace IDLab.Core.Components
 
         private void React(double dt)
         {
-            if (Contents.Version == _lastReactedVersion && !_reacting)
+            // Re-run the rules when the contents change, while a slow reaction runs, or when the temperature has moved
+            // by more than 10 °C (some reactions only start when heated, e.g. Fe + S).
+            int bucket = (int)Math.Floor(TemperatureC / 10.0);
+            bool warmer = bucket != _lastReactBucket;
+            _lastReactBucket = bucket;
+            if (Contents.Version == _lastReactedVersion && !_reacting && !warmer)
             {
                 GasRateMolPerS *= Math.Exp(-dt * 3);
                 _activeRules.Clear();
@@ -230,6 +261,101 @@ namespace IDLab.Core.Components
             return null;
         }
 
+        /// <summary>Heat meets flammable or explosive contents: vapour fires, vapour explosions, burning solids, detonations.</summary>
+        private void StepIgnition(double dt)
+        {
+            if (!_flameBelow && _hotSurfaceC <= 0) return;
+            var db = Contents.Database;
+            Substance burnSolid = null, tarnish = null;
+            foreach (var kv in Contents.Components)
+            {
+                if (kv.Value < 1e-5) continue;
+                var s = db.Get(kv.Key);
+                double boom = Combustion.ExplosionC(s);
+                if (!double.IsNaN(boom) && TemperatureC >= boom)
+                {
+                    Detonate(s, kv.Value);
+                    return;
+                }
+
+                if (s.Phase == SubstancePhase.Liquid && s.IsFlammable && kv.Value > 1e-3 && !OnFire && _fireCooldown <= 0)
+                {
+                    bool vapour = TemperatureC >= Math.Max(25, Combustion.FlashPointC(s));
+                    bool lit = _flameBelow ? vapour
+                        : _hotSurfaceC >= Combustion.AutoIgnitionC(s) && TemperatureC >= (double.IsNaN(s.BoilingPointC) ? 150 : s.BoilingPointC - 3);
+                    if (!lit) continue;
+                    if (!double.IsNaN(s.BoilingPointC) && s.BoilingPointC < 45 && TemperatureC >= s.BoilingPointC - 12)
+                    {
+                        // A very volatile liquid near its boiling point fills the air with vapour: it goes off at once.
+                        double burst = Math.Min(Contents.Moles(s.Id), Math.Max(0.002, Contents.Moles(s.Id) * 0.6));
+                        Contents.Remove(s.Id, burst);
+                        AddHeat(burst * s.MolarMass / 1000.0 * CombustionEnthalpyJPerKg * 0.05);
+                        Publish(LabEventType.Explosion, Math.Min(1.0, 0.4 + burst * 8), $"{s.Name} vapour exploded!", MouthPosition, "boom.vapour:" + s.Id);
+                        _fireCooldown = 0;
+                    }
+
+                    OnFire = true;
+                    BurningSubstance = s;
+                    Publish(LabEventType.Fire, 0.7, $"{s.Name} vapour caught fire!", MouthPosition,
+                        (_flameBelow ? "fire.vapour:" : "fire.hotplate:") + s.Id);
+                    return;
+                }
+
+                if (s.Phase == SubstancePhase.Solid && _flameBelow)
+                {
+                    double ignite = Combustion.SolidIgnitionC(s);
+                    if (!double.IsNaN(ignite) && TemperatureC >= ignite && burnSolid == null) burnSolid = s;
+                    double t = Combustion.TarnishC(s);
+                    if (!double.IsNaN(t) && TemperatureC >= t) tarnish = s;
+                }
+            }
+
+            if (burnSolid != null && !OnFire && _fireCooldown <= 0 && !Contents.HasLiquid)
+            {
+                OnFire = true;
+                BurningSubstance = burnSolid;
+                Publish(LabEventType.Fire, 0.6, $"{burnSolid.Name} is burning in air.", MouthPosition, "fire.solid:" + burnSolid.Id);
+            }
+
+            if (tarnish != null && !Contents.HasLiquid)
+            {
+                // Copper, lead... turn into their oxide slowly, without a flame (copper goes black: CuO).
+                var (oxide, per) = Combustion.OxideOf(db, tarnish);
+                if (oxide != null)
+                {
+                    double n = Math.Min(Contents.Moles(tarnish.Id), Contents.Moles(tarnish.Id) * 0.04 * dt + 2e-5 * dt);
+                    Contents.Remove(tarnish.Id, n);
+                    Contents.Add(oxide.Id, n * per);
+                    if (World.Time - _tarnishNoticeTime > 30)
+                    {
+                        _tarnishNoticeTime = World.Time;
+                        Publish(LabEventType.Reaction, 0.3, $"{tarnish.Name} oxidises to {oxide.Formula}.", MouthPosition, "tarnish:" + tarnish.Id + ":" + oxide.Id);
+                    }
+                }
+            }
+
+            // Hydrogen bubbling out of a mixture right above a flame: it pops.
+            if (_flameBelow && _popCooldown <= 0 && GasFormula == "H₂" && GasRateMolPerS > 1e-4)
+            {
+                _popCooldown = 3;
+                Publish(LabEventType.Explosion, Math.Min(0.5, 0.15 + GasRateMolPerS * 200), "Hydrogen pops in the flame!", MouthPosition, "boom.h2");
+            }
+        }
+
+        private void Detonate(Substance s, double moles)
+        {
+            double kg = moles * s.MolarMass / 1000.0;
+            Contents.Remove(s.Id, moles);
+            // The blast throws most of what was in the vessel out of it.
+            var leftovers = new List<KeyValuePair<string, double>>(Contents.Components);
+            foreach (var kv in leftovers) Contents.Remove(kv.Key, kv.Value * 0.8);
+            OnFire = false;
+            BurningSubstance = null;
+            _fireCooldown = 2;
+            AddHeat(kg * 4e6 * 0.02);
+            Publish(LabEventType.Explosion, Math.Min(1.0, 0.5 + kg * 100), $"{s.Name} exploded on heating!", MouthPosition, "boom.explosive:" + s.Id);
+        }
+
         private void StepFire(double dt)
         {
             if (!OnFire)
@@ -237,10 +363,38 @@ namespace IDLab.Core.Components
                 return;
             }
 
-            var fuel = FlammableFuel();
-            if (fuel == null)
+            var fuel = BurningSubstance;
+            if (fuel == null || Contents.Moles(fuel.Id) < 1e-6 || (fuel.Phase == SubstancePhase.Solid && Contents.HasLiquid))
             {
-                OnFire = false;
+                fuel = FlammableFuel();
+                if (fuel == null)
+                {
+                    OnFire = false;
+                    BurningSubstance = null;
+                    return;
+                }
+
+                BurningSubstance = fuel;
+            }
+
+            if (fuel.Phase == SubstancePhase.Solid)
+            {
+                // A burning solid turns into its oxide (Mg → MgO, white smoke; S → SO₂ gas; organic solids → CO₂ + H₂O).
+                double have = Contents.Moles(fuel.Id);
+                double n = Math.Min(have, Math.Max(have * 0.12, 0.0004) * dt);
+                Contents.Remove(fuel.Id, n);
+                var (oxide, per) = Combustion.OxideOf(Contents.Database, fuel);
+                if (oxide != null && oxide.Phase != SubstancePhase.Aqueous && !oxide.IsGas)
+                {
+                    Contents.Add(oxide.Id, n * per);
+                }
+                else
+                {
+                    GasFormula = oxide != null ? oxide.Formula : "CO₂";
+                    GasRateMolPerS = Math.Max(GasRateMolPerS, n / Math.Max(dt, 1e-4));
+                }
+
+                AddHeat(n * 3e5 * 0.1);
                 return;
             }
 

@@ -6,7 +6,7 @@ namespace IDLab.Core.Tests
 {
     public class ChemistryTests
     {
-        private readonly SubstanceDatabase _db = SubstanceDatabase.CreateDefault();
+        private readonly SubstanceDatabase _db = SubstanceDatabase.Shared;
 
         private Mixture Solution(double waterMl, string solute = null, double soluteMoles = 0)
         {

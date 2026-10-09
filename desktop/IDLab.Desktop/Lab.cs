@@ -86,7 +86,8 @@ namespace IDLab.Desktop
         private Item _pending;
         private bool _pendingKnob;
         private Item _dragged;
-        private Vector3 _grabOffset;
+        private Vector3 _grabOffset, _pickPoint;
+        private float _grabHeight;
         private float _workHeight; // height of the last thing the pointer was over while dragging
         private Vector3 _dragStart;
         private float _shake;
@@ -337,16 +338,18 @@ namespace IDLab.Desktop
                         if (item.PourInto != null && _items.ContainsKey(item.PourInto.Inst.Id))
                         {
                             // Lift straight up first, then carry it over the target, and only tip it fully once it is there.
-                            var desired = PourPosition(item, item.PourInto);
+                            var desired = HoldPosition(item, item.PourInto);
                             var p = item.Position;
                             float horizontal = new Vector2(desired.X - p.X, desired.Z - p.Z).Length();
                             // Travel a little above the pouring height so nothing passes through the target's glass.
-                            float travelY = desired.Y + 0.05f;
+                            float targetTop = WorldBox(item.PourInto).Max.Y;
+                            // Carry it at the height it will pour from (well tipped), never lower than the target's rim.
+                            float travelY = Math.Max(desired.Y + 0.03f, targetTop + 0.02f + (p.Y - WorldBox(item).Min.Y));
                             var waypoint = horizontal <= 0.015f ? desired
                                 : p.Y < travelY - 0.004f ? new Vector3(p.X, travelY, p.Z)
                                 : new Vector3(desired.X, travelY, desired.Z);
                             item.Position = MoveTowards(p, waypoint, dt);
-                            if (Vector3.Distance(item.Position, desired) > 0.012f) targetTilt = Math.Min(targetTilt, 12f);
+                            if (horizontal > 0.02f) targetTilt = Math.Min(targetTilt, 12f);
                         }
                         else
                         {
@@ -492,7 +495,7 @@ namespace IDLab.Desktop
                 return;
             }
 
-            bool overTarget = item.PourInto == null || Vector3.Distance(item.Position, PourPosition(item, item.PourInto)) < 0.012f;
+            bool overTarget = item.PourInto == null || Vector3.Distance(item.Position, HoldPosition(item, item.PourInto)) < 0.012f;
             if (!overTarget) return;
             double rate = c.PourRateLitersPerSecond * 1000;
             double wanted = c.Contents.HasLiquid ? Math.Clamp(left * 0.7, 1.5, c.MouthRadiusM > 0.03 ? 25 : 14) : Math.Clamp(left * 0.8, 0.4, 3);
@@ -502,20 +505,64 @@ namespace IDLab.Desktop
         }
 
         /// <summary>Lip (lowest rim point) relative to the item's origin for its current orientation.</summary>
-        public Vector3 LipOffset(Item item)
+        public Vector3 LipOffset(Item item) => LipOffset(item, item.Rotation);
+
+        private static Vector3 LipOffset(Item item, Quaternion rotation)
         {
             var c = item.Container;
-            var up = Vector3.Normalize(Vector3.Transform(Vector3.UnitY, item.Rotation));
+            var up = Vector3.Normalize(Vector3.Transform(Vector3.UnitY, rotation));
             var low = -Vector3.UnitY - Vector3.Dot(-Vector3.UnitY, up) * up;
             low = low.LengthSquared() > 1e-8f ? Vector3.Normalize(low) : Vector3.UnitX;
-            return Vector3.Transform(c.LocalOffset + new Vector3(0, (float)c.InnerHeightM, 0), item.Rotation) + low * (float)c.MouthRadiusM;
+            return Vector3.Transform(c.LocalOffset + new Vector3(0, (float)c.InnerHeightM, 0), rotation) + low * (float)c.MouthRadiusM;
         }
 
         /// <summary>Where to hold <paramref name="item"/> so its lip is just above the mouth of <paramref name="target"/>.</summary>
-        public Vector3 PourPosition(Item item, Item target)
+        public Vector3 PourPosition(Item item, Item target) => PourPosition(item, target, item.Rotation);
+
+        /// <summary>Where an automatic pour holds the item: placed for a well-tipped pose so it does not bob up and down.</summary>
+        private Vector3 HoldPosition(Item item, Item target) =>
+            PourPosition(item, target, Orientation(item.AutoPourMl >= 0 ? Math.Max(item.VisualTilt, 70f) : item.VisualTilt));
+
+        private Vector3 PourPosition(Item item, Item target, Quaternion rotation)
         {
+            // The lip goes over the near half of the mouth (towards the body of the tipped item), so the body stays
+            // beside the receiving glass instead of above it, as when pouring by hand.
             var mouth = target.Container.MouthPosition;
-            return mouth + new Vector3(0, 0.035f, 0) - LipOffset(item);
+            var tip = Vector3.Transform(Vector3.UnitY, Orientation(60f));
+            var dir = new Vector3(tip.X, 0, tip.Z);
+            dir = dir.LengthSquared() > 1e-6f ? Vector3.Normalize(dir) : Vector3.UnitX;
+            var lip = mouth + new Vector3(0, 0.03f, 0) - dir * (float)(target.Container.MouthRadiusM * 0.55);
+            var p = lip - LipOffset(item, rotation);
+            return p + new Vector3(0, PourClearance(item, target, p, rotation), 0);
+        }
+
+        /// <summary>
+        /// Extra height needed so that no part of the tipped item's body dips below the rim of the container it pours
+        /// into (a wide bottle over a small beaker is held higher instead of passing through the glass).
+        /// </summary>
+        private float PourClearance(Item item, Item target, Vector3 position, Quaternion rotation)
+        {
+            var c = item.Container;
+            var tc = target.Container;
+            var mouth = tc.MouthPosition;
+            float rim = Math.Max(mouth.Y, WorldBox(target).Max.Y) + 0.008f;
+            float reach = (float)tc.MouthRadiusM + 0.015f;
+            float body = item.Size.X / 2, neck = c != null ? (float)c.MouthRadiusM : body, h = item.Size.Y;
+            float need = 0;
+            for (int ring = 0; ring < 4; ring++)
+            {
+                float y = ring == 0 ? 0 : ring == 1 ? h * 0.45f : ring == 2 ? h * 0.75f : h;
+                float r = ring == 3 ? neck : body;
+                for (int k = 0; k < 12; k++)
+                {
+                    float a = k * MathF.PI / 6;
+                    var p = position + Vector3.Transform(new Vector3(r * MathF.Cos(a), y, r * MathF.Sin(a)), rotation);
+                    float d = new Vector2(p.X - mouth.X, p.Z - mouth.Z).Length();
+                    if (d < reach) need = Math.Max(need, rim - p.Y);
+                }
+            }
+
+            return need;
         }
 
         /// <summary>Nearest other open container (horizontal distance from <paramref name="from"/> to its mouth).</summary>
@@ -726,11 +773,11 @@ namespace IDLab.Desktop
 
                         Selected = _pending;
                     }
-                    else if (Vector2.Distance(Ui.Mouse, _pressPos) > 10 * Ui.S)
+                    else if (Vector2.Distance(Ui.Mouse, _pressPos) > Ui.TapSlop)
                     {
                         if (_pending == null) _mode = Mode.Orbit;
                         else if (_pendingKnob) { Selected = _pending; _mode = Mode.Knob; }
-                        else BeginDrag(_pending, GrabOffset(_pending));
+                        else BeginDrag(_pending, _pickPoint);
                     }
 
                     break;
@@ -781,8 +828,10 @@ namespace IDLab.Desktop
                     }
                 }
 
-                foreach (var box in Boxes(item))
+                foreach (var raw in Boxes(item))
                 {
+                    // Fingers are wide: thin things (probes, tubes) get a fatter hit box.
+                    var box = Inflate(raw, 0.012f);
                     var hit = GetRayCollisionBox(ray, box);
                     // Thin probes and tubes get priority over the vessel or rack they stand in.
                     float distance = hit.Distance - (item.Probe != null || item.Host != null ? 0.05f : 0f);
@@ -791,10 +840,36 @@ namespace IDLab.Desktop
                         best = distance;
                         _pending = item;
                         _pendingKnob = false;
+                        _pickPoint = hit.Point;
+                    }
+                }
+            }
+
+            if (_pending == null)
+            {
+                // Missed everything: take the item whose outline is closest on screen (within a fingertip).
+                float bestPx = 46 * Ui.S;
+                foreach (var item in _items.Values)
+                {
+                    var b = WorldBox(item);
+                    var c = (b.Min + b.Max) / 2;
+                    foreach (var probe in new[] { c, new Vector3(c.X, b.Max.Y, c.Z), new Vector3(c.X, b.Min.Y + 0.01f, c.Z) })
+                    {
+                        float d = Vector2.Distance(GetWorldToScreen(probe, Camera), Ui.Mouse);
+                        if (d < bestPx)
+                        {
+                            bestPx = d;
+                            _pending = item;
+                            _pendingKnob = false;
+                            _pickPoint = probe;
+                        }
                     }
                 }
             }
         }
+
+        private static BoundingBox Inflate(BoundingBox b, float by) =>
+            new BoundingBox(b.Min - new Vector3(by, 0, by), b.Max + new Vector3(by, 0, by));
 
         private Item ItemUnderPointer()
         {
@@ -825,10 +900,10 @@ namespace IDLab.Desktop
             p.X = Math.Clamp(p.X, -BenchHalfX, BenchHalfX);
             p.Z = Math.Clamp(p.Z, -BenchHalfZ, BenchHalfZ);
             var item = Spawn(definitionId, p);
-            BeginDrag(item, Vector3.Zero);
+            BeginDrag(item, null);
         }
 
-        private void BeginDrag(Item item, Vector3 grabOffset)
+        private void BeginDrag(Item item, Vector3? grabPoint)
         {
             item.Dragging = true;
             if (item.Host != null)
@@ -837,64 +912,119 @@ namespace IDLab.Desktop
                 item.Host = null;
             }
 
+            // The finger keeps holding the same point of the item: its height above the base and its
+            // horizontal offset from the item's centre stay fixed for the whole drag.
+            var box = WorldBox(item);
+            float height = Math.Max(0.01f, box.Max.Y - box.Min.Y);
+            if (grabPoint is Vector3 g)
+            {
+                _grabHeight = Math.Clamp(g.Y - box.Min.Y, 0.005f, Math.Min(height, 0.12f));
+                var o = item.Position - g;
+                o.Y = 0;
+                _grabOffset = o.Length() > 0.06f ? Vector3.Normalize(o) * 0.06f : o;
+            }
+            else
+            {
+                _grabHeight = Math.Min(height * 0.35f, 0.05f);
+                _grabOffset = Vector3.Zero;
+            }
+
             _dragged = item;
-            _grabOffset = grabOffset;
             _workHeight = item.Position.Y;
             _dragStart = item.Home ?? item.Position;
             Selected = item;
             _mode = Mode.Drag;
         }
 
-        private Vector3 GrabOffset(Item item)
+        /// <summary>
+        /// Where the dragged item goes: the ray through the finger is tested against the bench and the top face of
+        /// every other item (at the grabbed height above it); the nearest one the finger is over wins. Side faces are
+        /// ignored, so passing in front of a burner or a bottle no longer throws the item onto it.
+        /// </summary>
+        private (Vector3 point, float surface) DragTarget(Item item, Ray ray)
         {
-            var p = PointerOnPlane(item.Position.Y);
-            if (p == null) return Vector3.Zero;
-            var o = item.Position - p.Value;
-            o.Y = 0;
-            return o.Length() > 0.1f ? Vector3.Normalize(o) * 0.1f : o;
+            float bestT = float.MaxValue, surface = 0;
+            Vector3 point = item.Position;
+            if (ray.Direction.Y < -1e-4f)
+            {
+                bestT = (_grabHeight - ray.Position.Y) / ray.Direction.Y;
+                point = ray.Position + ray.Direction * bestT;
+            }
+
+            foreach (var other in _items.Values)
+            {
+                if (other == item || IsDescendantOf(other, item) || other.Probe != null) continue;
+                foreach (var b in Boxes(other))
+                {
+                    if (ray.Direction.Y >= -1e-4f) continue;
+                    float t = (b.Max.Y + _grabHeight - ray.Position.Y) / ray.Direction.Y;
+                    if (t <= 0 || t >= bestT) continue;
+                    var p = ray.Position + ray.Direction * t;
+                    const float m = 0.006f;
+                    if (p.X < b.Min.X - m || p.X > b.Max.X + m || p.Z < b.Min.Z - m || p.Z > b.Max.Z + m) continue;
+                    bestT = t;
+                    point = p;
+                    surface = b.Max.Y;
+                }
+            }
+
+            return (point, surface);
         }
 
         private void UpdateDrag()
         {
             var item = _dragged;
             item.Rotation = Orientation(item.Tilt);
-
-            // Aim at what the pointer is over (the top of a burner, a beaker...) so items climb onto things;
-            // over empty space the item follows the finger at its current height (e.g. a bottle held up to pour).
             var ray = GetScreenToWorldRay(Ui.Mouse, Camera);
-            Vector3? aim = null;
-            float nearest = float.MaxValue;
-            foreach (var other in _items.Values)
+            bool held = item.Tilt > 0.5f;
+            var current = item.Position;
+            Vector3 target;
+            float hoverY;
+            if (!held)
             {
-                if (other == item || IsDescendantOf(other, item)) continue;
-                foreach (var b in Boxes(other))
+                // Ease the grabbed point down to the item's base: the item then rests on whatever top surface the
+                // finger points at and stays visible above the fingertip instead of hiding under it.
+                float ease = 1f - MathF.Exp(-GetFrameTime() * 7f);
+                _grabHeight += (0.004f - _grabHeight) * ease;
+                _grabOffset *= 1f - ease;
+                var (point, surface) = DragTarget(item, ray);
+                target = point + _grabOffset;
+                target.X = Math.Clamp(target.X, -BenchHalfX, BenchHalfX);
+                target.Z = Math.Clamp(target.Z, -BenchHalfZ, BenchHalfZ);
+                item.Position = new Vector3(target.X, current.Y, target.Z);
+                var box = WorldBox(item);
+                hoverY = surface + (item.Position.Y - box.Min.Y) + Lift;
+            }
+            else
+            {
+                // A tipped container is held up at the working height (e.g. beside a beaker on the burner).
+                Vector3? aim = null;
+                float nearest = float.MaxValue;
+                foreach (var other in _items.Values)
                 {
-                    var hit = GetRayCollisionBox(ray, b);
-                    if (hit.Hit && hit.Distance < nearest)
+                    if (other == item || IsDescendantOf(other, item)) continue;
+                    foreach (var b in Boxes(other))
                     {
-                        nearest = hit.Distance;
-                        aim = hit.Point;
+                        var hit = GetRayCollisionBox(ray, b);
+                        if (hit.Hit && hit.Normal.Y > 0.7f && hit.Distance < nearest)
+                        {
+                            nearest = hit.Distance;
+                            aim = hit.Point;
+                        }
                     }
                 }
+
+                if (aim.HasValue) _workHeight = aim.Value.Y;
+                aim ??= PointerOnPlane(_workHeight);
+                target = aim ?? item.Position;
+                target.X = Math.Clamp(target.X, -BenchHalfX, BenchHalfX);
+                target.Z = Math.Clamp(target.Z, -BenchHalfZ, BenchHalfZ);
+                item.Position = new Vector3(target.X, current.Y, target.Z);
+                var box = WorldBox(item);
+                float bottomOffset = item.Position.Y - box.Min.Y;
+                hoverY = Math.Max(SurfaceBelowForHover(item, box) + bottomOffset + Lift, _workHeight + bottomOffset + 0.01f);
             }
 
-            // A tipped container is held up at the working height (e.g. beside a beaker on the burner);
-            // an upright item simply follows the pointer down onto the bench.
-            bool held = item.Tilt > 0.5f;
-            if (aim.HasValue) _workHeight = aim.Value.Y;
-            aim ??= PointerOnPlane(held ? _workHeight : item.Position.Y);
-            _grabOffset *= MathF.Exp(-GetFrameTime() * 6f); // ease the initial grab offset away
-            var target = aim.HasValue ? aim.Value + _grabOffset : item.Position;
-            target.X = Math.Clamp(target.X, -BenchHalfX, BenchHalfX);
-            target.Z = Math.Clamp(target.Z, -BenchHalfZ, BenchHalfZ);
-
-            // Hover just above whatever lies under the footprint.
-            var current = item.Position;
-            item.Position = new Vector3(target.X, current.Y, target.Z);
-            var box = WorldBox(item);
-            float bottomOffset = item.Position.Y - box.Min.Y;
-            float hoverY = SurfaceBelowForHover(item, box) + bottomOffset + Lift;
-            if (held) hoverY = Math.Max(hoverY, _workHeight + bottomOffset + 0.01f);
             float y = current.Y + (hoverY - current.Y) * (1f - MathF.Exp(-GetFrameTime() * 18f));
             item.Position = new Vector3(target.X, y, target.Z);
             item.VelocityY = 0;
@@ -918,6 +1048,43 @@ namespace IDLab.Desktop
             {
                 SnapPreview = c;
             }
+        }
+
+        /// <summary>
+        /// Nearest bench position to <paramref name="from"/> where the item's footprint touches nothing else
+        /// (used when an item is let go on top of something it cannot stand on).
+        /// </summary>
+        private Vector3 ClearBenchSpot(Item item, Vector3 from)
+        {
+            var size = WorldBox(item);
+            float hx = (size.Max.X - size.Min.X) / 2, hz = (size.Max.Z - size.Min.Z) / 2;
+            var cx = (size.Min.X + size.Max.X) / 2 - item.Position.X;
+            var cz = (size.Min.Z + size.Max.Z) / 2 - item.Position.Z;
+            var others = _items.Values.Where(o => o != item && !IsDescendantOf(o, item) && o.Host == null).SelectMany(Boxes).ToList();
+            bool Free(float x, float z)
+            {
+                float minX = x + cx - hx - 0.004f, maxX = x + cx + hx + 0.004f, minZ = z + cz - hz - 0.004f, maxZ = z + cz + hz + 0.004f;
+                if (minX < -BenchHalfX || maxX > BenchHalfX || minZ < -BenchHalfZ || maxZ > BenchHalfZ) return false;
+                foreach (var b in others)
+                {
+                    if (minX < b.Max.X && maxX > b.Min.X && minZ < b.Max.Z && maxZ > b.Min.Z) return false;
+                }
+
+                return true;
+            }
+
+            if (Free(from.X, from.Z)) return new Vector3(from.X, from.Y, from.Z);
+            for (float r = 0.01f; r < 0.5f; r += 0.01f)
+            {
+                for (int k = 0; k < 24; k++)
+                {
+                    float a = k * MathF.PI * 2 / 24;
+                    float x = from.X + r * MathF.Cos(a), z = from.Z + r * MathF.Sin(a);
+                    if (Free(x, z)) return new Vector3(x, from.Y, z);
+                }
+            }
+
+            return from;
         }
 
         private float SurfaceBelowForHover(Item item, BoundingBox box)
@@ -972,6 +1139,11 @@ namespace IDLab.Desktop
             {
                 // Released while pouring: it stays in the (virtual) hand; at zero tilt it goes back to the bench.
                 item.Home = new Vector3(_dragStart.X, 0, _dragStart.Z);
+            }
+            else
+            {
+                // Not a place it fits: set it down on the bench right there, beside whatever was under it.
+                item.Position = ClearBenchSpot(item, item.Position);
             }
         }
 

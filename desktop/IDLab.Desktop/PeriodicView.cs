@@ -131,7 +131,7 @@ namespace IDLab.Desktop
                 }
             }
 
-            if (Ui.Down && overTable && !Ui.Captured && Vector2.Distance(Ui.Mouse, _press) > 10 * s)
+            if (Ui.Down && overTable && !Ui.Captured && Vector2.Distance(Ui.Mouse, _press) > Ui.TapSlop)
             {
                 _orbiting = true;
             }
@@ -161,14 +161,14 @@ namespace IDLab.Desktop
             Gfx.FogColor = new Vector3(0.043f, 0.059f, 0.09f);
             Gfx.FogRange = new Vector2(1000f, 1f);
             Gfx.BeginFrame(_camera.Position);
-            Gfx.Draw(Gfx.Cube, Gfx.Mul(Gfx.Scale(21, 0.1f, 12.5f), Gfx.Translate(0, -0.06f, -0.6f)), new Color(22, 28, 40, 255));
+            Gfx.Draw(Gfx.Cube, Gfx.Mul(Gfx.Scale(21, 0.1f, 12.5f), Gfx.Translate(0, -0.06f, -0.6f)), Theme.Dark ? new Color(22, 28, 40, 255) : new Color(205, 214, 226, 255));
             foreach (var e in Elements.All)
             {
                 var p = TilePosition(e);
                 float h = _heights[e.Z] + (e == _selected ? 0.3f * _selectAnim : 0);
                 var c = Elements.CategoryColor(e.Category);
                 bool dim = _filter.HasValue && _filter.Value != e.Category;
-                if (dim) c = Gfx.Lerp(c, new Color(40, 46, 58, 255), 0.75f);
+                if (dim) c = Gfx.Lerp(c, Theme.Dark ? new Color(40, 46, 58, 255) : new Color(225, 230, 238, 255), 0.75f);
                 Vector3 emission = default;
                 if (e == _selected) emission = new Vector3(0.35f);
                 else if (e == _hovered) emission = new Vector3(0.18f);

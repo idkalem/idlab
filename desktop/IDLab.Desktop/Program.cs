@@ -58,7 +58,10 @@ namespace IDLab.Desktop
 
         private static void Run(Options o)
         {
-            SetConfigFlags(ConfigFlags.Msaa4xHint | ConfigFlags.ResizableWindow | (o.Demo == null ? ConfigFlags.VSyncHint : 0));
+            Settings.Load();
+            if (o.Quality != null) Settings.Override("grafik", o.Quality);
+            Theme.Apply(o.Light ? false : Settings.Get("tema", "koyu") != "acik");
+            SetConfigFlags((Quality.WantsMsaa ? ConfigFlags.Msaa4xHint : 0) | ConfigFlags.ResizableWindow | (o.Demo == null ? ConfigFlags.VSyncHint : 0));
             InitWindow(o.Width, o.Height, "ID Lab — 3D Fen Laboratuvarı");
             SetExitKey(KeyboardKey.Null); // Esc must not close the app in class
             SetWindowMinSize(960, 600);
@@ -78,6 +81,9 @@ namespace IDLab.Desktop
                 ToggleBorderlessWindowed();
             }
 
+            var startup = System.Diagnostics.Stopwatch.StartNew();
+            TouchInput.Install();
+            Quality.Load();
             Gfx.Init();
             Ui.Init();
             Textures.Init();
@@ -94,7 +100,13 @@ namespace IDLab.Desktop
             var hud = new Hud(lab, micro);
             var chemicals = new ChemicalsView(lab, hud);
             hud.ChemicalCount = chemicals.Count;
-            if (o.Demo != null)
+            if (o.Profile) Console.WriteLine($"startup: {startup.ElapsedMilliseconds} ms after the window opened");
+            if (o.Demo != null && o.Demo.StartsWith("chem:", StringComparison.Ordinal))
+            {
+                hud.Tab = HudTab.Chemicals;
+                chemicals.Preselect(o.Demo.Substring(5).Replace('_', ' '));
+            }
+            else if (o.Demo != null)
             {
                 Demo.Setup(o.Demo, lab, hud);
             }
@@ -107,11 +119,13 @@ namespace IDLab.Desktop
             }
 
             int frame = 0;
+            float microClock = 0;
             while (!WindowShouldClose() && !hud.QuitRequested)
             {
                 float dt = o.Demo != null ? 1f / 60f : Math.Min(GetFrameTime(), 0.1f);
                 if (IsKeyPressed(KeyboardKey.F11)) ToggleBorderlessWindowed();
 
+                var sw = System.Diagnostics.Stopwatch.StartNew();
                 Ui.BeginFrame();
                 hud.Layout();
                 bool labTab = hud.Tab == HudTab.Lab;
@@ -124,7 +138,13 @@ namespace IDLab.Desktop
                 if (labTab)
                 {
                     micro.Update(lab, dt);
-                    micro.Render();
+                    // The molecule view is a small inset: 30 fps is plenty (15 in the economy modes).
+                    microClock += GetFrameTime();
+                    if (microClock >= (Quality.Economy ? 1f / 15f : 1f / 30f) || o.Demo != null)
+                    {
+                        microClock = 0;
+                        micro.Render();
+                    }
                 }
                 else if (hud.Tab == HudTab.Periodic)
                 {
@@ -139,14 +159,33 @@ namespace IDLab.Desktop
                     info.Update(dt, hud.ContentArea);
                 }
 
+                double tUpdate = sw.Elapsed.TotalMilliseconds;
+                if (o.Demo == null || o.Quality != null) Quality.Update(GetFrameTime());
+                bool offscreen = labTab && Quality.BeginScene(Theme.Scene);
+                if (offscreen)
+                {
+                    BeginMode3D(lab.Camera);
+                    Scene.Draw(lab, dt);
+                    EndMode3D();
+                    Quality.EndScene();
+                }
+
                 BeginDrawing();
                 ClearBackground(Theme.Scene);
                 switch (hud.Tab)
                 {
                     case HudTab.Lab:
-                        BeginMode3D(lab.Camera);
-                        Scene.Draw(lab, dt);
-                        EndMode3D();
+                        if (offscreen)
+                        {
+                            Quality.Present();
+                        }
+                        else
+                        {
+                            BeginMode3D(lab.Camera);
+                            Scene.Draw(lab, dt);
+                            EndMode3D();
+                        }
+
                         Scene.DrawLabels(lab);
                         break;
                     case HudTab.Periodic:
@@ -160,9 +199,15 @@ namespace IDLab.Desktop
                         break;
                 }
 
+                double tScene = sw.Elapsed.TotalMilliseconds;
                 hud.Draw(dt);
+                double tHud = sw.Elapsed.TotalMilliseconds;
                 EndDrawing();
                 Ui.EndFrame();
+                if (o.Profile)
+                {
+                    Profiler.Add(tUpdate, tScene - tUpdate, tHud - tScene, sw.Elapsed.TotalMilliseconds - tHud);
+                }
 
                 frame++;
                 if (o.Trace && frame % 30 == 0) Demo.Trace(lab, frame);
@@ -177,6 +222,7 @@ namespace IDLab.Desktop
                 }
             }
 
+            TouchInput.Uninstall();
             CloseWindow();
         }
 
@@ -187,7 +233,8 @@ namespace IDLab.Desktop
             public string Demo;
             public int Frames;
             public string Screenshot;
-            public bool Trace;
+            public bool Trace, Light, Profile;
+            public string Quality;
             public float[] Camera;
             public int Topic;
 
@@ -212,6 +259,9 @@ namespace IDLab.Desktop
                         case "--frames": o.Frames = int.Parse(args[++i], CultureInfo.InvariantCulture); break;
                         case "--screenshot": o.Screenshot = args[++i]; break;
                         case "--trace": o.Trace = true; break;
+                        case "--light": o.Light = true; break;
+                        case "--profile": o.Profile = true; break;
+                        case "--quality": o.Quality = args[++i]; break;
                         case "--topic": o.Topic = int.Parse(args[++i], CultureInfo.InvariantCulture); break;
                         case "--camera": o.Camera = Array.ConvertAll(args[++i].Split(','), v => float.Parse(v, CultureInfo.InvariantCulture)); break;
                     }
@@ -312,6 +362,64 @@ namespace IDLab.Desktop
                     hud.Tab = HudTab.Info;
                     break;
 
+                case "cabinet":
+                {
+                    // Compounds added from the chemical cabinet, poured with the quick-pour buttons.
+                    lab.LoadExperiment("chem.acid-base");
+                    foreach (var it in lab.Items.ToList()) lab.Remove(it);
+                    var cat = lab.World.Catalog;
+                    cat.Register(EquipmentCatalog.CreateJar("custom.jar.nacl.20", "NaCl 20 g", SubstanceIds.SodiumChloride, 20, 0xEEEEEE));
+                    cat.Register(EquipmentCatalog.CreateBottle("custom.sol.cuso4.1", "CuSO4 1 M", ReagentPreset.Solution("1 M CuSO4", 250, SubstanceIds.CopperSulfate, 1.0), 0x3B82F6));
+                    var water = lab.Spawn(EquipmentIds.Beaker250Water, new Vector3(-0.05f, 0, 0.0f));
+                    var jar = lab.Spawn("custom.jar.nacl.20", new Vector3(0.12f, 0, -0.02f));
+                    var naoh = lab.Spawn(EquipmentIds.Beaker100, new Vector3(-0.25f, 0, 0.0f));
+                    var m = new Mixture(lab.World.Substances);
+                    ReagentPreset.Solution("", 40, SubstanceIds.SodiumHydroxide, 1.0).FillInto(m);
+                    naoh.Container.ReceiveLiquid(m);
+                    lab.Spawn("custom.sol.cuso4.1", new Vector3(-0.4f, 0, 0.05f));
+                    Thumbnails.Ensure(cat.Get("custom.jar.nacl.20"));
+                    Thumbnails.Ensure(cat.Get("custom.sol.cuso4.1"));
+                    jar.PourInto = water;
+                    lab.StartAutoPour(jar, (jar.Container.SolidVolumeMilliliters + jar.Container.LiquidVolumeMilliliters) / 2);
+                    lab.Selected = jar;
+                    hud.SetSpeed(1);
+                    break;
+                }
+
+                case "hotplate":
+                {
+                    lab.LoadExperiment("chem.heating-curve");
+                    foreach (var it in lab.Items.ToList()) lab.Remove(it);
+                    var plate = lab.Spawn(EquipmentIds.HotPlate, new Vector3(0.12f, 0, 0));
+                    var burner = lab.Spawn(EquipmentIds.BunsenBurner, new Vector3(-0.14f, 0, 0.02f));
+                    plate.Heat.GasValve = 0.8;
+                    burner.Heat.GasValve = 0.75;
+                    lab.Distance = 0.75f;
+                    hud.SetSpeed(1);
+                    break;
+                }
+
+                case "burn":
+                {
+                    // Magnesium burning on the gauze; sulfur in a second beaker over another burner.
+                    lab.LoadExperiment("chem.heating-curve");
+                    foreach (var it in lab.Items.ToList()) lab.Remove(it);
+                    var db = lab.World.Substances;
+                    var b1 = lab.Spawn(EquipmentIds.BunsenBurner, new Vector3(0.1f, 0, 0));
+                    var b2 = lab.Spawn(EquipmentIds.BunsenBurner, new Vector3(-0.15f, 0, 0));
+                    var c1 = lab.Spawn(EquipmentIds.Beaker100, new Vector3(0.1f, 0.3f, 0));
+                    var c2 = lab.Spawn(EquipmentIds.Beaker100, new Vector3(-0.15f, 0.3f, 0));
+                    SnapOnto(lab, c1, b1.Position + new Vector3(0, 0.25f, 0));
+                    SnapOnto(lab, c2, b2.Position + new Vector3(0, 0.25f, 0));
+                    c1.Container.AddSubstance(SubstanceIds.Magnesium, 0.03);
+                    c2.Container.AddSubstance(db.FindElement("S").Id, 0.05);
+                    b1.Heat.GasValve = 1;
+                    b2.Heat.GasValve = 1;
+                    lab.Selected = c1;
+                    hud.SetSpeed(2);
+                    break;
+                }
+
                 case "chemicals":
                     hud.Tab = HudTab.Chemicals;
                     break;
@@ -347,6 +455,14 @@ namespace IDLab.Desktop
                 lab.Selected = lab.Items.First(i => i.Def.Id == EquipmentIds.Beaker250);
             }
 
+
+            if (name == "cabinet" && frame == 420)
+            {
+                var bottle = lab.Items.First(i => i.Def.Id == "custom.sol.cuso4.1");
+                bottle.PourInto = lab.Items.First(i => i.Def.Id == EquipmentIds.Beaker100);
+                lab.StartAutoPour(bottle, 25);
+                lab.Selected = bottle;
+            }
 
             if (name == "safety" && frame == 30)
             {
@@ -394,6 +510,27 @@ namespace IDLab.Desktop
             {
                 lab.Snap(item, c);
             }
+        }
+    }
+
+    /// <summary>--profile: average milliseconds per frame section, printed every 120 frames.</summary>
+    internal static class Profiler
+    {
+        private static double _u, _s, _h, _p;
+        private static long _bytes;
+        private static int _n;
+
+        public static void Add(double update, double scene, double hud, double present)
+        {
+            _u += update; _s += scene; _h += hud; _p += present; _n++;
+            if (_n < 120) return;
+            Console.WriteLine(string.Format(CultureInfo.InvariantCulture, "profile: update {0:0.00} ms, scene {1:0.00} ms, hud {2:0.00} ms, present {3:0.00} ms, total {4:0.00} ms, {5} draws/frame, {6:0.0} MB allocated/s, gen0 GCs {7}",
+                _u / _n, _s / _n, _h / _n, _p / _n, (_u + _s + _h + _p) / _n, Gfx.DrawCalls / _n,
+                (GC.GetTotalAllocatedBytes() - _bytes) / 1e6 / Math.Max(1e-3, (_u + _s + _h + _p) / 1000.0), GC.CollectionCount(0)));
+            _bytes = GC.GetTotalAllocatedBytes();
+            Gfx.DrawCalls = 0;
+            _u = _s = _h = _p = 0;
+            _n = 0;
         }
     }
 }

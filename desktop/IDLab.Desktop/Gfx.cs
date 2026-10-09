@@ -149,8 +149,12 @@ void main() {
 
         private static uint Pack(Color c) => ((uint)c.R << 24) | ((uint)c.G << 16) | ((uint)c.B << 8) | c.A;
 
+        /// <summary>Mesh draws issued since the counter was last read (for --profile).</summary>
+        public static int DrawCalls;
+
         public static unsafe void Draw(Mesh mesh, Matrix4x4 transform, Color color, Vector3 emission, Texture2D texture, float specular)
         {
+            DrawCalls++;
             float env = Env >= 0 ? Env : MaterialEnv.TryGetValue(Pack(color), out float e) ? e : 0f;
             SetShaderValue(_shader, _locEnv, env, ShaderUniformDataType.Float);
             _material.Maps[(int)MaterialMapIndex.Albedo].Color = color;

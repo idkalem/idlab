@@ -12,7 +12,7 @@ namespace IDLab.Core.Tests
 {
     public class ExtendedChemistryTests
     {
-        private readonly SubstanceDatabase _db = SubstanceDatabase.CreateDefault();
+        private readonly SubstanceDatabase _db = SubstanceDatabase.Shared;
 
         private Mixture Water(double ml)
         {

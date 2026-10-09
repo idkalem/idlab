@@ -25,8 +25,10 @@ gömülüdür. **Kurulum gerekmez.**
   Intel/AMD tümleşik grafik kartları yeterlidir.
 * **Sekmeler:** üst çubukta dört sekme vardır.
   * **Laboratuvar:** gerçekçi bir laboratuvar odasında 3D deney tezgâhı.
-  * **Kimyasallar (kimyasal dolabı):** 8400'den fazla kimyasal: iyonik bileşikler, hidratlar ve mineraller, asitler,
-    bazlar, 81 element, organik ve biyokimyasal bileşikler, indikatörler. Yaklaşık 7300 bileşik CRC Handbook of
+  * **Kimyasallar (kimyasal dolabı):** 40 000'den fazla kimyasal: iyonik bileşikler, hidratlar ve mineraller, asitler,
+    bazlar, 118 elementin tamamı (radyoaktif ve sentetik olanlar işaretli; güvenlik gereği tezgâha eklenmez), organik
+    ve biyokimyasal bileşikler, indikatörler. ~31 600 organik bileşik PubChem tablosundan (erime/kaynama noktasıyla)
+    sıkıştırılmış olarak gömülüdür. Yaklaşık 7300 bileşik CRC Handbook of
     Chemistry and Physics tablolarından (`chemicals` Python paketi) alınmıştır: inorganik tuzlar, oksitler ve
     hidratlar ad → katyon + anyon çözümlemesiyle, organik bileşikler PubChem formülüyle, Türkçe IUPAC adlarıyla.
     Bu kayıtlarda tehlike ve çözünürlük verisi yoksa kart bunu açıkça söyler. Türkçe ya da İngilizce adı, yaygın adı
@@ -35,13 +37,17 @@ gömülüdür. **Kurulum gerekmez.**
     ve bir anyon seçerek yük dengesiyle oluşan formülü görün. Seçilen kimyasal çözelti şişesi, saf sıvı şişesi ya da
     katı kavanozu olarak tezgâha eklenir. Tepkimeler (çökelme, nötrleşme, gaz çıkışı, metal + asit, yer değiştirme,
     aktif metal + su) iyon kurallarıyla tüm katalogda çalışır.
+    **Nasıl elde edilir?** Her bileşiğin kartında simülasyonun gerçekten yürüttüğü yollar denkleştirilmiş denklemleriyle
+    listelenir (elementi havada yakma, doğrudan birleşme Fe + S → FeS, metal + asit, nötrleşme, oksit/karbonat + asit,
+    çöktürme, yer değiştirme, metal/oksit + su). Elementin kartında "Bu elementten neler yapılır?" bölümü vardır.
+    "Tezgâhta hazırla" gereken şişe/kavanozları, su dolu beheri ve gerekiyorsa Bunsen bekini tezgâha koyar.
   * **Periyodik Tablo:** 118 elementin 3D tablosu. Bir elemente dokunun: dönen Bohr atom modeli (proton, nötron,
     elektron katmanları) ve bilgi kartı açılır. Kartta atom numarası, kütle, grup/periyot/blok, elektron dizilimi,
     elektronegatiflik, erime/kaynama noktası, yoğunluk, keşif yılı ve kısa bir not bulunur. Sütun yüksekliği atom
     kütlesi, elektronegatiflik, yoğunluk ya da erime noktasını gösterebilir. Kategori düğmeleri tabloyu süzer.
   * **Bilgi ("Bilmemiz Gerekenler"):** laboratuvar güvenliği, GHS tehlike işaretleri, malzemeler, pH ölçeği ve
     indikatörler, tepkime türleri, metallerin aktiflik sırası, mol ve formüller, ısı ve hâl değişimi, ayırma
-    yöntemleri, periyodik özellikler, fizik formülleri ve mikroskop/hücre konuları.
+    yöntemleri, periyodik özellikler ve fizik formülleri.
 * **Malzemeler:** 50'den fazla malzeme ve kimyasal resimli bir listede, kategori düğmeleriyle (Cam, Isıtıcı, Ölçüm,
   Sıvılar, İndikatör, Katılar) bulunur.
   * Cam malzemeler: beherler, erlenmayer, balon joje, dereceli silindir, deney tüpü ve tüplük, petri kabı.
@@ -49,7 +55,19 @@ gömülüdür. **Kurulum gerekmez.**
     sayacı, "Doldur"), termometre ve pH probu.
   * Kimyasallar: 17 sıvı (asitler, bazlar, tuz çözeltileri, H₂O₂, etanol, çamaşır suyu...), indikatörler ve 11 katı
     (tuz, karbonat, mermer, CuSO₄/KMnO₄ kristalleri, Mg, Zn, Fe, Cu, Na).
-* **Tehlike işaretleri:** etiketlerde ve bilgi sayfalarında resmî GHS01–GHS09 sembolleri kullanılır.
+* **Tehlike işaretleri:** etiketlerde ve bilgi sayfalarında resmî GHS01–GHS09 sembolleri ve resmî Türkçe adları
+  (Patlayıcı, Yanıcı, Oksitleyici, Basınçlı gaz, Aşındırıcı, Akut toksik, Tahriş edici, Ciddi sağlık tehlikesi, Çevre
+  için tehlikeli) kullanılır.
+* **Yangın ve patlama:** alevin üstünde ısınan yanıcı sıvıların buharı tutuşur; eter gibi çok uçucu sıvıların buharı
+  patlar; ısıtıcı tablanın kızgın yüzeyi düşük tutuşma sıcaklıklı sıvıları (eter, CS₂, hekzan) tutuşturur. Mg, S, P,
+  Na, Fe tozu gibi katılar alevde kendi renkleriyle yanıp oksitlerine dönüşür (Mg → MgO beyaz duman, S → SO₂);
+  bakır yalnızca kararır (CuO). Patlayıcılar (TNT, azitler) ısınınca infilak eder; alevdeki hidrojen "pat" diye patlar.
+* **Dokunmatik:** Windows'un dokunmatik "bas-bırak" mesajları doğrudan yakalanır; her şey tek dokunuşla çalışır.
+  Sürüklenen nesnenin tabanı parmağın ucunu izler; yalnızca üst yüzeylere (bek tel kafesi, terazi, beher ağzı) oturur,
+  uygun bir yer yoksa tezgâhta boş bir yere bırakılır. İnce nesneler (termometre, prob) için dokunma alanı geniştir.
+* **Tema ve kalite:** üst çubukta açık/koyu tema (☀/☾) ve "Kalite" düğmesi vardır. Otomatik kalite 3D sahneyi en fazla
+  1080 satırda çizer (4K tahtada 4 kat daha az piksel), kare süresi uzarsa çözünürlüğü kendiliğinden düşürür ve kenarları
+  FXAA ile yumuşatır; MSAA yalnızca "Yüksek" modda açılır. Ayarlar `%LOCALAPPDATA%\IDLab\ayarlar.txt` dosyasında saklanır.
 * **Kolay dökme:** bir şişeyi sürükleyip başka bir kabın üstüne bırakın: 25 mL döker ve yerine döner.
   Ya da şişeyi seçip "Dök → [kap]" düğmesine, sonra tezgâhta dökülecek kaba dokunun ve miktarı seçin.
 * **Titrasyon:** erlenmayer büretin tabanına kendiliğinden oturur (büret ucu her zaman kabın ağzına gelir).
@@ -74,7 +92,7 @@ gömülüdür. **Kurulum gerekmez.**
 * **Derleme:** `dotnet publish desktop/IDLab.Desktop -c Release -r win-x64 -o dist` komutu `dist/IDLab.exe`
   dosyasını üretir. Linux'tan da derlenebilir, CI her push'ta derler.
 * **Test seçenekleri:** `--windowed 1920x1080`,
-  `--demo heating|acid|safety|titration|precip|metals|pour|chemicals|periodic|info`, `--topic N`, `--frames N`,
+  `--demo heating|acid|safety|titration|precip|metals|pour|cabinet|hotplate|burn|chemicals|chem:<arama>|periodic|info`, `--quality otomatik|yuksek|dengeli|hizli`, `--light`, `--profile`, `--topic N`, `--frames N`,
   `--screenshot dosya.png`, `--trace`, `--camera yaw,pitch,mesafe`.
 
 ## What the prototype does
@@ -130,7 +148,7 @@ before every build). This keeps the shader variants for runtime-created material
 ### Test the simulation core (no Unity needed)
 
 ```bash
-dotnet test core/tests/IDLab.Core.Tests          # 74 unit tests
+dotnet test core/tests/IDLab.Core.Tests          # 90 unit tests
 dotnet build tools/unity-typecheck                # type-checks all Unity scripts against Unity reference assemblies
 ```
 

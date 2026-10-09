@@ -331,6 +331,7 @@ namespace IDLab.Core.Chemistry
 
             e.AddRule(new GenericMetalWaterRule());
             e.AddRule(new GenericOxideWaterRule());
+            e.AddRule(new GenericCombinationRule());
             e.AddRule(new GenericAcidBaseRule(handled));
             e.AddRule(new GenericPrecipitationRule(handled));
             e.AddRule(new GenericMetalAcidRule(handled));
