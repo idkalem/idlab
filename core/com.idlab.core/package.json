@@ -1,8 +1,0 @@
-{
-  "name": "com.idlab.core",
-  "version": "0.1.0",
-  "displayName": "ID Lab Simulation Core",
-  "description": "Engine-agnostic simulation core for ID Lab: data model, chemistry, thermal model, sensors, data logging and micro-view state. Has no UnityEngine dependency so it can be unit tested with dotnet and reused by other front-ends.",
-  "unity": "2022.3",
-  "author": { "name": "ID Lab" }
-}

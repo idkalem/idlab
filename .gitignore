@@ -1,29 +1,8 @@
-# Unity (app/)
-app/[Ll]ibrary/
-app/[Tt]emp/
-app/[Oo]bj/
-app/[Bb]uild/
-app/[Bb]uilds/
-app/[Ll]ogs/
-app/[Uu]ser[Ss]ettings/
-app/[Mm]emoryCaptures/
-app/Assets/IDLab/Resources/IDLabShaderRefs/
-app/Assets/IDLab/Resources/IDLabShaderRefs.meta
-app/*.csproj
-app/*.sln
-app/*.slnx
-app/.vs/
-app/.vsconfig
-app/Packages/packages-lock.json
-
-# .NET (core/, tools/)
-**/bin/
-**/obj/
+bin/
+obj/
+dist/
 *.user
-TestResults/
-
-# OS / IDE
-.DS_Store
-.idea/
+.vs/
 .vscode/
-*.swp
+.idea/
+.DS_Store
