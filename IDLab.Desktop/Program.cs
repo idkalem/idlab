@@ -235,7 +235,6 @@ namespace IDLab.Desktop
 
                 double tScene = sw.Elapsed.TotalMilliseconds;
                 hud.Draw(dt);
-                PointerCursor.Draw();
                 double tHud = sw.Elapsed.TotalMilliseconds;
                 EndDrawing();
                 Ui.EndFrame();
