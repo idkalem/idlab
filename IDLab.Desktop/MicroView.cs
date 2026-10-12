@@ -67,6 +67,7 @@ namespace IDLab.Desktop
             if (s?.Container != null && s.Def.VisualKey == "beaker") return s.Container;
             if (s?.Container != null) return s.Container;
             if (s?.Probe?.ImmersedIn != null) return s.Probe.ImmersedIn;
+            if (s?.Rod?.ImmersedIn != null) return s.Rod.ImmersedIn;
             if (s?.Heat?.HeatedContainer != null) return s.Heat.HeatedContainer;
             return lab.Items.Where(i => i.Def.VisualKey == "beaker" && i.Container != null && !i.Container.Contents.IsEmpty)
                             .Select(i => i.Container)

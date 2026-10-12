@@ -153,7 +153,8 @@ namespace IDLab.Core.Model
             {
                 EquipmentIds.Beaker100, EquipmentIds.TestTube, EquipmentIds.TubeRack, EquipmentIds.Agno3Solution, EquipmentIds.NaclSolution,
                 EquipmentIds.Cuso4Solution, EquipmentIds.Fecl3Solution, EquipmentIds.NaohBottle, EquipmentIds.FeJar, EquipmentIds.ZnJar,
-                EquipmentIds.CuJar, EquipmentIds.Kmno4Jar, EquipmentIds.WaterBottle,
+                EquipmentIds.CuJar, EquipmentIds.Kmno4Jar, EquipmentIds.WaterBottle, EquipmentIds.IronRod, EquipmentIds.CopperRod,
+                EquipmentIds.ZincRod, EquipmentIds.GlassRod,
             });
             precip.InitialLayout.Add((EquipmentIds.TubeRack, 0.0f, 0.12f));
             precip.InitialLayout.Add((EquipmentIds.Cuso4Solution, -0.2f, 0.0f));
@@ -188,6 +189,49 @@ namespace IDLab.Core.Model
                 EquipmentIds.SodiumJar, EquipmentIds.EthanolBottle, EquipmentIds.BunsenBurner, EquipmentIds.HotPlate,
             });
             c.Register(safety);
+
+            var plating = new ExperimentDefinition
+            {
+                Id = "chem.electroplating", Title = "Electroplating", Discipline = Discipline.Chemistry, Status = ExperimentStatus.Playable,
+                Summary = "Plate an iron rod with copper: iron rod on the (−) lead, copper rod on the (+) lead, both in CuSO₄. Then try nickel, zinc and silver.",
+            };
+            plating.Equipment.AddRange(new[]
+            {
+                EquipmentIds.PowerSupply, EquipmentIds.Beaker250Cuso4, EquipmentIds.Beaker250, EquipmentIds.Beaker100, EquipmentIds.IronRod,
+                EquipmentIds.CopperRod, EquipmentIds.NickelRod, EquipmentIds.ZincRod, EquipmentIds.SilverRod, EquipmentIds.TinRod,
+                EquipmentIds.GraphiteRod, EquipmentIds.GlassRod, EquipmentIds.Cuso4Solution, EquipmentIds.Niso4Solution,
+                EquipmentIds.Znso4Solution, EquipmentIds.Agno3Solution, EquipmentIds.Sncl2Solution, EquipmentIds.NaclSolution,
+                EquipmentIds.Na2so4Solution, EquipmentIds.H2so4Bottle, EquipmentIds.PhenolphthaleinBottle, EquipmentIds.Balance,
+            });
+            plating.InitialLayout.Add((EquipmentIds.Beaker250Cuso4, -0.02f, 0.04f));
+            plating.InitialLayout.Add((EquipmentIds.PowerSupply, 0.22f, 0.02f));
+            plating.InitialLayout.Add((EquipmentIds.IronRod, -0.16f, 0.08f));
+            plating.InitialLayout.Add((EquipmentIds.CopperRod, -0.2f, 0.08f));
+            plating.InitialLayout.Add((EquipmentIds.GraphiteRod, -0.24f, 0.08f));
+            plating.InitialLayout.Add((EquipmentIds.NaclSolution, -0.32f, -0.04f));
+            c.Register(plating);
+
+            var rods = new ExperimentDefinition
+            {
+                Id = "chem.metal-rods", Title = "Metal Rods & the Silver Tree", Discipline = Discipline.Chemistry, Status = ExperimentStatus.Playable,
+                Summary = "Dip metal rods into salt solutions: a more active metal is coated by the less active one (Fe in CuSO₄, Cu in AgNO₃, Zn in Pb(NO₃)₂).",
+            };
+            rods.Equipment.AddRange(new[]
+            {
+                EquipmentIds.Beaker100, EquipmentIds.Beaker250, EquipmentIds.TestTube, EquipmentIds.TubeRack, EquipmentIds.IronRod,
+                EquipmentIds.CopperRod, EquipmentIds.ZincRod, EquipmentIds.AluminiumRod, EquipmentIds.MagnesiumRibbon, EquipmentIds.LeadRod,
+                EquipmentIds.NickelRod, EquipmentIds.TinRod, EquipmentIds.SilverRod, EquipmentIds.GlassRod, EquipmentIds.Cuso4Solution,
+                EquipmentIds.Agno3Solution, EquipmentIds.PbNo3Solution, EquipmentIds.Znso4Solution, EquipmentIds.Feso4Solution,
+                EquipmentIds.Niso4Solution, EquipmentIds.Sncl2Solution, EquipmentIds.HclBottle, EquipmentIds.WaterBottle, EquipmentIds.Balance,
+            });
+            rods.InitialLayout.Add((EquipmentIds.Beaker100, -0.1f, 0.04f));
+            rods.InitialLayout.Add((EquipmentIds.Beaker100, 0.06f, 0.04f));
+            rods.InitialLayout.Add((EquipmentIds.Cuso4Solution, -0.26f, 0.0f));
+            rods.InitialLayout.Add((EquipmentIds.Agno3Solution, 0.22f, 0.0f));
+            rods.InitialLayout.Add((EquipmentIds.IronRod, -0.14f, -0.08f));
+            rods.InitialLayout.Add((EquipmentIds.CopperRod, 0.02f, -0.08f));
+            rods.InitialLayout.Add((EquipmentIds.GlassRod, 0.1f, -0.08f));
+            c.Register(rods);
 
             // Roadmap modules — defined so menus, progress tracking and content pipelines can be built now.
             c.Register(Planned("phys.dc-circuits", "DC Circuits & Short Circuits", Discipline.Physics, "Batteries, bulbs, resistors, fuses; V–I graphs; sparks and blown fuses on shorts."));

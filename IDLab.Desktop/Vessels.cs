@@ -409,6 +409,18 @@ namespace IDLab.Desktop
             }
         }
 
+        /// <summary>A bubble released at a point in the vessel's frame (e.g. on an electrode).</summary>
+        public static void Add(Item item, Vector3 local, float size)
+        {
+            if (!All.TryGetValue(item.Inst, out var list))
+            {
+                list = new List<Bubble>();
+                All[item.Inst] = list;
+            }
+
+            if (list.Count < 220) list.Add(new Bubble { Position = local, Size = size, Speed = 0.03f + size * 18, Phase = (float)Rng.NextDouble() * 6.28f });
+        }
+
         public static void Draw(Item item, VesselShape shape, float level)
         {
             if (!All.TryGetValue(item.Inst, out var list) || list.Count == 0) return;

@@ -35,6 +35,11 @@ namespace IDLab.Desktop
         public LiquidContainer Container => Inst.Get<LiquidContainer>();
         public HeatSource Heat => Inst.Get<HeatSource>();
         public Probe Probe => Inst.Get<Probe>();
+        public Rod Rod => Inst.Get<Rod>();
+        public PowerSupply Supply => Inst.Get<PowerSupply>();
+
+        /// <summary>Thin things that stand in a vessel (probes, rods, electrodes).</summary>
+        public bool IsStick => Probe != null || Rod != null;
         public Stopcock Tap => Inst.Get<Stopcock>();
         public bool CanTilt => Container != null && Tap == null;
         public bool IsHeld => Dragging || (Tilt > 0.5f && Host == null);
@@ -883,7 +888,7 @@ namespace IDLab.Desktop
                     var box = Inflate(raw, 0.012f);
                     var hit = GetRayCollisionBox(ray, box);
                     // Thin probes and tubes get priority over the vessel or rack they stand in.
-                    float distance = hit.Distance - (item.Probe != null || item.Host != null ? 0.05f : 0f);
+                    float distance = hit.Distance - (item.IsStick || item.Host != null ? 0.05f : 0f);
                     if (hit.Hit && distance < best)
                     {
                         best = distance;
@@ -930,7 +935,7 @@ namespace IDLab.Desktop
                 foreach (var box in Boxes(item))
                 {
                     var hit = GetRayCollisionBox(ray, box);
-                    float d = hit.Distance - (item.Probe != null || item.Host != null ? 0.05f : 0f);
+                    float d = hit.Distance - (item.IsStick || item.Host != null ? 0.05f : 0f);
                     if (hit.Hit && d < best)
                     {
                         best = d;
@@ -1002,7 +1007,7 @@ namespace IDLab.Desktop
 
             foreach (var other in _items.Values)
             {
-                if (other == item || IsDescendantOf(other, item) || other.Probe != null) continue;
+                if (other == item || IsDescendantOf(other, item) || other.IsStick) continue;
                 foreach (var b in Boxes(other))
                 {
                     if (ray.Direction.Y >= -1e-4f) continue;

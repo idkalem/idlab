@@ -49,6 +49,7 @@ namespace IDLab.Desktop
             ("Sıvılar", new[] { EquipmentCategory.Reagent }),
             ("İndikatör", new[] { EquipmentCategory.Indicator }),
             ("Katılar", new[] { EquipmentCategory.SolidReagent }),
+            ("Çubuklar", new[] { EquipmentCategory.Electrical }),
         };
 
         public bool QuitRequested { get; private set; }
@@ -450,6 +451,7 @@ namespace IDLab.Desktop
                 case "°C": return "Sıcaklık";
                 case "g": return "Kütle";
                 case "mL": return "Verilen hacim";
+                case "A": return "Akım";
                 default: return ch.Label;
             }
         }
@@ -773,6 +775,14 @@ namespace IDLab.Desktop
                     : hs.OpenFlame ? "Isıtılan: yok · tel kafese bir kap koyun" : "Isıtılan: yok · tablanın üstüne bir kap koyun", Theme.Muted));
                 if (hs.OpenFlame) lines.Add(("Etanol gibi yanıcı sıvıları alevle değil ısıtıcı tablayla ısıtın.", Theme.Warning));
             }
+            else if (item.Supply != null)
+            {
+                AddSupplyLines(item.Supply, lines);
+            }
+            else if (item.Rod != null)
+            {
+                AddRodLines(item.Rod, lines);
+            }
             else if (item.Probe != null)
             {
                 var p = item.Probe;
@@ -822,6 +832,104 @@ namespace IDLab.Desktop
             if (doses) DrawBuretteDoses(item, c, new Rectangle(r.X + 16 * s, controlsY - 56 * s, r.Width - 32 * s, 46 * s));
 
             DrawControls(item, c, balance, new Rectangle(r.X + 16 * s, controlsY, r.Width - 32 * s, 48 * s));
+        }
+
+        private static string ElementTr(IDLab.Core.LabWorld world, string symbol)
+        {
+            var el = symbol == null ? null : world.Substances.FindElement(symbol);
+            return el != null ? Tr.Substance(el) : symbol;
+        }
+
+        private static string Milligrams(IDLab.Core.LabWorld world, string symbol, double moles)
+        {
+            var el = world.Substances.FindElement(symbol);
+            double mg = moles * (el?.MolarMass ?? 60) * 1000;
+            return string.Format(CultureInfo.CurrentCulture, mg < 10 ? "{0:0.00} mg" : "{0:0.0} mg", mg);
+        }
+
+        private void AddRodLines(Rod rod, List<(string, Color)> lines)
+        {
+            var ci = CultureInfo.CurrentCulture;
+            var world = _lab.World;
+            if (rod.IsGlass) lines.Add(("Cam baget: tepkimeye girmez, karıştırmak için kullanılır.", Theme.Muted));
+            else if (rod.IsGraphite) lines.Add(("Grafit (karbon) elektrot: tepkimeye girmez; elektrolizde akımı iletir.", Theme.Muted));
+            else lines.Add((string.Format(ci, "Metal: {0} ({1})", ElementTr(world, rod.Material), rod.Material), Theme.Text));
+
+            if (rod.ImmersedIn != null)
+            {
+                lines.Add((string.Format(ci, "Daldırıldığı kap: {0} · ıslak boy {1:0.0} cm", Tr.Name(rod.ImmersedIn.Owner), rod.ImmersedLengthM * 100), Theme.Text));
+            }
+            else
+            {
+                lines.Add(("Ucunu çözelti dolu bir kabın içine bırakın.", Theme.Warning));
+            }
+
+            foreach (var layer in rod.Layers)
+            {
+                string what = layer.Crystals ? "kristalleri" : "kaplama";
+                lines.Add((string.Format(ci, "{0} {1}: {2}{3}", ElementTr(world, layer.Symbol), what, Milligrams(world, layer.Symbol, layer.Moles),
+                    layer.Crystals ? "" : string.Format(ci, " · ≈{0:0.00} µm", rod.ThicknessM(layer) * 1e6)), Theme.Accent));
+            }
+
+            if (rod.DissolvedMoles > 1e-8)
+            {
+                lines.Add((string.Format(ci, "Çözünüp çözeltiye geçen {0}: {1}", ElementTr(world, rod.Material).ToLower(Tr.TrCulture), Milligrams(world, rod.Material, rod.DissolvedMoles)), Theme.Text));
+            }
+
+            if (rod.Polarity != 0)
+            {
+                lines.Add((rod.Polarity < 0 ? "Güç kaynağına bağlı: siyah kablo (−) · KATOT: üzeri kaplanır." : "Güç kaynağına bağlı: kırmızı kablo (+) · ANOT: metal çözünür ya da gaz çıkar.",
+                    rod.Polarity < 0 ? Theme.Accent : Theme.Warning));
+            }
+            else if (rod.ImmersedIn != null && rod.Conducts && !rod.IsGraphite && rod.CoatingRateMolPerS <= 1e-12)
+            {
+                // Explain why nothing happens (activity series).
+                var e = IDLab.Core.Chemistry.ActivitySeries.Get(rod.SurfaceSymbol);
+                foreach (var kv in rod.ImmersedIn.Contents.Components)
+                {
+                    var sub = world.Substances.Get(kv.Key);
+                    var dep = sub.IsIonic && kv.Value > 1e-8 ? IDLab.Core.Chemistry.ActivitySeries.ForCation(sub.CationKey) : null;
+                    if (dep == null || e == null || dep.Symbol == rod.SurfaceSymbol) continue;
+                    lines.Add((string.Format(ci, "Kendiliğinden tepkime yok: {0}, {1} iyonlarından daha az aktif (aktiflik sırası).",
+                        ElementTr(world, rod.SurfaceSymbol), ElementTr(world, dep.Symbol).ToLower(Tr.TrCulture)), Theme.Muted));
+                    break;
+                }
+            }
+        }
+
+        private void AddSupplyLines(PowerSupply ps, List<(string, Color)> lines)
+        {
+            var ci = CultureInfo.CurrentCulture;
+            var world = _lab.World;
+            lines.Add((string.Format(ci, "Gerilim: {0:0.0} V   ·   Akım: {1:0.000} A", ps.Voltage, ps.CurrentA), Theme.Text));
+            if (ps.Negative == null || ps.Positive == null)
+            {
+                lines.Add(("Kablolar bağlı değil. İki çubuğu (ör. demir ve bakır) aynı çözeltiye daldırıp gerilimi açın; kablolar kendiliğinden bağlanır.", Theme.Warning));
+                return;
+            }
+
+            lines.Add(("(−) Katot (kaplanan): " + Tr.Name(ps.Negative) + "   ·   (+) Anot: " + Tr.Name(ps.Positive), Theme.Text));
+            if (ps.OpenCircuit)
+            {
+                lines.Add(("Devre açık: iki çubuk da aynı çözeltinin içinde olmalı.", Theme.Warning));
+                return;
+            }
+
+            if (ps.Voltage <= 0.01) lines.Add(("Gerilimi açın (aşağıdaki kaydırıcı).", Theme.Muted));
+            if (ps.CathodeReaction != null) lines.Add(("Katot (−): " + ps.CathodeReaction, Theme.Accent));
+            if (ps.AnodeReaction != null) lines.Add(("Anot (+): " + ps.AnodeReaction, Theme.Accent));
+            var cathode = ps.Negative.Get<Rod>();
+            string plated = null;
+            if (cathode != null)
+            {
+                foreach (var layer in cathode.Layers)
+                {
+                    if (!layer.Crystals) plated = ElementTr(world, layer.Symbol).ToLower(Tr.TrCulture) + " " + Milligrams(world, layer.Symbol, layer.Moles);
+                }
+            }
+
+            lines.Add((string.Format(ci, "Geçen yük: {0:0.0} C{1}", ps.ChargeC, plated != null ? "   ·   Katotta: " + plated : ""), Theme.Text));
+            lines.Add(("Faraday: biriken madde (mol) = I · t / (n · 96 485)", Theme.Muted));
         }
 
         private static void AddContents(LiquidContainer c, List<(string, Color)> lines, ref Hazard hazards)
@@ -886,6 +994,40 @@ namespace IDLab.Desktop
             else if (balance != null)
             {
                 if (Ui.Button("tare", Btn(110 * s), "Dara", Theme.AccentDim, 16)) balance.Tare();
+            }
+            else if (item.Supply != null)
+            {
+                var ps = item.Supply;
+                bool wired = ps.Negative != null && ps.Positive != null;
+                if (wired)
+                {
+                    if (Ui.Button("ps-swap", Btn(130 * s), "Kutupları çevir", Theme.AccentDim, 15)) ps.Swap();
+                    if (Ui.Button("ps-off", Btn(80 * s), "Ayır", null, 15)) ps.Disconnect();
+                }
+                else if (Ui.Button("ps-wire", Btn(90 * s), "Bağla", Theme.AccentDim, 15))
+                {
+                    if (!ps.AutoConnect()) Toast("Önce iki çubuğu aynı çözeltiye daldırın.", Theme.Warning);
+                }
+
+                Ui.Text(string.Format(ci, "{0:0.0} V", ps.Voltage), row.X, row.Y + 14 * s, 15, Theme.Muted, true);
+                float v = Ui.Slider("volts", SliderArea(70 * s), (float)ps.Voltage, 0, (float)PowerSupply.MaxVoltage, Theme.Warning);
+                ps.Voltage = Math.Round(v * 10) / 10.0;
+            }
+            else if (item.Rod != null)
+            {
+                var rod = item.Rod;
+                if (rod.IsGlass)
+                {
+                    if (Ui.Button("stir", Btn(120 * s), "Karıştır", Theme.AccentDim, 16))
+                    {
+                        if (rod.ImmersedIn != null) rod.Stir(4);
+                        else Toast("Bageti önce bir kabın içine bırakın.", Theme.Warning);
+                    }
+                }
+                else if (rod.Layers.Count > 0 && Ui.Button("polish", Btn(170 * s), "Zımparala (temizle)", null, 15))
+                {
+                    rod.Clean();
+                }
             }
             else if (c != null)
             {

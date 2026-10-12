@@ -469,6 +469,59 @@ namespace IDLab.Desktop
                     break;
                 }
 
+                case "plating":
+                case "nacl":
+                {
+                    lab.LoadExperiment("chem.electroplating");
+                    var beaker = lab.Items.First(i => i.Def.Id == EquipmentIds.Beaker250Cuso4);
+                    var supply = lab.Items.First(i => i.Supply != null);
+                    Item a, b;
+                    if (name == "nacl")
+                    {
+                        beaker.Container.Contents.Clear();
+                        var m = new Mixture(lab.World.Substances);
+                        ReagentPreset.Solution("", 150, SubstanceIds.SodiumChloride, 1.0).FillInto(m);
+                        ReagentPreset.Solution("", 2, SubstanceIds.Phenolphthalein, 0.01).FillInto(m);
+                        beaker.Container.ReceiveLiquid(m);
+                        a = lab.Items.First(i => i.Def.Id == EquipmentIds.GraphiteRod);
+                        b = lab.Spawn(EquipmentIds.GraphiteRod, new Vector3(-0.3f, 0, 0.12f));
+                    }
+                    else
+                    {
+                        a = lab.Items.First(i => i.Def.Id == EquipmentIds.IronRod);
+                        b = lab.Items.First(i => i.Def.Id == EquipmentIds.CopperRod);
+                    }
+
+                    SnapOnto(lab, a, beaker.Position + new Vector3(0.02f, 0.2f, 0.01f));
+                    SnapOnto(lab, b, beaker.Position + new Vector3(-0.02f, 0.2f, -0.01f));
+                    supply.Supply.Voltage = 6;
+                    lab.Selected = supply;
+                    lab.Distance = 0.75f;
+                    hud.SetSpeed(2);
+                    break;
+                }
+
+                case "rods":
+                {
+                    lab.LoadExperiment("chem.metal-rods");
+                    var beakers = lab.Items.Where(i => i.Def.Id == EquipmentIds.Beaker100).OrderBy(i => i.Position.X).ToList();
+                    void Fill(Item beaker, string salt, double molar)
+                    {
+                        var m = new Mixture(lab.World.Substances);
+                        ReagentPreset.Solution("", 70, salt, molar).FillInto(m);
+                        beaker.Container.ReceiveLiquid(m);
+                    }
+
+                    Fill(beakers[0], SubstanceIds.CopperSulfate, 0.5);
+                    Fill(beakers[1], SubstanceIds.SilverNitrate, 0.1);
+                    SnapOnto(lab, lab.Items.First(i => i.Def.Id == EquipmentIds.IronRod), beakers[0].Position + new Vector3(0.01f, 0.2f, 0));
+                    SnapOnto(lab, lab.Items.First(i => i.Def.Id == EquipmentIds.CopperRod), beakers[1].Position + new Vector3(0.01f, 0.2f, 0));
+                    lab.Selected = lab.Items.First(i => i.Def.Id == EquipmentIds.CopperRod);
+                    lab.Distance = 0.7f;
+                    hud.SetSpeed(2);
+                    break;
+                }
+
                 case "gallery":
                 case "gallery2":
                 {

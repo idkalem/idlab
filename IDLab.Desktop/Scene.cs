@@ -21,6 +21,7 @@ namespace IDLab.Desktop
             _time += dt;
             _splashTimer -= dt;
             Streams.Update(dt);
+            RodsView.Update(lab, dt);
             foreach (var item in lab.Items)
             {
                 var c = item.Container;
@@ -185,6 +186,7 @@ namespace IDLab.Desktop
             foreach (var item in lab.Items) DrawShadow(lab, item);
             foreach (var item in lab.Items) Props.DrawOpaque(item, _time);
             lab.Effects.DrawSolids();
+            RodsView.DrawCables(lab);
             DrawFlames(lab);
             DrawMarkers(lab);
 
@@ -197,6 +199,7 @@ namespace IDLab.Desktop
             }
 
             Streams.Draw();
+            RodsView.DrawThroughLiquid(lab, _time);
             Rlgl.DrawRenderBatchActive();
             Rlgl.EnableDepthMask();
             lab.Effects.Draw();

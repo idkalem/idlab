@@ -40,6 +40,14 @@ namespace IDLab.Desktop
             var s = item.Size;
             float extent = Math.Max(s.Y, Math.Max(s.X, s.Z));
             var target = new Vector3(0, s.Y * 0.45f, 0);
+            if (item.Rod != null)
+            {
+                // Long thin rods are shown diagonally so they fill the picture.
+                var rot = Quaternion.CreateFromAxisAngle(Vector3.UnitZ, -0.85f);
+                inst.Pose = new Pose3(-Vector3.Transform(new Vector3(0, s.Y / 2, 0), rot), rot);
+                target = Vector3.Zero;
+                extent = s.Y * 0.36f; // a close, cropped view: thickness shows
+            }
             float dist = extent * 2.1f + 0.04f;
             var dir = Vector3.Normalize(new Vector3(-0.45f, 0.42f, -1f));
             var cam = new Camera3D(target + dir * dist, target, Vector3.UnitY, 32f, CameraProjection.Perspective);

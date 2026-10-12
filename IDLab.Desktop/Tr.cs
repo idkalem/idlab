@@ -8,6 +8,8 @@ namespace IDLab.Desktop
     /// <summary>Turkish texts for the smart-board edition (the core keeps English ids and messages).</summary>
     internal static class Tr
     {
+        public static readonly System.Globalization.CultureInfo TrCulture = new System.Globalization.CultureInfo("tr-TR");
+
         private static readonly Dictionary<string, (string name, string description)> Equipment = new Dictionary<string, (string, string)>
         {
             [EquipmentIds.Beaker100] = ("Beher 100 mL", "Küçük beher; az miktarda çözelti için."),
@@ -28,6 +30,25 @@ namespace IDLab.Desktop
             [EquipmentIds.BunsenBurner] = ("Bunsen beki + üçayak", "Kırmızı vanayı çevirerek alevi ayarlayın."),
             [EquipmentIds.HotPlate] = ("Isıtıcı tabla", "Alevsiz elektrikli ısıtıcı; yanıcı sıvılar için güvenli."),
             [EquipmentIds.Thermometer] = ("Dijital termometre", "Ucu sıvıya daldırıldığında ölçer."),
+            [EquipmentIds.IronRod] = ("Demir çubuk", "CuSO₄ çözeltisine daldırın: üzeri bakırla kaplanır. Elektrolizde katot (−) yapılırsa kaplanır."),
+            [EquipmentIds.CopperRod] = ("Bakır çubuk", "AgNO₃'e daldırınca üzerinde gümüş kristalleri büyür. Bakır kaplamada anot (+)."),
+            [EquipmentIds.SilverRod] = ("Gümüş çubuk", "Gümüş kaplamada (AgNO₃ içinde) anot (+). Kendiliğinden tepkimeye girmez."),
+            [EquipmentIds.ZincRod] = ("Çinko çubuk", "Bakır, kurşun, kalay ve gümüşü çözeltisinden ayırır; galvanizlemede anot."),
+            [EquipmentIds.AluminiumRod] = ("Alüminyum çubuk", "Oksit tabakası yüzünden yavaş tepkimeye girer (klorür varsa hızlanır)."),
+            [EquipmentIds.LeadRod] = ("Kurşun çubuk", "Zehirli: dokunduktan sonra ellerinizi yıkayın."),
+            [EquipmentIds.NickelRod] = ("Nikel çubuk", "Nikel kaplamada (NiSO₄ içinde) anot (+)."),
+            [EquipmentIds.TinRod] = ("Kalay çubuk", "Kalay kaplamada (SnCl₂ içinde) anot (+)."),
+            [EquipmentIds.MagnesiumRibbon] = ("Magnezyum şerit", "Setin en aktif metali: çoğu metal iyonunu indirger."),
+            [EquipmentIds.GraphiteRod] = ("Grafit elektrot", "Tepkimeye girmeyen karbon elektrot; elektrolizde kullanılır."),
+            [EquipmentIds.GlassRod] = ("Cam baget", "Karıştırma çubuğu; tepkimeye girmez. \"Karıştır\" ile çözeltiyi karıştırın."),
+            [EquipmentIds.PowerSupply] = ("DC güç kaynağı 0–12 V", "Gerilimi açınca kırmızı (+) ve siyah (−) kabloları aynı çözeltideki iki çubuğa bağlar: elektroliz ve kaplama."),
+            [EquipmentIds.Beaker250Cuso4] = ("Beher + 150 mL CuSO₄", "Kaplama banyosu: 150 mL 0,5 M bakır(II) sülfat."),
+            [EquipmentIds.Znso4Solution] = ("ZnSO₄ 0,5 M", "Çinko sülfat çözeltisi (çinko kaplama / galvanizleme)."),
+            [EquipmentIds.Feso4Solution] = ("FeSO₄ 0,5 M", "Demir(II) sülfat çözeltisi (açık yeşil)."),
+            [EquipmentIds.Niso4Solution] = ("NiSO₄ 0,5 M", "Nikel(II) sülfat çözeltisi (yeşil; nikel kaplama)."),
+            [EquipmentIds.PbNo3Solution] = ("Pb(NO₃)₂ 0,5 M", "Kurşun(II) nitrat çözeltisi. Zehirli! Çinkoyla \"kurşun ağacı\" oluşur."),
+            [EquipmentIds.Sncl2Solution] = ("SnCl₂ 0,5 M", "Kalay(II) klorür çözeltisi (kalay kaplama)."),
+            [EquipmentIds.Na2so4Solution] = ("Na₂SO₄ 0,5 M", "Sodyum sülfat: suyun elektrolizi için (H₂ ve O₂)."),
             [EquipmentIds.PhProbe] = ("pH probu", "Sulu çözeltinin pH değerini ölçer."),
             [EquipmentIds.Balance] = ("Hassas terazi", "Kefedeki kabı tartar (0,01 g). Dara ile sıfırlayın."),
             [EquipmentIds.Burette] = ("Büret (0,1 M NaOH)", "Musluğu açarak damla damla ekleyin."),
@@ -135,6 +156,20 @@ namespace IDLab.Desktop
                     "Mermer parçalarını ekle; kütle neden azalıyor?",
                     "Kapalı kapta kütle değişir miydi? Tartış.",
                 }),
+                ["chem.electroplating"] = ("Elektrolizle Kaplama", "Demir çubuğu bakırla kaplayın: demir (−) kutba, bakır (+) kutba bağlanır, ikisi de CuSO₄ çözeltisinde. Sonra nikel, çinko ve gümüş kaplamayı deneyin.", new[]
+                {
+                    "Demir ve bakır çubuğu CuSO₄ beherine daldırın (çubuğu beherin üstüne bırakın).",
+                    "Güç kaynağını seçip gerilimi 3–6 V'a getirin: kablolar kendiliğinden bağlanır. Demir (−) katotta bakır birikir, bakır (+) anot çözünür.",
+                    "Akımı ve süreyi okuyun: biriken bakır m = I·t·M / (2·F). Kaplanan kütleyi çubuğun bilgisinden kontrol edin.",
+                    "İki grafit elektrotla NaCl çözeltisini elektroliz edin: (+) kutupta zehirli Cl₂, (−) kutupta H₂ çıkar; fenolftalein pembeleşir (NaOH).",
+                }),
+                ["chem.metal-rods"] = ("Metal Çubuklar ve Gümüş Ağacı", "Metal çubukları tuz çözeltilerine daldırın: aktif metal, daha az aktif metalin iyonunu indirger ve onunla kaplanır.", new[]
+                {
+                    "Behere CuSO₄ dökün, demir çubuğu daldırın: demir kırmızımsı bakırla kaplanır, mavi renk solar (Fe + CuSO₄ → FeSO₄ + Cu).",
+                    "Diğer behere AgNO₃ dökün, bakır çubuğu daldırın: gümüş kristalleri büyür, çözelti maviye döner (gümüş ağacı).",
+                    "Bakır çubuğu FeSO₄'e daldırın: hiçbir şey olmaz. Neden? Aktiflik sırasını kullanarak açıklayın.",
+                    "Çinkoyu Pb(NO₃)₂'ye daldırıp kurşun ağacını gözleyin. Cam bagetle karıştırın.",
+                }),
                 ["chem.safety"] = ("Laboratuvar Güvenliği", "Çamaşır suyu + asit/amonyak, sodyum + su ve alev yanında alkolün neden tehlikeli olduğunu güvenle gör.", new[]
                 {
                     "Çamaşır suyunu HCl veya NH₃ ile karıştırmanın sonucunu gözle.",
@@ -163,6 +198,7 @@ namespace IDLab.Desktop
                 case EquipmentCategory.Reagent: return "SIVI KİMYASALLAR";
                 case EquipmentCategory.Indicator: return "İNDİKATÖRLER";
                 case EquipmentCategory.SolidReagent: return "KATI KİMYASALLAR";
+                case EquipmentCategory.Electrical: return "ÇUBUKLAR VE ELEKTROLİZ";
                 default: return c.ToString().ToUpperInvariant();
             }
         }
@@ -266,6 +302,16 @@ namespace IDLab.Desktop
                     return parts.Length == 2 ? $"{who}{ElementName(parts[1])} metalinin üzerinde {ElementName(parts[0])} birikiyor (yer değiştirme tepkimesi)." : null;
                 }
 
+                case "rod.coat":
+                {
+                    var parts = arg.Split(':');
+                    if (parts.Length != 2) return null;
+                    string tree = parts[0] == "Ag" ? " Gümüş kristalleri ağaç gibi dallanarak büyüyor." : parts[0] == "Pb" ? " Kurşun yaprak yaprak büyüyor (kurşun ağacı)." : "";
+                    return $"{who}{ElementName(parts[1])} çubuğun üzeri {ElementName(parts[0]).ToLower(TrCulture)} ile kaplanıyor (yer değiştirme).{tree}";
+                }
+
+                case "electro.plate": return $"Elektroliz: (−) katotta {ElementName(arg).ToLower(TrCulture)} birikiyor; çubuk kaplanıyor.";
+                case "electro.anode": return $"Elektroliz: (+) anottaki {ElementName(arg).ToLower(TrCulture)} çözünüp çözeltiye geçiyor.";
                 case "metal.water.boom": return $"PATLAMA! {ElementName(arg)} suyla şiddetle tepkimeye girdi, açığa çıkan hidrojen tutuştu.";
                 case "metal.water": return $"{who}{ElementName(arg)} suyla tepkimeye giriyor, hidrojen gazı çıkıyor.";
                 case "oxide.water": return $"{who}{SubName(arg)} suyla tepkimeye girip ısınıyor (baz oluşuyor).";
@@ -301,6 +347,9 @@ namespace IDLab.Desktop
                 case "precip.feoh3": return $"{ownerName}: kahverengi demir(III) hidroksit çökeleği oluştu.";
                 case "displace.cu": return $"{ownerName}: metalin üzeri bakırla kaplanıyor, mavi renk soluyor.";
                 case "displace.ag": return $"{ownerName}: bakırın üzerinde gümüş kristalleri büyüyor, çözelti maviye dönüyor.";
+                case "electro.h2": return "Elektroliz: (−) katotta hidrojen gazı kabarcıkları çıkıyor.";
+                case "electro.o2": return "Elektroliz: (+) anotta oksijen gazı kabarcıkları çıkıyor.";
+                case "electro.cl2": return "Elektroliz: (+) anotta ZEHİRLİ KLOR GAZI çıkıyor! Çeker ocakta, düşük gerilimle çalışın.";
                 case "boiling": return $"{ownerName} kaynamaya başladı.";
                 case "spill.overflow": return $"{ownerName} taştı!";
                 case "spill.solid": return "Katı parçalar tezgâha döküldü.";

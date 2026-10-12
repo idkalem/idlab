@@ -12,6 +12,7 @@ namespace IDLab.Core.Model
         public const string Beaker250 = "beaker.250";
         public const string Beaker250Water = "beaker.250.water";
         public const string Beaker600 = "beaker.600";
+        public const string Beaker250Cuso4 = "beaker.250.cuso4";
         public const string Erlenmeyer = "flask.erlenmeyer.250";
         public const string TitrationFlask = "flask.erlenmeyer.titration";
         public const string RoundFlask = "flask.round.250";
@@ -29,6 +30,20 @@ namespace IDLab.Core.Model
         public const string PhProbe = "probe.ph";
         public const string Balance = "balance";
         public const string Burette = "burette.naoh";
+
+        // Rods and electrodes
+        public const string IronRod = "rod.fe";
+        public const string CopperRod = "rod.cu";
+        public const string SilverRod = "rod.ag";
+        public const string ZincRod = "rod.zn";
+        public const string AluminiumRod = "rod.al";
+        public const string LeadRod = "rod.pb";
+        public const string NickelRod = "rod.ni";
+        public const string TinRod = "rod.sn";
+        public const string MagnesiumRibbon = "rod.mg";
+        public const string GraphiteRod = "rod.graphite";
+        public const string GlassRod = "rod.glass";
+        public const string PowerSupply = "power.dc";
 
         // Liquid reagents
         public const string WaterBottle = "bottle.water";
@@ -52,6 +67,12 @@ namespace IDLab.Core.Model
         public const string FoodDyeBottle = "dropper.fooddye";
         public const string EthanolBottle = "bottle.ethanol";
         public const string BleachBottle = "bottle.bleach";
+        public const string Znso4Solution = "bottle.znso4";
+        public const string Feso4Solution = "bottle.feso4";
+        public const string Niso4Solution = "bottle.niso4";
+        public const string PbNo3Solution = "bottle.pbno3";
+        public const string Sncl2Solution = "bottle.sncl2";
+        public const string Na2so4Solution = "bottle.na2so4";
 
         // Indicators
         public const string IndicatorBottle = "bottle.indicator";
@@ -111,6 +132,9 @@ namespace IDLab.Core.Model
             c.Register(Vessel(EquipmentIds.Beaker250, "Beaker 250 mL", "beaker", 0.068, 0.092, 0.1, null, "Empty borosilicate beaker."));
             c.Register(Vessel(EquipmentIds.Beaker250Water, "Beaker + 150 mL water", "beaker", 0.068, 0.092, 0.1, ReagentPreset.Water(150),
                 "Beaker filled with 150 mL of tap water at room temperature."));
+            c.Register(Vessel(EquipmentIds.Beaker250Cuso4, "Beaker + 150 mL CuSO₄ 0.5 M", "beaker", 0.068, 0.092, 0.1,
+                ReagentPreset.Solution("150 mL 0.5 M copper(II) sulfate", 150, SubstanceIds.CopperSulfate, 0.5),
+                "Plating bath: 150 mL of 0.5 M copper(II) sulfate."));
             c.Register(Vessel(EquipmentIds.Beaker600, "Beaker 600 mL", "beaker", 0.090, 0.125, 0.18, null, "Large beaker for water baths."));
             c.Register(Vessel(EquipmentIds.Erlenmeyer, "Erlenmeyer flask 250 mL", "erlenmeyer", 0.051, 0.13, 0.12, null,
                 "Conical flask: swirl without spilling; used for titrations.", mouth: 0.030, probeY: 0.01f));
@@ -176,6 +200,25 @@ namespace IDLab.Core.Model
             burette.SnapPoints.Add(new SnapPointDefinition("flask", SnapKind.StandBase, new Vector3(0, 0.012f, 0)));
             c.Register(burette);
 
+            // ------------------------------------------------------------------ rods, electrodes and the power supply
+            c.Register(RodDef(EquipmentIds.IronRod, "Iron rod", "Fe", 0x6B6F75, "Iron (steel) rod. Dip it into CuSO₄: it is coated with copper."));
+            c.Register(RodDef(EquipmentIds.CopperRod, "Copper rod", "Cu", 0xC8703A, "Copper rod. In AgNO₃ it grows silver crystals; an anode for copper plating."));
+            c.Register(RodDef(EquipmentIds.SilverRod, "Silver rod", "Ag", 0xD9DCE0, "Silver rod: anode for silver plating (in AgNO₃)."));
+            c.Register(RodDef(EquipmentIds.ZincRod, "Zinc rod", "Zn", 0xAEB4BE, "Zinc rod: displaces copper, lead, tin and silver; anode for galvanising."));
+            c.Register(RodDef(EquipmentIds.AluminiumRod, "Aluminium rod", "Al", 0xC9CDD3, "Aluminium rod (its oxide layer makes it react slowly)."));
+            c.Register(RodDef(EquipmentIds.LeadRod, "Lead rod", "Pb", 0x6E7378, "Lead rod. Toxic: wash your hands."));
+            c.Register(RodDef(EquipmentIds.NickelRod, "Nickel rod", "Ni", 0xBFC2BA, "Nickel rod: anode for nickel plating (in NiSO₄)."));
+            c.Register(RodDef(EquipmentIds.TinRod, "Tin rod", "Sn", 0xC4C8CC, "Tin rod: anode for tin plating (in SnCl₂)."));
+            c.Register(RodDef(EquipmentIds.MagnesiumRibbon, "Magnesium ribbon", "Mg", 0xC9CCD2, "Magnesium ribbon: the most active metal of the set.", 0.002));
+            c.Register(RodDef(EquipmentIds.GraphiteRod, "Graphite electrode", "C", 0x2A2A2E, "Inert carbon electrode for electrolysis.", 0.008));
+            c.Register(RodDef(EquipmentIds.GlassRod, "Glass stirring rod", null, 0xBFD8E8, "Glass rod for stirring; does not react.", 0.006, 0.2));
+
+            var supply = Def(EquipmentIds.PowerSupply, "DC power supply 0–12 V", "power_supply", EquipmentCategory.Electrical, Discipline.Chemistry | Discipline.Physics,
+                new Vector3(0.16f, 0.09f, 0.13f), 0xE53935,
+                "Clips its red (+) and black (−) leads onto two rods standing in the same solution: electrolysis and electroplating.");
+            supply.Components.Add(new PowerSupplySpec { MaxCurrentA = 3 });
+            c.Register(supply);
+
             // ------------------------------------------------------------------ liquid reagents
             c.Register(Bottle(EquipmentIds.WaterBottle, "Water (400 mL)", ReagentPreset.Water(400), 0x4FA3FF));
             c.Register(Bottle(EquipmentIds.HclBottle, "HCl 1.0 M", ReagentPreset.Solution("1.0 M hydrochloric acid", 250, SubstanceIds.HydrochloricAcid, 1.0), 0xFF5A4F));
@@ -198,6 +241,12 @@ namespace IDLab.Core.Model
                 ReagentPreset.Liquid("Ethanol", SubstanceIds.Ethanol, 250, 0.789, 46.07), 0xFF8C1A));
             c.Register(Bottle(EquipmentIds.BleachBottle, "Bleach (NaOCl 0.7 M)",
                 ReagentPreset.Solution("0.7 M sodium hypochlorite", 250, SubstanceIds.SodiumHypochlorite, 0.7), 0xE6E14A));
+            c.Register(Bottle(EquipmentIds.Znso4Solution, "ZnSO₄ 0.5 M", ReagentPreset.Solution("0.5 M zinc sulfate", 250, SubstanceIds.ZincSulfate, 0.5), 0x9FB3C8));
+            c.Register(Bottle(EquipmentIds.Feso4Solution, "FeSO₄ 0.5 M", ReagentPreset.Solution("0.5 M iron(II) sulfate", 250, SubstanceIds.IronIISulfate, 0.5), 0x8FC98A));
+            c.Register(Bottle(EquipmentIds.Niso4Solution, "NiSO₄ 0.5 M", ReagentPreset.Solution("0.5 M nickel(II) sulfate", 250, "i_ni2_so4", 0.5), 0x3FBF5F));
+            c.Register(Bottle(EquipmentIds.PbNo3Solution, "Pb(NO₃)₂ 0.5 M", ReagentPreset.Solution("0.5 M lead(II) nitrate", 250, "i_pb2_no3", 0.5), 0x9AA0A6));
+            c.Register(Bottle(EquipmentIds.Sncl2Solution, "SnCl₂ 0.5 M", ReagentPreset.Solution("0.5 M tin(II) chloride", 250, "i_sn2_cl", 0.5), 0xB8C4CC));
+            c.Register(Bottle(EquipmentIds.Na2so4Solution, "Na₂SO₄ 0.5 M", ReagentPreset.Solution("0.5 M sodium sulfate", 250, SubstanceIds.SodiumSulfate, 0.5), 0xD6E2EE));
 
             // ------------------------------------------------------------------ indicators (dropper bottles: pour drop by drop)
             c.Register(Dropper(EquipmentIds.IndicatorBottle, "Universal indicator",
@@ -304,6 +353,16 @@ namespace IDLab.Core.Model
                 InnerDiameterM = 0.05, InnerHeightM = 0.055, GlassMassKg = 0.07, MouthDiameterM = 0.044,
                 InitialContents = ReagentPreset.Solid(name, substanceId, grams),
             });
+            return d;
+        }
+
+        private static EquipmentDefinition RodDef(string id, string name, string material, uint accent, string description,
+            double diameter = 0.006, double length = 0.15)
+        {
+            var d = Def(id, name, material == null ? "glass_rod" : "rod", EquipmentCategory.Electrical,
+                Discipline.Chemistry | Discipline.Physics, new Vector3((float)diameter * 2, (float)length, (float)diameter * 2), accent, description);
+            d.SnapPoints.Add(new SnapPointDefinition("tip", SnapKind.ProbeTip, Vector3.Zero));
+            d.Components.Add(new RodSpec { Material = material, LengthM = length, DiameterM = diameter });
             return d;
         }
 

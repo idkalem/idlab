@@ -63,6 +63,8 @@ namespace IDLab.Desktop
                 case "rack": DrawRack(pose); break;
                 case "thermometer": DrawProbe(item, pose, false); break;
                 case "ph_probe": DrawProbe(item, pose, true); break;
+                case "rod": RodsView.DrawRod(item, pose, time); break;
+                case "power_supply": RodsView.DrawSupply(item, pose); break;
                 case "bottle":
                 case "amber":
                 {
@@ -256,7 +258,7 @@ namespace IDLab.Desktop
             {
                 float k = i / 8f;
                 var p = new Vector3(0.05f * k * k, 0.009f - 0.006f * k, 0.04f + 0.11f * k);
-                Rod(pose, prev, p, 0.0052f, hose);
+                Stick(pose, prev, p, 0.0052f, hose);
                 prev = p;
             }
             Knob(pose, new Vector3(0, 0.009f, -0.042f), valve, Gfx.Rgba(0xD92626));
@@ -267,7 +269,7 @@ namespace IDLab.Desktop
                 float a = (i * 120f + 90f) * MathF.PI / 180f;
                 var top = new Vector3(MathF.Cos(a) * 0.063f, gauze - 0.002f, MathF.Sin(a) * 0.063f);
                 var foot = new Vector3(MathF.Cos(a) * 0.085f, 0, MathF.Sin(a) * 0.085f);
-                Rod(pose, foot, top, 0.0025f, Steel);
+                Stick(pose, foot, top, 0.0025f, Steel);
             }
 
             // Wire gauze with its ceramic centre.
@@ -412,7 +414,7 @@ namespace IDLab.Desktop
             Gfx.Draw(Gfx.Cylinder, Gfx.Part(Gfx.Mul(Gfx.Scale(0.0085f, 0.008f, 0.0085f), Gfx.Translate(0, length * 0.7f, 0)), pose), accent);
         }
 
-        private static void Knob(Matrix4x4 pose, Vector3 at, float value, Color color)
+        internal static void Knob(Matrix4x4 pose, Vector3 at, float value, Color color)
         {
             // A knurled knob facing the user, with a white pointer showing its setting.
             var knobRot = Quaternion.CreateFromAxisAngle(Vector3.UnitX, -MathF.PI / 2);
@@ -441,14 +443,15 @@ namespace IDLab.Desktop
         /// A small seven-segment-style display on the device itself (the digits are drawn into a texture once they
         /// change; see <see cref="UpdateDisplays"/>), instead of a label floating in front of it.
         /// </summary>
-        private static void Display(Item item, Matrix4x4 pose, Vector3 at, float width, float height, string text, bool on, Quaternion? tilt = null)
+        internal static void Display(Item item, Matrix4x4 pose, Vector3 at, float width, float height, string text, bool on, Quaternion? tilt = null, int slot = 0)
         {
-            if (!Displays.TryGetValue(item.Inst.Id, out var lcd))
+            int key = item.Inst.Id * 4 + slot;
+            if (!Displays.TryGetValue(key, out var lcd))
             {
                 lcd = new LcdScreen { Target = LoadRenderTexture(256, 72) };
                 SetTextureFilter(lcd.Target.Texture, TextureFilter.Bilinear);
                 SetTextureWrap(lcd.Target.Texture, TextureWrap.Repeat);
-                Displays[item.Inst.Id] = lcd;
+                Displays[key] = lcd;
                 Pending.Add((lcd, text, on));
             }
             else if (lcd.Text != text || lcd.On != on)
@@ -489,7 +492,7 @@ namespace IDLab.Desktop
             Pending.Clear();
         }
 
-        private static void Rod(Matrix4x4 pose, Vector3 from, Vector3 to, float radius, Color color)
+        internal static void Stick(Matrix4x4 pose, Vector3 from, Vector3 to, float radius, Color color)
         {
             var dir = Vector3.Normalize(to - from);
             var axis = Vector3.Cross(Vector3.UnitY, dir);
@@ -502,6 +505,12 @@ namespace IDLab.Desktop
         public static void DrawTransparent(Item item)
         {
             var pose = PoseOf(item);
+            if (item.Rod != null)
+            {
+                if (item.Rod.IsGlass) RodsView.DrawGlass(item, pose, (float)GetTime());
+                return;
+            }
+
             if (item.Probe != null)
             {
                 if (item.Probe.Quantity == ProbeQuantity.PH)

@@ -65,4 +65,22 @@ namespace IDLab.Core.Model
 
         public override IDLab.Core.Components.LabComponent CreateComponent() => new IDLab.Core.Components.Balance(PanSnapId);
     }
+
+    public sealed class RodSpec : ComponentSpec
+    {
+        /// <summary>Element symbol of the rod ("Fe", "Cu" ... "C" = graphite) or null for a glass rod.</summary>
+        public string Material { get; set; }
+        public double LengthM { get; set; } = 0.15;
+        public double DiameterM { get; set; } = 0.006;
+        public string TipSnapId { get; set; } = "tip";
+
+        public override LabComponent CreateComponent() => new Rod(Material, LengthM, DiameterM, TipSnapId);
+    }
+
+    public sealed class PowerSupplySpec : ComponentSpec
+    {
+        public double MaxCurrentA { get; set; } = 3;
+
+        public override LabComponent CreateComponent() => new PowerSupply(MaxCurrentA);
+    }
 }
