@@ -127,6 +127,19 @@ namespace IDLab.Desktop
             Down = IsMouseButtonDown(MouseButton.Left);
             Released = IsMouseButtonReleased(MouseButton.Left);
             bool tap = TouchInput.TakeTap();
+            var web = Platform.PollPointer?.Invoke();
+            if (web != null && web.Length >= 7)
+            {
+                // Browser pointer events (mouse, touch and pen alike) replace raylib's per-frame button polling.
+                bool downNow = web[2] > 0;
+                int presses = (int)web[3], releases = (int)web[4];
+                Mouse = new Vector2((float)web[0], (float)web[1]);
+                tap = presses > 0 && releases > 0 && !downNow;
+                if (tap) Mouse = new Vector2((float)web[5], (float)web[6]);
+                Pressed = presses > 0 && !tap;
+                Released = releases > 0 && !downNow && !tap;
+                Down = downNow;
+            }
             if (_synthRelease)
             {
                 // Second half of a recovered tap.

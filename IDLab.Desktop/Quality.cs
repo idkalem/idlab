@@ -184,7 +184,7 @@ void main()
             if (!_fxaaLoaded)
             {
                 _fxaaLoaded = true;
-                _fxaa = LoadShaderFromMemory(null, FxaaFragment);
+                _fxaa = LoadShaderFromMemory(null, Platform.Shader(FxaaFragment));
                 _texelLoc = GetShaderLocation(_fxaa, "texel");
             }
 

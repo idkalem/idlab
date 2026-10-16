@@ -1,0 +1,36 @@
+{
+  "mainAssemblyName": "IDLab.dll",
+  "resources": {
+    "hash": "sha256-1y38B44iBMevfFxmJTGXMXjNUohHJ4Zdjpn8FJZATcg=",
+    "jsModuleNative": {
+      "dotnet.native.js": "sha256-GCDKOPgyZYjcC+INSUCVEwh7nw5K1R8StFdH18CExPI="
+    },
+    "jsModuleRuntime": {
+      "dotnet.runtime.js": "sha256-qzVt86q0GKgDNek5+WFBz2hU8jGxI86YJeZmNGXj/qM="
+    },
+    "wasmNative": {
+      "dotnet.native.wasm": "sha256-7Ksq6wUf/Qwc0L8+mPvQRzWDbHDLuGe85f4OwHIizhc="
+    },
+    "icu": {
+      "icudt.dat": "sha256-tO5O5YzMTVSaKBboxAqezOQL9ewmupzV2JrB5Rkc8a4="
+    },
+    "assembly": {
+      "IDLab.Core.wasm": "sha256-GYSqmSuTdbYBvcMgnjAPLqmFvPMSLyHXN7NkJv+mcnM=",
+      "IDLab.wasm": "sha256-rGQcPSgz3fHyyRuZDzVfgyIH/3EBuaFDwRC67xH/1Xw=",
+      "Raylib-cs.wasm": "sha256-04Zgf3G/URQ1odTBEA0uLdOAM3xju6/0Rx3kkTsvuho=",
+      "System.Collections.wasm": "sha256-zhg9LcsRvg7NheA5pvfCylvZIB+4sziQcdBxTaZZlkU=",
+      "System.Console.wasm": "sha256-vkIiKYnycPJ9mhIqdnPB4ubOyI0JjADpo8Nh8ABIlE8=",
+      "System.IO.Compression.wasm": "sha256-5aCbEy+gWsHYTvhePsVb0q4vpy4Mbhj61ayelyGvSjA=",
+      "System.Linq.wasm": "sha256-yJbCTH9TFRPIRaZ4fz552EdqkmJ8NxfMNhP1B3D0A/c=",
+      "System.Private.CoreLib.wasm": "sha256-kusESthjNaaxRO7KRLMX/9N8iUWOv8UEB6IZTQ+1Y7Y=",
+      "System.Runtime.InteropServices.JavaScript.wasm": "sha256-Vla6wArepyGUK0ddGu3S3g/Zk2nfcEf1zPghT0a2EaA="
+    },
+    "vfs": {
+      "runtimeconfig.bin": {
+        "supportFiles/0_runtimeconfig.bin": "sha256-eCPUvs9++jR3BdLLOdKpif9475FGCCoYa0HscMw1Keg="
+      }
+    }
+  },
+  "debugLevel": 0,
+  "globalizationMode": "all"
+}

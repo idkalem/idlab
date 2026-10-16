@@ -26,8 +26,11 @@ namespace IDLab.Desktop
         {
             try
             {
-                if (!File.Exists(FilePath)) return;
-                foreach (var line in File.ReadAllLines(FilePath))
+                string[] lines;
+                if (Platform.LoadSettingsText != null) lines = (Platform.LoadSettingsText() ?? "").Split('\n');
+                else if (!File.Exists(FilePath)) return;
+                else lines = File.ReadAllLines(FilePath);
+                foreach (var line in lines)
                 {
                     int eq = line.IndexOf('=');
                     if (eq > 0) Values[line.Substring(0, eq).Trim()] = line.Substring(eq + 1).Trim();
@@ -49,9 +52,15 @@ namespace IDLab.Desktop
             Values[key] = value;
             try
             {
-                Directory.CreateDirectory(Path.GetDirectoryName(FilePath));
                 var lines = new List<string>();
                 foreach (var kv in Values) lines.Add(kv.Key + "=" + kv.Value);
+                if (Platform.SaveSettingsText != null)
+                {
+                    Platform.SaveSettingsText(string.Join("\n", lines));
+                    return;
+                }
+
+                Directory.CreateDirectory(Path.GetDirectoryName(FilePath));
                 File.WriteAllLines(FilePath, lines);
             }
             catch (Exception)

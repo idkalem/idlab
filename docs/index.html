@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>ID Lab · Kimya Laboratuvarı</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #0d0a1a; }
+    #canvas { display: block; width: 100vw; height: 100vh; touch-action: none; outline: none; }
+    #loader {
+      position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px;
+      background: linear-gradient(135deg, #7b4fe6 0%, #5f2bd9 45%, #ee8adb 100%);
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #fff; transition: opacity .4s;
+    }
+    #loader img { width: min(32vh, 260px); filter: drop-shadow(0 12px 24px rgba(44, 21, 128, .45)); }
+    #loader h1 { margin: 0; font-size: clamp(28px, 6vh, 56px); letter-spacing: .5px; }
+    #loader p { margin: 0; opacity: .85; font-size: clamp(14px, 2.2vh, 20px); text-align: center; padding: 0 16px; }
+    #bar { width: min(60vw, 420px); height: 10px; border-radius: 5px; background: rgba(255, 255, 255, .25); overflow: hidden; }
+    #bar > div { height: 100%; width: 30%; border-radius: 5px; background: #ffa51f; animation: slide 1.2s ease-in-out infinite; }
+    @keyframes slide { 0% { margin-left: -30%; } 100% { margin-left: 100%; } }
+    #error { display: none; position: fixed; inset: 10% 8%; background: #1b1530; color: #ffd6d6; padding: 20px; border-radius: 12px;
+             font: 13px/1.4 ui-monospace, monospace; white-space: pre-wrap; overflow: auto; }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
+  <div id="loader">
+    <img src="logo.png" alt="ID Lab">
+    <h1>ID Lab</h1>
+    <div id="bar"><div></div></div>
+    <p id="status">Laboratuvar indiriliyor… (ilk açılışta biraz sürebilir)</p>
+  </div>
+  <div id="error"></div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

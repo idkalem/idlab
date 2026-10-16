@@ -19,7 +19,7 @@ namespace IDLab.Desktop
     internal static class Program
     {
         /// <summary>The running lab (for helpers that need to map core objects back to items).</summary>
-        public static Lab LabInstance { get; private set; }
+        public static Lab LabInstance { get; internal set; }
 
         [STAThread]
         private static int Main(string[] args)
@@ -58,209 +58,17 @@ namespace IDLab.Desktop
 
         private static void Run(Options o)
         {
-            Settings.Load();
-            if (o.Quality != null) Settings.Override("grafik", o.Quality);
-            Theme.Apply(o.Light ? false : Settings.Get("tema", "koyu") != "acik");
-            SetConfigFlags((Quality.WantsMsaa ? ConfigFlags.Msaa4xHint : 0) | ConfigFlags.ResizableWindow | (o.Demo == null ? ConfigFlags.VSyncHint : 0));
-            InitWindow(o.Width, o.Height, "ID Lab");
-            SetExitKey(KeyboardKey.Null); // Esc must not close the app in class
-            SetWindowMinSize(960, 600);
-            using (var iconStream = typeof(Program).Assembly.GetManifestResourceStream("icon.png"))
-            using (var ms = new MemoryStream())
+            var app = new AppHost(o);
+            app.OpenWindow();
+            foreach (var step in app.Load()) app.Splash(step.progress, step.what);
+            while (!WindowShouldClose() && app.Frame())
             {
-                iconStream.CopyTo(ms);
-                var icon = LoadImageFromMemory(".png", ms.ToArray());
-                ImageResize(ref icon, 64, 64);
-                SetWindowIcon(icon);
-                UnloadImage(icon);
             }
 
-            SetTargetFPS(60);
-            if (!o.Windowed)
-            {
-                ToggleBorderlessWindowed();
-            }
-
-            PointerCursor.Ensure();
-            var startup = System.Diagnostics.Stopwatch.StartNew();
-            TouchInput.Install();
-            Quality.Load();
-            Gfx.Init();
-            Ui.Init();
-            // Start-up screen with the logo while the lab is being built.
-            bool splash = o.Demo == null || o.Demo == "about";
-            string splashShot = Environment.GetEnvironmentVariable("IDLAB_SPLASH_SHOT");
-            void Step(float p, string what)
-            {
-                if (!splash) return;
-                Brand.Splash(p, what);
-                if (splashShot != null && p > 0.3f && p < 0.4f)
-                {
-                    Brand.Splash(p, what);
-                    TakeScreenshot(splashShot);
-                }
-            }
-            Step(0.05f, "Laboratuvar hazırlanıyor…");
-            Textures.Init();
-            Step(0.2f, "Laboratuvar odası kuruluyor…");
-            Room.Build();
-            Step(0.35f, "Kimyasal kataloğu yükleniyor (40 000+ kimyasal)…");
-            Thumbnails.Build();
-            Step(0.7f, "Malzemeler hazırlanıyor…");
-            var lab = new Lab();
-            LabInstance = lab;
-            var micro = new MicroView();
-            micro.Init();
-            Step(0.82f, "Periyodik tablo hazırlanıyor…");
-            var periodic = new PeriodicView();
-            periodic.Init();
-            var info = new InfoView(lab);
-            info.Select(o.Topic);
-            var hud = new Hud(lab, micro);
-            var chemicals = new ChemicalsView(lab, hud);
-            hud.ExperimentCount = lab.Experiments.All.Count(e => e.Status == IDLab.Core.Model.ExperimentStatus.Playable);
-            Step(1f, "Hazır!");
-            hud.ChemicalCount = chemicals.Count;
-            if (o.Profile) Console.WriteLine($"startup: {startup.ElapsedMilliseconds} ms after the window opened");
-            if (o.Demo != null && o.Demo.StartsWith("chem:", StringComparison.Ordinal))
-            {
-                hud.Tab = HudTab.Chemicals;
-                chemicals.Preselect(o.Demo.Substring(5).Replace('_', ' '));
-            }
-            else if (o.Demo != null)
-            {
-                Demo.Setup(o.Demo, lab, hud);
-            }
-
-            if (o.Camera != null)
-            {
-                lab.Yaw = o.Camera[0];
-                lab.Pitch = o.Camera[1];
-                lab.Distance = o.Camera[2];
-            }
-
-            int frame = 0;
-            float microClock = 0;
-            while (!WindowShouldClose() && !hud.QuitRequested)
-            {
-                float dt = o.Demo != null ? 1f / 60f : Math.Min(GetFrameTime(), 0.1f);
-                if (IsKeyPressed(KeyboardKey.F11))
-                {
-                    ToggleBorderlessWindowed();
-                    PointerCursor.Ensure();
-                }
-
-                PointerCursor.Update(dt);
-
-                var sw = System.Diagnostics.Stopwatch.StartNew();
-                Ui.BeginFrame();
-                Ui.Suspended = hud.ModalOpen;
-                hud.Layout();
-                bool labTab = hud.Tab == HudTab.Lab;
-                lab.KeysEnabled = labTab;
-
-                // The experiment keeps running while another tab is open; only pointer input is withheld.
-                lab.Update(dt, pointerFree: labTab && !Ui.Captured && !hud.ModalOpen, overInventory: hud.IsOverInventory(Ui.Mouse));
-                if (o.Demo != null) Demo.Step(o.Demo, lab, hud, frame);
-                Scene.Update(lab, dt);
-                if (labTab)
-                {
-                    micro.Update(lab, dt);
-                    // The molecule view is a small inset: 30 fps is plenty (15 in the economy modes).
-                    microClock += GetFrameTime();
-                    if (microClock >= (Quality.Economy ? 1f / 15f : 1f / 30f) || o.Demo != null)
-                    {
-                        microClock = 0;
-                        micro.Render();
-                    }
-                }
-                else if (hud.Tab == HudTab.Periodic)
-                {
-                    periodic.Update(dt, hud.ContentArea, pointerFree: !Ui.Captured && !hud.ModalOpen);
-                }
-                else if (hud.Tab == HudTab.Chemicals)
-                {
-                    chemicals.Update(dt, hud.ContentArea);
-                }
-                else
-                {
-                    info.Update(dt, hud.ContentArea);
-                }
-
-                double tUpdate = sw.Elapsed.TotalMilliseconds;
-                if (o.Demo == null || o.Quality != null) Quality.Update(GetFrameTime());
-                if (labTab) Props.UpdateDisplays();
-                bool offscreen = labTab && Quality.BeginScene(Theme.Scene);
-                if (offscreen)
-                {
-                    BeginMode3D(lab.Camera);
-                    Scene.Draw(lab, dt);
-                    EndMode3D();
-                    Quality.EndScene();
-                }
-
-                BeginDrawing();
-                ClearBackground(Theme.Scene);
-                switch (hud.Tab)
-                {
-                    case HudTab.Lab:
-                        if (offscreen)
-                        {
-                            Quality.Present();
-                        }
-                        else
-                        {
-                            BeginMode3D(lab.Camera);
-                            Scene.Draw(lab, dt);
-                            EndMode3D();
-                        }
-
-                        if (lab.Effects.ScreenFlash > 0.01f)
-                        {
-                            DrawRectangle(0, 0, GetScreenWidth(), GetScreenHeight(), Gfx.WithAlpha(new Color(255, 236, 205, 255), lab.Effects.ScreenFlash));
-                        }
-
-                        Scene.DrawLabels(lab);
-                        break;
-                    case HudTab.Periodic:
-                        periodic.Draw();
-                        break;
-                    case HudTab.Chemicals:
-                        chemicals.Draw();
-                        break;
-                    default:
-                        info.Draw();
-                        break;
-                }
-
-                double tScene = sw.Elapsed.TotalMilliseconds;
-                hud.Draw(dt);
-                double tHud = sw.Elapsed.TotalMilliseconds;
-                EndDrawing();
-                Ui.EndFrame();
-                if (o.Profile)
-                {
-                    Profiler.Add(tUpdate, tScene - tUpdate, tHud - tScene, sw.Elapsed.TotalMilliseconds - tHud);
-                }
-
-                frame++;
-                if (o.Trace && frame % 30 == 0) Demo.Trace(lab, frame);
-                if (o.Screenshot != null && frame == o.Frames)
-                {
-                    TakeScreenshot(o.Screenshot);
-                }
-
-                if (o.Frames > 0 && frame > o.Frames)
-                {
-                    break;
-                }
-            }
-
-            TouchInput.Uninstall();
-            CloseWindow();
+            app.Close();
         }
 
-        private sealed class Options
+        internal sealed class Options
         {
             public bool Windowed;
             public int Width = 1600, Height = 900;
@@ -303,6 +111,241 @@ namespace IDLab.Desktop
 
                 return o;
             }
+        }
+    }
+
+    /// <summary>
+    /// The application split into steps a host can drive: open the window, load (one step at a time, so a browser can
+    /// draw the splash screen between them), then one call per frame. The desktop runs it in a loop; the web edition
+    /// calls <see cref="Frame"/> from requestAnimationFrame.
+    /// </summary>
+    internal sealed class AppHost
+    {
+        private readonly Program.Options o;
+        private Lab lab;
+        private MicroView micro;
+        private PeriodicView periodic;
+        private InfoView info;
+        private Hud hud;
+        private ChemicalsView chemicals;
+        private int frame;
+        private float microClock;
+        private readonly bool _splash;
+        private readonly string _splashShot = Environment.GetEnvironmentVariable("IDLAB_SPLASH_SHOT");
+        private System.Diagnostics.Stopwatch startup;
+
+        public AppHost(Program.Options options)
+        {
+            o = options;
+            _splash = o.Demo == null || o.Demo == "about";
+        }
+
+        public void OpenWindow()
+        {
+            Settings.Load();
+            if (o.Quality != null) Settings.Override("grafik", o.Quality);
+            Theme.Apply(o.Light ? false : Settings.Get("tema", "koyu") != "acik");
+            SetConfigFlags((Quality.WantsMsaa ? ConfigFlags.Msaa4xHint : 0) | ConfigFlags.ResizableWindow | (o.Demo == null ? ConfigFlags.VSyncHint : 0));
+            InitWindow(o.Width, o.Height, "ID Lab");
+            SetExitKey(KeyboardKey.Null); // Esc must not close the app in class
+            if (!Platform.IsWeb)
+            {
+                SetWindowMinSize(960, 600);
+                using (var iconStream = typeof(Program).Assembly.GetManifestResourceStream("icon.png"))
+                using (var ms = new MemoryStream())
+                {
+                    iconStream.CopyTo(ms);
+                    var icon = LoadImageFromMemory(".png", ms.ToArray());
+                    ImageResize(ref icon, 64, 64);
+                    SetWindowIcon(icon);
+                    UnloadImage(icon);
+                }
+
+                SetTargetFPS(60);
+                if (!o.Windowed) ToggleBorderlessWindowed();
+            }
+
+            PointerCursor.Ensure();
+            startup = System.Diagnostics.Stopwatch.StartNew();
+            TouchInput.Install();
+            Quality.Load();
+            Gfx.Init();
+            Ui.Init();
+        }
+
+        /// <summary>One frame of the start-up screen (desktop: between loading steps; web: once per step).</summary>
+        public void Splash(float progress, string what)
+        {
+            if (!_splash) return;
+            Brand.Splash(progress, what);
+            if (_splashShot != null && progress > 0.3f && progress < 0.4f)
+            {
+                Brand.Splash(progress, what);
+                TakeScreenshot(_splashShot);
+            }
+        }
+
+        /// <summary>Builds the lab step by step; each yielded value is shown on the splash screen before the next step runs.</summary>
+        public System.Collections.Generic.IEnumerable<(float progress, string what)> Load()
+        {
+            yield return (0.05f, "Laboratuvar hazırlanıyor…");
+            Textures.Init();
+            yield return (0.2f, "Laboratuvar odası kuruluyor…");
+            Room.Build();
+            yield return (0.35f, "Kimyasal kataloğu yükleniyor (40 000+ kimyasal)…");
+            Thumbnails.Build();
+            yield return (0.7f, "Malzemeler hazırlanıyor…");
+            lab = new Lab();
+            Program.LabInstance = lab;
+            micro = new MicroView();
+            micro.Init();
+            yield return (0.82f, "Periyodik tablo hazırlanıyor…");
+            periodic = new PeriodicView();
+            periodic.Init();
+            info = new InfoView(lab);
+            info.Select(o.Topic);
+            hud = new Hud(lab, micro);
+            chemicals = new ChemicalsView(lab, hud);
+            hud.ExperimentCount = lab.Experiments.All.Count(e => e.Status == IDLab.Core.Model.ExperimentStatus.Playable);
+            yield return (1f, "Hazır!");
+            hud.ChemicalCount = chemicals.Count;
+            if (o.Profile) Console.WriteLine($"startup: {startup.ElapsedMilliseconds} ms after the window opened");
+            if (o.Demo != null && o.Demo.StartsWith("chem:", StringComparison.Ordinal))
+            {
+                hud.Tab = HudTab.Chemicals;
+                chemicals.Preselect(o.Demo.Substring(5).Replace('_', ' '));
+            }
+            else if (o.Demo != null)
+            {
+                Demo.Setup(o.Demo, lab, hud);
+            }
+
+            if (o.Camera != null)
+            {
+                lab.Yaw = o.Camera[0];
+                lab.Pitch = o.Camera[1];
+                lab.Distance = o.Camera[2];
+            }
+        }
+
+        /// <summary>Runs one frame. Returns false when the app should close.</summary>
+        public bool Frame()
+        {
+            if (hud.QuitRequested) return false;
+            float dt = o.Demo != null ? 1f / 60f : Math.Min(GetFrameTime(), 0.1f);
+            if (IsKeyPressed(KeyboardKey.F11)) Platform.ToggleFullscreen();
+
+            PointerCursor.Update(dt);
+
+            var sw = System.Diagnostics.Stopwatch.StartNew();
+            Ui.BeginFrame();
+            Ui.Suspended = hud.ModalOpen;
+            hud.Layout();
+            bool labTab = hud.Tab == HudTab.Lab;
+            lab.KeysEnabled = labTab;
+
+            // The experiment keeps running while another tab is open; only pointer input is withheld.
+            lab.Update(dt, pointerFree: labTab && !Ui.Captured && !hud.ModalOpen, overInventory: hud.IsOverInventory(Ui.Mouse));
+            if (o.Demo != null) Demo.Step(o.Demo, lab, hud, frame);
+            Scene.Update(lab, dt);
+            if (labTab)
+            {
+                micro.Update(lab, dt);
+                // The molecule view is a small inset: 30 fps is plenty (15 in the economy modes).
+                microClock += GetFrameTime();
+                if (microClock >= (Quality.Economy ? 1f / 15f : 1f / 30f) || o.Demo != null)
+                {
+                    microClock = 0;
+                    micro.Render();
+                }
+            }
+            else if (hud.Tab == HudTab.Periodic)
+            {
+                periodic.Update(dt, hud.ContentArea, pointerFree: !Ui.Captured && !hud.ModalOpen);
+            }
+            else if (hud.Tab == HudTab.Chemicals)
+            {
+                chemicals.Update(dt, hud.ContentArea);
+            }
+            else
+            {
+                info.Update(dt, hud.ContentArea);
+            }
+
+            double tUpdate = sw.Elapsed.TotalMilliseconds;
+            if (o.Demo == null || o.Quality != null) Quality.Update(GetFrameTime());
+            if (labTab) Props.UpdateDisplays();
+            bool offscreen = labTab && Quality.BeginScene(Theme.Scene);
+            if (offscreen)
+            {
+                BeginMode3D(lab.Camera);
+                Scene.Draw(lab, dt);
+                EndMode3D();
+                Quality.EndScene();
+            }
+
+            BeginDrawing();
+            ClearBackground(Theme.Scene);
+            switch (hud.Tab)
+            {
+                case HudTab.Lab:
+                    if (offscreen)
+                    {
+                        Quality.Present();
+                    }
+                    else
+                    {
+                        BeginMode3D(lab.Camera);
+                        Scene.Draw(lab, dt);
+                        EndMode3D();
+                    }
+
+                    if (lab.Effects.ScreenFlash > 0.01f)
+                    {
+                        DrawRectangle(0, 0, GetScreenWidth(), GetScreenHeight(), Gfx.WithAlpha(new Color(255, 236, 205, 255), lab.Effects.ScreenFlash));
+                    }
+
+                    Scene.DrawLabels(lab);
+                    break;
+                case HudTab.Periodic:
+                    periodic.Draw();
+                    break;
+                case HudTab.Chemicals:
+                    chemicals.Draw();
+                    break;
+                default:
+                    info.Draw();
+                    break;
+            }
+
+            double tScene = sw.Elapsed.TotalMilliseconds;
+            hud.Draw(dt);
+            double tHud = sw.Elapsed.TotalMilliseconds;
+            EndDrawing();
+            Ui.EndFrame();
+            if (o.Profile)
+            {
+                Profiler.Add(tUpdate, tScene - tUpdate, tHud - tScene, sw.Elapsed.TotalMilliseconds - tHud);
+            }
+
+            frame++;
+            if (o.Trace && frame % 30 == 0) Demo.Trace(lab, frame);
+            if (o.Screenshot != null && frame == o.Frames)
+            {
+                TakeScreenshot(o.Screenshot);
+            }
+
+            if (o.Frames > 0 && frame > o.Frames)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public void Close()
+        {
+            TouchInput.Uninstall();
+            CloseWindow();
         }
     }
 

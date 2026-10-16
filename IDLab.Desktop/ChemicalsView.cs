@@ -110,7 +110,16 @@ namespace IDLab.Desktop
             var substances = lab.World.Substances.All.Where(x => !x.Hidden).ToList();
             _count = substances.Count;
             // Indexing ~40 000 names takes a moment: do it in the background so the lab opens at once.
-            _build = System.Threading.Tasks.Task.Run(() => BuildEntries(substances));
+            // (A browser page has a single thread: build it right away, during the start-up screen.)
+            if (Platform.IsWeb)
+            {
+                BuildEntries(substances);
+                _build = System.Threading.Tasks.Task.CompletedTask;
+            }
+            else
+            {
+                _build = System.Threading.Tasks.Task.Run(() => BuildEntries(substances));
+            }
         }
 
         private readonly int _count;

@@ -196,16 +196,16 @@ namespace IDLab.Desktop
             float rx = _top.Width - 14 * s;
             Rectangle Next(float width) { rx -= width; var r = new Rectangle(rx, y, width, bh); rx -= 8 * s; return r; }
 
-            if (Ui.Button("quit", Next(_quitArmed > 0 ? 140 * s : 96 * s), _quitArmed > 0 ? "Emin misiniz?" : "Kapat", _quitArmed > 0 ? Theme.Danger : (Color?)null))
+            // A browser tab is closed by the browser, not by the page.
+            if (!Platform.IsWeb && Ui.Button("quit", Next(_quitArmed > 0 ? 140 * s : 96 * s), _quitArmed > 0 ? "Emin misiniz?" : "Kapat", _quitArmed > 0 ? Theme.Danger : (Color?)null))
             {
                 if (_quitArmed > 0) QuitRequested = true;
                 else _quitArmed = 3f;
             }
 
-            if (Ui.Button("full", Next(118 * s), IsWindowState(ConfigFlags.BorderlessWindowMode) ? "Pencere" : "Tam ekran", null, 16))
+            if (Ui.Button("full", Next(118 * s), Platform.IsFullscreen ? "Pencere" : "Tam ekran", null, 16))
             {
-                ToggleBorderlessWindowed();
-                PointerCursor.Ensure();
+                Platform.ToggleFullscreen();
             }
 
             if (Ui.Button("quality", Next(122 * s), Quality.ShortLabel, null, 15))
@@ -640,9 +640,7 @@ namespace IDLab.Desktop
         {
             try
             {
-                string dir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "IDLab");
-                Directory.CreateDirectory(dir);
-                string file = Path.Combine(dir, $"IDLab-veri-{DateTime.Now:yyyyMMdd-HHmmss}.csv");
+                string name = $"IDLab-veri-{DateTime.Now:yyyyMMdd-HHmmss}.csv";
                 var sb = new StringBuilder("kanal;zaman_s;deger;birim\n");
                 foreach (var ch in _lab.World.Logger.Channels)
                 {
@@ -655,6 +653,17 @@ namespace IDLab.Desktop
                     }
                 }
 
+                if (Platform.IsWeb && Platform.DownloadText != null)
+                {
+                    // The browser saves it to the Downloads folder.
+                    Platform.DownloadText(name, "\uFEFF" + sb);
+                    Toast("Veri indirildi: " + name, Theme.Success);
+                    return;
+                }
+
+                string dir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "IDLab");
+                Directory.CreateDirectory(dir);
+                string file = Path.Combine(dir, name);
                 File.WriteAllText(file, sb.ToString(), new UTF8Encoding(true));
                 Toast("Veri kaydedildi: " + file, Theme.Success);
             }

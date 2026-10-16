@@ -106,7 +106,7 @@ void main() {
 
         public static void Init()
         {
-            _shader = LoadShaderFromMemory(VertexShader, FragmentShader);
+            _shader = LoadShaderFromMemory(Platform.Shader(VertexShader), Platform.Shader(FragmentShader));
             _locViewPos = GetShaderLocation(_shader, "viewPos");
             _locAmbient = GetShaderLocation(_shader, "ambient");
             _locEmission = GetShaderLocation(_shader, "emission");
